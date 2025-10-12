@@ -1,50 +1,57 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 1.0.2 → 1.0.3
+- List of modified principles: 'Design System' section updated
+- Added sections: None
+- Removed sections: None
+- Templates requiring updates:
+  - ✅ .specify/templates/plan-template.md
+  - ✅ .specify/templates/spec-template.md
+  - ✅ .specify/templates/tasks-template.md
+- Follow-up TODOs: None
+-->
+# DevFest Tokyo 2025 Web Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Participant-Centric Information
+The primary goal is to provide participants with all necessary information to enjoy the event and maximize their learning opportunities, ultimately ensuring high customer satisfaction. While timetable and session information are important, the focus is on anticipating and fulfilling participant needs to create a seamless and valuable experience.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Brand Compliance
+The design must strictly adhere to the official DevFest brand guidelines. This includes the correct use of logos, color palettes, and typography. Maintaining brand consistency is essential for brand recognition and creating a professional and cohesive experience for attendees.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Responsive Design (Mobile-First)
+The website must be fully responsive and optimized for a mobile-first experience. All features and content must be accessible and usable on a wide range of devices, from smartphones to desktops. Attendees will access the website from various devices, especially mobile phones during the event.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Modern Tech Stack
+The project will be implemented using Next.js and Tailwind CSS. The codebase should be clean, maintainable, and follow best practices for these technologies. Using a modern tech stack allows for rapid development, a high-performing website, and easier maintenance.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. GitHub Pages Deployment
+The website will be hosted on GitHub Pages. The development and deployment process should be optimized for this platform. GitHub Pages is a free and reliable hosting solution that is well-suited for static websites and simplifies the deployment process.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technology Stack
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+- Next.js
+- Tailwind CSS
+- TypeScript
+- Google Sans (Bold, Normal)
+- Roboto Mono (Light)
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Design System
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- **Core Principles**: Stylish but pop.
+- **Color Palette**:
+    - Primary/Accent: Google Yellow 500 (#fbbc04), Google Blue 500 (#4285f4), Google Red 500 (#ea4335), Google Green 500 (#34a853)
+    - Secondary/Background: Halftone Blue (#57caff), Halftone Yellow (#ffd427), Halftone Red (#ff7daf), Halftone Green (#5cdb6d), Off-White (#f0f0f0), Black 02 (#1e1e1e)
+- **Typography**:
+    - Headlines: Google Sans Bold
+    - Subheads: Roboto Mono Light
+    - Body: Google Sans Normal
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+- All design and development decisions must align with the principles outlined in this constitution.
+- Any deviation from these principles requires explicit approval from the project lead.
+- The constitution will be reviewed and updated as needed to reflect changes in project goals or requirements.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.3 | **Ratified**: 2025-10-13 | **Last Amended**: 2025-10-13

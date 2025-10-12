@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+*   **Participant-Centric Information**: Does the plan prioritize providing participants with the necessary information to enjoy the event and maximize their learning opportunities?
+*   **Brand Compliance**: Does the plan adhere to the official DevFest brand guidelines?
+*   **Responsive Design (Mobile-First)**: Does the plan include considerations for a mobile-first responsive design?
+*   **Modern Tech Stack**: Does the plan utilize Next.js and Tailwind CSS correctly?
+*   **GitHub Pages Deployment**: Is the plan optimized for deployment on GitHub Pages?
 
 ## Project Structure
 

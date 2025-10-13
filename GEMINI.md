@@ -58,8 +58,7 @@ This section outlines the key styling conventions and components used across the
 
 ### Icons
 
-- **Speakers**: Represented by a person icon (SVG).
-- **Time**: Represented by a clock icon (SVG).
+- The material icons are installed. Select it from there.
 
 ---
 
@@ -128,8 +127,6 @@ TypeScrip: Follow standard conventions
 
 - 004-session-page-the: Added TypeScript 5.x + Next.js, React, Tailwind CSS
 - 004-session-page-the: Added TypeScript 5.x + Next.js, React, Tailwind CSS
-
-- 003-time-table-page: Added TypeScript 5.x + Next.js, React, Tailwind CSS
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

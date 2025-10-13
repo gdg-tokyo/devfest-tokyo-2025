@@ -19,8 +19,8 @@
 
 **Purpose**: Project initialization and basic structure for the feature.
 
-- [ ] T001 [P] Configure Next.js route for Session Page in `src/app/timetable/[sessionId]/page.tsx`
-- [ ] T002 [P] Create initial placeholder component for Session Page in `src/app/timetable/[sessionId]/page.tsx`
+- [x] T001 [P] Configure Next.js route for Session Page in `src/app/sessions/[sessionId]/page.tsx`
+- [x] T002 [P] Create initial placeholder component for Session Page in `src/app/sessions/[sessionId]/page.tsx`
 
 ---
 
@@ -30,8 +30,8 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T003 [US1, US3] Update `src/types/index.ts` with `Session`, `Talk`, and `Speaker` TypeScript interfaces based on `data-model.md`.
-- [ ] T004 [US1, US3] Update `src/data/sessions.json` to include embedded `Talk` and `Speaker` data as per `data-model.md`. Ensure sample data is representative.
+- [x] T003 [US1, US3] Update `src/types/index.ts` with `Session`, `Talk`, and `Speaker` TypeScript interfaces based on `data-model.md`.
+- [x] T004 [US1, US3] Update `src/data/sessions.json` to include embedded `Talk` and `Speaker` data as per `data-model.md`. Ensure sample data is representative.
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -41,14 +41,14 @@
 
 **Goal**: As an attendee, I want to view the detailed information of a specific talk (title, long description, skill level, learning perspective) so that I can decide if it aligns with my interests and learning goals and quickly assess its suitability for me.
 
-**Independent Test**: Navigate to a Session Page route (e.g., `/timetable/session-id-123`) and verify that the session title, long description, skill level, and learning perspective are correctly displayed for the selected session.
+**Independent Test**: Navigate to a Session Page route (e.g., `/sessions/session-id-123`) and verify that the session title, long description, skill level, and learning perspective are correctly displayed for the selected session.
 
 ### Implementation for User Story 1 & 2
 
-- [ ] T005 [US1, US2] Create `src/features/timetable/components/SessionDetail.tsx` component to display session title, long description, level, and perspective.
-- [ ] T006 [US1, US2] Implement data fetching logic within `src/app/timetable/[sessionId]/page.tsx` to retrieve session data from `sessions.json` based on `sessionId`.
-- [ ] T007 [US1, US2] Integrate `SessionDetail.tsx` into `src/app/timetable/[sessionId]/page.tsx` and pass fetched session data as props.
-- [ ] T008 [US1, US2] Apply styling to `SessionDetail.tsx` to ensure clear visual emphasis on level and perspective labels, adhering to brand guidelines.
+- [x] T005 [US1, US2] Create `src/features/session/components/SessionDetail.tsx` component to display session title, long description, level, and perspective.
+- [x] T006 [US1, US2] Implement data fetching logic within `src/app/sessions/[sessionId]/page.tsx` to retrieve session data from `sessions.json` based on `sessionId`.
+- [x] T007 [US1, US2] Integrate `src/features/session/components/SessionDetail.tsx` into `src/app/sessions/[sessionId]/page.tsx` and pass fetched session data as props.
+- [x] T008 [US1, US2] Apply styling to `src/features/session/components/SessionDetail.tsx` to ensure clear visual emphasis on level and perspective labels, adhering to brand guidelines.
 
 **Checkpoint**: At this point, the Session Page should display core session details correctly.
 
@@ -62,9 +62,9 @@
 
 ### Implementation for User Story 3
 
-- [ ] T009 [US3] Create `src/components/common/SpeakerCard.tsx` component to display a speaker's photo, name, biography, and social links.
-- [ ] T010 [US3] Modify `src/features/timetable/components/SessionDetail.tsx` to iterate through the embedded speaker data for each talk and render `SpeakerCard.tsx` for each speaker.
-- [ ] T011 [US3] Ensure social media links in `SpeakerCard.tsx` are correctly formatted and clickable.
+- [x] T009 [US3] Create `src/components/common/SpeakerCard.tsx` component to display a speaker's photo, name, biography, and social links.
+- [x] T010 [US3] Modify `src/features/session/components/SessionDetail.tsx` to iterate through the embedded speaker data for each talk and render `SpeakerCard.tsx` for each speaker.
+- [x] T011 [US3] Ensure social media links in `SpeakerCard.tsx` are correctly formatted and clickable.
 
 **Checkpoint**: The Session Page should now display both session details and presenter profiles.
 
@@ -78,8 +78,8 @@
 
 ### Implementation for User Story 4
 
-- [ ] T012 [US4] Modify the existing session card component (likely in `src/features/timetable/components/SessionCard.tsx` or similar) to include a link (`<Link href="...">`) that navigates to the dedicated Session Page route (`/timetable/[sessionId]`).
-- [ ] T013 [US4] Ensure the `sessionId` is correctly passed in the navigation link.
+- [x] T012 [US4] Modify the existing session card component (likely in `src/features/timetable/components/SessionCard.tsx` or similar) to include a link (`<Link href="...">`) that navigates to the dedicated Session Page route (`/sessions/[sessionId]`).
+- [x] T013 [US4] Ensure the `sessionId` is correctly passed in the navigation link.
 
 **Checkpoint**: Users can now navigate from the Timetable to the Session Page.
 
@@ -89,12 +89,12 @@
 
 **Purpose**: Final improvements, styling, responsiveness, and overall validation.
 
-- [ ] T014 [P] Ensure overall responsiveness of the Session Page across various screen sizes (mobile, tablet, desktop).
-- [ ] T015 [P] Review and apply DevFest Tokyo 2025 brand guidelines for consistent styling across the Session Page.
-- [ ] T016 [P] Conduct accessibility audit (WCAG 2.1 AA) and implement necessary adjustments.
-- [ ] T017 [P] Perform performance testing to ensure the page loads within 2 seconds.
-- [ ] T018 Code cleanup, refactoring, and add necessary comments.
-- [ ] T019 Final validation of all functional and non-functional requirements against the `spec.md`.
+- [x] T014 [P] Ensure overall responsiveness of the Session Page across various screen sizes (mobile, tablet, desktop).
+- [x] T015 [P] Review and apply DevFest Tokyo 2025 brand guidelines for consistent styling across the Session Page.
+- [x] T016 [P] Conduct accessibility audit (WCAG 2.1 AA) and implement necessary adjustments.
+- [x] T017 [P] Perform performance testing to ensure the page loads within 2 seconds.
+- [x] T018 Code cleanup, refactoring, and add necessary comments.
+- [x] T019 Final validation of all functional and non-functional requirements against the `spec.md`.
 
 ---
 

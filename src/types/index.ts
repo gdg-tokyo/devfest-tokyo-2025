@@ -1,23 +1,31 @@
-export interface SpeakerProfile {
+export interface SocialLink {
+  platform: string;
+  url: string;
+}
+
+export interface Speaker {
+  id: string;
   name: string;
-  icon_url: string;
-  title?: string;
-  bio?: string;
-  twitter_handle?: string;
+  bio: string;
+  photoUrl: string;
+  socialLinks: SocialLink[];
+}
+
+export interface Talk {
+  id: string;
+  title: string;
+  abstract: string;
+  speakers: Speaker[];
 }
 
 export interface Session {
   id: string;
   title: string;
-  description_short?: string;
-  description_long: string;
-  speaker_names: string[];
-  speaker_profiles: SpeakerProfile[];
-  track: string;
+  longDescription: string;
+  level?: 'Beginner' | 'Intermediate' | 'Advanced';
+  perspective?: 'Introduction' | 'Experience' | 'Challenge';
+  talks: Talk[];
   time_start: string;
   time_end: string;
-  tech_tags?: string[];
-  level?: ('Beginner' | 'Intermediate' | 'Advanced')[];
-  perspective?: ('Introduction' | 'Experience' | 'Challenge')[];
-  is_keynote?: boolean;
+  track: string; // Added
 }

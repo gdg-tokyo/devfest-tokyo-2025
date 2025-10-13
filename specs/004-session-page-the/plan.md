@@ -23,13 +23,13 @@ The Session Page feature will provide a dedicated route for attendees to view co
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+_GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 
-*   **Participant-Centric Information**: Yes, the plan prioritizes providing comprehensive session and speaker information to attendees, enhancing their event experience.
-*   **Brand Compliance**: Yes, the plan explicitly states adherence to DevFest Tokyo 2025 brand guidelines and reuse of existing UI components.
-*   **Responsive Design (Mobile-First)**: Yes, the plan includes a non-functional requirement for full responsiveness across devices.
-*   **Modern Tech Stack**: Yes, the plan utilizes Next.js, React, and Tailwind CSS, aligning with the modern tech stack principle.
-*   **GitHub Pages Deployment**: Yes, the plan is for a static web application, which is well-suited for GitHub Pages deployment.
+- **Participant-Centric Information**: Yes, the plan prioritizes providing comprehensive session and speaker information to attendees, enhancing their event experience.
+- **Brand Compliance**: Yes, the plan explicitly states adherence to DevFest Tokyo 2025 brand guidelines and reuse of existing UI components.
+- **Responsive Design (Mobile-First)**: Yes, the plan includes a non-functional requirement for full responsiveness across devices.
+- **Modern Tech Stack**: Yes, the plan utilizes Next.js, React, and Tailwind CSS, aligning with the modern tech stack principle.
+- **GitHub Pages Deployment**: Yes, the plan is for a static web application, which is well-suited for GitHub Pages deployment.
 
 ## Project Structure
 
@@ -46,10 +46,11 @@ specs/004-session-page-the/
 ```
 
 ### Source Code (repository root)
+
 ```
 src/
 ├── app/
-│   └── timetable/
+│   └── sessions/
 │       └── [sessionId]/ # New route for Session Page
 ├── components/
 │   └── common/
@@ -57,7 +58,7 @@ src/
 ├── data/
 │   └── sessions.json # Existing, will be updated to include talk and speaker details
 ├── features/
-│   └── timetable/
+│   └── session/
 │       └── components/
 │           └── SessionDetail.tsx # New component for session details
 └── types/
@@ -69,5 +70,5 @@ src/
 ## Complexity Tracking
 
 | Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| N/A | N/A | N/A |
+| --------- | ---------- | ------------------------------------ |
+| N/A       | N/A        | N/A                                  |

@@ -58,8 +58,7 @@ This section outlines the key styling conventions and components used across the
 
 ### Icons
 
-- **Speakers**: Represented by a person icon (SVG).
-- **Time**: Represented by a clock icon (SVG).
+- The material icons are installed. Select it from there.
 
 ---
 
@@ -94,11 +93,12 @@ This architecture design emphasizes decoupling the core business logic from the 
 
 # devfest-tokyo-2025-web Development Guidelines
 
-# devfest-tokyo-2025-web Development Guidelines
-
 Auto-generated from all feature plans. Last updated: 2025-10-13
 
 ## Active Technologies
+
+- Local JSON files (`sessions.json` for sessions/talks, `speakers.json` for speakers) (004-session-page-the)
+- Local JSON file (`sessions.json` for all session, talk, and speaker data) (004-session-page-the)
 
 - Local JSON file (003-time-table-page)
 - TypeScript 5.x + Next.js, React, Tailwind CSS (003-time-table-page)
@@ -125,10 +125,8 @@ TypeScrip: Follow standard conventions
 
 ## Recent Changes
 
-- 003-time-table-page: Added TypeScript 5.x + Next.js, React, Tailwind CSS
-- 003-time-table-page: Added TypeScrip + Next.js, React, Tailwind CSS
-
-- 002-devfest-style: Added `TypeScript 5.x` + `Next.js`, `React`, `Tailwind CSS`, `framer-motion`
+- 004-session-page-the: Added TypeScript 5.x + Next.js, React, Tailwind CSS
+- 004-session-page-the: Added TypeScript 5.x + Next.js, React, Tailwind CSS
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

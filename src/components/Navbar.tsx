@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex gap-4 font-google-sans">
           <Link href="/" className="text-gray-800 hover:text-google-blue-500">Home</Link>
           <Link href="/timetable" className="text-gray-800 hover:text-google-blue-500">Timetable</Link>
-          <Link href="#" className="text-gray-800 hover:text-google-blue-500">Sessions</Link>
+          <Link href="/talks" className="text-gray-800 hover:text-google-blue-500">Talks</Link>
         </div>
       </div>
     </nav>

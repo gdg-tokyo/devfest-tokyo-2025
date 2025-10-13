@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
@@ -6,7 +5,7 @@ import TimetableGrid from '@/features/timetable/components/TimetableGrid';
 import FilterSystem from '@/features/timetable/components/FilterSystem';
 import OverlayMessageCard from '@/components/common/OverlayMessageCard';
 import { getSessions } from '@/lib/data-parser';
-import { Session, SpeakerProfile } from '@/types';
+import { Session } from '@/types';
 
 const TimetablePage = () => {
   const allSessions: Session[] = getSessions();
@@ -28,18 +27,22 @@ const TimetablePage = () => {
 
   const hasMatchingSessions = useMemo(() => {
     return allSessions.some(session => {
-      const levelMatch = filters.levels.length === 0 || (session.level && session.level.some(l => filters.levels.includes(l)));
+      const levelMatch = filters.levels.length === 0 || (session.level && filters.levels.includes(session.level));
+      
+      const speakerNames = session.talks.flatMap(talk => talk.speakers.map(speaker => speaker.name));
+
       const keywordMatch = !filters.keyword ||
         session.title.toLowerCase().includes(filters.keyword.toLowerCase()) ||
-        (session.description_short && session.description_short.toLowerCase().includes(filters.keyword.toLowerCase())) ||
-        session.description_long.toLowerCase().includes(filters.keyword.toLowerCase()) ||
-        session.speaker_names.some(name => name.toLowerCase().includes(filters.keyword.toLowerCase()));
+        session.longDescription.toLowerCase().includes(filters.keyword.toLowerCase()) ||
+        speakerNames.some(name => name.toLowerCase().includes(filters.keyword.toLowerCase())) ||
+        session.talks.some(talk => talk.abstract.toLowerCase().includes(filters.keyword.toLowerCase()));
+
       return levelMatch && keywordMatch;
     });
   }, [allSessions, filters]);
 
   const availableLevels = useMemo(() => {
-    const levels = allSessions.flatMap(s => s.level || []);
+    const levels = allSessions.map(s => s.level).filter((level): level is string => level !== undefined);
     return Array.from(new Set(levels));
   }, [allSessions]);
 

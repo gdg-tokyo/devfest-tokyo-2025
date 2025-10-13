@@ -99,6 +99,8 @@ This architecture design emphasizes decoupling the core business logic from the 
 Auto-generated from all feature plans. Last updated: 2025-10-13
 
 ## Active Technologies
+- Local JSON files (`sessions.json` for sessions/talks, `speakers.json` for speakers) (004-session-page-the)
+- Local JSON file (`sessions.json` for all session, talk, and speaker data) (004-session-page-the)
 
 - Local JSON file (003-time-table-page)
 - TypeScript 5.x + Next.js, React, Tailwind CSS (003-time-table-page)
@@ -124,11 +126,11 @@ tests/
 TypeScrip: Follow standard conventions
 
 ## Recent Changes
+- 004-session-page-the: Added TypeScript 5.x + Next.js, React, Tailwind CSS
+- 004-session-page-the: Added TypeScript 5.x + Next.js, React, Tailwind CSS
 
 - 003-time-table-page: Added TypeScript 5.x + Next.js, React, Tailwind CSS
-- 003-time-table-page: Added TypeScrip + Next.js, React, Tailwind CSS
 
-- 002-devfest-style: Added `TypeScript 5.x` + `Next.js`, `React`, `Tailwind CSS`, `framer-motion`
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

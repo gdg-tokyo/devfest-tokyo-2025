@@ -81,12 +81,14 @@ const TimetableGrid: React.FC<TimetableGridProps> = ({ sessions, filters }) => {
   };
 
   const filterSession = (session: Session): boolean => {
-    const levelMatch = filters.levels.length === 0 || (session.level && session.level.some(l => filters.levels.includes(l)));
-    const keywordMatch = !filters.keyword ||
+    const levelMatch = filters.levels.length === 0 || (session.level && filters.levels.includes(session.level));
+    const keywordMatch =
+      !filters.keyword ||
       session.title.toLowerCase().includes(filters.keyword.toLowerCase()) ||
-      (session.description_short && session.description_short.toLowerCase().includes(filters.keyword.toLowerCase())) ||
-      session.description_long.toLowerCase().includes(filters.keyword.toLowerCase()) ||
-      session.speaker_names.some(name => name.toLowerCase().includes(filters.keyword.toLowerCase()));
+      session.longDescription.toLowerCase().includes(filters.keyword.toLowerCase()) ||
+      session.talks
+        .flatMap(talk => talk.speakers.map(speaker => speaker.name))
+        .some(name => name.toLowerCase().includes(filters.keyword.toLowerCase()));
     return levelMatch && keywordMatch;
   };
 

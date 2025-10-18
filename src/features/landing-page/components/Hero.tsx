@@ -1,6 +1,6 @@
+import LaunchIcon from '@mui/icons-material/Launch'
 import Image from 'next/image'
 import Link from 'next/link'
-import LaunchIcon from '@mui/icons-material/Launch'
 
 export function Hero() {
   return (
@@ -20,7 +20,7 @@ export function Hero() {
           width={500}
           height={250}
         />
-        <p className="text-2xl md:text-3xl mb-2">Find your new &quot;eyes&quot;</p>
+        <p className="text-2xl md:text-3xl mb-2">Find your new eyes</p>
         <p className="text-lg subhead">~ 3つの新たな視点に出会える一日 ~</p>
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
           {' '}

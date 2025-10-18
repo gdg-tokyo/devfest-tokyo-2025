@@ -1,8 +1,8 @@
 ## Plan: Talk Directory Page
 
-**Feature Branch**: `005-talk-directory-page`
-**Created**: October 14, 2025
-**Status**: Draft
+- **Feature Branch**: `005-talk-directory-page`
+- **Created**: October 14, 2025
+- **Status**: Draft
 
 ## Technical Context
 

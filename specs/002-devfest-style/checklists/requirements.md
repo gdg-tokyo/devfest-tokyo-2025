@@ -1,8 +1,8 @@
 # Specification Quality Checklist: Landing Page Design Update
 
-**Purpose**: Validate specification completeness and quality before proceeding to planning
-**Created**: 2025-10-13
-**Feature**: [Link to spec.md](./spec.md)
+- **Purpose**: Validate specification completeness and quality before proceeding to planning
+- **Created**: 2025-10-13
+- **Feature**: [Link to spec.md](./spec.md)
 
 ## Content Quality
 

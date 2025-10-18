@@ -1,7 +1,7 @@
 # Implementation Plan: Session Page
 
-**Branch**: `004-session-page-the` | **Date**: 2025-10-13 | **Spec**: /specs/004-session-page-the/spec.md
-**Input**: Feature specification from `/specs/004-session-page-the/spec.md`
+- **Branch**: `004-session-page-the` | **Date**: 2025-10-13 | **Spec**: /specs/004-session-page-the/spec.md
+- **Input**: Feature specification from `/specs/004-session-page-the/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 
@@ -11,15 +11,15 @@ The Session Page feature will provide a dedicated route for attendees to view co
 
 ## Technical Context
 
-**Language/Version**: TypeScript 5.x
-**Primary Dependencies**: Next.js, React, Tailwind CSS
-**Storage**: Local JSON file (`sessions.json` for all session, talk, and speaker data)
-**Testing**: Jest, Playwright
-**Target Platform**: Web (browser)
-**Project Type**: Web application
-**Performance Goals**: The Session Page SHALL load and display content within 2 seconds on a typical broadband connection.
-**Constraints**: The Session Page SHALL be fully responsive and usable across various devices (desktop, tablet, mobile). The Session Page SHALL meet WCAG 2.1 AA accessibility standards.
-**Scale/Scope**: Single page for session details, accessible from Timetable.
+- **Language/Version**: TypeScript 5.x
+- **Primary Dependencies**: Next.js, React, Tailwind CSS
+- **Storage**: Local JSON file (`sessions.json` for all session, talk, and speaker data)
+- **Testing**: Jest, Playwright
+- **Target Platform**: Web (browser)
+- **Project Type**: Web application
+- **Performance Goals**: The Session Page SHALL load and display content within 2 seconds on a typical broadband connection.
+- **Constraints**: The Session Page SHALL be fully responsive and usable across various devices (desktop, tablet, mobile). The Session Page SHALL meet WCAG 2.1 AA accessibility standards.
+- **Scale/Scope**: Single page for session details, accessible from Timetable.
 
 ## Constitution Check
 

@@ -1,9 +1,9 @@
 # Feature Specification: Landing Page Design Update
 
-**Feature Branch**: `002-devfest-style`
-**Created**: 2025-10-13
-**Status**: Draft
-**Input**: User description: "I want to update the designe of the page. Here is a previous sample implemantation for the landing page @@.reference/figma-make-project/pages/HomePage.tsx Could you review this implementation and extract the designe principle from there. Brand color pallet should be used and I want to put elemet such as a welcome message into a rounded black boarder box as lile @.reference/screenshot/landing_page_1.png . Behind the DevFest log in the hero section. I want to have a gentle color backgrund. The image if like a autoumn leaves and autumn festival in Japan."
+- **Feature Branch**: `002-devfest-style`
+- **Created**: 2025-10-13
+- **Status**: Draft
+- **Input**: User description: "I want to update the designe of the page. Here is a previous sample implemantation for the landing page @@.reference/figma-make-project/pages/HomePage.tsx Could you review this implementation and extract the designe principle from there. Brand color pallet should be used and I want to put elemet such as a welcome message into a rounded black boarder box as lile @.reference/screenshot/landing_page_1.png . Behind the DevFest log in the hero section. I want to have a gentle color backgrund. The image if like a autoumn leaves and autumn festival in Japan."
 
 ## User Scenarios & Testing _(mandatory)_
 

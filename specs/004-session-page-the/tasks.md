@@ -1,7 +1,7 @@
 # Tasks: Session Page
 
-**Input**: Design documents from `/specs/004-session-page-the/`
-**Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
+- **Input**: Design documents from `/specs/004-session-page-the/`
+- **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
 **Tests**: The feature specification does not explicitly request tests or a TDD approach. Therefore, specific test tasks are not included in the implementation phases below, but overall validation is covered in the final phase.
 

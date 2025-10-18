@@ -1,7 +1,7 @@
 # Implementation Plan: Landing Page Design Update
 
-**Branch**: `002-devfest-style` | **Date**: 2025-10-13 | **Spec**: [./spec.md](./spec.md)
-**Input**: Feature specification from `/specs/002-devfest-style/spec.md`
+- **Branch**: `002-devfest-style` | **Date**: 2025-10-13 | **Spec**: [./spec.md](./spec.md)
+- **Input**: Feature specification from `/specs/002-devfest-style/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 
@@ -11,15 +11,15 @@ The primary requirement is to update the design of the DevFest Tokyo 2025 landin
 
 ## Technical Context
 
-**Language/Version**: `TypeScript 5.x`
-**Primary Dependencies**: `Next.js`, `React`, `Tailwind CSS`, `framer-motion`
-**Storage**: `File system (JSON)`
-**Testing**: `Jest`, `React Testing Library`
-**Target Platform**: `Web Browsers`
-**Project Type**: `Web application`
-**Performance Goals**: `Page load < 3s`
-**Constraints**: `Responsive on mobile, tablet, desktop`
-**Scale/Scope**: `Single landing page with session data`
+- **Language/Version**: `TypeScript 5.x`
+- **Primary Dependencies**: `Next.js`, `React`, `Tailwind CSS`, `framer-motion`
+- **Storage**: `File system (JSON)`
+- **Testing**: `Jest`, `React Testing Library`
+- **Target Platform**: `Web Browsers`
+- **Project Type**: `Web application`
+- **Performance Goals**: `Page load < 3s`
+- **Constraints**: `Responsive on mobile, tablet, desktop`
+- **Scale/Scope**: `Single landing page with session data`
 
 ## Constitution Check
 

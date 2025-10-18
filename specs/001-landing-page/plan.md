@@ -1,7 +1,7 @@
 # Implementation Plan: Landing Page
 
-**Branch**: `001-landing-page` | **Date**: 2025-10-13 | **Spec**: [./spec.md](./spec.md)
-**Input**: Feature specification from `/specs/001-landing-page/spec.md`
+- **Branch**: `001-landing-page` | **Date**: 2025-10-13 | **Spec**: [./spec.md](./spec.md)
+- **Input**: Feature specification from `/specs/001-landing-page/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 
@@ -11,15 +11,15 @@ The primary requirement is to build a landing page for DevFest Tokyo 2025 that i
 
 ## Technical Context
 
-**Language/Version**: `TypeScript 5.x`
-**Primary Dependencies**: `Next.js`, `React`, `Tailwind CSS`
-**Storage**: `File system (JSON)`
-**Testing**: `Jest`, `React Testing Library`
-**Target Platform**: `Web Browsers`
-**Project Type**: `Web application`
-**Performance Goals**: `Page load < 3s`
-**Constraints**: `Responsive on mobile, tablet, desktop`
-**Scale/Scope**: `Single landing page with session data`
+- **Language/Version**: `TypeScript 5.x`
+- **Primary Dependencies**: `Next.js`, `React`, `Tailwind CSS`
+- **Storage**: `File system (JSON)`
+- **Testing**: `Jest`, `React Testing Library`
+- **Target Platform**: `Web Browsers`
+- **Project Type**: `Web application`
+- **Performance Goals**: `Page load < 3s`
+- **Constraints**: `Responsive on mobile, tablet, desktop`
+- **Scale/Scope**: `Single landing page with session data`
 
 ## Constitution Check
 

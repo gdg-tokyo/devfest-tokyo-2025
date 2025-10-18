@@ -1,8 +1,8 @@
 # Specification Quality Checklist: Talk Directory Page
 
-**Purpose**: Validate specification completeness and quality before proceeding to planning
-**Created**: October 14, 2025
-**Feature**: [Link to spec.md]
+- **Purpose**: Validate specification completeness and quality before proceeding to planning
+- **Created**: October 14, 2025
+- **Feature**: [Link to spec.md]
 
 ## Content Quality
 

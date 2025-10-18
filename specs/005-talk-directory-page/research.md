@@ -1,7 +1,7 @@
 # Research Findings: Talk Directory Page
 
-**Feature Branch**: `005-talk-directory-page`
-**Created**: October 14, 2025
+- **Feature Branch**: `005-talk-directory-page`
+- **Created**: October 14, 2025
 
 ## R-001: Client-side Filtering Techniques in React/Next.js
 

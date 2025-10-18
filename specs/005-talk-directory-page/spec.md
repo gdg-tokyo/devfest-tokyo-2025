@@ -1,9 +1,6 @@
 # Feature Specification: Talk Directory Page
 
-**Feature Branch**: `005-talk-directory-page`
-**Created**: October 14, 2025
-**Status**: Draft
-**Input**: User description: "talk directory page The Talks Page (or Talk Search Directory) functions as the comprehensive, unconstrained interface for session discovery, acting as the primary hub for the User Story 3 pre-exploration journey. Unlike the time-bound Timetable, this page presents all session cards in a uniform tile or list layout, ensuring all content is easily scannable. It features the site's most powerful, unified client-side search and filtering system, enabling users to rapidly narrow the vast list using a free keyword search, and structured filters based on Level, Perspective, and Tech Tags. Each session tile utilizes the strict DevFest branding to convey immediate context, and clicking a tile immediately triggers the display of the Session Page modal for detailed review."
+**Feature Branch**: `005-talk-directory-page` **Created**: October 14, 2025 **Status**: Draft **Input**: User description: "talk directory page The Talks Page (or Talk Search Directory) functions as the comprehensive, unconstrained interface for session discovery, acting as the primary hub for the User Story 3 pre-exploration journey. Unlike the time-bound Timetable, this page presents all session cards in a uniform tile or list layout, ensuring all content is easily scannable. It features the site's most powerful, unified client-side search and filtering system, enabling users to rapidly narrow the vast list using a free keyword search, and structured filters based on Level, Perspective, and Tech Tags. Each session tile utilizes the strict DevFest branding to convey immediate context, and clicking a tile immediately triggers the display of the Session Page modal for detailed review."
 
 ## Clarifications
 

@@ -1,7 +1,7 @@
 # Tasks: Talk Directory Page
 
-**Feature Branch**: `005-talk-directory-page`
-**Created**: October 14, 2025
+- **Feature Branch**: `005-talk-directory-page`
+- **Created**: October 14, 2025
 
 ## Phase 0: Setup & Core Structure
 

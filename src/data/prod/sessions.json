@@ -1,50 +1,38 @@
 [
   {
-    "id": "s1_keynote",
-    "talk_ids": ["t1_keynote_talk"],
+    "id": "s01",
+    "talk_ids": ["s01-t01"],
     "track": "Track A",
     "time_start": "12:40",
     "time_end": "13:10",
-    "room": "Track A",
     "title": "基調講演",
     "level": ["Advanced"],
     "tech_tags": ["Web", "Mobile"],
-    "description": "インターネット誕生以来、Webは進化してきたが、近年は「Web退化論」とも呼ぶべき閉塞感がある。本講演では、Webを取り巻く最新の動きや環境変化を俯瞰しつつ、「Webの未来はどうあるべきか」を考える。また、生成AIによって大きく変わる技術者のキャリアについても考察し、オープンで創造的な未来像を描く。"
+    "description": "DevFest Tokyo 2025 の 基調講演を行います。",
+    "perspective": []
   },
   {
-    "id": "s2_cross_talk",
-    "talk_ids": ["t2_cross_talk_bq", "t2_cross_talk_web"],
+    "id": "s02",
+    "talk_ids": ["s02-t01"],
     "track": "Track A",
-    "time_start": "13:30",
-    "time_end": "14:10",
-    "room": "Track A",
-    "title": "異分野クロストーク",
-    "level": ["Intermediate"],
+    "time_start": "13:20",
+    "time_end": "14:00",
+    "title": "異分野クロストーク (仮)",
+    "level": ["Advanced"],
     "tech_tags": ["Web", "Mobile"],
-    "description": "異なる分野の専門家からスキルをワンランクアップする技術を学ぶセッション。BigQueryのエキスパートがフロントエンド開発者向けにデータ分析技術を、 Web のエキスパートがバックエンド開発者に Web アプリのデバッグ技術を伝授する。このセッションは、まさに DevFest Tokyo のテーマ 「Find your new “eyes」を体現するセッション。"
+    "description": "Session Description (TBA)",
+    "perspective": []
   },
   {
-    "id": "s2_google_maps",
-    "talk_ids": ["t2_google_maps_talk"],
-    "track": "Track B",
-    "time_start": "13:30",
-    "time_end": "14:10",
-    "room": "Track B",
-    "title": "Google Maps 特集",
-    "level": ["Beginner"],
+    "id": "s03",
+    "talk_ids": ["s03-t01", "s03-t02"],
+    "track": "Track D",
+    "time_start": "13:20",
+    "time_end": "14:00",
+    "title": "フロンティア (仮)",
+    "level": ["Advanced"],
     "tech_tags": ["Web", "Mobile"],
-    "description": "Google Mapsの最新情報、デザインの変遷、個人開発における活用法や苦労話など、地理情報技術に関する多角的な視点を提供する。"
-  },
-  {
-    "id": "s3_gen_ai_beginner",
-    "talk_ids": ["t3_gen_ai_beginner_talk"],
-    "track": "Track A",
-    "time_start": "14:30",
-    "time_end": "15:10",
-    "room": "Track A",
-    "title": "初心者向け Gen AI 特集",
-    "level": ["Beginner"],
-    "tech_tags": ["Web", "Mobile"],
-    "description": "これまで当たり前ではなかった開発スタイル..."
+    "description": "Session Description (TBA)",
+    "perspective": []
   }
 ]

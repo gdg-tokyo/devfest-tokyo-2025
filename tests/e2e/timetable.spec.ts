@@ -29,6 +29,18 @@ test.describe('Time Table Page', () => {
     ).not.toHaveClass(/opacity-30/)
   })
 
+  test('should filter sessions by "Advanced" skill level', async ({ page }) => {
+    await page.getByTestId('filter-system').getByText('Advanced').click()
+    await expect(
+      page.locator('//div[h3[text()="Google Maps 特集 (仮)"]]/parent::div')
+    ).toHaveClass(/opacity-30/)
+    await expect(
+      page.locator(
+        '//div[h3[text()="基調講演: Webの再生と技術者の今後"]]/parent::div'
+      )
+    ).not.toHaveClass(/opacity-30/)
+  })
+
   test('should show no data message if no sessions are available', async ({
     page,
   }) => {

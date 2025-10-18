@@ -1,0 +1,74 @@
+name: Unit and E2E Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  unit_tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run unit tests
+        run: NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV=DEV npm run test
+
+  e2e_tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Start Next.js development server
+        run: NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV=DEV npm run dev &
+        env:
+          NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV: DEV
+      - name: Wait for Next.js server to start
+        run: sleep 10
+
+      - name: Run Playwright E2E tests
+        run: npx playwright test
+
+  build_check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run build
+        run: npm run build

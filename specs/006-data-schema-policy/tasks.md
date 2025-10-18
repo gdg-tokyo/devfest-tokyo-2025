@@ -54,11 +54,11 @@ These tasks are the prerequisites for all other work. They must be completed bef
 
 **Independent Test**: Set `DEVFEST_TOKYO_2025_TARGET_ENV` to `DEV` and `PROD` and verify that the application loads the correct data.
 
-- **T011** [US3]: Create `src/data/dev/` and `src/data/prod/` directories.
-- **T012** [US3]: Move existing data files (`sessions.json`, `speakers.json`, `talks.json`) to `src/data/prod/`.
-- **T013** [US3]: Create dummy data files (`sessions.json`, `speakers.json`, `talks.json`) in `src/data/dev/` with 12 sessions, 4 tracks, 3 timeslots, etc.
-- **T014** [US3]: Update `src/lib/data-parser.ts` to read from either `src/data/dev/` or `src/data/prod/` based on the `DEVFEST_TOKYO_2025_TARGET_ENV` environment variable.
-- **T015** [US3]: Add unit tests for the environment-specific data loading logic.
+- **T011** [X] [US3]: Create `src/data/dev/` and `src/data/prod/` directories.
+- **T012** [X] [US3]: Move existing data files (`sessions.json`, `speakers.json`, `talks.json`) to `src/data/prod/`.
+- **T013** [X] [US3]: Create dummy data files (`sessions.json`, `speakers.json`, `talks.json`) in `src/data/dev/` with 12 sessions, 4 tracks, 3 timeslots, etc.
+- **T014** [X] [US3]: Update `src/lib/data-parser.ts` to read from either `src/data/dev/` or `src/data/prod/` based on the `DEVFEST_TOKYO_2025_TARGET_ENV` environment variable.
+- **T015** [X] [US3]: Add unit tests for the environment-specific data loading logic.
 
 ---
 

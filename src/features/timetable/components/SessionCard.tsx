@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import { OldSession } from '@/lib/data-parser'
+import { Session, Talk, Speaker } from '@/types'
+import { getTalks, getSpeakers } from '@/lib/data-parser'
 import { getLevelColor } from '@/lib/style-utils'
 
 interface SessionCardProps {
-  session: OldSession
+  session: Session
   isGrayedOut?: boolean
 }
 
@@ -39,10 +40,23 @@ const ClockIcon = () => (
 )
 
 const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
-  // Extract speaker names from the first talk in the session
+  const allTalks = getTalks()
+  const allSpeakers = getSpeakers()
+
+  const talksMap = new Map<string, Talk>(
+    allTalks.map((talk) => [talk.id, talk])
+  )
+  const speakersMap = new Map<string, Speaker>(
+    allSpeakers.map((speaker) => [speaker.id, speaker])
+  )
+
   const speakerNames =
-    session.talks && session.talks.length > 0
-      ? session.talks[0].speakers.map((speaker) => speaker.name).join(', ')
+    session.talk_ids.length > 0
+      ? talksMap
+          .get(session.talk_ids[0])
+          ?.speaker_ids.map((speakerId) => speakersMap.get(speakerId)?.name)
+          .filter((name): name is string => name !== undefined)
+          .join(', ')
       : 'N/A'
 
   // Assuming time_start and time_end are still part of the session object for display on the card
@@ -74,7 +88,7 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
             session.level.map((levelItem) => (
               <span
                 key={levelItem}
-                className={`text-xs px-1 py-0 rounded-full border border-black ${getLevelColor(levelItem)} text-gray-800`}
+                className={`text-xs px-1 py-0 rounded-full border border-black ${getLevelColor(levelItem as 'Beginner' | 'Intermediate' | 'Advanced')} text-gray-800`}
               >
                 {levelItem}
               </span>

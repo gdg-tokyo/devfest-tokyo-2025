@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
-import { getSessions, OldSession } from '@/lib/data-parser'
+import { getSessions } from '@/lib/data-parser'
+import { Session } from '@/types'
 import SessionDetail from '@/features/session/components/SessionDetail'
 
 interface SessionPageProps {
@@ -8,7 +9,7 @@ interface SessionPageProps {
   }
 }
 
-const getSessionById = (sessionId: string): OldSession | undefined => {
+const getSessionById = (sessionId: string): Session | undefined => {
   const allSessions = getSessions()
   return allSessions.find((session) => session.id === sessionId)
 }

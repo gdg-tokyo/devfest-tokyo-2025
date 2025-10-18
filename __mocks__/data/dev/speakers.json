@@ -1,0 +1,10 @@
+[
+  {
+    "id": "speaker-1",
+    "name": "Dev Speaker 1",
+    "photo_url": "dev-photo-1",
+    "job": "Dev Job 1",
+    "bio": "Dev Bio 1",
+    "twitter_handle": "devspeaker1"
+  }
+]

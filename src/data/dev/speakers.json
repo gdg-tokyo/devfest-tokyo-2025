@@ -1,0 +1,98 @@
+[
+  {
+    "id": "speaker-1",
+    "name": "Speaker 1",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 1",
+    "bio": "Bio 1",
+    "twitter_handle": "speaker1"
+  },
+  {
+    "id": "speaker-2",
+    "name": "Speaker 2",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 2",
+    "bio": "Bio 2",
+    "twitter_handle": "speaker2"
+  },
+  {
+    "id": "speaker-3",
+    "name": "Speaker 3",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 3",
+    "bio": "Bio 3",
+    "twitter_handle": "speaker3"
+  },
+  {
+    "id": "speaker-4",
+    "name": "Speaker 4",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 4",
+    "bio": "Bio 4",
+    "twitter_handle": "speaker4"
+  },
+  {
+    "id": "speaker-5",
+    "name": "Speaker 5",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 5",
+    "bio": "Bio 5",
+    "twitter_handle": "speaker5"
+  },
+  {
+    "id": "speaker-6",
+    "name": "Speaker 6",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 6",
+    "bio": "Bio 6",
+    "twitter_handle": "speaker6"
+  },
+  {
+    "id": "speaker-7",
+    "name": "Speaker 7",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 7",
+    "bio": "Bio 7",
+    "twitter_handle": "speaker7"
+  },
+  {
+    "id": "speaker-8",
+    "name": "Speaker 8",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 8",
+    "bio": "Bio 8",
+    "twitter_handle": "speaker8"
+  },
+  {
+    "id": "speaker-9",
+    "name": "Speaker 9",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 9",
+    "bio": "Bio 9",
+    "twitter_handle": "speaker9"
+  },
+  {
+    "id": "speaker-10",
+    "name": "Speaker 10",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 10",
+    "bio": "Bio 10",
+    "twitter_handle": "speaker10"
+  },
+  {
+    "id": "speaker-11",
+    "name": "Speaker 11",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 11",
+    "bio": "Bio 11",
+    "twitter_handle": "speaker11"
+  },
+  {
+    "id": "speaker-12",
+    "name": "Speaker 12",
+    "photo_url": "https://via.placeholder.com/150",
+    "job": "Job 12",
+    "bio": "Bio 12",
+    "twitter_handle": "speaker12"
+  }
+]

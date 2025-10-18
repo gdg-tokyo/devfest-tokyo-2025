@@ -1,47 +1,129 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import TimetableGrid from '@/features/timetable/components/TimetableGrid'
+import { getTalks, getSpeakers, getSessions } from '@/lib/data-parser'
+
+jest.mock('@/lib/data-parser', () => ({
+  getTalks: jest.fn(),
+  getSpeakers: jest.fn(),
+  getSessions: jest.fn(),
+}))
+
+const mockSpeakers = [
+  {
+    id: 'speaker1',
+    name: 'John Doe',
+    bio: 'bio',
+    photo_url: 'url',
+    job: 'job',
+    twitter_handle: 'handle',
+  },
+  {
+    id: 'speaker2',
+    name: 'Jane Smith',
+    bio: 'bio',
+    photo_url: 'url',
+    job: 'job',
+    twitter_handle: 'handle',
+  },
+  {
+    id: 'speaker3',
+    name: 'Alice',
+    bio: 'bio',
+    photo_url: 'url',
+    job: 'job',
+    twitter_handle: 'handle',
+  },
+]
+
+const mockTalks = [
+  {
+    id: 'talk1',
+    title: 'Intro to Next.js',
+    abstract: 'Abstract 1',
+    time_start: '10:00',
+    time_end: '10:50',
+    track: 'Web & Frontend',
+    speaker_ids: ['speaker1'],
+    tech_tags: ['Next.js', 'React'],
+    level: ['Beginner'],
+    perspective: ['Introduction'],
+  },
+  {
+    id: 'talk2',
+    title: 'Advanced TS',
+    abstract: 'Abstract 2',
+    time_start: '10:00',
+    time_end: '10:50',
+    track: 'Google Cloud',
+    speaker_ids: ['speaker2'],
+    tech_tags: ['TypeScript', 'Google Cloud'],
+    level: ['Advanced'],
+    perspective: ['Challenge'],
+  },
+  {
+    id: 'talk3',
+    title: 'Another Web Talk',
+    abstract: 'Abstract 3',
+    time_start: '11:00',
+    time_end: '11:50',
+    track: 'Web & Frontend',
+    speaker_ids: ['speaker3'],
+    tech_tags: ['Web'],
+    level: ['Intermediate'],
+    perspective: ['Experience'],
+  },
+]
 
 // Mock data for sessions
 const mockSessions = [
   {
     id: 'session1',
     title: 'Intro to Next.js',
-    description_long: 'Desc 1',
-    speaker_names: ['John Doe'],
-    speaker_profiles: [{ name: 'John Doe', icon_url: '' }],
+    description: 'Desc 1',
     track: 'Web & Frontend',
     time_start: '10:00',
     time_end: '10:50',
     room: 'Room A',
+    talk_ids: ['talk1'],
+    level: ['Beginner'],
+    tech_tags: ['Next.js', 'React'],
   },
   {
     id: 'session2',
     title: 'Advanced TS',
-    description_long: 'Desc 2',
-    speaker_names: ['Jane Smith'],
-    speaker_profiles: [{ name: 'Jane Smith', icon_url: '' }],
+    description: 'Desc 2',
     track: 'Google Cloud',
     time_start: '10:00',
     time_end: '10:50',
     room: 'Room B',
+    talk_ids: ['talk2'],
+    level: ['Advanced'],
+    tech_tags: ['TypeScript', 'Google Cloud'],
   },
   {
     id: 'session3',
     title: 'Another Web Talk',
-    description_long: 'Desc 3',
-    speaker_names: ['Alice'],
-    speaker_profiles: [{ name: 'Alice', icon_url: '' }],
+    description: 'Desc 3',
     track: 'Web & Frontend',
     time_start: '11:00',
     time_end: '11:50',
     room: 'Room A',
+    talk_ids: ['talk3'],
+    level: ['Intermediate'],
+    tech_tags: ['Web'],
   },
 ]
 
-const mockFilters = { levels: [], perspectives: [], keyword: '' }
+const mockFilters = { levels: [], keyword: '' }
 
 describe('TimetableGrid', () => {
+  beforeEach(() => {
+    ;(getTalks as jest.Mock).mockReturnValue(mockTalks)
+    ;(getSpeakers as jest.Mock).mockReturnValue(mockSpeakers)
+    ;(getSessions as jest.Mock).mockReturnValue(mockSessions)
+  })
+
   it('renders track headers correctly', () => {
     render(<TimetableGrid sessions={mockSessions} filters={mockFilters} />)
     expect(screen.getByText('Google Cloud')).toBeInTheDocument()

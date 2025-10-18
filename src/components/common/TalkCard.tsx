@@ -1,30 +1,27 @@
-import { OldSession, OldTalk } from '@/lib/data-parser'
+import { Session, Talk, Speaker } from '@/types'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import PersonIcon from '@mui/icons-material/Person'
 import Link from 'next/link'
 import React from 'react'
+import { getLevelColor } from '@/lib/style-utils'
 
 interface TalkCardProps {
-  talk: OldTalk
+  talk: Talk
+
   sessionId: string
-  session: OldSession
+
+  session: Session
+
+  speakers: Speaker[] // Add speakers here
 }
 
-const getLevelColor = (level?: 'Beginner' | 'Intermediate' | 'Advanced') => {
-  switch (level) {
-    case 'Beginner':
-      return 'bg-gdg-pastel-blue'
-    case 'Intermediate':
-      return 'bg-gdg-pastel-green'
-    case 'Advanced':
-      return 'bg-gdg-pastel-red'
-    default:
-      return 'bg-gray-200'
-  }
-}
-
-const TalkCard: React.FC<TalkCardProps> = ({ talk, sessionId, session }) => {
-  const speakerNames = talk.speakers.map((speaker) => speaker.name).join(', ')
+const TalkCard: React.FC<TalkCardProps> = ({
+  talk,
+  sessionId,
+  session,
+  speakers,
+}) => {
+  const speakerNames = speakers.map((speaker) => speaker.name).join(', ')
   const timeStart = session?.time_start || 'N/A'
   const timeEnd = session?.time_end || 'N/A'
 
@@ -56,7 +53,7 @@ const TalkCard: React.FC<TalkCardProps> = ({ talk, sessionId, session }) => {
               session.level.map((levelItem) => (
                 <span
                   key={levelItem}
-                  className={`text-xs px-1 py-0 rounded-full border border-black ${getLevelColor(levelItem)} text-gray-800`}
+                  className={`text-xs px-1 py-0 rounded-full border border-black ${getLevelColor(levelItem as 'Beginner' | 'Intermediate' | 'Advanced')} text-gray-800`}
                 >
                   {levelItem}
                 </span>

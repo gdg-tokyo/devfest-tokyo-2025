@@ -1,0 +1,11 @@
+[
+  {
+    "id": "talk-1",
+    "title": "Dev Talk 1",
+    "abstract": "Dev Abstract 1",
+    "speaker_ids": ["speaker-1"],
+    "tech_tags": [],
+    "level": "Beginner",
+    "perspective": "Introduction"
+  }
+]

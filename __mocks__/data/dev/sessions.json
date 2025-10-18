@@ -1,0 +1,14 @@
+[
+  {
+    "id": "session-1",
+    "talk_ids": ["talk-1"],
+    "track": "Dev Track A",
+    "time_start": "10:00",
+    "time_end": "10:50",
+    "room": "Dev Room 1",
+    "title": "Dev Session 1",
+    "level": ["Beginner"],
+    "tech_tags": ["Web"],
+    "description": "Dev Description 1"
+  }
+]

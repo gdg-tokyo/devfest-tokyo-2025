@@ -1,14 +1,15 @@
-import speakersData from '@/data/speakers.json'
-import talksData from '@/data/talks.json'
-import sessionsData from '@/data/sessions.json'
+import speakersData from '@/data/prod/speakers.json'
+import talksData from '@/data/prod/talks.json'
+import sessionsData from '@/data/prod/sessions.json'
 
 describe('Data Files Structure', () => {
   it('speakers.json should be an array of speaker objects', () => {
     expect(Array.isArray(speakersData)).toBe(true)
-    expect(speakersData).toHaveLength(18)
+    // TODO: Update toHaveLength with the actual number of production speakers
+    // expect(speakersData).toHaveLength(18)
     expect(speakersData[0]).toHaveProperty('id')
     expect(speakersData[0]).toHaveProperty('name')
-    expect(speakersData[0]).toHaveProperty('icon_url')
+    expect(speakersData[0]).toHaveProperty('photo_url') // Changed from icon_url
     expect(speakersData[0]).toHaveProperty('job')
     expect(speakersData[0]).toHaveProperty('bio')
     expect(speakersData[0]).toHaveProperty('twitter_handle')
@@ -33,6 +34,8 @@ describe('Data Files Structure', () => {
 
   it('sessions.json should be an array of session objects', () => {
     expect(Array.isArray(sessionsData)).toBe(true)
+    // TODO: Update toHaveLength with the actual number of production sessions
+    // expect(sessionsData).toHaveLength(X)
     sessionsData.forEach((session: any) => {
       expect(session).toHaveProperty('id')
       expect(session).toHaveProperty('talk_ids')

@@ -1,6 +1,4 @@
-'use client'
-
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, Suspense } from 'react'
 
 import { getSessions, getTalks, getSpeakers } from '@/lib/data-parser'
 import { Session, Talk, Speaker } from '@/types'
@@ -25,7 +23,7 @@ interface TalkWithSessionInfo extends Talk {
   speakers: Speaker[] // Add speakers here, as Talk only has speaker_ids
 }
 
-const TalksPage = () => {
+const TalksPageContent = () => {
   const router = useRouter()
 
   const searchParams = useSearchParams()
@@ -146,6 +144,14 @@ const TalksPage = () => {
 
       <SessionModal session={selectedSession} onClose={handleCloseModal} />
     </div>
+  )
+}
+
+const TalksPage = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <TalksPageContent />
+    </Suspense>
   )
 }
 

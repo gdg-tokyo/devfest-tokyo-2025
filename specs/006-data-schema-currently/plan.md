@@ -5,7 +5,7 @@
 
 ## Summary
 
-The primary goal of this feature is to refactor the existing data structure. Currently, all data is stored in a single `sessions.json` file. This will be split into three separate files: `sessions.json`, `talks.json`, and `speakers.json`. This will simplify data management and improve the developer experience. The existing data parsing logic in `src/lib/data-parser.ts` will be updated to read from these new files and join the data.
+The primary goal of this feature is to refactor the existing data structure. Currently, all data is stored in a single `sessions.json` file. This will be split into three separate files: `sessions.json`, `talks.json`, and `speakers.json`. This will simplify data management and improve the developer experience. Additionally, this feature will introduce environment-specific data sets for development (`dev`) and production (`prod`), controlled by the `DEVFEST_TOKYO_2025_TARGET_ENV` environment variable. The existing data parsing logic in `src/lib/data-parser.ts` will be updated to read from these new files and join the data.
 
 ## Technical Context
 
@@ -49,16 +49,31 @@ specs/006-data-schema-currently/
 # Single project
 src/
 ├── data/
-│   ├── sessions.json
-│   ├── talks.json
-│   └── speakers.json
+│   ├── dev/
+│   │   ├── sessions.json
+│   │   ├── talks.json
+│   │   └── speakers.json
+│   └── prod/
+│       ├── sessions.json
+│       ├── talks.json
+│       └── speakers.json
 ├── lib/
 │   └── data-parser.ts
 └── types/
     └── index.ts
 ```
 
-**Structure Decision**: The project is a single web application. The main changes will be in the `src/data` directory, where the new JSON files will be created, and in `src/lib/data-parser.ts`, which will be updated to handle the new data structure.
+**Structure Decision**: The project is a single web application. The main changes will be in the `src/data` directory, which will now be split into `dev` and `prod` subdirectories. The `src/lib/data-parser.ts` will be updated to handle the new data structure and environment-specific loading.
+
+## Implementation Phases
+
+The implementation will be divided into the following phases:
+
+1.  **Phase 1: Foundational Tasks**: Set up the new data files and migrate the existing data.
+2.  **Phase 2: User Story 1 - Simplified Data Management**: Verify that the new data structure works as expected.
+3.  **Phase 3: User Story 2 - Improved Developer Experience**: Add tests for the new data structure.
+4.  **Phase 4: Polish & Integration**: Refactor components and clean up the project.
+5.  **Phase 5: User Story 3 - Environment-specific Data**: Implement the logic for loading data based on the environment variable.
 
 ## Complexity Tracking
 

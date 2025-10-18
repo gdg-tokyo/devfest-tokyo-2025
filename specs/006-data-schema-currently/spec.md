@@ -1,6 +1,9 @@
 # Feature Specification: Data Schema Refactoring
 
-**Feature Branch**: `006-data-schema-currently` **Created**: 2025-10-18 **Status**: Draft **Input**: User description: "data schema Currently the data is stored as a JSON and it is defined in @@specs/003-time-table-page/data-model.md I want to split this data into three entity/table: session, talk, speaker for easier management. Can you do it for me?"
+- **Feature Branch**: `006-data-schema-currently`
+- **Created**: 2025-10-18
+- **Status**: Draft
+- **Input**: User description: "data schema Currently the data is stored as a JSON and it is defined in @@specs/003-time-table-page/data-model.md I want to split this data into three entity/table: session, talk, speaker for easier management. Can you do it for me?"
 
 ## User Scenarios & Testing _(mandatory)_
 
@@ -30,7 +33,21 @@ As a developer, I want to query the data for speakers, talks, and sessions separ
 
 1.  **Given** the new data structure, **When** a developer queries the `speakers` data store, **Then** they receive a list of all speakers.
 2.  **Given** the new data structure, **When** a developer queries the `talks` data store for a specific talk, **Then** they receive the talk data along with the IDs of the associated speakers.
-3.  **Given** the new data structure, **When** a developer queries the `sessions` data store, **Then** they receive a list of all sessions with the ID of the associated talk.
+3.  **Given** a new data structure, **When** a developer queries the `sessions` data store, **Then** they receive a list of all sessions with the ID of the associated talk.
+
+### User Story 3 - Environment-specific Data (Priority: P2)
+
+As a developer, I want to use a small, predictable dataset during development and testing, while the production environment uses the real event data, so that I can speed up my development process and ensure my tests are stable and fast.
+
+**Why this priority**: This will improve developer productivity and testing efficiency.
+
+**Independent Test**: When the `DEVFEST_TOKYO_2025_TARGET_ENV` environment variable is set to `DEV`, the application loads a small, dummy dataset. When it's set to `PROD` or is unset, it loads the full, real dataset.
+
+**Acceptance Scenarios**:
+
+1.  **Given** the `DEVFEST_TOKYO_2025_TARGET_ENV` environment variable is set to `DEV`, **When** the application starts, **Then** it loads `sessions.json`, `speakers.json`, and `talks.json` from `src/data/dev/`.
+2.  **Given** the `DEVFEST_TOKYO_2025_TARGET_ENV` environment variable is `PROD` or not set, **When** the application starts, **Then** it loads `sessions.json`, `speakers.json`, and `talks.json` from `src/data/prod/`.
+3.  **Given** the dev data is loaded, **When** I view the timetable, **Then** I see 12 sessions distributed across 4 tracks and 3 timeslots.
 
 ## Clarifications
 
@@ -39,6 +56,21 @@ As a developer, I want to query the data for speakers, talks, and sessions separ
 - Q: When a Talk is deleted, what should happen to Sessions that reference it? → A: Cascading Delete: Delete the sessions as well.
 - Q: If a `speaker_id` in a talk record does not correspond to an existing speaker, how should this be handled? → A: A but display the dummy "unknown" speaker instead of null.
 - Q: To what extent should components that consume session data, like `SessionCard`, be refactored? → A: Full refactoring: Refactor the components to improve their structure and readability.
+
+### Environment-specific Data
+
+- The environment variable to switch data sources will be `DEVFEST_TOKYO_2025_TARGET_ENV`.
+- `DEVFEST_TOKYO_2025_TARGET_ENV=DEV` will use the development data.
+- `DEVFEST_TOKYO_2025_TARGET_ENV=PROD` (or if the variable is unset) will use the production data.
+- The current `sessions.json`, `speakers.json`, and `talks.json` will be moved to `src/data/prod/`.
+- New files `sessions.json`, `speakers.json`, and `talks.json` will be created in `src/data/dev/` for the development data.
+- The development data will be a simple, structured set of dummy data.
+  - 12 sessions.
+  - 4 tracks (A, B, C, D).
+  - 3 timeslots (I, II, III).
+  - Session names like "Session 1 (Track A - Timeslot I)".
+  - Each session will have between 1 and 5 talks.
+  - Each talk will have a single speaker.
 
 ### Edge Cases
 
@@ -56,6 +88,10 @@ As a developer, I want to query the data for speakers, talks, and sessions separ
 - **FR-004**: The data access layer of the application MUST be updated to read from and combine data from the new data stores.
 - **FR-005**: The existing functionality of the timetable page, including filtering and session details, MUST be maintained.
 - **FR-006**: All components that consume session data (e.g., `SessionCard`) MUST be refactored to improve their structure and readability.
+- **FR-007**: The system MUST support loading different data sets based on an environment variable (`DEVFEST_TOKYO_2025_TARGET_ENV`). `DEVFEST_TOKYO_2025_TARGET_ENV=PROD` for production, and `DEVFEST_TOKYO_2025_TARGET_ENV=DEV` for development and testing.
+- **FR-008**: A `dev` dataset MUST be created with a small, predictable set of data for sessions, talks, and speakers. This data should be stored in `src/data/dev/` directory.
+- **FR-009**: The current dataset MUST be used as the `production` dataset, stored in `src/data/prod/` directory.
+- **FR-010**: The `dev` dataset MUST contain 12 sessions, across 4 tracks and 3 timeslots. Each session should contain 1 to 5 talks, and each talk should have one speaker.
 
 ### Key Entities _(include if feature involves data)_
 

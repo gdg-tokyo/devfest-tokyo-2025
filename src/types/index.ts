@@ -4,7 +4,6 @@ export interface Session {
   track: string
   time_start: string
   time_end: string
-  room: string
   title: string
   level: string[]
   tech_tags: string[]

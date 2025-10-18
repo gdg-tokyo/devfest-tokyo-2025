@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "DEVFEST_TOKYO_2025_TARGET_ENV=DEV next dev",
-    "prod": "DEVFEST_TOKYO_2025_TARGET_ENV=PROD next dev",
+    "dev": "NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV=DEV next dev",
+    "prod": "NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV=PROD next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "DEVFEST_TOKYO_2025_TARGET_ENV=DEV jest",
+    "test": "NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV=DEV jest",
     "prepare": "husky"
   },
   "dependencies": {

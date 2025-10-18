@@ -36,6 +36,11 @@ const TalksPage = () => {
   const allRawTalks: Talk[] = getTalks()
   const allSpeakers: Speaker[] = getSpeakers()
 
+  // Declare state variables for filters
+  const [keyword, setKeyword] = useState<string>('')
+  const [selectedLevels, setSelectedLevels] = useState<string[]>([])
+  const [selectedTechTags, setSelectedTechTags] = useState<string[]>([])
+
   const allTalks: TalkWithSessionInfo[] = useMemo(() => {
     const speakersMap = new Map<string, Speaker>(
       allSpeakers.map((speaker) => [speaker.id, speaker])
@@ -89,7 +94,7 @@ const TalksPage = () => {
 
       return matchesKeyword && matchesLevel && matchesTechTags
     })
-  }, [allTalks, keyword, selectedLevels, selectedTechTags])
+  }, [allTalks, keyword, selectedLevels, selectedTechTags]) // Dependency array is now correct
 
   const selectedSession = useMemo(() => {
     return allSessions.find((session) => session.id === modalSessionId) || null
@@ -106,9 +111,7 @@ const TalksPage = () => {
       <FilterSystem
         onFilterChange={({ levels, keyword, techTags }) => {
           setSelectedLevels(levels)
-
           setKeyword(keyword)
-
           setSelectedTechTags(techTags)
         }}
         availableLevels={Array.from(

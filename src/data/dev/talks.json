@@ -4,7 +4,7 @@
     "title": "Talk 1",
     "abstract": "Abstract 1",
     "speaker_ids": ["speaker-1"],
-    "level": "Beginner",
+    "level": ["Beginner"],
     "perspective": "Introduction",
     "tech_tags": ["Web", "Mobile"],
     "is_keynote": false
@@ -14,7 +14,7 @@
     "title": "Talk 2",
     "abstract": "Abstract 2",
     "speaker_ids": ["speaker-2"],
-    "level": "Intermediate",
+    "level": ["Intermediate"],
     "perspective": "Experience",
     "tech_tags": ["Cloud", "AI"],
     "is_keynote": false
@@ -24,7 +24,7 @@
     "title": "Talk 3",
     "abstract": "Abstract 3",
     "speaker_ids": ["speaker-3"],
-    "level": "Advanced",
+    "level": ["Advanced"],
     "perspective": "Challenge",
     "tech_tags": ["Machine Learning", "Firebase"],
     "is_keynote": false
@@ -34,7 +34,7 @@
     "title": "Talk 4",
     "abstract": "Abstract 4",
     "speaker_ids": ["speaker-4"],
-    "level": "Beginner",
+    "level": ["Beginner"],
     "perspective": "Introduction",
     "tech_tags": ["Flutter", "Android"],
     "is_keynote": false
@@ -44,7 +44,7 @@
     "title": "Talk 5",
     "abstract": "Abstract 5",
     "speaker_ids": ["speaker-5"],
-    "level": "Intermediate",
+    "level": ["Intermediate"],
     "perspective": "Experience",
     "tech_tags": ["Web", "Cloud"],
     "is_keynote": false
@@ -54,7 +54,7 @@
     "title": "Talk 6",
     "abstract": "Abstract 6",
     "speaker_ids": ["speaker-6"],
-    "level": "Advanced",
+    "level": ["Advanced"],
     "perspective": "Challenge",
     "tech_tags": ["AI", "Mobile"],
     "is_keynote": false
@@ -64,7 +64,7 @@
     "title": "Talk 7",
     "abstract": "Abstract 7",
     "speaker_ids": ["speaker-7"],
-    "level": "Beginner",
+    "level": ["Beginner"],
     "perspective": "Introduction",
     "tech_tags": ["Firebase", "Flutter"],
     "is_keynote": false
@@ -74,7 +74,7 @@
     "title": "Talk 8",
     "abstract": "Abstract 8",
     "speaker_ids": ["speaker-8"],
-    "level": "Intermediate",
+    "level": ["Intermediate"],
     "perspective": "Experience",
     "tech_tags": ["Android", "Web"],
     "is_keynote": false
@@ -84,7 +84,7 @@
     "title": "Talk 9",
     "abstract": "Abstract 9",
     "speaker_ids": ["speaker-9"],
-    "level": "Advanced",
+    "level": ["Advanced"],
     "perspective": "Challenge",
     "tech_tags": ["Cloud", "Machine Learning"],
     "is_keynote": false
@@ -94,7 +94,7 @@
     "title": "Talk 10",
     "abstract": "Abstract 10",
     "speaker_ids": ["speaker-10"],
-    "level": "Beginner",
+    "level": ["Beginner"],
     "perspective": "Introduction",
     "tech_tags": ["AI", "Firebase"],
     "is_keynote": false
@@ -104,7 +104,7 @@
     "title": "Talk 11",
     "abstract": "Abstract 11",
     "speaker_ids": ["speaker-11"],
-    "level": "Intermediate",
+    "level": ["Intermediate"],
     "perspective": "Experience",
     "tech_tags": ["Mobile", "Flutter"],
     "is_keynote": false
@@ -114,7 +114,7 @@
     "title": "Talk 12",
     "abstract": "Abstract 12",
     "speaker_ids": ["speaker-12"],
-    "level": "Advanced",
+    "level": ["Advanced"],
     "perspective": "Challenge",
     "tech_tags": ["Web", "Android"],
     "is_keynote": false

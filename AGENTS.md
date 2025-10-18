@@ -120,13 +120,15 @@ This architecture design emphasizes decoupling the core business logic from the 
   - To create a production-ready build, use: `npm run build`
 - **Testing**:
   - The project uses Jest for unit/integration testing and Playwright for E2E testing.
-  - To run all tests, use: `npm run test`
+  - To run all unit/integration tests, use: `npm run test`
+  - To run E2E tests, use: `npx playwright test`
   - To run tests with development data, use: `DEVFEST_TOKYO_2025_TARGET_ENV=DEV npm run test`
 - **CI/CD Checks**:
   - While a CI/CD pipeline is not yet configured, any pull request or merge to the main branch should successfully pass the following checks:
     1. `npm run lint` (Linting)
-    2. `npm run test` (Testing)
-    3. `npm run build` (Build)
+    2. `npm run test` (Unit/Integration Testing)
+    3. `npx playwright test` (E2E Testing)
+    4. `npm run build` (Build)
 
 ### Security considerations
 

@@ -22,10 +22,16 @@ npm run dev
 
 ### Running Tests
 
-To run all tests:
+To run all unit/integration tests:
 
 ```bash
 npm run test
+```
+
+To run E2E tests:
+
+```bash
+npx playwright test
 ```
 
 To run tests with **development data**:

@@ -10,26 +10,41 @@ test.describe('Time Table Page', () => {
     await expect(
       page.getByRole('heading', { name: 'Event Timetable' })
     ).toBeVisible()
-    await expect(page.getByText('基調講演')).toBeVisible()
+    // Update to a title from dev data
+    await expect(
+      page.getByText('Session 1 (Track A - Timeslot I)')
+    ).toBeVisible()
   })
 
   test('should filter sessions by skill level', async ({ page }) => {
     await page.getByTestId('filter-system').getByText('Beginner').click()
+    // Expect an Advanced session to be grayed out
     await expect(
-      page.locator('//div[h3[text()="異分野クロストーク"]]/parent::div')
+      page.locator(
+        '//h3[text()="Session 3 (Track C - Timeslot I)"]/ancestor::div[2]'
+      )
     ).toHaveClass(/opacity-30/)
+    // Expect a Beginner session to not be grayed out
     await expect(
-      page.locator('//div[h3[text()="初心者向け Gen AI 特集"]]/parent::div')
+      page.locator(
+        '//h3[text()="Session 1 (Track A - Timeslot I)"]/ancestor::div[2]'
+      )
     ).not.toHaveClass(/opacity-30/)
   })
 
   test('should filter sessions by "Advanced" skill level', async ({ page }) => {
     await page.getByTestId('filter-system').getByText('Advanced').click()
+    // Expect a Beginner session to be grayed out
     await expect(
-      page.locator('//div[h3[text()="Google Maps 特集"]]/parent::div')
+      page.locator(
+        '//h3[text()="Session 1 (Track A - Timeslot I)"]/ancestor::div[2]'
+      )
     ).toHaveClass(/opacity-30/)
+    // Expect an Advanced session to not be grayed out
     await expect(
-      page.locator('//div[h3[text()="基調講演"]]/parent::div')
+      page.locator(
+        '//h3[text()="Session 3 (Track C - Timeslot I)"]/ancestor::div[2]'
+      )
     ).not.toHaveClass(/opacity-30/)
   })
 

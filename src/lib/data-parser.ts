@@ -1,7 +1,19 @@
 import { Session, Speaker, Talk } from '@/types'
 
+interface DataCacheEntry {
+  speakers: Speaker[]
+  talks: Talk[]
+  sessions: Session[]
+}
+
+const dataCache: { [key: string]: DataCacheEntry } = {}
+
 // Helper function to load data based on directory
-function loadData(dataDir: string) {
+function loadData(dataDir: string): DataCacheEntry {
+  if (dataCache[dataDir]) {
+    return dataCache[dataDir]
+  }
+
   const speakers = require(`../data/${dataDir}/speakers.json`)
   const talks = require(`../data/${dataDir}/talks.json`)
   const sessions = require(`../data/${dataDir}/sessions.json`)
@@ -9,13 +21,14 @@ function loadData(dataDir: string) {
   console.log(`Loading talks from: src/data/${dataDir}/talks.json`)
   console.log(`Loading sessions from: src/data/${dataDir}/sessions.json`)
 
-  return { speakers, talks, sessions }
+  const loadedData: DataCacheEntry = { speakers, talks, sessions }
+  dataCache[dataDir] = loadedData // Cache the loaded data
+  return loadedData
 }
 
 export function getSessions(): Session[] {
-  const env = process.env.DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
   const dataDir = env === 'DEV' ? 'dev' : 'prod'
-  console.log(`Loading data for environment: ${env} from directory: ${dataDir}`)
 
   const {
     speakers: speakersData,
@@ -73,7 +86,6 @@ export function getSessions(): Session[] {
         track: session.track,
         time_start: session.time_start,
         time_end: session.time_end,
-        room: session.room,
         title: session.title,
         level: session.level,
         tech_tags: session.tech_tags,
@@ -86,14 +98,14 @@ export function getSessions(): Session[] {
 }
 
 export function getTalks(): Talk[] {
-  const env = process.env.DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
   const dataDir = env === 'DEV' ? 'dev' : 'prod'
   const { talks: talksData } = loadData(dataDir)
   return talksData
 }
 
 export function getSpeakers(): Speaker[] {
-  const env = process.env.DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
   const dataDir = env === 'DEV' ? 'dev' : 'prod'
   const { speakers: speakersData } = loadData(dataDir)
   return speakersData
@@ -102,9 +114,8 @@ export function getSpeakers(): Speaker[] {
 export function getTalkById(
   id: string
 ): { talk: Talk; speakers: Speaker[] } | undefined {
-  const env = process.env.DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
   const dataDir = env === 'DEV' ? 'dev' : 'prod'
-  console.log(`Loading data for environment: ${env} from directory: ${dataDir}`)
 
   const { speakers: speakersData, talks: talksData } = loadData(dataDir)
 

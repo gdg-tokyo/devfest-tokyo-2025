@@ -8,6 +8,7 @@ export interface Session {
   level: string[]
   tech_tags: string[]
   description: string
+  perspective: string[]
 }
 
 export interface Speaker {

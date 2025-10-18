@@ -90,6 +90,7 @@ export function getSessions(): Session[] {
         level: session.level,
         tech_tags: session.tech_tags,
         description: session.description,
+        perspective: talks.flatMap((t) => t.perspective || []),
       }
     })
     .filter((s): s is Session => s !== null)

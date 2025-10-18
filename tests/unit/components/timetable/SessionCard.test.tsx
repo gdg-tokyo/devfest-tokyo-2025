@@ -1,15 +1,20 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import SessionCard from '@/features/timetable/components/SessionCard'
-import { Session } from '@/types'
+import { OldSession } from '@/types'
 
 // Mock data for a session conforming to the new Session interface
-const mockSession: Session = {
+const mockSession: OldSession = {
   id: 'session1',
   title: 'Introduction to Next.js',
-  longDescription: 'This session will cover the basics of Next.js.',
-  level: 'Beginner',
-  perspective: 'Introduction',
+  description: 'This session will cover the basics of Next.js.',
+  level: ['Beginner'],
+  talk_ids: ['talk1'],
+  track: 'Web',
+  time_start: '10:00',
+  time_end: '10:50',
+  room: 'Room 1',
+  tech_tags: ['Next.js', 'React'],
   talks: [
     {
       id: 'talk1',
@@ -20,12 +25,14 @@ const mockSession: Session = {
           id: 'speaker1',
           name: 'John Doe',
           bio: 'A seasoned web developer.',
-          photoUrl: '/images/speakers/john-doe.jpg',
-          socialLinks: [
-            { platform: 'twitter', url: 'https://twitter.com/johndoe' },
-          ],
+          photo_url: '/images/speakers/john-doe.jpg',
+          job: 'Software Engineer',
+          twitter_handle: 'johndoe',
         },
       ],
+      speaker_ids: ['speaker1'],
+      tech_tags: ['Next.js', 'React'],
+      is_keynote: false,
     },
   ],
 }
@@ -38,19 +45,7 @@ describe('SessionCard', () => {
   })
 
   it('renders time information', () => {
-    // Note: time_start and time_end are not part of the new Session interface
-    // For this test to pass, mockSession needs to be cast or updated if these are still expected.
-    // Assuming for now that these are implicitly handled or will be removed from the card display.
-    // If time is still displayed, the SessionCard component or mockSession needs adjustment.
-    // For now, this test will be skipped or adjusted to reflect current component behavior.
-    // As per the updated SessionCard, time_start and time_end are accessed via (session as any).time_start
-    // This test will pass if the mockSession is extended with these properties.
-    const sessionWithTime = {
-      ...mockSession,
-      time_start: '10:00',
-      time_end: '10:50',
-    } as Session
-    render(<SessionCard session={sessionWithTime} />)
+    render(<SessionCard session={mockSession} />)
     expect(screen.getByText('10:00 - 10:50')).toBeInTheDocument()
   })
 

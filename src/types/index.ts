@@ -1,4 +1,4 @@
-export interface Speaker {
+export interface OldSpeaker {
   id: string
   name: string
   job: string
@@ -6,7 +6,7 @@ export interface Speaker {
   twitter_handle: string
 }
 
-export interface Talk {
+export interface OldTalk {
   id: string
   title: string
   abstract: string
@@ -17,7 +17,7 @@ export interface Talk {
   is_keynote: boolean
 }
 
-export interface Session {
+export interface OldSession {
   id: string
   talk_ids: string[]
   track: string
@@ -28,4 +28,21 @@ export interface Session {
   level: string[]
   tech_tags: string[]
   description: string
+}
+
+export interface Speaker {
+  id: string
+  name: string
+  bio: string
+  photo_url: string
+}
+
+export interface Talk {
+  id: string
+  title: string
+  abstract: string
+  time_start: string
+  time_end: string
+  track: string
+  speaker_ids: string[]
 }

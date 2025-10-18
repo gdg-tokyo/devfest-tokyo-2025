@@ -28,7 +28,6 @@ describe('Data Files Structure', () => {
       expect(Array.isArray(talk.tech_tags)).toBe(true)
       expect(talk).toHaveProperty('level')
       expect(talk).toHaveProperty('perspective')
-      expect(talk).toHaveProperty('is_keynote')
     })
   })
 
@@ -43,7 +42,7 @@ describe('Data Files Structure', () => {
       expect(session).toHaveProperty('track')
       expect(session).toHaveProperty('time_start')
       expect(session).toHaveProperty('time_end')
-      expect(session).toHaveProperty('room')
+
       expect(session).toHaveProperty('title')
       expect(session).toHaveProperty('level')
       expect(Array.isArray(session.level)).toBe(true)

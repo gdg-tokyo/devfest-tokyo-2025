@@ -33,6 +33,7 @@ jobs:
   e2e_tests:
     runs-on: ubuntu-latest
     env:
+      # E2E tests are configured to run against DEV data.
       NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV: DEV
 
     steps:

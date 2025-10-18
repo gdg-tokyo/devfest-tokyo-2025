@@ -10,23 +10,29 @@ Sync Impact Report:
   - ✅ .specify/templates/tasks-template.md
 - Follow-up TODOs: None
 -->
+
 # DevFest Tokyo 2025 Web Constitution
 
 ## Core Principles
 
 ### I. Participant-Centric Information
+
 The primary goal is to provide participants with all necessary information to enjoy the event and maximize their learning opportunities, ultimately ensuring high customer satisfaction. While timetable and session information are important, the focus is on anticipating and fulfilling participant needs to create a seamless and valuable experience.
 
 ### II. Brand Compliance
+
 The design must strictly adhere to the official DevFest brand guidelines. This includes the correct use of logos, color palettes, and typography. Maintaining brand consistency is essential for brand recognition and creating a professional and cohesive experience for attendees.
 
 ### III. Responsive Design (Mobile-First)
+
 The website must be fully responsive and optimized for a mobile-first experience. All features and content must be accessible and usable on a wide range of devices, from smartphones to desktops. Attendees will access the website from various devices, especially mobile phones during the event.
 
 ### IV. Modern Tech Stack
+
 The project will be implemented using Next.js and Tailwind CSS. The codebase should be clean, maintainable, and follow best practices for these technologies. Using a modern tech stack allows for rapid development, a high-performing website, and easier maintenance.
 
 ### V. GitHub Pages Deployment
+
 The website will be hosted on GitHub Pages. The development and deployment process should be optimized for this platform. GitHub Pages is a free and reliable hosting solution that is well-suited for static websites and simplifies the deployment process.
 
 ## Technology Stack
@@ -41,12 +47,12 @@ The website will be hosted on GitHub Pages. The development and deployment proce
 
 - **Core Principles**: Stylish but pop.
 - **Color Palette**:
-    - Primary/Accent: Google Yellow 500 (#fbbc04), Google Blue 500 (#4285f4), Google Red 500 (#ea4335), Google Green 500 (#34a853)
-    - Secondary/Background: Halftone Blue (#57caff), Halftone Yellow (#ffd427), Halftone Red (#ff7daf), Halftone Green (#5cdb6d), Off-White (#f0f0f0), Black 02 (#1e1e1e)
+  - Primary/Accent: Google Yellow 500 (#fbbc04), Google Blue 500 (#4285f4), Google Red 500 (#ea4335), Google Green 500 (#34a853)
+  - Secondary/Background: Halftone Blue (#57caff), Halftone Yellow (#ffd427), Halftone Red (#ff7daf), Halftone Green (#5cdb6d), Off-White (#f0f0f0), Black 02 (#1e1e1e)
 - **Typography**:
-    - Headlines: Google Sans Bold
-    - Subheads: Roboto Mono Light
-    - Body: Google Sans Normal
+  - Headlines: Google Sans Bold
+  - Subheads: Roboto Mono Light
+  - Body: Google Sans Normal
 
 ## Governance
 

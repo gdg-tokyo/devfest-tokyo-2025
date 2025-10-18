@@ -1,8 +1,8 @@
 # Specification Quality Checklist: Time Table Page
 
-**Purpose**: Validate specification completeness and quality before proceeding to planning
-**Created**: Monday, October 13, 2025
-**Feature**: [Link to spec.md](/specs/003-time-table-page/spec.md)
+- **Purpose**: Validate specification completeness and quality before proceeding to planning
+- **Created**: Monday, October 13, 2025
+- **Feature**: [Link to spec.md](/specs/003-time-table-page/spec.md)
 
 ## Content Quality
 

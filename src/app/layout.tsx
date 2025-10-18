@@ -1,21 +1,21 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../styles/globals.css";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import '../styles/globals.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "DevFest Tokyo 2025",
-  description: "DevFest Tokyo 2025 - Find your new “eyes”",
-};
+  title: 'DevFest Tokyo 2025',
+  description: 'DevFest Tokyo 2025 - Find your new “eyes”',
+}
 
-import Navbar from "@/components/Navbar";
-import { Footer } from "@/components/Footer"; // Import Footer
+import Navbar from '@/components/Navbar'
+import { Footer } from '@/components/Footer' // Import Footer
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
@@ -25,5 +25,5 @@ export default function RootLayout({
         <Footer /> {/* Add Footer component */}
       </body>
     </html>
-  );
+  )
 }

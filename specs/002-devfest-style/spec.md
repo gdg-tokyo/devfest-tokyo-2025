@@ -1,11 +1,11 @@
 # Feature Specification: Landing Page Design Update
 
-**Feature Branch**: `002-devfest-style`
-**Created**: 2025-10-13
-**Status**: Draft
-**Input**: User description: "I want to update the designe of the page. Here is a previous sample implemantation for the landing page @@.reference/figma-make-project/pages/HomePage.tsx Could you review this implementation and extract the designe principle from there. Brand color pallet should be used and I want to put elemet such as a welcome message into a rounded black boarder box as lile @.reference/screenshot/landing_page_1.png . Behind the DevFest log in the hero section. I want to have a gentle color backgrund. The image if like a autoumn leaves and autumn festival in Japan."
+- **Feature Branch**: `002-devfest-style`
+- **Created**: 2025-10-13
+- **Status**: Draft
+- **Input**: User description: "I want to update the designe of the page. Here is a previous sample implemantation for the landing page @@.reference/figma-make-project/pages/HomePage.tsx Could you review this implementation and extract the designe principle from there. Brand color pallet should be used and I want to put elemet such as a welcome message into a rounded black boarder box as lile @.reference/screenshot/landing_page_1.png . Behind the DevFest log in the hero section. I want to have a gentle color backgrund. The image if like a autoumn leaves and autumn festival in Japan."
 
-## User Scenarios & Testing *(mandatory)*
+## User Scenarios & Testing _(mandatory)_
 
 ### User Story 1 - Enhanced Visual Appeal (Priority: P1)
 
@@ -32,7 +32,7 @@ As a visitor, I want to see a consistent and familiar design that aligns with th
 
 1. **Given** a user is on any page of the website, **When** they view the design elements, **Then** all colors, fonts, and logos should match the DevFest design guide.
 
-## Requirements *(mandatory)*
+## Requirements _(mandatory)_
 
 ### Functional Requirements
 
@@ -48,7 +48,7 @@ As a visitor, I want to see a consistent and familiar design that aligns with th
 - **FR-010**: The typography MUST use the `Roboto` font for general text and `Noto Sans JP` for Japanese text.
 - **FR-011**: The landing page MUST incorporate subtle animations for component loading and on-scroll events, similar to the reference implementation.
 
-## Success Criteria *(mandatory)*
+## Success Criteria _(mandatory)_
 
 ### Measurable Outcomes
 

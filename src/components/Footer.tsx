@@ -7,7 +7,8 @@ export function Footer() {
           <div>
             <h5 className="mb-4 text-google-yellow-500">About GDG Tokyo</h5>
             <p className="text-sm text-gray-300 leading-relaxed">
-              Google Developers Group (GDG) Tokyo is a group of people who are interested in Google technology mainly and share information.
+              Google Developers Group (GDG) Tokyo is a group of people who are
+              interested in Google technology mainly and share information.
             </p>
           </div>
 
@@ -71,10 +72,12 @@ export function Footer() {
               <div className="w-6 h-6 bg-[#fbbc04] rounded"></div>
               <div className="w-6 h-6 bg-[#34a853] rounded"></div>
             </div>
-            <span className="text-sm text-gray-400 subhead">Google Developer Groups</span>
+            <span className="text-sm text-gray-400 subhead">
+              Google Developer Groups
+            </span>
           </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }

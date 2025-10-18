@@ -6,7 +6,7 @@ This document outlines the tasks required to implement the landing page feature,
 
 ## Phase 1: Setup
 
-*Goal: Initialize the project and set up the basic structure.*
+_Goal: Initialize the project and set up the basic structure._
 
 - [x] **T001**: Initialize a new Next.js project with TypeScript and Tailwind CSS.
 - [x] **T002**: Create the project directory structure as defined in `plan.md` (`src/app`, `src/components`, `src/data`, `public/images`).
@@ -14,7 +14,7 @@ This document outlines the tasks required to implement the landing page feature,
 
 ## Phase 2: User Story 2 - Brand Recognition (P2)
 
-*Goal: Create the navigation bar to establish brand identity.*
+_Goal: Create the navigation bar to establish brand identity._
 
 - [x] **T004** [US2]: Create the `Navbar` component in `src/components/Navbar.tsx`.
 - [x] **T005** [US2]: Add the DevFest logo to the `Navbar` component.
@@ -25,7 +25,7 @@ This document outlines the tasks required to implement the landing page feature,
 
 ## Phase 3: User Story 1 - Event Registration (P1)
 
-*Goal: Implement the hero section with the primary call-to-action.*
+_Goal: Implement the hero section with the primary call-to-action._
 
 - [x] **T008** [US1]: Create the `Hero` component in `src/components/Hero.tsx`.
 - [x] **T009** [US1]: Add the DevFest Tokyo 2025 logo and event theme to the `Hero` component.
@@ -36,7 +36,7 @@ This document outlines the tasks required to implement the landing page feature,
 
 ## Phase 4: User Story 3 - Welcome Message (P3)
 
-*Goal: Add the welcome message to the landing page.*
+_Goal: Add the welcome message to the landing page._
 
 - [x] **T012** [US3]: Create the `Welcome` component in `src/components/Welcome.tsx`.
 - [x] **T013** [US3]: Add the welcome message content to the `Welcome` component.
@@ -46,7 +46,7 @@ This document outlines the tasks required to implement the landing page feature,
 
 ## Phase 5: Polish & Integration
 
-*Goal: Finalize the page and ensure all elements are polished.*
+_Goal: Finalize the page and ensure all elements are polished._
 
 - [x] **T015**: Ensure the entire page is responsive across mobile, tablet, and desktop devices.
 - [x] **T016**: Replace any placeholder assets with the final brand assets.

@@ -1,34 +1,33 @@
-
-import React, { useEffect, useRef } from 'react';
-import { Session } from '@/types';
+import React, { useEffect, useRef } from 'react'
+import { Session } from '@/types'
 
 interface SessionModalProps {
-  session: Session | null;
-  onClose: () => void;
+  session: Session | null
+  onClose: () => void
 }
 
 const SessionModal: React.FC<SessionModalProps> = ({ session, onClose }) => {
-  const modalRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        onClose();
+        onClose()
       }
-    };
+    }
 
     if (session) {
-      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('keydown', handleKeyDown)
       // Focus the modal when it opens
-      modalRef.current?.focus();
+      modalRef.current?.focus()
     }
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [session, onClose]);
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [session, onClose])
 
-  if (!session) return null;
+  if (!session) return null
 
   return (
     <div
@@ -47,18 +46,28 @@ const SessionModal: React.FC<SessionModalProps> = ({ session, onClose }) => {
         >
           &times;
         </button>
-        <h2 id="session-modal-title" className="text-2xl font-bold mb-4">{session.title}</h2>
+        <h2 id="session-modal-title" className="text-2xl font-bold mb-4">
+          {session.title}
+        </h2>
         <p className="text-gray-700 mb-4">{session.longDescription}</p>
         {/* Add more session details here */}
         <div className="mt-4">
-          <p><strong>Level:</strong> {session.level}</p>
-          <p><strong>Perspective:</strong> {session.perspective}</p>
-          <p><strong>Time:</strong> {session.time_start} - {session.time_end}</p>
-          <p><strong>Track:</strong> {session.track}</p>
+          <p>
+            <strong>Level:</strong> {session.level}
+          </p>
+          <p>
+            <strong>Perspective:</strong> {session.perspective}
+          </p>
+          <p>
+            <strong>Time:</strong> {session.time_start} - {session.time_end}
+          </p>
+          <p>
+            <strong>Track:</strong> {session.track}
+          </p>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SessionModal;
+export default SessionModal

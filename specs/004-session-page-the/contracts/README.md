@@ -4,4 +4,4 @@ This feature primarily involves client-side rendering from a single local JSON d
 
 Data will be consumed from:
 
-*   `sessions.json`: Contains all session, talk, and speaker details.
+- `sessions.json`: Contains all session, talk, and speaker details.

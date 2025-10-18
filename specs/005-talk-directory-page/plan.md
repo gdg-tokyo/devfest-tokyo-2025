@@ -1,8 +1,8 @@
 ## Plan: Talk Directory Page
 
-**Feature Branch**: `005-talk-directory-page`
-**Created**: October 14, 2025
-**Status**: Draft
+- **Feature Branch**: `005-talk-directory-page`
+- **Created**: October 14, 2025
+- **Status**: Draft
 
 ## Technical Context
 
@@ -10,31 +10,31 @@ The Talks Page will be a new Next.js page that displays all session cards in a u
 
 ## Constitution Check
 
--   **Participant-Centric Information**: Yes, the Talks Page directly supports participants by providing a comprehensive and efficient way to discover sessions.
--   **Brand Compliance**: Yes, the plan explicitly states adherence to strict DevFest branding guidelines.
--   **Responsive Design (Mobile-First)**: Yes, the plan implies responsiveness through "uniform tile or list layout" and general web best practices.
--   **Modern Tech Stack**: Yes, the plan will utilize Next.js, React, and Tailwind CSS, aligning with the modern tech stack principle.
--   **GitHub Pages Deployment**: Yes, the plan is for a static web application, which is well-suited for GitHub Pages deployment.
+- **Participant-Centric Information**: Yes, the Talks Page directly supports participants by providing a comprehensive and efficient way to discover sessions.
+- **Brand Compliance**: Yes, the plan explicitly states adherence to strict DevFest branding guidelines.
+- **Responsive Design (Mobile-First)**: Yes, the plan implies responsiveness through "uniform tile or list layout" and general web best practices.
+- **Modern Tech Stack**: Yes, the plan will utilize Next.js, React, and Tailwind CSS, aligning with the modern tech stack principle.
+- **GitHub Pages Deployment**: Yes, the plan is for a static web application, which is well-suited for GitHub Pages deployment.
 
 ## Gates
 
--   **Constitution Check**: Pass. All principles are addressed.
+- **Constitution Check**: Pass. All principles are addressed.
 
 ## Phase 0: Research & Discovery
 
 ### Research Questions
 
--   How to implement client-side search and filtering efficiently for a potentially large number of sessions (up to 50 sessions and 100 talks)?
--   What are the best practices for implementing a modal overlay in Next.js that preserves the underlying page state?
--   How to ensure basic accessibility (semantic HTML, keyboard navigation) for the search, filter, and session card components?
--   How to design a reusable `FilterSystem` component that can be shared between the Talks Page and the Timetable Page?
+- How to implement client-side search and filtering efficiently for a potentially large number of sessions (up to 50 sessions and 100 talks)?
+- What are the best practices for implementing a modal overlay in Next.js that preserves the underlying page state?
+- How to ensure basic accessibility (semantic HTML, keyboard navigation) for the search, filter, and session card components?
+- How to design a reusable `FilterSystem` component that can be shared between the Talks Page and the Timetable Page?
 
 ### Research Tasks
 
--   **R-001**: Research client-side filtering techniques in React/Next.js for performance optimization with up to 50 sessions and 100 talks.
--   **R-002**: Investigate Next.js modal patterns that maintain URL state and allow for easy dismissal.
--   **R-003**: Review WAI-ARIA guidelines for accessible search, filter, and card components.
--   **R-004**: Research best practices for creating reusable React components, specifically for complex filtering systems, considering state management and props design.
+- **R-001**: Research client-side filtering techniques in React/Next.js for performance optimization with up to 50 sessions and 100 talks.
+- **R-002**: Investigate Next.js modal patterns that maintain URL state and allow for easy dismissal.
+- **R-003**: Review WAI-ARIA guidelines for accessible search, filter, and card components.
+- **R-004**: Research best practices for creating reusable React components, specifically for complex filtering systems, considering state management and props design.
 
 ## Phase 1: Design & Contracts
 

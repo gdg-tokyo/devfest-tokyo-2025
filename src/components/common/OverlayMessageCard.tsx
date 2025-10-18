@@ -1,12 +1,15 @@
-import React from 'react';
+import React from 'react'
 
 interface OverlayMessageCardProps {
-  message: string;
-  isVisible: boolean;
+  message: string
+  isVisible: boolean
 }
 
-const OverlayMessageCard: React.FC<OverlayMessageCardProps> = ({ message, isVisible }) => {
-  if (!isVisible) return null;
+const OverlayMessageCard: React.FC<OverlayMessageCardProps> = ({
+  message,
+  isVisible,
+}) => {
+  if (!isVisible) return null
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -15,9 +18,7 @@ const OverlayMessageCard: React.FC<OverlayMessageCardProps> = ({ message, isVisi
         {/* You can add a button to retry or close here if needed */}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default OverlayMessageCard;
-
-
+export default OverlayMessageCard

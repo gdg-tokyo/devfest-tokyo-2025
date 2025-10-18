@@ -1,14 +1,14 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import FilterSystem from '@/features/timetable/components/FilterSystem';
+import React from 'react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import FilterSystem from '@/features/timetable/components/FilterSystem'
 
 describe('FilterSystem', () => {
-  const mockOnFilterChange = jest.fn();
-  const availableLevels = ['Beginner', 'Intermediate', 'Advanced'];
+  const mockOnFilterChange = jest.fn()
+  const availableLevels = ['Beginner', 'Intermediate', 'Advanced']
 
   beforeEach(() => {
-    mockOnFilterChange.mockClear();
-  });
+    mockOnFilterChange.mockClear()
+  })
 
   it('renders all filter sections', () => {
     render(
@@ -16,11 +16,13 @@ describe('FilterSystem', () => {
         onFilterChange={mockOnFilterChange}
         availableLevels={availableLevels}
       />
-    );
+    )
 
-    expect(screen.getByPlaceholderText('Search sessions, speakers, or tags...')).toBeInTheDocument();
-    expect(screen.getByText('Levels')).toBeInTheDocument();
-  });
+    expect(
+      screen.getByPlaceholderText('Search sessions, speakers, or tags...')
+    ).toBeInTheDocument()
+    expect(screen.getByText('Levels')).toBeInTheDocument()
+  })
 
   it('calls onFilterChange when keyword is typed', () => {
     render(
@@ -28,14 +30,17 @@ describe('FilterSystem', () => {
         onFilterChange={mockOnFilterChange}
         availableLevels={availableLevels}
       />
-    );
+    )
 
-    fireEvent.change(screen.getByPlaceholderText('Search sessions, speakers, or tags...'), { target: { value: 'test' } });
+    fireEvent.change(
+      screen.getByPlaceholderText('Search sessions, speakers, or tags...'),
+      { target: { value: 'test' } }
+    )
     expect(mockOnFilterChange).toHaveBeenCalledWith({
       levels: [],
       keyword: 'test',
-    });
-  });
+    })
+  })
 
   it('calls onFilterChange when a skill level chip is clicked', () => {
     render(
@@ -43,20 +48,20 @@ describe('FilterSystem', () => {
         onFilterChange={mockOnFilterChange}
         availableLevels={availableLevels}
       />
-    );
+    )
 
-    fireEvent.click(screen.getByText('Intermediate'));
+    fireEvent.click(screen.getByText('Intermediate'))
     expect(mockOnFilterChange).toHaveBeenCalledWith({
       levels: ['Intermediate'],
       keyword: '',
-    });
+    })
 
-    fireEvent.click(screen.getByText('Advanced'));
+    fireEvent.click(screen.getByText('Advanced'))
     expect(mockOnFilterChange).toHaveBeenCalledWith({
       levels: ['Intermediate', 'Advanced'],
       keyword: '',
-    });
-  });
+    })
+  })
 
   it('removes a skill level when clicked again', () => {
     render(
@@ -64,13 +69,13 @@ describe('FilterSystem', () => {
         onFilterChange={mockOnFilterChange}
         availableLevels={availableLevels}
       />
-    );
+    )
 
-    fireEvent.click(screen.getByText('Intermediate'));
-    fireEvent.click(screen.getByText('Intermediate')); // Click again to deselect
+    fireEvent.click(screen.getByText('Intermediate'))
+    fireEvent.click(screen.getByText('Intermediate')) // Click again to deselect
     expect(mockOnFilterChange).toHaveBeenCalledWith({
       levels: [],
       keyword: '',
-    });
-  });
-});
+    })
+  })
+})

@@ -1,9 +1,9 @@
 # Feature Specification: Landing Page
 
-**Feature Branch**: `001-landing-page`
-**Created**: 2025-10-13
-**Status**: Draft
-**Input**: User description: "First, let's add a landing page. This page has an app navigation bar with the logo picture for "DevFest" on the top left. In the hero section, there is a big logo picture of DevFest Tokyo 2025 with the theme of events. And the most important thing is to ask user to register from the event page on conppass (another site). Please put the botton to navigate the users to the registration site (https://gdg-tokyo.connpass.com/event/369416/). Under the hero panel, there is a welcome message. Please refere to the rough image of the landing page at @@.reference/screenshot/landing_page_1.png"
+- **Feature Branch**: `001-landing-page`
+- **Created**: 2025-10-13
+- **Status**: Draft
+- **Input**: User description: "First, let's add a landing page. This page has an app navigation bar with the logo picture for "DevFest" on the top left. In the hero section, there is a big logo picture of DevFest Tokyo 2025 with the theme of events. And the most important thing is to ask user to register from the event page on conppass (another site). Please put the botton to navigate the users to the registration site (https://gdg-tokyo.connpass.com/event/369416/). Under the hero panel, there is a welcome message. Please refere to the rough image of the landing page at @@.reference/screenshot/landing_page_1.png"
 
 ## Clarifications
 

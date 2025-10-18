@@ -1,8 +1,8 @@
 # Specification Quality Checklist: Session Page
 
-**Purpose**: Validate specification completeness and quality before proceeding to planning
-**Created**: Monday, October 13, 2025
-**Feature**: [Link to spec.md](spec.md)
+- **Purpose**: Validate specification completeness and quality before proceeding to planning
+- **Created**: Monday, October 13, 2025
+- **Feature**: [Link to spec.md](spec.md)
 
 ## Content Quality
 

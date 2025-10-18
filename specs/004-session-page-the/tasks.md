@@ -1,18 +1,20 @@
 # Tasks: Session Page
 
-**Input**: Design documents from `/specs/004-session-page-the/`
-**Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
+- **Input**: Design documents from `/specs/004-session-page-the/`
+- **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
 **Tests**: The feature specification does not explicitly request tests or a TDD approach. Therefore, specific test tasks are not included in the implementation phases below, but overall validation is covered in the final phase.
 
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
 
 ## Format: `[ID] [P?] [Story] Description`
+
 - **[P]**: Can run in parallel (different files, no dependencies)
 - **[Story]**: Which user story this task belongs to (e.g., US1, US2, US3)
 - Include exact file paths in descriptions
 
 ## Path Conventions
+
 - Paths shown below assume single project structure as defined in `plan.md`.
 
 ## Phase 1: Setup (Shared Infrastructure)

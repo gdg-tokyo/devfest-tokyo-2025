@@ -41,8 +41,8 @@ export function getSessions(): Session[] {
   )
   const talksMap = new Map<string, Talk>(talksData.map((t: Talk) => [t.id, t]))
 
-  const sessions: Session[] = sessionsData
-    .map((session: Session) => {
+  const sessions: Session[] = (
+    sessionsData.map((session: Session) => {
       const talks: Talk[] = session.talk_ids
         .map((talkId) => {
           const talk = talksMap.get(talkId)
@@ -92,8 +92,8 @@ export function getSessions(): Session[] {
         description: session.description,
         perspective: talks.flatMap((t) => t.perspective || []),
       }
-    })
-    .filter((s): s is Session => s !== null)
+    }) as (Session | null)[]
+  ).filter((s): s is Session => s !== null)
 
   return sessions
 }

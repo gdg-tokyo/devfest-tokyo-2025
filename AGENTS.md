@@ -45,11 +45,35 @@ DevFest Tokyo features a vast amount of content, making it challenging for indiv
 
 ## Development Guideline
 
-### Coding Style Guidelines
+### General
 
-TODO: 使用言語ごとのスタイルガイド（PEP8, ESLint/Prettier など）、命名規則、コメント方針、Lint/Formatter ルールを記載すること。
+- Main language is **English** for this repository and development, and **Japanese** for the website contents.
 
-#### Next.js
+### Coding Style Guidelines & Development Process
+
+This project enforces a consistent coding style and follows specific development methodologies to ensure quality and clarity.
+
+#### Development Methodology
+
+- **Specification-Driven Development (SDD)**: All new features and modifications must be developed following an SDD approach, utilizing the `speck-kit` toolchain. This ensures that development is aligned with pre-defined specifications.
+- **Test-Driven Development (TDD)**: Core implementation should be carried out using TDD principles, as advocated by Kent Beck and Takuto Wada. This involves writing tests before writing the implementation code to satisfy them.
+- **Communication**: At every stage of both SDD and TDD, it is mandatory to communicate proactively with the user to resolve any ambiguities. All questions must be clarified before concluding a stage and proceeding to the next.
+
+#### Static Code Style
+
+- **Language**: TypeScript
+- **Linting**: ESLint with the `eslint-config-next` configuration. This provides the recommended linting rules for Next.js projects.
+- **Formatting**: While Prettier is not explicitly configured via a `.prettierrc` file, its conventions are generally followed. Adhere to the existing code's formatting.
+- **Naming Conventions**:
+  - **Components**: `PascalCase` (e.g., `Navbar.tsx`, `TimetableGrid`).
+  - **Files/Modules (non-component)**: `kebab-case` (e.g., `data-parser.ts`).
+  - **Variables/Functions**: `camelCase` (e.g., `getSessions`).
+  - **Types/Interfaces**: `PascalCase` (e.g., `interface Session`).
+- **Comments**: Add comments primarily to explain the _why_ behind complex or non-obvious code, not the _what_.
+- **Lint/Formatter Commands**:
+  - To run the linter, use `npm run lint`.
+
+#### Next.js Project
 
 This architecture design emphasizes decoupling the core business logic from the Next.js/React framework to ensure scalability and maintainability.
 
@@ -76,23 +100,40 @@ This architecture design emphasizes decoupling the core business logic from the 
 - **UI Components (`components/`):** These are **Presentational** components. They are pure, receive all necessary data via props, and contain minimal to no business logic, focusing purely on rendering the UI (e.g., following **Atomic Design** principles).
 - **Pages/Layouts (`app/`):** The highest level of the Presentation Layer. They are thin, focusing primarily on composing feature modules and UI components to form complete screens.
 
+##### Build & Test
+
+- **Setup**:
+  1. Clone the repository.
+  2. Install dependencies: `npm install`
+- **Development Server**:
+  - To run the development server, use: `npm run dev`
+- **Build Command**:
+  - To create a production-ready build, use: `npm run build`
+- **Testing**:
+  - The project uses Jest for unit/integration testing and Playwright for E2E testing.
+  - To run all tests, use: `npm run test`
+- **CI/CD Checks**:
+  - While a CI/CD pipeline is not yet configured, any pull request or merge to the main branch should successfully pass the following checks:
+    1. `npm run lint` (Linting)
+    2. `npm run test` (Testing)
+    3. `npm run build` (Build)
+
 ### Security considerations
 
-TODO: API キーや認証情報の扱い方、依存関係の脆弱性管理、通信方式、入力値検証の必須ルールなどを記載すること。
-
-### Build & Test
-
-TODO: セットアップ手順、ビルドコマンド、テスト実行方法、CI/CD でのチェック内容を記載すること。
+- **API Keys & Credentials**: This project currently does not use external APIs, so there are no API keys or credentials to manage. If external APIs are integrated in the future, store keys in environment variables (`.env.local`) and access them via `process.env`. Do not commit `.env.local` to the repository.
+- **Dependency Vulnerability Management**: Regularly check for vulnerabilities in dependencies by running `npm audit`. Address any high or critical vulnerabilities promptly.
+- **Communication**: All communication is handled by Next.js during the static site generation process and client-side navigation. Ensure the production deployment uses HTTPS.
+- **Input Validation**: The site is currently static and does not accept user input. If forms or interactive elements are added, all user-supplied data must be validated and sanitized on the client-side before use to prevent XSS attacks.
 
 ### Knowledge & Library
 
-- 実装前に`Context7 MCP Server`を利用し、`resolve-library-id` → `get-library-docs` で関連ライブラリ（例：`/upstash/context7`）の最新情報を取得する。
+- Before implementation, use `Context7 MCP Server` to `resolve-library-id` → `get-library-docs` to retrieve the latest information on related libraries (e.g., `/upstash/context7`).
 
 ### Maintenance policy
 
-- 会話の中で繰り返し指示されたことがある場合は反映を検討すること
-- 冗長だったり、圧縮の余地がある箇所を検討すること
-- 簡潔でありながら密度の濃い文書にすること
+- Consider incorporating feedback that has been repeatedly instructed during conversations.
+- Review sections for redundancy or opportunities for conciseness.
+- Aim for documents that are concise yet dense with information.
 
 ---
 

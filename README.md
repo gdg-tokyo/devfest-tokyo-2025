@@ -37,5 +37,5 @@ npx playwright test
 To run tests with **development data**:
 
 ```bash
-DEVFEST_TOKYO_2025_TARGET_ENV=DEV npm run test
+NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV=DEV npm run test
 ```

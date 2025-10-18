@@ -10,34 +10,26 @@ test.describe('Time Table Page', () => {
     await expect(
       page.getByRole('heading', { name: 'Event Timetable' })
     ).toBeVisible()
-    await expect(
-      page.getByText('基調講演: Webの再生と技術者の今後')
-    ).toBeVisible()
+    await expect(page.getByText('基調講演')).toBeVisible()
   })
 
   test('should filter sessions by skill level', async ({ page }) => {
     await page.getByTestId('filter-system').getByText('Beginner').click()
     await expect(
-      page.locator(
-        '//div[h3[text()="異分野クロストーク (BQ/Front-end/Back-end)"]]/parent::div'
-      )
+      page.locator('//div[h3[text()="異分野クロストーク"]]/parent::div')
     ).toHaveClass(/opacity-30/)
     await expect(
-      page.locator(
-        '//div[h3[text()="初心者向け Gen AI 特集 (仮)"]]/parent::div'
-      )
+      page.locator('//div[h3[text()="初心者向け Gen AI 特集"]]/parent::div')
     ).not.toHaveClass(/opacity-30/)
   })
 
   test('should filter sessions by "Advanced" skill level', async ({ page }) => {
     await page.getByTestId('filter-system').getByText('Advanced').click()
     await expect(
-      page.locator('//div[h3[text()="Google Maps 特集 (仮)"]]/parent::div')
+      page.locator('//div[h3[text()="Google Maps 特集"]]/parent::div')
     ).toHaveClass(/opacity-30/)
     await expect(
-      page.locator(
-        '//div[h3[text()="基調講演: Webの再生と技術者の今後"]]/parent::div'
-      )
+      page.locator('//div[h3[text()="基調講演"]]/parent::div')
     ).not.toHaveClass(/opacity-30/)
   })
 

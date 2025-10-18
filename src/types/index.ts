@@ -35,6 +35,8 @@ export interface Speaker {
   name: string
   bio: string
   photo_url: string
+  job: string
+  twitter_handle: string
 }
 
 export interface Talk {
@@ -45,4 +47,7 @@ export interface Talk {
   time_end: string
   track: string
   speaker_ids: string[]
+  tech_tags: string[]
+  level: ('Beginner' | 'Intermediate' | 'Advanced')[]
+  perspective: ('Introduction' | 'Experience' | 'Challenge')[]
 }

@@ -73,7 +73,7 @@ export function getSessions(): OldSession[] {
 export function getTalkById(
   id: string
 ): { talk: Talk; speakers: Speaker[] } | undefined {
-  const talksMap = new Map<string, Talk>(talksData.map((t) => [t.id, t]))
+  const talksMap = new Map<string, any>(talksData.map((t) => [t.id, t]))
   const speakersMap = new Map<string, Speaker>(
     speakersData.map((s) => [s.id, s])
   )
@@ -95,7 +95,12 @@ export function getTalkById(
     .filter((s: Speaker | null): s is Speaker => s !== null)
 
   return {
-    talk,
+    talk: {
+      ...talk,
+      tech_tags: talk.tech_tags || [],
+      level: talk.level ? [talk.level] : [],
+      perspective: talk.perspective ? [talk.perspective] : [],
+    },
     speakers,
   }
 }

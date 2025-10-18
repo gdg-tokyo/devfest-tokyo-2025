@@ -3,7 +3,7 @@
     "id": "speaker_oikawa",
     "name": "及川拓也",
     "icon_url": "",
-    "job": "",
+    "job": "Comany A",
     "bio": "及川拓也は、Web技術の進化とキャリア形成に関する専門家です。",
     "twitter_handle": "oikawa"
   },
@@ -11,7 +11,7 @@
     "id": "speaker_nakamura",
     "name": "なかむらさとる",
     "icon_url": "",
-    "job": "",
+    "job": "Company B",
     "bio": "なかむらさとるは、BigQueryの専門家です。",
     "twitter_handle": "nakamura"
   },

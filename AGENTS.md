@@ -137,6 +137,7 @@ This architecture design emphasizes decoupling the core business logic from the 
 ### Knowledge & Library
 
 - Before implementation, use `Context7 MCP Server` to `resolve-library-id` → `get-library-docs` to retrieve the latest information on related libraries (e.g., `/upstash/context7`).
+- **[IMPORTANT]** Common business logic or style-related logic should be placed under `src/lib/` to be reused across the application. For example, the color utility functions for level, perspective, and track tags have been centralized in `src/lib/style-utils.ts`.
 
 ### Maintenance policy
 

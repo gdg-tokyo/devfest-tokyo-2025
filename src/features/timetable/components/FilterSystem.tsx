@@ -1,21 +1,9 @@
 import React from 'react'
+import { getLevelColor } from '@/lib/style-utils'
 
 interface FilterSystemProps {
   onFilterChange: (filters: { levels: string[]; keyword: string }) => void
   availableLevels: string[]
-}
-
-const getLevelColor = (level: string) => {
-  switch (level) {
-    case 'Beginner':
-      return 'bg-google-blue-500'
-    case 'Intermediate':
-      return 'bg-google-green-500'
-    case 'Advanced':
-      return 'bg-google-red-500'
-    default:
-      return 'bg-gray-200'
-  }
 }
 
 const SearchIcon = () => (

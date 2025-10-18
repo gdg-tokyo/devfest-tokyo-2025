@@ -4,7 +4,7 @@
     "title": "Webの再生と技術者の今後",
     "abstract": "インターネット誕生以来、Webは進化してきたが、近年は「Web退化論」とも呼ぶべき閉塞感がある。本講演では、Webを取り巻く最新の動きや環境変化を俯瞰しつつ、「Webの未来はどうあるべきか」を考える。また、生成AIによって大きく変わる技術者のキャリアについても考察し、オープンで創造的な未来像を描く。",
     "speaker_ids": ["speaker_oikawa"],
-    "tech_tags": [],
+    "tech_tags": ["Next.js", "React"],
     "level": "Advanced",
     "perspective": "Experience",
     "is_keynote": true
@@ -24,7 +24,7 @@
     "title": "Webのエキスパートがバックエンド開発者にWebアプリのデバッグ技術を伝授",
     "abstract": "異なる分野の専門家からスキルをワンランクアップする技術を学ぶセッション。BigQueryのエキスパートがフロントエンド開発者向けにデータ分析技術を、 Web のエキスパートがバックエンド開発者に Web アプリのデバッグ技術を伝授する。このセッションは、まさに DevFest Tokyo のテーマ 「Find your new “eyes」を体現するセッション。",
     "speaker_ids": ["speaker_yakura"],
-    "tech_tags": [],
+    "tech_tags": ["Chrome"],
     "level": "Intermediate",
     "perspective": "Challenge",
     "is_keynote": false

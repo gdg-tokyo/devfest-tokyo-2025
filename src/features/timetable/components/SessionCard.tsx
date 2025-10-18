@@ -1,23 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import { OldSession } from '@/lib/data-parser'
+import { getLevelColor } from '@/lib/style-utils'
 
 interface SessionCardProps {
   session: OldSession
   isGrayedOut?: boolean
-}
-
-const getLevelColor = (level: 'Beginner' | 'Intermediate' | 'Advanced') => {
-  switch (level) {
-    case 'Beginner':
-      return 'bg-gdg-pastel-blue'
-    case 'Intermediate':
-      return 'bg-gdg-pastel-green'
-    case 'Advanced':
-      return 'bg-gdg-pastel-red'
-    default:
-      return 'bg-gray-200'
-  }
 }
 
 const PersonIcon = () => (

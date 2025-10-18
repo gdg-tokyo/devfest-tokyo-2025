@@ -1,22 +1,10 @@
 import React from 'react'
 import { OldSession } from '@/lib/data-parser'
 import TalkCard from '@/components/common/TalkCard'
+import { getLevelColor, getPerspectiveColor } from '@/lib/style-utils'
 
 interface SessionDetailProps {
   session: OldSession
-}
-
-const getLevelColor = (level: string) => {
-  switch (level) {
-    case 'Beginner':
-      return 'bg-gdg-pastel-blue'
-    case 'Intermediate':
-      return 'bg-gdg-pastel-green'
-    case 'Advanced':
-      return 'bg-gdg-pastel-red'
-    default:
-      return 'bg-gray-200'
-  }
 }
 
 const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
@@ -38,9 +26,7 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
         {session.perspective && (
           <span
             className={`text-xxs px-2 py-1 rounded-full border border-black
-              ${session.perspective === 'Introduction' && 'bg-google-blue-500'}
-              ${session.perspective === 'Experience' && 'bg-google-green-500'}
-              ${session.perspective === 'Challenge' && 'bg-google-red-500'}
+              ${getPerspectiveColor(session.perspective)}
             `}
           >
             {session.perspective}

@@ -29,7 +29,7 @@ const TalkCard: React.FC<TalkCardProps> = ({ talk, sessionId, session }) => {
   const timeEnd = session?.time_end || 'N/A'
 
   return (
-    <Link href={`/talks?sessionId=${sessionId}`} passHref legacyBehavior>
+    <Link href={`/talks/${talk.id}`} passHref legacyBehavior>
       <div className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md flex flex-col justify-between min-h-[200px] cursor-pointer hover:shadow-lg transition-shadow duration-200">
         {' '}
         {/* Added flex-col and justify-between */}

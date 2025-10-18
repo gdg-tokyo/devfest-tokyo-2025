@@ -29,7 +29,7 @@ const TimetableList: React.FC<TimetableListProps> = ({ sessions, filters }) => {
       acc[session.time_start].push(session)
       return acc
     },
-    {}
+    {} as { [key: string]: Session[] }
   )
 
   const sortedTimes = Object.keys(sessionsByTime).sort((a, b) =>

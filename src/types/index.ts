@@ -1,31 +1,31 @@
-export interface SocialLink {
-  platform: string
-  url: string
-}
-
 export interface Speaker {
   id: string
   name: string
+  job: string
   bio: string
-  photoUrl: string
-  socialLinks: SocialLink[]
+  twitter_handle: string
 }
 
 export interface Talk {
   id: string
   title: string
   abstract: string
-  speakers: Speaker[]
+  speaker_ids: string[]
+  tech_tags: string[]
+  level?: 'Beginner' | 'Intermediate' | 'Advanced'
+  perspective?: 'Introduction' | 'Experience' | 'Challenge'
+  is_keynote: boolean
 }
 
 export interface Session {
   id: string
-  title: string
-  longDescription: string
-  level?: 'Beginner' | 'Intermediate' | 'Advanced'
-  perspective?: 'Introduction' | 'Experience' | 'Challenge'
-  talks: Talk[]
+  talk_ids: string[]
+  track: string
   time_start: string
   time_end: string
-  track: string // Added
+  room: string
+  title: string
+  level: string[]
+  tech_tags: string[]
+  description: string
 }

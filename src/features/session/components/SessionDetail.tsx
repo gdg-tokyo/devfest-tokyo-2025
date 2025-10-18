@@ -1,9 +1,22 @@
 import React from 'react'
-import { Session } from '@/types'
+import { OldSession } from '@/lib/data-parser'
 import TalkCard from '@/components/common/TalkCard'
 
 interface SessionDetailProps {
-  session: Session
+  session: OldSession
+}
+
+const getLevelColor = (level: string) => {
+  switch (level) {
+    case 'Beginner':
+      return 'bg-gdg-pastel-blue'
+    case 'Intermediate':
+      return 'bg-gdg-pastel-green'
+    case 'Advanced':
+      return 'bg-gdg-pastel-red'
+    default:
+      return 'bg-gray-200'
+  }
 }
 
 const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
@@ -11,17 +24,17 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
     <div className="space-y-6">
       <h1 className="text-3xl font-bold text-gray-800">{session.title}</h1>
       <div className="flex flex-wrap gap-2">
-        {session.level && (
-          <span
-            className={`text-xxs px-2 py-1 rounded-full border border-black
-              ${session.level === 'Beginner' && 'bg-gdg-pastel-blue'}
-              ${session.level === 'Intermediate' && 'bg-gdg-pastel-green'}
-              ${session.level === 'Advanced' && 'bg-gdg-pastel-red'}
+        {session.level &&
+          session.level.map((levelItem) => (
+            <span
+              key={levelItem}
+              className={`text-xxs px-2 py-1 rounded-full border border-black
+              ${getLevelColor(levelItem)}
             `}
-          >
-            {session.level}
-          </span>
-        )}
+            >
+              {levelItem}
+            </span>
+          ))}
         {session.perspective && (
           <span
             className={`text-xxs px-2 py-1 rounded-full border border-black

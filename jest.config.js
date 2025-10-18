@@ -14,9 +14,10 @@ const customJestConfig = {
     '^@/lib/(.*)$': '<rootDir>/src/lib/$1',
     '^@/features/(.*)$': '<rootDir>/src/features/$1',
     '^@/types/(.*)$': '<rootDir>/src/types/$1',
+    '^@/data/(.*)$': '<rootDir>/src/data/$1',
     '^next/image$': '<rootDir>/__mocks__/next/image.js',
   },
-  testMatch: ['<rootDir>/tests/unit/**/*.test.tsx'],
+  testMatch: ['<rootDir>/tests/unit/**/*.test.ts?(x)'],
   testPathIgnorePatterns: ['<rootDir>/tests/e2e/'],
 }
 

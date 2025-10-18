@@ -43,7 +43,7 @@ description: 'Task list template for feature implementation'
 
 ## Phase 1: Setup (Shared Infrastructure)
 
-**Purpose**: Project initialization and basic structure
+### Purpose: Project initialization and basic structure
 
 - [ ] T001 Create project structure per implementation plan
 - [ ] T002 Initialize [language] project with [framework] dependencies
@@ -53,9 +53,9 @@ description: 'Task list template for feature implementation'
 
 ## Phase 2: Foundational (Blocking Prerequisites)
 
-**Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
+### Purpose: Core infrastructure that MUST be complete before ANY user story can be implemented
 
-**⚠️ CRITICAL**: No user story work can begin until this phase is complete
+### ⚠️ CRITICAL: No user story work can begin until this phase is complete
 
 Examples of foundational tasks (adjust based on your project):
 
@@ -66,19 +66,25 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] T008 Configure error handling and logging infrastructure
 - [ ] T009 Setup environment configuration management
 
-**Checkpoint**: Foundation ready - user story implementation can now begin in parallel
+### Checkpoint
+
+Foundation ready - user story implementation can now begin in parallel
 
 ---
 
 ## Phase 3: User Story 1 - [Title] (Priority: P1) 🎯 MVP
 
-**Goal**: [Brief description of what this story delivers]
+### Goal
 
-**Independent Test**: [How to verify this story works on its own]
+[Brief description of what this story delivers]
+
+### Independent Test
+
+[How to verify this story works on its own]
 
 ### Tests for User Story 1 (OPTIONAL - only if tests requested) ⚠️
 
-**NOTE: Write these tests FIRST, ensure they FAIL before implementation**
+NOTE: Write these tests FIRST, ensure they FAIL before implementation
 
 - [ ] T010 [P] [US1] Contract test for [endpoint] in tests/contract/test\_[name].py
 - [ ] T011 [P] [US1] Integration test for [user journey] in tests/integration/test\_[name].py
@@ -98,9 +104,13 @@ Examples of foundational tasks (adjust based on your project):
 
 ## Phase 4: User Story 2 - [Title] (Priority: P2)
 
-**Goal**: [Brief description of what this story delivers]
+### Goal for User Story 2
 
-**Independent Test**: [How to verify this story works on its own]
+[Brief description of what this story delivers]
+
+### Independent Test for User Story 2
+
+[How to verify this story works on its own]
 
 ### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
 
@@ -120,9 +130,13 @@ Examples of foundational tasks (adjust based on your project):
 
 ## Phase 5: User Story 3 - [Title] (Priority: P3)
 
-**Goal**: [Brief description of what this story delivers]
+### Goal for User Story 3
 
-**Independent Test**: [How to verify this story works on its own]
+[Brief description of what this story delivers]
+
+### Independent Test for User Story 3
+
+[How to verify this story works on its own]
 
 ### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
 

@@ -1,9 +1,9 @@
 # Feature Specification: [FEATURE NAME]
 
-**Feature Branch**: `[###-feature-name]`  
-**Created**: [DATE]  
-**Status**: Draft  
-**Input**: User description: "$ARGUMENTS"
+- **Feature Branch**: `[###-feature-name]`
+- **Created**: [DATE]
+- **Status**: Draft
+- **Input**: User description: "$ARGUMENTS"
 
 ## User Scenarios & Testing _(mandatory)_
 
@@ -24,11 +24,15 @@
 
 [Describe this user journey in plain language]
 
-**Why this priority**: [Explain the value and why it has this priority level]
+#### Why this priority
 
-**Independent Test**: [Describe how this can be tested independently - e.g., "Can be fully tested by [specific action] and delivers [specific value]"]
+[Explain the value and why it has this priority level]
 
-**Acceptance Scenarios**:
+#### Independent Test
+
+[Describe how this can be tested independently - e.g., "Can be fully tested by [specific action] and delivers [specific value]"]
+
+#### Acceptance Scenarios
 
 1. **Given** [initial state], **When** [action], **Then** [expected outcome]
 2. **Given** [initial state], **When** [action], **Then** [expected outcome]
@@ -39,11 +43,15 @@
 
 [Describe this user journey in plain language]
 
-**Why this priority**: [Explain the value and why it has this priority level]
+#### Why this priority
 
-**Independent Test**: [Describe how this can be tested independently]
+[Explain the value and why it has this priority level]
 
-**Acceptance Scenarios**:
+#### Independent Test
+
+[Describe how this can be tested independently]
+
+#### **Acceptance Scenarios**
 
 1. **Given** [initial state], **When** [action], **Then** [expected outcome]
 
@@ -53,11 +61,15 @@
 
 [Describe this user journey in plain language]
 
-**Why this priority**: [Explain the value and why it has this priority level]
+#### Why this priority
 
-**Independent Test**: [Describe how this can be tested independently]
+[Explain the value and why it has this priority level]
 
-**Acceptance Scenarios**:
+#### Independent Test
+
+[Describe how this can be tested independently]
+
+#### Acceptance Scenarios
 
 1. **Given** [initial state], **When** [action], **Then** [expected outcome]
 

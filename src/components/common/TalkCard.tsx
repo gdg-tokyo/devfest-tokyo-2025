@@ -1,13 +1,13 @@
-import { Session, Talk } from '@/types'
+import { OldSession, OldTalk } from '@/lib/data-parser'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import PersonIcon from '@mui/icons-material/Person'
 import Link from 'next/link'
 import React from 'react'
 
 interface TalkCardProps {
-  talk: Talk
+  talk: OldTalk
   sessionId: string
-  session: Session
+  session: OldSession
 }
 
 const getLevelColor = (level?: 'Beginner' | 'Intermediate' | 'Advanced') => {
@@ -52,14 +52,15 @@ const TalkCard: React.FC<TalkCardProps> = ({ talk, sessionId, session }) => {
           </div>
 
           <div className="flex flex-wrap gap-1 mt-2">
-            {session?.level && (
-              <span
-                key={session.level}
-                className={`text-xs px-1 py-0 rounded-full border border-black ${getLevelColor(session.level)} text-gray-800`}
-              >
-                {session.level}
-              </span>
-            )}
+            {session?.level &&
+              session.level.map((levelItem) => (
+                <span
+                  key={levelItem}
+                  className={`text-xs px-1 py-0 rounded-full border border-black ${getLevelColor(levelItem)} text-gray-800`}
+                >
+                  {levelItem}
+                </span>
+              ))}
           </div>
         </div>{' '}
       </div>

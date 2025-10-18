@@ -1,0 +1,182 @@
+[
+  {
+    "id": "t1_keynote_talk",
+    "title": "Webの再生と技術者の今後",
+    "abstract": "インターネット誕生以来、Webは進化してきたが、近年は「Web退化論」とも呼ぶべき閉塞感がある。本講演では、Webを取り巻く最新の動きや環境変化を俯瞰しつつ、「Webの未来はどうあるべきか」を考える。また、生成AIによって大きく変わる技術者のキャリアについても考察し、オープンで創造的な未来像を描く。",
+    "speaker_ids": ["speaker_oikawa"],
+    "tech_tags": [],
+    "level": "Advanced",
+    "perspective": "Experience",
+    "is_keynote": true
+  },
+  {
+    "id": "t2_cross_talk_bq",
+    "title": "BigQueryのエキスパートがフロントエンド開発者向けにデータ分析技術を伝授",
+    "abstract": "異なる分野の専門家からスキルをワンランクアップする技術を学ぶセッション。BigQueryのエキスパートがフロントエンド開発者向けにデータ分析技術を、 Web のエキスパートがバックエンド開発者に Web アプリのデバッグ技術を伝授する。このセッションは、まさに DevFest Tokyo のテーマ 「Find your new “eyes」を体現するセッション。",
+    "speaker_ids": ["speaker_nakamura"],
+    "tech_tags": [],
+    "level": "Intermediate",
+    "perspective": "Challenge",
+    "is_keynote": false
+  },
+  {
+    "id": "t2_cross_talk_web",
+    "title": "Webのエキスパートがバックエンド開発者にWebアプリのデバッグ技術を伝授",
+    "abstract": "異なる分野の専門家からスキルをワンランクアップする技術を学ぶセッション。BigQueryのエキスパートがフロントエンド開発者向けにデータ分析技術を、 Web のエキスパートがバックエンド開発者に Web アプリのデバッグ技術を伝授する。このセッションは、まさに DevFest Tokyo のテーマ 「Find your new “eyes」を体現するセッション。",
+    "speaker_ids": ["speaker_yakura"],
+    "tech_tags": [],
+    "level": "Intermediate",
+    "perspective": "Challenge",
+    "is_keynote": false
+  },
+  {
+    "id": "t2_google_maps_talk",
+    "title": "Google Mapsの最新情報",
+    "abstract": "Google Mapsの最新情報、デザインの変遷、個人開発における活用法や苦労話など、地理情報技術に関する多角的な視点を提供する。",
+    "speaker_ids": ["speaker_andho"],
+    "tech_tags": [],
+    "level": "Beginner",
+    "perspective": "Experience",
+    "is_keynote": false
+  },
+  {
+    "id": "t2_kmp_hands_on_talk",
+    "title": "KMP ハンズオン",
+    "abstract": "Kotlin Multiplatform (KMP) の簡単な入門ハンズオン。",
+    "speaker_ids": ["speaker_takahirom"],
+    "tech_tags": [],
+    "level": "Beginner",
+    "perspective": "Introduction",
+    "is_keynote": false
+  },
+  {
+    "id": "t2_frontier_talk",
+    "title": "フロンティア",
+    "abstract": "Google のテクノロジーの中で、新しい分野・ニッチな分野に焦点を当てたセッション。ブラウザの中の Gemini、広告動画の生成、Open Source Silicon。そんな「フロンティア」と呼ぶべき分野のエキスパートをお迎えし、皆さんが今は持っていない新しい視点を手に入れましょう。",
+    "speaker_ids": ["speaker_fukushima"],
+    "tech_tags": [],
+    "level": "Advanced",
+    "perspective": "Experience",
+    "is_keynote": false
+  },
+  {
+    "id": "t3_gen_ai_beginner_talk",
+    "title": "初心者向け Gen AI 特集",
+    "abstract": "これまで当たり前ではなかった開発スタイル...",
+    "speaker_ids": ["speaker_yoichiro"],
+    "tech_tags": [],
+    "level": "Beginner",
+    "perspective": "Introduction",
+    "is_keynote": false
+  },
+  {
+    "id": "t3_adk_talk",
+    "title": "ADK特集",
+    "abstract": "TBA",
+    "speaker_ids": ["speaker_kaz"],
+    "tech_tags": [],
+    "level": "Intermediate",
+    "perspective": "Experience",
+    "is_keynote": false
+  },
+  {
+    "id": "t3_firebase_hands_on_talk",
+    "title": "Firebase Studio でつくるフルスタックアプリケーション",
+    "abstract": "Firebase Studio は、フロントエンド・バックエンド・データベースの構築を一元的に行える新しい開発環境です。このハンズオンでは、Firebase Studio を使ってフルスタックアプリケーションを実際に構築しながら、Firestore や Firebase Authentication、Firebase App Hosting などの主要機能を体験します。",
+    "speaker_ids": ["speaker_tanabee"],
+    "tech_tags": [],
+    "level": "Beginner",
+    "perspective": "Introduction",
+    "is_keynote": false
+  },
+  {
+    "id": "t3_web_angular_talk",
+    "title": "Web / Angular",
+    "abstract": "フロントエンド開発に携わる皆様、またAI技術に興味をお持ちの皆様、両方に楽しんでいただけるWeb（CSSとAngular）に関するセッションです。本セッションでは、最先端のCSS技術と、AI志向のフレームワークへと進化を続けるAngularの最新動向を深掘りします。AIとの連携による新たなフロントエンド開発の可能性や、よりリッチなUI/UXを実現するための実践的なテクニックについて、具体的なデモンストレーションを交えながらご紹介します。",
+    "speaker_ids": ["speaker_saku"],
+    "tech_tags": [],
+    "level": "Intermediate",
+    "perspective": "Challenge",
+    "is_keynote": false
+  },
+  {
+    "id": "t4_ai_tools_advanced_talk",
+    "title": "AI Tools",
+    "abstract": "このセッションでは、最先端のAI活用を推進するエンジニアの皆様を対象に、生成AIやエージェント開発の最新トレンドと実践的なノウハウを深掘りします。明日からの開発に役立つ、具体的な事例と戦略的な視点を提供し、皆様のAI開発力をもう一段階高みにレベルアップしましょう。",
+    "speaker_ids": ["speaker_bankushi"],
+    "tech_tags": [],
+    "level": "Advanced",
+    "perspective": "Experience",
+    "is_keynote": false
+  },
+  {
+    "id": "t4_data_observability_talk",
+    "title": "データ分析 / Observability",
+    "abstract": "本セッションでは、データ分析とObservabilityに焦点を当て、各分野の専門家が最新の事例や実践的な知見を共有します。Kaggleにおけるデータ分析の具体的なアプローチ、デジタル庁でのダッシュボード活用事例、そしてGoogle CloudにおけるObservabilityの導入と活用について、3つの講演を通じて深掘りします。初心者から中上級者まで、幅広い開発経験を持つ方々...",
+    "speaker_ids": ["speaker_ozaki"],
+    "tech_tags": [],
+    "level": "Intermediate",
+    "perspective": "Experience",
+    "is_keynote": false
+  },
+  {
+    "id": "t4_gemma_hands_on_talk",
+    "title": "ハンズオン: Gemma",
+    "abstract": "TBA",
+    "speaker_ids": ["speaker_gemma"],
+    "tech_tags": [],
+    "level": "Intermediate",
+    "perspective": "Challenge",
+    "is_keynote": false
+  },
+  {
+    "id": "t4_android_flutter_talk",
+    "title": "Android / Flutter",
+    "abstract": "本セッションでは、Android および Flutter の開発経験者（中～上級者）を対象に、最新の技術動向と実践的な開発手法を紹介します。3名の登壇者がそれぞれの専門分野から、ネイティブUIとの統合やパフォーマンス最適化など、多角的な視点からAndroid/Flutter開発の深化を促します。特に、FlutterにおけるPlatform Viewsを活用したネイティブUI統合の実装例など、具体的な事例を交えながら解説します。",
+    "speaker_ids": ["speaker_yanzm"],
+    "tech_tags": [],
+    "level": "Advanced",
+    "perspective": "Experience",
+    "is_keynote": false
+  },
+  {
+    "id": "t5_wtm_career_panel_talk",
+    "title": "WTM キャリアパネルディスカッション",
+    "abstract": "TBA",
+    "speaker_ids": ["speaker_shoco"],
+    "tech_tags": [],
+    "level": "Beginner",
+    "perspective": "Experience",
+    "is_keynote": false
+  },
+  {
+    "id": "t5_community_lt_ja_talk",
+    "title": "Community LT大会 (JA)",
+    "abstract": "TBA",
+    "speaker_ids": ["speaker_community_ja"],
+    "tech_tags": [],
+    "level": "Beginner",
+    "perspective": "Experience",
+    "is_keynote": false
+  },
+  {
+    "id": "t5_community_lt_en_talk",
+    "title": "Community LT大会 (EN)",
+    "abstract": "TBA",
+    "speaker_ids": ["speaker_community_en"],
+    "tech_tags": [],
+    "level": "Beginner",
+    "perspective": "Experience",
+    "is_keynote": false
+  },
+  {
+    "id": "t5_web_angular_d_talk",
+    "title": "Web / Angular",
+    "abstract": "フロントエンド開発に携わる皆様、またAI技術に興味をお持ちの皆様、両方に楽しんでいただけるWeb（CSSとAngular）に関するセッションです。本セッションでは、最先端のCSS技術と、AI志向のフレームワークへと進化を続けるAngularの最新動向を深掘りします。AIとの連携による新たなフロントエンド開発の可能性や、よりリッチなUI/UXを実現するための実践的なテクニックについて、具体的なデモンストレーションを交えながらご紹介します。",
+    "speaker_ids": ["speaker_saku_d"],
+    "tech_tags": [],
+    "level": "Intermediate",
+    "perspective": "Challenge",
+    "is_keynote": false
+  }
+]

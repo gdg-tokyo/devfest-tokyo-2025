@@ -73,5 +73,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Build content from Markdown
+        run:
+          NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV=PROD npm run build:content
+
       - name: Run build for PROD environment
         run: NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV=PROD npm run build

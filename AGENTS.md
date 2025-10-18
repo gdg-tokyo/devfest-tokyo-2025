@@ -210,6 +210,7 @@ Auto-generated from all feature plans. Last updated: 2025-10-13
 
 ## Active Technologies
 
+- Markdown files (`docs/prod/`) parsed into JSON (`src/data/prod/`) (Content Generation)
 - Local JSON files (`sessions.json` for sessions/talks, `speakers.json` for speakers) (004-session-page-the)
 - Local JSON file (`sessions.json` for all session, talk, and speaker data) (004-session-page-the)
 
@@ -229,6 +230,8 @@ tests/
 ```
 
 ## Commands
+
+- `npm run build:content`: Parses Markdown content from `docs/prod/` and generates JSON data in `src/data/prod/`.
 
 # Add commands for TypeScrip
 

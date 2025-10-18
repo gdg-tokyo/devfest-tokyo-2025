@@ -20,6 +20,18 @@ npm run dev
 
 (By default, the server runs with production data if `DEVFEST_TOKYO_2025_TARGET_ENV` is not set or set to `PROD`.)
 
+## Content Generation
+
+The website content (sessions, talks, speakers) is generated from Markdown files located in the `docs/prod/` directory. A script parses these Markdown files, validates them against Zod schemas, and outputs JSON files to `src/data/prod/`.
+
+To generate the content:
+
+```bash
+npm run build:content
+```
+
+This command should be run whenever there are changes to the Markdown content in `docs/prod/`.
+
 ### Running Tests
 
 To run all unit/integration tests:

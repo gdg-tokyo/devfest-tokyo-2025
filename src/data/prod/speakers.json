@@ -1,144 +1,34 @@
 [
   {
-    "id": "speaker_oikawa",
-    "name": "及川拓也",
-    "photo_url": "",
-    "job": "Comany A",
-    "bio": "及川拓也は、Web技術の進化とキャリア形成に関する専門家です。",
-    "twitter_handle": "oikawa"
+    "id": "takoratta",
+    "name": "及川卓也",
+    "bio": "TBA",
+    "photo_url": "https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/takuya-oikawa-500.png",
+    "job": "Tably株式会社 代表取締役",
+    "twitter_handle": "takoratta"
   },
   {
-    "id": "speaker_nakamura",
-    "name": "なかむらさとる",
-    "photo_url": "",
-    "job": "Company B",
-    "bio": "なかむらさとるは、BigQueryの専門家です。",
-    "twitter_handle": "nakamura"
-  },
-  {
-    "id": "speaker_yakura",
-    "name": "Yakura",
-    "photo_url": "",
+    "id": "tba_speaker",
+    "name": "TBA Speaker",
+    "bio": "TBA",
+    "photo_url": "https://avatars.githubusercontent.com/u/413984?v=4",
     "job": "",
-    "bio": "Yakuraは、Webアプリのデバッグ技術に関する専門家です。",
-    "twitter_handle": "yakura"
-  },
-  {
-    "id": "speaker_andho",
-    "name": "Andho",
-    "photo_url": "",
-    "job": "",
-    "bio": "AndhoはGoogle Mapsのエキスパートです.",
     "twitter_handle": ""
   },
   {
-    "id": "speaker_takahirom",
-    "name": "Takahirom",
-    "photo_url": "",
-    "job": "",
-    "bio": "TakahiromはKMPのエキスパートです.",
-    "twitter_handle": ""
+    "id": "LucasGoldner",
+    "name": "金 瑠加須",
+    "bio": "日本のアクティブな Flutter と Dart の Google Developer Expert です。 2024年4月にインターンとして株式会社 YOUTRUST にジョインし、その後正社員になりました。様々なカンファレンス (Fluttercon, Flutter Connection, Flutter Kaigi) で登壇したり、記事を書いたり、Flutter Tokyo Community のオーガナイザーとして活躍しています。言語が大好きで、5 つの言語を話し、日本語も勉強中です。",
+    "photo_url": "https://pbs.twimg.com/profile_images/1945517590555578368/HfE0SUGd_400x400.jpg",
+    "job": "株式会社YOUTRUST プロダクト開発部",
+    "twitter_handle": "LucasGoldner"
   },
   {
-    "id": "speaker_fukushima",
-    "name": "福島ゆかり",
-    "photo_url": "",
-    "job": "",
-    "bio": "福島ゆかりはGoogleのテクノロジーのエキスパートです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_yoichiro",
-    "name": "Yoichiro",
-    "photo_url": "",
-    "job": "",
-    "bio": "YoichiroはGen AIのエキスパートです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_kaz",
-    "name": "Kaz",
-    "photo_url": "",
-    "job": "",
-    "bio": "KazはADKのエキスパートです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_tanabee",
-    "name": "tanabee",
-    "photo_url": "",
-    "job": "",
-    "bio": "tanabeeはFirebaseのエキスパートです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_saku",
-    "photo_url": "",
-    "job": "",
-    "bio": "SakuはWeb/Angularのエキスパートです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_bankushi",
-    "name": "ばんくし",
-    "photo_url": "",
-    "job": "",
-    "bio": "ばんくしはAIツールのエキスパートです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_ozaki",
-    "name": "Ozaki",
-    "photo_url": "",
-    "job": "",
-    "bio": "Ozakiはデータ分析のエキスパートです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_gemma",
-    "name": "Gemma Expert",
-    "photo_url": "",
-    "job": "",
-    "bio": "Gemmaのエキスパートです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_yanzm",
-    "photo_url": "",
-    "job": "",
-    "bio": "yanzmはAndroid/Flutterのエキスパートです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_shoco",
-    "name": "Shoco",
-    "photo_url": "",
-    "job": "",
-    "bio": "ShocoはWTMのキャリアパネルのエキスパートです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_community_ja",
-    "name": "Community Speaker JA",
-    "photo_url": "",
-    "job": "",
-    "bio": "コミュニティスピーカーです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_community_en",
-    "name": "Community Speaker EN",
-    "photo_url": "",
-    "job": "",
-    "bio": "Community Speaker ENです.",
-    "twitter_handle": ""
-  },
-  {
-    "id": "speaker_saku_d",
-    "name": "Saku",
-    "photo_url": "",
-    "job": "",
-    "bio": "SakuはWeb/Angularのエキスパートです.",
-    "twitter_handle": ""
+    "id": "proppy",
+    "name": "proppy",
+    "bio": "グーグル東京でハードウェアツールチェーンを協力してます。",
+    "photo_url": "https://pbs.twimg.com/profile_images/2505273322/xoi195tc7mjg6tgbsoaf_400x400.png",
+    "job": "Developer Programs Engineer, Google",
+    "twitter_handle": "proppy"
   }
 ]

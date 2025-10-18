@@ -63,7 +63,7 @@ const TalksPage = () => {
           return {
             ...talk,
             sessionLevel: session.level,
-            sessionPerspective: session.perspective,
+            sessionPerspective: talk.perspective,
             sessionId: session.id,
             session: session,
             speakers: talkSpeakers,

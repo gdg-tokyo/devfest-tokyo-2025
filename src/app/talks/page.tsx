@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useMemo, Suspense } from 'react'
 
 import { getSessions, getTalks, getSpeakers } from '@/lib/data-parser'

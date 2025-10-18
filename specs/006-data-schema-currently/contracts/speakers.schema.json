@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Speaker",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "icon_url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "job": {
+        "type": "string"
+      },
+      "bio": {
+        "type": "string"
+      },
+      "twitter_handle": {
+        "type": "string"
+      }
+    },
+    "required": ["id", "name", "icon_url"]
+  }
+}

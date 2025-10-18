@@ -1,9 +1,9 @@
 import React from 'react'
 import SessionCard from './SessionCard'
-import { Session, SpeakerProfile } from '@/types' // Import interfaces from src/types
+import { OldSession } from '@/lib/data-parser'
 
 interface TimetableGridProps {
-  sessions: Session[]
+  sessions: OldSession[]
   filters: { levels: string[]; keyword: string }
 }
 
@@ -88,7 +88,7 @@ const TimetableGrid: React.FC<TimetableGridProps> = ({ sessions, filters }) => {
   const filterSession = (session: Session): boolean => {
     const levelMatch =
       filters.levels.length === 0 ||
-      (session.level && filters.levels.includes(session.level))
+      (session.level && session.level.some((l) => filters.levels.includes(l)))
     const keywordMatch =
       !filters.keyword ||
       session.title.toLowerCase().includes(filters.keyword.toLowerCase()) ||

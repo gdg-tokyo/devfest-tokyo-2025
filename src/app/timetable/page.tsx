@@ -4,11 +4,10 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react'
 import TimetableGrid from '@/features/timetable/components/TimetableGrid'
 import FilterSystem from '@/features/timetable/components/FilterSystem'
 import OverlayMessageCard from '@/components/common/OverlayMessageCard'
-import { getSessions } from '@/lib/data-parser'
-import { Session } from '@/types'
+import { getSessions, OldSession } from '@/lib/data-parser'
 
 const TimetablePage = () => {
-  const allSessions: Session[] = getSessions()
+  const allSessions: OldSession[] = getSessions()
 
   const [filters, setFilters] = useState<{ levels: string[]; keyword: string }>(
     { levels: [], keyword: '' }
@@ -34,7 +33,7 @@ const TimetablePage = () => {
     return allSessions.some((session) => {
       const levelMatch =
         filters.levels.length === 0 ||
-        (session.level && filters.levels.includes(session.level))
+        (session.level && session.level.some((l) => filters.levels.includes(l)))
 
       const speakerNames = session.talks.flatMap((talk) =>
         talk.speakers.map((speaker) => speaker.name)
@@ -58,10 +57,11 @@ const TimetablePage = () => {
   }, [allSessions, filters])
 
   const availableLevels = useMemo(() => {
+    const validLevels = ['Beginner', 'Intermediate', 'Advanced']
     const levels = allSessions
-      .map((s) => s.level)
-      .filter((level): level is string => level !== undefined)
-    return Array.from(new Set(levels))
+      .flatMap((s) => s.level || []) // Flatten the array of arrays, handle undefined s.level
+      .filter((level) => validLevels.includes(level)) // Filter for valid levels
+    return Array.from(new Set(levels)) // Get unique levels
   }, [allSessions])
 
   return (

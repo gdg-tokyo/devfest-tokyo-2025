@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react'
 
-import { getSessions } from '@/lib/data-parser'
+import { getSessions, OldSession, OldTalk } from '@/lib/data-parser'
 
 import TalkCard from '@/components/common/TalkCard'
 
@@ -10,18 +10,16 @@ import FilterSystem from '@/components/common/FilterSystem'
 
 import SessionModal from '@/components/common/SessionModal'
 
-import { Session, Talk } from '@/types'
-
 import { useRouter, useSearchParams } from 'next/navigation'
 
-interface TalkWithSessionInfo extends Talk {
-  sessionLevel?: 'Beginner' | 'Intermediate' | 'Advanced'
+interface TalkWithSessionInfo extends OldTalk {
+  sessionLevel?: string[]
 
   sessionPerspective?: 'Introduction' | 'Experience' | 'Challenge'
 
   sessionId: string // Add sessionId to the extended Talk interface
 
-  session: Session // Add the full session object
+  session: OldSession // Add the full session object
 
   techTags: string[] // Add techTags to the extended Talk interface
 }
@@ -33,7 +31,7 @@ const TalksPage = () => {
 
   const modalSessionId = searchParams.get('sessionId')
 
-  const allSessions = getSessions()
+  const allSessions: OldSession[] = getSessions()
 
   const [keyword, setKeyword] = useState<string>('')
 
@@ -54,7 +52,7 @@ const TalksPage = () => {
 
         session: session, // Assign the full session object here
 
-        techTags: talk.tags || [], // Assign techTags from talk.tags
+        techTags: talk.tech_tags || [], // Assign techTags from talk.tech_tags
       }))
     )
   }, [allSessions])
@@ -71,7 +69,8 @@ const TalksPage = () => {
 
       const matchesLevel =
         selectedLevels.length === 0 ||
-        (talk.sessionLevel && selectedLevels.includes(talk.sessionLevel))
+        (talk.sessionLevel &&
+          talk.sessionLevel.some((l) => selectedLevels.includes(l)))
 
       const matchesTechTags =
         selectedTechTags.length === 0 ||
@@ -101,16 +100,16 @@ const TalksPage = () => {
 
           setSelectedTechTags(techTags)
         }}
-        availableLevels={
-          Array.from(
-            new Set(allSessions.map((session) => session.level))
-          ).filter(Boolean) as string[]
-        }
+        availableLevels={Array.from(
+          new Set(allSessions.flatMap((session) => session.level || []))
+        ).filter((level): level is string =>
+          ['Beginner', 'Intermediate', 'Advanced'].includes(level)
+        )}
         availableTechTags={
           Array.from(
             new Set(
               allSessions.flatMap((session) =>
-                session.talks.flatMap((talk) => talk.tags || [])
+                session.talks.flatMap((talk) => talk.tech_tags || [])
               )
             )
           ).filter(Boolean) as string[]

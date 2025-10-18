@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
-import { Session } from '@/types' // Import interfaces from src/types
+import { OldSession } from '@/lib/data-parser'
 
 interface SessionCardProps {
-  session: Session
+  session: OldSession
   isGrayedOut?: boolean
 }
 
@@ -59,8 +59,8 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
 
   // Assuming time_start and time_end are still part of the session object for display on the card
   // If not, this would need to be adjusted based on the actual data structure
-  const timeStart = (session as any).time_start || 'TBA'
-  const timeEnd = (session as any).time_end || 'TBA'
+  const timeStart = session.time_start || 'TBA'
+  const timeEnd = session.time_end || 'TBA'
 
   return (
     <Link href={`/sessions/${session.id}`}>
@@ -82,14 +82,15 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
         </div>
 
         <div className="flex flex-wrap gap-1 mt-2">
-          {session.level && (
-            <span
-              key={session.level}
-              className={`text-xs px-1 py-0 rounded-full border border-black ${getLevelColor(session.level)} text-gray-800`}
-            >
-              {session.level}
-            </span>
-          )}
+          {session.level &&
+            session.level.map((levelItem) => (
+              <span
+                key={levelItem}
+                className={`text-xs px-1 py-0 rounded-full border border-black ${getLevelColor(levelItem)} text-gray-800`}
+              >
+                {levelItem}
+              </span>
+            ))}
           {/* Tech tags are not directly available on the new Session type, assuming they might be on Talk or removed */}
           {/* For now, removing tech_tags display from card to avoid errors */}
         </div>

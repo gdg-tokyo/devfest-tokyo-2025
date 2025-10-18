@@ -1,473 +1,206 @@
 [
   {
     "id": "s1_keynote",
-    "title": "基調講演: Webの再生と技術者の今後",
-    "longDescription": "インターネット誕生以来、Webは進化してきたが、近年は「Web退化論」とも呼ぶべき閉塞感がある。本講演では、Webを取り巻く最新の動きや環境変化を俯瞰しつつ、「Webの未来はどうあるべきか」を考える。また、生成AIによって大きく変わる技術者のキャリアについても考察し、オープンで創造的な未来像を描く。",
-    "level": "Advanced",
-    "perspective": "Experience",
+    "talk_ids": ["t1_keynote_talk"],
+    "track": "Track A",
     "time_start": "12:40",
     "time_end": "13:10",
-    "track": "Track A",
-    "talks": [
-      {
-        "id": "t1_keynote_talk",
-        "title": "Webの再生と技術者の今後",
-        "abstract": "Webを取り巻く最新の動きや環境変化を俯瞰しつつ、「Webの未来はどうあるべきか」を考え、生成AIによって変わる技術者のキャリアについても考察する。",
-        "speakers": [
-          {
-            "id": "speaker_oikawa",
-            "name": "及川拓也",
-            "bio": "及川拓也は、Web技術の進化とキャリア形成に関する専門家です。",
-            "photoUrl": null,
-            "socialLinks": [
-              {
-                "platform": "twitter",
-                "url": "https://twitter.com/oikawa"
-              }
-            ]
-          }
-        ]
-      }
-    ]
+    "room": "Track A",
+    "title": "Session s1_keynote Title",
+    "level": ["Beginner"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s1_keynote."
   },
   {
     "id": "s2_cross_talk",
-    "title": "異分野クロストーク (BQ/Front-end/Back-end)",
-    "longDescription": "異なる分野の専門家からスキルをワンランクアップする技術を学ぶセッション。BigQueryのエキスパートがフロントエンド開発者向けにデータ分析技術を、 Web のエキスパートがバックエンド開発者に Web アプリのデバッグ技術を伝授する。このセッションは、まさに DevFest Tokyo のテーマ 「Find your new “eyes」を体現するセッション。",
-    "level": "Intermediate",
-    "perspective": "Challenge",
+    "talk_ids": ["t2_cross_talk_bq", "t2_cross_talk_web"],
+    "track": "Track A",
     "time_start": "13:30",
     "time_end": "14:10",
-    "track": "Track A",
-    "talks": [
-      {
-        "id": "t2_cross_talk_bq",
-        "title": "BigQueryのエキスパートがフロントエンド開発者向けにデータ分析技術を伝授",
-        "abstract": "BigQueryのエキスパートがフロントエンド開発者向けにデータ分析技術を伝授する。",
-        "speakers": [
-          {
-            "id": "speaker_nakamura",
-            "name": "なかむらさとる",
-            "bio": "なかむらさとるは、BigQueryの専門家です。",
-            "photoUrl": null,
-            "socialLinks": [
-              {
-                "platform": "twitter",
-                "url": "https://twitter.com/nakamura"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "t2_cross_talk_web",
-        "title": "Webのエキスパートがバックエンド開発者にWebアプリのデバッグ技術を伝授",
-        "abstract": "Webのエキスパートがバックエンド開発者にWebアプリのデバッグ技術を伝授する。",
-        "speakers": [
-          {
-            "id": "speaker_yakura",
-            "name": "Yakura",
-            "bio": "Yakuraは、Webアプリのデバッグ技術に関する専門家です。",
-            "photoUrl": null,
-            "socialLinks": [
-              {
-                "platform": "twitter",
-                "url": "https://twitter.com/yakura"
-              }
-            ]
-          }
-        ]
-      }
-    ]
+    "room": "Track A",
+    "title": "Session s2_cross_talk Title",
+    "level": ["Intermediate"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s2_cross_talk."
   },
   {
     "id": "s2_google_maps",
-    "title": "Google Maps 特集 (仮)",
-    "longDescription": "Google Mapsの最新情報、デザインの変遷、個人開発における活用法や苦労話など、地理情報技術に関する多角的な視点を提供する。",
-    "level": "Beginner",
-    "perspective": "Experience",
+    "talk_ids": ["t2_google_maps_talk"],
+    "track": "Track B",
     "time_start": "13:30",
     "time_end": "14:10",
-    "track": "Track B",
-    "talks": [
-      {
-        "id": "t2_google_maps_talk",
-        "title": "Google Mapsの最新情報",
-        "abstract": "Google Mapsの最新情報、デザインの変遷、個人開発における活用法や苦労話など、地理情報技術に関する多角的な視点を提供する。",
-        "speakers": [
-          {
-            "id": "speaker_andho",
-            "name": "Andho",
-            "bio": "AndhoはGoogle Mapsのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track B",
+    "title": "Session s2_google_maps Title",
+    "level": ["Intermediate"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s2_google_maps."
   },
   {
     "id": "s2_kmp_hands_on",
-    "title": "KMP ハンズオン (仮)",
-    "longDescription": "Kotlin Multiplatform (KMP) の簡単な入門ハンズオン。",
-    "level": "Beginner",
-    "perspective": "Introduction",
+    "talk_ids": ["t2_kmp_hands_on_talk"],
+    "track": "Track C",
     "time_start": "13:30",
     "time_end": "14:20",
-    "track": "Track C",
-    "talks": [
-      {
-        "id": "t2_kmp_hands_on_talk",
-        "title": "KMP ハンズオン",
-        "abstract": "Kotlin Multiplatform (KMP) の簡単な入門ハンズオン。",
-        "speakers": [
-          {
-            "id": "speaker_takahirom",
-            "name": "Takahirom",
-            "bio": "TakahiromはKMPのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track C",
+    "title": "Session s2_kmp_hands_on Title",
+    "level": ["Intermediate"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s2_kmp_hands_on."
   },
   {
     "id": "s2_frontier",
-    "title": "フロンティア (仮)",
-    "longDescription": "Google のテクノロジーの中で、新しい分野・ニッチな分野に焦点を当てたセッション。ブラウザの中の Gemini、広告動画の生成、Open Source Silicon。そんな「フロンティア」と呼ぶべき分野のエキスパートをお迎えし、皆さんが今は持っていない新しい視点を手に入れましょう。",
-    "level": "Advanced",
-    "perspective": "Experience",
+    "talk_ids": ["t2_frontier_talk"],
+    "track": "Track D",
     "time_start": "13:30",
     "time_end": "14:10",
-    "track": "Track D",
-    "talks": [
-      {
-        "id": "t2_frontier_talk",
-        "title": "フロンティア",
-        "abstract": "Google のテクノロジーの中で、新しい分野・ニッチな分野に焦点を当てたセッション。ブラウザの中の Gemini、広告動画の生成、Open Source Siliconのエキスパートをお迎えし、新しい視点を提供する。",
-        "speakers": [
-          {
-            "id": "speaker_fukushima",
-            "name": "福島ゆかり",
-            "bio": "福島ゆかりはGoogleのテクノロジーのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track D",
+    "title": "Session s2_frontier Title",
+    "level": ["Intermediate"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s2_frontier."
   },
   {
     "id": "s3_gen_ai_beginner",
-    "title": "初心者向け Gen AI 特集 (仮)",
-    "longDescription": "これまで当たり前ではなかった開発スタイル...",
-    "level": "Beginner",
-    "perspective": "Introduction",
+    "talk_ids": ["t3_gen_ai_beginner_talk"],
+    "track": "Track A",
     "time_start": "14:30",
     "time_end": "15:10",
-    "track": "Track A",
-    "talks": [
-      {
-        "id": "t3_gen_ai_beginner_talk",
-        "title": "初心者向け Gen AI 特集",
-        "abstract": "生成AI開発をまだやったことがない参加者が、(1) LLM・AI Agent の仕組みを理解し、(2) 開発を始める準備ができるセッション。",
-        "speakers": [
-          {
-            "id": "speaker_yoichiro",
-            "name": "Yoichiro",
-            "bio": "YoichiroはGen AIのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track A",
+    "title": "Session s3_gen_ai_beginner Title",
+    "level": ["Advanced"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s3_gen_ai_beginner."
   },
   {
     "id": "s3_adk",
-    "title": "ADK特集 (仮)",
-    "longDescription": "TBA",
-    "level": "Intermediate",
-    "perspective": "Experience",
+    "talk_ids": ["t3_adk_talk"],
+    "track": "Track B",
     "time_start": "14:30",
     "time_end": "15:10",
-    "track": "Track B",
-    "talks": [
-      {
-        "id": "t3_adk_talk",
-        "title": "ADK特集",
-        "abstract": "Agent Development Kit (ADK) User Group とのコラボレーションセッション。経験者向けに、商品検索エージェント開発や、デプロイ、本番運用を想定した認証・認可の設定など、実践的なトピックを紹介。",
-        "speakers": [
-          {
-            "id": "speaker_kaz",
-            "name": "Kaz",
-            "bio": "KazはADKのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track B",
+    "title": "Session s3_adk Title",
+    "level": ["Advanced"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s3_adk."
   },
   {
     "id": "s3_firebase_hands_on",
-    "title": "Firebase Studio でつくるフルスタックアプリケーション (ハンズオン)",
-    "longDescription": "Firebase Studio は、フロントエンド・バックエンド・データベースの構築を一元的に行える新しい開発環境です。このハンズオンでは、Firebase Studio を使ってフルスタックアプリケーションを実際に構築しながら、Firestore や Firebase Authentication、Firebase App Hosting などの主要機能を体験します。",
-    "level": "Beginner",
-    "perspective": "Introduction",
+    "talk_ids": ["t3_firebase_hands_on_talk"],
+    "track": "Track C",
     "time_start": "14:30",
     "time_end": "15:10",
-    "track": "Track C",
-    "talks": [
-      {
-        "id": "t3_firebase_hands_on_talk",
-        "title": "Firebase Studio でつくるフルスタックアプリケーション",
-        "abstract": "Firebase Studio を使ってフルスタックアプリケーションを実際に構築しながら、Firestore や Firebase Authentication などの主要機能を体験するハンズオン。",
-        "speakers": [
-          {
-            "id": "speaker_tanabee",
-            "name": "tanabee",
-            "bio": "tanabeeはFirebaseのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track C",
+    "title": "Session s3_firebase_hands_on Title",
+    "level": ["Advanced"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s3_firebase_hands_on."
   },
   {
     "id": "s3_web_angular",
-    "title": "Web / Angular (仮)",
-    "longDescription": "フロントエンド開発に携わる皆様、またAI技術に興味をお持ちの皆様、両方に楽しんでいただけるWeb（CSSとAngular）に関するセッションです。本セッションでは、最先端のCSS技術と、AI志向のフレームワークへと進化を続けるAngularの最新動向を深掘りします。AIとの連携による新たなフロントエンド開発の可能性や、よりリッチなUI/UXを実現するための実践的なテクニックについて、具体的なデモンストレーションを交えながらご紹介します。",
-    "level": "Intermediate",
-    "perspective": "Challenge",
+    "talk_ids": ["t3_web_angular_talk"],
+    "track": "Track D",
     "time_start": "14:30",
     "time_end": "15:10",
-    "track": "Track D",
-    "talks": [
-      {
-        "id": "t3_web_angular_talk",
-        "title": "Web / Angular",
-        "abstract": "最先端のCSS技術と、AI志向のフレームワークへと進化を続けるAngularの最新動向を深掘りする。AI連携による新たなフロントエンド開発の可能性や実践的なテクニックを紹介。",
-        "speakers": [
-          {
-            "id": "speaker_saku",
-            "name": "Saku",
-            "bio": "SakuはWeb/Angularのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track D",
+    "title": "Session s3_web_angular Title",
+    "level": ["Advanced"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s3_web_angular."
   },
   {
     "id": "s4_ai_tools_advanced",
-    "title": "AI Tools (仮)",
-    "longDescription": "このセッションでは、最先端のAI活用を推進するエンジニアの皆様を対象に、生成AIやエージェント開発の最新トレンドと実践的なノウハウを深掘りします。明日からの開発に役立つ、具体的な事例と戦略的な視点を提供し、皆様のAI開発力をもう一段階高みにレベルアップしましょう。",
-    "level": "Advanced",
-    "perspective": "Experience",
+    "talk_ids": ["t4_ai_tools_advanced_talk"],
+    "track": "Track A",
     "time_start": "15:50",
     "time_end": "16:30",
-    "track": "Track A",
-    "talks": [
-      {
-        "id": "t4_ai_tools_advanced_talk",
-        "title": "AI Tools",
-        "abstract": "最先端のAI活用を推進するエンジニアを対象に、生成AIやエージェント開発の最新トレンドと実践的なノウハウを深掘り。明日からの開発に役立つ、具体的な事例と戦略的な視点を提供する。",
-        "speakers": [
-          {
-            "id": "speaker_bankushi",
-            "name": "ばんくし",
-            "bio": "ばんくしはAIツールのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track A",
+    "title": "Session s4_ai_tools_advanced Title",
+    "level": ["Beginner", "Intermediate", "Advanced"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s4_ai_tools_advanced."
   },
   {
     "id": "s4_data_observability",
-    "title": "データ分析 / Observability (仮)",
-    "longDescription": "本セッションでは、データ分析とObservabilityに焦点を当て、各分野の専門家が最新の事例や実践的な知見を共有します。Kaggleにおけるデータ分析の具体的なアプローチ、デジタル庁でのダッシュボード活用事例、そしてGoogle CloudにおけるObservabilityの導入と活用について、3つの講演を通じて深掘りします。初心者から中上級者まで、幅広い開発経験を持つ方々...",
-    "level": "Intermediate",
-    "perspective": "Experience",
+    "talk_ids": ["t4_data_observability_talk"],
+    "track": "Track B",
     "time_start": "15:50",
     "time_end": "16:30",
-    "track": "Track B",
-    "talks": [
-      {
-        "id": "t4_data_observability_talk",
-        "title": "データ分析 / Observability",
-        "abstract": "データ分析とObservabilityに焦点を当て、Kaggleでのデータ分析、デジタル庁でのダッシュボード活用事例、Google CloudにおけるObservabilityの導入と活用について深掘りする。",
-        "speakers": [
-          {
-            "id": "speaker_ozaki",
-            "name": "Ozaki",
-            "bio": "Ozakiはデータ分析のエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track B",
+    "title": "Session s4_data_observability Title",
+    "level": ["Beginner", "Intermediate"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s4_data_observability."
   },
   {
     "id": "s4_gemma_hands_on",
-    "title": "ハンズオン: Gemma (post-training?)",
-    "longDescription": "TBA",
-    "level": "Intermediate",
-    "perspective": "Challenge",
+    "talk_ids": ["t4_gemma_hands_on_talk"],
+    "track": "Track C",
     "time_start": "15:50",
     "time_end": "16:30",
-    "track": "Track C",
-    "talks": [
-      {
-        "id": "t4_gemma_hands_on_talk",
-        "title": "ハンズオン: Gemma",
-        "abstract": "Gemma (post-training?) に関するハンズオン。詳細は未定。",
-        "speakers": [
-          {
-            "id": "speaker_gemma",
-            "name": "Gemma Expert",
-            "bio": "Gemmaのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track C",
+    "title": "Session s4_gemma_hands_on Title",
+    "level": ["Beginner", "Advanced"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s4_gemma_hands_on."
   },
   {
     "id": "s4_android_flutter",
-    "title": "Android / Flutter (仮)",
-    "longDescription": "本セッションでは、Android および Flutter の開発経験者（中～上級者）を対象に、最新の技術動向と実践的な開発手法を紹介します。3名の登壇者がそれぞれの専門分野から、ネイティブUIとの統合やパフォーマンス最適化など、多角的な視点からAndroid/Flutter開発の深化を促します。特に、FlutterにおけるPlatform Viewsを活用したネイティブUI統合の実装例など、具体的な事例を交えながら解説します。",
-    "level": "Advanced",
-    "perspective": "Experience",
+    "talk_ids": ["t4_android_flutter_talk"],
+    "track": "Track D",
     "time_start": "15:50",
     "time_end": "16:30",
-    "track": "Track D",
-    "talks": [
-      {
-        "id": "t4_android_flutter_talk",
-        "title": "Android / Flutter",
-        "abstract": "Android および Flutter の開発経験者（中～上級者）を対象に、最新の技術動向と実践的な開発手法を紹介。ネイティブUIとの統合やパフォーマンス最適化など、多角的な視点から開発の深化を促す。",
-        "speakers": [
-          {
-            "id": "speaker_yanzm",
-            "name": "yanzm",
-            "bio": "yanzmはAndroid/Flutterのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track D",
+    "title": "Session s4_android_flutter Title",
+    "level": ["Intermediate", "Advanced"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s4_android_flutter."
   },
   {
     "id": "s5_wtm_career_panel",
-    "title": "WTM キャリアパネルディスカッション (JA)",
-    "longDescription": "TBA",
-    "level": "Beginner",
-    "perspective": "Experience",
+    "talk_ids": ["t5_wtm_career_panel_talk"],
+    "track": "Track A",
     "time_start": "16:50",
     "time_end": "17:30",
-    "track": "Track A",
-    "talks": [
-      {
-        "id": "t5_wtm_career_panel_talk",
-        "title": "WTM キャリアパネルディスカッション",
-        "abstract": "WTM (Women Techmakers) によるキャリアに関するパネルディスカッション。",
-        "speakers": [
-          {
-            "id": "speaker_shoco",
-            "name": "Shoco",
-            "bio": "ShocoはWTMのキャリアパネルのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track A",
+    "title": "Session s5_wtm_career_panel Title",
+    "level": ["Beginner"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s5_wtm_career_panel."
   },
   {
     "id": "s5_community_lt_ja",
-    "title": "Community LT大会 (JA)",
-    "longDescription": "TBA",
-    "level": "Beginner",
-    "perspective": "Experience",
+    "talk_ids": ["t5_community_lt_ja_talk"],
+    "track": "Track B",
     "time_start": "16:50",
     "time_end": "17:30",
-    "track": "Track B",
-    "talks": [
-      {
-        "id": "t5_community_lt_ja_talk",
-        "title": "Community LT大会 (JA)",
-        "abstract": "日本語によるコミュニティによるライトニングトーク大会。",
-        "speakers": [
-          {
-            "id": "speaker_community_ja",
-            "name": "Community Speaker JA",
-            "bio": "コミュニティスピーカーです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track B",
+    "title": "Session s5_community_lt_ja Title",
+    "level": ["Beginner"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s5_community_lt_ja."
   },
   {
     "id": "s5_community_lt_en",
-    "title": "Community LT大会 (EN)",
-    "longDescription": "TBA",
-    "level": "Beginner",
-    "perspective": "Experience",
+    "talk_ids": ["t5_community_lt_en_talk"],
+    "track": "Track C",
     "time_start": "16:50",
     "time_end": "17:30",
-    "track": "Track C",
-    "talks": [
-      {
-        "id": "t5_community_lt_en_talk",
-        "title": "Community LT大会 (EN)",
-        "abstract": "英語によるコミュニティによるライトニングトーク大会。",
-        "speakers": [
-          {
-            "id": "speaker_community_en",
-            "name": "Community Speaker EN",
-            "bio": "Community Speaker ENです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track C",
+    "title": "Session s5_community_lt_en Title",
+    "level": ["Beginner"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s5_community_lt_en."
   },
   {
     "id": "s5_web_angular_d",
-    "title": "Web / Angular (仮)",
-    "longDescription": "フロントエンド開発に携わる皆様、またAI技術に興味をお持ちの皆様、両方に楽しんでいただけるWeb（CSSとAngular）に関するセッションです。本セッションでは、最先端のCSS技術と、AI志向のフレームワークへと進化を続けるAngularの最新動向を深掘りします。AIとの連携による新たなフロントエンド開発の可能性や、よりリッチなUI/UXを実現するための実践的なテクニックについて、具体的なデモンストレーションを交えながらご紹介します。",
-    "level": "Intermediate",
-    "perspective": "Challenge",
+    "talk_ids": ["t5_web_angular_d_talk"],
+    "track": "Track D",
     "time_start": "16:50",
     "time_end": "17:30",
-    "track": "Track D",
-    "talks": [
-      {
-        "id": "t5_web_angular_d_talk",
-        "title": "Web / Angular",
-        "abstract": "フロントエンド開発に携わる皆様、またAI技術に興味をお持ちの皆様、両方に楽しんでいただけるWeb（CSSとAngular）に関するセッション。",
-        "speakers": [
-          {
-            "id": "speaker_saku_d",
-            "name": "Saku",
-            "bio": "SakuはWeb/Angularのエキスパートです.",
-            "photoUrl": null,
-            "socialLinks": []
-          }
-        ]
-      }
-    ]
+    "room": "Track D",
+    "title": "Session s5_web_angular_d Title",
+    "level": ["Beginner"],
+    "tech_tags": ["Web", "Mobile"],
+    "description": "This is a dummy description for Session s5_web_angular_d."
   }
 ]

@@ -134,6 +134,7 @@ const TalksPage = () => {
               talk={talk}
               sessionId={talk.sessionId}
               session={talk.session}
+              speakers={talk.speakers}
             />
           ))
         ) : (

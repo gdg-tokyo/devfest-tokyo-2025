@@ -10,8 +10,9 @@
 **Rationale**: For up to 50 sessions and 100 talks, this approach offers sufficient performance and simplicity. It avoids the overhead of more complex solutions like dedicated search libraries or server-side filtering for this scale. Performance can be further optimized using `useMemo` for filtered results to prevent unnecessary re-renders.
 
 **Alternatives Considered**:
--   **Dedicated search libraries (e.g., Fuse.js, Lunr.js)**: Overkill for the specified data volume, adds unnecessary bundle size and complexity.
--   **Server-side filtering**: Not applicable as the requirement is for client-side filtering and data is loaded upfront.
+
+- **Dedicated search libraries (e.g., Fuse.js, Lunr.js)**: Overkill for the specified data volume, adds unnecessary bundle size and complexity.
+- **Server-side filtering**: Not applicable as the requirement is for client-side filtering and data is loaded upfront.
 
 ## R-002: Next.js Modal Patterns for State Preservation
 
@@ -20,8 +21,9 @@
 **Rationale**: A client-side modal provides a smooth user experience. Shallow routing allows updating the URL without re-running data fetching methods, preserving the Talks Page's state (filters, scroll position). The modal can be triggered by a `Link` component to the session page route, with the session ID as a parameter, and then rendered conditionally based on the URL parameter.
 
 **Alternatives Considered**:
--   **Full page navigation**: Does not preserve the Talks Page's state, leading to a disjointed user experience.
--   **Context API or Redux for modal state**: While viable, shallow routing offers a more direct and URL-driven approach for this specific use case.
+
+- **Full page navigation**: Does not preserve the Talks Page's state, leading to a disjointed user experience.
+- **Context API or Redux for modal state**: While viable, shallow routing offers a more direct and URL-driven approach for this specific use case.
 
 ## R-003: WAI-ARIA Guidelines for Accessible Components
 
@@ -30,5 +32,6 @@
 **Rationale**: Basic accessibility is a requirement. WAI-ARIA provides the necessary guidance to make interactive components usable for individuals with disabilities, particularly those using assistive technologies. Semantic HTML will be prioritized, with ARIA used to enhance where native semantics are insufficient.
 
 **Alternatives Considered**:
--   **No specific accessibility guidelines**: Would fail to meet the basic accessibility requirement.
--   **Full WCAG 2.1 AA compliance**: While ideal, the current requirement is for basic accessibility, and full compliance can be a significant effort. Focusing on WAI-ARIA for interactive elements covers the most critical aspects for basic accessibility.
+
+- **No specific accessibility guidelines**: Would fail to meet the basic accessibility requirement.
+- **Full WCAG 2.1 AA compliance**: While ideal, the current requirement is for basic accessibility, and full compliance can be a significant effort. Focusing on WAI-ARIA for interactive elements covers the most critical aspects for basic accessibility.

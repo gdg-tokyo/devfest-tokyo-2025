@@ -23,13 +23,13 @@ The primary requirement is to update the design of the DevFest Tokyo 2025 landin
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+_GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 
-*   **Participant-Centric Information**: Does the plan prioritize providing participants with the necessary information to enjoy the event and maximize their learning opportunities? - **PASS**
-*   **Brand Compliance**: Does the plan adhere to the official DevFest brand guidelines? - **PASS**
-*   **Responsive Design (Mobile-First)**: Does the plan include considerations for a mobile-first responsive design? - **PASS**
-*   **Modern Tech Stack**: Does the plan utilize Next.js and Tailwind CSS correctly? - **PASS**
-*   **GitHub Pages Deployment**: Is the plan optimized for deployment on GitHub Pages? - **N/A for this phase**
+- **Participant-Centric Information**: Does the plan prioritize providing participants with the necessary information to enjoy the event and maximize their learning opportunities? - **PASS**
+- **Brand Compliance**: Does the plan adhere to the official DevFest brand guidelines? - **PASS**
+- **Responsive Design (Mobile-First)**: Does the plan include considerations for a mobile-first responsive design? - **PASS**
+- **Modern Tech Stack**: Does the plan utilize Next.js and Tailwind CSS correctly? - **PASS**
+- **GitHub Pages Deployment**: Is the plan optimized for deployment on GitHub Pages? - **N/A for this phase**
 
 ## Project Structure
 
@@ -46,6 +46,7 @@ specs/002-devfest-style/
 ```
 
 ### Source Code (repository root)
+
 ```
 src/
 ├── app/

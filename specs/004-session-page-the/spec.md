@@ -74,7 +74,5 @@ The Session Page provides attendees with a comprehensive view of a single talk, 
 - The Session Page maintains a consistent look and feel with the rest of the DevFest Tokyo 2025 website.
 - User feedback indicates a clear understanding of session content and speaker backgrounds after viewing the Session Page.
 
-
-
 - **Q1: Session Page Implementation Type:** Should the Session Page be implemented as a dedicated route (e.g., `/sessions/[sessionId]`) or as a modal overlay on the Timetable page?
 - **Q2: Speaker Data Source:** Is speaker data embedded directly within the session data (e.g., `sessions.json`), or is it a separate data entity that needs to be fetched and joined (e.g., `speakers.json`)?

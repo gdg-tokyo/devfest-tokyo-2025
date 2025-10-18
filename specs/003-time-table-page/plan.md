@@ -23,13 +23,13 @@ The primary requirement is to provide attendees with a rapid and efficient way t
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+_GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 
-*   **Participant-Centric Information**: Yes, the plan prioritizes rapid session selection and efficient planning for attendees.
-*   **Brand Compliance**: Yes, strict adherence to DevFest brand guide for typography and color scheme is a requirement.
-*   **Responsive Design (Mobile-First)**: Yes, the plan explicitly mentions a responsive grid layout for desktop and mobile.
-*   **Modern Tech Stack**: Yes, Next.js and Tailwind CSS are explicitly mentioned and align with the constitution.
-*   **GitHub Pages Deployment**: Yes, with research planned to ensure optimization for GitHub Pages.
+- **Participant-Centric Information**: Yes, the plan prioritizes rapid session selection and efficient planning for attendees.
+- **Brand Compliance**: Yes, strict adherence to DevFest brand guide for typography and color scheme is a requirement.
+- **Responsive Design (Mobile-First)**: Yes, the plan explicitly mentions a responsive grid layout for desktop and mobile.
+- **Modern Tech Stack**: Yes, Next.js and Tailwind CSS are explicitly mentioned and align with the constitution.
+- **GitHub Pages Deployment**: Yes, with research planned to ensure optimization for GitHub Pages.
 
 ## Project Structure
 
@@ -75,8 +75,8 @@ tests/
 
 ## Complexity Tracking
 
-*Fill ONLY if Constitution Check has violations that must be justified*
+_Fill ONLY if Constitution Check has violations that must be justified_
 
 | Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-|           |            |                                     |
+| --------- | ---------- | ------------------------------------ |
+|           |            |                                      |

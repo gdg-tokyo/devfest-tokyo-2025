@@ -1,7 +1,7 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import SessionCard from '@/features/timetable/components/SessionCard';
-import { Session } from '@/types';
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import SessionCard from '@/features/timetable/components/SessionCard'
+import { Session } from '@/types'
 
 // Mock data for a session conforming to the new Session interface
 const mockSession: Session = {
@@ -21,19 +21,21 @@ const mockSession: Session = {
           name: 'John Doe',
           bio: 'A seasoned web developer.',
           photoUrl: '/images/speakers/john-doe.jpg',
-          socialLinks: [{ platform: 'twitter', url: 'https://twitter.com/johndoe' }],
+          socialLinks: [
+            { platform: 'twitter', url: 'https://twitter.com/johndoe' },
+          ],
         },
       ],
     },
   ],
-};
+}
 
 describe('SessionCard', () => {
   it('renders session title and speaker names', () => {
-    render(<SessionCard session={mockSession} />);
-    expect(screen.getByText('Introduction to Next.js')).toBeInTheDocument();
-    expect(screen.getByText('John Doe')).toBeInTheDocument();
-  });
+    render(<SessionCard session={mockSession} />)
+    expect(screen.getByText('Introduction to Next.js')).toBeInTheDocument()
+    expect(screen.getByText('John Doe')).toBeInTheDocument()
+  })
 
   it('renders time information', () => {
     // Note: time_start and time_end are not part of the new Session interface
@@ -47,15 +49,15 @@ describe('SessionCard', () => {
       ...mockSession,
       time_start: '10:00',
       time_end: '10:50',
-    } as Session;
-    render(<SessionCard session={sessionWithTime} />);
-    expect(screen.getByText('10:00 - 10:50')).toBeInTheDocument();
-  });
+    } as Session
+    render(<SessionCard session={sessionWithTime} />)
+    expect(screen.getByText('10:00 - 10:50')).toBeInTheDocument()
+  })
 
   it('renders level tags', () => {
-    render(<SessionCard session={mockSession} />);
-    expect(screen.getByText('Beginner')).toBeInTheDocument();
-  });
+    render(<SessionCard session={mockSession} />)
+    expect(screen.getByText('Beginner')).toBeInTheDocument()
+  })
 
   // Removed tech tags test as they are no longer directly on the Session object for the card display
-});
+})

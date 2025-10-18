@@ -16,12 +16,8 @@ const customJestConfig = {
     '^@/types/(.*)$': '<rootDir>/src/types/$1',
     '^next/image$': '<rootDir>/__mocks__/next/image.js',
   },
-  testMatch: [
-    '<rootDir>/tests/unit/**/*.test.tsx',
-  ],
-  testPathIgnorePatterns: [
-    '<rootDir>/tests/e2e/',
-  ],
+  testMatch: ['<rootDir>/tests/unit/**/*.test.tsx'],
+  testPathIgnorePatterns: ['<rootDir>/tests/e2e/'],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

@@ -39,7 +39,7 @@ The `speaker_profiles` field within the Session entity contains an array of obje
 
 These are the attributes used for client-side filtering on the Time Table Page:
 
-*   **Skill Level**: `level` attribute of the Session entity (values: "Beginner", "Intermediate", "Advanced").
-*   **Learning Perspective**: `perspective` attribute of the Session entity (values: "Introduction", "Experience", "Challenge").
-*   **Technical Tags**: `tech_tags` attribute of the Session entity (array of strings).
-*   **Keyword Search**: Free text search across `title`, `description_short`, `description_long`, and `speaker_names` attributes.
+- **Skill Level**: `level` attribute of the Session entity (values: "Beginner", "Intermediate", "Advanced").
+- **Learning Perspective**: `perspective` attribute of the Session entity (values: "Introduction", "Experience", "Challenge").
+- **Technical Tags**: `tech_tags` attribute of the Session entity (array of strings).
+- **Keyword Search**: Free text search across `title`, `description_short`, `description_long`, and `speaker_names` attributes.

@@ -88,17 +88,17 @@ As a user, I want to view the detailed information of a specific session by clic
 
 ### Key Entities
 
--   **Session**: Represents a single session with attributes like ID, title, long description, level, perspective, time, track, and a list of associated talks.
--   **Talk**: Represents a specific presentation within a session, including ID, title, abstract, and a list of speakers.
--   **Speaker**: Represents a speaker with attributes like ID, name, bio, photo URL, and social links.
--   **Filter**: Represents the criteria used to narrow down sessions (keyword, level, perspective, tech tags).
+- **Session**: Represents a single session with attributes like ID, title, long description, level, perspective, time, track, and a list of associated talks.
+- **Talk**: Represents a specific presentation within a session, including ID, title, abstract, and a list of speakers.
+- **Speaker**: Represents a speaker with attributes like ID, name, bio, photo URL, and social links.
+- **Filter**: Represents the criteria used to narrow down sessions (keyword, level, perspective, tech tags).
 
 ## Success Criteria _(mandatory)_
 
 ### Measurable Outcomes
 
--   **SC-001**: 95% of users can successfully find a specific session using search and filters within 15 seconds.
--   **SC-002**: The Talks Page loads and displays initial session cards within 2 seconds on a typical broadband connection.
--   **SC-003**: Filtering and search results update within 500 milliseconds of user input.
--   **SC-004**: 90% of users rate the session discovery experience as "easy" or "very easy" in post-event surveys.
--   **SC-005**: The Session Page modal opens within 300 milliseconds of clicking a session card.
+- **SC-001**: 95% of users can successfully find a specific session using search and filters within 15 seconds.
+- **SC-002**: The Talks Page loads and displays initial session cards within 2 seconds on a typical broadband connection.
+- **SC-003**: Filtering and search results update within 500 milliseconds of user input.
+- **SC-004**: 90% of users rate the session discovery experience as "easy" or "very easy" in post-event surveys.
+- **SC-005**: The Session Page modal opens within 300 milliseconds of clicking a session card.

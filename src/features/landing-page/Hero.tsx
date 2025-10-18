@@ -1,7 +1,8 @@
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic'
 
-const Hero = dynamic(() => import('./components/Hero').then(mod => mod.Hero), { ssr: false });
+const Hero = dynamic(
+  () => import('./components/Hero').then((mod) => mod.Hero),
+  { ssr: false }
+)
 
-
-
-export default Hero;
+export default Hero

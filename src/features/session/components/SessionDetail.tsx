@@ -1,9 +1,9 @@
-import React from 'react';
-import { Session } from '@/types';
-import TalkCard from '@/components/common/TalkCard';
+import React from 'react'
+import { Session } from '@/types'
+import TalkCard from '@/components/common/TalkCard'
 
 interface SessionDetailProps {
-  session: Session;
+  session: Session
 }
 
 const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
@@ -34,11 +34,15 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
           </span>
         )}
       </div>
-      <p className="text-gray-700 whitespace-pre-line">{session.longDescription}</p>
+      <p className="text-gray-700 whitespace-pre-line">
+        {session.longDescription}
+      </p>
 
       {session.talks && session.talks.length > 0 && (
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-gray-800 mt-6">Talks in This Session</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mt-6">
+            Talks in This Session
+          </h2>
           <div className="grid grid-cols-1 gap-4">
             {session.talks.map((talk) => (
               <TalkCard key={talk.id} talk={talk} />
@@ -47,7 +51,7 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default SessionDetail;
+export default SessionDetail

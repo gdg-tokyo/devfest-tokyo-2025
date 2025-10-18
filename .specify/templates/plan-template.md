@@ -29,13 +29,13 @@
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+_GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 
-*   **Participant-Centric Information**: Does the plan prioritize providing participants with the necessary information to enjoy the event and maximize their learning opportunities?
-*   **Brand Compliance**: Does the plan adhere to the official DevFest brand guidelines?
-*   **Responsive Design (Mobile-First)**: Does the plan include considerations for a mobile-first responsive design?
-*   **Modern Tech Stack**: Does the plan utilize Next.js and Tailwind CSS correctly?
-*   **GitHub Pages Deployment**: Is the plan optimized for deployment on GitHub Pages?
+- **Participant-Centric Information**: Does the plan prioritize providing participants with the necessary information to enjoy the event and maximize their learning opportunities?
+- **Brand Compliance**: Does the plan adhere to the official DevFest brand guidelines?
+- **Responsive Design (Mobile-First)**: Does the plan include considerations for a mobile-first responsive design?
+- **Modern Tech Stack**: Does the plan utilize Next.js and Tailwind CSS correctly?
+- **GitHub Pages Deployment**: Is the plan optimized for deployment on GitHub Pages?
 
 ## Project Structure
 
@@ -52,6 +52,7 @@ specs/[###-feature]/
 ```
 
 ### Source Code (repository root)
+
 <!--
   ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
   for this feature. Delete unused options and expand the chosen structure with
@@ -100,9 +101,9 @@ directories captured above]
 
 ## Complexity Tracking
 
-*Fill ONLY if Constitution Check has violations that must be justified*
+_Fill ONLY if Constitution Check has violations that must be justified_
 
-| Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
-| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
+| Violation                  | Why Needed         | Simpler Alternative Rejected Because |
+| -------------------------- | ------------------ | ------------------------------------ |
+| [e.g., 4th project]        | [current need]     | [why 3 projects insufficient]        |
+| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient]  |

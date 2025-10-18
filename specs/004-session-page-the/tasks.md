@@ -8,11 +8,13 @@
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
 
 ## Format: `[ID] [P?] [Story] Description`
+
 - **[P]**: Can run in parallel (different files, no dependencies)
 - **[Story]**: Which user story this task belongs to (e.g., US1, US2, US3)
 - Include exact file paths in descriptions
 
 ## Path Conventions
+
 - Paths shown below assume single project structure as defined in `plan.md`.
 
 ## Phase 1: Setup (Shared Infrastructure)

@@ -6,7 +6,7 @@ This document outlines the tasks required to implement the landing page design u
 
 ## Phase 1: Setup
 
-*Goal: Prepare the project for design updates.*
+_Goal: Prepare the project for design updates._
 
 - [x] **T001**: Install `framer-motion` dependency.
 - [x] **T002**: Update `globals.css` to import `Roboto` and `Noto Sans JP` fonts from Google Fonts.
@@ -14,7 +14,7 @@ This document outlines the tasks required to implement the landing page design u
 
 ## Phase 2: User Story 1 - Enhanced Visual Appeal (P1)
 
-*Goal: Implement the core visual updates for the landing page.*
+_Goal: Implement the core visual updates for the landing page._
 
 - [x] **T004** [US1]: Update the `Hero` component (`src/components/Hero.tsx`) to use the CSS gradient background with randomly placed circles.
 - [x] **T005** [US1]: Update the `Welcome` component (`src/components/Welcome.tsx`) to be enclosed in a rounded box with a black border and a subtle shadow.
@@ -24,7 +24,7 @@ This document outlines the tasks required to implement the landing page design u
 
 ## Phase 3: User Story 2 - Brand Recognition (P2)
 
-*Goal: Ensure brand consistency and adherence to the design guide.*
+_Goal: Ensure brand consistency and adherence to the design guide._
 
 - [x] **T007** [US2]: Update the `Navbar` component (`src/components/Navbar.tsx`) to replicate the style of the reference `Header.tsx` component (semi-transparent background, bottom border, spacing).
 - [x] **T008** [US2]: Ensure all UI elements (buttons, cards, etc.) are styled consistently with the DevFest brand identity.
@@ -34,7 +34,7 @@ This document outlines the tasks required to implement the landing page design u
 
 ## Phase 4: Polish & Integration
 
-*Goal: Finalize the page and ensure all elements are polished.*
+_Goal: Finalize the page and ensure all elements are polished._
 
 - [x] **T010**: Ensure the entire page is responsive across mobile, tablet, and desktop devices.
 - [x] **T011**: Conduct a design review to confirm 100% compliance with the DevFest design guide.

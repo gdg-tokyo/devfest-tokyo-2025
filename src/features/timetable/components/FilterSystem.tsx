@@ -86,7 +86,7 @@ const FilterSystem: React.FC<FilterSystemProps> = ({
           {availableLevels.map((level) => (
             <span
               key={level}
-              className={`cursor-pointer px-3 py-1 rounded-full text-sm ${selectedLevels.includes(level) ? getLevelColor(level) + ' text-white' : 'bg-gray-200 text-gray-800'}`}
+              className={`cursor-pointer px-3 py-1 rounded-full text-sm ${selectedLevels.includes(level) ? getLevelColor(level as 'Beginner' | 'Intermediate' | 'Advanced') + ' text-white' : 'bg-gray-200 text-gray-800'}`}
               onClick={() => handleLevelChange(level)}
             >
               {level}

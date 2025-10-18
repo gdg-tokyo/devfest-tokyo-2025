@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, Suspense } from 'react'
 
-import { getSessions, OldSession, OldTalk } from '@/lib/data-parser'
+import { getSessions, getTalks, getSpeakers } from '@/lib/data-parser'
+import { Session, Talk, Speaker } from '@/types'
 
 import TalkCard from '@/components/common/TalkCard'
 
@@ -12,50 +13,65 @@ import SessionModal from '@/components/common/SessionModal'
 
 import { useRouter, useSearchParams } from 'next/navigation'
 
-interface TalkWithSessionInfo extends OldTalk {
-  sessionLevel?: string[]
+interface TalkWithSessionInfo extends Talk {
+  sessionLevel: string[]
 
-  sessionPerspective?: 'Introduction' | 'Experience' | 'Challenge'
+  sessionPerspective: ('Introduction' | 'Experience' | 'Challenge')[]
 
-  sessionId: string // Add sessionId to the extended Talk interface
+  sessionId: string
 
-  session: OldSession // Add the full session object
+  session: Session
 
-  techTags: string[] // Add techTags to the extended Talk interface
+  speakers: Speaker[] // Add speakers here, as Talk only has speaker_ids
 }
 
-const TalksPage = () => {
+const TalksPageContent = () => {
   const router = useRouter()
 
   const searchParams = useSearchParams()
 
   const modalSessionId = searchParams.get('sessionId')
 
-  const allSessions: OldSession[] = getSessions()
+  const allSessions: Session[] = getSessions()
+  const allRawTalks: Talk[] = getTalks()
+  const allSpeakers: Speaker[] = getSpeakers()
 
+  // Declare state variables for filters
   const [keyword, setKeyword] = useState<string>('')
-
   const [selectedLevels, setSelectedLevels] = useState<string[]>([])
-
   const [selectedTechTags, setSelectedTechTags] = useState<string[]>([])
 
   const allTalks: TalkWithSessionInfo[] = useMemo(() => {
-    return allSessions.flatMap((session) =>
-      session.talks.map((talk) => ({
-        ...talk,
-
-        sessionLevel: session.level,
-
-        sessionPerspective: session.perspective,
-
-        sessionId: session.id,
-
-        session: session, // Assign the full session object here
-
-        techTags: talk.tech_tags || [], // Assign techTags from talk.tech_tags
-      }))
+    const speakersMap = new Map<string, Speaker>(
+      allSpeakers.map((speaker) => [speaker.id, speaker])
     )
-  }, [allSessions])
+    const talksMap = new Map<string, Talk>(
+      allRawTalks.map((talk) => [talk.id, talk])
+    )
+
+    return allSessions.flatMap((session) =>
+      session.talk_ids
+        .map((talkId) => {
+          const talk = talksMap.get(talkId)
+          if (!talk) {
+            return null // Should not happen if data is consistent
+          }
+          const talkSpeakers = talk.speaker_ids
+            .map((speakerId) => speakersMap.get(speakerId))
+            .filter((speaker): speaker is Speaker => speaker !== undefined)
+
+          return {
+            ...talk,
+            sessionLevel: session.level,
+            sessionPerspective: talk.perspective,
+            sessionId: session.id,
+            session: session,
+            speakers: talkSpeakers,
+          }
+        })
+        .filter((talk): talk is TalkWithSessionInfo => talk !== null)
+    )
+  }, [allSessions, allRawTalks, allSpeakers])
 
   const filteredTalks = useMemo(() => {
     return allTalks.filter((talk) => {
@@ -74,11 +90,11 @@ const TalksPage = () => {
 
       const matchesTechTags =
         selectedTechTags.length === 0 ||
-        talk.techTags.some((tag) => selectedTechTags.includes(tag))
+        talk.tech_tags.some((tag) => selectedTechTags.includes(tag))
 
       return matchesKeyword && matchesLevel && matchesTechTags
     })
-  }, [allTalks, keyword, selectedLevels, selectedTechTags])
+  }, [allTalks, keyword, selectedLevels, selectedTechTags]) // Dependency array is now correct
 
   const selectedSession = useMemo(() => {
     return allSessions.find((session) => session.id === modalSessionId) || null
@@ -95,9 +111,7 @@ const TalksPage = () => {
       <FilterSystem
         onFilterChange={({ levels, keyword, techTags }) => {
           setSelectedLevels(levels)
-
           setKeyword(keyword)
-
           setSelectedTechTags(techTags)
         }}
         availableLevels={Array.from(
@@ -107,11 +121,7 @@ const TalksPage = () => {
         )}
         availableTechTags={
           Array.from(
-            new Set(
-              allSessions.flatMap((session) =>
-                session.talks.flatMap((talk) => talk.tech_tags || [])
-              )
-            )
+            new Set(allRawTalks.flatMap((talk) => talk.tech_tags || []))
           ).filter(Boolean) as string[]
         }
       />
@@ -124,6 +134,7 @@ const TalksPage = () => {
               talk={talk}
               sessionId={talk.sessionId}
               session={talk.session}
+              speakers={talk.speakers}
             />
           ))
         ) : (
@@ -135,6 +146,14 @@ const TalksPage = () => {
 
       <SessionModal session={selectedSession} onClose={handleCloseModal} />
     </div>
+  )
+}
+
+const TalksPage = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <TalksPageContent />
+    </Suspense>
   )
 }
 

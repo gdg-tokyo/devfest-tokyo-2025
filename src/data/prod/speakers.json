@@ -2,7 +2,7 @@
   {
     "id": "speaker_oikawa",
     "name": "及川拓也",
-    "icon_url": "",
+    "photo_url": "",
     "job": "Comany A",
     "bio": "及川拓也は、Web技術の進化とキャリア形成に関する専門家です。",
     "twitter_handle": "oikawa"
@@ -10,7 +10,7 @@
   {
     "id": "speaker_nakamura",
     "name": "なかむらさとる",
-    "icon_url": "",
+    "photo_url": "",
     "job": "Company B",
     "bio": "なかむらさとるは、BigQueryの専門家です。",
     "twitter_handle": "nakamura"
@@ -18,7 +18,7 @@
   {
     "id": "speaker_yakura",
     "name": "Yakura",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "Yakuraは、Webアプリのデバッグ技術に関する専門家です。",
     "twitter_handle": "yakura"
@@ -26,7 +26,7 @@
   {
     "id": "speaker_andho",
     "name": "Andho",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "AndhoはGoogle Mapsのエキスパートです.",
     "twitter_handle": ""
@@ -34,7 +34,7 @@
   {
     "id": "speaker_takahirom",
     "name": "Takahirom",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "TakahiromはKMPのエキスパートです.",
     "twitter_handle": ""
@@ -42,7 +42,7 @@
   {
     "id": "speaker_fukushima",
     "name": "福島ゆかり",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "福島ゆかりはGoogleのテクノロジーのエキスパートです.",
     "twitter_handle": ""
@@ -50,7 +50,7 @@
   {
     "id": "speaker_yoichiro",
     "name": "Yoichiro",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "YoichiroはGen AIのエキスパートです.",
     "twitter_handle": ""
@@ -58,7 +58,7 @@
   {
     "id": "speaker_kaz",
     "name": "Kaz",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "KazはADKのエキスパートです.",
     "twitter_handle": ""
@@ -66,14 +66,14 @@
   {
     "id": "speaker_tanabee",
     "name": "tanabee",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "tanabeeはFirebaseのエキスパートです.",
     "twitter_handle": ""
   },
   {
     "id": "speaker_saku",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "SakuはWeb/Angularのエキスパートです.",
     "twitter_handle": ""
@@ -81,7 +81,7 @@
   {
     "id": "speaker_bankushi",
     "name": "ばんくし",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "ばんくしはAIツールのエキスパートです.",
     "twitter_handle": ""
@@ -89,7 +89,7 @@
   {
     "id": "speaker_ozaki",
     "name": "Ozaki",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "Ozakiはデータ分析のエキスパートです.",
     "twitter_handle": ""
@@ -97,14 +97,14 @@
   {
     "id": "speaker_gemma",
     "name": "Gemma Expert",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "Gemmaのエキスパートです.",
     "twitter_handle": ""
   },
   {
     "id": "speaker_yanzm",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "yanzmはAndroid/Flutterのエキスパートです.",
     "twitter_handle": ""
@@ -112,7 +112,7 @@
   {
     "id": "speaker_shoco",
     "name": "Shoco",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "ShocoはWTMのキャリアパネルのエキスパートです.",
     "twitter_handle": ""
@@ -120,7 +120,7 @@
   {
     "id": "speaker_community_ja",
     "name": "Community Speaker JA",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "コミュニティスピーカーです.",
     "twitter_handle": ""
@@ -128,7 +128,7 @@
   {
     "id": "speaker_community_en",
     "name": "Community Speaker EN",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "Community Speaker ENです.",
     "twitter_handle": ""
@@ -136,7 +136,7 @@
   {
     "id": "speaker_saku_d",
     "name": "Saku",
-    "icon_url": "",
+    "photo_url": "",
     "job": "",
     "bio": "SakuはWeb/Angularのエキスパートです.",
     "twitter_handle": ""

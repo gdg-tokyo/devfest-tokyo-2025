@@ -1,13 +1,14 @@
 'use client'
 
-import React, { useState, useEffect, useMemo, useCallback } from 'react'
-import TimetableGrid from '@/features/timetable/components/TimetableGrid'
-import FilterSystem from '@/features/timetable/components/FilterSystem'
 import OverlayMessageCard from '@/components/common/OverlayMessageCard'
-import { getSessions, OldSession } from '@/lib/data-parser'
+import FilterSystem from '@/features/timetable/components/FilterSystem'
+import TimetableGrid from '@/features/timetable/components/TimetableGrid'
+import { getSessions, getSpeakers, getTalks } from '@/lib/data-parser'
+import { Session, Speaker, Talk } from '@/types'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
 const TimetablePage = () => {
-  const allSessions: OldSession[] = getSessions()
+  const allSessions: Session[] = getSessions()
 
   const [filters, setFilters] = useState<{ levels: string[]; keyword: string }>(
     { levels: [], keyword: '' }
@@ -29,32 +30,48 @@ const TimetablePage = () => {
     []
   )
 
+  const allRawTalks = getTalks()
+  const allSpeakers = getSpeakers()
+
   const hasMatchingSessions = useMemo(() => {
+    const talksMap = new Map<string, Talk>(
+      allRawTalks.map((talk) => [talk.id, talk])
+    )
+    const speakersMap = new Map<string, Speaker>(
+      allSpeakers.map((speaker) => [speaker.id, speaker])
+    )
+
     return allSessions.some((session) => {
       const levelMatch =
         filters.levels.length === 0 ||
         (session.level && session.level.some((l) => filters.levels.includes(l)))
 
-      const speakerNames = session.talks.flatMap((talk) =>
-        talk.speakers.map((speaker) => speaker.name)
+      const sessionTalks = session.talk_ids
+        .map((talkId) => talksMap.get(talkId))
+        .filter((talk): talk is Talk => talk !== undefined)
+
+      const speakerNames = sessionTalks.flatMap((talk) =>
+        talk.speaker_ids
+          .map((speakerId) => speakersMap.get(speakerId)?.name)
+          .filter((name): name is string => name !== undefined)
       )
 
       const keywordMatch =
         !filters.keyword ||
         session.title.toLowerCase().includes(filters.keyword.toLowerCase()) ||
-        session.longDescription
+        session.description
           .toLowerCase()
           .includes(filters.keyword.toLowerCase()) ||
         speakerNames.some((name) =>
           name.toLowerCase().includes(filters.keyword.toLowerCase())
         ) ||
-        session.talks.some((talk) =>
+        sessionTalks.some((talk) =>
           talk.abstract.toLowerCase().includes(filters.keyword.toLowerCase())
         )
 
       return levelMatch && keywordMatch
     })
-  }, [allSessions, filters])
+  }, [allSessions, filters, allRawTalks, allSpeakers])
 
   const availableLevels = useMemo(() => {
     const validLevels = ['Beginner', 'Intermediate', 'Advanced']

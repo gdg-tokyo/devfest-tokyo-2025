@@ -1,0 +1,134 @@
+[
+  {
+    "id": "session-1",
+    "talk_ids": ["talk-1"],
+    "track": "Track A",
+    "time_start": "10:00",
+    "time_end": "10:50",
+    "title": "Session 1 (Track A - Timeslot I)",
+    "level": ["Beginner"],
+    "tech_tags": ["Web"],
+    "description": "Description for Session 1"
+  },
+  {
+    "id": "session-2",
+    "talk_ids": ["talk-2"],
+    "track": "Track B",
+    "time_start": "10:00",
+    "time_end": "10:50",
+    "title": "Session 2 (Track B - Timeslot I)",
+    "level": ["Intermediate"],
+    "tech_tags": ["Mobile"],
+    "description": "Description for Session 2"
+  },
+  {
+    "id": "session-3",
+    "talk_ids": ["talk-3"],
+    "track": "Track C",
+    "time_start": "10:00",
+    "time_end": "10:50",
+    "title": "Session 3 (Track C - Timeslot I)",
+    "level": ["Advanced"],
+    "tech_tags": ["AI"],
+    "description": "Description for Session 3"
+  },
+  {
+    "id": "session-4",
+    "talk_ids": ["talk-4"],
+    "track": "Track D",
+    "time_start": "10:00",
+    "time_end": "10:50",
+    "title": "Session 4 (Track D - Timeslot I)",
+    "level": ["Beginner"],
+    "tech_tags": ["Cloud"],
+    "description": "Description for Session 4"
+  },
+  {
+    "id": "session-5",
+    "talk_ids": ["talk-5"],
+    "track": "Track A",
+    "time_start": "11:00",
+    "time_end": "11:50",
+    "title": "Session 5 (Track A - Timeslot II)",
+    "level": ["Intermediate"],
+    "tech_tags": ["Web"],
+    "description": "Description for Session 5"
+  },
+  {
+    "id": "session-6",
+    "talk_ids": ["talk-6"],
+    "track": "Track B",
+    "time_start": "11:00",
+    "time_end": "11:50",
+    "title": "Session 6 (Track B - Timeslot II)",
+    "level": ["Advanced"],
+    "tech_tags": ["Mobile"],
+    "description": "Description for Session 6"
+  },
+  {
+    "id": "session-7",
+    "talk_ids": ["talk-7"],
+    "track": "Track C",
+    "time_start": "11:00",
+    "time_end": "11:50",
+    "title": "Session 7 (Track C - Timeslot II)",
+    "level": ["Beginner"],
+    "tech_tags": ["AI"],
+    "description": "Description for Session 7"
+  },
+  {
+    "id": "session-8",
+    "talk_ids": ["talk-8"],
+    "track": "Track D",
+    "time_start": "11:00",
+    "time_end": "11:50",
+    "title": "Session 8 (Track D - Timeslot II)",
+    "level": ["Intermediate"],
+    "tech_tags": ["Cloud"],
+    "description": "Description for Session 8"
+  },
+  {
+    "id": "session-9",
+    "talk_ids": ["talk-9"],
+    "track": "Track A",
+    "time_start": "12:00",
+    "time_end": "12:50",
+    "title": "Session 9 (Track A - Timeslot III)",
+    "level": ["Advanced"],
+    "tech_tags": ["Web"],
+    "description": "Description for Session 9"
+  },
+  {
+    "id": "session-10",
+    "talk_ids": ["talk-10"],
+    "track": "Track B",
+    "time_start": "12:00",
+    "time_end": "12:50",
+    "title": "Session 10 (Track B - Timeslot III)",
+    "level": ["Beginner"],
+    "tech_tags": ["Mobile"],
+    "description": "Description for Session 10"
+  },
+  {
+    "id": "session-11",
+    "talk_ids": ["talk-11"],
+    "track": "Track C",
+    "time_start": "12:00",
+    "time_end": "12:50",
+    "title": "Session 11 (Track C - Timeslot III)",
+    "level": ["Intermediate"],
+    "tech_tags": ["AI"],
+    "description": "Description for Session 11"
+  },
+  {
+    "id": "session-12",
+    "talk_ids": ["talk-12"],
+    "track": "Track D",
+    "time_start": "12:00",
+    "time_end": "12:50",
+    "title": "Session 12 (Track D - Timeslot III)",
+    "level": ["Advanced"],
+    "tech_tags": ["Cloud"],
+    "description": "Description for Session 12"
+  }
+]

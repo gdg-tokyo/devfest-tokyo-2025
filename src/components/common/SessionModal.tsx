@@ -49,15 +49,13 @@ const SessionModal: React.FC<SessionModalProps> = ({ session, onClose }) => {
         <h2 id="session-modal-title" className="text-2xl font-bold mb-4">
           {session.title}
         </h2>
-        <p className="text-gray-700 mb-4">{session.longDescription}</p>
+        <p className="text-gray-700 mb-4">{session.description}</p>{' '}
         {/* Add more session details here */}
         <div className="mt-4">
           <p>
             <strong>Level:</strong> {session.level}
           </p>
-          <p>
-            <strong>Perspective:</strong> {session.perspective}
-          </p>
+          <p></p>
           <p>
             <strong>Time:</strong> {session.time_start} - {session.time_end}
           </p>

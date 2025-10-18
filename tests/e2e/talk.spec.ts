@@ -6,6 +6,7 @@ test.describe('Talk Page', () => {
   }) => {
     await page.goto('/talks')
     await page.waitForURL('/talks')
+
     await page.waitForSelector('a[href^="/talks/"]')
 
     // Click on the first talk card
@@ -15,7 +16,7 @@ test.describe('Talk Page', () => {
     await expect(page).toHaveURL(/\/talks\/.+/)
 
     // Verify that the talk title is displayed
-    await expect(page.locator('h1')).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Talk 1' })).toBeVisible()
 
     // Verify that the speaker name is displayed
     await expect(page.locator('h3')).toBeVisible()
@@ -24,7 +25,7 @@ test.describe('Talk Page', () => {
   test('should navigate to the correct pages when clicking the action buttons', async ({
     page,
   }) => {
-    await page.goto('/talks/t1_keynote_talk')
+    await page.goto('/talks/talk-1')
 
     // Click on the connpass button
     const connpassPromise = page.waitForEvent('popup')

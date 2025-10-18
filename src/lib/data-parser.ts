@@ -1,24 +1,56 @@
-import { OldSession, OldTalk, OldSpeaker, Speaker, Talk } from '@/types'
-import speakersData from '../data/speakers.json'
-import talksData from '../data/talks.json'
-import sessionsData from '../data/sessions.json'
+import { Session, Speaker, Talk } from '@/types'
 
-export function getSessions(): OldSession[] {
+interface DataCacheEntry {
+  speakers: Speaker[]
+  talks: Talk[]
+  sessions: Session[]
+}
+
+const dataCache: { [key: string]: DataCacheEntry } = {}
+
+// Helper function to load data based on directory
+function loadData(dataDir: string): DataCacheEntry {
+  if (dataCache[dataDir]) {
+    return dataCache[dataDir]
+  }
+
+  const speakers = require(`../data/${dataDir}/speakers.json`)
+  const talks = require(`../data/${dataDir}/talks.json`)
+  const sessions = require(`../data/${dataDir}/sessions.json`)
+  console.log(`Loading speakers from: src/data/${dataDir}/speakers.json`)
+  console.log(`Loading talks from: src/data/${dataDir}/talks.json`)
+  console.log(`Loading sessions from: src/data/${dataDir}/sessions.json`)
+
+  const loadedData: DataCacheEntry = { speakers, talks, sessions }
+  dataCache[dataDir] = loadedData // Cache the loaded data
+  return loadedData
+}
+
+export function getSessions(): Session[] {
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const dataDir = env === 'DEV' ? 'dev' : 'prod'
+
+  const {
+    speakers: speakersData,
+    talks: talksData,
+    sessions: sessionsData,
+  } = loadData(dataDir)
+
   const speakersMap = new Map<string, Speaker>(
-    speakersData.map((s) => [s.id, s])
+    speakersData.map((s: Speaker) => [s.id, s])
   )
-  const talksMap = new Map<string, Talk>(talksData.map((t) => [t.id, t]))
+  const talksMap = new Map<string, Talk>(talksData.map((t: Talk) => [t.id, t]))
 
-  const oldSessions: OldSession[] = sessionsData
-    .map((session) => {
-      const oldTalks: OldTalk[] = session.talk_ids
+  const sessions: Session[] = (
+    sessionsData.map((session: Session) => {
+      const talks: Talk[] = session.talk_ids
         .map((talkId) => {
           const talk = talksMap.get(talkId)
           if (!talk) {
             return null // Or handle as an error/dummy talk
           }
 
-          const speakers: OldSpeaker[] = talk.speaker_ids
+          const speakers: Speaker[] = talk.speaker_ids
             .map((speakerId) => {
               const speaker = speakersMap.get(speakerId)
               if (!speaker) {
@@ -29,25 +61,22 @@ export function getSessions(): OldSession[] {
                 name: speaker.name,
                 bio: speaker.bio,
                 photo_url: speaker.photo_url,
-                job: '',
-                twitter_handle: '',
+                job: speaker.job,
+                twitter_handle: speaker.twitter_handle,
               }
             })
-            .filter((s): s is OldSpeaker => s !== null)
+            .filter((s): s is Speaker => s !== null)
 
           return {
             id: talk.id,
             title: talk.title,
             abstract: talk.abstract,
-            speakers: speakers,
             speaker_ids: talk.speaker_ids,
-            tech_tags: [],
-            is_keynote: false,
           }
         })
-        .filter((t): t is OldTalk => t !== null)
+        .filter((t): t is Talk => t !== null)
 
-      if (oldTalks.length === 0) {
+      if (talks.length === 0) {
         return null
       }
 
@@ -57,25 +86,43 @@ export function getSessions(): OldSession[] {
         track: session.track,
         time_start: session.time_start,
         time_end: session.time_end,
-        room: session.room,
         title: session.title,
         level: session.level,
         tech_tags: session.tech_tags,
         description: session.description,
-        talks: oldTalks,
+        perspective: talks.flatMap((t) => t.perspective || []),
       }
-    })
-    .filter((s): s is OldSession => s !== null)
+    }) as (Session | null)[]
+  ).filter((s): s is Session => s !== null)
 
-  return oldSessions
+  return sessions
+}
+
+export function getTalks(): Talk[] {
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const dataDir = env === 'DEV' ? 'dev' : 'prod'
+  const { talks: talksData } = loadData(dataDir)
+  return talksData
+}
+
+export function getSpeakers(): Speaker[] {
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const dataDir = env === 'DEV' ? 'dev' : 'prod'
+  const { speakers: speakersData } = loadData(dataDir)
+  return speakersData
 }
 
 export function getTalkById(
   id: string
 ): { talk: Talk; speakers: Speaker[] } | undefined {
-  const talksMap = new Map<string, any>(talksData.map((t) => [t.id, t]))
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const dataDir = env === 'DEV' ? 'dev' : 'prod'
+
+  const { speakers: speakersData, talks: talksData } = loadData(dataDir)
+
+  const talksMap = new Map<string, any>(talksData.map((t: Talk) => [t.id, t]))
   const speakersMap = new Map<string, Speaker>(
-    speakersData.map((s) => [s.id, s])
+    speakersData.map((s: Speaker) => [s.id, s])
   )
 
   const talk = talksMap.get(id)

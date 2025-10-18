@@ -1,6 +1,6 @@
 import React from 'react'
 import SessionCard from './SessionCard'
-import { Session, SpeakerProfile } from '@/types'
+import { Session } from '@/types'
 
 interface TimetableListProps {
   sessions: Session[]
@@ -9,14 +9,15 @@ interface TimetableListProps {
 
 const TimetableList: React.FC<TimetableListProps> = ({ sessions, filters }) => {
   const filterSession = (session: Session): boolean => {
-    const levelMatch = !filters.level || session.level === filters.level
-    const perspectiveMatch =
-      !filters.perspective || session.perspective === filters.perspective
+    const levelMatch = !filters.level || session.level.includes(filters.level)
+    // Temporarily comment out perspectiveMatch as Session does not have perspective yet
+    // const perspectiveMatch =
+    //   !filters.perspective || session.perspective === filters.perspective
     const tagsMatch =
       filters.tags.length === 0 ||
       (session.tech_tags &&
         filters.tags.every((tag) => session.tech_tags?.includes(tag)))
-    return levelMatch && perspectiveMatch && tagsMatch
+    return levelMatch /* && perspectiveMatch */ && tagsMatch
   }
 
   // Group sessions by time for a cleaner list view
@@ -28,7 +29,7 @@ const TimetableList: React.FC<TimetableListProps> = ({ sessions, filters }) => {
       acc[session.time_start].push(session)
       return acc
     },
-    {}
+    {} as { [key: string]: Session[] }
   )
 
   const sortedTimes = Object.keys(sessionsByTime).sort((a, b) =>

@@ -1,9 +1,10 @@
 import React from 'react'
+import { Session, Talk, Speaker } from '@/types'
 import SessionCard from './SessionCard'
-import { OldSession } from '@/lib/data-parser'
+import { getTalks, getSpeakers } from '@/lib/data-parser'
 
 interface TimetableGridProps {
-  sessions: OldSession[]
+  sessions: Session[]
   filters: { levels: string[]; keyword: string }
 }
 
@@ -85,21 +86,43 @@ const TimetableGrid: React.FC<TimetableGridProps> = ({ sessions, filters }) => {
     return Math.max(1, Math.ceil(durationMinutes / minutesPerSlot))
   }
 
+  const allRawTalks = getTalks()
+  const allSpeakers = getSpeakers()
+
   const filterSession = (session: Session): boolean => {
+    const talksMap = new Map<string, Talk>(
+      allRawTalks.map((talk) => [talk.id, talk])
+    )
+    const speakersMap = new Map<string, Speaker>(
+      allSpeakers.map((speaker) => [speaker.id, speaker])
+    )
+
     const levelMatch =
       filters.levels.length === 0 ||
       (session.level && session.level.some((l) => filters.levels.includes(l)))
+
+    const sessionTalks = session.talk_ids
+      .map((talkId) => talksMap.get(talkId))
+      .filter((talk): talk is Talk => talk !== undefined)
+
+    const speakerNames = sessionTalks.flatMap((talk) =>
+      talk.speaker_ids
+        .map((speakerId) => speakersMap.get(speakerId)?.name)
+        .filter((name): name is string => name !== undefined)
+    )
+
     const keywordMatch =
       !filters.keyword ||
       session.title.toLowerCase().includes(filters.keyword.toLowerCase()) ||
-      session.longDescription
+      session.description
         .toLowerCase()
         .includes(filters.keyword.toLowerCase()) ||
-      session.talks
-        .flatMap((talk) => talk.speakers.map((speaker) => speaker.name))
-        .some((name) =>
-          name.toLowerCase().includes(filters.keyword.toLowerCase())
-        )
+      speakerNames.some((name) =>
+        name.toLowerCase().includes(filters.keyword.toLowerCase())
+      ) ||
+      sessionTalks.some((talk) =>
+        talk.abstract.toLowerCase().includes(filters.keyword.toLowerCase())
+      )
     return levelMatch && keywordMatch
   }
 

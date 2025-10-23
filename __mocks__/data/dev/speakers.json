@@ -1,10 +1,86 @@
 [
   {
     "id": "speaker-1",
-    "name": "Dev Speaker 1",
-    "photo_url": "dev-photo-1",
-    "job": "Dev Job 1",
-    "bio": "Dev Bio 1",
-    "twitter_handle": "devspeaker1"
+    "name": "Speaker 1",
+    "bio": "Bio 1",
+    "github": "speaker1",
+    "twitter": "speaker1"
+  },
+  {
+    "id": "speaker-2",
+    "name": "Speaker 2",
+    "bio": "Bio 2",
+    "github": "speaker2",
+    "twitter": "speaker2"
+  },
+  {
+    "id": "speaker-3",
+    "name": "Speaker 3",
+    "bio": "Bio 3",
+    "github": "speaker3",
+    "twitter": "speaker3"
+  },
+  {
+    "id": "speaker-4",
+    "name": "Speaker 4",
+    "bio": "Bio 4",
+    "github": "speaker4",
+    "twitter": "speaker4"
+  },
+  {
+    "id": "speaker-5",
+    "name": "Speaker 5",
+    "bio": "Bio 5",
+    "github": "speaker5",
+    "twitter": "speaker5"
+  },
+  {
+    "id": "speaker-6",
+    "name": "Speaker 6",
+    "bio": "Bio 6",
+    "github": "speaker6",
+    "twitter": "speaker6"
+  },
+  {
+    "id": "speaker-7",
+    "name": "Speaker 7",
+    "bio": "Bio 7",
+    "github": "speaker7",
+    "twitter": "speaker7"
+  },
+  {
+    "id": "speaker-8",
+    "name": "Speaker 8",
+    "bio": "Bio 8",
+    "github": "speaker8",
+    "twitter": "speaker8"
+  },
+  {
+    "id": "speaker-9",
+    "name": "Speaker 9",
+    "bio": "Bio 9",
+    "github": "speaker9",
+    "twitter": "speaker9"
+  },
+  {
+    "id": "speaker-10",
+    "name": "Speaker 10",
+    "bio": "Bio 10",
+    "github": "speaker10",
+    "twitter": "speaker10"
+  },
+  {
+    "id": "speaker-11",
+    "name": "Speaker 11",
+    "bio": "Bio 11",
+    "github": "speaker11",
+    "twitter": "speaker11"
+  },
+  {
+    "id": "speaker-12",
+    "name": "Speaker 12",
+    "bio": "Bio 12",
+    "github": "speaker12",
+    "twitter": "speaker12"
   }
 ]

@@ -45,18 +45,23 @@ const Header = () => {
           >
             Talks
           </Link>
-                      <a
-                        href="https://gdg-tokyo.connpass.com/event/369416/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-google-red-500 text-white px-4 py-2 rounded-md hover:bg-google-red-600"
-                      >
-                        参加登録
-                      </a>        </div>
+          <a
+            href="https://gdg-tokyo.connpass.com/event/369416/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-google-red-500 text-white px-4 py-2 rounded-md hover:bg-google-red-600"
+          >
+            参加登録
+          </a>{' '}
+        </div>
 
         {/* Mobile Menu Button */}
         <div className="sm:hidden">
-          <button onClick={toggleMenu} className="text-gray-800 focus:outline-none" aria-label="Toggle menu">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-800 focus:outline-none"
+            aria-label="Toggle menu"
+          >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -88,7 +93,10 @@ const Header = () => {
       {isMenuOpen && (
         <div className="sm:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm py-4">
           <div className="container mx-auto px-4 flex flex-col gap-4 font-google-sans">
-            <Link href="/" className="text-gray-800 hover:text-google-blue-500 block">
+            <Link
+              href="/"
+              className="text-gray-800 hover:text-google-blue-500 block"
+            >
               Home
             </Link>
             <Link

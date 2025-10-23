@@ -1,7 +1,6 @@
 # Feature Specification: App Header Design
 
-**Created**: 2025-10-24
-**Status**: DRAFT
+**Created**: 2025-10-24 **Status**: DRAFT
 
 ## 1. Description
 
@@ -21,7 +20,7 @@ The current navigation is not prominent enough. A well-designed header is crucia
 ## 4. Functional Requirements
 
 | ID | Requirement |
-| :--- | :--- |
+| :-- | :-- |
 | FR-1 | The application header must be displayed consistently on all pages. |
 | FR-2 | The header must display the GDG Tokyo logo on the far left. |
 | FR-3 | The header must display the text "Google Developer Group Tokyo" next to the logo. |
@@ -38,7 +37,7 @@ The current navigation is not prominent enough. A well-designed header is crucia
 ## 5. Success Criteria
 
 | ID | Criteria | Metric |
-| :--- | :--- | :--- |
+| :-- | :-- | :-- |
 | SC-1 | All navigation links in the header correctly route to the specified pages. | 100% of links are correct and functional. |
 | SC-2 | The call-to-action button is easily identifiable and correctly links to the connpass page. | A user survey indicates that 95% of users can find the registration button within 5 seconds. |
 | SC-3 | The header design is visually aligned with the DevFest brand guide. | 100% compliance with specified colors, fonts, and logo usage. |

@@ -78,6 +78,7 @@ We will adopt an incremental delivery approach, focusing on completing each user
 ## Parallel Execution Examples
 
 **Within Phase 6:**
+
 - T016 (Hover States) and T017 (Performance Optimization) can be worked on in parallel once the basic header structure and elements are in place.
 
 ---

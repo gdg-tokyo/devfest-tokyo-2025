@@ -141,6 +141,8 @@ This architecture design emphasizes decoupling the core business logic from the 
 
 - Before implementation, use `Context7 MCP Server` to `resolve-library-id` → `get-library-docs` to retrieve the latest information on related libraries (e.g., `/upstash/context7`).
 - **[IMPORTANT]** Common business logic or style-related logic should be placed under `src/lib/` to be reused across the application. For example, the color utility functions for level, perspective, and track tags have been centralized in `src/lib/style-utils.ts`.
+- Meticulousness in Cross-Platform UI Changes: An oversight in applying a styling change (button color) consistently across both desktop and mobile views emphasized the importance of thoroughness in UI development.
+- Leveraging GitHub CLI for Workflow Automation: Successfully using gh pr create to automate the Pull Request creation process showcased the efficiency gains from integrating CLI tools into the development workflow.
 
 ### Maintenance policy
 

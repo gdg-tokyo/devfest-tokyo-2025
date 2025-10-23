@@ -1,8 +1,6 @@
 # Specification Quality Checklist: App Header Design
 
-**Purpose**: Validate specification completeness and quality before proceeding to planning
-**Created**: 2025-10-24
-**Feature**: [spec.md](./spec.md)
+**Purpose**: Validate specification completeness and quality before proceeding to planning **Created**: 2025-10-24 **Feature**: [spec.md](./spec.md)
 
 ## Content Quality
 

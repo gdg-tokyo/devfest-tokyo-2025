@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'DevFest Tokyo 2025 - Find your new “eyes”',
 }
 
-import Navbar from '@/components/Navbar'
+import Header from '@/components/Header'
 import { Footer } from '@/components/Footer' // Import Footer
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-off-white`}>
-        <Navbar />
+        <Header />
         {children}
         <Footer /> {/* Add Footer component */}
       </body>

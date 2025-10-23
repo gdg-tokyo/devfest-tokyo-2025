@@ -1,11 +1,74 @@
 [
   {
     "id": "talk-1",
-    "title": "Dev Talk 1",
-    "abstract": "Dev Abstract 1",
     "speaker_ids": ["speaker-1"],
-    "tech_tags": [],
-    "level": "Beginner",
-    "perspective": "Introduction"
+    "title": "Talk 1",
+    "abstract": "Abstract 1"
+  },
+  {
+    "id": "talk-2",
+    "speaker_ids": ["speaker-2"],
+    "title": "Talk 2",
+    "abstract": "Abstract 2"
+  },
+  {
+    "id": "talk-3",
+    "speaker_ids": ["speaker-3"],
+    "title": "Talk 3",
+    "abstract": "Abstract 3"
+  },
+  {
+    "id": "talk-4",
+    "speaker_ids": ["speaker-4"],
+    "title": "Talk 4",
+    "abstract": "Abstract 4"
+  },
+  {
+    "id": "talk-5",
+    "speaker_ids": ["speaker-5"],
+    "title": "Talk 5",
+    "abstract": "Abstract 5"
+  },
+  {
+    "id": "talk-6",
+    "speaker_ids": ["speaker-6"],
+    "title": "Talk 6",
+    "abstract": "Abstract 6"
+  },
+  {
+    "id": "talk-7",
+    "speaker_ids": ["speaker-7"],
+    "title": "Talk 7",
+    "abstract": "Abstract 7"
+  },
+  {
+    "id": "talk-8",
+    "speaker_ids": ["speaker-8"],
+    "title": "Talk 8",
+    "abstract": "Abstract 8"
+  },
+  {
+    "id": "talk-9",
+    "speaker_ids": ["speaker-9"],
+    "title": "Talk 9",
+    "abstract": "Abstract 9"
+  },
+  {
+    "id": "talk-10",
+    "speaker_ids": ["speaker-10"],
+    "title": "Talk 10",
+    "abstract": "Abstract 10"
+  },
+  {
+    "id": "talk-11",
+    "speaker_ids": ["speaker-11"],
+    "title": "Talk 11",
+    "abstract": "Abstract 11"
+  },
+  {
+    "id": "talk-12",
+    "speaker_ids": ["speaker-12"],
+    "title": "Talk 12",
+    "abstract": "Abstract 12"
   }
 ]

@@ -24,6 +24,7 @@ tests/
 ## Recent Changes
 
 - 006-data-schema-currently: Added
+- 008-app-nav-header: Implemented App Header Design
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

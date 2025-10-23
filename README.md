@@ -2,6 +2,14 @@
 
 This project is a Next.js application for the DevFest Tokyo 2025 event.
 
+## Installation
+
+First, install the project dependencies:
+
+```bash
+npm install
+```
+
 ## Getting Started
 
 ### Development Server

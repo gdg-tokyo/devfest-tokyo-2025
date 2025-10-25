@@ -5,7 +5,31 @@
   "mcpServers": {
     "chrome-devtools": {
       "command": "npx",
-      "args": ["-y", "chrome-devtools-mcp@latest"]
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--channel=stable",
+        "--headless=false",
+        "--isolated=true"
+      ]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest", "--port 3030", "--isolated"]
     }
+  },
+  "tools": {
+    "allowed": [
+      "ShellTool(ls)",
+      "ShellTool(find)",
+      "ShellTool(cat)",
+      "ShellTool(cd)",
+      "ShellTool(npm run test)",
+      "ShellTool(git diff)",
+      "ShellTool(git status)",
+      "ShellTool(git log)",
+      "ShellTool(git rev-parse)",
+      "ShellTool(gh pr view)"
+    ]
   }
 }

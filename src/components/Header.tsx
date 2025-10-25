@@ -91,7 +91,10 @@ const Header = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="sm:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm py-4">
+        <div
+          data-testid="mobile-menu"
+          className="sm:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm py-4"
+        >
           <div className="container mx-auto px-4 flex flex-col gap-4 font-google-sans">
             <Link
               href="/"

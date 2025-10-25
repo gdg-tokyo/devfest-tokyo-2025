@@ -14,11 +14,6 @@ const EventOverview = () => {
   return (
     <section className="bg-white py-20">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-center text-center mb-24">
-          <div className="w-full lg:w-6/12 px-4">
-            <h2 className="text-4xl font-semibold">Event Overview</h2>
-          </div>
-        </div>
         <div className="flex flex-wrap">
           <div className="w-full md:w-4/12 px-4 text-center">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-2 border-gray-800 h-full">

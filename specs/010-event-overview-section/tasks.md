@@ -61,11 +61,19 @@ This document outlines the tasks required to implement the Event Overview Sectio
   - Add `rounded-lg` and `border-2 border-gray-800` to the card elements.
   - Ensure the cards have equal height when placed side-by-side.
 
+### [X] T009: [US1] Remove Heading
+
+- **Description**: Remove the "Event Overview" heading from the component.
+- **File**: `src/features/landing-page/components/EventOverview.tsx`
+- **Depends on**: T008
+- **Instructions**:
+  - Remove the `h2` element containing the "Event Overview" text.
+
 ### T006: [US1] Integrate Component into Landing Page
 
 - **Description**: Integrate the `EventOverview` component into the main landing page.
 - **File**: `src/app/page.tsx`
-- **Depends on**: T008
+- **Depends on**: T009
 - **Instructions**:
   - Import and render the `EventOverview` component.
   - Place it below the existing welcome message section.
@@ -89,7 +97,7 @@ graph TD
         T001
     end
     subgraph Phase 2
-        T002 --> T003 --> T004 --> T005 --> T008 --> T006 --> T007
+        T002 --> T003 --> T004 --> T005 --> T008 --> T009 --> T006 --> T007
     end
     Phase 1 --> Phase 2
 ```

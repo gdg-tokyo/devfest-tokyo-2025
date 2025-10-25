@@ -6,9 +6,6 @@ test.describe('Event Overview Section', () => {
   }) => {
     await page.goto('/')
 
-    // Check for the section title
-    await expect(page.getByText('Event Overview')).toBeVisible()
-
     // Check for date and time
     await expect(page.getByText('November 22, 2025')).toBeVisible()
     await expect(page.getByText('10:00 - 18:00')).toBeVisible()

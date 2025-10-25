@@ -28,8 +28,8 @@ The landing page can be loaded, and the event overview section can be visually i
 
 #### Acceptance Scenarios
 
-1.  **Given** a user navigates to the landing page, **When** the page loads, **Then** an "Event Overview" section is visible below the main welcome message.
-2.  **Given** the "Event Overview" section is visible, **When** the user inspects it, **Then** it MUST display the event date and time, the event location, and a link or button for registration.
+1.  **Given** a user navigates to the landing page, **When** the page loads, **Then** a section with event details is visible below the main welcome message.
+2.  **Given** the section with event details is visible, **When** the user inspects it, **Then** it MUST display the event date and time, the event location, and a link or button for registration.
 3.  **Given** the registration link/button is visible, **When** the user clicks on it, **Then** they are redirected to the official connpass event page (https://gdg-tokyo.connpass.com/event/369416/).
 
 ### Edge Cases
@@ -51,6 +51,7 @@ The landing page can be loaded, and the event overview section can be visually i
 - **FR-008**: The system MUST display the registration button even if the registration URL is invalid or missing.
 - **FR-009**: The system MUST display the event venue name and address in Japanese.
 - **FR-010**: The info cards MUST follow the 'Panels/Cards (General)' style guide (rounded-lg, border-2 border-gray-800) and have equal height.
+- **FR-011**: The Event Overview section MUST NOT have a heading.
 
 ### Key Entities _(include if feature involves data)_
 

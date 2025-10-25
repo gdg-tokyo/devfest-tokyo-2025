@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react'
-import EventOverview from '@/features/landing-page/components/EventOverview'
 import eventData from '@/data/dev/event.json'
+import EventOverview from '@/features/landing-page/components/EventOverview'
+import { render, screen } from '@testing-library/react'
 
 describe('EventOverview Component', () => {
   it('renders the event overview information correctly', () => {

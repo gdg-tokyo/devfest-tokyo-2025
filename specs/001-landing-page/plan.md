@@ -7,7 +7,7 @@
 
 ## Summary
 
-The primary requirement is to build a landing page for DevFest Tokyo 2025 that includes branding, a call-to-action for registration, and a welcome message. The technical approach is to use Next.js and Tailwind CSS.
+The primary requirement is to build a landing page for DevFest Tokyo 2025 that includes branding and a welcome message. The technical approach is to use Next.js and Tailwind CSS.
 
 ## Technical Context
 
@@ -19,7 +19,7 @@ The primary requirement is to build a landing page for DevFest Tokyo 2025 that i
 - **Project Type**: `Web application`
 - **Performance Goals**: `Page load < 3s`
 - **Constraints**: `Responsive on mobile, tablet, desktop`
-- **Scale/Scope**: `Single landing page with session data`
+- **Scale/Scope**: `Single landing page`
 
 ## Constitution Check
 
@@ -53,8 +53,6 @@ src/
 ├── components/
 ├── styles/
 │   └── globals.css
-└── data/
-    └── sessions.json
 public/
 └── images/
 tests/

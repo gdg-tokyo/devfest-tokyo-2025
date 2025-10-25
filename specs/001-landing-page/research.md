@@ -6,4 +6,3 @@ No major research items were identified during the planning phase as the technol
 
 - **Framework**: Next.js with TypeScript
 - **Styling**: Tailwind CSS
-- **Data**: Session data will be managed in a static JSON file.

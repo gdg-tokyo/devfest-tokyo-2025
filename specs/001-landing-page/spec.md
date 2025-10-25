@@ -58,11 +58,12 @@ As a visitor, I want to see a welcome message, so I can feel welcomed and get a 
 - **FR-002**: The landing page MUST have an application navigation bar.
 - **FR-003**: The navigation bar MUST display the "DevFest" logo on the top left.
 - **FR-004**: The landing page MUST include a hero panel section. For detailed requirements, see the [Landing Page Hero Panel Specification](./009-landing-page-hero/spec.md).
-- **FR-007**: The landing page MUST display a welcome message below the hero section.
-- **FR-008**: The landing page design MUST be based on `landing_page_1.png` and `landing_page_2.png` as the primary design reference, and `DevFest 2025 PR - connpass.png` for the core design concept.
-- **FR-009**: The system MUST use a generic DevFest logo if a specific one for the navigation bar is not provided.
-- **FR-010**: The system MUST display the following welcome message: "DevFest is a developer-oriented event held around the world by the Google Developer Group (GDG) community. In Tokyo, it is held as a community event where you can learn the latest information and on-the-ground know-how of various technologies such as Android, Google Cloud, Web, Firebase, Machine Learning (ML), Flutter, and Go in one day. This year, it will be held for the 10th time on Saturday, November 22nd at Bellesalle Shibuya First."
-- **FR-012**: The navigation bar MUST contain the following items: Home, Timetable, Sessions.
+- **FR-005**: The landing page MUST include a section displaying key event information, positioned after the main welcome message area. For detailed requirements, see the [Event Overview Section Specification](../010-event-overview-section/spec.md).
+- **FR-006**: The landing page MUST display a welcome message below the hero section.
+- **FR-007**: The landing page design MUST be based on `landing_page_1.png` and `landing_page_2.png` as the primary design reference, and `DevFest 2025 PR - connpass.png` for the core design concept.
+- **FR-008**: The system MUST use a generic DevFest logo if a specific one for the navigation bar is not provided.
+- **FR-009**: The system MUST display the following welcome message: "DevFest is a developer-oriented event held around the world by the Google Developer Group (GDG) community. In Tokyo, it is held as a community event where you can learn the latest information and on-the-ground know-how of various technologies such as Android, Google Cloud, Web, Firebase, Machine Learning (ML), Flutter, and Go in one day. This year, it will be held for the 10th time on Saturday, November 22nd at Bellesalle Shibuya First."
+- **FR-010**: The navigation bar MUST contain the following items: Home, Timetable, Sessions.
 
 ## Success Criteria _(mandatory)_
 

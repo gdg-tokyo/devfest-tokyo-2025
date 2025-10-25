@@ -55,6 +55,12 @@ The landing page can be loaded, and the event overview section can be visually i
 - **FR-012**: The event date MUST be displayed in the Japanese format (e.g., `2025年11月22日 (土)`).
 - **FR-013**: The event time MUST be displayed as `12:00 - 18:00`.
 - **FR-014**: The event venue name MUST be displayed in a normal font, and the address MUST be displayed in a bit weak grey font, with a small space between them.
+- **FR-015**: The Event Overview section MUST have a background color of `bg-off-white`.
+- **FR-016**: The title of the registration panel MUST be "参加方法".
+- **FR-017**: The registration panel MUST include the description "外部イベントページ (connpass.com) から参加登録をお願いします。" below the title.
+- **FR-018**: The registration panel MUST include a call to action button below the description.
+- **FR-019**: The registration call to action button MUST include an external link icon next to the text.
+- **FR-020**: The registration call to action button MUST be a global common UI component.
 
 ### Key Entities _(include if feature involves data)_
 

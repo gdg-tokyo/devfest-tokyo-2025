@@ -1,18 +1,17 @@
 'use client'
 
-import React from 'react'
 import eventData from '@/data/dev/event.json'
 import {
   CalendarToday,
-  LocationOn,
   ConfirmationNumber,
+  LocationOn,
 } from '@mui/icons-material'
 
 const EventOverview = () => {
   const { eventOverview } = eventData
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-off-white py-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="w-full md:w-4/12 px-4 text-center">

@@ -11,10 +11,18 @@ const ClientCountdown = dynamic(() => import('./ClientCountdown'), {
 const HeroPanel: React.FC = () => {
   return (
     <section
-      className="flex flex-col items-center justify-center min-h-screen p-4 bg-off-white text-center"
+      className="relative flex flex-col items-center justify-center min-h-screen p-4 bg-off-white text-center overflow-hidden"
       aria-labelledby="event-title"
     >
-      <div className="max-w-4xl w-full">
+      <div className="absolute inset-0 bg-gradient-to-br from-google-blue-500 to-google-yellow-500 opacity-30"></div>
+      <div className="absolute inset-0 z-0">
+        {/* Random circles for autumn theme */}
+        <div className="absolute w-12 h-12 bg-google-red-500 rounded-full opacity-20 top-1/4 left-1/4 animate-pulse"></div>
+        <div className="absolute w-8 h-8 bg-google-green-500 rounded-full opacity-20 top-1/2 right-1/4 animate-pulse delay-100"></div>
+        <div className="absolute w-16 h-16 bg-google-yellow-500 rounded-full opacity-20 bottom-1/4 left-1/3 animate-pulse delay-200"></div>
+        <div className="absolute w-10 h-10 bg-google-blue-500 rounded-full opacity-20 top-1/3 right-1/3 animate-pulse delay-300"></div>
+      </div>
+      <div className="relative z-10 max-w-4xl w-full">
         <Image
           src="/images/devfest25-tokyo-logo-with-gdg-bracket.png"
           alt="DevFest Tokyo 2025 Logo"

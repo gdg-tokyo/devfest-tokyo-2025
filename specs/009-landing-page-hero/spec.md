@@ -15,7 +15,7 @@ This document specifies the requirements for the Landing Page Hero Panel feature
 - **FR1: Display Event Branding**: The hero panel MUST prominently display the "DevFest Tokyo" event logo image.
 - **FR2: Display Event Theme**: The hero panel MUST display the event theme split into a main title "Fine your new eyes" and a subtitle "~3つの新たな視点に出会える一日~".
 - **FR3: Display Event Countdown**: The hero panel MUST include a real-time countdown clock showing the remaining time until the DevFest Tokyo 2025 event starts.
-- **FR4: Registration Call-to-Action**: The hero panel MUST feature a distinct red button labeled "参加登録" that, when clicked, navigates the user to the official connpass event registration page.
+- **FR4: Registration Call-to-Action**: The hero panel MUST feature a distinct red button labeled "参加登録" that, when clicked, navigates the user to the official connpass event registration page in a new browser tab.
 - **FR5: Timetable Navigation**: The hero panel MUST include a button labeled "タイムテーブル" that, when clicked, navigates the user to the internal timetable page of the website.
 - **FR6: Talk Directory Navigation**: The hero panel MUST include a button labeled "Talk Directory" that, when clicked, navigates the user to the internal talk directory page of the website.
 
@@ -26,6 +26,7 @@ This document specifies the requirements for the Landing Page Hero Panel feature
 - **NFR3: Accessibility**: All interactive elements (buttons) MUST be keyboard navigable and have appropriate ARIA labels for screen reader compatibility.
 - **NFR4: Usability**: The call-to-action buttons MUST be clearly distinguishable and intuitively guide the user to their respective destinations.
 - **NFR5: Subtitle Styling**: The event theme subtitle MUST be displayed in a smaller font size and a grey color.
+- **NFR6: Background Animation**: The hero panel MUST feature a subtle, decorative background animation consisting of randomly placed, slowly pulsing circles with autumn-themed colors (red, green, yellow, blue) to create a visually engaging and festive atmosphere.
 
 ## 5. Success Criteria
 

@@ -17,21 +17,6 @@
 
 ## User Scenarios & Testing _(mandatory)_
 
-### User Story 1 - Event Registration (Priority: P1)
-
-As a potential attendee, I want to see the main branding of DevFest Tokyo 2025 and a clear call-to-action to register for the event, so I can easily sign up.
-
-**Why this priority**: The primary goal of the landing page is to drive registrations for the event.
-
-**Independent Test**: A user can navigate to the landing page and click the registration button, which will take them to the Connpass event page.
-
-**Acceptance Scenarios**:
-
-1. **Given** a user is on the landing page, **When** they see the hero section, **Then** they should see a prominent registration button.
-2. **Given** a user clicks the registration button, **When** the action is complete, **Then** they should be redirected to `https://gdg-tokyo.connpass.com/event/369416/`.
-
----
-
 ### User Story 2 - Brand Recognition (Priority: P2)
 
 As a visitor, I want to see a navigation bar with the DevFest logo, so I can recognize the brand and navigate the site.
@@ -72,20 +57,16 @@ As a visitor, I want to see a welcome message, so I can feel welcomed and get a 
 - **FR-001**: The system MUST display a landing page.
 - **FR-002**: The landing page MUST have an application navigation bar.
 - **FR-003**: The navigation bar MUST display the "DevFest" logo on the top left.
-- **FR-004**: The landing page MUST have a hero section.
-- **FR-005**: The hero section MUST display a large logo picture of "DevFest Tokyo 2025" with the event's theme.
-- **FR-006**: The hero section MUST have a button that navigates to the registration site in a new tab: `https://gdg-tokyo.connpass.com/event/369416/`.
+- **FR-004**: The landing page MUST include a hero panel section. For detailed requirements, see the [Landing Page Hero Panel Specification](./009-landing-page-hero/spec.md).
 - **FR-007**: The landing page MUST display a welcome message below the hero section.
 - **FR-008**: The landing page design MUST be based on `landing_page_1.png` and `landing_page_2.png` as the primary design reference, and `DevFest 2025 PR - connpass.png` for the core design concept.
 - **FR-009**: The system MUST use a generic DevFest logo if a specific one for the navigation bar is not provided.
 - **FR-010**: The system MUST display the following welcome message: "DevFest is a developer-oriented event held around the world by the Google Developer Group (GDG) community. In Tokyo, it is held as a community event where you can learn the latest information and on-the-ground know-how of various technologies such as Android, Google Cloud, Web, Firebase, Machine Learning (ML), Flutter, and Go in one day. This year, it will be held for the 10th time on Saturday, November 22nd at Bellesalle Shibuya First."
-- **FR-011**: The hero section logo MUST incorporate the event theme: "Find your new “eyes” ~ 3 つの新たな視点に出会える一日 ~".
 - **FR-012**: The navigation bar MUST contain the following items: Home, Timetable, Sessions.
 
 ## Success Criteria _(mandatory)_
 
 ### Measurable Outcomes
 
-- **SC-001**: At least 50% of visitors to the landing page click on the registration button within the first week of launch.
 - **SC-002**: The landing page MUST load in under 3 seconds on a standard internet connection.
 - **SC-003**: The landing page MUST be responsive and display correctly on mobile, tablet, and desktop devices.

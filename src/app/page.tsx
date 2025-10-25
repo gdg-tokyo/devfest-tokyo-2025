@@ -1,4 +1,4 @@
-import Hero from '@/features/landing-page/Hero'
+import HeroPanel from '@/features/landing-page/components/HeroPanel'
 import Welcome from '@/features/landing-page/Welcome'
 import Overview from '@/features/landing-page/Overview'
 import Link from 'next/link'
@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <HeroPanel />
       <Welcome />
       <Overview /> {/* Add Overview component */}
     </main>

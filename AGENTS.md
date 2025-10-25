@@ -206,6 +206,14 @@ Perspective Labels:
 
 ---
 
+# Agent Rules
+
+- DON'T use `$ npm run dev` for debug. If you want to check it, ask user to launch the dev server manually.
+  - If the chrome-dev-tool MCP is available, use it to investigate the error.
+  - If not, ask user to copy & paste the error message and etc.
+
+---
+
 # Memory for Spec-Kit
 
 Auto-generated from all feature plans. Last updated: 2025-10-13

@@ -3,9 +3,9 @@ import { defineConfig, devices } from '@playwright/test'
 export default defineConfig({
   testDir: './tests/e2e',
   webServer: {
-    command: 'npm run start -- -p 3000', // Assumes next build has been run
-    port: 3000, // Use port instead of url
-    reuseExistingServer: true, // Reuse existing server to prevent conflicts
+    command: 'npm run dev', // Start the development server
+    port: 3000,
+    reuseExistingServer: false, // Do not reuse existing server, let Playwright start it
     timeout: 120_000, // Longer timeout for slower environments
   },
   use: {

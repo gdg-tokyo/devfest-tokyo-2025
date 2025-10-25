@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react'
-import EventOverview from '@/features/landing-page/components/EventOverview'
 import eventData from '@/data/dev/event.json'
+import EventOverview from '@/features/landing-page/components/EventOverview'
+import { render, screen } from '@testing-library/react'
 
 describe('EventOverview Component', () => {
   it('renders the event overview information correctly', () => {
@@ -28,8 +28,9 @@ describe('EventOverview Component', () => {
         )
       )
     ).toBeInTheDocument()
-    expect(
-      screen.getByRole('link', { name: /register here/i })
-    ).toHaveAttribute('href', eventOverview.registrationUrl)
+    expect(screen.getByRole('link', { name: '参加登録' })).toHaveAttribute(
+      'href',
+      eventOverview.registrationUrl
+    )
   })
 })

@@ -1,5 +1,6 @@
 'use client'
 
+import RegistrationButton from '@/components/common/RegistrationButton'
 import eventData from '@/data/dev/event.json'
 import {
   CalendarToday,
@@ -11,10 +12,13 @@ const EventOverview = () => {
   const { eventOverview } = eventData
 
   return (
-    <section className="bg-off-white py-20">
+    <section
+      className="bg-off-white py-20"
+      data-testid="event-overview-section"
+    >
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap">
-          <div className="w-full md:w-4/12 px-4 text-center">
+        <div className="flex flex-wrap items-stretch">
+          <div className="w-full md:w-4/12 px-4 text-center flex-grow">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-2 border-gray-800 h-full">
               <div className="px-4 py-5 flex-auto">
                 <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
@@ -28,7 +32,7 @@ const EventOverview = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-4/12 px-4 text-center">
+          <div className="w-full md:w-4/12 px-4 text-center flex-grow">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-2 border-gray-800 h-full">
               <div className="px-4 py-5 flex-auto">
                 <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
@@ -43,23 +47,19 @@ const EventOverview = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-4/12 px-4 text-center">
+          <div className="w-full md:w-4/12 px-4 text-center flex-grow">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-2 border-gray-800 h-full">
               <div className="px-4 py-5 flex-auto">
                 <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
                   <ConfirmationNumber />
                 </div>
-                <h6 className="text-xl font-semibold">Register</h6>
+                <h6 className="text-xl font-semibold">参加方法</h6>
                 <p className="mt-2 mb-4 text-gray-600">
-                  <a
-                    href={eventOverview.registrationUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
-                  >
-                    Register here
-                  </a>
+                  外部イベントページ (connpass.com) から参加登録をお願いします。
                 </p>
+                <RegistrationButton href={eventOverview.registrationUrl}>
+                  参加登録
+                </RegistrationButton>
               </div>
             </div>
           </div>

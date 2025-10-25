@@ -11,6 +11,7 @@ test.describe('Talk Page', () => {
 
     // Click on the first talk card
     await page.locator('a[href^="/talks/"]').first().click()
+    await page.waitForURL(/\/talks\/.+/)
 
     // Verify that the URL is correct
     await expect(page).toHaveURL(/\/talks\/.+/)

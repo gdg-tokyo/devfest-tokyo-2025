@@ -17,7 +17,10 @@ test.describe('Event Overview Section', () => {
     ).toBeVisible()
 
     // Check for registration link
-    const registerLink = page.getByRole('link', { name: /register here/i })
+    const eventOverviewSection = page.getByTestId('event-overview-section')
+    const registerLink = eventOverviewSection.getByRole('link', {
+      name: /参加登録/i,
+    })
     await expect(registerLink).toBeVisible()
     await expect(registerLink).toHaveAttribute(
       'href',

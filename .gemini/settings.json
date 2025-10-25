@@ -29,7 +29,8 @@
       "ShellTool(git status)",
       "ShellTool(git log)",
       "ShellTool(git rev-parse)",
-      "ShellTool(gh pr view)"
+      "ShellTool(gh pr view)",
+      "ShellTool(npx playwright test)"
     ]
   }
 }

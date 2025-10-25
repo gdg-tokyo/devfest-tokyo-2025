@@ -1,5 +1,6 @@
 import { Talk, Speaker } from '@/types'
 import React from 'react'
+import Image from 'next/image'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import PlaceIcon from '@mui/icons-material/Place'
 import PersonIcon from '@mui/icons-material/Person'
@@ -70,9 +71,11 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
             className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md flex items-center mb-4"
           >
             {speaker.photo_url ? (
-              <img
+              <Image
                 src={speaker.photo_url}
                 alt={speaker.name}
+                width={96}
+                height={96}
                 className="w-24 h-24 rounded-lg mr-8"
               />
             ) : (

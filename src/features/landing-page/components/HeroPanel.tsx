@@ -1,8 +1,8 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 import RegistrationButton from '@/components/common/RegistrationButton'
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 
 // Dynamically import ClientCountdown with ssr: false
 const ClientCountdown = dynamic(() => import('./ClientCountdown'), {
@@ -31,6 +31,7 @@ const HeroPanel: React.FC = () => {
           height={400} // Increased height, adjust as needed
           priority
           className="mx-auto mb-4"
+          style={{ width: 'auto' }}
         />
         <h1
           id="event-title"

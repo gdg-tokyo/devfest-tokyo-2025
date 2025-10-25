@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useState } from 'react'
+import RegistrationButton from '@/components/common/RegistrationButton'
 import Image from 'next/image'
 import Link from 'next/link'
-import RegistrationButton from '@/components/common/RegistrationButton'
+import { useState } from 'react'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,16 +17,19 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="flex items-center">
-            <Image
-              src="/images/gdg-logo-24-color.png"
-              alt="GDG Tokyo Logo"
-              width={32}
-              height={32}
-            />
+            <div className="relative w-8 h-8">
+              <Image
+                src="/images/gdg-logo-24-color.png"
+                alt="GDG Tokyo Logo"
+                fill
+                style={{ objectFit: 'contain' }}
+                sizes="32px"
+              />{' '}
+            </div>
             <h1 className="ml-2 font-google-sans text-black-02 text-xl font-bold">
               Google Developer Group Tokyo
             </h1>
-          </div>
+          </div>{' '}
         </div>
 
         {/* Desktop Navigation */}

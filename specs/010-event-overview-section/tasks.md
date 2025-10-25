@@ -69,11 +69,39 @@ This document outlines the tasks required to implement the Event Overview Sectio
 - **Instructions**:
   - Remove the `h2` element containing the "Event Overview" text.
 
+### [X] T010: [US1] Update Event Data
+
+- **Description**: Update the `event.json` file with the new date format and event time.
+- **File**: `src/data/dev/event.json`
+- **Depends on**: T009
+- **Instructions**:
+  - Update the `date` field to `2025年11月22日 (土)`.
+  - Update the `time` field to `12:00 - 18:00`.
+
+### [X] T011: [US1] Implement Japanese Date Format and Update Time
+
+- **Description**: Implement the Japanese date format and update the event time in the `EventOverview` component.
+- **File**: `src/features/landing-page/components/EventOverview.tsx`
+- **Depends on**: T010
+- **Instructions**:
+  - Ensure the `date` is displayed in `2025年11月22日 (土)` format.
+  - Ensure the `time` is displayed as `12:00 - 18:00`.
+
+### [X] T012: [US1] Implement Venue Name and Address Styling
+
+- **Description**: Implement the specified styling for the event venue name and address.
+- **File**: `src/features/landing-page/components/EventOverview.tsx`
+- **Depends on**: T011
+- **Instructions**:
+  - Display the venue name in a normal font.
+  - Display the address in a slightly weaker grey font.
+  - Add a small space between the venue name and address.
+
 ### T006: [US1] Integrate Component into Landing Page
 
 - **Description**: Integrate the `EventOverview` component into the main landing page.
 - **File**: `src/app/page.tsx`
-- **Depends on**: T009
+- **Depends on**: T012
 - **Instructions**:
   - Import and render the `EventOverview` component.
   - Place it below the existing welcome message section.
@@ -97,7 +125,7 @@ graph TD
         T001
     end
     subgraph Phase 2
-        T002 --> T003 --> T004 --> T005 --> T008 --> T009 --> T006 --> T007
+        T002 --> T003 --> T004 --> T005 --> T008 --> T009 --> T010 --> T011 --> T012 --> T006 --> T007
     end
     Phase 1 --> Phase 2
 ```

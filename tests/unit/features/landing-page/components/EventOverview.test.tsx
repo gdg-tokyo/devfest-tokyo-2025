@@ -10,11 +10,11 @@ describe('EventOverview Component', () => {
 
     expect(
       screen.getByText((content, element) =>
-        content.startsWith('November 22, 2025')
+        content.startsWith('2025年11月22日 (土)')
       )
     ).toBeInTheDocument()
     expect(
-      screen.getByText((content, element) => content.includes('10:00 - 18:00'))
+      screen.getByText((content, element) => content.includes('12:00 - 18:00'))
     ).toBeInTheDocument()
     expect(
       screen.getByText((content, element) =>

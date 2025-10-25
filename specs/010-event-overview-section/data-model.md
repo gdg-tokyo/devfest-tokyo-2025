@@ -10,8 +10,8 @@ This entity holds the key details for the event that are displayed in the overvi
 
 | Field Name | Type | Description | Example |
 | --- | --- | --- | --- |
-| `date` | string | The date of the event. | "November 22, 2025" |
-| `time` | string | The time of the event. | "10:00 - 18:00" |
+| `date` | string | The date of the event in Japanese format. | "2025年11月22日 (土)" |
+| `time` | string | The time of the event. | "12:00 - 18:00" |
 | `location` | string | The name of the event venue. | "ベルサール渋谷ファースト" |
 | `address` | string | The full address of the venue in Japanese. | "東京都渋谷区東1-2-20 住友不動産渋谷ファーストタワー2F" |
 | `registrationUrl` | string | The URL for the official event registration page. | "https://gdg-tokyo.connpass.com/event/369416/" |
@@ -26,8 +26,8 @@ This entity holds the key details for the event that are displayed in the overvi
 ```json
 {
   "eventOverview": {
-    "date": "November 22, 2025",
-    "time": "10:00 - 18:00",
+    "date": "2025年11月22日 (土)",
+    "time": "12:00 - 18:00",
     "location": "ベルサール渋谷ファースト",
     "address": "東京都渋谷区東1-2-20 住友不動産渋谷ファーストタワー2F",
     "registrationUrl": "https://gdg-tokyo.connpass.com/event/369416/"

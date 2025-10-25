@@ -52,6 +52,9 @@ The landing page can be loaded, and the event overview section can be visually i
 - **FR-009**: The system MUST display the event venue name and address in Japanese.
 - **FR-010**: The info cards MUST follow the 'Panels/Cards (General)' style guide (rounded-lg, border-2 border-gray-800) and have equal height.
 - **FR-011**: The Event Overview section MUST NOT have a heading.
+- **FR-012**: The event date MUST be displayed in the Japanese format (e.g., `2025年11月22日 (土)`).
+- **FR-013**: The event time MUST be displayed as `12:00 - 18:00`.
+- **FR-014**: The event venue name MUST be displayed in a normal font, and the address MUST be displayed in a bit weak grey font, with a small space between them.
 
 ### Key Entities _(include if feature involves data)_
 

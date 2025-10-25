@@ -7,8 +7,8 @@ test.describe('Event Overview Section', () => {
     await page.goto('/')
 
     // Check for date and time
-    await expect(page.getByText('November 22, 2025')).toBeVisible()
-    await expect(page.getByText('10:00 - 18:00')).toBeVisible()
+    await expect(page.getByText('2025年11月22日 (土)')).toBeVisible()
+    await expect(page.getByText('12:00 - 18:00')).toBeVisible()
 
     // Check for location and address
     await expect(page.getByText('ベルサール渋谷ファースト')).toBeVisible()

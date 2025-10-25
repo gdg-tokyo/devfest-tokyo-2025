@@ -37,7 +37,8 @@ const EventOverview = () => {
                 </div>
                 <h6 className="text-xl font-semibold">Location</h6>
                 <p className="mt-2 mb-4 text-gray-600">
-                  {eventOverview.location} <br /> {eventOverview.address}
+                  <span>{eventOverview.location}</span>{' '}
+                  <span className="text-gray-500">{eventOverview.address}</span>
                 </p>
               </div>
             </div>

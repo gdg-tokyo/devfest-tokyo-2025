@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import RegistrationButton from '@/components/common/RegistrationButton'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -45,14 +46,9 @@ const Header = () => {
           >
             Talks
           </Link>
-          <a
-            href="https://gdg-tokyo.connpass.com/event/369416/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-google-red-500 text-white px-4 py-2 rounded-md hover:bg-google-red-600"
-          >
+          <RegistrationButton href="https://gdg-tokyo.connpass.com/event/369416/">
             参加登録
-          </a>{' '}
+          </RegistrationButton>
         </div>
 
         {/* Mobile Menu Button */}
@@ -114,14 +110,9 @@ const Header = () => {
             >
               Talks
             </Link>
-            <a
-              href="https://gdg-tokyo.connpass.com/event/369416/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-google-red-500 text-white px-4 py-2 rounded-md hover:bg-google-red-600 block"
-            >
+            <RegistrationButton href="https://gdg-tokyo.connpass.com/event/369416/">
               参加登録
-            </a>
+            </RegistrationButton>
           </div>
         </div>
       )}

@@ -74,7 +74,9 @@ describe('TalkDetail', () => {
 
   it('renders action buttons correctly', () => {
     render(<TalkDetail talk={mockTalk} speakers={mockSpeakers} />)
-    expect(screen.getByText('今すぐ参加登録')).toBeInTheDocument()
+    expect(
+      screen.getByRole('link', { name: /今すぐ参加登録/i })
+    ).toBeInTheDocument()
     expect(screen.getByText('タイムテーブルに戻る')).toBeInTheDocument()
     expect(screen.getByText('トーク一覧に戻る')).toBeInTheDocument()
   })

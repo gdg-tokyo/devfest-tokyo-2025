@@ -41,26 +41,14 @@ The landing page can be loaded, and the event overview section can be visually i
 
 ### Functional Requirements
 
-- **FR-001**: The system MUST display an event overview section on the landing page.
-- **FR-002**: The event overview section MUST be positioned after the main welcome message area.
-- **FR-003**: The section MUST display the official event date and time, accompanied by a calendar icon.
-- **FR-004**: The section MUST display the event venue/place, accompanied by a map pin icon.
-- **FR-005**: The section MUST display a clear call-to-action to register, accompanied by a ticket icon.
-- **FR-006**: The registration call-to-action MUST link to the specified connpass event page.
-- **FR-007**: The design of the section SHOULD be inspired by the layout and style of the reference site (https://2025.kotlinfest.dev/), ensuring a clean and well-organized presentation.
-- **FR-008**: The system MUST display the registration button even if the registration URL is invalid or missing.
-- **FR-009**: The system MUST display the event venue name and address in Japanese.
-- **FR-010**: The info cards MUST follow the 'Panels/Cards (General)' style guide (rounded-lg, border-2 border-gray-800) and have equal height.
-- **FR-011**: The Event Overview section MUST NOT have a heading.
-- **FR-012**: The event date MUST be displayed in the Japanese format (e.g., `2025年11月22日 (土)`).
-- **FR-013**: The event time MUST be displayed as `12:00 - 18:00`.
-- **FR-014**: The event venue name MUST be displayed in a normal font, and the address MUST be displayed in a bit weak grey font, with a small space between them.
-- **FR-015**: The Event Overview section MUST have a background color of `bg-off-white`.
-- **FR-016**: The title of the registration panel MUST be "参加方法".
-- **FR-017**: The registration panel MUST include the description "外部イベントページ (connpass.com) から参加登録をお願いします。" below the title.
-- **FR-018**: The registration panel MUST include a call to action button below the description.
-- **FR-019**: The registration call to action button MUST include an external link icon next to the text.
-- **FR-020**: The registration call to action button MUST be a global common UI component.
+- **FR-001**: The system MUST display an event overview section on the landing page, positioned after the main welcome message area.
+- **FR-002**: The section MUST display the event date and time, accompanied by a calendar icon. The date MUST be in Japanese format (e.g., `2025年11月22日 (土)`) and the time MUST be `12:00 - 18:00`.
+- **FR-003**: The section MUST display the event venue name and address, accompanied by a map pin icon. The venue name MUST be in a normal font, and the address in a weaker grey font, with a small space between them. Both MUST be in Japanese.
+- **FR-004**: The section MUST include a registration panel with the title "参加方法" and the description "外部イベントページ (connpass.com) から参加登録をお願いします。", followed by a call-to-action button. The button MUST link to the specified connpass event page, display an external link icon, and be a global common UI component. The button MUST be displayed even if the URL is invalid.
+- **FR-005**: The design of the section SHOULD be inspired by the layout and style of the reference site (https://2025.kotlinfest.dev/), ensuring a clean and well-organized presentation.
+- **FR-006**: The info cards within the section MUST follow the 'Panels/Cards (General)' style guide (rounded-lg, border-2 border-gray-800) and have equal height.
+- **FR-007**: The Event Overview section MUST NOT have a heading.
+- **FR-008**: The Event Overview section MUST have a background color of `bg-off-white`.
 
 ### Key Entities _(include if feature involves data)_
 

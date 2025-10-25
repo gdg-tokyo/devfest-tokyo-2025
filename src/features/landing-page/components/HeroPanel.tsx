@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import RegistrationButton from '@/components/common/RegistrationButton'
 import dynamic from 'next/dynamic'
 
 // Dynamically import ClientCountdown with ssr: false
@@ -45,14 +46,9 @@ const HeroPanel: React.FC = () => {
           {ClientCountdown && <ClientCountdown />}
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-4">
-          <a
-            href="https://gdg-tokyo.connpass.com/event/369416/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-google-red-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-google-red-600 transition duration-300 ease-in-out"
-          >
+          <RegistrationButton href="https://gdg-tokyo.connpass.com/event/369416/">
             参加登録
-          </a>
+          </RegistrationButton>
           <Link
             href="/timetable"
             className="bg-google-blue-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-google-blue-600 transition duration-300 ease-in-out"

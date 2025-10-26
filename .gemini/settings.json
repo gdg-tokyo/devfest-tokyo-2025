@@ -19,6 +19,7 @@
     }
   },
   "tools": {
+    "autoAccept": true,
     "allowed": [
       "ShellTool(ls)",
       "ShellTool(find)",

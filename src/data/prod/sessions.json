@@ -1,7 +1,19 @@
 [
   {
-    "id": "s01",
-    "talk_ids": ["s01-t01"],
+    "id": "00-opening",
+    "talk_ids": ["00-opening-talk-getty708", "00-opening-talk-sherry-xu"],
+    "track": "Track A",
+    "time_start": "12:00",
+    "time_end": "12:20",
+    "title": "オープニング",
+    "level": ["Beginner"],
+    "tech_tags": ["Google", "Community"],
+    "description": "Google Developer Group - DevFest Tokyo 2025 の オープニングを行います。",
+    "perspective": []
+  },
+  {
+    "id": "01-keynote",
+    "talk_ids": ["01-keynote-talk-takoratta"],
     "track": "Track A",
     "time_start": "12:40",
     "time_end": "13:10",
@@ -12,27 +24,179 @@
     "perspective": []
   },
   {
-    "id": "s02",
-    "talk_ids": ["s02-t01"],
+    "id": "02-cross-talk",
+    "talk_ids": ["02-cross-talk-talk-myakura"],
     "track": "Track A",
     "time_start": "13:20",
-    "time_end": "14:00",
+    "time_end": "14:10",
     "title": "異分野クロストーク (仮)",
     "level": ["Advanced"],
-    "tech_tags": ["Web", "Mobile"],
-    "description": "Session Description (TBA)",
+    "tech_tags": ["BigQuery", "Web", "Mobile"],
+    "description": "TBA",
     "perspective": []
   },
   {
-    "id": "s03",
-    "talk_ids": ["s03-t01", "s03-t02"],
+    "id": "03-google-map",
+    "talk_ids": ["03-google-map-talk-ando-yukio", "03-google-map-talk-taniii"],
+    "track": "Track B",
+    "time_start": "13:20",
+    "time_end": "14:10",
+    "title": "Google Maps 特集 (仮)",
+    "level": ["Beginner"],
+    "tech_tags": [],
+    "description": "Comming soon ...",
+    "perspective": ["Introduction"]
+  },
+  {
+    "id": "04-frontier",
+    "talk_ids": [
+      "04-frontier-talk-fukku-island",
+      "04-frontier-talk-lucasgoldner",
+      "04-frontier-talk-proppy"
+    ],
     "track": "Track D",
     "time_start": "13:20",
-    "time_end": "14:00",
+    "time_end": "14:10",
     "title": "フロンティア (仮)",
     "level": ["Advanced"],
     "tech_tags": ["Web", "Mobile"],
-    "description": "Session Description (TBA)",
+    "description": "Coming soon ...",
     "perspective": []
+  },
+  {
+    "id": "05-ai-agent",
+    "talk_ids": [
+      "05-ai-agent-talk-k-ryuichirou",
+      "05-ai-agent-talk-ohtaman",
+      "05-ai-agent-talk-yoichiro"
+    ],
+    "track": "Track A",
+    "time_start": "14:30",
+    "time_end": "15:30",
+    "title": "初心者向け AI Agent 特集 (仮)",
+    "level": ["Beginner"],
+    "tech_tags": [],
+    "description": "Coming soon ...",
+    "perspective": ["Introduction"]
+  },
+  {
+    "id": "06-adk",
+    "talk_ids": [
+      "06-adk-talk-kazunori-sato",
+      "06-adk-talk-na0fu3y",
+      "06-adk-talk-soundtracker318"
+    ],
+    "track": "Track B",
+    "time_start": "14:30",
+    "time_end": "15:30",
+    "title": "Agent Developer Kit (ADK) Special",
+    "level": ["Beginner"],
+    "tech_tags": [],
+    "description": "Coming soon ...",
+    "perspective": ["Introduction"]
+  },
+  {
+    "id": "07-web-frontend",
+    "talk_ids": [
+      "07-web-frontend-talk-laco2net",
+      "07-web-frontend-talk-sakupi01",
+      "07-web-frontend-talk-yuriko-fuuu"
+    ],
+    "track": "Track D",
+    "time_start": "14:30",
+    "time_end": "15:30",
+    "title": "Next Generation Web Frontend 2025",
+    "level": ["Beginner"],
+    "tech_tags": [],
+    "description": "2025年、WebフロントエンドはAIとともに新しいフェーズへ。 本セッションでは、最新のAngular with AI の動向から、Web標準とブラウザ機能の進化、そして Chrome に組み込まれた AI を活用した機能開発まで、これからの Web フロントエンド開発を大きく変えるトピックを 3 つの講演でご紹介します。",
+    "perspective": ["Introduction"]
+  },
+  {
+    "id": "08-ai-tools",
+    "talk_ids": ["08-ai-tools-talk-hiro038482"],
+    "track": "Track A",
+    "time_start": "15:40",
+    "time_end": "16:30",
+    "title": "AI TOOLS (仮)",
+    "level": ["Beginner"],
+    "tech_tags": [],
+    "description": "Coming soon ...",
+    "perspective": ["Introduction"]
+  },
+  {
+    "id": "09-data-analysis-observability",
+    "talk_ids": [
+      "09-data-analysis-observability-talk-k6s4i53rx",
+      "09-data-analysis-observability-talk-masafumi-tsubamoto",
+      "09-data-analysis-observability-talk-smly"
+    ],
+    "track": "Track B",
+    "time_start": "15:40",
+    "time_end": "16:30",
+    "title": "データ分析 / Observability (仮)",
+    "level": ["Beginner"],
+    "tech_tags": [],
+    "description": "Coming soon ...",
+    "perspective": ["Introduction"]
+  },
+  {
+    "id": "10-android",
+    "talk_ids": ["10-android-talk-yanzm"],
+    "track": "Track D",
+    "time_start": "15:40",
+    "time_end": "16:30",
+    "title": "Android (仮)",
+    "level": ["Beginner"],
+    "tech_tags": [],
+    "description": "Coming soon ...",
+    "perspective": ["Introduction"]
+  },
+  {
+    "id": "11-hands-on-geminicli",
+    "talk_ids": ["11-hands-on-geminicli-talk-harenb16221"],
+    "track": "Track O",
+    "time_start": "15:40",
+    "time_end": "16:30",
+    "title": "Hands-on Sessions",
+    "level": ["Beginner"],
+    "tech_tags": [],
+    "description": "Coming soon ...",
+    "perspective": ["Introduction"]
+  },
+  {
+    "id": "12-hands-on-firebase",
+    "talk_ids": ["12-hands-on-firebase-talk-tanabee"],
+    "track": "Track O",
+    "time_start": "14:30",
+    "time_end": "15:30",
+    "title": "Hands-on Sessions",
+    "level": ["Beginner"],
+    "tech_tags": [],
+    "description": "Coming soon ...",
+    "perspective": ["Introduction"]
+  },
+  {
+    "id": "13-lightning-talks",
+    "talk_ids": [],
+    "track": "Track A",
+    "time_start": "16:40",
+    "time_end": "17:50",
+    "title": "DevFest Tokyo LT大会",
+    "level": ["Beginner"],
+    "tech_tags": [],
+    "description": "Coming soon ...",
+    "perspective": ["Introduction"]
+  },
+  {
+    "id": "14-closing",
+    "talk_ids": [],
+    "track": "Track A",
+    "time_start": "17:30",
+    "time_end": "18:00",
+    "title": "クロージング",
+    "level": ["Beginner"],
+    "tech_tags": [],
+    "description": "Coming soon ...",
+    "perspective": ["Introduction"]
   }
 ]

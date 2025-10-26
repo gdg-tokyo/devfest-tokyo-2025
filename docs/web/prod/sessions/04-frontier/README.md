@@ -1,12 +1,12 @@
 ---
-id: s2-cross-talk
+id: frontier
 track: Track D
 time_start: '13:20'
-time_end: '14:00'
+time_end: '14:10'
 level: ['Advanced']
 tech_tags: ['Web', 'Mobile']
 ---
 
 # フロンティア (仮)
 
-Session Description (TBA)
+Coming soon ...

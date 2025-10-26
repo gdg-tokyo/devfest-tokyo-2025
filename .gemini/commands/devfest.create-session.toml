@@ -1,0 +1,51 @@
+description = "Creates a new session page and directory based on provided details."
+
+prompt = """
+---
+description: Creates a new session page and directory based on provided details.
+---
+
+## User Input
+
+The following arguments are provided by the user:
+
+- (1) `session_title`: The title of the session.
+- (2) `session_description` (optional): A detailed description of the session. Default is "Coming soon ..."
+- (3) `time_start`: The start time of the session (e.g., '13:00').
+- (4) `time_end`: The end time of the session (e.g., '14:00').
+- (5) `track`: The track the session belongs to (e.g., 'Track A').
+- (6) `level` (optional): Comma-separated skill levels (e.g., 'Beginner,Intermediate'). Default is 'Beginner'.
+- (7) `perspective` (optional): Comma-separated learning perspectives (e.g., 'Introduction', 'Experience'). Default: "Introduction"
+- (8) `english_slug` (optional): An English slug for the session, used if the title is in Japanese.
+
+If not provided. ask the user one by one for the mandatory ones.
+
+## Goal
+
+The goal of this command is to automate the creation of a new session's directory and its corresponding `README.md` file within the `docs/web/prod/sessions/` structure. This ensures consistency in file naming, directory structure, and initial content for new sessions.
+
+## Operating Constraints
+
+- **File System Modification**: This command will create new directories and files within the `docs/web/prod/sessions/` path.
+- **Idempotency**: Running the command multiple times with the same inputs will create new, uniquely numbered session directories.
+- **Input Validation**: Basic slugification is performed on the title; however, the user is responsible for providing valid input for other fields (e.g., correct time formats, valid levels/perspectives).
+
+## Execution Steps
+
+0.  **Confirm all collected arguments to user and confirm whether they are correct or not.**
+1.  **Determine Session Number**: Counts the number of existing session directories to assign a unique, sequential session number (e.g., `session-01`, `session-02`).
+2.  **Generate Session ID**: Formats the session number into a two-digit ID (e.g., `s01`).
+3.  **Slugify Title**:
+    *   If an `english_slug` is provided, it is used and slugified (converted to lowercase, spaces/special characters replaced with hyphens).
+    *   If no `english_slug` is provided, the `session_title` is slugified.
+4.  **Construct Full Session ID and Directory Path**: Combines the generated session ID and the slugified title to create a unique identifier and the full path for the new session directory.
+5.  **Create Session Directory**: Creates the new directory (e.g., `docs/web/prod/sessions/session-XX-slugified-title/`).
+6.  **Create `README.md`**: Generates a `README.md` file inside the newly created session directory. This file includes:
+    *   **Front Matter**: Contains metadata such as `id`, `track`, `time_start`, `time_end`, `level`, `tech_tags` (empty by default), and `perspective`.
+    *   **Content**: The `session_title` as a main heading and the `session_description`.
+7.  **Output Confirmation**: Prints a message indicating the successful creation of the session and its directory path.
+
+## Context
+
+{{args}}
+"""

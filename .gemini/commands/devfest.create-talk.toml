@@ -1,0 +1,57 @@
+description = "Creates a new talk page within a session directory."
+
+prompt = """
+---
+description: Creates a new talk page within a session directory.
+---
+
+## User Input
+
+The following arguments are provided by the user:
+
+### 1. Talk Information
+
+- `1-1. session_id` (optional): The ID of the session this talk belongs to (e.g., `s00-op`).
+- `1-2. talk_id` (optional): The ID of the talk within the session (e.g., alice-google) Generated from the speaker name.
+- `1-3. talk_title`: The title of the talk.
+- `1-4. talk_description` (optional): The description of the talk. Defaults to "Coming soon ..."
+- `1-5. time_start` (optional): The start time of the talk (e.g., '12:00'). Defaults to the session's start time.
+- `1-6. time_end` (optional): The end time of the talk (e.g., '12:05'). Defaults to the session's end time.
+- `1-7. tech_tags` (optional): Comma-separated technical tags (e.g., 'Web,AI'). Defaults to empty.
+- `1-8. level` (optional): The skill level of the talk (e.g., 'Beginner', 'Intermediate'). Defaults to 'Beginner'.
+- `1-9. perspective` (optional): The learning perspective of the talk (e.g., 'Introduction', 'Experience'). Defaults to 'Introduction'.
+- `1-10. is_keynote` (optional): Whether the talk is a keynote. Defaults to `false`.
+
+### 2. Speaker Information
+
+- `2-1. speaker_name`: The name of the speaker.
+- `2-2. speaker_id`: The speaker's ID (e.g., `@Getty708`).
+- `2-3. speaker_bio`: The speaker's biography.
+- `2-4. speaker_image_url` (optional): URL to the speaker's image.
+
+## Goal
+
+The goal of this command is to automate the creation of a new talk's `talk-{id}.md` file within the specified session's directory. This ensures consistency in file naming, content structure, and metadata for new talks.
+
+## Operating Constraints
+
+- **File System Modification**: This command will create a new Markdown file within an existing session directory.
+- **Dependency**: Requires an existing session directory identified by `session_id`.
+- **Input Validation**: The user is responsible for providing valid input for all fields.
+
+## Execution Steps
+
+0.  **Confirm all collected arguments to user and confirm whether they are correct or not.**
+1.  **Locate Session Directory**: Finds the full path of the session directory using the provided `session_id`.
+2.  **Determine Talk File Path**: Constructs the full path for the new talk Markdown file (e.g., `docs/web/prod/sessions/session-00-op/talk-01.md`).
+3.  **Read Session Details (for defaults)**: Reads the `README.md` of the session to get default `time_start` and `time_end` if not provided for the talk.
+4.  **Generate Talk Content**: Creates the content for the `talk-{id}.md` file, including:
+    *   **Front Matter**: Contains metadata such as `time_start`, `time_end`, `tech_tags`, `level`, `perspective`, and `is_keynote`.
+    *   **Talk Details**: The `talk_title` as a main heading and the `talk_description`.
+    *   **Speaker Details**: The speaker's name, ID, biography, and optionally their image.
+5.  **Create Talk File**: Writes the generated content to the `talk-{id}.md` file.
+6.  **Output Confirmation**: Prints a message indicating the successful creation of the talk file.
+
+---
+{{args}}
+"""

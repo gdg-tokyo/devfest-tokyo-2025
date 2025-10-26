@@ -1,6 +1,7 @@
 ## Plan: Talk Directory Page
 
-- **Feature Branch**: `005-talk-directory-page`
+- **Feature Branch**: `005-talk-directory-page` | **Date**: October 14, 2025 | **Spec**: [./spec.md](./spec.md)
+- **Input**: Feature specification from `/specs/005-talk-directory-page/spec.md`
 - **Created**: October 14, 2025
 - **Status**: Draft
 

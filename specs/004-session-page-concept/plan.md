@@ -1,7 +1,7 @@
 # Implementation Plan: Session Page
 
-- **Branch**: `004-session-page-concept` | **Date**: 2025-10-13 | **Spec**: ./spec.md
-- **Input**: Feature specification from `./spec.md`
+- **Branch**: `004-session-page-concept` | **Date**: 2025-10-13 | **Spec**: [./spec.md](./spec.md)
+- **Input**: Feature specification from `/specs/004-session-page-concept/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 

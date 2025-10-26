@@ -1,7 +1,7 @@
 # Implementation Plan: [FEATURE]
 
-- **Branch**: `007-talk-page-concept` | **Date**: 2025-10-18 | **Spec**: ./spec.md
-- **Input**: Feature specification from `./spec.md`
+- **Branch**: `007-talk-page-concept` | **Date**: 2025-10-18 | **Spec**: [./spec.md](./spec.md)
+- **Input**: Feature specification from `/specs/007-talk-page-concept/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 

@@ -1,7 +1,7 @@
 # Implementation Plan: Data Schema Refactoring
 
-- **Branch**: `006-data-schema-policy` | **Date**: 2025-10-18 | **Spec**: ./spec.md
-- **Input**: Feature specification from `./spec.md`
+- **Branch**: `006-data-schema-policy` | **Date**: 2025-10-18 | **Spec**: [./spec.md](./spec.md)
+- **Input**: Feature specification from `/specs/006-data-schema-policy/spec.md`
 
 ## Summary
 

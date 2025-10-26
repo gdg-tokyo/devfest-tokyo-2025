@@ -1,7 +1,7 @@
 # Implementation Plan: App Header Design
 
-- **Branch**: `008-app-nav-header` | **Date**: 2025-10-24 | **Spec**: ./spec.md
-- **Input**: Feature specification from `./spec.md`
+- **Branch**: `008-app-nav-header` | **Date**: 2025-10-24 | **Spec**: [./spec.md](./spec.md)
+- **Input**: Feature specification from `/specs/008-app-nav-header/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 

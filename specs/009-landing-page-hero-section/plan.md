@@ -1,5 +1,8 @@
 # Implementation Plan: Landing Page Hero Panel
 
+- **Branch**: `009-landing-page-hero-section` | **Date**: 2025-10-25 | **Spec**: [./spec.md](./spec.md)
+- **Input**: Feature specification from `/specs/009-landing-page-hero-section/spec.md`
+
 ## 1. Feature Name
 
 Landing Page Hero Panel

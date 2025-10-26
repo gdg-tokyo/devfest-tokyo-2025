@@ -1,7 +1,7 @@
 # Implementation Plan: Stakeholders Section
 
-- **Branch**: `011-landing-page-stakeholders-section` | **Date**: 2025-10-26 | **Spec**: ./spec.md
-- **Input**: Feature specification from `./spec.md`
+- **Branch**: `011-landing-page-stakeholders-section` | **Date**: 2025-10-26 | **Spec**: [./spec.md](./spec.md)
+- **Input**: Feature specification from `/specs/011-landing-page-stakeholders-section/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 

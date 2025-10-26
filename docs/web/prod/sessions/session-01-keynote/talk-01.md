@@ -19,6 +19,6 @@ is_keynote: true
 
 ### 及川卓也 さん (@takoratta) / Tably株式会社 代表取締役
 
-TBA
+-
 
 ![](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/takuya-oikawa-500.png)

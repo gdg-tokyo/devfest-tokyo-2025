@@ -1,14 +1,25 @@
+'use client'
+
 import React from 'react'
-import { Session, Talk, Speaker } from '@/types'
+import { Session } from '@/types'
 import SessionCard from './SessionCard'
-import { getTalks, getSpeakers } from '@/lib/data-parser'
+import {
+  generateTimeSlots,
+  getRowStart,
+  getRowSpan,
+  filterSession,
+} from '../utils' // Import from utils
 
 interface TimetableGridProps {
   sessions: Session[]
   filters: { levels: string[]; keyword: string }
+  allTimeSlots: string[]
+  displayTracks: string[]
+  filterSession: (
+    session: Session,
+    filters: { levels: string[]; keyword: string }
+  ) => boolean
 }
-
-const minutesPerSlot = 10 // Granularity of time slots
 
 const getTrackColor = (track: string) => {
   switch (track) {
@@ -25,116 +36,39 @@ const getTrackColor = (track: string) => {
   }
 }
 
-const TimetableGrid: React.FC<TimetableGridProps> = ({ sessions, filters }) => {
-  // Dynamically extract unique tracks from sessions and sort them
-  const tracks = Array.from(
-    new Set(sessions.map((session) => session.track))
-  ).sort()
-
-  // If there are no sessions, provide a default set of tracks to ensure grid structure
-  const displayTracks =
-    tracks.length > 0 ? tracks : ['Track A', 'Track B', 'Track C', 'Track D']
-
-  // Determine the overall time range
-  const allStartTimes = sessions.map((s) => s.time_start)
-  const allEndTimes = sessions.map((s) => s.time_end)
-
-  const earliestTime =
-    allStartTimes.length > 0 ? allStartTimes.sort()[0] : '09:00' // Default if no sessions
-  const latestTime =
-    allEndTimes.length > 0 ? allEndTimes.sort().reverse()[0] : '18:00' // Default if no sessions
-
-  // Generate all 10-minute time slots between earliest and latest time
-  const generateTimeSlots = (start: string, end: string): string[] => {
-    const slots: string[] = []
-    let [startHour, startMinute] = start.split(':').map(Number)
-    let [endHour, endMinute] = end.split(':').map(Number)
-
-    let currentTime = new Date()
-    currentTime.setHours(startHour, startMinute, 0, 0)
-
-    const endTime = new Date()
-    endTime.setHours(endHour, endMinute, 0, 0)
-
-    while (currentTime <= endTime) {
-      slots.push(currentTime.toTimeString().substring(0, 5))
-      currentTime.setMinutes(currentTime.getMinutes() + minutesPerSlot)
-    }
-    return slots
-  }
-
-  const allTimeSlots = generateTimeSlots(earliestTime, latestTime)
-
-  const getRowStart = (time: string): number => {
-    const index = allTimeSlots.indexOf(time)
-    return index !== -1 ? index + 2 : 1 // +2 because first row is for track headers, and grid starts at 1
-  }
-
-  const getRowSpan = (startTime: string, endTime: string): number => {
-    const [startHour, startMinute] = startTime.split(':').map(Number)
-    const [endHour, endMinute] = endTime.split(':').map(Number)
-
-    const startDate = new Date()
-    startDate.setHours(startHour, startMinute, 0, 0)
-
-    const endDate = new Date()
-    endDate.setHours(endHour, endMinute, 0, 0)
-
-    const durationMs = endDate.getTime() - startDate.getTime()
-    const durationMinutes = durationMs / (1000 * 60)
-
-    return Math.max(1, Math.ceil(durationMinutes / minutesPerSlot))
-  }
-
-  const allRawTalks = getTalks()
-  const allSpeakers = getSpeakers()
-
-  const filterSession = (session: Session): boolean => {
-    const talksMap = new Map<string, Talk>(
-      allRawTalks.map((talk) => [talk.id, talk])
-    )
-    const speakersMap = new Map<string, Speaker>(
-      allSpeakers.map((speaker) => [speaker.id, speaker])
-    )
-
-    const levelMatch =
-      filters.levels.length === 0 ||
-      (session.level && session.level.some((l) => filters.levels.includes(l)))
-
-    const sessionTalks = session.talk_ids
-      .map((talkId) => talksMap.get(talkId))
-      .filter((talk): talk is Talk => talk !== undefined)
-
-    const speakerNames = sessionTalks.flatMap((talk) =>
-      talk.speaker_ids
-        .map((speakerId) => speakersMap.get(speakerId)?.name)
-        .filter((name): name is string => name !== undefined)
-    )
-
-    const keywordMatch =
-      !filters.keyword ||
-      session.title.toLowerCase().includes(filters.keyword.toLowerCase()) ||
-      session.description
-        .toLowerCase()
-        .includes(filters.keyword.toLowerCase()) ||
-      speakerNames.some((name) =>
-        name.toLowerCase().includes(filters.keyword.toLowerCase())
-      ) ||
-      sessionTalks.some((talk) =>
-        talk.abstract.toLowerCase().includes(filters.keyword.toLowerCase())
-      )
-    return levelMatch && keywordMatch
-  }
-
+const TimetableGrid: React.FC<TimetableGridProps> = ({
+  sessions,
+  filters,
+  allTimeSlots,
+  displayTracks,
+  filterSession,
+}) => {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto hidden md:block">
+      {' '}
+      {/* This div will be hidden on mobile */}
       <div
         className="grid gap-2 p-2"
         style={{
-          gridTemplateColumns: `120px repeat(${displayTracks.length}, 1fr)`,
           gridTemplateRows: `[tracks] auto repeat(${allTimeSlots.length}, minmax(40px, auto))`,
         }}
       >
+        {/* Conditional grid-template-columns based on screen size */}
+        {/* For Tablet (md): 120px for time, then 2 columns for tracks */}
+        {/* For PC (lg): 120px for time, then 4 columns for tracks */}
+        <style jsx>{`
+          @media (min-width: 768px) and (max-width: 1023px) {
+            .grid {
+              grid-template-columns: 120px repeat(2, 1fr);
+            }
+          }
+          @media (min-width: 1024px) {
+            .grid {
+              grid-template-columns: 120px repeat(${displayTracks.length}, 1fr);
+            }
+          }
+        `}</style>
+
         {/* Corner for time/track headers */}
         <div className="sticky left-0 top-0 p-3 z-10 subhead text-sm text-gray-600">
           Time
@@ -168,9 +102,13 @@ const TimetableGrid: React.FC<TimetableGridProps> = ({ sessions, filters }) => {
           // Only render sessions that belong to one of the displayed tracks
           if (trackIndex === -1) return null
 
-          const rowStart = getRowStart(session.time_start)
-          const rowSpan = getRowSpan(session.time_start, session.time_end)
-          const isGrayedOut = !filterSession(session)
+          const rowStart = getRowStart(session.time_start, allTimeSlots) // Pass allTimeSlots
+          const rowSpan = getRowSpan(
+            session.time_start,
+            session.time_end,
+            allTimeSlots
+          ) // Pass allTimeSlots
+          const isGrayedOut = !filterSession(session, filters) // Pass filters
 
           return (
             <div

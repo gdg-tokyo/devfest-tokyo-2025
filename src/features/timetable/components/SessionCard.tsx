@@ -82,6 +82,12 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
             {timeStart} - {timeEnd}
           </span>
         </div>
+        {session.track && (
+          <div className="text-sm text-gray-600 mb-1 flex items-center">
+            <span className="font-semibold mr-1">Track:</span>
+            <span>{session.track}</span>
+          </div>
+        )}
 
         <div className="flex flex-wrap gap-1 mt-2">
           {session.level &&

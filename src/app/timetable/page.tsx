@@ -3,9 +3,11 @@
 import OverlayMessageCard from '@/components/common/OverlayMessageCard'
 import FilterSystem from '@/features/timetable/components/FilterSystem'
 import TimetableGrid from '@/features/timetable/components/TimetableGrid'
+import TimetableList from '@/features/timetable/components/TimetableList' // Import TimetableList
 import { getSessions, getSpeakers, getTalks } from '@/lib/data-parser'
 import { Session, Speaker, Talk } from '@/types'
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { generateTimeSlots, filterSession } from '@/features/timetable/utils' // Import from utils
 
 const TimetablePage = () => {
   const allSessions: Session[] = getSessions()
@@ -33,56 +35,40 @@ const TimetablePage = () => {
   const allRawTalks = getTalks()
   const allSpeakers = getSpeakers()
 
+  // --- Moved logic from TimetableGrid --- //
+  const tracks = Array.from(
+    new Set(allSessions.map((session) => session.track))
+  ).sort()
+
+  const displayTracks =
+    tracks.length > 0 ? tracks : ['Track A', 'Track B', 'Track C', 'Track D']
+
+  const allStartTimes = allSessions.map((s) => s.time_start)
+  const allEndTimes = allSessions.map((s) => s.time_end)
+
+  const earliestTime =
+    allStartTimes.length > 0 ? allStartTimes.sort()[0] : '09:00'
+  const latestTime =
+    allEndTimes.length > 0 ? allEndTimes.sort().reverse()[0] : '18:00'
+
+  const allTimeSlots = generateTimeSlots(allSessions)
+  // --- End of moved logic --- //
+
   const hasMatchingSessions = useMemo(() => {
-    const talksMap = new Map<string, Talk>(
-      allRawTalks.map((talk) => [talk.id, talk])
-    )
-    const speakersMap = new Map<string, Speaker>(
-      allSpeakers.map((speaker) => [speaker.id, speaker])
-    )
-
-    return allSessions.some((session) => {
-      const levelMatch =
-        filters.levels.length === 0 ||
-        (session.level && session.level.some((l) => filters.levels.includes(l)))
-
-      const sessionTalks = session.talk_ids
-        .map((talkId) => talksMap.get(talkId))
-        .filter((talk): talk is Talk => talk !== undefined)
-
-      const speakerNames = sessionTalks.flatMap((talk) =>
-        talk.speaker_ids
-          .map((speakerId) => speakersMap.get(speakerId)?.name)
-          .filter((name): name is string => name !== undefined)
-      )
-
-      const keywordMatch =
-        !filters.keyword ||
-        session.title.toLowerCase().includes(filters.keyword.toLowerCase()) ||
-        session.description
-          .toLowerCase()
-          .includes(filters.keyword.toLowerCase()) ||
-        speakerNames.some((name) =>
-          name.toLowerCase().includes(filters.keyword.toLowerCase())
-        ) ||
-        sessionTalks.some((talk) =>
-          talk.abstract.toLowerCase().includes(filters.keyword.toLowerCase())
-        )
-
-      return levelMatch && keywordMatch
-    })
-  }, [allSessions, filters, allRawTalks, allSpeakers])
+    // This logic needs to use the filterSession from utils.ts
+    return allSessions.some((session) => filterSession(session, filters))
+  }, [allSessions, filters])
 
   const availableLevels = useMemo(() => {
     const validLevels = ['Beginner', 'Intermediate', 'Advanced']
     const levels = allSessions
-      .flatMap((s) => s.level || []) // Flatten the array of arrays, handle undefined s.level
-      .filter((level) => validLevels.includes(level)) // Filter for valid levels
-    return Array.from(new Set(levels)) // Get unique levels
+      .flatMap((s) => s.level || [])
+      .filter((level) => validLevels.includes(level))
+    return Array.from(new Set(levels))
   }, [allSessions])
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl p-4">
       <h1 className="text-3xl font-bold mb-6">Event Timetable</h1>
       <FilterSystem
         onFilterChange={handleFilterChange}
@@ -90,7 +76,21 @@ const TimetablePage = () => {
       />
       {allSessions.length > 0 ? (
         hasMatchingSessions ? (
-          <TimetableGrid sessions={allSessions} filters={filters} />
+          <>
+            <TimetableList
+              sessions={allSessions}
+              filters={filters}
+              allTimeSlots={allTimeSlots}
+              filterSession={filterSession}
+            />
+            <TimetableGrid
+              sessions={allSessions}
+              filters={filters}
+              allTimeSlots={allTimeSlots}
+              displayTracks={displayTracks}
+              filterSession={filterSession}
+            />
+          </>
         ) : (
           <p>No sessions available matching your criteria.</p>
         )

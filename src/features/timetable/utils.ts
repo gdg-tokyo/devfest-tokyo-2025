@@ -123,6 +123,21 @@ export const getRowSpan = (
   return Math.max(1, endIndex - startIndex)
 }
 
+export const getTrackColor = (track: string) => {
+  switch (track) {
+    case 'Track A':
+      return 'bg-gdg-pastel-red'
+    case 'Track B':
+      return 'bg-gdg-pastel-blue'
+    case 'Track C':
+      return 'bg-gdg-pastel-green'
+    case 'Track D':
+      return 'bg-gdg-pastel-yellow'
+    default:
+      return 'bg-gray-200'
+  }
+}
+
 export const filterSession = (
   session: Session,
   filters: { levels: string[]; keyword: string }

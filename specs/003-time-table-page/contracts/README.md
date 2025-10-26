@@ -1,1 +1,0 @@
-This directory is for API contracts. Since the Time Table Page consumes data from a local JSON asset and does not expose any external APIs, no contract files are generated for this feature.

@@ -2,7 +2,13 @@
 
 import { Session } from '@/types'
 import React from 'react'
-import { getRowSpan, getRowStart } from '../utils' // Import from utils
+import {
+  generateTimeSlots,
+  getRowStart,
+  getRowSpan,
+  filterSession,
+  getTrackColor,
+} from '../utils' // Import from utils
 import SessionCard from './SessionCard'
 
 interface TimetableGridProps {
@@ -14,21 +20,6 @@ interface TimetableGridProps {
     session: Session,
     filters: { levels: string[]; keyword: string }
   ) => boolean
-}
-
-const getTrackColor = (track: string) => {
-  switch (track) {
-    case 'Track A':
-      return 'bg-gdg-pastel-red'
-    case 'Track B':
-      return 'bg-gdg-pastel-blue'
-    case 'Track C':
-      return 'bg-gdg-pastel-green'
-    case 'Track D':
-      return 'bg-gdg-pastel-yellow'
-    default:
-      return 'bg-gray-200'
-  }
 }
 
 const TimetableGrid: React.FC<TimetableGridProps> = ({

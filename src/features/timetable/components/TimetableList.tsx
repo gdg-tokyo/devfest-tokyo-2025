@@ -1,9 +1,9 @@
 'use client'
 
-import React from 'react'
 import { Session } from '@/types'
-import SessionCard from './SessionCard'
+import React from 'react'
 import { getTrackColor } from '../utils' // Import getTrackColor
+import SessionCard from './SessionCard'
 
 interface TimetableListProps {
   sessions: Session[]
@@ -35,14 +35,20 @@ const TimetableList: React.FC<TimetableListProps> = ({
               .filter((session) => session.time_start === time)
               .filter((session) => filterSession(session, filters))
               .map((session) => (
-                <div key={session.id} className="grid grid-cols-[60px_1fr] gap-2 items-center"> {/* New grid for track panel and session card */}
-                  <div className={`h-full flex items-center justify-center text-center text-white font-bold rounded-lg ${getTrackColor(session.track)}`}>
-                    <span className="text-xs rotate-90 whitespace-nowrap">{session.track}</span>
+                <div
+                  key={session.id}
+                  className="grid grid-cols-[60px_1fr] gap-2 items-center"
+                >
+                  <div
+                    className={`h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 ${getTrackColor(session.track)}`}
+                  >
+                    <span className="text-xs rotate-90 whitespace-nowrap">
+                      {session.track}
+                    </span>
                   </div>
-                  <SessionCard
-                    session={session}
-                    isGrayedOut={false}
-                  />
+                  <div>
+                    <SessionCard session={session} isGrayedOut={false} />
+                  </div>
                 </div>
               ))}
           </div>

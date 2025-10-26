@@ -49,14 +49,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Next.js application
-        run: npm run build
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
-      - name: Run Playwright E2E tests
-        run: npx playwright test
+      # Use Playwright Action to streamline browser installation and test execution
+      - name: Install Playwright and Run Tests
+        uses: microsoft/playwright-github-action@v1
+        with:
+          # Command to start the server
+          run-start: npm run dev:e2e
+          # Test execution command (default is npx playwright test)
+          run-test: npx playwright test
+          # Upload trace files as Artifacts on failure
+          upload-artifact: true
 
   build_check:
     runs-on: ubuntu-latest

@@ -41,10 +41,16 @@ test.describe('Landing Page Stakeholders Section', () => {
     await expect(
       page.getByRole('heading', { name: '協賛', exact: true })
     ).toBeVisible()
-    const iputLink = page.getByRole('link', { name: /IPUT/i })
-    await expect(iputLink).toBeVisible()
-    await expect(iputLink.locator('img[alt="IPUT"]')).toBeVisible()
-    await expect(iputLink.getByText('IPUT')).not.toBeVisible() // Name should not be visible if logo is present
+    const googleDevelopersLink = page.getByRole('link', {
+      name: /Google Developers/i,
+    })
+    await expect(googleDevelopersLink).toBeVisible()
+    await expect(
+      googleDevelopersLink.locator('img[alt="Google Developers"]')
+    ).toBeVisible()
+    await expect(
+      googleDevelopersLink.getByText('Google Developers')
+    ).not.toBeVisible() // Name should not be visible if logo is present
   })
 
   test('organizer links should be valid', async ({ page }) => {
@@ -57,6 +63,12 @@ test.describe('Landing Page Stakeholders Section', () => {
   })
 
   test('co-organizer links should be valid', async ({ page }) => {
+    const iputLink = page.getByRole('link', { name: /IPUT/i })
+    await expect(iputLink).toHaveAttribute('href', 'https://www.iput.ac.jp/')
+    await expect(iputLink).toHaveAttribute('target', '_blank')
+  })
+
+  test('sponsor links should be valid', async ({ page }) => {
     const googleDevelopersLink = page.getByRole('link', {
       name: /Google Developers/i,
     })
@@ -67,19 +79,14 @@ test.describe('Landing Page Stakeholders Section', () => {
     await expect(googleDevelopersLink).toHaveAttribute('target', '_blank')
   })
 
-  test('sponsor links should be valid', async ({ page }) => {
-    const iputLink = page.getByRole('link', { name: /IPUT/i })
-    await expect(iputLink).toHaveAttribute('href', 'https://www.iput.ac.jp/')
-    await expect(iputLink).toHaveAttribute('target', '_blank')
-  })
-
   test('partner links should be valid', async ({ page }) => {
-    const communityPartnerText = page.getByText('Partner Community')
-    const communityPartnerLink = communityPartnerText.locator('..') // Get the parent element (the <a> tag)
-    await expect(communityPartnerLink).toHaveAttribute(
+    const angularLink = page.getByRole('link', {
+      name: /Angular日本ユーザー会/i,
+    })
+    await expect(angularLink).toHaveAttribute(
       'href',
-      'https://community.example.com/'
+      'https://community.angular.jp/'
     )
-    await expect(communityPartnerLink).toHaveAttribute('target', '_blank')
+    await expect(angularLink).toHaveAttribute('target', '_blank')
   })
 })

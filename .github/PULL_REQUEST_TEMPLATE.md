@@ -27,3 +27,11 @@ Link to any related issues or bugs.
 
 *Example: `This PR makes progress on #456` or `Related to #789`*
 -->
+
+## (Optional) Agent Dicision Log & Context
+
+<!--
+List of the dicision logs or the context that are not available in the code base for future reference. Please select the most important items up to 5.
+
+*Example: `When I find UI components that is used in more than three places, extract it as common UI components in lib/ directory,`*
+-->

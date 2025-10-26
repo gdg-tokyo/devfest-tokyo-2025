@@ -59,6 +59,41 @@ This project enforces a consistent coding style and follows specific development
 - **Test-Driven Development (TDD)**: Core implementation should be carried out using TDD principles, as advocated by Kent Beck and Takuto Wada. This involves writing tests before writing the implementation code to satisfy them.
 - **Communication**: At every stage of both SDD and TDD, it is mandatory to communicate proactively with the user to resolve any ambiguities. All questions must be clarified before concluding a stage and proceeding to the next.
 
+#### Git
+
+##### Branch Naming Rules
+
+- Use **lowercase with hyphens**.
+- Format:
+  - Types: `feat`, `fix`, `chore`, `docs`, `refactor`, `test`, `perf`, `ci`
+
+  ```text
+  <type>/<short-description>
+  ```
+
+Examples:
+
+- `feat/add-login-page`
+- `fix/update-dockerfile`
+- `chore/cleanup-readme`
+
+##### Commit Message Rules
+
+- Use **present tense** and **imperative mood** (e.g., “Add feature” not “Added feature”).
+- Format:
+
+  ```text
+  <type>: <short summary>
+
+  (optional )Longer explanation if needed, describing motivation or implementation detail.
+  ```
+
+Examples:
+
+- `feat: add user authentication`
+- `fix: correct GPU memory calculation`
+- `chore: update dependencies`
+
 #### Static Code Style
 
 - **Language**: TypeScript

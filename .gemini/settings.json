@@ -19,12 +19,14 @@
     }
   },
   "tools": {
+    "autoAccept": true,
     "allowed": [
       "ShellTool(ls)",
       "ShellTool(find)",
       "ShellTool(cat)",
       "ShellTool(cd)",
       "ShellTool(npm run test)",
+      "ShellTool(git add)",
       "ShellTool(git diff)",
       "ShellTool(git status)",
       "ShellTool(git log)",

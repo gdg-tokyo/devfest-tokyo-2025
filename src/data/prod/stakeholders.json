@@ -1,0 +1,32 @@
+[
+  {
+    "name": "GDG Tokyo",
+    "logoUrl": "/images/stakeholders/gdg-tokyo-logo-24.png",
+    "type": "organizer",
+    "link": "https://gdg.community.dev/gdg-tokyo/"
+  },
+  {
+    "name": "Google Developers",
+    "logoUrl": "/images/stakeholders/google-logo-full-color.png",
+    "type": "sponsor",
+    "link": "https://developers.google.com/"
+  },
+  {
+    "name": "IPUT",
+    "logoUrl": "/images/stakeholders/iput-logo-2403.png",
+    "type": "co-organizer",
+    "link": "https://www.iput.ac.jp/"
+  },
+  {
+    "name": "WTM Tokyo",
+    "logoUrl": "",
+    "type": "co-organizer",
+    "link": "https://wtm-tokyo.connpass.com/"
+  },
+  {
+    "name": "Angular日本ユーザー会",
+    "logoUrl": "https://community.angular.jp/assets/image/logo.svg",
+    "type": "partner",
+    "link": "https://community.angular.jp/"
+  }
+]

@@ -1,0 +1,48 @@
+description = "Create a PR description and a PR in GitHub"
+
+prompt = """
+---
+description: Create a PR description and a PR in GitHub
+---
+
+## User Input
+
+```text
+$ARGUMENTS
+```
+
+You **MUST** consider the user input before proceeding (if not empty).
+
+## Goal
+
+Create a PR in a GitHub with a consie but well-structured description.
+
+## Execution Steps
+
+### 1. Check the base and source branch.
+
+- Use the current branch (only commited contents) as a source branch and the main branch as a merge base branch.
+- If there are additional instruction in the user inputs, please prioritize that instruction.
+- Confirm the source branch and the merge base brach name to the user.
+
+### 2. Check diffs
+
+- Use `git diff` command to check the difference between the merge base branch and the soruce branch.
+- Read the modified files and related files to understand the context of change.
+- Summarize your understanding.
+
+### 3. Write the PR description
+
+- Read the pull request template @.github/PULL_REQUEST_TEMPLATE.md
+- Generate the PR description. It should be consice but well-structured. Try to include the decision log and context that you learning in the session if you have.
+- Export the generated description to `pr_body.md` file.
+
+### 4. Create a PR in GitHub
+
+- Generate the PR title. It shuold follow the same format as a commit message standard (e.g., `feat: xxxx` or `fix: xxxx`).
+- Use GitHub MCP (`create_pull_request` tool etc) or `gh` command to create the PR.
+
+## Context
+
+{{args}}
+"""

@@ -1,15 +1,16 @@
-import { Session, Speaker, Talk } from '@/types'
+import { Session, Speaker, Stakeholder, Talk } from '@/types'
 
 interface DataCacheEntry {
   speakers: Speaker[]
   talks: Talk[]
   sessions: Session[]
+  stakeholders: Stakeholder[]
 }
 
 const dataCache: { [key: string]: DataCacheEntry } = {}
 
 // Helper function to load data based on directory
-function loadData(dataDir: string): DataCacheEntry {
+export function _loadData(dataDir: string): DataCacheEntry {
   if (dataCache[dataDir]) {
     return dataCache[dataDir]
   }
@@ -17,11 +18,15 @@ function loadData(dataDir: string): DataCacheEntry {
   const speakers = require(`../data/${dataDir}/speakers.json`)
   const talks = require(`../data/${dataDir}/talks.json`)
   const sessions = require(`../data/${dataDir}/sessions.json`)
+  const stakeholders = require(`../data/${dataDir}/stakeholders.json`)
   console.log(`Loading speakers from: src/data/${dataDir}/speakers.json`)
   console.log(`Loading talks from: src/data/${dataDir}/talks.json`)
   console.log(`Loading sessions from: src/data/${dataDir}/sessions.json`)
+  console.log(
+    `Loading stakeholders from: src/data/${dataDir}/stakeholders.json`
+  )
 
-  const loadedData: DataCacheEntry = { speakers, talks, sessions }
+  const loadedData: DataCacheEntry = { speakers, talks, sessions, stakeholders }
   dataCache[dataDir] = loadedData // Cache the loaded data
   return loadedData
 }
@@ -34,7 +39,7 @@ export function getSessions(): Session[] {
     speakers: speakersData,
     talks: talksData,
     sessions: sessionsData,
-  } = loadData(dataDir)
+  } = _loadData(dataDir)
 
   const speakersMap = new Map<string, Speaker>(
     speakersData.map((s: Speaker) => [s.id, s])
@@ -101,15 +106,22 @@ export function getSessions(): Session[] {
 export function getTalks(): Talk[] {
   const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
   const dataDir = env === 'DEV' ? 'dev' : 'prod'
-  const { talks: talksData } = loadData(dataDir)
+  const { talks: talksData } = _loadData(dataDir)
   return talksData
 }
 
 export function getSpeakers(): Speaker[] {
   const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
   const dataDir = env === 'DEV' ? 'dev' : 'prod'
-  const { speakers: speakersData } = loadData(dataDir)
+  const { speakers: speakersData } = _loadData(dataDir)
   return speakersData
+}
+
+export function getStakeholders(): Stakeholder[] {
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const dataDir = env === 'DEV' ? 'dev' : 'prod'
+  const { stakeholders: stakeholdersData } = _loadData(dataDir)
+  return stakeholdersData
 }
 
 export function getTalkById(
@@ -118,7 +130,7 @@ export function getTalkById(
   const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
   const dataDir = env === 'DEV' ? 'dev' : 'prod'
 
-  const { speakers: speakersData, talks: talksData } = loadData(dataDir)
+  const { speakers: speakersData, talks: talksData } = _loadData(dataDir)
 
   const talksMap = new Map<string, any>(talksData.map((t: Talk) => [t.id, t]))
   const speakersMap = new Map<string, Speaker>(

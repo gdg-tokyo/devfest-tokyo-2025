@@ -1,7 +1,7 @@
 <!--
 Sync Impact Report:
-- Version change: 1.0.2 → 1.0.3
-- List of modified principles: 'Design System' section updated
+- Version change: 1.0.3 → 1.0.4
+- List of modified principles: 'Design System' section updated to reference docs/web/style-guide.md
 - Added sections: None
 - Removed sections: None
 - Templates requiring updates:
@@ -45,14 +45,7 @@ The website will be hosted on GitHub Pages. The development and deployment proce
 
 ## Design System
 
-- **Core Principles**: Stylish but pop.
-- **Color Palette**:
-  - Primary/Accent: Google Yellow 500 (#fbbc04), Google Blue 500 (#4285f4), Google Red 500 (#ea4335), Google Green 500 (#34a853)
-  - Secondary/Background: Halftone Blue (#57caff), Halftone Yellow (#ffd427), Halftone Red (#ff7daf), Halftone Green (#5cdb6d), Off-White (#f0f0f0), Black 02 (#1e1e1e)
-- **Typography**:
-  - Headlines: Google Sans Bold
-  - Subheads: Roboto Mono Light
-  - Body: Google Sans Normal
+All UI design and styling must adhere to the guidelines specified in the [UI Style Guide](../../docs/web/style-guide.md).
 
 ## Governance
 
@@ -60,4 +53,4 @@ The website will be hosted on GitHub Pages. The development and deployment proce
 - Any deviation from these principles requires explicit approval from the project lead.
 - The constitution will be reviewed and updated as needed to reflect changes in project goals or requirements.
 
-**Version**: 1.0.3 | **Ratified**: 2025-10-13 | **Last Amended**: 2025-10-13
+**Version**: 1.0.4 | **Ratified**: 2025-10-13 | **Last Amended**: 2025-10-26

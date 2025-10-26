@@ -5,11 +5,13 @@ import StakeholdersSection from '@/features/landing-page/components/Stakeholders
 
 export default function Home() {
   return (
-    <main>
+    <>
       <HeroPanel />
-      <Welcome />
-      <EventOverview />
-      <StakeholdersSection />
-    </main>
+      <main>
+        <Welcome />
+        <EventOverview />
+        <StakeholdersSection />
+      </main>
+    </>
   )
 }

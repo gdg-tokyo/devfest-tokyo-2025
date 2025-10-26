@@ -4,7 +4,7 @@ import React from 'react'
 
 export function Welcome() {
   return (
-    <section className="p-8 text-center">
+    <section className="container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl p-8 text-center">
       <div className="max-w-2xl mx-auto p-6 rounded-lg border-2 border-gray-800 shadow-lg bg-white">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
           Welcome to DevFest Tokyo 2025!

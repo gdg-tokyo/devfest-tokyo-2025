@@ -2,7 +2,7 @@ export function Footer() {
   return (
     <footer className="bg-black-02 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
             <h5 className="mb-4 text-google-yellow-500">About GDG Tokyo</h5>

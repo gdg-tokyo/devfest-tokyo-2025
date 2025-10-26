@@ -1,13 +1,13 @@
-import { z } from 'zod'
 import fs from 'fs'
-import path from 'path'
 import matter from 'gray-matter'
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
-import remarkGfm from 'remark-gfm'
-import remarkRehype from 'remark-rehype'
+import path from 'path'
 import rehypeStringify from 'rehype-stringify'
+import remarkGfm from 'remark-gfm'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import { unified } from 'unified'
 import { visit } from 'unist-util-visit'
+import { z } from 'zod'
 
 // --- Zod Schema Definitions (based on src/types/index.ts) ---
 
@@ -146,7 +146,13 @@ async function parseContent() {
   const talks: z.infer<typeof TalkSchema>[] = []
   const speakers: z.infer<typeof SpeakerSchema>[] = []
 
-  const docsProdPath = path.join(process.cwd(), 'docs', 'prod')
+  const docsProdPath = path.join(
+    process.cwd(),
+    'docs',
+    'web',
+    'prod',
+    'sessions'
+  )
   const sessionFolders = fs
     .readdirSync(docsProdPath, { withFileTypes: true })
     .filter((dirent) => dirent.isDirectory())

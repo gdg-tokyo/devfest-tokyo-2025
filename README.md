@@ -1,6 +1,10 @@
 # DevFest Tokyo 2025 Web Site
 
-This project is a Next.js application for the DevFest Tokyo 2025 event.
+This project is a Next.js application for GDG DevFest Tokyo 2025 event.
+
+## Docs
+
+- [Style Guide](./docs/web/style-guide.md)
 
 ## Getting Started
 

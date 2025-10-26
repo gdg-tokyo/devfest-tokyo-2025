@@ -1,5 +1,6 @@
 import { Talk, Speaker } from '@/types'
 import React from 'react'
+import Image from 'next/image'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import PlaceIcon from '@mui/icons-material/Place'
 import PersonIcon from '@mui/icons-material/Person'
@@ -7,6 +8,7 @@ import XIcon from '@mui/icons-material/X'
 import Link from 'next/link'
 import LaunchIcon from '@mui/icons-material/Launch'
 import { getLevelColor, getPerspectiveColor } from '@/lib/style-utils'
+import RegistrationButton from '@/components/common/RegistrationButton'
 
 interface TalkDetailProps {
   talk: Talk
@@ -69,9 +71,11 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
             className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md flex items-center mb-4"
           >
             {speaker.photo_url ? (
-              <img
+              <Image
                 src={speaker.photo_url}
                 alt={speaker.name}
+                width={96}
+                height={96}
                 className="w-24 h-24 rounded-lg mr-8"
               />
             ) : (
@@ -102,15 +106,9 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
       </div>
 
       <div className="grid grid-cols-3 gap-4 my-16">
-        <a
-          href="https://gdg-tokyo.connpass.com/event/369416/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-google-red-500 hover:bg-google-red-600 text-white font-bold py-4 px-4 rounded-lg shadow-lg text-center text-xl transition duration-300 ease-in-out transform hover:-translate-y-1 flex items-center justify-center gap-2"
-        >
-          <LaunchIcon className="w-5 h-5" />
+        <RegistrationButton href="https://gdg-tokyo.connpass.com/event/369416/">
           今すぐ参加登録
-        </a>
+        </RegistrationButton>
         <Link
           href="/timetable"
           className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-4 px-4 rounded-lg shadow-lg text-center text-xl transition duration-300 ease-in-out transform hover:-translate-y-1"

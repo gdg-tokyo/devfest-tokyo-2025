@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useState } from 'react'
+import RegistrationButton from '@/components/common/RegistrationButton'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -16,16 +17,19 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="flex items-center">
-            <Image
-              src="/images/gdg-logo-24-color.png"
-              alt="GDG Tokyo Logo"
-              width={32}
-              height={32}
-            />
+            <div className="relative w-8 h-8">
+              <Image
+                src="/images/gdg-logo-24-color.png"
+                alt="GDG Tokyo Logo"
+                fill
+                style={{ objectFit: 'contain' }}
+                sizes="32px"
+              />{' '}
+            </div>
             <h1 className="ml-2 font-google-sans text-black-02 text-xl font-bold">
               Google Developer Group Tokyo
             </h1>
-          </div>
+          </div>{' '}
         </div>
 
         {/* Desktop Navigation */}
@@ -45,14 +49,9 @@ const Header = () => {
           >
             Talks
           </Link>
-          <a
-            href="https://gdg-tokyo.connpass.com/event/369416/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-google-red-500 text-white px-4 py-2 rounded-md hover:bg-google-red-600"
-          >
+          <RegistrationButton href="https://gdg-tokyo.connpass.com/event/369416/">
             参加登録
-          </a>{' '}
+          </RegistrationButton>
         </div>
 
         {/* Mobile Menu Button */}
@@ -91,7 +90,10 @@ const Header = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="sm:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm py-4">
+        <div
+          data-testid="mobile-menu"
+          className="sm:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm py-4"
+        >
           <div className="container mx-auto px-4 flex flex-col gap-4 font-google-sans">
             <Link
               href="/"
@@ -111,14 +113,9 @@ const Header = () => {
             >
               Talks
             </Link>
-            <a
-              href="https://gdg-tokyo.connpass.com/event/369416/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-google-red-500 text-white px-4 py-2 rounded-md hover:bg-google-red-600 block"
-            >
+            <RegistrationButton href="https://gdg-tokyo.connpass.com/event/369416/">
               参加登録
-            </a>
+            </RegistrationButton>
           </div>
         </div>
       )}

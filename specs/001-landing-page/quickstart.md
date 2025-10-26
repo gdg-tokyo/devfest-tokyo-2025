@@ -27,5 +27,4 @@ This guide provides the steps to set up and run the landing page project.
 
 - `src/app/page.tsx`: The main landing page component.
 - `src/components/`: Reusable React components.
-- `src/data/sessions.json`: Static data for the event sessions.
 - `public/`: Static assets like images and fonts.

@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, act, within } from '@testing-library/react'
 import Header from '@/components/Header'
 
 describe('Header', () => {
@@ -14,9 +14,14 @@ describe('Header', () => {
     render(<Header />)
 
     const menuButton = screen.getByRole('button', { name: /toggle menu/i })
-    menuButton.click()
+    act(() => {
+      menuButton.click()
+    })
 
-    const registrationButton = screen.getByRole('link', { name: '参加登録' })
+    const mobileMenu = screen.getByTestId('mobile-menu')
+    const registrationButton = within(mobileMenu).getByRole('link', {
+      name: '参加登録',
+    })
     expect(registrationButton).toHaveClass('bg-google-red-500')
   })
 })

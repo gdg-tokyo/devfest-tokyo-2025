@@ -5,7 +5,7 @@ test.describe('Landing Page Stakeholders Section', () => {
     await page.goto('/')
   })
 
-  test('should display organizers section with Japanese heading', async ({
+  test('should display organizers section with Japanese heading and logo', async ({
     page,
   }) => {
     await expect(
@@ -14,9 +14,10 @@ test.describe('Landing Page Stakeholders Section', () => {
     const gdgTokyoLink = page.getByRole('link', { name: /GDG Tokyo/i })
     await expect(gdgTokyoLink).toBeVisible()
     await expect(gdgTokyoLink.locator('img[alt="GDG Tokyo"]')).toBeVisible()
+    await expect(gdgTokyoLink.getByText('GDG Tokyo')).not.toBeVisible() // Name should not be visible if logo is present
   })
 
-  test('should display co-organizers section with Japanese heading', async ({
+  test('should display co-organizers section with Japanese heading and logo', async ({
     page,
   }) => {
     await expect(
@@ -29,9 +30,12 @@ test.describe('Landing Page Stakeholders Section', () => {
     await expect(
       googleDevelopersLink.locator('img[alt="Google Developers"]')
     ).toBeVisible()
+    await expect(
+      googleDevelopersLink.getByText('Google Developers')
+    ).not.toBeVisible() // Name should not be visible if logo is present
   })
 
-  test('should display sponsors section with Japanese heading', async ({
+  test('should display sponsors section with Japanese heading and logo', async ({
     page,
   }) => {
     await expect(
@@ -40,18 +44,25 @@ test.describe('Landing Page Stakeholders Section', () => {
     const iputLink = page.getByRole('link', { name: /IPUT/i })
     await expect(iputLink).toBeVisible()
     await expect(iputLink.locator('img[alt="IPUT"]')).toBeVisible()
+    await expect(iputLink.getByText('IPUT')).not.toBeVisible() // Name should not be visible if logo is present
   })
 
-  test('should display partners section with Japanese heading', async ({
+  test('should display partners section with Japanese heading and name if no logo', async ({
     page,
   }) => {
     await expect(
       page.getByRole('heading', { name: '協力', exact: true })
     ).toBeVisible()
+    const communityPartnerLink = page.getByRole('link', {
+      name: /Community Partner/i,
+    })
+    await expect(communityPartnerLink).toBeVisible()
     await expect(
-      page.getByRole('link', { name: /Community Partner/i })
+      communityPartnerLink.getByText('Community Partner')
     ).toBeVisible()
-    // Removed 'Another Partner' as it's not in the JSON data
+    await expect(
+      communityPartnerLink.locator('img[alt="Community Partner"]')
+    ).not.toBeVisible() // No logoUrl
   })
 
   test('organizer links should be valid', async ({ page }) => {

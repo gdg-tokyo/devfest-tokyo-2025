@@ -62,42 +62,33 @@ describe('StakeholdersSection', () => {
     jest.clearAllMocks()
   })
 
-  it('renders organizers section with Japanese heading', () => {
+  it('renders organizers section with Japanese heading and logo', () => {
     render(<StakeholdersSection />)
-    expect(
-      screen.getByRole('heading', { name: '主催', exact: true })
-    ).toBeInTheDocument()
+    expect(screen.getByAltText('GDG Tokyo')).toBeInTheDocument()
+    expect(screen.queryByText('GDG Tokyo')).not.toBeInTheDocument() // Name should not be visible if logo is present
   })
 
-  it('renders co-organizers section with Japanese heading', () => {
+  it('renders co-organizers section with Japanese heading and logo', () => {
     render(<StakeholdersSection />)
-    expect(
-      screen.getByRole('heading', { name: '共催', exact: true })
-    ).toBeInTheDocument()
+    expect(screen.getByAltText('Google Developers')).toBeInTheDocument()
+    expect(screen.queryByText('Google Developers')).not.toBeInTheDocument() // Name should not be visible if logo is present
   })
 
-  it('renders sponsors section with Japanese heading', () => {
+  it('renders sponsors section with Japanese heading and logo', () => {
     render(<StakeholdersSection />)
-    expect(
-      screen.getByRole('heading', { name: '協賛', exact: true })
-    ).toBeInTheDocument()
+    expect(screen.getByAltText('IPUT')).toBeInTheDocument()
+    expect(screen.queryByText('IPUT')).not.toBeInTheDocument() // Name should not be visible if logo is present
   })
 
-  it('renders partners section with Japanese heading', () => {
+  it('renders partners section with Japanese heading and name if no logo', () => {
     render(<StakeholdersSection />)
     expect(
       screen.getByRole('heading', { name: '協力', exact: true })
     ).toBeInTheDocument()
     expect(screen.getByText('Community Partner')).toBeInTheDocument()
     expect(screen.queryByAltText('Community Partner')).not.toBeInTheDocument() // No logoUrl
-    expect(screen.getByText('Another Partner')).toBeInTheDocument()
     expect(screen.getByAltText('Another Partner')).toBeInTheDocument()
-  })
-
-  it('does not render image if logoUrl is empty', () => {
-    render(<StakeholdersSection />)
-    expect(screen.queryByAltText('Community Partner')).not.toBeInTheDocument()
-    expect(screen.getByText('Community Partner')).toBeInTheDocument()
+    expect(screen.queryByText('Another Partner')).not.toBeInTheDocument() // Name should not be visible if logo is present
   })
 
   it('renders nothing if no stakeholders are present', () => {

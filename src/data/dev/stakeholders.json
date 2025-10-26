@@ -24,9 +24,9 @@
     "link": "https://wtm-tokyo.connpass.com/"
   },
   {
-    "name": "Community Partner",
-    "logoUrl": "",
+    "name": "Angular日本ユーザー会",
+    "logoUrl": "https://community.angular.jp/assets/image/logo.svg",
     "type": "partner",
-    "link": "https://community.example.com/"
+    "link": "https://community.angular.jp/"
   }
 ]

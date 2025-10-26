@@ -3,6 +3,7 @@
     "id": "speaker-1",
     "name": "Speaker 1",
     "bio": "Bio 1",
+    "photo_url": "https://via.placeholder.com/96",
     "github": "speaker1",
     "twitter": "speaker1"
   },

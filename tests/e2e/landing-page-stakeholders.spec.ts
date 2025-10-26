@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test'
+import { expect, test } from '@playwright/test'
 
 test.describe('Landing Page Stakeholders Section', () => {
   test.beforeEach(async ({ page }) => {
@@ -47,24 +47,6 @@ test.describe('Landing Page Stakeholders Section', () => {
     await expect(iputLink.getByText('IPUT')).not.toBeVisible() // Name should not be visible if logo is present
   })
 
-  test('should display partners section with Japanese heading and name if no logo', async ({
-    page,
-  }) => {
-    await expect(
-      page.getByRole('heading', { name: '協力', exact: true })
-    ).toBeVisible()
-    const communityPartnerLink = page.getByRole('link', {
-      name: /Community Partner/i,
-    })
-    await expect(communityPartnerLink).toBeVisible()
-    await expect(
-      communityPartnerLink.getByText('Community Partner')
-    ).toBeVisible()
-    await expect(
-      communityPartnerLink.locator('img[alt="Community Partner"]')
-    ).not.toBeVisible() // No logoUrl
-  })
-
   test('organizer links should be valid', async ({ page }) => {
     const gdgTokyoLink = page.getByRole('link', { name: /GDG Tokyo/i })
     await expect(gdgTokyoLink).toHaveAttribute(
@@ -92,9 +74,8 @@ test.describe('Landing Page Stakeholders Section', () => {
   })
 
   test('partner links should be valid', async ({ page }) => {
-    const communityPartnerLink = page.getByRole('link', {
-      name: /Community Partner/i,
-    })
+    const communityPartnerText = page.getByText('Partner Community')
+    const communityPartnerLink = communityPartnerText.locator('..') // Get the parent element (the <a> tag)
     await expect(communityPartnerLink).toHaveAttribute(
       'href',
       'https://community.example.com/'

@@ -18,14 +18,16 @@ npx playwright install --with-deps --no-shell
 npm run dev
 
 # To run the development server with **production data**:
-npm run prod
+npm run dev:prod
 ```
 
 NOTE: By default, the server runs with production data if `DEVFEST_TOKYO_2025_TARGET_ENV` is not set or set to `PROD`.
 
-## Content Generation
+## Build Website
 
-The website content (sessions, talks, speakers) is generated from Markdown files located in the `docs/web/prod/` directory. A script parses these Markdown files, validates them against Zod schemas, and outputs JSON files to `src/data/prod/`.
+### Build Website Contents
+
+The website content (sessions, talks, speakers) is generated from Markdown files located in the [`docs/web/prod/`](./docs/web/prod/) directory. A script parses these Markdown files, validates them against Zod schemas, and outputs JSON files to [`docs/web/prod/`](./docs/web/prod/).
 
 To generate the content:
 
@@ -34,6 +36,16 @@ npm run build:content
 ```
 
 This command should be run whenever there are changes to the Markdown content in `docs/web/prod/`.
+
+### Build Next.js Website
+
+```bash
+# Build website with DEV data
+npm run build
+
+# Build website with PROD data
+npm run build:prod
+```
 
 ### Running Tests
 

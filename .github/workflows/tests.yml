@@ -80,8 +80,7 @@ jobs:
         run: npm ci
 
       - name: Build content from Markdown
-        run:
-          NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV=PROD npm run build:content
+        run: npm run build:content
 
       - name: Run build for PROD environment
-        run: NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV=PROD npm run build
+        run: npm run build:prod

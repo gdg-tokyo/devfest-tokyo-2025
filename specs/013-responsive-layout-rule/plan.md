@@ -1,6 +1,6 @@
 # Implementation Plan: Responsive Layout Rule
 
-- **Branch**: `013-responsive-layout-rule` | **Date**: October 26, 2025 | **Spec**: /Users/yoshimura708/code708/gdg/devfest-tokyo-2025-web/specs/013-responsive-layout-rule/spec.md
+- **Branch**: `013-responsive-layout-rule` | **Date**: October 26, 2025 | **Spec**: [./spec.md](./spec.md)
 - **Input**: Feature specification from `/specs/013-responsive-layout-rule/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.

@@ -205,3 +205,11 @@ $RECYCLE.BIN/
 # == Custom ==
 test-results/
 pr_body.md
+
+# -- SpecKit related files --
+# Only commit the spec.md and plan.md as artifacts generated in `/speckit.specify` and `/speckit.plan`.
+# Other files can be a noise when updating the spec.md.
+spec/**/*.md
+!spec/**/spec.md
+!spec/**/plan.md
+!spec/**/data-model.md

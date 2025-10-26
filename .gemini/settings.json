@@ -28,6 +28,7 @@
       "ShellTool(npm run test)",
       "ShellTool(npm run build)",
       "ShellTool(git add)",
+      "ShellTool(git branch)",
       "ShellTool(git diff)",
       "ShellTool(git status)",
       "ShellTool(git log)",

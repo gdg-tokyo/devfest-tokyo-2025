@@ -1,6 +1,6 @@
 # Implementation Plan: App Header Design
 
-- **Branch**: `008-app-nav-header` | **Date**: 2025-10-24 | **Spec**: /Users/yoshimura708/code708/gdg/devfest-tokyo-2025-web/specs/008-app-nav-header/spec.md
+- **Branch**: `008-app-nav-header` | **Date**: 2025-10-24 | **Spec**: [./spec.md](./spec.md)
 - **Input**: Feature specification from `/specs/008-app-nav-header/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
@@ -36,7 +36,7 @@ _GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 ### Documentation (this feature)
 
 ```
-specs/008-008-app-header/
+specs/008-app-nav-header/
 ├── plan.md              # This file (/speckit.plan command output)
 ├── research.md          # Phase 0 output (/speckit.plan command)
 ├── data-model.md        # Phase 1 output (/speckit.plan command)

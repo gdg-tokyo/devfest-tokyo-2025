@@ -1,6 +1,6 @@
 # Feature Specification: Data Schema Refactoring
 
-- **Feature Branch**: `006-data-schema-currently`
+- **Feature Branch**: `006-data-schema-policy`
 - **Created**: 2025-10-18
 - **Status**: Draft
 - **Input**: User description: "data schema Currently the data is stored as a JSON and it is defined in @@specs/003-time-table-page/data-model.md I want to split this data into three entity/table: session, talk, speaker for easier management. Can you do it for me?"

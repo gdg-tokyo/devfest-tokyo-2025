@@ -1,5 +1,8 @@
 # Implementation Plan: Event Overview Section
 
+- **Branch**: `010-event-overview-section` | **Date**: 2025-10-25 | **Spec**: [./spec.md](./spec.md)
+- **Input**: Feature specification from `/specs/010-event-overview-section/spec.md`
+
 **Feature Branch**: `010-event-overview-section`
 
 ## Technical Context

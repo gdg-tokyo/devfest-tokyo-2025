@@ -1,5 +1,5 @@
 ---
-id: s1-keynote
+id: keynote
 track: Track A
 time_start: '12:40'
 time_end: '13:10'

@@ -2,8 +2,8 @@
 time_start: '12:40'
 time_end: '13:10'
 tech_tags: ['Next.js', 'React']
-level: 'Advanced'
-perspective: 'Experience'
+level: ['Advanced']
+perspective: ['Experience']
 is_keynote: true
 ---
 
@@ -19,6 +19,6 @@ is_keynote: true
 
 ### 及川卓也 さん (@takoratta) / Tably株式会社 代表取締役
 
--
+Coming soon ...
 
 ![](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/takuya-oikawa-500.png)

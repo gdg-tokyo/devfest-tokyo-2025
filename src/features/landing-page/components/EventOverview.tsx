@@ -13,7 +13,7 @@ const EventOverview = () => {
 
   return (
     <section
-      className="container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl bg-off-white py-20"
+      className="container mx-auto lg:px-8 max-w-screen-md lg:max-w-screen-xl bg-off-white"
       data-testid="event-overview-section"
     >
       <div>

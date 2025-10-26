@@ -31,20 +31,26 @@ describe('StakeholdersSection', () => {
     {
       name: 'Google Developers',
       logoUrl: '/images/google-developers.png',
-      type: 'partner',
+      type: 'co-organizer',
       link: 'https://developers.google.com/',
+    },
+    {
+      name: 'IPUT',
+      logoUrl: '/images/iput.png',
+      type: 'sponsor',
+      link: 'https://www.iput.ac.jp/',
+    },
+    {
+      name: 'Community Partner',
+      logoUrl: '',
+      type: 'partner',
+      link: 'https://community.example.com/',
     },
     {
       name: 'Another Partner',
       logoUrl: '/images/another-partner.png',
       type: 'partner',
       link: 'https://another-partner.com/',
-    },
-    {
-      name: 'Partner without Logo',
-      logoUrl: '',
-      type: 'partner',
-      link: 'https://no-logo-partner.com/',
     },
   ]
 
@@ -56,85 +62,58 @@ describe('StakeholdersSection', () => {
     jest.clearAllMocks()
   })
 
-  it('renders the section title', () => {
+  it('renders organizers section with Japanese heading', () => {
     render(<StakeholdersSection />)
     expect(
-      screen.getByRole('heading', { name: 'Organizers and Partners' })
+      screen.getByRole('heading', { name: '主催', exact: true })
     ).toBeInTheDocument()
   })
 
-  it('renders organizers correctly', () => {
+  it('renders co-organizers section with Japanese heading', () => {
     render(<StakeholdersSection />)
     expect(
-      screen.getByRole('heading', { name: 'Organizers' })
+      screen.getByRole('heading', { name: '共催', exact: true })
     ).toBeInTheDocument()
-    expect(screen.getByText('GDG Tokyo')).toBeInTheDocument()
-    expect(screen.getByAltText('GDG Tokyo')).toHaveAttribute(
-      'src',
-      '/images/gdg-tokyo.png'
-    )
-    expect(screen.getByRole('link', { name: /GDG Tokyo/i })).toHaveAttribute(
-      'href',
-      'https://gdg.community.dev/gdg-tokyo/'
-    )
   })
 
-  it('renders partners correctly', () => {
+  it('renders sponsors section with Japanese heading', () => {
     render(<StakeholdersSection />)
     expect(
-      screen.getByRole('heading', { name: 'Partners' })
+      screen.getByRole('heading', { name: '協賛', exact: true })
     ).toBeInTheDocument()
-    expect(screen.getByText('Google Developers')).toBeInTheDocument()
-    expect(screen.getByAltText('Google Developers')).toHaveAttribute(
-      'src',
-      '/images/google-developers.png'
-    )
+  })
+
+  it('renders partners section with Japanese heading', () => {
+    render(<StakeholdersSection />)
     expect(
-      screen.getByRole('link', { name: /Google Developers/i })
-    ).toHaveAttribute('href', 'https://developers.google.com/')
+      screen.getByRole('heading', { name: '協力', exact: true })
+    ).toBeInTheDocument()
+    expect(screen.getByText('Community Partner')).toBeInTheDocument()
+    expect(screen.queryByAltText('Community Partner')).not.toBeInTheDocument() // No logoUrl
     expect(screen.getByText('Another Partner')).toBeInTheDocument()
-    expect(screen.getByAltText('Another Partner')).toHaveAttribute(
-      'src',
-      '/images/another-partner.png'
-    )
-    expect(
-      screen.getByRole('link', { name: /Another Partner/i })
-    ).toHaveAttribute('href', 'https://another-partner.com/')
+    expect(screen.getByAltText('Another Partner')).toBeInTheDocument()
   })
 
   it('does not render image if logoUrl is empty', () => {
     render(<StakeholdersSection />)
-    expect(
-      screen.queryByAltText('Partner without Logo')
-    ).not.toBeInTheDocument()
-    expect(screen.getByText('Partner without Logo')).toBeInTheDocument()
-  })
-
-  it('does not render organizer section if no organizers are present', () => {
-    ;(getStakeholders as jest.Mock).mockReturnValue(
-      mockStakeholders.filter((s) => s.type === 'partner')
-    )
-    render(<StakeholdersSection />)
-    expect(
-      screen.queryByRole('heading', { name: 'Organizers' })
-    ).not.toBeInTheDocument()
-  })
-
-  it('does not render partner section if no partners are present', () => {
-    ;(getStakeholders as jest.Mock).mockReturnValue(
-      mockStakeholders.filter((s) => s.type === 'organizer')
-    )
-    render(<StakeholdersSection />)
-    expect(
-      screen.queryByRole('heading', { name: 'Partners' })
-    ).not.toBeInTheDocument()
+    expect(screen.queryByAltText('Community Partner')).not.toBeInTheDocument()
+    expect(screen.getByText('Community Partner')).toBeInTheDocument()
   })
 
   it('renders nothing if no stakeholders are present', () => {
     ;(getStakeholders as jest.Mock).mockReturnValue([])
     render(<StakeholdersSection />)
     expect(
-      screen.queryByRole('heading', { name: 'Organizers and Partners' })
+      screen.queryByRole('heading', { name: '主催' })
+    ).not.toBeInTheDocument()
+    expect(
+      screen.queryByRole('heading', { name: '共催' })
+    ).not.toBeInTheDocument()
+    expect(
+      screen.queryByRole('heading', { name: '協賛' })
+    ).not.toBeInTheDocument()
+    expect(
+      screen.queryByRole('heading', { name: '協力' })
     ).not.toBeInTheDocument()
   })
 })

@@ -1,86 +1,73 @@
-import React from 'react'
 import { getStakeholders } from '@/lib/data-parser'
+import { Stakeholder } from '@/types'
 import Image from 'next/image'
+import React from 'react'
 
 const StakeholdersSection: React.FC = () => {
   const stakeholders = getStakeholders()
-  const organizers = stakeholders.filter((s) => s.type === 'organizer')
-  const partners = stakeholders.filter((s) => s.type === 'partner')
 
   if (stakeholders.length === 0) {
     return null // Don't render anything if no stakeholders
   }
 
+  const categories: Array<Stakeholder['type']> = [
+    'organizer',
+    'co-organizer',
+    'sponsor',
+    'partner',
+  ]
+
+  const categoryHeadings: Record<Stakeholder['type'], string> = {
+    organizer: '主催',
+    'co-organizer': '共催',
+    sponsor: '協賛',
+    partner: '協力',
+  }
+
+  const groupedStakeholders = categories
+    .map((type) => ({
+      type,
+      heading: categoryHeadings[type],
+      items: stakeholders.filter((s) => s.type === type),
+    }))
+    .filter((group) => group.items.length > 0)
+
   return (
     <section className="py-12 bg-off-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">
-          Organizers and Partners
-        </h2>
-
-        {organizers.length > 0 && (
-          <div className="mb-12">
+        {groupedStakeholders.map((group) => (
+          <div key={group.type} className="mb-12 last:mb-0">
             <h3 className="text-2xl font-semibold text-center mb-6">
-              Organizers
+              {group.heading}
             </h3>
             <div className="flex flex-wrap justify-center gap-8">
-              {organizers.map((org) => (
+              {group.items.map((stakeholder) => (
                 <a
-                  key={org.name}
-                  href={org.link}
+                  key={stakeholder.name}
+                  href={stakeholder.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white"
+                  className="justify-self-center max-w-xs w-full flex flex-col items-center justify-center p-4 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-transparent"
                 >
-                  <p className="text-lg font-medium text-gray-800 mb-2">
-                    {org.name}
+                  <p className="text-xl text-gray-800 mb-2 text-center w-full">
+                    {stakeholder.name}
                   </p>
-                  {org.logoUrl && (
-                    <Image
-                      src={org.logoUrl}
-                      alt={org.name}
-                      width={100}
-                      height={100}
-                      className="object-contain h-24 w-24"
-                    />
+                  {stakeholder.logoUrl && (
+                    <div className="relative w-full h-32 flex items-center justify-center">
+                      <Image
+                        src={stakeholder.logoUrl}
+                        alt={stakeholder.name}
+                        fill
+                        style={{ objectFit: 'contain' }}
+                        className="p-1"
+                      />
+                    </div>
                   )}
                 </a>
               ))}
             </div>
           </div>
-        )}
-
-        {partners.length > 0 && (
-          <div>
-            <h3 className="text-2xl font-semibold text-center mb-6">
-              Partners
-            </h3>
-            <div className="flex flex-wrap justify-center gap-8">
-              {partners.map((partner) => (
-                <a
-                  key={partner.name}
-                  href={partner.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white"
-                >
-                  <p className="text-lg font-medium text-gray-800 mb-2">
-                    {partner.name}
-                  </p>
-                  {partner.logoUrl && (
-                    <Image
-                      src={partner.logoUrl}
-                      alt={partner.name}
-                      width={100}
-                      height={100}
-                      className="object-contain h-24 w-24"
-                    />
-                  )}
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
+        ))}
       </div>
     </section>
   )

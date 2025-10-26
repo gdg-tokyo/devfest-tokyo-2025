@@ -5,39 +5,53 @@ test.describe('Landing Page Stakeholders Section', () => {
     await page.goto('/')
   })
 
-  test('should display the Organizers and Partners section', async ({
+  test('should display organizers section with Japanese heading', async ({
     page,
   }) => {
     await expect(
-      page.getByRole('heading', {
-        name: 'Organizers and Partners',
-        exact: true,
-      })
-    ).toBeVisible()
-  })
-
-  test('should display organizers', async ({ page }) => {
-    await expect(
-      page.getByRole('heading', { name: 'Organizers', exact: true })
+      page.getByRole('heading', { name: '主催', exact: true })
     ).toBeVisible()
     const gdgTokyoLink = page.getByRole('link', { name: /GDG Tokyo/i })
     await expect(gdgTokyoLink).toBeVisible()
-    await expect(
-      gdgTokyoLink.getByRole('img', { name: 'GDG Tokyo' })
-    ).toBeVisible()
+    await expect(gdgTokyoLink.locator('img[alt="GDG Tokyo"]')).toBeVisible()
   })
 
-  test('should display partners', async ({ page }) => {
+  test('should display co-organizers section with Japanese heading', async ({
+    page,
+  }) => {
     await expect(
-      page.getByRole('heading', { name: 'Partners', exact: true })
+      page.getByRole('heading', { name: '共催', exact: true })
     ).toBeVisible()
     const googleDevelopersLink = page.getByRole('link', {
       name: /Google Developers/i,
     })
     await expect(googleDevelopersLink).toBeVisible()
     await expect(
-      googleDevelopersLink.getByRole('img', { name: 'Google Developers' })
+      googleDevelopersLink.locator('img[alt="Google Developers"]')
     ).toBeVisible()
+  })
+
+  test('should display sponsors section with Japanese heading', async ({
+    page,
+  }) => {
+    await expect(
+      page.getByRole('heading', { name: '協賛', exact: true })
+    ).toBeVisible()
+    const iputLink = page.getByRole('link', { name: /IPUT/i })
+    await expect(iputLink).toBeVisible()
+    await expect(iputLink.locator('img[alt="IPUT"]')).toBeVisible()
+  })
+
+  test('should display partners section with Japanese heading', async ({
+    page,
+  }) => {
+    await expect(
+      page.getByRole('heading', { name: '協力', exact: true })
+    ).toBeVisible()
+    await expect(
+      page.getByRole('link', { name: /Community Partner/i })
+    ).toBeVisible()
+    // Removed 'Another Partner' as it's not in the JSON data
   })
 
   test('organizer links should be valid', async ({ page }) => {
@@ -49,7 +63,7 @@ test.describe('Landing Page Stakeholders Section', () => {
     await expect(gdgTokyoLink).toHaveAttribute('target', '_blank')
   })
 
-  test('partner links should be valid', async ({ page }) => {
+  test('co-organizer links should be valid', async ({ page }) => {
     const googleDevelopersLink = page.getByRole('link', {
       name: /Google Developers/i,
     })
@@ -58,5 +72,22 @@ test.describe('Landing Page Stakeholders Section', () => {
       'https://developers.google.com/'
     )
     await expect(googleDevelopersLink).toHaveAttribute('target', '_blank')
+  })
+
+  test('sponsor links should be valid', async ({ page }) => {
+    const iputLink = page.getByRole('link', { name: /IPUT/i })
+    await expect(iputLink).toHaveAttribute('href', 'https://www.iput.ac.jp/')
+    await expect(iputLink).toHaveAttribute('target', '_blank')
+  })
+
+  test('partner links should be valid', async ({ page }) => {
+    const communityPartnerLink = page.getByRole('link', {
+      name: /Community Partner/i,
+    })
+    await expect(communityPartnerLink).toHaveAttribute(
+      'href',
+      'https://community.example.com/'
+    )
+    await expect(communityPartnerLink).toHaveAttribute('target', '_blank')
   })
 })

@@ -32,3 +32,10 @@ export interface Talk {
   level: ('Beginner' | 'Intermediate' | 'Advanced')[]
   perspective: ('Introduction' | 'Experience' | 'Challenge')[]
 }
+
+export interface Stakeholder {
+  name: string
+  logoUrl?: string
+  type: 'organizer' | 'co-organizer' | 'sponsor' | 'partner'
+  link: string
+}

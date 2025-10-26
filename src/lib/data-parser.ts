@@ -1,4 +1,4 @@
-import { Session, Speaker, Talk, Stakeholder } from '@/types'
+import { Session, Speaker, Stakeholder, Talk } from '@/types'
 
 interface DataCacheEntry {
   speakers: Speaker[]

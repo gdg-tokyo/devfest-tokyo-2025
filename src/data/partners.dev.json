@@ -2,31 +2,31 @@
   {
     "name": "GDG Tokyo (Dev)",
     "url": "https://gdg.community.dev/gdg-tokyo/",
-    "logo": "/images/organizers-and-partners/gdg-logo-24-color.png",
+    "logo": "/images/stakeholders/gdg-logo-24-color.png",
     "tier": "Organizer"
   },
   {
     "name": "東京国際工科専門職大学 (IPUT) (Dev)",
     "url": "https://www.iput.ac.jp/",
-    "logo": "/images/organizers-and-partners/iput-logo.png",
+    "logo": "/images/stakeholders/iput-logo.png",
     "tier": "Co-Organizer"
   },
   {
     "name": "Google (Dev)",
     "url": "https://about.google/",
-    "logo": "/images/organizers-and-partners/google-logo.png",
+    "logo": "/images/stakeholders/google-logo.png",
     "tier": "Sponsor"
   },
   {
     "name": "Very Long Name Supporter Company Inc. (Dev)",
     "url": "https://longname.example.com/",
-    "logo": "/images/organizers-and-partners/longname-supporter-logo.png",
+    "logo": "/images/stakeholders/longname-supporter-logo.png",
     "tier": "Supporter"
   },
   {
     "name": "Another Sponsor (Dev)",
     "url": "https://another-sponsor.example.com/",
-    "logo": "/images/organizers-and-partners/another-sponsor-logo.png",
+    "logo": "/images/stakeholders/another-sponsor-logo.png",
     "tier": "Sponsor"
   }
 ]

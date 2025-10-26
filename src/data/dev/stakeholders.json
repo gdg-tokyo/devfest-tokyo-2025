@@ -1,0 +1,14 @@
+[
+  {
+    "name": "GDG Tokyo",
+    "logoUrl": "/images/stakeholders/gdg-tokyo-logo-24.png",
+    "type": "organizer",
+    "link": "https://gdg.community.dev/gdg-tokyo/"
+  },
+  {
+    "name": "Google",
+    "logoUrl": "/images/stakeholders/google-logo-full-color.png",
+    "type": "partner",
+    "link": "https://developers.google.com/"
+  }
+]

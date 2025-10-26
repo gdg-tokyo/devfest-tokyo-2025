@@ -1,0 +1,14 @@
+[
+  {
+    "name": "GDG Tokyo",
+    "logoUrl": "/images/stakeholders/gdg-tokyo.png",
+    "type": "organizer",
+    "link": "https://gdg.community.dev/gdg-tokyo/"
+  },
+  {
+    "name": "Google Developers",
+    "logoUrl": "/images/stakeholders/google-developers.png",
+    "type": "partner",
+    "link": "https://developers.google.com/"
+  }
+]

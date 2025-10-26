@@ -10,8 +10,8 @@ Represents an organization supporting the event, displayed in the "Organizers & 
   - **Validation**: Must be a non-empty string.
 - **`url`** (string, required): The URL to the partner's official website.
   - **Validation**: Must be a valid URL format (e.g., starts with `http://` or `https://`).
-- **`logo`** (string, required): The relative path to the partner's logo image, expected to be under `public/images/organizers-and-partners/`.
-  - **Validation**: Must be a non-empty string, ideally a path to an image file (e.g., `/images/organizers-and-partners/partner-logo.png`).
+- **`logo`** (string, required): The relative path to the partner's logo image, expected to be under `public/images/stakeholders/`.
+  - **Validation**: Must be a non-empty string, ideally a path to an image file (e.g., `/images/stakeholders/partner-logo.png`).
 - **`tier`** (string, required): The category of partnership.
   - **Validation**: Must be one of the following values: "Organizer", "Co-Organizer", "Sponsor", "Supporter".
 
@@ -30,25 +30,25 @@ The data will be stored in a local JSON file, `src/data/prod/stakeholders.json` 
   {
     "name": "GDG Tokyo",
     "url": "https://gdg.community.dev/gdg-tokyo/",
-    "logo": "/images/organizers-and-partners/gdg-logo-24-color.png",
+    "logo": "/images/stakeholders/gdg-logo-24-color.png",
     "tier": "Organizer"
   },
   {
     "name": "東京国際工科専門職大学 (IPUT)",
     "url": "https://www.iput.ac.jp/",
-    "logo": "/images/organizers-and-partners/iput-logo.png",
+    "logo": "/images/stakeholders/iput-logo.png",
     "tier": "Co-Organizer"
   },
   {
     "name": "Google",
     "url": "https://about.google/",
-    "logo": "/images/organizers-and-partners/google-logo.png",
+    "logo": "/images/stakeholders/google-logo.png",
     "tier": "Sponsor"
   },
   {
     "name": "Example Supporter",
     "url": "https://example.com/supporter",
-    "logo": "/images/organizers-and-partners/example-supporter-logo.png",
+    "logo": "/images/stakeholders/example-supporter-logo.png",
     "tier": "Supporter"
   }
 ]

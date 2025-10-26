@@ -8,7 +8,6 @@ This document outlines the specification for the "Time Table Page," a central, h
 
 - **As an attendee, I want to view the event timetable at a glance** so that I can quickly understand the schedule and available sessions.
 - **As an attendee, I want to filter sessions by skill level (Beginner/Intermediate/Advanced)** so that I can find talks relevant to my expertise.
-- **As an attendee, I want to filter sessions by learning perspective (Introduction/Experience/Challenge)** so that I can focus on the type of content I'm interested in.
 - **As an attendee, I want to filter sessions by technical tags** so that I can easily locate sessions on specific topics.
 - **As an attendee, I want to see session details clearly on each card** so that I can make informed decisions about which sessions to attend.
 - **As an attendee, I want the timetable to be easy to navigate on both desktop and mobile devices** so that I can plan my schedule regardless of the device I'm using.
@@ -32,7 +31,6 @@ This document outlines the specification for the "Time Table Page," a central, h
 ### 3.2. Client-Side Filtering
 
 - **FR2.2**: The filtering system SHALL allow users to filter sessions by skill level ("Beginner," "Intermediate," "Advanced") using selectable chips.
-- **FR2.3**: The filtering system SHALL allow users to filter sessions by learning perspective ("Introduction," "Experience," "Challenge") using selectable chips.
 - **FR2.4**: The filtering system SHALL allow users to filter sessions by technical tags using selectable chips.
 - **FR2.5**: Filtering actions SHALL instantly update the displayed sessions without a page reload.
 - **FR2.6**: When filters are applied, sessions that do not match the criteria SHALL be visually de-emphasized (e.g., grayed out) and made non-interactive (i.e., click actions disabled). Matched sessions SHALL remain fully visible and interactive.
@@ -44,7 +42,6 @@ This document outlines the specification for the "Time Table Page," a central, h
 - **FR3.1**: Each session card SHALL adhere strictly to the DevFest brand guide's typography.
 - **FR3.2**: Each session card SHALL adhere strictly to the DevFest brand guide's color scheme, extending to tags/labels and track headers.
 - **FR3.3**: Session cards SHALL utilize distinct colors to visually emphasize the skill level label.
-- **FR3.4**: Session cards SHALL utilize distinct colors to visually emphasize the learning perspective label.
   - **FR3.5**: Session cards SHALL display essential session information (e.g., title, speaker, time, track, room number).
 
 ## 4. Non-Functional Requirements
@@ -89,9 +86,8 @@ This document outlines the specification for the "Time Table Page," a central, h
 ## 9. Key Entities
 
 - **Session**: Represents an individual talk or workshop at the event.
-  - Attributes: Title, Speaker(s), Time Slot, Track, Skill Level, Learning Perspective, Technical Tags, Description, Room.
+  - Attributes: Title, Speaker(s), Time Slot, Track, Skill Level, Technical Tags, Description, Room.
 - **Skill Level**: Categorization of session difficulty (Beginner, Intermediate, Advanced).
-- **Learning Perspective**: Categorization of session focus (Introduction, Experience, Challenge).
 - **Technical Tag**: Keywords describing the technical content of a session.
 
 ## 9. User Scenarios & Testing
@@ -112,11 +108,11 @@ This document outlines the specification for the "Time Table Page," a central, h
 
 - **Given**: An attendee views a session card.
 - **When**: The session card is displayed.
-- **Then**: The card's typography and colors adhere to the DevFest brand guide, and the skill level and learning perspective labels are highlighted with distinct colors.
+- **Then**: The card's typography and colors adhere to the DevFest brand guide, and the skill level labels are highlighted with distinct colors.
 
 ### 9.4. Scenario: Rapid Session Selection
 
-- **Given**: An attendee is on the Time Table Page and applies multiple filters (e.g., "Advanced" skill, "Experience" perspective, "Machine Learning" tag).
+- **Given**: An attendee is on the Time Table Page and applies multiple filters (e.g., "Advanced" skill, "Machine Learning" tag).
 - **When**: The filters are applied.
 - **Then**: The timetable instantly updates to show only sessions matching all criteria, allowing the attendee to quickly identify relevant talks.
 

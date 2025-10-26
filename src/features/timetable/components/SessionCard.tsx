@@ -1,43 +1,13 @@
 import { getSpeakers, getTalks } from '@/lib/data-parser'
 import { getLevelColor } from '@/lib/style-utils'
 import { Session, Speaker, Talk } from '@/types'
-import { LocationOn } from '@mui/icons-material' // Import LocationOn icon
+import { LocationOn, Person, AccessTime } from '@mui/icons-material' // Import LocationOn icon
 import Link from 'next/link'
 
 interface SessionCardProps {
   session: Session
   isGrayedOut?: boolean
 }
-
-const PersonIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-4 w-4 inline-block mr-1"
-    viewBox="0 0 20 20"
-    fill="currentColor"
-  >
-    <path
-      fillRule="evenodd"
-      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-      clipRule="evenodd"
-    />
-  </svg>
-)
-
-const ClockIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-4 w-4 inline-block mr-1"
-    viewBox="0 0 20 20"
-    fill="currentColor"
-  >
-    <path
-      fillRule="evenodd"
-      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l3 3a1 1 0 001.414-1.414L11 10.586V7z"
-      clipRule="evenodd"
-    />
-  </svg>
-)
 
 const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
   const allTalks = getTalks()
@@ -73,12 +43,12 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
           {session.title}
         </h3>
         <div className="text-sm text-gray-600 mb-1 flex items-center">
-          <PersonIcon />
+          <Person className="h-4 w-4 inline-block mr-1" />
           <span>{speakerNames}</span>
         </div>
         <div className="text-sm text-gray-600 mb-1 flex items-center justify-start">
           <div className="flex items-center">
-            <ClockIcon />
+            <AccessTime className="h-4 w-4 inline-block mr-1" />
             <span>
               {timeStart} - {timeEnd}
             </span>

@@ -14,9 +14,9 @@ import { getStakeholders } from '@/lib/data-parser'
 // Mock the Image component from next/image
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props: any) => {
+  default: ({ fill, alt, ...props }: any) => {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />
+    return <img alt={alt} {...props} />
   },
 }))
 

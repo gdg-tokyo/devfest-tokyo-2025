@@ -1,9 +1,10 @@
-import { Session, Speaker, Talk } from '@/types'
+import { Session, Speaker, Talk, Stakeholder } from '@/types'
 
 interface DataCacheEntry {
   speakers: Speaker[]
   talks: Talk[]
   sessions: Session[]
+  stakeholders: Stakeholder[]
 }
 
 const dataCache: { [key: string]: DataCacheEntry } = {}
@@ -17,11 +18,15 @@ function loadData(dataDir: string): DataCacheEntry {
   const speakers = require(`../data/${dataDir}/speakers.json`)
   const talks = require(`../data/${dataDir}/talks.json`)
   const sessions = require(`../data/${dataDir}/sessions.json`)
+  const stakeholders = require(`../data/${dataDir}/stakeholders.json`)
   console.log(`Loading speakers from: src/data/${dataDir}/speakers.json`)
   console.log(`Loading talks from: src/data/${dataDir}/talks.json`)
   console.log(`Loading sessions from: src/data/${dataDir}/sessions.json`)
+  console.log(
+    `Loading stakeholders from: src/data/${dataDir}/stakeholders.json`
+  )
 
-  const loadedData: DataCacheEntry = { speakers, talks, sessions }
+  const loadedData: DataCacheEntry = { speakers, talks, sessions, stakeholders }
   dataCache[dataDir] = loadedData // Cache the loaded data
   return loadedData
 }
@@ -110,6 +115,13 @@ export function getSpeakers(): Speaker[] {
   const dataDir = env === 'DEV' ? 'dev' : 'prod'
   const { speakers: speakersData } = loadData(dataDir)
   return speakersData
+}
+
+export function getStakeholders(): Stakeholder[] {
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const dataDir = env === 'DEV' ? 'dev' : 'prod'
+  const { stakeholders: stakeholdersData } = loadData(dataDir)
+  return stakeholdersData
 }
 
 export function getTalkById(

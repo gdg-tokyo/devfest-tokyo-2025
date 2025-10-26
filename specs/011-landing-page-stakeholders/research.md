@@ -1,10 +1,10 @@
-# Research Findings: Organizer & Partners Section
+# Research Findings: Stakeholders Section
 
 ## JSON Data Structure
 
-- **Decision**: The JSON file will be an array of partner objects. Each partner object will have `name` (string), `url` (string), `logo` (string), and `tier` (string) fields. The `tier` field will be a string matching one of the four categories: "Organizer", "Co-Organizer", "Sponsor", "Supporter".
+- **Decision**: The JSON file will be an array of stakeholder objects. Each stakeholder object will have `name` (string), `url` (string), `logo` (string), and `tier` (string) fields. The `tier` field will be a string matching one of the four categories: "Organizer", "Co-Organizer", "Sponsor", "Supporter".
 - **Rationale**: This is a simple and straightforward structure that directly maps to the `Key Entities` defined in the `spec.md`. It allows for easy parsing and iteration.
-- **Alternatives considered**: A nested object structure where tiers are keys and values are arrays of partners. Rejected because it adds unnecessary complexity for a flat list of partners.
+- **Alternatives considered**: A nested object structure where tiers are keys and values are arrays of stakeholders. Rejected because it adds unnecessary complexity for a flat list of partners.
 
 ## Logo Sizing (Consistent Height)
 
@@ -16,7 +16,7 @@
 
 ## Hover Effect (Hover Highlighting)
 
-- **Decision**: On hover, partner logos will exhibit a subtle scaling effect (e.g., `scale(1.05)`) and a slight shadow (`box-shadow`). A smooth transition will be applied for a polished user experience.
+- **Decision**: On hover, stakeholder logos will exhibit a subtle scaling effect (e.g., `scale(1.05)`) and a slight shadow (`box-shadow`). A smooth transition will be applied for a polished user experience.
 - **Rationale**: A subtle scale and shadow are common, visually appealing, and non-intrusive hover effects that clearly indicate interactivity without being distracting.
 - **Alternatives considered**:
   - Changing background color: Rejected as it might clash with logo colors or the overall design.

@@ -1,4 +1,4 @@
-# Specification Quality Checklist: Organizer & Partners Section
+# Specification Quality Checklist: Stakeholders Section
 
 **Purpose**: Validate specification completeness and quality before proceeding to planning **Created**: 2025-10-26 **Feature**: [Link to spec.md]
 

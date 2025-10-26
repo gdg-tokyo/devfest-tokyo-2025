@@ -1,6 +1,6 @@
-# Data Model: Organizer & Partners Section
+# Data Model: Stakeholders Section
 
-## Entity: Partner
+## Entity: Stakeholder
 
 Represents an organization supporting the event, displayed in the "Organizers & Partners" section.
 
@@ -21,9 +21,9 @@ Represents an organization supporting the event, displayed in the "Organizers & 
 
 ## Data Source
 
-The data will be stored in a local JSON file, `src/data/partners.json` (for production) and `src/data/partners.dev.json` (for development dummy data).
+The data will be stored in a local JSON file, `src/data/prod/stakeholders.json` (for production) and `src/data/dev/stakeholders.json` (for development dummy data).
 
-### Example `partners.json` structure:
+### Example `stakeholders.json` structure:
 
 ```json
 [

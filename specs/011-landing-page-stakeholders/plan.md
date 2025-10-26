@@ -1,19 +1,19 @@
-# Implementation Plan: Organizer & Partners Section
+# Implementation Plan: Stakeholders Section
 
-- **Branch**: `011-organizer-partner-section` | **Date**: 2025-10-26 | **Spec**: /specs/011-organizer-partner-section/spec.md
-- **Input**: Feature specification from `/specs/011-organizer-partner-section/spec.md`
+- **Branch**: `011-landing-page-stakeholders` | **Date**: 2025-10-26 | **Spec**: /specs/011-landing-page-stakeholders/spec.md
+- **Input**: Feature specification from `/specs/011-landing-page-stakeholders/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 
 ## Summary
 
-This feature will implement a responsive "Organizers & Partners" section on the landing page, displaying partner logos grouped by tier (Organizer, Co-Organizer, Sponsor, Supporter). The data will be sourced from a local JSON file, with logos linking to partner websites. Key aspects include consistent logo height, automatic wrapping, hover highlighting, lazy-loading for performance, accessibility, and keyboard navigation. A mechanism for generating dummy data for development environments will also be included.
+This feature will implement a responsive "Stakeholders" section on the landing page, displaying partner logos grouped by tier (Organizer, Co-Organizer, Sponsor, Supporter). The data will be sourced from a local JSON file, with logos linking to partner websites. Key aspects include consistent logo height, automatic wrapping, hover highlighting, lazy-loading for performance, accessibility, and keyboard navigation. A mechanism for generating dummy data for development environments will also be included.
 
 ## Technical Context
 
 - **Language/Version**: TypeScript 5.x
 - **Primary Dependencies**: Next.js, React, Tailwind CSS
-- **Storage**: Local JSON file (`src/data/partners.json` or similar)
+- **Storage**: Local JSON file (`src/data/{ENV}/partners.json` or similar)
 - **Testing**: Jest (unit/integration), Playwright (E2E)
 - **Target Platform**: Web (Next.js application)
 - **Project Type**: Web application (frontend)
@@ -40,7 +40,7 @@ _GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 ### Documentation (this feature)
 
 ```
-specs/011-organizer-partner-section/
+specs/011-landing-page-stakeholders/
 ├── plan.md              # This file (/speckit.plan command output)
 ├── research.md          # Phase 0 output (/speckit.plan command)
 ├── data-model.md        # Phase 1 output (/speckit.plan command)
@@ -56,10 +56,10 @@ src/
 ├── app/
 ├── components/
 ├── data/
-│   └── partners.json # Proposed location for production partner data
-│   └── partners.dev.json # Pre-generated dummy data for development
+│   └── prod/stakeholders.json # Proposed location for production stakeholder data
+│   └── dev/stakeholders.json # Pre-generated dummy data for development
 ├── features/
-│   └── organizer-partner-section/
+│   └── landing-page/stakeholders/
 │       ├── components/ # UI components specific to this feature
 │       ├── hooks/      # Feature-specific hooks
 │       └── index.ts    # Entry point for the feature
@@ -69,13 +69,13 @@ src/
 
 tests/
 ├── e2e/
-│   └── organizer-partner-section.spec.ts # E2E tests for this feature
+│   └── landing-page-stakeholders.spec.ts # E2E tests for this feature
 └── unit/
     └── features/
-        └── organizer-partner-section/ # Unit tests for this feature
+        └── landing-page-stakeholders/ # Unit tests for this feature
 ```
 
-**Structure Decision**: The existing Next.js `src/features/` directory structure will be extended to include `organizer-partner-section`. A dedicated `data/partners.json` will be created under `src/data/` for the partner information.
+**Structure Decision**: The existing Next.js `src/features/` directory structure will be extended to include `landing-page/stakeholders`. A dedicated `data/stakeholders.json` will be created under `src/data/` for the stakeholder information.
 
 ## Complexity Tracking
 

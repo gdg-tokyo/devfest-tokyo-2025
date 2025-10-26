@@ -48,17 +48,20 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+      - name: Install Playwright browsers and dependencies
+        run: npx playwright install --with-deps chromium
 
-      # Use Playwright Action to streamline browser installation and test execution
-      - name: Install Playwright and Run Tests
-        uses: microsoft/playwright-github-action@v1
+      - name: Run Playwright E2E tests
+        run: npx playwright test
+
+      # Upload Playwright traces and test report.
+      - name: Upload Playwright test reports
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
-          # Command to start the server
-          run-start: npm run dev:e2e
-          # Test execution command (default is npx playwright test)
-          run-test: npx playwright test
-          # Upload trace files as Artifacts on failure
-          upload-artifact: true
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 5
 
   build_check:
     runs-on: ubuntu-latest

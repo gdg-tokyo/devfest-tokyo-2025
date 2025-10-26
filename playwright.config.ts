@@ -11,6 +11,8 @@ export default defineConfig({
   },
   use: {
     baseURL: 'http://localhost:3030',
+    trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
   },
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
   // Optional CI settings

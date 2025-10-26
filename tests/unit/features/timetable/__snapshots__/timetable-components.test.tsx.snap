@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`TimetableGrid (Tablet/PC View) renders correctly on tablet/PC screens 1`] = `
+<DocumentFragment>
+  <div
+    class="overflow-x-auto hidden md:block"
+  >
+     
+    <div
+      class="jsx-3422117831 grid gap-2 p-2"
+      style="grid-template-rows: [tracks] auto repeat(2, minmax(40px, auto));"
+    >
+      <div
+        class="jsx-3422117831 sticky left-0 top-0 p-3 z-10 subhead text-sm text-gray-600"
+      >
+        Time
+      </div>
+      <div
+        class="jsx-3422117831 p-3 rounded-lg border-2 border-gray-800 text-center sticky top-0 z-10 bg-gdg-pastel-red"
+        style="grid-column: 2; grid-row: 1;"
+      >
+        <h5
+          class="jsx-3422117831"
+        >
+          Track A
+        </h5>
+      </div>
+      <div
+        class="jsx-3422117831 p-3 rounded-lg border-2 border-gray-800 text-center sticky top-0 z-10 bg-gdg-pastel-blue"
+        style="grid-column: 3; grid-row: 1;"
+      >
+        <h5
+          class="jsx-3422117831"
+        >
+          Track B
+        </h5>
+      </div>
+      <div
+        class="jsx-3422117831 sticky left-0 p-2 border-r border-gray-300 font-roboto-mono text-sm text-black-02 flex items-center justify-center z-10"
+        style="grid-row: 2; grid-column: 1;"
+      >
+        09:00
+      </div>
+      <div
+        class="jsx-3422117831 sticky left-0 p-2 border-r border-gray-300 font-roboto-mono text-sm text-black-02 flex items-center justify-center z-10"
+        style="grid-row: 3; grid-column: 1;"
+      >
+        09:30
+      </div>
+      <div
+        class="jsx-3422117831 font-google-sans text-black-02 "
+        style="grid-row: 2 / span 1; grid-column: 2; z-index: 5;"
+      >
+        <div
+          data-testid="session-card-s1"
+        >
+          Grid Session 1
+        </div>
+      </div>
+      <div
+        class="jsx-3422117831 font-google-sans text-black-02 "
+        style="grid-row: 2 / span 1; grid-column: 3; z-index: 5;"
+      >
+        <div
+          data-testid="session-card-s2"
+        >
+          Grid Session 2
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimetableList (Mobile View) renders correctly on mobile screens 1`] = `
+<DocumentFragment>
+  <div
+    class="md:hidden"
+  >
+     
+    <div
+      class="mb-4 border-b border-gray-300 pb-4"
+    >
+      <h3
+        class="text-lg font-bold mb-2 font-roboto-mono text-black-02"
+      >
+        09:00
+      </h3>
+      <div
+        class="grid grid-cols-1 gap-2"
+      >
+        <div
+          class="grid grid-cols-[60px_1fr] gap-2 items-center"
+        >
+          <div
+            class="h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 bg-gdg-pastel-red"
+          >
+            <span
+              class="text-xs rotate-90 whitespace-nowrap"
+            >
+              Track A
+            </span>
+          </div>
+          <div>
+            <div
+              data-testid="session-card-s1"
+            >
+              Mobile Session 1
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-[60px_1fr] gap-2 items-center"
+        >
+          <div
+            class="h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 bg-gdg-pastel-blue"
+          >
+            <span
+              class="text-xs rotate-90 whitespace-nowrap"
+            >
+              Track B
+            </span>
+          </div>
+          <div>
+            <div
+              data-testid="session-card-s2"
+            >
+              Mobile Session 2
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mb-4 border-b border-gray-300 pb-4"
+    >
+      <h3
+        class="text-lg font-bold mb-2 font-roboto-mono text-black-02"
+      >
+        09:30
+      </h3>
+      <div
+        class="grid grid-cols-1 gap-2"
+      />
+    </div>
+    <div
+      class="mb-4 border-b border-gray-300 pb-4"
+    >
+      <h3
+        class="text-lg font-bold mb-2 font-roboto-mono text-black-02"
+      >
+        10:00
+      </h3>
+      <div
+        class="grid grid-cols-1 gap-2"
+      >
+        <div
+          class="grid grid-cols-[60px_1fr] gap-2 items-center"
+        >
+          <div
+            class="h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 bg-gdg-pastel-red"
+          >
+            <span
+              class="text-xs rotate-90 whitespace-nowrap"
+            >
+              Track A
+            </span>
+          </div>
+          <div>
+            <div
+              data-testid="session-card-s3"
+            >
+              Mobile Session 3
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

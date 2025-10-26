@@ -191,6 +191,10 @@ This architecture design emphasizes decoupling the core business logic from the 
 
 This section outlines the key styling conventions and components used across the DevFest Tokyo 2025 website.
 
+#### Responsive Layout Policy
+
+The site uses a three-tier responsive layout—mobile (default), tablet (md: ≥ 768 px), and desktop (lg: ≥ 1024 px)—implemented with Tailwind CSS in a mobile-first approach. All sections share a centered container (container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl) so their inner content aligns horizontally across the page, while section backgrounds may span full width. Grids and flex layouts display as single-column on mobile, multi-column on tablet (e.g., 2 columns), and multi-column on desktop (e.g., 3 columns). Text, images, and components remain centered within this width, using responsive constraints like w-full max-w-sm mx-auto, ensuring consistent alignment and balanced spacing across devices.
+
 ### Colors
 
 - **Google Brand Colors**: `google-blue-500`, `google-red-500`, `google-yellow-500`, `google-green-500`

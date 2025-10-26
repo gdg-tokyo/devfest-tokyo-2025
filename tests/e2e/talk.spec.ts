@@ -1,6 +1,34 @@
 import { test, expect } from '@playwright/test'
 
 test.describe('Talk Page', () => {
+  test('should display the correct information on the talk card', async ({
+    page,
+  }) => {
+    await page.goto('/talks')
+    await page.waitForURL('/talks')
+
+    const firstTalkCard = page.locator('a[href^="/talks/"]').first()
+
+    // Verify that the talk title is displayed
+    await expect(
+      firstTalkCard.getByRole('heading', { name: 'Talk 1' })
+    ).toBeVisible()
+
+    // Verify that the speaker name is displayed
+    await expect(firstTalkCard.getByText('Speaker 1')).toBeVisible()
+
+    // Verify that the session time is displayed
+    await expect(firstTalkCard.getByText('10:00 - 10:50')).toBeVisible()
+
+    // Verify that the abstract is displayed and truncated
+    const abstractElement = firstTalkCard.locator('p')
+    await expect(abstractElement).toBeVisible()
+    const abstractStyle = await abstractElement.evaluate((element) => {
+      return window.getComputedStyle(element).webkitLineClamp
+    })
+    expect(abstractStyle).toBe('3')
+  })
+
   test('should navigate to the talk page and display the correct information', async ({
     page,
   }) => {
@@ -20,7 +48,7 @@ test.describe('Talk Page', () => {
     await expect(page.getByRole('heading', { name: 'Talk 1' })).toBeVisible()
 
     // Verify that the speaker name is displayed
-    await expect(page.locator('h3')).toBeVisible()
+    await expect(page.getByText('Speaker 1')).toBeVisible()
   })
 
   test('should navigate to the correct pages when clicking the action buttons', async ({

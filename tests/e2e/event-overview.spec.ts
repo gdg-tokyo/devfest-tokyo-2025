@@ -6,18 +6,27 @@ test.describe('Event Overview Section', () => {
   }) => {
     await page.goto('/')
 
+    const eventOverviewSection = page.getByTestId('event-overview-section')
+
     // Check for date and time
-    await expect(page.getByText('2025年11月22日 (土)')).toBeVisible()
-    await expect(page.getByText('12:00 - 18:00')).toBeVisible()
+    await expect(
+      eventOverviewSection.locator('p:has-text("2025年11月22日 (土)")')
+    ).toBeVisible()
+    await expect(
+      eventOverviewSection.locator('p:has-text("12:00 - 18:00")')
+    ).toBeVisible()
 
     // Check for location and address
-    await expect(page.getByText('ベルサール渋谷ファースト')).toBeVisible()
     await expect(
-      page.getByText('東京都渋谷区東1-2-20 住友不動産渋谷ファーストタワー2F')
+      eventOverviewSection.locator('p:has-text("ベルサール渋谷ファースト")')
+    ).toBeVisible()
+    await expect(
+      eventOverviewSection.locator(
+        'p:has-text("東京都渋谷区東1-2-20 住友不動産渋谷ファーストタワー2F")'
+      )
     ).toBeVisible()
 
     // Check for registration link
-    const eventOverviewSection = page.getByTestId('event-overview-section')
     const registerLink = eventOverviewSection.getByRole('link', {
       name: /参加登録/i,
     })

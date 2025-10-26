@@ -8,7 +8,6 @@ This document outlines the specification for the "Time Table Page," a central, h
 
 - **As an attendee, I want to view the event timetable at a glance** so that I can quickly understand the schedule and available sessions.
 - **As an attendee, I want to filter sessions by skill level (Beginner/Intermediate/Advanced)** so that I can find talks relevant to my expertise.
-- **As an attendee, I want to filter sessions by learning perspective (Introduction/Experience/Challenge)** so that I can focus on the type of content I'm interested in.
 - **As an attendee, I want to filter sessions by technical tags** so that I can easily locate sessions on specific topics.
 - **As an attendee, I want to see session details clearly on each card** so that I can make informed decisions about which sessions to attend.
 - **As an attendee, I want the timetable to be easy to navigate on both desktop and mobile devices** so that I can plan my schedule regardless of the device I'm using.
@@ -19,10 +18,11 @@ This document outlines the specification for the "Time Table Page," a central, h
 ### 3.1. Timetable Display
 
 - **FR1.1**: The system SHALL display a timetable of all event sessions.
-- **FR1.2**: On desktop, the timetable SHALL utilize a grid layout with time slots arranged vertically and tracks arranged horizontally.
+- **FR1.2**: The timetable SHALL adapt its layout based on screen size, utilizing a three-tier responsive design:
+  - **FR1.2.1**: On mobile devices (< 768px), sessions for each timeslot SHALL be stacked vertically, with each session card occupying the full available width.
+  - **FR1.2.2**: On tablet devices (≥ 768px and < 1024px), the timetable SHALL utilize a grid layout with time slots arranged vertically and sessions for each timeslot displayed in a 2-column grid.
+  - **FR1.2.3**: On PC devices (≥ 1024px), the timetable SHALL utilize a grid layout with time slots arranged vertically and tracks arranged horizontally in a 4-column grid.
 - **FR1.4**: Each session entry in the timetable SHALL be represented by a session card.
-- **FR1.5**: If session data is not available, the system SHALL display an overlay message card indicating data unavailability.
-- **FR1.6**: The visual design of the timetable page SHALL align with the provided screenshot (`@.reference/screenshot/time_table_1.png`) for overall layout and aesthetic.
 - **FR1.7**: The time slot indicators (e.g., "11:30") in the vertical axis of the timetable SHALL be displayed as plain text without a background color.
 - **FR1.8**: Each track column in the timetable grid SHALL have a header.
   - **FR1.8.1**: The track header SHALL be a card with rounded corners and a black border.
@@ -30,28 +30,25 @@ This document outlines the specification for the "Time Table Page," a central, h
 
 ### 3.2. Client-Side Filtering
 
-- **FR2.1**: The system SHALL provide a mandatory client-side filtering system at the top of the timetable page, as depicted in the reference screenshot (`@.reference/screenshot/time_table_1.png`).
 - **FR2.2**: The filtering system SHALL allow users to filter sessions by skill level ("Beginner," "Intermediate," "Advanced") using selectable chips.
-- **FR2.3**: The filtering system SHALL allow users to filter sessions by learning perspective ("Introduction," "Experience," "Challenge") using selectable chips.
 - **FR2.4**: The filtering system SHALL allow users to filter sessions by technical tags using selectable chips.
 - **FR2.5**: Filtering actions SHALL instantly update the displayed sessions without a page reload.
 - **FR2.6**: When filters are applied, sessions that do not match the criteria SHALL be visually de-emphasized (e.g., grayed out) and made non-interactive (i.e., click actions disabled). Matched sessions SHALL remain fully visible and interactive.
 - **FR2.7**: The filtering system SHALL include a free keyword search bar.
-  - **FR2.7.1**: The keyword search SHALL filter sessions by matching text in the session's `title`, `description_short`, `description_long`, and `speaker_names`.
+  - **FR2.7.1**: The keyword search SHALL filter sessions by matching text in the session's `title`, `description`, and `speaker_names`.
 
 ### 3.3. Session Card Presentation
 
 - **FR3.1**: Each session card SHALL adhere strictly to the DevFest brand guide's typography.
 - **FR3.2**: Each session card SHALL adhere strictly to the DevFest brand guide's color scheme, extending to tags/labels and track headers.
 - **FR3.3**: Session cards SHALL utilize distinct colors to visually emphasize the skill level label.
-- **FR3.4**: Session cards SHALL utilize distinct colors to visually emphasize the learning perspective label.
   - **FR3.5**: Session cards SHALL display essential session information (e.g., title, speaker, time, track, room number).
 
 ## 4. Non-Functional Requirements
 
 - **NFR4.1 - Performance**: The timetable page, including filtering, SHALL load and respond to user interactions rapidly, aiming for a smooth user experience.
 - **NFR4.2 - Usability**: The filtering system and timetable navigation SHALL be intuitive and easy to use for all attendees.
-  - **NFR4.3 - Accessibility**: The page SHALL be accessible to users with disabilities, adhering to WCAG 2.1 AA standards (specifically color contrast for text and interactive elements, and keyboard navigation for all controls).\* **NFR4.4 - Responsiveness**: The grid layout SHALL be responsive and adapt to smaller screen sizes, ensuring readability and usability on mobile devices without switching to a list view.
+  - **NFR4.3 - Accessibility**: The page SHALL be accessible to users with disabilities, adhering to WCAG 2.1 AA standards (specifically color contrast for text and interactive elements, and keyboard navigation for all controls).\- **NFR4.4 - Responsiveness**: The timetable SHALL implement a three-tier responsive layout (mobile, tablet, PC) to ensure optimal readability and usability across all device sizes, adhering to the specified breakpoints and column configurations.
 - **NFR4.5 - Security**: The page SHALL not require any access control as all information displayed is public. Data integrity SHALL be maintained for the JSON data source.
 
 ## 5. Success Criteria
@@ -89,9 +86,8 @@ This document outlines the specification for the "Time Table Page," a central, h
 ## 9. Key Entities
 
 - **Session**: Represents an individual talk or workshop at the event.
-  - Attributes: Title, Speaker(s), Time Slot, Track, Skill Level, Learning Perspective, Technical Tags, Description, Room.
+  - Attributes: Title, Speaker(s), Time Slot, Track, Skill Level, Technical Tags, Description, Room.
 - **Skill Level**: Categorization of session difficulty (Beginner, Intermediate, Advanced).
-- **Learning Perspective**: Categorization of session focus (Introduction, Experience, Challenge).
 - **Technical Tag**: Keywords describing the technical content of a session.
 
 ## 9. User Scenarios & Testing
@@ -104,19 +100,19 @@ This document outlines the specification for the "Time Table Page," a central, h
 
 ### 9.2. Scenario: Viewing Timetable on Mobile
 
-- **Given**: An attendee accesses the Time Table Page on a mobile device.
+- **Given**: An attendee accesses the Time Table Page on a mobile device (< 768px).
 - **When**: The page loads.
-- **Then**: The timetable is displayed in a responsive grid layout, and all filtering options are accessible.
+- **Then**: The timetable is displayed with sessions stacked vertically for each timeslot, and all filtering options are accessible.
 
 ### 9.3. Scenario: Session Card Visuals
 
 - **Given**: An attendee views a session card.
 - **When**: The session card is displayed.
-- **Then**: The card's typography and colors adhere to the DevFest brand guide, and the skill level and learning perspective labels are highlighted with distinct colors.
+- **Then**: The card's typography and colors adhere to the DevFest brand guide, and the skill level labels are highlighted with distinct colors.
 
 ### 9.4. Scenario: Rapid Session Selection
 
-- **Given**: An attendee is on the Time Table Page and applies multiple filters (e.g., "Advanced" skill, "Experience" perspective, "Machine Learning" tag).
+- **Given**: An attendee is on the Time Table Page and applies multiple filters (e.g., "Advanced" skill, "Machine Learning" tag).
 - **When**: The filters are applied.
 - **Then**: The timetable instantly updates to show only sessions matching all criteria, allowing the attendee to quickly identify relevant talks.
 

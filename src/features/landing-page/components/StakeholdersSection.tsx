@@ -33,8 +33,8 @@ const StakeholdersSection: React.FC = () => {
     .filter((group) => group.items.length > 0)
 
   return (
-    <section className="py-12 bg-off-white">
-      <div className="container mx-auto px-4">
+    <section className="container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl py-12 bg-off-white">
+      <div>
         {groupedStakeholders.map((group) => (
           <div key={group.type} className="mb-8 last:mb-0">
             <h3 className="text-2xl font-semibold text-center mb-2">

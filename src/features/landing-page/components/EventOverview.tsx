@@ -13,10 +13,10 @@ const EventOverview = () => {
 
   return (
     <section
-      className="bg-off-white py-20"
+      className="container mx-auto lg:px-8 max-w-screen-md lg:max-w-screen-xl bg-off-white"
       data-testid="event-overview-section"
     >
-      <div className="container mx-auto px-4">
+      <div>
         <div className="flex flex-wrap items-stretch">
           <div className="w-full md:w-4/12 px-4 text-center flex-grow">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-2 border-gray-800 h-full">

@@ -56,9 +56,9 @@ test.describe('Landing Page Hero Panel', () => {
   test('should navigate to talk directory page on "Talk Directory" button click', async ({
     page,
   }) => {
-    const talkDirectoryButton = page
-      .locator('section[aria-labelledby="event-title"]')
-      .getByRole('link', { name: 'Talk Directory' })
+    const talkDirectoryButton = page.getByRole('link', {
+      name: 'Talk Directory',
+    })
     await expect(talkDirectoryButton).toBeVisible()
     await talkDirectoryButton.click()
     await expect(page).toHaveURL('/talks')

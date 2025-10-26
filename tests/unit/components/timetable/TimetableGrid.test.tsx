@@ -116,6 +116,9 @@ const mockSessions = [
 ]
 
 const mockFilters = { levels: [], keyword: '' }
+const mockAllTimeSlots = ['10:00', '11:00'] // Based on mockSessions
+const mockDisplayTracks = ['Web & Frontend', 'Google Cloud'] // Based on mockSessions
+const mockFilterSession = jest.fn(() => true) // Mock filter function
 
 describe('TimetableGrid', () => {
   beforeEach(() => {
@@ -125,26 +128,63 @@ describe('TimetableGrid', () => {
   })
 
   it('renders track headers correctly', () => {
-    render(<TimetableGrid sessions={mockSessions} filters={mockFilters} />)
-    expect(screen.getByText('Google Cloud')).toBeInTheDocument()
-    expect(screen.getByText('Web & Frontend')).toBeInTheDocument()
+    render(
+      <TimetableGrid
+        sessions={mockSessions}
+        filters={mockFilters}
+        allTimeSlots={mockAllTimeSlots}
+        displayTracks={mockDisplayTracks}
+        filterSession={mockFilterSession}
+      />
+    )
+    const trackHeaders = screen.getAllByRole('heading', { level: 5 })
+    expect(
+      trackHeaders.some((header) => header.textContent === 'Google Cloud')
+    ).toBe(true)
+    expect(
+      trackHeaders.some((header) => header.textContent === 'Web & Frontend')
+    ).toBe(true)
   })
 
   it('renders time slot headers correctly', () => {
-    render(<TimetableGrid sessions={mockSessions} filters={mockFilters} />)
+    render(
+      <TimetableGrid
+        sessions={mockSessions}
+        filters={mockFilters}
+        allTimeSlots={mockAllTimeSlots}
+        displayTracks={mockDisplayTracks}
+        filterSession={mockFilterSession}
+      />
+    )
     expect(screen.getByText('10:00')).toBeInTheDocument()
     expect(screen.getByText('11:00')).toBeInTheDocument()
   })
 
   it('renders session cards in the correct slots', () => {
-    render(<TimetableGrid sessions={mockSessions} filters={mockFilters} />)
+    render(
+      <TimetableGrid
+        sessions={mockSessions}
+        filters={mockFilters}
+        allTimeSlots={mockAllTimeSlots}
+        displayTracks={mockDisplayTracks}
+        filterSession={mockFilterSession}
+      />
+    )
     expect(screen.getByText('Intro to Next.js')).toBeInTheDocument()
     expect(screen.getByText('Advanced TS')).toBeInTheDocument()
     expect(screen.getByText('Another Web Talk')).toBeInTheDocument()
   })
 
   it('does not render a session card for empty slots', () => {
-    render(<TimetableGrid sessions={mockSessions} filters={mockFilters} />)
+    render(
+      <TimetableGrid
+        sessions={mockSessions}
+        filters={mockFilters}
+        allTimeSlots={mockAllTimeSlots}
+        displayTracks={mockDisplayTracks}
+        filterSession={mockFilterSession}
+      />
+    )
     // This test is a bit tricky without knowing the exact structure of empty slots.
     // For now, we'll just ensure that the rendered sessions are correct.
     // A more robust test would check for the absence of a SessionCard in a known empty slot.

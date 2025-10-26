@@ -1,60 +1,56 @@
-import React from 'react'
-import SessionCard from './SessionCard'
+'use client'
+
 import { Session } from '@/types'
+import React from 'react'
+import { getTrackColor } from '../utils' // Import getTrackColor
+import SessionCard from './SessionCard'
 
 interface TimetableListProps {
   sessions: Session[]
-  filters: { level?: string; perspective?: string; tags: string[] }
+  filters: { levels: string[]; keyword: string }
+  allTimeSlots: string[]
+  filterSession: (
+    session: Session,
+    filters: { levels: string[]; keyword: string }
+  ) => boolean
 }
 
-const TimetableList: React.FC<TimetableListProps> = ({ sessions, filters }) => {
-  const filterSession = (session: Session): boolean => {
-    const levelMatch = !filters.level || session.level.includes(filters.level)
-    // Temporarily comment out perspectiveMatch as Session does not have perspective yet
-    // const perspectiveMatch =
-    //   !filters.perspective || session.perspective === filters.perspective
-    const tagsMatch =
-      filters.tags.length === 0 ||
-      (session.tech_tags &&
-        filters.tags.every((tag) => session.tech_tags?.includes(tag)))
-    return levelMatch /* && perspectiveMatch */ && tagsMatch
-  }
-
-  // Group sessions by time for a cleaner list view
-  const sessionsByTime: { [key: string]: Session[] } = sessions.reduce(
-    (acc, session) => {
-      if (!acc[session.time_start]) {
-        acc[session.time_start] = []
-      }
-      acc[session.time_start].push(session)
-      return acc
-    },
-    {} as { [key: string]: Session[] }
-  )
-
-  const sortedTimes = Object.keys(sessionsByTime).sort((a, b) =>
-    a.localeCompare(b)
-  )
-
+const TimetableList: React.FC<TimetableListProps> = ({
+  sessions,
+  filters,
+  allTimeSlots,
+  filterSession,
+}) => {
   return (
-    <div className="font-google-sans text-black-02">
-      {sortedTimes.map((time) => (
-        <div key={time} className="mb-6">
-          <h2 className="text-xl font-semibold mb-3 sticky top-0 bg-white py-2 border-b border-gray-200">
+    <div className="md:hidden">
+      {' '}
+      {/* This div will only be visible on mobile screens */}
+      {allTimeSlots.map((time, timeIndex) => (
+        <div key={time} className="mb-4 border-b border-gray-300 pb-4">
+          <h3 className="text-lg font-bold mb-2 font-roboto-mono text-black-02">
             {time}
-          </h2>
-          <div className="space-y-4">
-            {sessionsByTime[time].map((session) => {
-              const isFiltered = !filterSession(session)
-              return (
+          </h3>
+          <div className="grid grid-cols-1 gap-2">
+            {sessions
+              .filter((session) => session.time_start === time)
+              .filter((session) => filterSession(session, filters))
+              .map((session) => (
                 <div
                   key={session.id}
-                  className={`${isFiltered ? 'opacity-30' : ''}`}
+                  className="grid grid-cols-[60px_1fr] gap-2 items-center"
                 >
-                  <SessionCard session={session} />
+                  <div
+                    className={`h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 ${getTrackColor(session.track)}`}
+                  >
+                    <span className="text-xs rotate-90 whitespace-nowrap">
+                      {session.track}
+                    </span>
+                  </div>
+                  <div>
+                    <SessionCard session={session} isGrayedOut={false} />
+                  </div>
                 </div>
-              )
-            })}
+              ))}
           </div>
         </div>
       ))}

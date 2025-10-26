@@ -26,6 +26,7 @@
       "ShellTool(cat)",
       "ShellTool(cd)",
       "ShellTool(npm run test)",
+      "ShellTool(npm run build)",
       "ShellTool(git add)",
       "ShellTool(git diff)",
       "ShellTool(git status)",

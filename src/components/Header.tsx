@@ -32,8 +32,10 @@ const Header = () => {
           </div>{' '}
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden sm:flex items-center gap-4 font-google-sans">
+        {/* Desktop/Tablet Navigation */}
+        <div className="hidden md:flex items-center gap-4 font-google-sans">
+          {' '}
+          {/* Changed sm:flex to md:flex */}
           <Link href="/" className="text-gray-800 hover:text-google-blue-500">
             Home
           </Link>
@@ -55,7 +57,9 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="sm:hidden">
+        <div className="md:hidden">
+          {' '}
+          {/* Changed sm:hidden to md:hidden */}
           <button
             onClick={toggleMenu}
             className="text-gray-800 focus:outline-none"
@@ -92,7 +96,7 @@ const Header = () => {
       {isMenuOpen && (
         <div
           data-testid="mobile-menu"
-          className="sm:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm py-4"
+          className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm py-4" // Changed sm:hidden to md:hidden
         >
           <div className="container mx-auto px-4 flex flex-col gap-4 font-google-sans">
             <Link

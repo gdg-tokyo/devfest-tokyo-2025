@@ -1,6 +1,6 @@
 # Feature Specification: Talk Page
 
-- **Feature Branch**: `007-talk-page-i`
+- **Feature Branch**: `007-talk-page-concept`
 - **Created**: 2025-10-18
 - **Status**: Draft
 - **Input**: User description: "talk page: I want to add a single page for each talk. In the session page and talk directory, there is a talk card. When they are clicked, currently the dialog appears and show the session details. But want to link this to the new talk image. In the single talk page, user can see (1) talk title, (2) talk abstract, (3) time and track, and (4) speaker information. User can understand the expected talk contents deeply. Also, when the user paste the link to the talk page in X, the link is expanded and user can see the session title and picture if it's available (this is called OGP)."

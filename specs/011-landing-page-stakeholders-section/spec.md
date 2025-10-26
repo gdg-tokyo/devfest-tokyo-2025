@@ -1,6 +1,6 @@
 # Feature Specification: Stakeholders Section
 
-- **Feature Branch**: `011-landing-page-stakeholders`
+- **Feature Branch**: `011-landing-page-stakeholders-section`
 - **Created**: 2025-10-26
 - **Status**: Draft
 - **Input**: User description: "stakeholders section Create a responsive “Stakeholders” section on the landing page inspired by Kotlin Fest’s sponsor layout. It should display four groups—Organizer, Co-Organizer, Sponsor, and Supporter—in that order, each with logos linking to partner sites. Data must come from a simple JSON file containing name, url, and logo fields (plus optional tier). Logos appear in clean, centered grids with consistent height, automatic wrapping by tier, hover highlighting, dark/light-mode variants, and lazy-loading for performance. Empty groups are hidden automatically. Updating the data file alone should refresh the content, ensuring accessibility, keyboard navigation, and visual balance across devices. - 主催: GDG Tokyo - 共催: 東京国際工科専門職大学 (IPUT) - 協賛: Google"

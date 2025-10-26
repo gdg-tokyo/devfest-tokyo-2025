@@ -1,7 +1,7 @@
 # Implementation Plan: Time Table Page
 
-- **Branch**: `003-time-table-page` | **Date**: 2025-10-13 | **Spec**: /specs/003-time-table-page/spec.md
-- **Input**: Feature specification from `/specs/003-time-table-page/spec.md`
+- **Branch**: `003-time-table-page` | **Date**: 2025-10-13 | **Spec**: ./spec.md
+- **Input**: Feature specification from `./spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 

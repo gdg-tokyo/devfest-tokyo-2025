@@ -1,7 +1,7 @@
 # Implementation Plan: [FEATURE]
 
-- **Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-- **Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
+- **Branch**: `007-talk-page-concept` | **Date**: 2025-10-18 | **Spec**: ./spec.md
+- **Input**: Feature specification from `./spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
 
@@ -36,7 +36,7 @@ _GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 ### Documentation (this feature)
 
 ```
-specs/007-talk-page-i/
+specs/007-talk-page-concept/
 ├── plan.md              # This file (/speckit.plan command output)
 ├── research.md          # Phase 0 output (/speckit.plan command)
 ├── data-model.md        # Phase 1 output (/speckit.plan command)

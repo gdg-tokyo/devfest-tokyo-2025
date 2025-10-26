@@ -1,14 +1,9 @@
 'use client'
 
-import React from 'react'
 import { Session } from '@/types'
+import React from 'react'
+import { getRowSpan, getRowStart } from '../utils' // Import from utils
 import SessionCard from './SessionCard'
-import {
-  generateTimeSlots,
-  getRowStart,
-  getRowSpan,
-  filterSession,
-} from '../utils' // Import from utils
 
 interface TimetableGridProps {
   sessions: Session[]

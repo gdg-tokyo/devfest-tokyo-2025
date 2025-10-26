@@ -1,8 +1,8 @@
-import React from 'react'
-import Link from 'next/link'
-import { Session, Talk, Speaker } from '@/types'
-import { getTalks, getSpeakers } from '@/lib/data-parser'
+import { getSpeakers, getTalks } from '@/lib/data-parser'
 import { getLevelColor } from '@/lib/style-utils'
+import { Session, Speaker, Talk } from '@/types'
+import { LocationOn } from '@mui/icons-material' // Import LocationOn icon
+import Link from 'next/link'
 
 interface SessionCardProps {
   session: Session
@@ -67,7 +67,7 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
   return (
     <Link href={`/sessions/${session.id}`}>
       <div
-        className={`bg-white rounded-lg p-4 mb-4 border-2 border-gray-800 font-google-sans cursor-pointer hover:shadow-lg transition-shadow ${isGrayedOut ? 'opacity-30' : ''}`}
+        className={`bg-white rounded-lg p-4 mb-1 border-2 border-gray-800 font-google-sans cursor-pointer hover:shadow-lg transition-shadow ${isGrayedOut ? 'opacity-30' : ''}`}
       >
         <h3 className="text-lg font-semibold text-gray-900 mb-2">
           {session.title}
@@ -76,18 +76,23 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
           <PersonIcon />
           <span>{speakerNames}</span>
         </div>
-        <div className="text-sm text-gray-600 mb-1 flex items-center">
-          <ClockIcon />
-          <span>
-            {timeStart} - {timeEnd}
-          </span>
-        </div>
-        {session.track && (
-          <div className="text-sm text-gray-600 mb-1 flex items-center">
-            <span className="font-semibold mr-1">Track:</span>
-            <span>{session.track}</span>
+        <div className="text-sm text-gray-600 mb-1 flex items-center justify-start">
+          <div className="flex items-center">
+            <ClockIcon />
+            <span>
+              {timeStart} - {timeEnd}
+            </span>
           </div>
-        )}
+          {session.track && (
+            <div className="flex items-center ml-2">
+              {' '}
+              {/* Added ml-2 for spacing */}
+              <LocationOn className="h-4 w-4 inline-block mr-1" />{' '}
+              {/* Location pin icon */}
+              <span>{session.track}</span>
+            </div>
+          )}
+        </div>
 
         <div className="flex flex-wrap gap-1 mt-2">
           {session.level &&
@@ -99,8 +104,6 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
                 {levelItem}
               </span>
             ))}
-          {/* Tech tags are not directly available on the new Session type, assuming they might be on Talk or removed */}
-          {/* For now, removing tech_tags display from card to avoid errors */}
         </div>
       </div>
     </Link>

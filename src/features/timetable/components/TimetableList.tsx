@@ -29,7 +29,7 @@ const TimetableList: React.FC<TimetableListProps> = ({
           <h3 className="text-lg font-bold mb-2 font-roboto-mono text-black-02">
             {time}
           </h3>
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 gap-2">
             {sessions
               .filter((session) => session.time_start === time)
               .filter((session) => filterSession(session, filters))

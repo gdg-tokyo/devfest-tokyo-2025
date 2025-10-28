@@ -1,7 +1,14 @@
-import { getTalkById } from '@/lib/data-parser'
+import { getTalkById, getTalks } from '@/lib/data-parser'
 import TalkDetail from '@/features/talk/components/TalkDetail'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+
+export async function generateStaticParams() {
+  const allTalks = getTalks()
+  return allTalks.map((talk) => ({
+    talkId: talk.id,
+  }))
+}
 
 export async function generateMetadata({
   params,

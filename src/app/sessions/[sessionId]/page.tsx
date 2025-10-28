@@ -3,6 +3,13 @@ import { getSessions } from '@/lib/data-parser'
 import { Session } from '@/types'
 import SessionDetail from '@/features/session/components/SessionDetail'
 
+export async function generateStaticParams() {
+  const allSessions = getSessions()
+  return allSessions.map((session) => ({
+    sessionId: session.id,
+  }))
+}
+
 interface SessionPageProps {
   params: {
     sessionId: string

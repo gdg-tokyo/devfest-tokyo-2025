@@ -14,7 +14,10 @@ This is the second paragraph.
 """
     result = parser_utils.extract_title_and_description(markdown_content)
     assert result["title"] == "My Title"
-    assert result["description"] == "<div><p>This is the first paragraph.</p><p>This is the second paragraph.</p></div>"
+    assert (
+        result["description"]
+        == "<div><p>This is the first paragraph.</p><p>This is the second paragraph.</p></div>"
+    )
 
 
 def test_extract_title_and_description_no_h1():
@@ -25,7 +28,6 @@ This is the second paragraph.
 """
     with pytest.raises(ValueError, match="H1 title not found in markdown content."):
         parser_utils.extract_title_and_description(markdown_content)
-
 
 
 def test_extract_title_and_description_no_paragraph():
@@ -57,7 +59,10 @@ Speaker details here.
 """
     result = parser_utils.extract_title_and_description(markdown_content)
     assert result["title"] == "My Title"
-    assert result["description"] == "<div><p>This is the description.\nIt should end before the speaker section.</p></div>"
+    assert (
+        result["description"]
+        == "<div><p>This is the description.\nIt should end before the speaker section.</p></div>"
+    )
 
 
 # --- generate_session_id Tests ---

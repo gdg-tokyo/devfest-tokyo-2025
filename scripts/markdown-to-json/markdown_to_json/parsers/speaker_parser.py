@@ -17,8 +17,8 @@ def parse_speaker_from_content(content: str):
 
     speaker_heading = speaker_section_match.group(1).strip()
     speaker_bio_markdown = speaker_section_match.group(2).strip()
-    speaker_name, final_twitter_handle, final_job = (
-        _parse_speaker_heading(speaker_heading)
+    speaker_name, final_twitter_handle, final_job = _parse_speaker_heading(
+        speaker_heading
     )
     speaker_bio_text, photo_url = _parse_speaker_bio(speaker_bio_markdown)
 
@@ -76,7 +76,7 @@ def _parse_speaker_bio(speaker_bio_markdown: str):
     img_tag = soup.find("img")
     if img_tag and "src" in img_tag.attrs:
         photo_url = img_tag["src"]
-        img_tag.extract() # Remove the image tag from the soup so it's not part of the bio
+        img_tag.extract()  # Remove the image tag from the soup so it's not part of the bio
 
     # Find #### metadata equivalent in HTML (h4 tag with "metadata" text)
     metadata_h4 = None
@@ -87,7 +87,9 @@ def _parse_speaker_bio(speaker_bio_markdown: str):
 
     bio_html_elements = []
     # Iterate through siblings before the metadata_h4
-    current_element = soup.find(lambda tag: tag.name) # Find the first tag in the remaining soup
+    current_element = soup.find(
+        lambda tag: tag.name
+    )  # Find the first tag in the remaining soup
     while current_element:
         if current_element == metadata_h4:
             break

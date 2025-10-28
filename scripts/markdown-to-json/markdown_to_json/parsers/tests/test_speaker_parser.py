@@ -19,9 +19,12 @@ It has multiple paragraphs.
     speaker, speaker_ids = parse_speaker_from_content(markdown_content)
 
     assert speaker is not None
-    assert speaker.id == "01332c87" # Hash of "Jane Doe"
+    assert speaker.id == "01332c87"  # Hash of "Jane Doe"
     assert speaker.name == "Jane Doe"
-    assert speaker.bio == "<div><p>This is Jane's bio.</p><p>It has multiple paragraphs.</p><p></p></div>"
+    assert (
+        speaker.bio
+        == "<div><p>This is Jane's bio.</p><p>It has multiple paragraphs.</p><p></p></div>"
+    )
     assert speaker.photo_url == "https://example.com/jane.jpg"
     assert speaker.job == "Google AI Lead"
     assert speaker.twitter_handle == "janedoe"
@@ -40,7 +43,7 @@ John's bio without a photo.
     speaker, speaker_ids = parse_speaker_from_content(markdown_content)
 
     assert speaker is not None
-    assert speaker.id == "ef61a579" # Hash of "John Smith"
+    assert speaker.id == "ef61a579"  # Hash of "John Smith"
     assert speaker.name == "John Smith"
     assert speaker.bio == "<div><p>John's bio without a photo.</p></div>"
     assert speaker.photo_url == ""
@@ -60,7 +63,7 @@ Bob's bio with no extra metadata.
     speaker, speaker_ids = parse_speaker_from_content(markdown_content)
 
     assert speaker is not None
-    assert speaker.id == "1d9126fc" # Hash of "Bob Williams"
+    assert speaker.id == "1d9126fc"  # Hash of "Bob Williams"
     assert speaker.name == "Bob Williams"
     assert speaker.bio == "<div><p>Bob's bio with no extra metadata.</p></div>"
     assert speaker.photo_url == ""

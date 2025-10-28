@@ -39,9 +39,10 @@ def test_parse_session_with_multi_paragraph_description(setup_test_data):
     base_path = setup_test_data
     docs_base_path = os.path.join(base_path, "docs", "web")
 
-
     # Create a temporary markdown file for the test within the test data structure
-    test_session_dir = os.path.join(docs_base_path, "prod", "sessions", "99-test-session")
+    test_session_dir = os.path.join(
+        docs_base_path, "prod", "sessions", "99-test-session"
+    )
     os.makedirs(test_session_dir, exist_ok=True)
     test_session_path = os.path.join(test_session_dir, "README.md")
     test_session_content = """# Test Session Title
@@ -76,7 +77,9 @@ def test_parse_talk_with_multi_paragraph_abstract(setup_test_data):
     docs_base_path = os.path.join(base_path, "docs", "web")
 
     # Create a temporary markdown file for the talk within the test data structure
-    test_session_dir = os.path.join(docs_base_path, "prod", "sessions", "98-test-talk-session")
+    test_session_dir = os.path.join(
+        docs_base_path, "prod", "sessions", "98-test-talk-session"
+    )
     os.makedirs(test_session_dir, exist_ok=True)
     test_talk_path = os.path.join(test_session_dir, "talk-test-abstract.md")
     test_talk_content = """# Test Talk Title
@@ -110,5 +113,3 @@ Test Speaker Bio.
 <li>Abstract Item 2</li>
 </ul><p>This is another abstract paragraph.</p></div>"""
     assert test_talk.abstract == expected_abstract
-
-    

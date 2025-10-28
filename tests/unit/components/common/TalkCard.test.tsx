@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen, waitFor, act } from '@testing-library/react'
 import TalkCard from '@/components/common/TalkCard'
 import { Talk, Session, Speaker } from '@/types'
 import '@testing-library/jest-dom'
@@ -21,6 +21,7 @@ const mockTalk: Talk = {
   speaker_ids: ['speaker-1'],
   tech_tags: [],
   perspective: [],
+  level: [],
 }
 
 const mockSession: Session = {
@@ -31,6 +32,9 @@ const mockSession: Session = {
   time_end: '11:00',
   track: 'A',
   level: ['Beginner'],
+  tech_tags: [],
+  description: '',
+  perspective: [],
 }
 
 const mockSpeakers: Speaker[] = [
@@ -38,48 +42,98 @@ const mockSpeakers: Speaker[] = [
     id: 'speaker-1',
     name: 'Test Speaker',
     bio: '',
-    github: '',
-    twitter: '',
+    photo_url: '',
+    job: '',
+    twitter_handle: '',
   },
 ]
 
 describe('TalkCard', () => {
-  beforeEach(() => {
-    render(
-      <TalkCard
-        talk={mockTalk}
-        sessionId={mockSession.id}
-        session={mockSession}
-        speakers={mockSpeakers}
-      />
-    )
-  })
-
-  it('should display the talk title', () => {
+  it('should display the talk title', async () => {
+    await act(async () => {
+      render(
+        <TalkCard
+          talk={mockTalk}
+          sessionId={mockSession.id}
+          session={mockSession}
+          speakers={mockSpeakers}
+        />
+      )
+    })
     expect(screen.getByText(mockTalk.title)).toBeInTheDocument()
   })
 
-  it('should display the speaker names', () => {
+  it('should display the speaker names', async () => {
+    await act(async () => {
+      render(
+        <TalkCard
+          talk={mockTalk}
+          sessionId={mockSession.id}
+          session={mockSession}
+          speakers={mockSpeakers}
+        />
+      )
+    })
     expect(screen.getByText(mockSpeakers[0].name)).toBeInTheDocument()
   })
 
-  it('should display the session time', () => {
+  it('should display the session time', async () => {
+    await act(async () => {
+      render(
+        <TalkCard
+          talk={mockTalk}
+          sessionId={mockSession.id}
+          session={mockSession}
+          speakers={mockSpeakers}
+        />
+      )
+    })
     expect(
       screen.getByText(`${mockSession.time_start} - ${mockSession.time_end}`)
     ).toBeInTheDocument()
   })
 
-  it('should display the truncated abstract', () => {
-    const abstractElement = screen.getByText(mockTalk.abstract)
+  it('should display the truncated abstract', async () => {
+    await act(async () => {
+      render(
+        <TalkCard
+          talk={mockTalk}
+          sessionId={mockSession.id}
+          session={mockSession}
+          speakers={mockSpeakers}
+        />
+      )
+    })
+    const abstractElement = await screen.findByText(mockTalk.abstract)
     expect(abstractElement).toBeInTheDocument()
     expect(abstractElement.parentElement).toHaveClass('line-clamp-3')
   })
 
-  it('should display the level tags', () => {
+  it('should display the level tags', async () => {
+    await act(async () => {
+      render(
+        <TalkCard
+          talk={mockTalk}
+          sessionId={mockSession.id}
+          session={mockSession}
+          speakers={mockSpeakers}
+        />
+      )
+    })
     expect(screen.getByText(mockSession.level[0])).toBeInTheDocument()
   })
 
-  it('should navigate to the correct talk page on click', () => {
+  it('should navigate to the correct talk page on click', async () => {
+    await act(async () => {
+      render(
+        <TalkCard
+          talk={mockTalk}
+          sessionId={mockSession.id}
+          session={mockSession}
+          speakers={mockSpeakers}
+        />
+      )
+    })
     const linkElement = screen.getByRole('link')
     expect(linkElement).toHaveAttribute('href', `/talks/${mockTalk.id}`)
   })

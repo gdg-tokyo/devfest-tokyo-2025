@@ -9,6 +9,7 @@ import Link from 'next/link'
 import LaunchIcon from '@mui/icons-material/Launch'
 import { getLevelColor, getPerspectiveColor } from '@/lib/style-utils'
 import RegistrationButton from '@/components/common/RegistrationButton'
+import HtmlContent from '@/components/common/HtmlContent'
 
 interface TalkDetailProps {
   talk: Talk
@@ -60,7 +61,7 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
           ))}
         </div>
         <h2 className="text-2xl font-bold mt-8 mb-2">概要</h2>
-        <p className="text-lg mb-4">{talk.abstract}</p>
+        <HtmlContent html={talk.abstract} />
       </div>
 
       <div>
@@ -86,7 +87,7 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
             <div>
               <h3 className="text-4xl font-bold">{speaker.name}</h3>
               <p className="text-xl text-gray-600">{speaker.job}</p>
-              <p className="mt-2">{speaker.bio}</p>
+              <HtmlContent html={speaker.bio} />
               {speaker.twitter_handle && (
                 <a
                   href={`https://twitter.com/${speaker.twitter_handle}`}

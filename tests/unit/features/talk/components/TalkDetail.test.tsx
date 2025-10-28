@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import TalkDetail from '@/features/talk/components/TalkDetail'
 import { Talk, Speaker } from '@/types'
 
@@ -28,13 +28,15 @@ const mockSpeakers: Speaker[] = [
 ]
 
 describe('TalkDetail', () => {
-  it('renders talk details correctly', () => {
-    render(<TalkDetail talk={mockTalk} speakers={mockSpeakers} />)
+  it('renders talk details correctly', async () => {
+    await act(async () => {
+      render(<TalkDetail talk={mockTalk} speakers={mockSpeakers} />)
+    })
     expect(screen.getByText('Introduction to Next.js')).toBeInTheDocument()
     expect(screen.getByText('10:00 - 10:50')).toBeInTheDocument()
     expect(screen.getByText('Web')).toBeInTheDocument()
     expect(
-      screen.getByText('This session will cover the basics of Next.js.')
+      await screen.findByText('This session will cover the basics of Next.js.')
     ).toBeInTheDocument()
     expect(screen.getByText('Next.js')).toBeInTheDocument()
     expect(screen.getByText('React')).toBeInTheDocument()
@@ -42,38 +44,48 @@ describe('TalkDetail', () => {
     expect(screen.getByText('Introduction')).toBeInTheDocument()
   })
 
-  it('renders speaker details correctly', () => {
-    render(<TalkDetail talk={mockTalk} speakers={mockSpeakers} />)
+  it('renders speaker details correctly', async () => {
+    await act(async () => {
+      render(<TalkDetail talk={mockTalk} speakers={mockSpeakers} />)
+    })
     expect(screen.getByText('John Doe')).toBeInTheDocument()
     expect(screen.getByText('Software Engineer')).toBeInTheDocument()
-    expect(screen.getByText('A seasoned web developer.')).toBeInTheDocument()
+    expect(
+      await screen.findByText('A seasoned web developer.')
+    ).toBeInTheDocument()
     expect(screen.getByTestId('XIcon')).toBeInTheDocument()
   })
 
-  it('renders fallback icon for speaker photo', () => {
+  it('renders fallback icon for speaker photo', async () => {
     const speakersWithoutPhoto: Speaker[] = [
       {
         ...mockSpeakers[0],
         photo_url: '',
       },
     ]
-    render(<TalkDetail talk={mockTalk} speakers={speakersWithoutPhoto} />)
+    await act(async () => {
+      render(<TalkDetail talk={mockTalk} speakers={speakersWithoutPhoto} />)
+    })
     expect(screen.getByTestId('PersonIcon')).toBeInTheDocument()
   })
 
-  it('does not render X icon if twitter_handle is not available', () => {
+  it('does not render X icon if twitter_handle is not available', async () => {
     const speakersWithoutTwitter: Speaker[] = [
       {
         ...mockSpeakers[0],
         twitter_handle: '',
       },
     ]
-    render(<TalkDetail talk={mockTalk} speakers={speakersWithoutTwitter} />)
+    await act(async () => {
+      render(<TalkDetail talk={mockTalk} speakers={speakersWithoutTwitter} />)
+    })
     expect(screen.queryByTestId('XIcon')).not.toBeInTheDocument()
   })
 
-  it('renders action buttons correctly', () => {
-    render(<TalkDetail talk={mockTalk} speakers={mockSpeakers} />)
+  it('renders action buttons correctly', async () => {
+    await act(async () => {
+      render(<TalkDetail talk={mockTalk} speakers={mockSpeakers} />)
+    })
     expect(
       screen.getByRole('link', { name: /今すぐ参加登録/i })
     ).toBeInTheDocument()

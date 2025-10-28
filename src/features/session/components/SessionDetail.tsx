@@ -1,6 +1,7 @@
 import React from 'react'
 import { Session, Talk, Speaker } from '@/types'
 import TalkCard from '@/components/common/TalkCard'
+import HtmlContent from '@/components/common/HtmlContent'
 import { getLevelColor, getPerspectiveColor } from '@/lib/style-utils'
 import { getTalks, getSpeakers } from '@/lib/data-parser'
 
@@ -50,7 +51,7 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
             </span>
           ))}
       </div>
-      <p className="text-gray-700 whitespace-pre-line">{session.description}</p>
+      <HtmlContent html={session.description} />
 
       {sessionTalks.length > 0 && (
         <div className="space-y-4">

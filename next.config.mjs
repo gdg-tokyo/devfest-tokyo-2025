@@ -50,6 +50,18 @@ const nextConfig = {
         port: '',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'citadel-ai.com',
+        port: '',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.github.io',
+        port: '',
+        pathname: '**',
+      },
     ],
   },
 }

@@ -21,10 +21,10 @@ test.describe('Talk Page', () => {
     await expect(firstTalkCard.getByText('10:00 - 10:50')).toBeVisible()
 
     // Verify that the abstract is displayed and truncated
-    const abstractElement = firstTalkCard.locator('p')
+    const abstractElement = firstTalkCard.locator('article')
     await expect(abstractElement).toBeVisible()
     const abstractStyle = await abstractElement.evaluate((element) => {
-      return window.getComputedStyle(element).webkitLineClamp
+      return window.getComputedStyle(element.parentElement).webkitLineClamp
     })
     expect(abstractStyle).toBe('3')
   })

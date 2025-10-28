@@ -10,7 +10,7 @@ test.describe('Landing Page Hero Panel', () => {
     await expect(logo).toBeVisible()
     await expect(logo).toHaveAttribute(
       'src',
-      /_next\/image\?url=.*%2Fimages%2Fdevfest25-tokyo-logo-with-gdg-bracket.png&w=\d+&q=\d+$/
+      '/images/devfest25-tokyo-logo-with-gdg-bracket.png'
     )
   })
 

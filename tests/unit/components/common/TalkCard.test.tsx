@@ -72,7 +72,7 @@ describe('TalkCard', () => {
   it('should display the truncated abstract', () => {
     const abstractElement = screen.getByText(mockTalk.abstract)
     expect(abstractElement).toBeInTheDocument()
-    expect(abstractElement).toHaveClass('line-clamp-3')
+    expect(abstractElement.parentElement).toHaveClass('line-clamp-3')
   })
 
   it('should display the level tags', () => {

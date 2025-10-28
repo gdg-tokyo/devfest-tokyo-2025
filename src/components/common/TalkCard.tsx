@@ -4,6 +4,7 @@ import PersonIcon from '@mui/icons-material/Person'
 import Link from 'next/link'
 import React from 'react'
 import { getLevelColor } from '@/lib/style-utils'
+import HtmlContent from '@/components/common/HtmlContent'
 
 interface TalkCardProps {
   talk: Talk
@@ -48,7 +49,9 @@ const TalkCard: React.FC<TalkCardProps> = ({
             </span>
           </div>
         </div>
-        <p className="text-gray-600 text-sm line-clamp-3">{talk.abstract}</p>
+        <div className="text-gray-600 text-sm line-clamp-3">
+          <HtmlContent html={talk.abstract} />
+        </div>
       </div>
       <div className="mt-4">
         <div className="flex flex-wrap gap-1 mt-2">

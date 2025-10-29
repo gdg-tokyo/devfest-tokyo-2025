@@ -1,6 +1,11 @@
+const isProd = process.env.GITHUB_PAGES === 'true'
+const repoName = 'devfest-tokyo-2025-web'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  assetPrefix: isProd ? `/${repoName}/` : undefined,
+  basePath: isProd ? `/${repoName}` : undefined,
   images: {
     unoptimized: true,
     remotePatterns: [

@@ -22,10 +22,11 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
 
   const speakerNames =
     session.talk_ids.length > 0
-      ? talksMap
-          .get(session.talk_ids[0])
-          ?.speaker_ids.map((speakerId) => speakersMap.get(speakerId)?.name)
-          .filter((name): name is string => name !== undefined)
+      ? session.talk_ids
+          .flatMap((talkId) => talksMap.get(talkId)?.speaker_ids || []) // Get all speaker_ids from all talks
+          .filter((speakerId, index, self) => self.indexOf(speakerId) === index) // Get unique speaker_ids
+          .map((speakerId) => speakersMap.get(speakerId)?.name) // Get speaker names
+          .filter((name): name is string => name !== undefined) // Filter out undefined names
           .join(', ')
       : 'N/A'
 

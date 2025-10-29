@@ -84,8 +84,6 @@ Examples:
 
   ```text
   <type>: <short summary>
-
-  (optional )Longer explanation if needed, describing motivation or implementation detail.
   ```
 
 Examples:

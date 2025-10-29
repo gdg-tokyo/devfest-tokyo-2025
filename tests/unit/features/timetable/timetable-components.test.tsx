@@ -66,7 +66,7 @@ describe('TimetableList (Mobile View)', () => {
   ]
 
   const mockFilters = { levels: [], keyword: '' }
-  const mockAllTimeSlots = ['09:00', '09:30', '10:00']
+  const mockAllTimeSlots = ['09:00', '10:00']
   const mockFilterSession = jest.fn(() => true)
 
   beforeEach(() => {

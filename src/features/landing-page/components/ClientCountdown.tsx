@@ -2,7 +2,7 @@
 
 import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown'
 import '@leenguyen/react-flip-clock-countdown/dist/index.css'
-import React, { useEffect, useMemo, useState } from 'react' // Import useState, useEffect, and useMemo
+import React, { CSSProperties, useEffect, useMemo, useState } from 'react' // Import useState, useEffect, and useMemo
 
 interface ClientCountdownProps {
   // No initialTargetDate prop needed anymore
@@ -32,7 +32,7 @@ const ClientCountdown: React.FC<ClientCountdownProps> = () => {
         fontWeight: 500,
         textTransform: 'uppercase',
         color: '#1e1e1e',
-      },
+      } as CSSProperties,
       digitBlockStyle: {
         width: isMobile ? 30 : 50,
         height: isMobile ? 42 : 70,

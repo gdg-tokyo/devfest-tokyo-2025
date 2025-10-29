@@ -1,5 +1,5 @@
 const isProd = process.env.GITHUB_PAGES === 'true'
-const repoName = 'devfest-tokyo-2025-web'
+const repoName = 'devfest-tokyo-2025'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

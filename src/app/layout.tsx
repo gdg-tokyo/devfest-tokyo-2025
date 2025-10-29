@@ -18,8 +18,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-off-white`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${inter.className} bg-off-white`}
+        suppressHydrationWarning
+      >
         <Header />
         {children}
         <Footer /> {/* Add Footer component */}

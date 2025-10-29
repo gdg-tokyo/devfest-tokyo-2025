@@ -43,7 +43,7 @@ const HeroPanel: React.FC = () => {
             ~3つの新たな視点に出会える一日~
           </p>
         </div>
-        <div className="mb-8">
+        <div className="mb-8 py-3 px-6 max-w-2xl mx-auto">
           {/* Render ClientCountdown only if it's loaded */}
           {ClientCountdown && <ClientCountdown />}
         </div>

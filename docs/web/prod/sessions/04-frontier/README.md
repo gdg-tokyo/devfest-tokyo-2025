@@ -1,9 +1,9 @@
 ---
 id: frontier
-track: Track D
+track: Track C
 time_start: '13:20'
 time_end: '14:10'
-level: ['Advanced']
+level: ['Beginner']
 tech_tags: ['Web', 'Mobile']
 ---
 

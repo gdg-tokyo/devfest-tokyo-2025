@@ -41,7 +41,7 @@ const ClientCountdown: React.FC<ClientCountdownProps> = () => {
       }}
       dividerStyle={{ color: '#1e1e1e', height: 1 }}
       separatorStyle={{ color: '#1e1e1e', size: '6px' }}
-      duration={500}
+      duration={0.5}
       className="flex justify-center"
     />
   )

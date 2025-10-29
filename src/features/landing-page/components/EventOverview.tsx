@@ -13,53 +13,77 @@ const EventOverview = () => {
 
   return (
     <section
-      className="container mx-auto lg:px-8 max-w-screen-md lg:max-w-screen-xl bg-off-white"
+      className="container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl bg-off-white"
       data-testid="event-overview-section"
     >
       <div>
-        <div className="flex flex-wrap items-stretch">
-          <div className="w-full md:w-4/12 px-4 text-center flex-grow">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-2 border-gray-800 h-full">
-              <div className="px-4 py-5 flex-auto">
-                <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-                  <CalendarToday />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+          <div className="px-1 text-center">
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full shadow-lg rounded-lg border-2 border-gray-800 h-full">
+              <div className="flex items-center px-2 py-2 flex-auto">
+                <div className="w-1/4 flex justify-center">
+                  <div className="text-white p-2 text-center inline-flex items-center justify-center w-12 h-12 sm:w-12 sm:h-12 mb-3 sm:mb-5 shadow-lg rounded-full bg-red-400">
+                    <CalendarToday />
+                  </div>
                 </div>
-                <h6 className="text-xl font-semibold">Date & Time</h6>
-                <p className="mt-2 mb-4 text-gray-600">
-                  {eventOverview.date} <br /> {eventOverview.time}
-                </p>
+                <div className="w-3/4 text-left">
+                  <h6 className="text-base sm:text-xl font-semibold">
+                    Date & Time
+                  </h6>
+                  <p className="mt-1 mb-2 text-sm sm:text-base text-gray-600">
+                    {eventOverview.date} <br /> {eventOverview.time}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="w-full md:w-4/12 px-4 text-center flex-grow">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-2 border-gray-800 h-full">
-              <div className="px-4 py-5 flex-auto">
-                <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
-                  <LocationOn />
+          <div className="px-1 text-center">
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full shadow-lg rounded-lg border-2 border-gray-800 h-full">
+              <div className="flex items-center px-2 py-2 flex-auto">
+                <div className="w-1/4 flex justify-center">
+                  <div className="text-white p-2 text-center inline-flex items-center justify-center w-12 h-12 sm:w-12 sm:h-12 mb-3 sm:mb-5 shadow-lg rounded-full bg-blue-400">
+                    <LocationOn />
+                  </div>
                 </div>
-                <h6 className="text-xl font-semibold">Location</h6>
-                <p className="mt-2 mb-4 text-gray-600">
-                  <span>{eventOverview.location}</span>{' '}
-                  <span className="text-gray-500">{eventOverview.address}</span>
-                </p>
+                <div className="w-3/4 text-left">
+                  <h6 className="text-base sm:text-xl font-semibold">
+                    Location
+                  </h6>
+                  <p className="mt-1 mb-2 text-sm sm:text-base text-gray-600">
+                    <span>{eventOverview.location}</span>{' '}
+                    <span className="text-gray-500">
+                      {eventOverview.address}
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="w-full md:w-4/12 px-4 text-center flex-grow">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-2 border-gray-800 h-full">
-              <div className="px-4 py-5 flex-auto">
-                <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
-                  <ConfirmationNumber />
+          <div className="px-1 text-center">
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full shadow-lg rounded-lg border-2 border-gray-800 h-full">
+              <div className="flex items-center px-2 py-2 flex-auto">
+                <div className="w-1/4 flex justify-center">
+                  <div className="text-white p-2 text-center inline-flex items-center justify-center w-12 h-12 sm:w-12 sm:h-12 mb-3 sm:mb-5 shadow-lg rounded-full bg-green-400">
+                    <ConfirmationNumber />
+                  </div>
                 </div>
-                <h6 className="text-xl font-semibold">参加方法</h6>
-                <p className="mt-2 mb-4 text-gray-600">
-                  外部イベントページ (connpass.com) から参加登録をお願いします。
-                </p>
-                <RegistrationButton href={eventOverview.registrationUrl}>
-                  参加登録
-                </RegistrationButton>
+                <div className="w-3/4 text-left">
+                  <h6 className="text-base sm:text-xl font-semibold">
+                    参加方法
+                  </h6>
+                  <p className="mt-1 mb-2 text-sm sm:text-base text-gray-600">
+                    外部イベントページ (connpass.com)
+                    から参加登録をお願いします。
+                  </p>
+                  <RegistrationButton
+                    href={eventOverview.registrationUrl}
+                    className="text-sm px-3 py-1"
+                  >
+                    参加登録
+                  </RegistrationButton>
+                </div>
               </div>
             </div>
           </div>

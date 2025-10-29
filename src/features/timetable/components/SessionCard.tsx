@@ -22,10 +22,11 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
 
   const speakerNames =
     session.talk_ids.length > 0
-      ? talksMap
-          .get(session.talk_ids[0])
-          ?.speaker_ids.map((speakerId) => speakersMap.get(speakerId)?.name)
-          .filter((name): name is string => name !== undefined)
+      ? session.talk_ids
+          .flatMap((talkId) => talksMap.get(talkId)?.speaker_ids || []) // Get all speaker_ids from all talks
+          .filter((speakerId, index, self) => self.indexOf(speakerId) === index) // Get unique speaker_ids
+          .map((speakerId) => speakersMap.get(speakerId)?.name) // Get speaker names
+          .filter((name): name is string => name !== undefined) // Filter out undefined names
           .join(', ')
       : 'N/A'
 
@@ -38,7 +39,7 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
     <Link href={`/sessions/${session.id}`}>
       <div
         data-testid={`session-card-${session.id}`}
-        className={`bg-white rounded-lg p-4 mb-1 border-2 border-gray-800 font-google-sans cursor-pointer hover:shadow-lg transition-shadow ${isGrayedOut ? 'opacity-30' : ''}`}
+        className={`h-full bg-white rounded-lg p-4 mb-1 border-2 border-gray-800 font-google-sans cursor-pointer hover:shadow-lg transition-shadow ${isGrayedOut ? 'opacity-30' : ''}`}
       >
         <h3 className="text-lg font-semibold text-gray-900 mb-2">
           {session.title}

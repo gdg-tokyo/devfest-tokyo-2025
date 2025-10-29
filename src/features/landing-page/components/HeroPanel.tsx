@@ -32,16 +32,18 @@ const HeroPanel: React.FC = () => {
           priority
           className="mx-auto mb-4"
         />
-        <h1
-          id="event-title"
-          className="text-4xl md:text-5xl font-bold text-black-02 google-sans"
-        >
-          Fine your new eyes
-        </h1>
-        <p className="text-lg md:text-xl text-gray-600 mb-4">
-          ~3つの新たな視点に出会える一日~
-        </p>
         <div className="mb-8">
+          <h1
+            id="event-title"
+            className="text-2xl md:text-3xl font-bold text-black-02 google-sans"
+          >
+            Find your new &quot;eyes&quot;
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 mb-4">
+            ~3つの新たな視点に出会える一日~
+          </p>
+        </div>
+        <div className="mb-8 py-3 px-6 max-w-2xl mx-auto">
           {/* Render ClientCountdown only if it's loaded */}
           {ClientCountdown && <ClientCountdown />}
         </div>

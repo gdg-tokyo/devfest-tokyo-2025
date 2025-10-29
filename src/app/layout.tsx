@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'DevFest Tokyo 2025',
   description: 'DevFest Tokyo 2025 - Find your new “eyes”',
+  icons: {
+    icon: '/images/favicon.ico',
+  },
 }
 
 import Header from '@/components/Header'
@@ -18,8 +21,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-off-white`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${inter.className} bg-off-white`}
+        suppressHydrationWarning
+      >
         <Header />
         {children}
         <Footer /> {/* Add Footer component */}

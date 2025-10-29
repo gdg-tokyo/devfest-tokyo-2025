@@ -1,8 +1,8 @@
 ---
 time_start: '12:40'
 time_end: '13:10'
-tech_tags: ['Next.js', 'React']
-level: ['Advanced']
+tech_tags: ['Web', 'AI']
+level: ['Beginner']
 perspective: ['Experience']
 is_keynote: true
 ---

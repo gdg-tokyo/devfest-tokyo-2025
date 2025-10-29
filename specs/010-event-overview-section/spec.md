@@ -46,9 +46,15 @@ The landing page can be loaded, and the event overview section can be visually i
 - **FR-003**: The section MUST display the event venue name and address, accompanied by a map pin icon. The venue name MUST be in a normal font, and the address in a weaker grey font, with a small space between them. Both MUST be in Japanese.
 - **FR-004**: The section MUST include a registration panel with the title "参加方法" and the description "外部イベントページ (connpass.com) から参加登録をお願いします。", followed by a call-to-action button. The button MUST link to the specified connpass event page, display an external link icon, and be a global common UI component. The button MUST be displayed even if the URL is invalid.
 - **FR-005**: The design of the section SHOULD be inspired by the layout and style of the reference site (https://2025.kotlinfest.dev/), ensuring a clean and well-organized presentation.
-- **FR-006**: The info cards within the section MUST follow the 'Panels/Cards (General)' style guide (rounded-lg, border-2 border-gray-800) and have equal height.
+- **FR-006**: The info cards within the section MUST follow the 'Panels/Cards (General)' style guide (rounded-lg, border-2 border-gray-800). On PC and Tablet views, cards MUST have equal height. On mobile view, card heights MAY be variable and shrink to content size.
 - **FR-007**: The Event Overview section MUST NOT have a heading.
 - **FR-008**: The Event Overview section MUST have a background color of `bg-off-white`.
+- **FR-009**: The event overview section MUST display cards in a 3-column grid layout on PC and Tablet views.
+- **FR-010**: The event overview section MUST display cards in a 1-column stacked layout on mobile view.
+- **FR-011**: Within each card, the content MUST be split into a 1:3 ratio, with the icon on the left (1 part) and the text content (title, description, button) on the right (3 parts).
+- **FR-012**: Icons within the cards MUST be visually prominent and sized appropriately for mobile readability (e.g., `w-12 h-12`).
+- **FR-013**: The "参加登録" button within the registration card MUST be a smaller size (e.g., `text-sm px-3 py-1`) for mobile view.
+- **FR-014**: The cards and their internal content MUST have reduced padding and margins to maintain a compact and simple appearance, especially on mobile.
 
 ### Key Entities _(include if feature involves data)_
 

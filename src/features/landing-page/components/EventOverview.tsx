@@ -22,7 +22,7 @@ const EventOverview = () => {
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full shadow-lg rounded-lg border-2 border-gray-800 h-full">
               <div className="flex items-center px-2 py-2 flex-auto">
                 <div className="w-1/4 flex justify-center">
-                  <div className="text-white p-2 text-center inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-5 shadow-lg rounded-full bg-red-400">
+                  <div className="text-white p-2 text-center inline-flex items-center justify-center w-12 h-12 sm:w-12 sm:h-12 mb-3 sm:mb-5 shadow-lg rounded-full bg-red-400">
                     <CalendarToday />
                   </div>
                 </div>
@@ -42,7 +42,7 @@ const EventOverview = () => {
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full shadow-lg rounded-lg border-2 border-gray-800 h-full">
               <div className="flex items-center px-2 py-2 flex-auto">
                 <div className="w-1/4 flex justify-center">
-                  <div className="text-white p-2 text-center inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-5 shadow-lg rounded-full bg-blue-400">
+                  <div className="text-white p-2 text-center inline-flex items-center justify-center w-12 h-12 sm:w-12 sm:h-12 mb-3 sm:mb-5 shadow-lg rounded-full bg-blue-400">
                     <LocationOn />
                   </div>
                 </div>
@@ -65,7 +65,7 @@ const EventOverview = () => {
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full shadow-lg rounded-lg border-2 border-gray-800 h-full">
               <div className="flex items-center px-2 py-2 flex-auto">
                 <div className="w-1/4 flex justify-center">
-                  <div className="text-white p-2 text-center inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-5 shadow-lg rounded-full bg-green-400">
+                  <div className="text-white p-2 text-center inline-flex items-center justify-center w-12 h-12 sm:w-12 sm:h-12 mb-3 sm:mb-5 shadow-lg rounded-full bg-green-400">
                     <ConfirmationNumber />
                   </div>
                 </div>

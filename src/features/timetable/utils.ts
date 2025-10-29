@@ -4,22 +4,7 @@ import { getTalks, getSpeakers } from '@/lib/data-parser'
 const minutesPerSlot = 10 // Granularity of time slots
 
 export const generateTimeSlots = (sessions: Session[]): string[] => {
-  const uniqueTimes = new Set<string>()
-  sessions.forEach((session) => {
-    uniqueTimes.add(session.time_start)
-    // Optionally, add end times if you want to mark the end of a session explicitly
-    // uniqueTimes.add(session.time_end);
-  })
-
-  const sortedTimes = Array.from(uniqueTimes).sort((a, b) => {
-    const [ha, ma] = a.split(':').map(Number)
-    const [hb, mb] = b.split(':').map(Number)
-    if (ha !== hb) return ha - hb
-    return ma - mb
-  })
-
-  // If there are no sessions, provide a default range
-  if (sortedTimes.length === 0) {
+  if (sessions.length === 0) {
     return [
       '09:00',
       '10:00',
@@ -34,36 +19,47 @@ export const generateTimeSlots = (sessions: Session[]): string[] => {
     ]
   }
 
-  // Now, let's fill in gaps with 30-minute intervals if they are too large
+  const uniqueTimes = new Set<string>()
+  sessions.forEach((session) => {
+    uniqueTimes.add(session.time_start)
+    uniqueTimes.add(session.time_end)
+  })
+
+  const sortedTimes = Array.from(uniqueTimes).sort((a, b) => {
+    const [ha, ma] = a.split(':').map(Number)
+    const [hb, mb] = b.split(':').map(Number)
+    if (ha !== hb) return ha - hb
+    return ma - mb
+  })
+
   const finalTimeSlots: string[] = []
-  let lastTime = sortedTimes[0]
-  finalTimeSlots.push(lastTime)
+  const earliestTime = sortedTimes[0]
+  const latestTime = sortedTimes[sortedTimes.length - 1]
 
-  for (let i = 1; i < sortedTimes.length; i++) {
-    const currentTime = sortedTimes[i]
-    let [lastHour, lastMinute] = lastTime.split(':').map(Number)
-    let [currentHour, currentMinute] = currentTime.split(':').map(Number)
+  let [currentHour, currentMinute] = earliestTime.split(':').map(Number)
+  let currentTime = new Date()
+  currentTime.setHours(currentHour, currentMinute, 0, 0)
 
-    let tempTime = new Date()
-    tempTime.setHours(lastHour, lastMinute, 0, 0)
+  let [endHour, endMinute] = latestTime.split(':').map(Number)
+  let endTime = new Date()
+  endTime.setHours(endHour, endMinute, 0, 0)
 
-    const nextUniqueTime = new Date()
-    nextUniqueTime.setHours(currentHour, currentMinute, 0, 0)
+  // Add the earliest time slot
+  finalTimeSlots.push(earliestTime)
 
-    // Add 30-minute intervals if the gap is larger than 30 minutes
-    while (tempTime.getTime() + 30 * 60 * 1000 < nextUniqueTime.getTime()) {
-      tempTime.setMinutes(tempTime.getMinutes() + 30)
-      const newSlot = tempTime.toTimeString().substring(0, 5)
-      if (!uniqueTimes.has(newSlot)) {
-        // Only add if not already a unique session start/end time
-        finalTimeSlots.push(newSlot)
-      }
-    }
-    finalTimeSlots.push(currentTime)
-    lastTime = currentTime
+  // Generate slots every 30 minutes until the latest time
+  while (currentTime.getTime() < endTime.getTime()) {
+    currentTime.setMinutes(currentTime.getMinutes() + 30)
+    const newSlot = currentTime.toTimeString().substring(0, 5)
+    finalTimeSlots.push(newSlot)
   }
 
-  // Ensure uniqueness and sort again after adding intervals
+  // Add all the unique session times to ensure they are in the list
+  sortedTimes.forEach((time) => {
+    finalTimeSlots.push(time)
+  })
+
+  // Ensure uniqueness and sort again
   return Array.from(new Set(finalTimeSlots)).sort((a, b) => {
     const [ha, ma] = a.split(':').map(Number)
     const [hb, mb] = b.split(':').map(Number)

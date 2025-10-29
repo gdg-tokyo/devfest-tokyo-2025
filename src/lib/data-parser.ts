@@ -81,9 +81,6 @@ export function getSessions(): Session[] {
         })
         .filter((t): t is Talk => t !== null)
 
-      if (talks.length === 0) {
-        return null
-      }
 
       return {
         id: session.id,

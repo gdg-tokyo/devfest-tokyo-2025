@@ -2,13 +2,7 @@
 
 import { Session } from '@/types'
 import React from 'react'
-import {
-  generateTimeSlots,
-  getRowStart,
-  getRowSpan,
-  filterSession,
-  getTrackColor,
-} from '../utils' // Import from utils
+import { getRowEndLine, getRowStart, getTrackColor } from '../utils' // Import from utils
 import SessionCard from './SessionCard'
 
 interface TimetableGridProps {
@@ -36,7 +30,7 @@ const TimetableGrid: React.FC<TimetableGridProps> = ({
       <div
         className="grid gap-2 p-2"
         style={{
-          gridTemplateRows: `[tracks] auto repeat(${allTimeSlots.length}, minmax(40px, auto))`,
+          gridTemplateRows: `[tracks] auto repeat(${allTimeSlots.length}, minmax(20px, auto))`,
         }}
       >
         {/* Conditional grid-template-columns based on screen size */}
@@ -72,14 +66,34 @@ const TimetableGrid: React.FC<TimetableGridProps> = ({
         ))}
 
         {/* Time labels */}
+        {allTimeSlots.map((time, index) => {
+          const [hour, minute] = time.split(':').map(Number)
+          if (minute % 30 === 0) {
+            // Only show labels for 30-minute intervals
+            return (
+              <div
+                key={time}
+                className="sticky left-0 p-2 border-r border-gray-300 font-roboto-mono text-sm text-black-02 flex items-start justify-center z-10"
+                style={{ gridRow: index + 2, gridColumn: 1 }}
+              >
+                {time}
+              </div>
+            )
+          }
+          return null
+        })}
+
+        {/* Horizontal Grid Lines */}
         {allTimeSlots.map((time, index) => (
           <div
-            key={time}
-            className="sticky left-0 p-2 border-r border-gray-300 font-roboto-mono text-sm text-black-02 flex items-center justify-center z-10"
-            style={{ gridRow: index + 2, gridColumn: 1 }}
-          >
-            {time}
-          </div>
+            key={`line-${time}`}
+            className="border-b border-gray-300"
+            style={{
+              gridRow: index + 2,
+              gridColumn: `2 / span ${displayTracks.length}`,
+              zIndex: 1,
+            }}
+          />
         ))}
 
         {/* Sessions */}
@@ -89,7 +103,7 @@ const TimetableGrid: React.FC<TimetableGridProps> = ({
           if (trackIndex === -1) return null
 
           const rowStart = getRowStart(session.time_start, allTimeSlots) // Pass allTimeSlots
-          const rowSpan = getRowSpan(
+          const rowEnd = getRowEndLine(
             session.time_start,
             session.time_end,
             allTimeSlots
@@ -101,7 +115,7 @@ const TimetableGrid: React.FC<TimetableGridProps> = ({
               key={session.id}
               className={`font-google-sans text-black-02 ${isGrayedOut ? 'opacity-30' : ''}`}
               style={{
-                gridRow: `${rowStart} / span ${rowSpan}`,
+                gridRow: `${rowStart} / ${rowEnd}`,
                 gridColumn: trackIndex + 2,
                 zIndex: 5, // Ensure session cards are above grid lines
               }}

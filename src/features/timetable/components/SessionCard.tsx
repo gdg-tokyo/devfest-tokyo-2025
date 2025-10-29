@@ -38,7 +38,7 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
     <Link href={`/sessions/${session.id}`}>
       <div
         data-testid={`session-card-${session.id}`}
-        className={`bg-white rounded-lg p-4 mb-1 border-2 border-gray-800 font-google-sans cursor-pointer hover:shadow-lg transition-shadow ${isGrayedOut ? 'opacity-30' : ''}`}
+        className={`h-full bg-white rounded-lg p-4 mb-1 border-2 border-gray-800 font-google-sans cursor-pointer hover:shadow-lg transition-shadow ${isGrayedOut ? 'opacity-30' : ''}`}
       >
         <h3 className="text-lg font-semibold text-gray-900 mb-2">
           {session.title}

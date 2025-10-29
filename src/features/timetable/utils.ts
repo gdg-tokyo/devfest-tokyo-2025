@@ -5,6 +5,7 @@ const minutesPerSlot = 10 // Granularity of time slots
 
 export const generateTimeSlots = (sessions: Session[]): string[] => {
   if (sessions.length === 0) {
+    // Default times, still 30 min intervals for default
     return [
       '09:00',
       '10:00',
@@ -19,53 +20,39 @@ export const generateTimeSlots = (sessions: Session[]): string[] => {
     ]
   }
 
-  const uniqueTimes = new Set<string>()
-  sessions.forEach((session) => {
-    uniqueTimes.add(session.time_start)
-    uniqueTimes.add(session.time_end)
+  const allTimes = sessions.flatMap((s) => [s.time_start, s.time_end])
+
+  const dateTimes = allTimes.map((timeStr) => {
+    const [h, m] = timeStr.split(':').map(Number)
+    const d = new Date()
+    d.setHours(h, m, 0, 0)
+    return d
   })
 
-  const sortedTimes = Array.from(uniqueTimes).sort((a, b) => {
-    const [ha, ma] = a.split(':').map(Number)
-    const [hb, mb] = b.split(':').map(Number)
-    if (ha !== hb) return ha - hb
-    return ma - mb
-  })
+  const earliestTime = new Date(
+    Math.min(...dateTimes.map((dt) => dt.getTime()))
+  )
+  const latestTime = new Date(Math.max(...dateTimes.map((dt) => dt.getTime())))
+
+  // Round down earliest time to the nearest 10-minute interval
+  earliestTime.setMinutes(Math.floor(earliestTime.getMinutes() / 10) * 10)
+  earliestTime.setSeconds(0)
+  earliestTime.setMilliseconds(0)
+
+  // Round up latest time to the nearest 10-minute interval
+  latestTime.setMinutes(Math.ceil(latestTime.getMinutes() / 10) * 10)
+  latestTime.setSeconds(0)
+  latestTime.setMilliseconds(0)
 
   const finalTimeSlots: string[] = []
-  const earliestTime = sortedTimes[0]
-  const latestTime = sortedTimes[sortedTimes.length - 1]
+  let currentTime = new Date(earliestTime.getTime())
 
-  let [currentHour, currentMinute] = earliestTime.split(':').map(Number)
-  let currentTime = new Date()
-  currentTime.setHours(currentHour, currentMinute, 0, 0)
-
-  let [endHour, endMinute] = latestTime.split(':').map(Number)
-  let endTime = new Date()
-  endTime.setHours(endHour, endMinute, 0, 0)
-
-  // Add the earliest time slot
-  finalTimeSlots.push(earliestTime)
-
-  // Generate slots every 30 minutes until the latest time
-  while (currentTime.getTime() < endTime.getTime()) {
-    currentTime.setMinutes(currentTime.getMinutes() + 30)
-    const newSlot = currentTime.toTimeString().substring(0, 5)
-    finalTimeSlots.push(newSlot)
+  while (currentTime.getTime() <= latestTime.getTime()) {
+    finalTimeSlots.push(currentTime.toTimeString().substring(0, 5))
+    currentTime.setMinutes(currentTime.getMinutes() + 10) // 10-minute step
   }
 
-  // Add all the unique session times to ensure they are in the list
-  sortedTimes.forEach((time) => {
-    finalTimeSlots.push(time)
-  })
-
-  // Ensure uniqueness and sort again
-  return Array.from(new Set(finalTimeSlots)).sort((a, b) => {
-    const [ha, ma] = a.split(':').map(Number)
-    const [hb, mb] = b.split(':').map(Number)
-    if (ha !== hb) return ha - hb
-    return ma - mb
-  })
+  return finalTimeSlots
 }
 
 export const getRowStart = (time: string, allTimeSlots: string[]): number => {
@@ -73,34 +60,14 @@ export const getRowStart = (time: string, allTimeSlots: string[]): number => {
   return index !== -1 ? index + 2 : 1 // +2 because first row is for track headers, and grid starts at 1
 }
 
-export const getRowSpan = (
+export const getRowEndLine = (
   startTime: string,
   endTime: string,
   allTimeSlots: string[]
 ): number => {
   const startIndex = allTimeSlots.indexOf(startTime)
-  let endIndex = allTimeSlots.indexOf(endTime)
-
-  // If the exact endTime is not in allTimeSlots, find the next closest slot
-  if (endIndex === -1) {
-    const [endHour, endMinute] = endTime.split(':').map(Number)
-    const sessionEndTime = new Date()
-    sessionEndTime.setHours(endHour, endMinute, 0, 0)
-
-    for (let i = allTimeSlots.length - 1; i >= 0; i--) {
-      const [slotHour, slotMinute] = allTimeSlots[i].split(':').map(Number)
-      const slotTime = new Date()
-      slotTime.setHours(slotHour, slotMinute, 0, 0)
-
-      if (slotTime.getTime() <= sessionEndTime.getTime()) {
-        endIndex = i
-        break
-      }
-    }
-  }
-
-  if (startIndex === -1 || endIndex === -1) {
-    // Fallback to minute-based calculation if times are not found in allTimeSlots
+  if (startIndex === -1) {
+    // Fallback to minute-based calculation for span if start time is not found
     const [startHour, startMinute] = startTime.split(':').map(Number)
     const [endHour, endMinute] = endTime.split(':').map(Number)
 
@@ -113,10 +80,31 @@ export const getRowSpan = (
     const durationMs = endDate.getTime() - startDate.getTime()
     const durationMinutes = durationMs / (1000 * 60)
 
-    return Math.max(1, Math.ceil(durationMinutes / minutesPerSlot))
+    // Returns span, not end line, in this fallback case
+    return Math.max(1, Math.ceil(durationMinutes / 10))
   }
 
-  return Math.max(1, endIndex - startIndex)
+  const [endHour, endMinute] = endTime.split(':').map(Number)
+  const sessionEndTime = new Date()
+  sessionEndTime.setHours(endHour, endMinute, 0, 0)
+
+  let endLineIndex = startIndex // Initialize with start index
+  for (let i = startIndex; i < allTimeSlots.length; i++) {
+    const [slotHour, slotMinute] = allTimeSlots[i].split(':').map(Number)
+    const slotTime = new Date()
+    slotTime.setHours(slotHour, slotMinute, 0, 0)
+
+    if (slotTime.getTime() < sessionEndTime.getTime()) {
+      endLineIndex = i + 1 // The line *after* this slot
+    } else if (slotTime.getTime() === sessionEndTime.getTime()) {
+      endLineIndex = i // The line *at* this slot
+      break
+    } else {
+      break // sessionEndTime is before current slotTime
+    }
+  }
+  // +2 because first row is for track headers, and grid starts at 1
+  return endLineIndex + 2
 }
 
 export const getTrackColor = (track: string) => {

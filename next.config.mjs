@@ -4,8 +4,9 @@ const repoName = 'devfest-tokyo-2025-web'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  assetPrefix: isProd ? `/${repoName}/` : undefined,
-  basePath: isProd ? `/${repoName}` : undefined,
+  basePath: isProd ? `/${repoName}` : '',
+  assetPrefix: isProd ? `/${repoName}/` : '',
+  trailingSlash: true,
   images: {
     unoptimized: true,
     remotePatterns: [

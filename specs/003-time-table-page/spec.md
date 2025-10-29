@@ -28,7 +28,7 @@ This document outlines the specification for the "Time Table Page," a central, h
   - **FR1.8.1**: The track header SHALL be a card with rounded corners and a black border.
   - **FR1.8.2**: The background color of the track header card SHALL be a half-tone shade of Google's brand colors (e.g., red for Track A, blue for Track B, green for Track C, yellow for Track D).
 - **FR1.9**: All sessions, including those without associated talks (e.g., "Closing," "Lightning Talks"), SHALL be displayed on the timetable.
-- **FR1.10**: In the `TimetableGrid` view, the height of each time slot row SHALL be equal.
+- **FR1.10**: In the `TimetableGrid` view, the height of each time slot row SHALL be equal, with a minimum height of `10px`.
 - **FR1.11**: The time grid SHALL feature horizontal lines to visually separate the time slots.
 - **FR1.12**: The time labels on the left of the grid view SHALL be vertically aligned to the top of their corresponding time slot.
 - **FR1.13**: The time slots on the grid's vertical axis SHALL be displayed in 30-minute increments.
@@ -48,6 +48,7 @@ This document outlines the specification for the "Time Table Page," a central, h
 - **FR3.2**: Each session card SHALL adhere strictly to the DevFest brand guide's color scheme, extending to tags/labels and track headers.
 - **FR3.3**: Session cards SHALL utilize distinct colors to visually emphasize the skill level label.
   - **FR3.5**: Session cards SHALL display essential session information (e.g., title, speaker, time, track, room number).
+- **FR3.6**: Session cards SHALL expand to fill the entire height of their allocated grid space.
 
 ## 4. Non-Functional Requirements
 

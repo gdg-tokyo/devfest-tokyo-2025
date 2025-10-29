@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'DevFest Tokyo 2025',
   description: 'DevFest Tokyo 2025 - Find your new “eyes”',
+  icons: {
+    icon: '/images/favicon.ico',
+  },
 }
 
 import Header from '@/components/Header'

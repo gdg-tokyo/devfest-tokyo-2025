@@ -1,6 +1,7 @@
 'use client'
 
 import RegistrationButton from '@/components/common/RegistrationButton'
+import { withRepoBasePath } from '@/lib/url-utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -19,7 +20,7 @@ const Header = () => {
           <div className="flex items-center">
             <div className="relative w-8 h-8">
               <Image
-                src="/images/gdg-logo-24-color.png"
+                src={withRepoBasePath('/images/gdg-logo-24-color.png')}
                 alt="GDG Tokyo Logo"
                 fill
                 style={{ objectFit: 'contain' }}

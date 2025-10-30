@@ -1,15 +1,15 @@
-import { Talk, Speaker } from '@/types'
-import React from 'react'
-import Image from 'next/image'
-import AccessTimeIcon from '@mui/icons-material/AccessTime'
-import PlaceIcon from '@mui/icons-material/Place'
-import PersonIcon from '@mui/icons-material/Person'
-import XIcon from '@mui/icons-material/X'
-import Link from 'next/link'
-import LaunchIcon from '@mui/icons-material/Launch'
-import { getLevelColor, getPerspectiveColor } from '@/lib/style-utils'
-import RegistrationButton from '@/components/common/RegistrationButton'
 import HtmlContent from '@/components/common/HtmlContent'
+import RegistrationButton from '@/components/common/RegistrationButton'
+import { getLevelColor, getPerspectiveColor } from '@/lib/style-utils'
+import { withRepoBasePath } from '@/lib/url-utils'
+import { Speaker, Talk } from '@/types'
+import AccessTimeIcon from '@mui/icons-material/AccessTime'
+import PersonIcon from '@mui/icons-material/Person'
+import PlaceIcon from '@mui/icons-material/Place'
+import XIcon from '@mui/icons-material/X'
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 
 interface TalkDetailProps {
   talk: Talk
@@ -73,7 +73,7 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
           >
             {speaker.photo_url ? (
               <Image
-                src={speaker.photo_url}
+                src={withRepoBasePath(speaker.photo_url)}
                 alt={speaker.name}
                 width={96}
                 height={96}

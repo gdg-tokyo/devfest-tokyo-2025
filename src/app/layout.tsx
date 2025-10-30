@@ -8,12 +8,13 @@ export const metadata: Metadata = {
   title: 'DevFest Tokyo 2025',
   description: 'DevFest Tokyo 2025 - Find your new “eyes”',
   icons: {
-    icon: '/images/favicon.ico',
+    icon: withRepoBasePath('/images/favicon.ico'),
   },
 }
 
-import Header from '@/components/Header'
 import { Footer } from '@/components/Footer' // Import Footer
+import Header from '@/components/Header'
+import { withRepoBasePath } from '@/lib/url-utils'
 
 export default function RootLayout({
   children,

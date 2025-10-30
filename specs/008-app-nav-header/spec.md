@@ -33,6 +33,7 @@ The current navigation is not prominent enough. A well-designed header is crucia
 | FR-10 | On desktop, hovering over navigation links or the call-to-action button must change the button color. |
 | FR-11 | If JavaScript is disabled, the navigation links and the call-to-action button must function as basic HTML links. |
 | FR-12 | The "参加登録" button must have a background color of `google-red-500`. |
+| FR-13 | Clicking the GDG Tokyo logo or the "Google Developer Group Tokyo" text must navigate the user to the landing page (`/`). |
 
 ## 5. Success Criteria
 

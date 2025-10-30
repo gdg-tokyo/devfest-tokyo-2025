@@ -8,7 +8,7 @@ This document specifies the requirements for the Landing Page Hero Panel feature
 
 - As a first-time visitor, I want to clearly see the event logo, theme, and a countdown to the event so I can quickly understand what DevFest Tokyo 2025 is about and when it will happen.
 - As a potential attendee, I want to easily find and click a prominent "参加登録" (Register) button to navigate to the event registration page on connpass.
-- As a user interested in the event content, I want to see clear call-to-action buttons for "タイムテーブル" (Timetable) and "Talk Directory" so I can explore the sessions and talks.
+- As a user interested in the event content, I want to see clear call-to-action buttons for "タイムテーブル" (Timetable) and "トーク一覧" so I can explore the sessions and talks.
 
 ## 3. Functional Requirements
 
@@ -17,7 +17,7 @@ This document specifies the requirements for the Landing Page Hero Panel feature
 - **FR3: Display Event Countdown**: The hero panel MUST include a real-time countdown clock showing the remaining time until the DevFest Tokyo 2025 event starts.
 - **FR4: Registration Call-to-Action**: The hero panel MUST feature a distinct red button labeled "参加登録" that, when clicked, navigates the user to the official connpass event registration page in a new browser tab.
 - **FR5: Timetable Navigation**: The hero panel MUST include a button labeled "タイムテーブル" that, when clicked, navigates the user to the internal timetable page of the website.
-- **FR6: Talk Directory Navigation**: The hero panel MUST include a button labeled "Talk Directory" that, when clicked, navigates the user to the internal talk directory page of the website.
+- **FR6: Talk Directory Navigation**: The hero panel MUST include a button labeled "トーク一覧" that, when clicked, navigates the user to the internal talk directory page of the website.
 
 ## 4. Non-Functional Requirements
 

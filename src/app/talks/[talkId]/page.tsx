@@ -55,5 +55,9 @@ export default function TalkPage({ params }: { params: { talkId: string } }) {
 
   const { talk, speakers } = talkData
 
-  return <TalkDetail talk={talk} speakers={speakers} />
+  return (
+    <div className="container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl p-4">
+      <TalkDetail talk={talk} speakers={speakers} />
+    </div>
+  )
 }

@@ -18,7 +18,7 @@ interface TalkDetailProps {
 
 const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
   return (
-    <div className="p-4 max-w-4xl mx-auto">
+    <div className="p-4 mx-auto">
       <h2 className="text-4xl font-bold mb-2">Talk</h2>
       <div className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md mb-4">
         <div className="flex flex-wrap gap-2 mb-2">
@@ -40,15 +40,17 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
           ))}{' '}
         </div>
         <h1 className="text-3xl font-bold mb-4">{talk.title}</h1>
-        <div className="flex items-center mb-2">
-          <AccessTimeIcon className="mr-2" />
-          <span>
-            {talk.time_start} - {talk.time_end}
-          </span>
-        </div>
-        <div className="flex items-center mb-4">
-          <PlaceIcon className="mr-2" />
-          <span>{talk.track}</span>
+        <div className="flex flex-col md:flex-row md:items-center gap-2 mb-4">
+          <div className="flex items-center">
+            <AccessTimeIcon className="mr-2" />
+            <span>
+              {talk.time_start} - {talk.time_end}
+            </span>
+          </div>
+          <div className="flex items-center">
+            <PlaceIcon className="mr-2" />
+            <span>{talk.track}</span>
+          </div>
         </div>
         <div className="flex flex-wrap gap-2 mb-4">
           {talk.tech_tags.map((tag) => (
@@ -60,7 +62,7 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
             </span>
           ))}
         </div>
-        <h2 className="text-2xl font-bold mt-8 mb-2">概要</h2>
+        <h2 className="text-2xl font-bold mt-4 mb-2">概要</h2>
         <HtmlContent html={talk.abstract} />
       </div>
 
@@ -69,24 +71,32 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
         {speakers.map((speaker) => (
           <div
             key={speaker.id}
-            className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md flex items-center mb-4"
+            className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md mb-4"
           >
-            {speaker.photo_url ? (
-              <Image
-                src={withRepoBasePath(speaker.photo_url)}
-                alt={speaker.name}
-                width={96}
-                height={96}
-                className="w-24 h-24 rounded-lg mr-8"
-              />
-            ) : (
-              <div className="w-24 h-24 rounded-lg mr-8 bg-gray-200 flex items-center justify-center">
-                <PersonIcon style={{ fontSize: 64 }} data-testid="PersonIcon" />
+            {/* Mobile View */}
+            <div className="flex flex-col md:hidden">
+              <div className="flex items-center mb-4">
+                {speaker.photo_url ? (
+                  <Image
+                    src={withRepoBasePath(speaker.photo_url)}
+                    alt={speaker.name}
+                    width={96}
+                    height={96}
+                    className="w-24 h-24 rounded-lg mr-4"
+                  />
+                ) : (
+                  <div className="w-24 h-24 rounded-lg mr-4 bg-gray-200 flex items-center justify-center">
+                    <PersonIcon
+                      style={{ fontSize: 64 }}
+                      data-testid="PersonIcon"
+                    />
+                  </div>
+                )}
+                <div>
+                  <h3 className="text-4xl font-bold">{speaker.name}</h3>
+                  <p className="text-xl text-gray-600 mb-2">{speaker.job}</p>
+                </div>
               </div>
-            )}
-            <div>
-              <h3 className="text-4xl font-bold">{speaker.name}</h3>
-              <p className="text-xl text-gray-600">{speaker.job}</p>
               <HtmlContent html={speaker.bio} />
               {speaker.twitter_handle && (
                 <a
@@ -102,6 +112,46 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
                 </a>
               )}
             </div>
+
+            {/* PC/Tablet View */}
+            <div className="hidden md:flex">
+              <div className="w-3/12 flex justify-center items-start p-4">
+                {speaker.photo_url ? (
+                  <Image
+                    src={withRepoBasePath(speaker.photo_url)}
+                    alt={speaker.name}
+                    width={200}
+                    height={200}
+                    className="w-full h-auto rounded-lg"
+                  />
+                ) : (
+                  <div className="w-full h-48 rounded-lg bg-gray-200 flex items-center justify-center">
+                    <PersonIcon
+                      style={{ fontSize: 128 }}
+                      data-testid="PersonIcon"
+                    />
+                  </div>
+                )}
+              </div>
+              <div className="w-9/12 p-4">
+                <h3 className="text-4xl font-bold">{speaker.name}</h3>
+                <p className="text-xl text-gray-600 mb-2">{speaker.job}</p>
+                <HtmlContent html={speaker.bio} />
+                {speaker.twitter_handle && (
+                  <a
+                    href={`https://twitter.com/${speaker.twitter_handle}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block"
+                  >
+                    <button className="border border-black rounded-lg p-2 flex items-center hover:bg-gray-200">
+                      <XIcon data-testid="XIcon" />
+                      <span className="ml-2">@{speaker.twitter_handle}</span>
+                    </button>
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -112,13 +162,13 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
         </RegistrationButton>
         <Link
           href="/timetable"
-          className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-4 px-4 rounded-lg shadow-lg text-center text-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
+          className="bg-google-blue-500 hover:bg-google-blue-600 text-white font-bold py-4 px-4 rounded-lg shadow-lg text-center text-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
         >
           タイムテーブルに戻る
         </Link>
         <Link
           href="/talks"
-          className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-4 px-4 rounded-lg shadow-lg text-center text-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
+          className="bg-google-green-500 hover:bg-google-green-600 text-white font-bold py-4 px-4 rounded-lg shadow-lg text-center text-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
         >
           トーク一覧に戻る
         </Link>

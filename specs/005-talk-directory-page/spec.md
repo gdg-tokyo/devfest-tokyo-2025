@@ -49,6 +49,7 @@ As a user, I want to click on a talk to see more details.
 - **FR-007**: All UI must follow DevFest branding.
 - **FR-008**: Talk cards must display Title, then Speaker/Time, then Abstract.
 - **FR-009**: Talk abstracts must be truncated to three lines.
+- **FR-010**: The page must implement a responsive layout with a centered container, horizontal padding, and maximum width for different screen sizes (mobile, tablet, desktop), ensuring consistent spacing and content alignment.
 
 ### Key Entities
 

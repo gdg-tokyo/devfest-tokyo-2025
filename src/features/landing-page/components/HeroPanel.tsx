@@ -64,7 +64,7 @@ const HeroPanel: React.FC = () => {
             href="/talks"
             className="bg-google-green-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-google-green-600 transition duration-300 ease-in-out"
           >
-            Talk Directory
+            トーク一覧
           </Link>
         </div>
       </div>

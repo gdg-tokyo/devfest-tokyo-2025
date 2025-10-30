@@ -89,6 +89,18 @@ This can be tested by clicking the action buttons on the talk page and verifying
 - **FR-006**: The talk page MUST have a two-panel layout for talk and speaker details.
 - **FR-007**: The talk page MUST display a fallback icon if a speaker's photo is not available.
 - **FR-008**: The talk page MUST have action buttons to navigate to the connpass event page, the timetable page, and the talk directory page.
+- **FR-009**: The page must implement a responsive layout with a centered container, horizontal padding, and maximum width for different screen sizes (mobile, tablet, desktop), ensuring consistent spacing and content alignment.
+- **FR-010**: The talk detail card must expand to the full width of its container, ensuring consistent layout with other pages.
+- **FR-011**: The talk's time and track information must be displayed side-by-side.
+- **FR-012**: The top margin of the '概要' section must be reduced.
+- **FR-013**: A space must be added between the speaker's job title and their biography.
+- **FR-014**: The 'タイムテーブルに戻る' button must be blue, and the 'トーク一覧に戻る' button must be green.
+- **FR-015**: In mobile view, the speaker image must be placed under the speaker bio.
+- **FR-016**: In mobile view, the time and track information must remain side-by-side.
+- **FR-017**: The speaker information section must have separate layouts for mobile and PC/Tablet views, controlled by the `hidden` property.
+- **FR-018**: In mobile view, the speaker image must be on the left of the speaker's name and title, with a 1:3 ratio, and the speaker bio must expand to touch the left and right sides.
+- **FR-019**: In PC/Tablet view, the speaker card section must be split horizontally with a 3:9 ratio.
+- **FR-020**: In PC/Tablet view, the speaker image must be as large as possible in the left cell, and the name, title, and bio must be in the right cell, similar to the previous implementation.
 
 ### Key Entities _(include if feature involves data)_
 

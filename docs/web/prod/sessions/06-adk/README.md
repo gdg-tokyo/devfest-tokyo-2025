@@ -3,9 +3,9 @@ id: adk
 track: Track B
 time_start: '14:30'
 time_end: '15:30'
-level: ['Beginner']
+level: ['Advanced']
 tech_tags: []
-perspective: ['Introduction']
+perspective: ['Introduction', 'Experience', 'Challenge']
 ---
 
 # Agent Developer Kit (ADK) Special

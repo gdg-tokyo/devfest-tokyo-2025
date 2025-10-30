@@ -48,6 +48,14 @@
     "twitter_handle": "taniiicom"
   },
   {
+    "id": "46046eb0",
+    "name": "森谷 直哉",
+    "bio": "<div><p>2011年3月よりGoogle Japanにて現Google Cloudのプリセールスを担当。東日本大震災で地図・空間情報の持つ力を目の当たりにし、Google MapsのAPIビジネスにも注力。2015年にシンガポールへ転籍し、東南アジアのクラウドビジネス立ち上げ、特にデータ活用分野におけるプリセールスに貢献。2022年より現職のGoogle Maps Platformの製品部門にて、主に早期製品を担当するソリューションエンジニアとして従事。</p><p></p></div>",
+    "photo_url": "https://media.licdn.com/dms/image/v2/D5603AQGXtVLA_FEtAQ/profile-displayphoto-crop_800_800/B56Zoi2pUuJwAM-/0/1761521342328?e=1762992000&v=beta&t=fQLjlDVf_Nmm9iZ_ro2hDm4aTSFrJzvI-ROUmKw4op8",
+    "job": "Solutions Engineer, Google Maps Platform, Google Asia Pacific Lte.Ptd.",
+    "twitter_handle": ""
+  },
+  {
     "id": "9f6f9c2d",
     "name": "福島 ゆかり",
     "bio": "<div><p>もっとマーケティングにGoogleのデータとAIとクラウドを使ってワクワクする！を後押しします！ GoogleCloud Partner Top Engineer 2024 data engineer、Google Developer Expert Cloud AI/ML&amp;Data Analytics 、ML女子部コミュニティ運営、jaguar じゃがーる分科会運営、AI/ML分科会運営、GoogleCloud Next 23-25登壇等多数</p><p></p></div>",
@@ -150,6 +158,14 @@
     "photo_url": "https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/hiroyuki-momoi.jpg",
     "job": "Customer Engineer, Google Cloud",
     "twitter_handle": "hiro038482"
+  },
+  {
+    "id": "ea7aa9d7",
+    "name": "ばんくし",
+    "bio": "<div><p>機械学習エンジニアとしてスタートアップ、メガベンチャーを経験した後、エムスリー株式会社に入社。2023年よりVice President of Engineering。株式会社ElithやPIVOT株式会社 にてTechnical Advisorを務める。OSSや技術登壇の実績が認められ、2023年にGoogle Cloud Developer Experts (AI/ML)に就任。</p><p></p></div>",
+    "photo_url": "https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/vaaaaanquish.png",
+    "job": "エムスリー株式会社 VPoE",
+    "twitter_handle": "vaaaaanquish"
   },
   {
     "id": "2cf7cb6d",

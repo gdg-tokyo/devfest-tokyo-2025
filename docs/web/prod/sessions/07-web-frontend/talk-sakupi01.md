@@ -1,7 +1,7 @@
 ---
-time_start: '10:00'
-time_end: '10:20'
-tech_tags: []
+time_start: '15:10'
+time_end: '15:30'
+tech_tags: ['Web', 'CSS', 'HTML', 'JS']
 level: ['Beginner']
 perspective: ['Introduction']
 is_keynote: false

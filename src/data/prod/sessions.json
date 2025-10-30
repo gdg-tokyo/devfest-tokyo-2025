@@ -17,7 +17,7 @@
     "slug": "keynote",
     "talk_ids": ["436aadeb"],
     "track": "Track A",
-    "time_start": "12:40",
+    "time_start": "12:20",
     "time_end": "13:10",
     "title": "基調講演",
     "level": ["Beginner"],
@@ -33,7 +33,7 @@
     "time_start": "13:20",
     "time_end": "14:10",
     "title": "異分野クロストーク (仮)",
-    "level": ["Beginner"],
+    "level": ["Advanced"],
     "tech_tags": ["BigQuery", "Web", "Mobile"],
     "description": "<div><p>TBA</p></div>",
     "perspective": []
@@ -41,15 +41,15 @@
   {
     "id": "8b664243",
     "slug": "google-map",
-    "talk_ids": ["67ceea06", "352cf7bd"],
+    "talk_ids": ["67ceea06", "3e77d1cf", "352cf7bd"],
     "track": "Track B",
     "time_start": "13:20",
     "time_end": "14:10",
     "title": "Google Maps 特集 (仮)",
-    "level": ["Beginner"],
-    "tech_tags": [],
+    "level": ["Beginner", "Advanced"],
+    "tech_tags": ["Google Map", "BigQuery"],
     "description": "<div><p>Comming soon ...</p></div>",
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
     "id": "c7575274",
@@ -59,8 +59,8 @@
     "time_start": "13:20",
     "time_end": "14:10",
     "title": "フロンティア (仮)",
-    "level": ["Beginner"],
-    "tech_tags": ["Web", "Mobile"],
+    "level": ["Advanced"],
+    "tech_tags": ["Veo", "Flutter", "Hardware"],
     "description": "<div><p>Coming soon ...</p></div>",
     "perspective": []
   },
@@ -73,9 +73,9 @@
     "time_end": "15:30",
     "title": "初心者向け AI Agent 特集 (仮)",
     "level": ["Beginner"],
-    "tech_tags": [],
+    "tech_tags": ["AI Agent", "MCP", "AI セーフティ", "AI ガバナンス"],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
     "id": "c974063d",
@@ -85,10 +85,10 @@
     "time_start": "14:30",
     "time_end": "15:30",
     "title": "Agent Developer Kit (ADK) Special",
-    "level": ["Beginner"],
+    "level": ["Advanced"],
     "tech_tags": [],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
     "id": "3d6ca428",
@@ -98,23 +98,23 @@
     "time_start": "14:30",
     "time_end": "15:30",
     "title": "Next Generation Web Frontend 2025",
-    "level": ["Beginner"],
-    "tech_tags": [],
+    "level": ["Beginner", "Advanced"],
+    "tech_tags": ["Web", "Angular", "Chrome", "CSS"],
     "description": "<div><p>2025年、WebフロントエンドはAIとともに新しいフェーズへ。 本セッションでは、最新のAngular with AI の動向から、Web標準とブラウザ機能の進化、そして Chrome に組み込まれた AI を活用した機能開発まで、これからの Web フロントエンド開発を大きく変えるトピックを 3 つの講演でご紹介します。</p></div>",
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Challenge"]
   },
   {
     "id": "c3cf985c",
     "slug": "ai-tools",
-    "talk_ids": ["6ced496d"],
+    "talk_ids": ["6ced496d", "1ff671b7"],
     "track": "Track A",
     "time_start": "15:40",
     "time_end": "16:30",
     "title": "AI TOOLS (仮)",
-    "level": ["Beginner"],
-    "tech_tags": [],
+    "level": ["Advanced"],
+    "tech_tags": ["Gemini CLI"],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Introduction"]
+    "perspective": ["Experience", "Challenge"]
   },
   {
     "id": "18ed9d53",
@@ -124,10 +124,10 @@
     "time_start": "15:40",
     "time_end": "16:30",
     "title": "データ分析 / Observability (仮)",
-    "level": ["Beginner"],
-    "tech_tags": [],
+    "level": ["Beginner", "Advanced"],
+    "tech_tags": ["データ分析", "オブザーバビリティ"],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
     "id": "f60ed56a",
@@ -137,10 +137,10 @@
     "time_start": "15:40",
     "time_end": "16:30",
     "title": "Android (仮)",
-    "level": ["Beginner"],
-    "tech_tags": [],
+    "level": ["Beginner", "Advanced"],
+    "tech_tags": ["Android"],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Challenge"]
   },
   {
     "id": "b7f38de6",
@@ -149,11 +149,11 @@
     "track": "Track D",
     "time_start": "15:40",
     "time_end": "16:30",
-    "title": "Hands-on Sessions",
+    "title": "[Hands-on] Gemini CLI",
     "level": ["Beginner"],
-    "tech_tags": [],
+    "tech_tags": ["Gemini CLI"],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Challenge"]
   },
   {
     "id": "e10a1602",
@@ -162,11 +162,11 @@
     "track": "Track D",
     "time_start": "14:30",
     "time_end": "15:30",
-    "title": "Hands-on Sessions",
-    "level": ["Beginner"],
-    "tech_tags": [],
+    "title": "[Hands-on] Firebase Studio",
+    "level": ["Advanced"],
+    "tech_tags": ["Firebase Studio"],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Challenge"]
   },
   {
     "id": "1ace4124",
@@ -176,10 +176,10 @@
     "time_start": "16:40",
     "time_end": "17:30",
     "title": "DevFest Tokyo LT大会",
-    "level": ["Beginner"],
+    "level": ["Beginner", "Advanced"],
     "tech_tags": [],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
     "id": "6f9a4880",
@@ -191,6 +191,19 @@
     "title": "クロージング",
     "level": ["Beginner"],
     "tech_tags": [],
+    "description": "<div><p>Coming soon ...</p></div>",
+    "perspective": ["Experience"]
+  },
+  {
+    "id": "864a7dd7",
+    "slug": "hands-on-gemma",
+    "talk_ids": [],
+    "track": "Track D",
+    "time_start": "13:20",
+    "time_end": "14:10",
+    "title": "[Hands-on] Gemma",
+    "level": ["Beginner"],
+    "tech_tags": ["Gemma"],
     "description": "<div><p>Coming soon ...</p></div>",
     "perspective": ["Introduction"]
   }

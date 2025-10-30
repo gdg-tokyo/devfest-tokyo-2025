@@ -1,9 +1,9 @@
 ---
-time_start: '10:20'
-time_end: '10:40'
+time_start: '15:55'
+time_end: '16:10'
 tech_tags: []
-level: ['Beginner']
-perspective: ['Introduction']
+level: ['Beginner', 'Advanced']
+perspective: ['Experience', 'Challenge']
 is_keynote: false
 ---
 

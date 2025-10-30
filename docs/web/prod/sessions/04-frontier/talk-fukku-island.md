@@ -1,8 +1,18 @@
 ---
-time_start: '13:35'
-time_end: '13:50'
-tech_tags: ['XLS']
-level: ['Advanced']
+time_start: '13:20'
+time_end: '13:35'
+tech_tags:
+  [
+    '動画生成',
+    'Veo',
+    'Gemini',
+    'nano-banana',
+    'imagen',
+    'YouTube',
+    'Google ads',
+    'scenario builder',
+  ]
+level: ['Beginner', 'Advanced']
 perspective: ['Experience']
 is_keynote: false
 ---

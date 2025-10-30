@@ -1,7 +1,7 @@
 ---
 time_start: '12:40'
 time_end: '13:10'
-tech_tags: ['Web', 'AI']
+tech_tags: ['Web', 'AI', 'キャリア']
 level: ['Beginner']
 perspective: ['Experience']
 is_keynote: true

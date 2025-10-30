@@ -1,9 +1,9 @@
 ---
-time_start: '10:20'
-time_end: '10:40'
-tech_tags: []
-level: ['Beginner']
-perspective: ['Introduction']
+time_start: '14:30'
+time_end: '14:50'
+tech_tags: ['Angular', 'AI']
+level: ['Advanced']
+perspective: ['Challenge']
 is_keynote: false
 ---
 

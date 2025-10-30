@@ -48,12 +48,13 @@ describe('TalkDetail', () => {
     await act(async () => {
       render(<TalkDetail talk={mockTalk} speakers={mockSpeakers} />)
     })
-    expect(screen.getByText('John Doe')).toBeInTheDocument()
-    expect(screen.getByText('Software Engineer')).toBeInTheDocument()
+    // Check for elements in both mobile and desktop views
+    expect(screen.queryAllByText('John Doe').length).toBeGreaterThan(0)
+    expect(screen.queryAllByText('Software Engineer').length).toBeGreaterThan(0)
     expect(
-      await screen.findByText('A seasoned web developer.')
-    ).toBeInTheDocument()
-    expect(screen.getByTestId('XIcon')).toBeInTheDocument()
+      (await screen.findAllByText('A seasoned web developer.')).length
+    ).toBeGreaterThan(0)
+    expect(screen.queryAllByTestId('XIcon').length).toBeGreaterThan(0)
   })
 
   it('renders fallback icon for speaker photo', async () => {
@@ -66,7 +67,7 @@ describe('TalkDetail', () => {
     await act(async () => {
       render(<TalkDetail talk={mockTalk} speakers={speakersWithoutPhoto} />)
     })
-    expect(screen.getByTestId('PersonIcon')).toBeInTheDocument()
+    expect(screen.queryAllByTestId('PersonIcon').length).toBeGreaterThan(0)
   })
 
   it('does not render X icon if twitter_handle is not available', async () => {

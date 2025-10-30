@@ -53,11 +53,11 @@ test.describe('Landing Page Hero Panel', () => {
     await expect(page).toHaveURL('/timetable', { timeout: 10000 })
   })
 
-  test('should navigate to talk directory page on "Talk Directory" button click', async ({
+  test('should navigate to talk directory page on "トーク一覧" button click', async ({
     page,
   }) => {
     const talkDirectoryButton = page.getByRole('link', {
-      name: 'Talk Directory',
+      name: 'トーク一覧',
     })
     await expect(talkDirectoryButton).toBeVisible()
     await talkDirectoryButton.click()

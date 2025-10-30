@@ -18,14 +18,14 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="flex items-center">
-            <div className="relative w-8 h-8">
+            <div className="relative w-32 h-8">
               <Image
-                src={withRepoBasePath('/images/gdg-logo-24-color.png')}
-                alt="GDG Tokyo Logo"
+                src={withRepoBasePath('/images/devfest25-tokyo-logo.png')}
+                alt="Google Developer Groups DevFest Tokyo 2025 Logo"
                 fill
                 style={{ objectFit: 'contain' }}
-                sizes="32px"
-              />{' '}
+                sizes="128px"
+              />
             </div>
             <h1 className="ml-2 font-google-sans text-black-02 text-xl font-bold">
               Google Developer Group Tokyo

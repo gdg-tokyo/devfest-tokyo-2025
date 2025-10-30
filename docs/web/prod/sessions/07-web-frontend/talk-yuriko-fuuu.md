@@ -1,9 +1,9 @@
 ---
-time_start: '10:40'
-time_end: '11:00'
-tech_tags: []
-level: ['Beginner']
-perspective: ['Introduction']
+time_start: '14:50'
+time_end: '15:10'
+tech_tags: ['Chrome', 'Gemini']
+level: ['Advanced']
+perspective: ['Challenge']
 is_keynote: false
 ---
 

@@ -1,9 +1,9 @@
 ---
-time_start: '10:00'
-time_end: '11:00'
-tech_tags: []
-level: ['Beginner']
-perspective: ['Introduction']
+time_start: '16:00'
+time_end: '16:20'
+level: ['Advanced']
+tech_tags: ['Gemini CLI']
+perspective: ['Experience', 'Challenge']
 is_keynote: false
 ---
 

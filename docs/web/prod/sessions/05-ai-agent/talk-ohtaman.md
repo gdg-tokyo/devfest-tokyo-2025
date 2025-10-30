@@ -3,7 +3,7 @@ time_start: '10:20'
 time_end: '10:40'
 tech_tags: []
 level: ['Beginner']
-perspective: ['Introduction']
+perspective: ['Introduction', 'Challenge']
 is_keynote: false
 ---
 

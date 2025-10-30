@@ -1,7 +1,7 @@
 ---
 id: keynote
 track: Track A
-time_start: '12:40'
+time_start: '12:20'
 time_end: '13:10'
 level: ['Beginner']
 tech_tags: ['Web', 'Mobile']

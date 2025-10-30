@@ -3,7 +3,7 @@ time_start: '13:35'
 time_end: '13:50'
 tech_tags: ['XLS']
 level: ['Advanced']
-perspective: ['Experience']
+perspective: ['Challenge']
 is_keynote: false
 ---
 

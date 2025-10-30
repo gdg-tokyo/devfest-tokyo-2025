@@ -2,8 +2,8 @@
 time_start: '13:20'
 time_end: '13:35'
 tech_tags: ['Flutter']
-level: 'Advanced'
-perspective: 'Experience'
+level: ['Advanced']
+perspective: ['Challenge']
 is_keynote: false
 ---
 

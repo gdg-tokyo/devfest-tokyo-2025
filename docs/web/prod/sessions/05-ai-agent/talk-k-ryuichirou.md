@@ -3,7 +3,7 @@ time_start: '10:40'
 time_end: '11:00'
 tech_tags: []
 level: ['Beginner']
-perspective: ['Introduction']
+perspective: ['AI Agent', 'AI セーフティ', 'AI ガバナンス']
 is_keynote: false
 ---
 

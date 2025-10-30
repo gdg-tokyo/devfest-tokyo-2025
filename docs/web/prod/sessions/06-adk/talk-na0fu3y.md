@@ -1,9 +1,9 @@
 ---
-time_start: '10:20'
-time_end: '10:40'
-tech_tags: []
-level: ['Beginner']
-perspective: ['Introduction']
+time_start: '14:50'
+time_end: '15:10'
+tech_tags: ['AI Agent', 'ADK', 'データ分析']
+level: ['Advanced']
+perspective: ['Experience', 'Challenge']
 is_keynote: false
 ---
 

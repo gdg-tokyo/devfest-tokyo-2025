@@ -3,9 +3,9 @@ id: android
 track: Track C
 time_start: '15:40'
 time_end: '16:30'
-level: ['Beginner']
-tech_tags: []
-perspective: ['Introduction']
+level: ['Beginner', 'Advanced']
+tech_tags: ['Android']
+perspective: ['Introduction', 'Challenge']
 ---
 
 # Android (仮)

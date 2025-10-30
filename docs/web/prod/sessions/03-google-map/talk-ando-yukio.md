@@ -1,11 +1,9 @@
 ---
-id: talk-ando-yukio
-session_id: s04
 time_start: '13:20'
 time_end: '13:30'
 tech_tags: []
 level: ['Beginner']
-perspective: ['Introduction']
+perspective: ['Experience']
 is_keynote: false
 ---
 

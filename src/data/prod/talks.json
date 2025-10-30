@@ -34,7 +34,7 @@
     "time_end": "13:10",
     "track": "Track A",
     "speaker_ids": ["f556804f"],
-    "tech_tags": ["Web", "AI"],
+    "tech_tags": ["Web", "AI", "キャリア"],
     "level": ["Beginner"],
     "perspective": ["Experience"]
   },
@@ -47,9 +47,9 @@
     "time_end": "14:00",
     "track": "Track A",
     "speaker_ids": ["7fc8b60b"],
-    "tech_tags": ["Next.js", "React"],
-    "level": ["Beginner"],
-    "perspective": ["Experience"]
+    "tech_tags": ["Web", "Chrome"],
+    "level": ["Advanced"],
+    "perspective": ["Challenge"]
   },
   {
     "id": "67ceea06",
@@ -62,32 +62,54 @@
     "speaker_ids": ["2495c02a"],
     "tech_tags": [],
     "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "perspective": ["Experience"]
+  },
+  {
+    "id": "3e77d1cf",
+    "slug": "naoya",
+    "title": "星の世界の地図の話: Google Sky Map を AI Agent でよみがえらせる",
+    "abstract": "<div><p>最後に星を見上げたのはいつでしょうか。古代の人々は、太陽と星を頼りに時刻を知り、果てしなく続く何の変哲もない大地や大海原で自分の位置を把握していました。</p><p>AndroidアプリのGoogle Sky Mapは、2009年5月12日にピッツバーグのGooglerにより20%ルールの一環として設計・開発されました。スマホを空に向けると、星々が表示されるシンプルなアプリながら、多様なAndroidデバイス間のセンサの差異にも関わらず、美しく正確な天体計算とAR技術により、多くのユーザが夜空を見上げ、星を探しました。Google Mapsの世界は、地球だけでなく宇宙にも広がったのです。その後、2012年にGoogleでの開発が終了し、オープンソースとして公開されました。</p><p>今回は、この13年前にオープンソースとなったSky Mapをベースに、現在の最新技術である『AIエージェント』を導入し、現実の星空でプラネタリウムのように「会話しながら星をさがせる」「星を知らなくても開きたくなる」アプリを作成した話をお話しします。</p><ul>\n<li>地図という自由度の高いUIにAIエージェントを導入するUX設計</li>\n<li>Gemini APIとAI Agentライブラリ mastra を組み合わせたAIエンジニアリング</li>\n<li>Kotlin Multiplatformの活用</li>\n<li>星の世界の地図と天体計算の話</li>\n</ul><p>などについてお話しする予定です。</p></div>",
+    "time_start": "13:40",
+    "time_end": "13:50",
+    "track": "Track B",
+    "speaker_ids": ["2c8157b0"],
+    "tech_tags": [],
+    "level": ["Beginner", "Advanced"],
+    "perspective": ["Challenge"]
   },
   {
     "id": "352cf7bd",
     "slug": "taniii",
-    "title": "星の世界の地図の話: Google Sky Map を AI Agent でよみがえらせる",
-    "abstract": "<div><p>最後に星を見上げたのはいつでしょうか。古代の人々は、太陽と星を頼りに時刻を知り、果てしなく続く何の変哲もない大地や大海原で自分の位置を把握していました。</p><p>AndroidアプリのGoogle Sky Mapは、2009年5月12日にピッツバーグのGooglerにより20%ルールの一環として設計・開発されました。スマホを空に向けると、星々が表示されるシンプルなアプリながら、多様なAndroidデバイス間のセンサの差異にも関わらず、美しく正確な天体計算とAR技術により、多くのユーザが夜空を見上げ、星を探しました。Google Mapsの世界は、地球だけでなく宇宙にも広がったのです。その後、2012年にGoogleでの開発が終了し、オープンソースとして公開されました。</p><p>今回は、この13年前にオープンソースとなったSky Mapをベースに、現在の最新技術である『AIエージェント』を導入し、現実の星空でプラネタリウムのように「会話しながら星をさがせる」「星を知らなくても開きたくなる」アプリを作成した話をお話しします。</p><ul>\n<li>地図という自由度の高いUIにAIエージェントを導入するUX設計</li>\n<li>Gemini APIとAI Agentライブラリ mastra を組み合わせたAIエンジニアリング</li>\n<li>Kotlin Multiplatformの活用</li>\n<li>星の世界の地図と天体計算の話</li>\n</ul><p>などについてお話しする予定です。</p></div>",
+    "title": "Google Maps Platform、2025年の新領域展開（仮）",
+    "abstract": "<div><p>Google Mapsの機能を開発者向けに提供するGoogle Maps Platformにとって２０２５年はいくつもの新しい取り組みが形となる年になりました。その中でも２つのエリアについて触れたいと思います</p><p>１）データチームのためのGoogle Maps Platform：Google Mapsの豊富なデータを活用したいものの、利用規約上の制約に直面している開発者の方々の声に応え BigQueryを中心にGoogle Cloudと連携する新しい製品群が登場しました。データ活用の可能性を広げるこれらの新サービス（Places Insights等）をデモを交えてご紹介します。</p><p>２）開発者のための 生成AI＋Google Maps Platform：歴史が長い技術であるほど、インターネット上には多種多様な情報が散在し、有効かつ有用な情報を引き出すことはFoundation Model単体では困難です。そこでGoogle Maps Platformでは、最新のドキュメントやノウハウでコンテキストを拡張する開発支援MCPサービス Google Maps Platform Code Assist toolkit をリリースしました。活用例を交えてご紹介します。</p></div>",
     "time_start": "13:30",
     "time_end": "13:40",
     "track": "Track B",
-    "speaker_ids": ["2c8157b0"],
+    "speaker_ids": ["46046eb0"],
     "tech_tags": [],
-    "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "level": ["Advanced"],
+    "perspective": ["Challenge"]
   },
   {
     "id": "a883d6a9",
     "slug": "fukku-island",
     "title": "キーワード: 動画生成, Veo, Gemini, nano-banana, imagen, YouTube, Google ads, scenario builder",
     "abstract": "<div><p>Coming soon ...</p></div>",
-    "time_start": "13:35",
-    "time_end": "13:50",
+    "time_start": "13:20",
+    "time_end": "13:35",
     "track": "Track C",
     "speaker_ids": ["9f6f9c2d"],
-    "tech_tags": ["XLS"],
-    "level": ["Advanced"],
+    "tech_tags": [
+      "動画生成",
+      "Veo",
+      "Gemini",
+      "nano-banana",
+      "imagen",
+      "YouTube",
+      "Google ads",
+      "scenario builder"
+    ],
+    "level": ["Beginner", "Advanced"],
     "perspective": ["Experience"]
   },
   {
@@ -100,8 +122,8 @@
     "track": "Track C",
     "speaker_ids": ["5f16d066"],
     "tech_tags": ["Flutter"],
-    "level": ["A", "d", "v", "a", "n", "c", "e", "d"],
-    "perspective": ["E", "x", "p", "e", "r", "i", "e", "n", "c", "e"]
+    "level": ["Advanced"],
+    "perspective": ["Challenge"]
   },
   {
     "id": "85b5d43e",
@@ -114,7 +136,7 @@
     "speaker_ids": ["85b5d43e"],
     "tech_tags": ["XLS"],
     "level": ["Advanced"],
-    "perspective": ["Experience"]
+    "perspective": ["Challenge"]
   },
   {
     "id": "14aee96d",
@@ -127,7 +149,7 @@
     "speaker_ids": ["eb77c13b"],
     "tech_tags": [],
     "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "perspective": ["AI Agent", "AI セーフティ", "AI ガバナンス"]
   },
   {
     "id": "3833a954",
@@ -140,7 +162,7 @@
     "speaker_ids": ["6adf168f"],
     "tech_tags": [],
     "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Challenge"]
   },
   {
     "id": "04d61729",
@@ -153,70 +175,70 @@
     "speaker_ids": ["6db6fcd9"],
     "tech_tags": [],
     "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Challenge"]
   },
   {
     "id": "93979635",
     "slug": "kazunori-sato",
     "title": "ADKによる音声と動画ストリーミングAPI解説",
     "abstract": "<div><p>ADKにおいて音声や動画によるストリーミング機能を提供するBidi-streamingの使い方や勘所を解説します。API設計、Gemini Live APIとの関係、実際のストリーミングアプリ開発のtips等を紹介します。</p></div>",
-    "time_start": "10:40",
-    "time_end": "11:00",
+    "time_start": "15:10",
+    "time_end": "15:30",
     "track": "Track B",
     "speaker_ids": ["8197ef53"],
-    "tech_tags": [],
-    "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "tech_tags": ["AI Agent", "ADK"],
+    "level": ["Advanced"],
+    "perspective": ["Challenge"]
   },
   {
     "id": "88a5617e",
     "slug": "na0fu3y",
     "title": "adk-samples に学ぶデータ分析 LLM エージェント開発",
     "abstract": "<div><p>Google ADK を使った開発、迷いませんか？本セッションでは、公式サンプルリポジトリ adk-samples を起点に、実践的なデータ分析エージェントを構築するための開発レシピを解説します。自然言語による SQL の作成、安全な BigQuery クエリの実行、認証認可の組み込みといった一連の流れをサンプルコードに沿って紹介します</p></div>",
-    "time_start": "10:20",
-    "time_end": "10:40",
+    "time_start": "14:50",
+    "time_end": "15:10",
     "track": "Track B",
     "speaker_ids": ["8ab1daa8"],
-    "tech_tags": [],
-    "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "tech_tags": ["AI Agent", "ADK", "データ分析"],
+    "level": ["Advanced"],
+    "perspective": ["Experience", "Challenge"]
   },
   {
     "id": "c7104ca1",
     "slug": "soundtracker318",
     "title": "今から追いつくADK 〜 ADKの概要と過去、現在、未来 〜",
     "abstract": "<div><p>本セッションでは、これからAI Agentを作ろうと思っている方や、ADKをより深く知りたい方向けに、「今から追いつくADK」として、Agent Development Kitについての概要と、これまでのコミットログやリリースノートから見る過去、現在、そしてロードマップから見る未来について話して行きます。</p></div>",
-    "time_start": "10:00",
-    "time_end": "10:20",
+    "time_start": "14:30",
+    "time_end": "14:50",
     "track": "Track B",
     "speaker_ids": ["cd1ec40c"],
-    "tech_tags": [],
-    "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "tech_tags": ["AI Agent", "ADK"],
+    "level": ["Advanced"],
+    "perspective": ["Introduction", "Challenge"]
   },
   {
     "id": "1bd3aa50",
     "slug": "laco2net",
     "title": "State of Angular with AI",
     "abstract": "<div><p>2025年のAngularは、機能面での進化だけでなく、AI志向のプラットフォームとしても大きく飛躍しました。今年のアップデートをかいつまんで紹介しつつ、\"Angular with AI\"に焦点を当てた今後の展望をお話します。...</p></div>",
-    "time_start": "10:20",
-    "time_end": "10:40",
+    "time_start": "14:30",
+    "time_end": "14:50",
     "track": "Track C",
     "speaker_ids": ["2a483f1f"],
-    "tech_tags": [],
-    "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "tech_tags": ["Angular", "AI"],
+    "level": ["Advanced"],
+    "perspective": ["Challenge"]
   },
   {
     "id": "adc18a30",
     "slug": "sakupi01",
     "title": "Web UI 2025 Updates & What's Coming!",
     "abstract": "<div><p>よりパワフルで柔軟な UI を実現する Web の機能が、今年も多く登場しました。</p><p>そんな 2025年の Web UI を取り巻く HTML&amp;CSS&amp;JS 機能のアップデートと、今後登場が期待される機能をご紹介します。</p></div>",
-    "time_start": "10:00",
-    "time_end": "10:20",
+    "time_start": "15:10",
+    "time_end": "15:30",
     "track": "Track C",
     "speaker_ids": ["eb5c39bb"],
-    "tech_tags": [],
+    "tech_tags": ["Web", "CSS", "HTML", "JS"],
     "level": ["Beginner"],
     "perspective": ["Introduction"]
   },
@@ -225,103 +247,116 @@
     "slug": "yuriko-fuuu",
     "title": "Chrome の Built-in AI を使って、無料で AI 機能を作ろう！",
     "abstract": "<div><p>Chrome の Built-in AI API は、Chrome に組み込まれた Gemini Nano を、みなさまのウェブサイトで使うことができるようになる API です。煩雑なAPIキーの取得や、大規模なサーバーインフラの構築は一切不要で、たった 2 行のコードを記述するだけで、無料で高度な AI 機能（翻訳、要約、校正など）をウェブサイトに組み込めます。処理はローカルで実行されるため、プロンプトに使用するデータが外部サーバーに送信される懸念がなるほか、オフラインでもプロンプトを走らせることができるため、常に安定した AI 機能を提供できます。プライバシーを最優先しながら、開発期間とコストを大幅に削減できるBuilt-in AI by Chrome を試してみましょう。</p></div>",
-    "time_start": "10:40",
-    "time_end": "11:00",
+    "time_start": "14:50",
+    "time_end": "15:10",
     "track": "Track C",
     "speaker_ids": ["f3c1bd36"],
-    "tech_tags": [],
-    "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "tech_tags": ["Chrome", "Gemini"],
+    "level": ["Advanced"],
+    "perspective": ["Challenge"]
   },
   {
     "id": "6ced496d",
     "slug": "hiro038482",
     "title": "Gemini CLI Advanced Theme - Gemini CLI とチーム開発",
     "abstract": "<div><p><a href=\"https://gdgkwansai.connpass.com/event/364586/\">先日の Vibe Coding セッション</a> でご紹介した内容、開発者個人からみた Gemini CLI の話を軽くおさらいした上で、視点を拡大し、組織・チームとしてエンタープライズ開発を行っていくための Gemini CLI 関連の情報を提供しながらみなさまと知見を深めていきたいと思います。</p></div>",
-    "time_start": "10:00",
-    "time_end": "11:00",
+    "time_start": "16:00",
+    "time_end": "16:20",
     "track": "Track A",
     "speaker_ids": ["61ab5e31"],
-    "tech_tags": [],
-    "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "tech_tags": ["Gemini CLI"],
+    "level": ["Advanced"],
+    "perspective": ["Experience", "Challenge"]
+  },
+  {
+    "id": "1ff671b7",
+    "slug": "vaaaaanquish",
+    "title": "Gemini CLI Advanced Theme - Gemini CLI とチーム開発",
+    "abstract": "<div><p>この2年程で、プロダクト開発や企業活動の中でAI技術を利用しない日は無くなりつつあります。 同時に、確率的な挙動を持つツールを確定的な業務で扱う難しさも急速に広まっています。 本セッションでは、古典的なMLOpsの考え方に触れながら、AI Agent/CLIツールの活用を中心にAIの信頼性や整合性を高めながら開発および業務を加速させていく技術を紹介します。</p></div>",
+    "time_start": "15:40",
+    "time_end": "16:00",
+    "track": "Track A",
+    "speaker_ids": ["ea7aa9d7"],
+    "tech_tags": ["Gemini CLI"],
+    "level": ["Advanced"],
+    "perspective": ["Experience", "Challenge"]
   },
   {
     "id": "690c5520",
     "slug": "k6s4i53rx",
     "title": "AI エージェントの振る舞いを読み解く！Vertex AI Agent Engine と OpenTelemetry によるオブザーバビリティの実現",
     "abstract": "<div><p>生成 AI エージェントが複雑化するなかで、その振る舞い（なぜそのような応答をしたのか、どの処理がボトルネックなのかなど）を理解することは容易ではありません。サービスの外部シグナルから内部がどのような状態であるかを推測する能力である「オブザーバビリティ」はまさに、このような課題へのアプローチの一つになりえます。</p><p>本トークでは、Vertex AI Agent Engine に統合されている OpenTelemetry と、Google Cloud のオブザーバビリティスタックを使って、どのようにエージェントの動作を把握するかをデモを交えて紹介します。</p></div>",
-    "time_start": "10:00",
-    "time_end": "10:20",
+    "time_start": "15:40",
+    "time_end": "15:55",
     "track": "Track B",
     "speaker_ids": ["2cf7cb6d"],
     "tech_tags": [],
-    "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "level": ["Beginner", "Advanced"],
+    "perspective": ["Introduction", "Challenge"]
   },
   {
     "id": "9ad77b8f",
     "slug": "masafumi-tsubamoto",
     "title": "デジタル庁におけるダッシュボード活用",
     "abstract": "<div><p>デジタル庁が公開している「政策ダッシュボード」は、行政データを誰もが理解・活用できる形で可視化し、政策の推進を援助する取り組みです。本セッションでは、開発・運用の背景、データ基盤の整備状況、ダッシュボード設計の考え方、そして実際の政策現場での活用事例を紹介します。さらに、自治体や企業が同様のダッシュボードを構築する際の想定課題やポイントを議論し、「データを活用した行政運営」の実装可能性を探ります。</p></div>",
-    "time_start": "10:20",
-    "time_end": "10:40",
+    "time_start": "15:55",
+    "time_end": "16:10",
     "track": "Track B",
     "speaker_ids": ["7fee0e09"],
     "tech_tags": [],
-    "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "level": ["Beginner", "Advanced"],
+    "perspective": ["Experience", "Challenge"]
   },
   {
     "id": "55598dae",
     "slug": "smly",
     "title": "生成AI時代のKaggleの姿",
     "abstract": "<div><p>「Kaggleは典型的な機械学習タスクのコンペサイトであり、生成AIによってその役割は終えるだろう」と考えていませんか？現在のKaggleは、AGIにつながる未踏のチャレンジや、解法が自明ではないチャレンジングな課題に溢れる「非常にアツい」プラットフォームです。本トークでは、生成AI時代におけるKaggleの新たな価値と、時代の変化を反映する具体的な学びの事例を紹介します。</p></div>",
-    "time_start": "10:40",
-    "time_end": "11:00",
+    "time_start": "16:10",
+    "time_end": "16:25",
     "track": "Track B",
     "speaker_ids": ["55598dae"],
     "tech_tags": [],
     "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
     "id": "001aef64",
     "slug": "yanzm",
     "title": "Android Studio Otter の最新 Gemini 機能",
     "abstract": "<div><p>Android Studio には内蔵の Gemini AI ツールが組み込まれています。次の Android Studio のバージョンである Otter での Gemini ツールの最新機能を紹介します。</p></div>",
-    "time_start": "10:00",
-    "time_end": "11:00",
+    "time_start": "15:40",
+    "time_end": "15:55",
     "track": "Track C",
     "speaker_ids": ["f7da315c"],
-    "tech_tags": [],
-    "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "tech_tags": ["Android"],
+    "level": ["Beginner", "Advanced"],
+    "perspective": ["Introduction", "Challenge"]
   },
   {
     "id": "c9dd5622",
     "slug": "harenb16221",
     "title": "Nanobananaでクールな画像を生成してみる、Gemini CLIを使って！",
     "abstract": "<div><p>このセッションではGemini CLIの基本的な使い方を学び簡単なタスク実行するハンズオンを行います。そして、Gemini Extensionsを使ってGemini CLIでNanobananaモデルを使えるようにしてクールな画像を生成、編集します。</p><p>準備：当日自分のパソコンを持参ください。提供される無償クレジットを事前に適用するとセッションがスムーズに進みます。</p></div>",
-    "time_start": "10:30",
-    "time_end": "11:00",
+    "time_start": "15:40",
+    "time_end": "16:30",
     "track": "Track D",
     "speaker_ids": ["d57df02a"],
-    "tech_tags": [],
+    "tech_tags": ["Gemini CLI"],
     "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction", "Challenge"]
   },
   {
     "id": "13053c56",
     "slug": "tanabee",
     "title": "Firebase Studio でつくるフルスタックアプリケーション",
     "abstract": "<div><p>Firebase Studio は、フロントエンド・バックエンド・データベースの構築を一元的に行える新しい開発環境です。このハンズオンでは、Firebase Studio を使ってフルスタックアプリケーションを実際に構築しながら、Firestore や Firebase Authentication、Firebase App Hosting などの主要機能を体験します。</p></div>",
-    "time_start": "10:00",
-    "time_end": "10:30",
+    "time_start": "14:30",
+    "time_end": "15:30",
     "track": "Track D",
     "speaker_ids": ["b1a046a8"],
-    "tech_tags": [],
-    "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "tech_tags": ["Firebase Studio"],
+    "level": ["Advanced"],
+    "perspective": ["Introduction", "Challenge"]
   }
 ]

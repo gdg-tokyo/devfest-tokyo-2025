@@ -89,6 +89,8 @@ This can be tested by clicking the action buttons on the talk page and verifying
 - **FR-006**: The talk page MUST have a two-panel layout for talk and speaker details.
 - **FR-007**: The talk page MUST display a fallback icon if a speaker's photo is not available.
 - **FR-008**: The talk page MUST have action buttons to navigate to the connpass event page, the timetable page, and the talk directory page.
+- **FR-009**: The page must implement a responsive layout with a centered container, horizontal padding, and maximum width for different screen sizes (mobile, tablet, desktop), ensuring consistent spacing and content alignment.
+- **FR-010**: The talk detail card must expand to the full width of its container, ensuring consistent layout with other pages.
 
 ### Key Entities _(include if feature involves data)_
 

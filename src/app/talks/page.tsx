@@ -105,7 +105,7 @@ const TalksPageContent = () => {
   }
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl p-4">
       <h1 className="text-3xl font-bold mb-6">Talks Page</h1>
 
       <FilterSystem

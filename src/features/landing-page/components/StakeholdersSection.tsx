@@ -1,4 +1,5 @@
 import { getStakeholders } from '@/lib/data-parser'
+import { withRepoBasePath } from '@/lib/url-utils'
 import { Stakeholder } from '@/types'
 import Image from 'next/image'
 import React from 'react'
@@ -52,7 +53,7 @@ const StakeholdersSection: React.FC = () => {
                   {stakeholder.logoUrl ? (
                     <div className="relative w-full h-32 flex items-center justify-center">
                       <Image
-                        src={stakeholder.logoUrl}
+                        src={withRepoBasePath(stakeholder.logoUrl)}
                         alt={stakeholder.name}
                         fill
                         style={{ objectFit: 'contain' }}

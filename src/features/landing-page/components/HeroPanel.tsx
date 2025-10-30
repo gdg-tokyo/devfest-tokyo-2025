@@ -1,4 +1,5 @@
 import RegistrationButton from '@/components/common/RegistrationButton'
+import { withRepoBasePath } from '@/lib/url-utils'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,7 +26,9 @@ const HeroPanel: React.FC = () => {
       </div>
       <div className="relative z-10 container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl">
         <Image
-          src="/images/devfest25-tokyo-logo-with-gdg-bracket.png"
+          src={withRepoBasePath(
+            '/images/devfest25-tokyo-logo-with-gdg-bracket.png'
+          )}
           alt="DevFest Tokyo 2025 Logo"
           width={800} // Increased width for better visibility, adjust as needed
           height={400} // Increased height, adjust as needed

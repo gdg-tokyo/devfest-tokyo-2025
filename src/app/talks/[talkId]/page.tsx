@@ -1,7 +1,8 @@
-import { getTalkById, getTalks } from '@/lib/data-parser'
 import TalkDetail from '@/features/talk/components/TalkDetail'
-import { notFound } from 'next/navigation'
+import { getTalkById, getTalks } from '@/lib/data-parser'
+import { withRepoBasePath } from '@/lib/url-utils'
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 
 export async function generateStaticParams() {
   const allTalks = getTalks()
@@ -32,10 +33,10 @@ export async function generateMetadata({
       title: talk.title,
       description: talk.abstract,
       type: 'article',
-      url: `https://devfest.gdgtokyo.jp/talks/${talk.id}`,
+      url: withRepoBasePath(`/talks/${talk.id}`),
       images: [
         {
-          url: 'https://devfest.gdgtokyo.jp/images/devfest-tokyo-2025-logo.png',
+          url: withRepoBasePath('/images/devfest-tokyo-2025-logo.png'),
           width: 800,
           height: 600,
           alt: 'DevFest Tokyo 2025',

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export function Footer() {
   return (
     <footer className="bg-black-02 text-white py-12">
@@ -18,29 +20,29 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="https://gdg-tokyo.connpass.com/"
+                  href="https://gdg-tokyo.connpass.com/event/369416/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-google-blue-500 transition-colors"
                 >
-                  Register on Connpass
+                  Registration (connpass)
                 </a>
               </li>
               <li>
-                <a
-                  href="#timetable"
+                <Link
+                  href="/timetable/"
                   className="text-gray-300 hover:text-google-blue-500 transition-colors"
                 >
-                  View Timetable
-                </a>
+                  Timetable
+                </Link>
               </li>
               <li>
-                <a
-                  href="#search"
+                <Link
+                  href="/talks/"
                   className="text-gray-300 hover:text-google-blue-500 transition-colors"
                 >
-                  Search Sessions
-                </a>
+                  Talks
+                </Link>
               </li>
             </ul>
           </div>

@@ -1,14 +1,6 @@
-const isProd = process.env.NEXT_PUBLIC_GITHUB_PAGES === 'true'
-const repoName = process.env.NEXT_PUBLIC_REPO_NAME || 'devfest-tokyo-2025'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  env: {
-    NEXT_PUBLIC_REPO_NAME: repoName,
-  },
-  basePath: isProd ? `/${repoName}` : '',
-  assetPrefix: isProd ? `/${repoName}/` : '',
   trailingSlash: true,
   images: {
     unoptimized: true,

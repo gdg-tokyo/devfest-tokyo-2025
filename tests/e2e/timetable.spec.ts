@@ -4,16 +4,22 @@ test.describe('Time Table Page', () => {
   test.describe('Mobile view', () => {
     test.beforeEach(async ({ page }) => {
       await page.setViewportSize({ width: 375, height: 667 })
-      await page.goto('/timetable')
-      await page.waitForURL('/timetable')
+      await page.goto('/timetable/')
     })
 
     test('should display the event timetable', async ({ page }) => {
       await expect(
         page.getByRole('heading', { name: 'Event Timetable' })
       ).toBeVisible()
+
+      const timetableList = page.getByTestId('timetable-list')
+      const timetableGrid = page.getByTestId('timetable-grid')
+
+      await expect(timetableList).toBeVisible()
+      await expect(timetableGrid).toBeHidden()
+
       await expect(
-        page.locator('.md\\:hidden').getByTestId('session-card-session-1')
+        timetableList.getByTestId('session-card-session-1')
       ).toBeVisible()
     })
 
@@ -32,16 +38,22 @@ test.describe('Time Table Page', () => {
   test.describe('Desktop view', () => {
     test.beforeEach(async ({ page }) => {
       await page.setViewportSize({ width: 1280, height: 720 })
-      await page.goto('/timetable')
-      await page.waitForURL('/timetable')
+      await page.goto('/timetable/')
     })
 
     test('should display the event timetable', async ({ page }) => {
       await expect(
         page.getByRole('heading', { name: 'Event Timetable' })
       ).toBeVisible()
+
+      const timetableList = page.getByTestId('timetable-list')
+      const timetableGrid = page.getByTestId('timetable-grid')
+
+      await expect(timetableList).toBeHidden()
+      await expect(timetableGrid).toBeVisible()
+
       await expect(
-        page.locator('.hidden.md\\:block').getByTestId('session-card-session-1')
+        timetableGrid.getByTestId('session-card-session-1')
       ).toBeVisible()
     })
 

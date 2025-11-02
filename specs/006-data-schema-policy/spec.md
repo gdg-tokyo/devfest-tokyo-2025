@@ -74,6 +74,7 @@ As a developer, I want to use a small, predictable dataset during development an
 
 ### Edge Cases
 
+- What happens if a session has an empty `talk_ids` array? The system should log a warning and ignore the session, not displaying it on the timetable.
 - What happens if a `talk_id` in a session record does not correspond to an existing talk? The system should handle this gracefully, for example by logging an error and not displaying the session.
 - What happens if a `speaker_id` in a talk record does not correspond to an existing speaker? The system should log an error and display the talk with a dummy "unknown" speaker.
 - How are speaker/talk deletions handled? If a speaker is deleted, their ID should be removed from all talks that reference them. If a talk is deleted, all sessions that reference it should also be deleted (cascading delete).

@@ -22,7 +22,7 @@ const TimetableList: React.FC<TimetableListProps> = ({
   filterSession,
 }) => {
   return (
-    <div className="md:hidden">
+    <div className="md:hidden" data-testid="timetable-list">
       {' '}
       {/* This div will only be visible on mobile screens */}
       {allTimeSlots.map((time, timeIndex) => {

@@ -24,7 +24,10 @@ const TimetableGrid: React.FC<TimetableGridProps> = ({
   filterSession,
 }) => {
   return (
-    <div className="overflow-x-auto hidden md:block">
+    <div
+      className="overflow-x-auto hidden md:block"
+      data-testid="timetable-grid"
+    >
       {' '}
       {/* This div will be hidden on mobile */}
       <div

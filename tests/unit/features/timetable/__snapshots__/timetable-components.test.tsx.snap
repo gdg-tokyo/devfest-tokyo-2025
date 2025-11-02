@@ -4,6 +4,7 @@ exports[`TimetableGrid (Tablet/PC View) renders correctly on tablet/PC screens 1
 <DocumentFragment>
   <div
     class="overflow-x-auto hidden md:block"
+    data-testid="timetable-grid"
   >
      
     <div
@@ -84,6 +85,7 @@ exports[`TimetableList (Mobile View) renders correctly on mobile screens 1`] = `
 <DocumentFragment>
   <div
     class="md:hidden"
+    data-testid="timetable-list"
   >
      
     <div

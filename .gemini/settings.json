@@ -16,6 +16,10 @@
     "playwright": {
       "command": "npx",
       "args": ["@playwright/mcp@latest", "--port 3030", "--isolated"]
+    },
+    "firebase": {
+      "command": "npx",
+      "args": ["-y", "firebase-tools@latest", "mcp"]
     }
   },
   "tools": {

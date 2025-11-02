@@ -83,7 +83,7 @@ Examples:
 - Format:
 
   ```text
-  <type>: <short summary>
+  <type>: <oneline summary>
   ```
 
 Examples:
@@ -91,6 +91,10 @@ Examples:
 - `feat: add user authentication`
 - `fix: correct GPU memory calculation`
 - `chore: update dependencies`
+
+##### Commit Rules
+
+- DON'T commit files in `spec/` folder except `spec.md`, `plan.md`, and `data-model.md`.
 
 #### Static Code Style
 

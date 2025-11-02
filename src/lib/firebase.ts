@@ -1,7 +1,7 @@
-import { initializeApp, getApps, getApp } from "firebase/app";
+import { initializeApp, getApps, getApp, FirebaseOptions } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
-function initializeFirebase(firebaseConfig: any) {
+function initializeFirebase(firebaseConfig: FirebaseOptions) {
   if (!getApps().length) {
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);

@@ -384,3 +384,4 @@ spec/**/*.md
 !spec/**/spec.md
 !spec/**/plan.md
 !spec/**/data-model.md
+specs/**/checklists/

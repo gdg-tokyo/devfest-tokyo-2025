@@ -46,7 +46,7 @@ jobs:
           NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID:
             ${{ secrets.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID }}
           NEXT_PUBLIC_GTM_ID: ${{ secrets.NEXT_PUBLIC_GTM_ID }}
-          NEXT_PUBLIC_SITE_URL: 'https://gdg-devfest-tokyo-2025.web.app/'
+          NEXT_PUBLIC_SITE_URL: 'https://gdg-devfest-tokyo-2025.web.app'
         run: npm run build:prod
 
       - name: Deploy to Firebase Hosting

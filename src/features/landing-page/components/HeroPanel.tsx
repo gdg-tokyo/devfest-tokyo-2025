@@ -1,3 +1,5 @@
+'use client'
+
 import RegistrationButton from '@/components/common/RegistrationButton'
 import { withRepoBasePath } from '@/lib/url-utils'
 import dynamic from 'next/dynamic'

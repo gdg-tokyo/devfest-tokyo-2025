@@ -3,6 +3,8 @@ import { getTalkById, getTalks } from '@/lib/data-parser'
 import { withRepoBasePath } from '@/lib/url-utils'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { buildMetadata } from '@/lib/seo'
+import { SITE } from '@/lib/site'
 
 export async function generateStaticParams() {
   const allTalks = getTalks()
@@ -19,31 +21,18 @@ export async function generateMetadata({
   const talkData = getTalkById(params.talkId)
 
   if (!talkData) {
-    return {
-      title: 'Talk not found',
-    }
+    return buildMetadata({ path: `/talks/${params.talkId}` })
   }
 
-  const { talk } = talkData
+  const { talk, speakers } = talkData
 
-  return {
-    title: talk.title,
+  const speakerNames = speakers.map((speaker) => speaker.name).join(', ')
+
+  return buildMetadata({
+    path: `/talks/${talk.id}`,
+    title: `${talk.title} (by ${speakerNames}) - ${SITE.name}`,
     description: talk.abstract,
-    openGraph: {
-      title: talk.title,
-      description: talk.abstract,
-      type: 'article',
-      url: withRepoBasePath(`/talks/${talk.id}`),
-      images: [
-        {
-          url: withRepoBasePath('/images/devfest-tokyo-2025-logo.png'),
-          width: 800,
-          height: 600,
-          alt: 'DevFest Tokyo 2025',
-        },
-      ],
-    },
-  }
+  })
 }
 
 export default function TalkPage({ params }: { params: { talkId: string } }) {

@@ -49,7 +49,7 @@ This can be tested by checking the demographic and acquisition reports in Google
 
 ### Functional Requirements
 
-- **FR-001**: The website MUST be integrated with a Google Analytics 4 (GA4) property.
+- **FR-001**: The website MUST be integrated with a Google Analytics 4 (GA4) property via Google Tag Manager (GTM).
 - **FR-002**: Page view events MUST be automatically tracked for all pages loaded on the website.
 - **FR-003**: The integration MUST enable the collection of anonymized user demographic data (age, gender, location) within Google Analytics, while respecting user privacy.
 - **FR-004**: The integration MUST track traffic source data to identify how users are discovering the website.
@@ -66,7 +66,7 @@ This can be tested by checking the demographic and acquisition reports in Google
 ### Assumptions
 
 - A Google Analytics 4 property for the website either exists or will be created by the event organizers.
-- The full Firebase web app configuration object will be provided and managed as environment variables.
+- A Google Tag Manager container ID will be provided and managed as an environment variable.
 
 ## Success Criteria _(mandatory)_
 

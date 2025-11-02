@@ -15,14 +15,14 @@ export const metadata: Metadata = {
 import { Footer } from '@/components/Footer' // Import Footer
 import Header from '@/components/Header'
 import { withRepoBasePath } from '@/lib/url-utils'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const gaId = process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || ''
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || ''
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -33,7 +33,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer /> {/* Add Footer component */}
-        <GoogleAnalytics gaId={gaId} />
+        <GoogleTagManager gtmId={gtmId} />
       </body>
     </html>
   )

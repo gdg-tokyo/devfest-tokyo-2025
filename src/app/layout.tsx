@@ -15,13 +15,15 @@ export const metadata: Metadata = {
 import { Footer } from '@/components/Footer' // Import Footer
 import Header from '@/components/Header'
 import { withRepoBasePath } from '@/lib/url-utils'
-import FirebaseAnalytics from '@/components/FirebaseAnalytics'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || ''
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -31,7 +33,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer /> {/* Add Footer component */}
-        <FirebaseAnalytics />
+        <GoogleAnalytics gaId={gaId} />
       </body>
     </html>
   )

@@ -1,4 +1,5 @@
-'use client'
+import type { Metadata } from 'next'
+;('use client')
 
 import React, { useState, useMemo, Suspense } from 'react'
 
@@ -12,6 +13,15 @@ import FilterSystem from '@/components/common/FilterSystem'
 import SessionModal from '@/components/common/SessionModal'
 
 import { useRouter, useSearchParams } from 'next/navigation'
+import { buildMetadata } from '@/lib/seo'
+import { SITE } from '@/lib/site'
+
+export async function generateMetadata(): Promise<Metadata> {
+  return buildMetadata({
+    path: `/talks`,
+    title: `Talks - ${SITE.name}`,
+  })
+}
 
 interface TalkWithSessionInfo extends Talk {
   sessionLevel: string[]

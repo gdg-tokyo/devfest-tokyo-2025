@@ -1,4 +1,5 @@
-'use client'
+import type { Metadata } from 'next'
+;('use client')
 
 import OverlayMessageCard from '@/components/common/OverlayMessageCard'
 import FilterSystem from '@/features/timetable/components/FilterSystem'
@@ -8,6 +9,15 @@ import { getSessions, getSpeakers, getTalks } from '@/lib/data-parser'
 import { Session, Speaker, Talk } from '@/types'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { generateTimeSlots, filterSession } from '@/features/timetable/utils' // Import from utils
+import { buildMetadata } from '@/lib/seo'
+import { SITE } from '@/lib/site'
+
+export async function generateMetadata(): Promise<Metadata> {
+  return buildMetadata({
+    path: `/timetable`,
+    title: `Timetable - ${SITE.name}`,
+  })
+}
 
 const TimetablePage = () => {
   const allSessions: Session[] = getSessions()

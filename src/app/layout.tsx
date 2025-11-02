@@ -1,12 +1,17 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '../styles/globals.css'
+import { SITE } from '@/lib/site'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'DevFest Tokyo 2025',
-  description: 'DevFest Tokyo 2025 - Find your new “eyes”',
+  title: {
+    default: SITE.defaultTitle,
+    template: `%s | ${SITE.name}`,
+  },
+  description: SITE.defaultDescription,
+  metadataBase: new URL(SITE.url),
   icons: {
     icon: withRepoBasePath('/images/favicon.ico'),
   },
@@ -28,7 +33,7 @@ export default function RootLayout({
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID || ''
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ja" suppressHydrationWarning>
       <body
         className={`${inter.className} bg-off-white`}
         suppressHydrationWarning

@@ -38,7 +38,6 @@ TypeScrip: Follow standard conventions
 
 - 004-session-page-the: Added TypeScript 5.x + Next.js, React, Tailwind CSS
 - 006-data-schema-currently: Added
-- 008-app-nav-header: Implemented App Header Design
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

@@ -21,6 +21,20 @@ Before you begin, ensure you have the following installed:
 
 For detailed development guidelines, including Git conventions and methodologies, please refer to [CONTRIBUTING.md](./CONTRIBUTING.md).
 
+## Firebase Configuration
+
+This project uses Firebase for Google Analytics. To enable this feature in a local development environment, you need to create a `.env.local` file in the root of the project and add your Firebase web app configuration:
+
+```
+NEXT_PUBLIC_FIREBASE_API_KEY="..."
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="..."
+NEXT_PUBLIC_FIREBASE_PROJECT_ID="..."
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="..."
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="..."
+NEXT_PUBLIC_FIREBASE_APP_ID="..."
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID="..."
+```
+
 ## Getting Started
 
 ### Installation

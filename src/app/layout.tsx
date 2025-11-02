@@ -10,9 +10,12 @@ export const metadata: Metadata = {
   icons: {
     icon: withRepoBasePath('/images/favicon.ico'),
   },
+  verification: {
+    google: 'sDHdP5CwqAE4MJel2lrCFms6mlVEv_mXXbscL1nxIGQ',
+  },
 }
 
-import { Footer } from '@/components/Footer' // Import Footer
+import { Footer } from '@/components/Footer'
 import Header from '@/components/Header'
 import { withRepoBasePath } from '@/lib/url-utils'
 import { GoogleTagManager } from '@next/third-parties/google'

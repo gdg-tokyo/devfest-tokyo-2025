@@ -31,6 +31,8 @@
       "ShellTool(cd)",
       "ShellTool(npm run test)",
       "ShellTool(npm run build)",
+      "ShellTool(npm run lint)",
+      "ShellTool(npm run format)",
       "ShellTool(git add)",
       "ShellTool(git branch)",
       "ShellTool(git diff)",

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 import { Footer } from '@/components/Footer' // Import Footer
 import Header from '@/components/Header'
 import { withRepoBasePath } from '@/lib/url-utils'
+import FirebaseAnalytics from '@/components/FirebaseAnalytics'
 
 export default function RootLayout({
   children,
@@ -30,6 +31,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer /> {/* Add Footer component */}
+        <FirebaseAnalytics />
       </body>
     </html>
   )

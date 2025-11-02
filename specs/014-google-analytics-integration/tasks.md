@@ -13,10 +13,8 @@ The implementation will be done by integrating the Firebase SDK into the applica
 
 **Goal**: Prepare the development environment for the integration.
 
-- **T001**: Install the Firebase SDK.
-  - **File**: `package.json`
-  - **Command**: `npm install firebase`
-- **T002**: Add the Firebase configuration to the environment variables.
+- [x] **T001**: Install the Firebase SDK.
+- [x] **T002**: Add the Firebase configuration to the environment variables.
   - **File**: `.env.local` (create if it doesn't exist)
   - **Details**: Add the `NEXT_PUBLIC_FIREBASE_*` variables as specified in the `quickstart.md`.
 
@@ -26,14 +24,9 @@ The implementation will be done by integrating the Firebase SDK into the applica
 
 **Goal**: Integrate the Firebase Analytics service into the application.
 
-- **T003**: Create a Firebase initialization file.
-  - **File**: `src/lib/firebase.ts`
-  - **Details**: This file will initialize the Firebase app using the environment variables and export the `analytics` instance.
-- **T004**: Create a client-side component to initialize Analytics.
-  - **File**: `src/components/FirebaseAnalytics.tsx`
-  - **Details**: This component will import the `analytics` instance and ensure it is initialized on the client.
-- **T005**: Add the `FirebaseAnalytics` component to the root layout.
-  - **File**: `src/app/layout.tsx`
+- [x] **T003**: Create a Firebase initialization file.
+- [x] **T004**: Create a client-side component to initialize Analytics.
+- [x] **T005**: Add the `FirebaseAnalytics` component to the root layout.
 
 ---
 
@@ -41,8 +34,8 @@ The implementation will be done by integrating the Firebase SDK into the applica
 
 **Goal**: Ensure the integration is working correctly and is documented.
 
-- **T006**: Manually verify the integration by checking the Google Analytics Realtime report.
-- **T007**: Update the project's main `README.md` to include a section on the Firebase configuration, mentioning the required environment variables.
+- [ ] **T006**: Manually verify the integration by checking the Google Analytics Realtime report. (Skipped)
+- [x] **T007**: Update the project's main `README.md` to include a section on the Firebase configuration, mentioning the required environment variables.
   - **File**: `README.md`
 
 ---

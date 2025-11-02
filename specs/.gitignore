@@ -1,0 +1,4 @@
+/**/*.md
+!/**/spec.md
+!/**/plan.md
+!/**/data-model.md

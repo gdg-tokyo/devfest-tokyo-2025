@@ -31,9 +31,9 @@ The website must be fully responsive and optimized for a mobile-first experience
 
 The project will be implemented using Next.js and Tailwind CSS. The codebase should be clean, maintainable, and follow best practices for these technologies. Using a modern tech stack allows for rapid development, a high-performing website, and easier maintenance.
 
-### V. GitHub Pages Deployment
+### V. Firebase Hosting Deployment
 
-The website will be hosted on GitHub Pages. The development and deployment process should be optimized for this platform. GitHub Pages is a free and reliable hosting solution that is well-suited for static websites and simplifies the deployment process.
+The website will be hosted on Firebase Hosting. The development and deployment process should be optimized for this platform. Firebase Hosting provides fast, secure, and reliable hosting for web apps, and integrates well with other Firebase services.
 
 ## Technology Stack
 

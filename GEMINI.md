@@ -16,6 +16,7 @@ Auto-generated from all feature plans. Last updated: 2025-10-18
 - `File system (JSON)` (001-landing-page)
 - `TypeScript 5.x` + `Next.js`, `React`, `Tailwind CSS`, `framer-motion` (002-devfest-style)
 - (006-data-schema-currently)
+- `Next.js Metadata API` (015-dynamic-page-metadata)
 
 ## Project Structure
 
@@ -38,6 +39,7 @@ TypeScrip: Follow standard conventions
 
 - 004-session-page-the: Added TypeScript 5.x + Next.js, React, Tailwind CSS
 - 006-data-schema-currently: Added
+- 015-dynamic-page-metadata: Added Next.js Metadata API for dynamic page metadata.
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

@@ -7,8 +7,13 @@ export type PageMetaInput = {
   description?: string; // if omitted, falls back to SITE.defaultDescription
 };
 
-const abs = (p?: string) =>
-  !p ? undefined : p.startsWith("http") ? p : new URL(p, SITE.url).toString();
+const abs = (p?: string) => {
+  if (p === undefined) return undefined;
+  if (p === '') return new URL(SITE.url).toString(); // Treat empty string as root, with trailing slash
+  if (p.startsWith("http")) return p;
+  return new URL(p, SITE.url).toString();
+};
+
 
 export function buildMetadata(input: PageMetaInput = {}): Metadata {
   const path = input.path ?? "/";

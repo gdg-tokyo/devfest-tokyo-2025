@@ -1,0 +1,33 @@
+name: Build Check
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target_env: [PROD, DEV]
+    env:
+      NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV: ${{ matrix.target_env }}
+      NEXT_PUBLIC_FIREBASE_API_KEY: 'dummy'
+      NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: 'dummy'
+      NEXT_PUBLIC_FIREBASE_PROJECT_ID: 'dummy'
+      NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: 'dummy'
+      NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: 'dummy'
+      NEXT_PUBLIC_FIREBASE_APP_ID: 'dummy'
+      NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: 'dummy'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: next build

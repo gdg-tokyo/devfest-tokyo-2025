@@ -23,27 +23,65 @@ export function _loadData(dataDir: string): DataCacheEntry {
     return dataCache[dataDir]
   }
 
-  let speakers, talks, sessions, stakeholders
+  let speakers, rawTalks, rawSessions, rawStakeholders
   if (dataDir === 'dev') {
     speakers = devSpeakers
-    talks = devTalks
-    sessions = devSessions
-    stakeholders = devStakeholders
+    rawTalks = devTalks
+    rawSessions = devSessions
+    rawStakeholders = devStakeholders
   } else {
     speakers = prodSpeakers
-    talks = prodTalks
-    sessions = prodSessions
-    stakeholders = prodStakeholders
+    rawTalks = prodTalks
+    rawSessions = prodSessions
+    rawStakeholders = prodStakeholders
   }
+
+  const sessions: Session[] = (rawSessions as any[]).map((s) => ({
+    ...s,
+    perspective: s.perspective || [],
+  }))
+
+  const talkSessionMap = new Map<string, Session>()
+  sessions.forEach((session: Session) => {
+    session.talk_ids.forEach((talkId) => {
+      talkSessionMap.set(talkId, session)
+    })
+  })
+
+  const talks: Talk[] = (rawTalks as any[]).map((talk: any) => {
+    const session = talkSessionMap.get(talk.id)
+    return {
+      ...talk,
+      time_start: session?.time_start || '',
+      time_end: session?.time_end || '',
+      track: session?.track || '',
+      level: Array.isArray(talk.level)
+        ? talk.level
+        : talk.level
+        ? [talk.level]
+        : [],
+      perspective: Array.isArray(talk.perspective)
+        ? talk.perspective
+        : talk.perspective
+        ? [talk.perspective]
+        : [],
+      tech_tags: talk.tech_tags || [],
+    }
+  })
 
   console.log(`Loading speakers from: src/data/${dataDir}/speakers.json`)
   console.log(`Loading talks from: src/data/${dataDir}/talks.json`)
   console.log(`Loading sessions from: src/data/${dataDir}/sessions.json`)
   console.log(
-    `Loading stakeholders from: src/data/${dataDir}/stakeholders.json`
+    `Loading stakeholders from: src/data/${dataDir}/stakeholders.json`,
   )
 
-  const loadedData: DataCacheEntry = { speakers, talks, sessions, stakeholders }
+  const loadedData: DataCacheEntry = {
+    speakers,
+    talks,
+    sessions,
+    stakeholders: rawStakeholders as Stakeholder[],
+  }
   dataCache[dataDir] = loadedData // Cache the loaded data
   return loadedData
 }
@@ -143,19 +181,16 @@ export function getStakeholders(): Stakeholder[] {
 }
 
 export function getTalkById(
-  id: string
+  id: string,
 ): { talk: Talk; speakers: Speaker[] } | undefined {
   const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
   const dataDir = env === 'DEV' ? 'dev' : 'prod'
 
-  const {
-    speakers: speakersData,
-    talks: talksData,
-  } = _loadData(dataDir)
+  const { speakers: speakersData, talks: talksData } = _loadData(dataDir)
 
-  const talksMap = new Map<string, any>(talksData.map((t: Talk) => [t.id, t]))
+  const talksMap = new Map<string, Talk>(talksData.map((t: Talk) => [t.id, t]))
   const speakersMap = new Map<string, Speaker>(
-    speakersData.map((s: Speaker) => [s.id, s])
+    speakersData.map((s: Speaker) => [s.id, s]),
   )
 
   const talk = talksMap.get(id)
@@ -175,12 +210,7 @@ export function getTalkById(
     .filter((s: Speaker | null): s is Speaker => s !== null)
 
   return {
-    talk: {
-      ...talk,
-      tech_tags: talk.tech_tags || [],
-      level: talk.level ? [talk.level] : [],
-      perspective: talk.perspective ? [talk.perspective] : [],
-    },
+    talk,
     speakers,
   }
 }

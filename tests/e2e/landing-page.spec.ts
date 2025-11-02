@@ -6,7 +6,8 @@ test.describe('Landing Page Hero Panel', () => {
   })
 
   test('should display the DevFest Tokyo logo', async ({ page }) => {
-    const logo = page.getByAltText('DevFest Tokyo 2025 Logo')
+    const hero = page.locator('section[aria-labelledby="event-title"]')
+    const logo = hero.getByAltText('DevFest Tokyo 2025 Logo')
     await expect(logo).toBeVisible()
     await expect(logo).toHaveAttribute(
       'src',
@@ -17,7 +18,9 @@ test.describe('Landing Page Hero Panel', () => {
   test('should display the event theme with main title and subtitle', async ({
     page,
   }) => {
-    const mainTitle = page.getByRole('heading', { name: 'Fine your new eyes' })
+    const mainTitle = page.getByRole('heading', {
+      name: 'Find your new "eyes"',
+    })
     await expect(mainTitle).toBeVisible()
     const subTitle = page.getByText('~3つの新たな視点に出会える一日~')
     await expect(subTitle).toBeVisible()
@@ -50,17 +53,19 @@ test.describe('Landing Page Hero Panel', () => {
       .getByRole('link', { name: 'タイムテーブル' })
     await expect(timetableButton).toBeVisible()
     await timetableButton.click()
-    await expect(page).toHaveURL('/timetable', { timeout: 10000 })
+    await expect(page).toHaveURL('/timetable/', { timeout: 10000 })
   })
 
   test('should navigate to talk directory page on "トーク一覧" button click', async ({
     page,
   }) => {
-    const talkDirectoryButton = page.getByRole('link', {
-      name: 'トーク一覧',
-    })
+    const talkDirectoryButton = page
+      .locator('section[aria-labelledby="event-title"]')
+      .getByRole('link', {
+        name: 'トーク一覧',
+      })
     await expect(talkDirectoryButton).toBeVisible()
     await talkDirectoryButton.click()
-    await expect(page).toHaveURL('/talks')
+    await expect(page).toHaveURL('/talks/')
   })
 })

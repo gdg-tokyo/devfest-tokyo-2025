@@ -37,7 +37,7 @@ This specification outlines the requirements for implementing dynamic page metad
 
 - **FR7: Dynamic Page Title Formats**
   - The system SHALL generate page titles for specific routes as follows:
-    - `/`: "GDG DevFest Tokyo 2025 - Find your new eyes"
+    - `/`: "GDG DevFest Tokyo 2025"
     - `timetable/`: "Timetable - GDG DevFest Tokyo 2025"
     - `talks/`: "Talks - GDG DevFest Tokyo 2025"
     - `talks/*/`: "{Talk Title} (by {speaker name}) - GDG DevFest Tokyo 2025"

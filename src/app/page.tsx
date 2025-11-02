@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo'
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
     path: '/',
-    title: 'GDG DevFest Tokyo 2025 - Find your new eyes',
+    title: 'GDG DevFest Tokyo 2025',
   })
 }
 

@@ -38,7 +38,7 @@ export async function generateMetadata({
   return buildMetadata({
     path: `/sessions/${session.id}`,
     title: `${session.title} - ${SITE.name}`,
-    description: session.abstract,
+    description: session.description,
   })
 }
 

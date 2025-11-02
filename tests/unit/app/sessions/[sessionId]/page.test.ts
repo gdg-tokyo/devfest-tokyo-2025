@@ -3,29 +3,30 @@ import { SITE } from '@/lib/site'
 import { getSessions } from '@/lib/data-parser'
 
 // Mock the data-parser module
-jest.mock('@/lib/data-parser', () => ({
-  getSessions: jest.fn(() => [
-    {
-      id: 'session-1',
-      title: 'Test Session 1',
-      abstract: 'Session Abstract 1',
-    },
-  ]),
-}))
+jest.mock('@/lib/data-parser')
 
 describe('Session Detail Page Metadata', () => {
+  beforeEach(() => {
+    ;(getSessions as jest.Mock).mockReturnValue([
+      {
+        id: 'session-1',
+        title: 'Test Session 1',
+        description: 'Session Description 1',
+      },
+    ])
+  })
+
   it('should generate correct metadata for a valid session', async () => {
     const params = { sessionId: 'session-1' }
     const metadata = await generateMetadata({ params })
     expect(metadata.title).toBe(`Test Session 1 - ${SITE.name}`)
-    expect(metadata.description).toBe('Session Abstract 1')
+    expect(metadata.description).toBe('Session Description 1')
     expect(metadata.alternates?.canonical).toBe(
       `${SITE.url}/sessions/session-1`
     )
   })
 
   it('should generate default metadata for an invalid session', async () => {
-    // Temporarily modify the mock to return an empty array for this test case
     ;(getSessions as jest.Mock).mockReturnValueOnce([])
 
     const params = { sessionId: 'non-existent-session' }

@@ -155,7 +155,7 @@ No explicit API contracts (REST/GraphQL) are generated as this feature primarily
 
 ### quickstart.md
 
-````markdown
+`````markdown
 ### quickstart.md
 
 ````markdown
@@ -170,16 +170,15 @@ Create `src/lib/site.ts` to define your site's name, default title, default desc
 ```typescript
 export const SITE = {
   name: 'GDG DevFest Tokyo 2025',
-
-  defaultTitle: 'GDG DevFest Tokyo 2025 - Find your new eyes',
-
+  defaultTitle: 'GDG DevFest Tokyo 2025',
   defaultDescription:
-    'The official website for DevFest Tokyo 2025. Building Safe, Secure and Scalable Solutions with AI and Cloud.',
-
+    'Google Developer Group - DevFest Tokyo 2025 の公式サイトです。セッションやその他イベントに関する情報をお届けします。',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
 }
 ```
 ````
+`````
+
 ````
 
 ## 2. Create Metadata Utility (`lib/seo.ts`)
@@ -472,3 +471,4 @@ export default async function SessionDetailPage({ params }: Props) {
 - When a page sets neither `title` nor `description`: the layout defaults (site default title and description) apply.
 
 - The `canonical` URL resolves to an absolute URL via `metadataBase`.
+````

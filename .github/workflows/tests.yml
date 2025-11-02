@@ -20,7 +20,7 @@ jobs:
       NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: 'dummy'
       NEXT_PUBLIC_FIREBASE_APP_ID: 'dummy'
       NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: 'dummy'
-
+      NEXT_PUBLIC_GTM_ID: 'dummy'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -49,6 +49,7 @@ jobs:
       NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: 'dummy'
       NEXT_PUBLIC_FIREBASE_APP_ID: 'dummy'
       NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: 'dummy'
+      NEXT_PUBLIC_GTM_ID: 'dummy'
 
     steps:
       - name: Checkout code

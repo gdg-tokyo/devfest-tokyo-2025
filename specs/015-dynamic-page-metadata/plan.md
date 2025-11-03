@@ -7,7 +7,7 @@
 
 ## Summary
 
-This plan outlines the implementation of dynamic page metadata generation for the DevFest Tokyo 2025 website, leveraging Next.js Metadata API for per-page title and description management. It includes a site-wide default description fallback and emphasizes minimal, type-safe code without external dependencies, aiming to improve SEO.
+This plan outlines the implementation of dynamic page metadata generation for the DevFest Tokyo 2025 website, leveraging Next.js Metadata API for per-page title, description, and Open Graph (OGP) / Twitter Card management. It includes site-wide default fallbacks for description and OG image, and emphasizes minimal, type-safe code without external dependencies, aiming to improve SEO and social media shareability.
 
 ## Technical Context
 
@@ -111,42 +111,39 @@ No specific research tasks are identified as the user has provided a detailed im
 Represents site-wide metadata defaults.
 
 | Field | Type | Description |
-
-|-------------------|----------|-------------------------------------------|
-
+| --- | --- | --- |
 | `name` | `string` | The name of the site (e.g., "DevFest Tokyo 2025"). |
-
 | `defaultTitle` | `string` | The default title for pages. |
-
 | `defaultDescription` | `string` | The default description for pages. |
-
 | `url` | `string` | The base URL of the site. |
+| `defaultOgImage` | `string` | Default Open Graph image path (e.g., "/images/og/default-og.png"). |
+| `locale` | `string` | Default locale for Open Graph tags (e.g., "ja_JP"). |
+| `twitter` | `{ site?: string; creator?: string; }` | Twitter site and creator handles. |
 
 ### PageMetaInput
 
 Input structure for building page-specific metadata.
 
 | Field | Type | Description |
-
-|-------------------|----------|-------------------------------------------|
-
-| `path` | `string?`| The canonical path of the page (e.g., "/blog/hello"). |
-
-| `title` | `string?`| The specific title for the page. If omitted, `SITE.defaultTitle` is used. |
-
-| `description` | `string?`| The specific description for the page. If omitted, `SITE.defaultDescription` is used. |
+| --- | --- | --- | --- | --- | --- |
+| `path` | `string?` | The canonical path of the page (e.g., "/blog/hello"). |
+| `title` | `string?` | The specific title for the page. If omitted, `layout` template is used. |
+| `description` | `string?` | The specific description for the page. If omitted, `SITE.defaultDescription` is used. |
+| `ogImage` | `string?` | Open Graph image path (relative or absolute). If omitted, `SITE.defaultOgImage` is used. |
+| `type` | `"website" | "article" | "profile" | "book"?` | Open Graph type. Defaults to "website". |
+| `noindex` | `boolean?` | Whether to prevent indexing of the page. Defaults to `false`. |
+| `imageAlt` | `string?` | Alt text for the Open Graph image. |
 
 ## Relationships
 
 - `PageMetaInput` uses `SITE Configuration` for default values.
-
 - Individual Next.js pages will provide `PageMetaInput` to the `buildMetadata` function.
 
 ## Validation Rules
 
 - `SITE.url` should be a valid URL.
-
 - `PageMetaInput.path` should be a valid relative path or absolute URL.
+- `ogImage` should be a valid image URL or path.
 ```
 
 ### contracts/
@@ -165,57 +162,109 @@ This guide provides a quick overview of how to implement dynamic page metadata u
 
 ## 1. Define Site-Wide Defaults (`lib/site.ts`)
 
-Create `src/lib/site.ts` to define your site's name, default title, default description, and base URL.
+Create `src/lib/site.ts` to define your site's name, default title, default description, base URL, default OG image, locale, and Twitter handles.
 
 ```typescript
+// src/lib/site.ts
 export const SITE = {
-  name: 'GDG DevFest Tokyo 2025',
-  defaultTitle: 'GDG DevFest Tokyo 2025',
-  defaultDescription:
-    'Google Developer Group - DevFest Tokyo 2025 の公式サイトです。セッションやその他イベントに関する情報をお届けします。',
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
-}
+  name: "Your Site",
+  defaultTitle: "Your default title",
+  defaultDescription: "Your default site description.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  * OGP images should be 1200x630 / PNG or JPEG / < 5MB recommended
+  locale: "ja_JP",
+  twitter: {
+    site: " @your_account",    // if available
+    creator: " @your_account", // if available
+  },
+};
 ```
-````
-`````
-
-````
 
 ## 2. Create Metadata Utility (`lib/seo.ts`)
 
-Create `src/lib/seo.ts` with the `buildMetadata` function. This function takes page-specific inputs and combines them with site defaults to generate a `Metadata` object compatible with Next.js.
+Create `src/lib/seo.ts` with the `buildMetadata` function. This function takes page-specific inputs and combines them with site defaults to generate a `Metadata` object compatible with Next.js, including OGP and Twitter Card data.
 
 ```typescript
+// src/lib/seo.ts
 import type { Metadata } from 'next'
-
 import { SITE } from './site'
+import { withRepoBasePath } from ' @/lib/url-utils'
 
 export type PageMetaInput = {
   path?: string // e.g., "/blog/hello"
-
-  title?: string // if omitted, layout defaultTitle is used
-
-  description?: string // if omitted, falls back to SITE.defaultDescription
+  title?: string // layout template applied
+  description?: string // SITE.defaultDescription if omitted
+  ogImage?: string // Relative/absolute OK. SITE.defaultOgImage if unspecified
+  type?: 'website' | 'article' | 'profile' | 'book'
+  noindex?: boolean
+  imageAlt?: string // Alt text for OG image (optional)
 }
 
-const abs = (p?: string) =>
-  !p ? undefined : p.startsWith('http') ? p : new URL(p, SITE.url).toString()
+const abs = (p?: string) => {
+  if (!p) return undefined
+  if (p.startsWith('http')) return p
+  return new URL(p, SITE.url).toString()
+}
+
+// Image path is made absolute after considering repo prefix
+const resolveOgImage = (p?: string) => {
+  const raw = p ?? SITE.defaultOgImage
+  const withPrefix = withRepoBasePath(raw)
+  return abs(withPrefix)
+}
 
 export function buildMetadata(input: PageMetaInput = {}): Metadata {
-  const path = input.path ?? '/'
+  const {
+    path = '/',
+    title,
+    description,
+    ogImage,
+    type = 'website',
+    noindex = false,
+    imageAlt,
+  } = input
 
-  const title = input.title // layout template applies if string
-
-  const description = input.description ?? SITE.defaultDescription
+  const desc = description ?? SITE.defaultDescription
+  const urlAbs = abs(path)
+  const imageAbs = resolveOgImage(ogImage)
+  const ogImageObj = imageAbs
+    ? [
+        {
+          url: imageAbs,
+          width: 1200,
+          height: 630,
+          alt: imageAlt ?? title ?? SITE.name,
+        },
+      ]
+    : undefined
 
   return {
     metadataBase: new URL(SITE.url),
+    title, // layout template applied
+    description: desc,
+    alternates: { canonical: urlAbs },
+    robots: noindex
+      ? { index: false, follow: false, nocache: true }
+      : { index: true, follow: true },
 
-    title: title, // uses layout's template when provided
+    openGraph: {
+      type,
+      url: urlAbs,
+      siteName: SITE.name,
+      title, // Optional but explicitly stated
+      description: desc,
+      images: ogImageObj,
+      locale: SITE.locale,
+    },
 
-    description,
-
-    alternates: { canonical: abs(path) },
+    twitter: {
+      card: 'summary_large_image',
+      site: SITE.twitter.site,
+      creator: SITE.twitter.creator,
+      title,
+      description: desc,
+      images: imageAbs ? [imageAbs] : undefined,
+    },
   }
 }
 ```
@@ -225,242 +274,57 @@ export function buildMetadata(input: PageMetaInput = {}): Metadata {
 Update `src/app/layout.tsx` to use the site-wide defaults for the root `Metadata` object. This sets up the `title` template and default description.
 
 ```typescript
-
-import type { Metadata } from "next";
-
-import { SITE } from "@/lib/site";
-
-
-
-export const metadata: Metadata = {
-
-  title: {
-
-    default: SITE.defaultTitle,
-
-    template: `%s | ${SITE.name}`,
-
-  },
-
-  description: SITE.defaultDescription,
-
-  metadataBase: new URL(SITE.url),
-
-};
-
-
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-
-  return <html lang="ja"><body>{children}</body></html>;
-
-}
-
+// src/app/layout.tsx is fine as is (just confirm)
+// Default title.template / description / metadataBase already set
+// Using withRepoBasePath() for icons.icon is also OK
+// Thereafter, OGP/Twitter will be complete by simply calling buildMetadata() from generateMetadata() on each page
 ```
 
 ## 4. Implement Dynamic Metadata in Pages
 
 For any page that requires dynamic metadata, import `buildMetadata` and use it within an `async function generateMetadata({ params }: Props): Promise<Metadata>`.
 
-**Example: `app/timetable/page.tsx`**
+**Example: `src/app/blog/[slug]/page.tsx`**
 
 ```typescript
-
+// src/app/blog/[slug]/page.tsx
 import type { Metadata } from "next";
-
-import { buildMetadata } from "@/lib/seo";
-
-
-
-export async function generateMetadata(): Promise<Metadata> {
-
-  return buildMetadata({
-
-    path: `/timetable`,
-
-    title: `Timetable - ${SITE.name}`,
-
-  });
-
-}
-
-
-
-export default function TimetablePage() {
-
-  return <h1>Timetable</h1>;
-
-}
-
-```
-
-**Example: `app/talks/page.tsx`**
-
-```typescript
-
-import type { Metadata } from "next";
-
-import { buildMetadata } from "@/lib/seo";
-
-
-
-export async function generateMetadata(): Promise<Metadata> {
-
-  return buildMetadata({
-
-    path: `/talks`,
-
-    title: `Talks - ${SITE.name}`,
-
-  });
-
-}
-
-
-
-export default function TalksPage() {
-
-  return <h1>Talks</h1>;
-
-}
-
-```
-
-**Example: `app/talks/[slug]/page.tsx`**
-
-```typescript
-
-import type { Metadata } from "next";
-
 import { notFound } from "next/navigation";
-
-import { buildMetadata } from "@/lib/seo";
-
-import { SITE } from "@/lib/site";
-
-
+import { buildMetadata } from " @/lib/seo";
 
 type Props = { params: { slug: string } };
 
-
-
-async function getTalk(slug: string) {
-
-  // Replace with real fetch logic to get talk data
-
-  // Example: fetch from a JSON file or API
-
-  const talks = [
-
-    { slug: "talk-1", title: "Introduction to Next.js", speaker: "John Doe" },
-
-    { slug: "talk-2", title: "Advanced React Patterns", speaker: "Jane Smith" },
-
-  ];
-
-  return talks.find(talk => talk.slug === slug);
-
+async function getPost(slug: string) {
+  // Replace with actual implementation
+  return {
+    slug,
+    title: `Post: ${slug}`,
+    description: "This is the post description", // Fallback to site common if not present
+    ogImage: `/images/og/posts/${slug}.png`,     // Fallback to site common if not present
+  };
 }
-
-
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-
-  const talk = await getTalk(params.slug);
-
-  if (!talk) return buildMetadata({ path: `/talks/${params.slug}` });
+  const post = await getPost(params.slug);
+  if (!post) return buildMetadata({ path: `/blog/${params.slug}`, noindex: true });
 
   return buildMetadata({
-
-    path: `/talks/${talk.slug}`,
-
-    title: `${talk.title} (by ${talk.speaker}) - ${SITE.name}`,
-
+    path: `/blog/${post.slug}`,
+    title: post.title,
+    description: post.description, // SITE.defaultDescription if undefined
+    ogImage: post.ogImage,         // SITE.defaultOgImage if undefined
+    type: "article",
+    imageAlt: post.title,
   });
-
 }
 
-
-
-export default async function TalkDetailPage({ params }: Props) {
-
-  const talk = await getTalk(params.slug);
-
-  if (!talk) notFound();
-
-  return <article className="prose mx-auto"><h1>{talk.title}</h1><p>Speaker: {talk.speaker}</p></article>;
-
+export default async function Page({ params }: Props) {
+  const post = await getPost(params.slug);
+  if (!post) notFound();
+  return <article className="prose mx-auto"><h1>{post.title}</h1></article>;
 }
-
 ```
-
-**Example: `app/sessions/[slug]/page.tsx`**
-
-```typescript
-
-import type { Metadata } from "next";
-
-import { notFound } from "next/navigation";
-
-import { buildMetadata } from "@/lib/seo";
-
-import { SITE } from "@/lib/site";
-
-
-
-type Props = { params: { slug: string } };
-
-
-
-async function getSession(slug: string) {
-
-  // Replace with real fetch logic to get session data
-
-  // Example: fetch from a JSON file or API
-
-  const sessions = [
-
-    { slug: "session-1", title: "Web Development Track" },
-
-    { slug: "session-2", title: "Machine Learning Track" },
-
-  ];
-
-  return sessions.find(session => session.slug === slug);
-
-}
-
-
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-
-  const session = await getSession(params.slug);
-
-  if (!session) return buildMetadata({ path: `/sessions/${params.slug}` });
-
-  return buildMetadata({
-
-    path: `/sessions/${session.slug}`,
-
-    title: `${session.title} - ${SITE.name}`,
-
-  });
-
-}
-
-
-
-export default async function SessionDetailPage({ params }: Props) {
-
-  const session = await getSession(params.slug);
-
-  if (!session) notFound();
-
-  return <article className="prose mx-auto"><h1>{session.title}</h1></article>;
-
-}
-
-```
+````
 
 ## Acceptance Criteria
 
@@ -471,4 +335,8 @@ export default async function SessionDetailPage({ params }: Props) {
 - When a page sets neither `title` nor `description`: the layout defaults (site default title and description) apply.
 
 - The `canonical` URL resolves to an absolute URL via `metadataBase`.
-````
+
+```
+
+```
+`````

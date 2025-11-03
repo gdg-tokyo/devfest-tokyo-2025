@@ -1,4 +1,5 @@
 /**/*.md
+/**/checklists/
 !/**/spec.md
 !/**/plan.md
 !/**/data-model.md

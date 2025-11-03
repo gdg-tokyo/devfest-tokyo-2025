@@ -9,6 +9,7 @@ export interface Session {
   tech_tags: string[]
   description: string
   perspective: string[]
+  thumbnail_url?: string
 }
 
 export interface Speaker {
@@ -31,6 +32,7 @@ export interface Talk {
   tech_tags: string[]
   level: ('Beginner' | 'Intermediate' | 'Advanced')[]
   perspective: ('Introduction' | 'Experience' | 'Challenge')[]
+  thumbnail_url?: string
 }
 
 export interface Stakeholder {

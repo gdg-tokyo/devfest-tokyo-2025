@@ -1,10 +1,10 @@
 ---
 id: keynote
-track: Track A
-time_start: '12:20'
-time_end: '13:10'
 level: ['Beginner']
-tech_tags: ['Web', 'Mobile']
+tech_tags: ['Web', 'AI', 'キャリア']
+time_end: '13:10'
+time_start: '12:20'
+track: Track A
 ---
 
 # 基調講演

@@ -1,10 +1,10 @@
 ---
-time_start: '14:50'
-time_end: '15:10'
-tech_tags: ['AI Agent', 'ADK', 'データ分析']
+is_keynote: false
 level: ['Advanced']
 perspective: ['Experience', 'Challenge']
-is_keynote: false
+tech_tags: ['AI エージェント', 'ADK', 'データ分析', 'BigQuery']
+time_end: '15:10'
+time_start: '14:50'
 ---
 
 # adk-samples に学ぶデータ分析 LLM エージェント開発

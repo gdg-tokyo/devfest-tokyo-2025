@@ -1,10 +1,10 @@
 ---
-time_start: '12:00'
-time_end: '12:05'
-tech_tags: []
-level: ['Beginner']
-perspective: ['Experience']
 is_keynote: true
+level: ['Beginner']
+perspective: ['Introduction', 'Experience', 'Challenge']
+tech_tags: []
+time_end: '12:05'
+time_start: '12:00'
 ---
 
 # オープニングの挨拶

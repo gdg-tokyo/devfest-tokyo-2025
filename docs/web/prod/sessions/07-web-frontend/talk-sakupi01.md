@@ -1,10 +1,10 @@
 ---
-time_start: '15:10'
-time_end: '15:30'
-tech_tags: ['Web', 'CSS', 'HTML', 'JS']
+is_keynote: false
 level: ['Beginner']
 perspective: ['Introduction']
-is_keynote: false
+tech_tags: ['Web', 'CSS', 'HTML', 'JS']
+time_end: '15:30'
+time_start: '15:10'
 ---
 
 # Web UI 2025 Updates & What's Coming!

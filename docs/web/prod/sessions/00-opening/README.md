@@ -1,10 +1,10 @@
 ---
 id: opening
-track: Track A
-time_start: '12:00'
-time_end: '12:20'
 level: ['Beginner']
 tech_tags: ['Google', 'Community']
+time_end: '12:20'
+time_start: '12:00'
+track: Track A
 ---
 
 # オープニング

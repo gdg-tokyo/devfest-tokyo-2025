@@ -1,10 +1,10 @@
 ---
-time_start: '13:40'
-time_end: '14:00'
-tech_tags: ['Web', 'Chrome']
+is_keynote: false
 level: ['Advanced']
 perspective: ['Challenge']
-is_keynote: false
+tech_tags: ['Web', 'Chrome']
+time_end: '14:00'
+time_start: '13:40'
 ---
 
 # バックエンドエンジニア & Chrome 開発者ツール

@@ -1,24 +1,40 @@
 ---
-time_start: '13:30'
-time_end: '13:40'
-tech_tags: []
-level: ['Advanced']
-perspective: ['Challenge']
 is_keynote: false
+level: ['Advanced']
+perspective: ['Experience', 'Challenge']
+tech_tags:
+  [
+    'Google Maps',
+    'Google Sky Map',
+    'Gemini',
+    'mastra',
+    'UX',
+    'KMP',
+    'AIエージェント',
+  ]
+time_end: '13:40'
+time_start: '13:30'
 ---
 
-# Google Maps Platform、2025年の新領域展開（仮）
+# 星の世界の地図の話: Google Sky Map を AI Agent でよみがえらせる
 
-Google Mapsの機能を開発者向けに提供するGoogle Maps Platformにとって２０２５年はいくつもの新しい取り組みが形となる年になりました。その中でも２つのエリアについて触れたいと思います
+最後に星を見上げたのはいつでしょうか。古代の人々は、太陽と星を頼りに時刻を知り、果てしなく続く何の変哲もない大地や大海原で自分の位置を把握していました。
 
-１）データチームのためのGoogle Maps Platform：Google Mapsの豊富なデータを活用したいものの、利用規約上の制約に直面している開発者の方々の声に応え BigQueryを中心にGoogle Cloudと連携する新しい製品群が登場しました。データ活用の可能性を広げるこれらの新サービス（Places Insights等）をデモを交えてご紹介します。
+AndroidアプリのGoogle Sky Mapは、2009年5月12日にピッツバーグのGooglerにより20%ルールの一環として設計・開発されました。スマホを空に向けると、星々が表示されるシンプルなアプリながら、多様なAndroidデバイス間のセンサの差異にも関わらず、美しく正確な天体計算とAR技術により、多くのユーザが夜空を見上げ、星を探しました。Google Mapsの世界は、地球だけでなく宇宙にも広がったのです。その後、2012年にGoogleでの開発が終了し、オープンソースとして公開されました。
 
-２）開発者のための 生成AI＋Google Maps Platform：歴史が長い技術であるほど、インターネット上には多種多様な情報が散在し、有効かつ有用な情報を引き出すことはFoundation Model単体では困難です。そこでGoogle Maps Platformでは、最新のドキュメントやノウハウでコンテキストを拡張する開発支援MCPサービス Google Maps Platform Code Assist toolkit をリリースしました。活用例を交えてご紹介します。
+今回は、この13年前にオープンソースとなったSky Mapをベースに、現在の最新技術である『AIエージェント』を導入し、現実の星空でプラネタリウムのように「会話しながら星をさがせる」「星を知らなくても開きたくなる」アプリを作成した話をお話しします。
+
+- 地図という自由度の高いUIにAIエージェントを導入するUX設計
+- Gemini APIとAI Agentライブラリ mastra を組み合わせたAIエンジニアリング
+- Kotlin Multiplatformの活用
+- 星の世界の地図と天体計算の話
+
+などについてお話しする予定です。
 
 ## Speaker
 
-### 森谷 直哉さん / Solutions Engineer, Google Maps Platform, Google Asia Pacific Lte.Ptd.
+### Taniii (谷 知拓) さん (@taniiicom) / 株式会社MIXI, 東京都立大学
 
-2011年3月よりGoogle Japanにて現Google Cloudのプリセールスを担当。東日本大震災で地図・空間情報の持つ力を目の当たりにし、Google MapsのAPIビジネスにも注力。2015年にシンガポールへ転籍し、東南アジアのクラウドビジネス立ち上げ、特にデータ活用分野におけるプリセールスに貢献。2022年より現職のGoogle Maps Platformの製品部門にて、主に早期製品を担当するソリューションエンジニアとして従事。
+MIXIで、MLOpsを中心に起案から設計・実装まで行なっています。大学では、LLMを用いたゼロショット・スケーラブルな汎用推薦システムの研究をしています。 2014年小学生の時に初めてAndroidアプリを公開したのをきっかけに、ものづくりの楽しさや可能性に魅了されたことから、草の根の個人開発を大切にしており、Web, モバイル, デザイン, AI/ML, DevOps, 3D/XR, GISなど、作りたいもの起点で幅広く領域を超えたものづくりをするのが好きです。地図SNSアプリ [mapic](https://x.com/mapic_app) , [国会Today](https://kokkai.today/) , 国家予算シミュレーション [yosan.org](https://yosan.org/) などを開発しています。
 
-![](https://media.licdn.com/dms/image/v2/D5603AQGXtVLA_FEtAQ/profile-displayphoto-crop_800_800/B56Zoi2pUuJwAM-/0/1761521342328?e=1762992000&v=beta&t=fQLjlDVf_Nmm9iZ_ro2hDm4aTSFrJzvI-ROUmKw4op8)
+![](https://media.licdn.com/dms/image/v2/D5603AQH0UL8wgKw_ew/profile-displayphoto-shrink_800_800/B56ZYVB71.H0Ac-/0/1744109551790?e=1762387200&v=beta&t=j_-jEO0z-oW8NsBQ8tRMyFNJtjkbpkHCdh0Gs9lv2r8)

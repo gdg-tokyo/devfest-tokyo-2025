@@ -1,10 +1,10 @@
 ---
-time_start: '15:40'
-time_end: '15:55'
-tech_tags: []
+is_keynote: false
 level: ['Beginner', 'Advanced']
 perspective: ['Introduction', 'Challenge']
-is_keynote: false
+tech_tags: ['Observability', 'Google Cloud', 'Vertex AI', 'OpenTelemetry']
+time_end: '15:55'
+time_start: '15:40'
 ---
 
 # AI エージェントの振る舞いを読み解く！Vertex AI Agent Engine と OpenTelemetry によるオブザーバビリティの実現

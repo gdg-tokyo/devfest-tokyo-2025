@@ -1,10 +1,10 @@
 ---
-time_start: '14:30'
-time_end: '14:50'
-tech_tags: ['Angular', 'AI']
+is_keynote: false
 level: ['Advanced']
 perspective: ['Challenge']
-is_keynote: false
+tech_tags: ['Angular', 'AI']
+time_end: '14:50'
+time_start: '14:30'
 ---
 
 # State of Angular with AI

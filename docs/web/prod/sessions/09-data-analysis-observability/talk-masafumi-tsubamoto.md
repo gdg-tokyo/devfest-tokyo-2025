@@ -1,10 +1,10 @@
 ---
-time_start: '15:55'
-time_end: '16:10'
-tech_tags: []
+is_keynote: false
 level: ['Beginner', 'Advanced']
 perspective: ['Experience', 'Challenge']
-is_keynote: false
+tech_tags: ['Dashboard']
+time_end: '16:10'
+time_start: '15:55'
 ---
 
 # デジタル庁におけるダッシュボード活用

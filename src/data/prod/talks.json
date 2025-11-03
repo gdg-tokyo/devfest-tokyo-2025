@@ -10,7 +10,7 @@
     "speaker_ids": ["2e4ce4d7"],
     "tech_tags": [],
     "level": ["Beginner"],
-    "perspective": ["Experience"]
+    "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
     "id": "ced1dcf7",
@@ -23,7 +23,7 @@
     "speaker_ids": ["2f1bed13"],
     "tech_tags": [],
     "level": ["Beginner"],
-    "perspective": ["Experience"]
+    "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
     "id": "436aadeb",
@@ -60,35 +60,43 @@
     "time_end": "13:30",
     "track": "Track B",
     "speaker_ids": ["2495c02a"],
-    "tech_tags": [],
+    "tech_tags": ["Google Maps", "UX"],
     "level": ["Beginner"],
     "perspective": ["Experience"]
   },
   {
     "id": "3e77d1cf",
     "slug": "naoya",
-    "title": "星の世界の地図の話: Google Sky Map を AI Agent でよみがえらせる",
-    "abstract": "<div><p>最後に星を見上げたのはいつでしょうか。古代の人々は、太陽と星を頼りに時刻を知り、果てしなく続く何の変哲もない大地や大海原で自分の位置を把握していました。</p><p>AndroidアプリのGoogle Sky Mapは、2009年5月12日にピッツバーグのGooglerにより20%ルールの一環として設計・開発されました。スマホを空に向けると、星々が表示されるシンプルなアプリながら、多様なAndroidデバイス間のセンサの差異にも関わらず、美しく正確な天体計算とAR技術により、多くのユーザが夜空を見上げ、星を探しました。Google Mapsの世界は、地球だけでなく宇宙にも広がったのです。その後、2012年にGoogleでの開発が終了し、オープンソースとして公開されました。</p><p>今回は、この13年前にオープンソースとなったSky Mapをベースに、現在の最新技術である『AIエージェント』を導入し、現実の星空でプラネタリウムのように「会話しながら星をさがせる」「星を知らなくても開きたくなる」アプリを作成した話をお話しします。</p><ul>\n<li>地図という自由度の高いUIにAIエージェントを導入するUX設計</li>\n<li>Gemini APIとAI Agentライブラリ mastra を組み合わせたAIエンジニアリング</li>\n<li>Kotlin Multiplatformの活用</li>\n<li>星の世界の地図と天体計算の話</li>\n</ul><p>などについてお話しする予定です。</p></div>",
+    "title": "Google Maps Platform、2025年の新領域展開（仮）",
+    "abstract": "<div><p>Google Mapsの機能を開発者向けに提供するGoogle Maps Platformにとって２０２５年はいくつもの新しい取り組みが形となる年になりました。その中でも２つのエリアについて触れたいと思います</p><p>１）データチームのためのGoogle Maps Platform：Google Mapsの豊富なデータを活用したいものの、利用規約上の制約に直面している開発者の方々の声に応え BigQueryを中心にGoogle Cloudと連携する新しい製品群が登場しました。データ活用の可能性を広げるこれらの新サービス（Places Insights等）をデモを交えてご紹介します。</p><p>２）開発者のための 生成AI＋Google Maps Platform：歴史が長い技術であるほど、インターネット上には多種多様な情報が散在し、有効かつ有用な情報を引き出すことはFoundation Model単体では困難です。そこでGoogle Maps Platformでは、最新のドキュメントやノウハウでコンテキストを拡張する開発支援MCPサービス Google Maps Platform Code Assist toolkit をリリースしました。活用例を交えてご紹介します。</p></div>",
     "time_start": "13:40",
     "time_end": "13:50",
     "track": "Track B",
-    "speaker_ids": ["2c8157b0"],
-    "tech_tags": [],
+    "speaker_ids": ["46046eb0"],
+    "tech_tags": ["Google Maps", "AI", "MCP", "BigQuery"],
     "level": ["Beginner", "Advanced"],
     "perspective": ["Challenge"]
   },
   {
     "id": "352cf7bd",
     "slug": "taniii",
-    "title": "Google Maps Platform、2025年の新領域展開（仮）",
-    "abstract": "<div><p>Google Mapsの機能を開発者向けに提供するGoogle Maps Platformにとって２０２５年はいくつもの新しい取り組みが形となる年になりました。その中でも２つのエリアについて触れたいと思います</p><p>１）データチームのためのGoogle Maps Platform：Google Mapsの豊富なデータを活用したいものの、利用規約上の制約に直面している開発者の方々の声に応え BigQueryを中心にGoogle Cloudと連携する新しい製品群が登場しました。データ活用の可能性を広げるこれらの新サービス（Places Insights等）をデモを交えてご紹介します。</p><p>２）開発者のための 生成AI＋Google Maps Platform：歴史が長い技術であるほど、インターネット上には多種多様な情報が散在し、有効かつ有用な情報を引き出すことはFoundation Model単体では困難です。そこでGoogle Maps Platformでは、最新のドキュメントやノウハウでコンテキストを拡張する開発支援MCPサービス Google Maps Platform Code Assist toolkit をリリースしました。活用例を交えてご紹介します。</p></div>",
+    "title": "星の世界の地図の話: Google Sky Map を AI Agent でよみがえらせる",
+    "abstract": "<div><p>最後に星を見上げたのはいつでしょうか。古代の人々は、太陽と星を頼りに時刻を知り、果てしなく続く何の変哲もない大地や大海原で自分の位置を把握していました。</p><p>AndroidアプリのGoogle Sky Mapは、2009年5月12日にピッツバーグのGooglerにより20%ルールの一環として設計・開発されました。スマホを空に向けると、星々が表示されるシンプルなアプリながら、多様なAndroidデバイス間のセンサの差異にも関わらず、美しく正確な天体計算とAR技術により、多くのユーザが夜空を見上げ、星を探しました。Google Mapsの世界は、地球だけでなく宇宙にも広がったのです。その後、2012年にGoogleでの開発が終了し、オープンソースとして公開されました。</p><p>今回は、この13年前にオープンソースとなったSky Mapをベースに、現在の最新技術である『AIエージェント』を導入し、現実の星空でプラネタリウムのように「会話しながら星をさがせる」「星を知らなくても開きたくなる」アプリを作成した話をお話しします。</p><ul>\n<li>地図という自由度の高いUIにAIエージェントを導入するUX設計</li>\n<li>Gemini APIとAI Agentライブラリ mastra を組み合わせたAIエンジニアリング</li>\n<li>Kotlin Multiplatformの活用</li>\n<li>星の世界の地図と天体計算の話</li>\n</ul><p>などについてお話しする予定です。</p></div>",
     "time_start": "13:30",
     "time_end": "13:40",
     "track": "Track B",
-    "speaker_ids": ["46046eb0"],
-    "tech_tags": [],
+    "speaker_ids": ["2c8157b0"],
+    "tech_tags": [
+      "Google Maps",
+      "Google Sky Map",
+      "Gemini",
+      "mastra",
+      "UX",
+      "KMP",
+      "AIエージェント"
+    ],
     "level": ["Advanced"],
-    "perspective": ["Challenge"]
+    "perspective": ["Experience", "Challenge"]
   },
   {
     "id": "a883d6a9",
@@ -100,17 +108,17 @@
     "track": "Track C",
     "speaker_ids": ["9f6f9c2d"],
     "tech_tags": [
-      "動画生成",
-      "Veo",
       "Gemini",
-      "nano-banana",
-      "imagen",
-      "YouTube",
       "Google ads",
-      "scenario builder"
+      "imagen",
+      "nano-banana",
+      "scenario builder",
+      "Veo",
+      "YouTube",
+      "動画生成"
     ],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Experience"]
+    "perspective": ["Experience", "Challenge"]
   },
   {
     "id": "c57d079a",
@@ -121,7 +129,7 @@
     "time_end": "13:35",
     "track": "Track C",
     "speaker_ids": ["5f16d066"],
-    "tech_tags": ["Flutter"],
+    "tech_tags": ["Flutter", "Liquid Glass"],
     "level": ["Advanced"],
     "perspective": ["Challenge"]
   },
@@ -134,7 +142,7 @@
     "time_end": "13:50",
     "track": "Track C",
     "speaker_ids": ["85b5d43e"],
-    "tech_tags": ["XLS"],
+    "tech_tags": ["XLS", "ハードウェア"],
     "level": ["Advanced"],
     "perspective": ["Challenge"]
   },
@@ -143,24 +151,24 @@
     "slug": "k-ryuichirou",
     "title": "AI エージェント活用のベストプラクティスと今後の課題",
     "abstract": "<div><p>LLM 登場以降の AI に関する技術的な革新の速度は凄まじく、AI がない生活はもはや想像できなくなりました。AI エージェントのビジネスへの適用も進行していますが、さまざまな課題があることも事実です。ここではさまざまな企業へのヒアリングを通じて見えてきた AI エージェント開発の方法論と、AI セーフティ、AI ガバナンスの実践方法について概要をお伝えします。</p></div>",
-    "time_start": "10:40",
-    "time_end": "11:00",
+    "time_start": "15:10",
+    "time_end": "15:30",
     "track": "Track A",
     "speaker_ids": ["eb77c13b"],
-    "tech_tags": [],
+    "tech_tags": ["AI エージェント", "AI セーフティ", "AI ガバナンス"],
     "level": ["Beginner"],
-    "perspective": ["AI Agent", "AI セーフティ", "AI ガバナンス"]
+    "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
     "id": "3833a954",
     "slug": "ohtaman",
     "title": "AIエージェントの頭の中 ─ 仕組みを味方にして“考えるAI”を動かす ─",
     "abstract": "<div><p>2025年は“AIエージェント”という言葉が、技術から実践へと動き始めた年でした。 これからのAIを賢く動かすには、「何をもとに考えるか（Context）」「どれだけ考えるか（Thinking Budget）」「どう動かすか（Function Calling / MCP）」を理解し、自在に設計できることが求められます。</p><p>本セッションでは、AIエージェントの動作する仕組みを紐解きながら、AIをより賢く、信頼できる形で動かすための考え方を紹介します。</p></div>",
-    "time_start": "10:20",
-    "time_end": "10:40",
+    "time_start": "14:50",
+    "time_end": "15:10",
     "track": "Track A",
     "speaker_ids": ["6adf168f"],
-    "tech_tags": [],
+    "tech_tags": ["AI エージェント", "MCP"],
     "level": ["Beginner"],
     "perspective": ["Introduction", "Challenge"]
   },
@@ -173,7 +181,7 @@
     "time_end": "15:30",
     "track": "Track A",
     "speaker_ids": ["6db6fcd9"],
-    "tech_tags": [],
+    "tech_tags": ["AI エージェント"],
     "level": ["Beginner"],
     "perspective": ["Introduction", "Challenge"]
   },
@@ -186,7 +194,7 @@
     "time_end": "15:30",
     "track": "Track B",
     "speaker_ids": ["8197ef53"],
-    "tech_tags": ["AI Agent", "ADK"],
+    "tech_tags": ["AI エージェント", "ADK", "Gemini Live API"],
     "level": ["Advanced"],
     "perspective": ["Challenge"]
   },
@@ -199,7 +207,7 @@
     "time_end": "15:10",
     "track": "Track B",
     "speaker_ids": ["8ab1daa8"],
-    "tech_tags": ["AI Agent", "ADK", "データ分析"],
+    "tech_tags": ["AI エージェント", "ADK", "データ分析", "BigQuery"],
     "level": ["Advanced"],
     "perspective": ["Experience", "Challenge"]
   },
@@ -212,7 +220,7 @@
     "time_end": "14:50",
     "track": "Track B",
     "speaker_ids": ["cd1ec40c"],
-    "tech_tags": ["AI Agent", "ADK"],
+    "tech_tags": ["AI エージェント", "ADK"],
     "level": ["Advanced"],
     "perspective": ["Introduction", "Challenge"]
   },
@@ -277,7 +285,7 @@
     "time_end": "16:00",
     "track": "Track A",
     "speaker_ids": ["ea7aa9d7"],
-    "tech_tags": ["Gemini CLI"],
+    "tech_tags": ["Gemini CLI", "MLOps", "AI"],
     "level": ["Advanced"],
     "perspective": ["Experience", "Challenge"]
   },
@@ -290,7 +298,12 @@
     "time_end": "15:55",
     "track": "Track B",
     "speaker_ids": ["2cf7cb6d"],
-    "tech_tags": [],
+    "tech_tags": [
+      "Observability",
+      "Google Cloud",
+      "Vertex AI",
+      "OpenTelemetry"
+    ],
     "level": ["Beginner", "Advanced"],
     "perspective": ["Introduction", "Challenge"]
   },
@@ -303,7 +316,7 @@
     "time_end": "16:10",
     "track": "Track B",
     "speaker_ids": ["7fee0e09"],
-    "tech_tags": [],
+    "tech_tags": ["Dashboard"],
     "level": ["Beginner", "Advanced"],
     "perspective": ["Experience", "Challenge"]
   },
@@ -316,9 +329,22 @@
     "time_end": "16:25",
     "track": "Track B",
     "speaker_ids": ["55598dae"],
-    "tech_tags": [],
+    "tech_tags": ["Kaggle", "AI"],
     "level": ["Beginner"],
     "perspective": ["Introduction", "Experience", "Challenge"]
+  },
+  {
+    "id": "02236307",
+    "slug": "takahirom",
+    "title": "AndroidアプリのAI実装をAndroidifyで学ぶ ー Google公式サンプルによる体験と実装 ー",
+    "abstract": "<div><p>Androidifyは、Googleが公開しているAndroid公式サンプルアプリです。オリジナルAndroidボット(Android ロボット)キャラクターを作成できるアプリで、最新のAI技術を活用した様々な機能が実装されています。</p><p>例えば、\"カメラに人が映ると撮影ボタンが有効になる\"、\"プロンプトから画像を生成する\"、\"写真から背景を除去してステッカーを作る\"など、さまざまなAI機能が体験できます。</p><p>この記事では、これらの機能について「体験（何ができるか）」→「裏側の技術（どう動くか）」の流れで解説します。実際に動くコードベースから学ぶことで、すぐに自分のアプリに応用できる実践的な知識が得られます。</p></div>",
+    "time_start": "15:55",
+    "time_end": "15:10",
+    "track": "Track C",
+    "speaker_ids": ["02236307"],
+    "tech_tags": ["Android", "AI"],
+    "level": ["Beginner", "Advanced"],
+    "perspective": ["Introduction", "Challenge"]
   },
   {
     "id": "001aef64",
@@ -329,7 +355,7 @@
     "time_end": "15:55",
     "track": "Track C",
     "speaker_ids": ["f7da315c"],
-    "tech_tags": ["Android"],
+    "tech_tags": ["Android", "Gemini", "Android Studio"],
     "level": ["Beginner", "Advanced"],
     "perspective": ["Introduction", "Challenge"]
   },

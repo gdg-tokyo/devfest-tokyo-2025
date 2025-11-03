@@ -1,11 +1,11 @@
 ---
 id: ai-tools
-track: Track A
-time_start: '15:40'
-time_end: '16:30'
 level: ['Advanced']
-tech_tags: ['Gemini CLI']
 perspective: ['Experience', 'Challenge']
+tech_tags: ['Gemini CLI']
+time_end: '16:30'
+time_start: '15:40'
+track: Track A
 ---
 
 # AI TOOLS (仮)

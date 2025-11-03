@@ -5,16 +5,16 @@
 
 ## Pre-requisite
 
-- [ ] T000: Rename `src/app/layput.tsx` to `src/app/layout.tsx`. This is crucial for Next.js Metadata API to function correctly.
+- [x] T000: Rename `src/app/layput.tsx` to `src/app/layout.tsx`. This is crucial for Next.js Metadata API to function correctly.
 
 ## Phase 1: Setup
 
 **Goal**: Establish the foundational structure for metadata management.
 
-- [ ] T001: Create `src/lib/site.ts` with `SITE` configuration, including `defaultOgImage`, `locale`, and `twitter` fields. (P)
+- [x] T001: Create `src/lib/site.ts` with `SITE` configuration, including `defaultOgImage`, `locale`, and `twitter` fields. (P)
   - **File**: `src/lib/site.ts`
   - **Content**: As defined in `quickstart.md` section 1.
-- [ ] T002: Create `src/lib/seo.ts` with `PageMetaInput` type and `buildMetadata` function, extended to support OGP and Twitter Card metadata. (P)
+- [x] T002: Create `src/lib/seo.ts` with `PageMetaInput` type and `buildMetadata` function, extended to support OGP and Twitter Card metadata. (P)
   - **File**: `src/lib/seo.ts`
   - **Content**: As defined in `quickstart.md` section 2.
 
@@ -22,7 +22,7 @@
 
 **Goal**: Implement site-wide default metadata in the root layout.
 
-- [ ] T003: Verify `app/layout.tsx` is correctly configured for site-wide default title, description, and `metadataBase`, and that `icons.icon` uses `withRepoBasePath()`. (P)
+- [x] T003: Verify `app/layout.tsx` is correctly configured for site-wide default title, description, and `metadataBase`, and that `icons.icon` uses `withRepoBasePath()`. (P)
   - **File**: `src/app/layout.tsx`
   - **Content**: As defined in `quickstart.md` section 3.
 
@@ -69,10 +69,10 @@
 
 **Independent Test Criteria**: All unit tests pass, and code coverage for metadata-related files is high (e.g., >90%).
 
-- [ ] T012: Create unit tests for `src/lib/site.ts`.
+- [x] T012: Create unit tests for `src/lib/site.ts`.
   - **File**: `tests/unit/lib/site.test.ts`
   - **Action**: Verify `SITE` object properties, including `defaultOgImage`, `locale`, and `twitter`.
-- [ ] T013: Create unit tests for `src/lib/seo.ts`.
+- [x] T013: Create unit tests for `src/lib/seo.ts`.
   - **File**: `tests/unit/lib/seo.test.ts`
   - **Action**: Test `buildMetadata` function with various inputs (title/description/ogImage/type/noindex/imageAlt present, absent, path variations), verifying correct OGP and Twitter Card metadata generation.
 - [x] T014: Create unit tests for `src/app/layout.tsx`'s `metadata` export.

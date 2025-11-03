@@ -1,29 +1,82 @@
-import type { Metadata } from 'next';
-import { SITE } from './site';
+import type { Metadata } from 'next'
+import { SITE } from './site'
+import { withRepoBasePath } from '@/lib/url-utils'
 
 export type PageMetaInput = {
-  path?: string;        // e.g., "/blog/hello"
-  title?: string;       // if omitted, layout defaultTitle is used
-  description?: string; // if omitted, falls back to SITE.defaultDescription
-};
+  path?: string // e.g., "/blog/hello"
+  title?: string // layout template applied
+  description?: string // SITE.defaultDescription if omitted
+  ogImage?: string // Relative/absolute OK. SITE.defaultOgImage if unspecified
+  type?: 'website' | 'article' | 'profile' | 'book'
+  noindex?: boolean
+  imageAlt?: string // Alt text for OG image (optional)
+}
 
 const abs = (p?: string) => {
-  if (p === undefined) return undefined;
-  if (p === '') return new URL(SITE.url).toString(); // Treat empty string as root, with trailing slash
-  if (p.startsWith("http")) return p;
-  return new URL(p, SITE.url).toString();
-};
+  if (!p) return undefined
+  if (p.startsWith('http')) return p
+  return new URL(p, SITE.url).toString()
+}
 
+// Image path is made absolute after considering repo prefix
+const resolveOgImage = (p?: string) => {
+  const raw = p ?? SITE.defaultOgImage
+  // Only apply withRepoBasePath if the raw path is not already an absolute URL
+  const processedPath = raw.startsWith('http') ? raw : withRepoBasePath(raw);
+  return abs(processedPath)
+}
 
 export function buildMetadata(input: PageMetaInput = {}): Metadata {
-  const path = input.path ?? "/";
-  const title = input.title; // layout template applies if string
-  const description = input.description ?? SITE.defaultDescription;
+  const { 
+    path = '/',
+    title,
+    description,
+    ogImage,
+    type = 'website',
+    noindex = false,
+    imageAlt,
+  } = input
+
+  const desc = description ?? SITE.defaultDescription
+  const urlAbs = abs(path)
+  const imageAbs = resolveOgImage(ogImage)
+  const ogImageObj = imageAbs
+    ? [
+        {
+          url: imageAbs,
+          width: 1200,
+          height: 630,
+          alt: imageAlt ?? title ?? SITE.name,
+        },
+      ]
+    : undefined
 
   return {
     metadataBase: new URL(SITE.url),
-    title: title, // uses layout's template when provided
-    description,
-    alternates: { canonical: abs(path) },
-  };
+    title, // layout template applied
+    description: desc,
+    alternates: { canonical: urlAbs },
+    robots: noindex
+      ? { index: false, follow: false, nocache: true }
+      : { index: true, follow: true },
+
+    openGraph: {
+      type,
+      url: urlAbs,
+      siteName: SITE.name,
+      title, // Optional but explicitly stated
+      description: desc,
+      images: ogImageObj,
+      locale: SITE.locale,
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+      site: SITE.twitter.site,
+      creator: SITE.twitter.creator,
+      title,
+      description: desc,
+      images: imageAbs ? [imageAbs] : undefined,
+    },
+  }
 }

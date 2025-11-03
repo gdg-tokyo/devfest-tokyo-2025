@@ -13,17 +13,6 @@ import SessionModal from '@/components/common/SessionModal'
 
 import { useRouter, useSearchParams } from 'next/navigation'
 
-import type { Metadata } from 'next'
-import { buildMetadata } from '@/lib/seo'
-import { SITE } from '@/lib/site' // Import SITE
-
-export async function generateMetadata(): Promise<Metadata> {
-  return buildMetadata({
-    path: `/talks`,
-    title: `Talks`,
-  })
-}
-
 interface TalkWithSessionInfo extends Talk {
   sessionLevel: string[]
 

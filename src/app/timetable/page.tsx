@@ -9,17 +9,6 @@ import { Session, Speaker, Talk } from '@/types'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { generateTimeSlots, filterSession } from '@/features/timetable/utils' // Import from utils
 
-import type { Metadata } from 'next'
-import { buildMetadata } from '@/lib/seo'
-import { SITE } from '@/lib/site' // Import SITE
-
-export async function generateMetadata(): Promise<Metadata> {
-  return buildMetadata({
-    path: `/timetable`,
-    title: `Timetable`,
-  })
-}
-
 const TimetablePage = () => {
   const allSessions: Session[] = getSessions()
 

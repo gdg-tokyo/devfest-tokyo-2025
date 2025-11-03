@@ -1,0 +1,33 @@
+description = "Extract learnings from the GitHub PRs"
+
+prompt = """
+---
+description: Extract learnings from the GitHub PRs
+---
+
+## User Input
+
+```text
+$ARGUMENTS
+```
+
+You **MUST** consider the user input before proceeding (if not empty).
+
+## Goal
+
+Extract an valuable learnings from the GitHub PRs and improve the coding ability and documatation automatically.
+
+## Execution Steps
+
+- Read @docs/ai-memory/learnings/AGENTS.md and understand the learnings extraction rule.
+- Read @docs/ai-memory/learnings/latest.md and understand the active learnings and what is expected.
+- First, determin the period to analyze the GitHub PRs. If user does not provide anything, analyze the PR merged yesterday.
+- Second, use gh command to extract all PRs. Retrieve all PR descroption and review commens.
+- Extract learnings and assigne the learnings category.
+- Select most valuable items up to 10.
+- Export them to @docs/ai-memory/learnings/latest.md with the described format.
+
+## Context
+
+{{args}}
+"""

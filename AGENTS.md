@@ -182,6 +182,20 @@ This architecture design emphasizes decoupling the core business logic from the 
 - Wrap the URL with `withRepoBasePath()` (from `@/lib/url-utils`) to add the website base path to a given asset path.
 - Deployment target is firebase hosting.
 
+### GitHub MCP Tools
+
+When interacting with GitHub repositories, leverage the available GitHub MCP tools for efficient and reliable operations.
+
+- **Verify Repository Information:** Always start by confirming the correct repository owner and name. Use `git remote -v` to retrieve the remote URL and parse the owner and repository name from it. This ensures that subsequent GitHub operations target the correct repository.
+- **Tool Selection:** Choose the appropriate GitHub MCP tool for your task. For example:
+  - `list_pull_requests`: To list pull requests (e.g., open, closed, merged).
+  - `create_pull_request`: To create a new pull request.
+  - `get_file_contents`: To read the content of a file in a repository.
+  - `create_or_update_file`: To create or update a file in a repository.
+  - `push_files`: To push multiple files in a single commit.
+- **Error Handling:** If a GitHub tool call fails, especially due to repository or permission issues, immediately re-verify the repository details using `git remote -v`.
+- **Transparency:** Explicitly state the repository owner and name being used for GitHub operations to ensure clarity and allow for early correction if needed.
+
 ### Maintenance policy
 
 - Consider incorporating feedback that has been repeatedly instructed during conversations.
@@ -196,7 +210,14 @@ Import @docs/web/style-guide.md
 
 ---
 
-# Agent Rules
+## AI Agent Memory Bank
+
+### Active Memory Bank
+
+- Import @docs/ai-memory/learnings/AGENTS.md
+- Import @docs/ai-memory/learnings/latest.md
+
+### Agent Rules
 
 - DON'T use `$ npm run dev` for debug. If you want to check it, ask user to launch the dev server manually.
   - If the chrome-dev-tool MCP is available, use it to investigate the error.

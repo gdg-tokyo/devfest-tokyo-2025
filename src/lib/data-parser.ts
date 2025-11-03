@@ -39,6 +39,7 @@ export function _loadData(dataDir: string): DataCacheEntry {
   const sessions: Session[] = (rawSessions as any[]).map((s) => ({
     ...s,
     perspective: s.perspective || [],
+    thumbnail_url: s.thumbnail_url,
   }))
 
   const talkSessionMap = new Map<string, Session>()
@@ -66,6 +67,7 @@ export function _loadData(dataDir: string): DataCacheEntry {
         ? [talk.perspective]
         : [],
       tech_tags: talk.tech_tags || [],
+      thumbnail_url: talk.thumbnail_url,
     }
   })
 
@@ -152,6 +154,7 @@ export function getSessions(): Session[] {
         tech_tags: session.tech_tags,
         description: session.description,
         perspective: talks.flatMap((t) => t.perspective || []),
+        thumbnail_url: session.thumbnail_url,
       }
     }) as (Session | null)[]
   ).filter((s): s is Session => s !== null)

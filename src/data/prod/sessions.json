@@ -132,7 +132,7 @@
   {
     "id": "f60ed56a",
     "slug": "android",
-    "talk_ids": ["02236307", "001aef64"],
+    "talk_ids": ["02236307", "a154f812", "001aef64"],
     "track": "Track C",
     "time_start": "15:40",
     "time_end": "16:30",
@@ -171,7 +171,7 @@
   {
     "id": "1ace4124",
     "slug": "lightning-talks",
-    "talk_ids": [],
+    "talk_ids": ["4190294d", "5492fc46"],
     "track": "Track A",
     "time_start": "16:40",
     "time_end": "17:30",
@@ -184,7 +184,7 @@
   {
     "id": "6f9a4880",
     "slug": "closing",
-    "talk_ids": [],
+    "talk_ids": ["6552bcbf"],
     "track": "Track A",
     "time_start": "17:30",
     "time_end": "18:00",

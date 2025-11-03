@@ -200,6 +200,14 @@
     "twitter_handle": "new_runnable"
   },
   {
+    "id": "a154f812",
+    "name": "wasabeef",
+    "bio": "<div><p>Google Developers Expert for Android. Working at CyberAgent</p><p></p></div>",
+    "photo_url": "https://pbs.twimg.com/profile_images/1591957875185909761/bzD8975N_400x400.jpg",
+    "job": "CyberAgent, Inc. エンジニア",
+    "twitter_handle": "wasabeef_jp"
+  },
+  {
     "id": "f7da315c",
     "name": "あんざいゆき",
     "bio": "<div><p>Android の GDE です。Kotlin 大好き。AI ツールでいろいろ遊んでます。最近は Agent Development Kit で AI エージェント作るのが楽しいです。</p><p></p></div>",
@@ -222,5 +230,29 @@
     "photo_url": "https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/yukitanabe600x600.jpg",
     "job": "Google Developer Experts (Firebase, Workspace)",
     "twitter_handle": "\\_tanabee"
+  },
+  {
+    "id": "80ab68cf",
+    "name": "BATBAATAR ANKHBOLD",
+    "bio": "<div><p>東京国際工科専門職大学 (IPUT Tokyo) 工科学部 情報工学科 AI戦略コースの学生です。 ITのほかに歴史が好きです。 ツアーガイドとしても働いています。 多様な人々と話すのが視野を広げると思うので、よろしくお願いいたします。</p><p>Majoring in Information Technology at IPUT Tokyo. Beyond tech, I like history as well! Also freelancing as a tour guide! If there is a theme to all this, talking with many a people brings a wealth of perspective.</p><p></p></div>",
+    "photo_url": "https://media.licdn.com/dms/image/v2/D5603AQET1nGCFnzXJA/profile-displayphoto-shrink_400_400/B56ZbUE1JHH4Ag-/0/1747314758757?e=1763596800&v=beta&t=c0BjQ0RkYf9VB5RK7vQiuGX-kPYcGOTXcEWReut0dI8",
+    "job": "IPUT, 東京国際工科専門職大学 情報工学科AI戦略コース",
+    "twitter_handle": ""
+  },
+  {
+    "id": "233ab3f2",
+    "name": "Suu",
+    "bio": "<div><p>普段はNPO法人Waffleという団体で女性エンジニア学生を増やす取り組みをする傍ら、自分自身も学生エンジニアを4年弱行っています。最近の学生はどのように技術をキャッチアップしているのか？というのを中心にお話しできればと思います。</p><p></p></div>",
+    "photo_url": "https://pbs.twimg.com/profile_images/1460523078593974273/oGIc5NZC_400x400.jpg",
+    "job": "お茶の水女子大学 バックエンドエンジニア",
+    "twitter_handle": "suueng"
+  },
+  {
+    "id": "1c770c2e",
+    "name": "Yuka",
+    "bio": "<div><p>Google Developer Group Tokyo Organizer</p></div>",
+    "photo_url": "",
+    "job": "GDG Tokyo Organizer",
+    "twitter_handle": "yuyu_dev0"
   }
 ]

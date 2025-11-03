@@ -34,6 +34,13 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
     .filter(
       (item): item is { talk: Talk; speakers: Speaker[] } => item !== null
     )
+    .sort((a, b) => {
+      if (!a.talk.time_start) return 1
+      if (!b.talk.time_start) return -1
+      if (a.talk.time_start < b.talk.time_start) return -1
+      if (a.talk.time_start > b.talk.time_start) return 1
+      return 0
+    })
 
   return (
     <div className="space-y-6">

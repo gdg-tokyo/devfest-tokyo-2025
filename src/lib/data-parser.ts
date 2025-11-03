@@ -1,4 +1,3 @@
-import { Session, Speaker, Stakeholder, Talk } from '@/types'
 import devSessions from '@/data/dev/sessions.json'
 import devSpeakers from '@/data/dev/speakers.json'
 import devStakeholders from '@/data/dev/stakeholders.json'
@@ -7,6 +6,7 @@ import prodSessions from '@/data/prod/sessions.json'
 import prodSpeakers from '@/data/prod/speakers.json'
 import prodStakeholders from '@/data/prod/stakeholders.json'
 import prodTalks from '@/data/prod/talks.json'
+import { Session, Speaker, Stakeholder, Talk } from '@/types'
 
 interface DataCacheEntry {
   speakers: Speaker[]
@@ -53,8 +53,8 @@ export function _loadData(dataDir: string): DataCacheEntry {
     const session = talkSessionMap.get(talk.id)
     return {
       ...talk,
-      time_start: session?.time_start || '',
-      time_end: session?.time_end || '',
+      time_start: talk.time_start || session?.time_start || '',
+      time_end: talk.time_end || session?.time_end || '',
       track: session?.track || '',
       level: Array.isArray(talk.level)
         ? talk.level

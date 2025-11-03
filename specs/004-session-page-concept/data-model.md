@@ -9,6 +9,8 @@ Represents a single session at the DevFest Tokyo 2025 event. It contains details
 - **Attributes:**
   - `id`: Unique identifier (string)
   - `title`: Title of the session (string)
+  - `startTime`: Start time of the session (string, e.g., '10:00', optional)
+  - `endTime`: End time of the session (string, e.g., '11:00', optional)
   - `longDescription`: Detailed description of the session, potentially in Markdown format (string)
   - `level`: Skill level (e.g., 'Beginner', 'Intermediate', 'Advanced') (string)
   - `perspective`: Learning perspective (e.g., 'Introduction', 'Experience', 'Challenge') (string)
@@ -21,6 +23,8 @@ Represents a single presentation within a session. A session can have one or mor
 - **Attributes:**
   - `id`: Unique identifier (string)
   - `title`: Presentation title (string)
+  - `startTime`: Start time of the talk (string, e.g., '10:00', optional)
+  - `endTime`: End time of the talk (string, e.g., '10:30', optional)
   - `abstract`: Short description of this presentation (string)
   - `speakers`: Array of embedded `Speaker` objects (array of objects)
 

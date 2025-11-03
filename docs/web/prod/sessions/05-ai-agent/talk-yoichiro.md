@@ -1,10 +1,10 @@
 ---
-time_start: '14:30'
-time_end: '15:30'
-tech_tags: []
+is_keynote: false
 level: ['Beginner']
 perspective: ['Introduction', 'Challenge']
-is_keynote: false
+tech_tags: ['AI エージェント']
+time_end: '15:30'
+time_start: '14:30'
 ---
 
 # AIと暮らす未来 : エージェントが生活をどう変えるのか
@@ -16,3 +16,5 @@ is_keynote: false
 ### 田中 洋一郎 さん (@yoichiro) / Tably株式会社 CTO
 
 業務アプリ向けの開発ツールやフレームワークの設計に携わった後、mixi Platform、LINE Platformの技術統括を行い、日本でのソーシャルアプリケーションの技術的な基礎を確立しただけでなく、メッセージングアプリにおいても世界に先駆けてBOT Platformの立ち上げを主導した。現在はAIを駆使したサービスの開発を行っている。Google Developers Expert (Web Technology担当)。電子情報通信学会 東北支部学生員奨励賞受賞。Mash up Award 3rd 3部門同時受賞。モバイルプロジェクト・アワード2010 モバイルプラットフォーム部門優秀賞受賞。著書『ソーシャルアプリプラットフォーム構築技法』など。
+
+![](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/yoichiro-tanaka.jpg)

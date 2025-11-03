@@ -4,7 +4,7 @@ track: Track B
 time_start: '15:40'
 time_end: '16:30'
 level: ['Beginner', 'Advanced']
-tech_tags: ['データ分析', 'オブザーバビリティ']
+tech_tags: ['Kaggle', 'データ分析', 'Observability']
 perspective: ['Introduction', 'Experience', 'Challenge']
 ---
 

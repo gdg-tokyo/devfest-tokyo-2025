@@ -1,13 +1,13 @@
 ---
 id: hands-on-geminicli
-track: Track D
-time_start: '15:40'
-time_end: '16:30'
 level: ['Beginner']
-tech_tags: ['Gemini CLI']
 perspective: ['Introduction', 'Challenge']
+tech_tags: ['Gemini CLI', 'Nano Banana']
+time_end: '16:30'
+time_start: '15:40'
+track: Track D
 ---
 
 # [Hands-on] Gemini CLI
 
-Coming soon ...
+このセッションではGemini CLIの基本的な使い方を学び簡単なタスク実行するハンズオンを行います。そして、Gemini Extensionsを使ってGemini CLIでNanobananaモデルを使えるようにしてクールな画像を生成、編集します。

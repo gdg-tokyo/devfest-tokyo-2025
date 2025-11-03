@@ -1,11 +1,11 @@
 ---
 id: web-frontend
-track: Track C
-time_start: '14:30'
-time_end: '15:30'
 level: ['Beginner', 'Advanced']
-tech_tags: ['Web', 'Angular', 'Chrome', 'CSS']
 perspective: ['Introduction', 'Challenge']
+tech_tags: ['Web', 'Angular', 'Chrome', 'CSS']
+time_end: '15:30'
+time_start: '14:30'
+track: Track C
 ---
 
 # Next Generation Web Frontend 2025

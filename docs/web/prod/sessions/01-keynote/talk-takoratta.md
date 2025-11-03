@@ -1,10 +1,10 @@
 ---
-time_start: '12:40'
-time_end: '13:10'
-tech_tags: ['Web', 'AI', 'キャリア']
+is_keynote: true
 level: ['Beginner']
 perspective: ['Experience']
-is_keynote: true
+tech_tags: ['Web', 'AI', 'キャリア']
+time_end: '13:10'
+time_start: '12:40'
 ---
 
 # Webの再生と技術者の今後

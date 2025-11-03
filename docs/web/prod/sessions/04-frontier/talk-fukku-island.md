@@ -1,20 +1,20 @@
 ---
-time_start: '13:20'
-time_end: '13:35'
+is_keynote: false
+level: ['Beginner', 'Advanced']
+perspective: ['Experience', 'Challenge']
 tech_tags:
   [
-    '動画生成',
-    'Veo',
     'Gemini',
-    'nano-banana',
-    'imagen',
-    'YouTube',
     'Google ads',
+    'imagen',
+    'nano-banana',
     'scenario builder',
+    'Veo',
+    'YouTube',
+    '動画生成',
   ]
-level: ['Beginner', 'Advanced']
-perspective: ['Experience']
-is_keynote: false
+time_end: '13:35'
+time_start: '13:20'
 ---
 
 # キーワード: 動画生成, Veo, Gemini, nano-banana, imagen, YouTube, Google ads, scenario builder

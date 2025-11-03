@@ -1,10 +1,10 @@
 ---
 id: frontier
-track: Track C
-time_start: '13:20'
-time_end: '14:10'
 level: ['Advanced']
 tech_tags: ['Veo', 'Flutter', 'Hardware']
+time_end: '14:10'
+time_start: '13:20'
+track: Track C
 ---
 
 # フロンティア (仮)

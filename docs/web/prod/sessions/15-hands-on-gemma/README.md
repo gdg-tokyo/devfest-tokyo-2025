@@ -1,11 +1,11 @@
 ---
 id: hands-on-gemma
-track: Track D
-time_start: '13:20'
-time_end: '14:10'
 level: ['Beginner']
-tech_tags: ['Gemma']
 perspective: ['Introduction']
+tech_tags: ['Gemma']
+time_end: '14:10'
+time_start: '13:20'
+track: Track D
 ---
 
 # [Hands-on] Gemma

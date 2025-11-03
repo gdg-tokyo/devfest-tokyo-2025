@@ -1,10 +1,10 @@
 ---
-time_start: '13:35'
-time_end: '13:50'
-tech_tags: ['XLS']
+is_keynote: false
 level: ['Advanced']
 perspective: ['Challenge']
-is_keynote: false
+tech_tags: ['XLS', 'ハードウェア']
+time_end: '13:50'
+time_start: '13:35'
 ---
 
 # XLS：半導体デジタル設計をもっと早く！

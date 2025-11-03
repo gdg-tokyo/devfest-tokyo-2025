@@ -1,10 +1,10 @@
 ---
-time_start: '13:20'
-time_end: '13:30'
-tech_tags: []
+is_keynote: false
 level: ['Beginner']
 perspective: ['Experience']
-is_keynote: false
+tech_tags: ['Google Maps', 'UX']
+time_end: '13:30'
+time_start: '13:20'
 ---
 
 # 色を削ぎ落とす地図UI設計 Google Mapsが700色を25色に絞ったUXの技

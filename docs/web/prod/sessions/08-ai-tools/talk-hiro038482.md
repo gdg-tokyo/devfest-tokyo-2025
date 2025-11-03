@@ -1,10 +1,10 @@
 ---
-time_start: '16:00'
-time_end: '16:20'
-level: ['Advanced']
-tech_tags: ['Gemini CLI']
-perspective: ['Experience', 'Challenge']
 is_keynote: false
+level: ['Advanced']
+perspective: ['Experience', 'Challenge']
+tech_tags: ['Gemini CLI']
+time_end: '16:20'
+time_start: '16:00'
 ---
 
 # Gemini CLI Advanced Theme - Gemini CLI とチーム開発

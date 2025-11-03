@@ -1,11 +1,11 @@
 ---
 id: android
-track: Track C
-time_start: '15:40'
-time_end: '16:30'
 level: ['Beginner', 'Advanced']
-tech_tags: ['Android']
 perspective: ['Introduction', 'Challenge']
+tech_tags: ['Android']
+time_end: '16:30'
+time_start: '15:40'
+track: Track C
 ---
 
 # Android (仮)

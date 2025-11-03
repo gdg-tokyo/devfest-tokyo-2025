@@ -40,20 +40,20 @@
     "twitter_handle": "yukio_andoh"
   },
   {
-    "id": "2c8157b0",
-    "name": "Taniii (谷 知拓)",
-    "bio": "<div><p>MIXIで、MLOpsを中心に起案から設計・実装まで行なっています。大学では、LLMを用いたゼロショット・スケーラブルな汎用推薦システムの研究をしています。 2014年小学生の時に初めてAndroidアプリを公開したのをきっかけに、ものづくりの楽しさや可能性に魅了されたことから、草の根の個人開発を大切にしており、Web, モバイル, デザイン, AI/ML, DevOps, 3D/XR, GISなど、作りたいもの起点で幅広く領域を超えたものづくりをするのが好きです。地図SNSアプリ <a href=\"https://x.com/mapic_app\">mapic</a> , <a href=\"https://kokkai.today/\">国会Today</a> , 国家予算シミュレーション <a href=\"https://yosan.org/\">yosan.org</a> などを開発しています。</p><p></p></div>",
-    "photo_url": "https://media.licdn.com/dms/image/v2/D5603AQH0UL8wgKw_ew/profile-displayphoto-shrink_800_800/B56ZYVB71.H0Ac-/0/1744109551790?e=1762387200&v=beta&t=j_-jEO0z-oW8NsBQ8tRMyFNJtjkbpkHCdh0Gs9lv2r8",
-    "job": "株式会社MIXI, 東京都立大学",
-    "twitter_handle": "taniiicom"
-  },
-  {
     "id": "46046eb0",
     "name": "森谷 直哉",
     "bio": "<div><p>2011年3月よりGoogle Japanにて現Google Cloudのプリセールスを担当。東日本大震災で地図・空間情報の持つ力を目の当たりにし、Google MapsのAPIビジネスにも注力。2015年にシンガポールへ転籍し、東南アジアのクラウドビジネス立ち上げ、特にデータ活用分野におけるプリセールスに貢献。2022年より現職のGoogle Maps Platformの製品部門にて、主に早期製品を担当するソリューションエンジニアとして従事。</p><p></p></div>",
     "photo_url": "https://media.licdn.com/dms/image/v2/D5603AQGXtVLA_FEtAQ/profile-displayphoto-crop_800_800/B56Zoi2pUuJwAM-/0/1761521342328?e=1762992000&v=beta&t=fQLjlDVf_Nmm9iZ_ro2hDm4aTSFrJzvI-ROUmKw4op8",
     "job": "Solutions Engineer, Google Maps Platform, Google Asia Pacific Lte.Ptd.",
     "twitter_handle": ""
+  },
+  {
+    "id": "2c8157b0",
+    "name": "Taniii (谷 知拓)",
+    "bio": "<div><p>MIXIで、MLOpsを中心に起案から設計・実装まで行なっています。大学では、LLMを用いたゼロショット・スケーラブルな汎用推薦システムの研究をしています。 2014年小学生の時に初めてAndroidアプリを公開したのをきっかけに、ものづくりの楽しさや可能性に魅了されたことから、草の根の個人開発を大切にしており、Web, モバイル, デザイン, AI/ML, DevOps, 3D/XR, GISなど、作りたいもの起点で幅広く領域を超えたものづくりをするのが好きです。地図SNSアプリ <a href=\"https://x.com/mapic_app\">mapic</a> , <a href=\"https://kokkai.today/\">国会Today</a> , 国家予算シミュレーション <a href=\"https://yosan.org/\">yosan.org</a> などを開発しています。</p><p></p></div>",
+    "photo_url": "https://media.licdn.com/dms/image/v2/D5603AQH0UL8wgKw_ew/profile-displayphoto-shrink_800_800/B56ZYVB71.H0Ac-/0/1744109551790?e=1762387200&v=beta&t=j_-jEO0z-oW8NsBQ8tRMyFNJtjkbpkHCdh0Gs9lv2r8",
+    "job": "株式会社MIXI, 東京都立大学",
+    "twitter_handle": "taniiicom"
   },
   {
     "id": "9f6f9c2d",
@@ -82,7 +82,7 @@
   {
     "id": "eb77c13b",
     "name": "杉山 阿聖",
-    "bio": "<div><p>Citadel AI でプロダクト開発や AI セーフティに関する研究開発に従事。これまでに機械学習パイプラインの構築など、機械学習の実用化に取り組む。「機械学習図鑑」「事例でわかる MLOps」の共著者のひとり。</p><p></p></div>",
+    "bio": "<div><p>Citadel AI でプロダクト開発や AI セーフティに関する研究開発に従事。これまでに機械学習パイプラインの構築など、機械学習の実用化に取り組む。「機械学習図鑑」「事例でわかる MLOps」の共著者のひとり。Google Developers Expert (Google Cloud, AI)。</p><p></p></div>",
     "photo_url": "https://citadel-ai.com/ja/wp-content/uploads/sites/1/2023/12/Copy-of-20230907_citadel_152-1-1536x1536.jpg",
     "job": "株式会社 Citadel AI Software Engineer",
     "twitter_handle": "K_Ryuichirou"
@@ -98,8 +98,8 @@
   {
     "id": "6db6fcd9",
     "name": "田中 洋一郎",
-    "bio": "<div><p>業務アプリ向けの開発ツールやフレームワークの設計に携わった後、mixi Platform、LINE Platformの技術統括を行い、日本でのソーシャルアプリケーションの技術的な基礎を確立しただけでなく、メッセージングアプリにおいても世界に先駆けてBOT Platformの立ち上げを主導した。現在はAIを駆使したサービスの開発を行っている。Google Developers Expert (Web Technology担当)。電子情報通信学会 東北支部学生員奨励賞受賞。Mash up Award 3rd 3部門同時受賞。モバイルプロジェクト・アワード2010 モバイルプラットフォーム部門優秀賞受賞。著書『ソーシャルアプリプラットフォーム構築技法』など。</p></div>",
-    "photo_url": "",
+    "bio": "<div><p>業務アプリ向けの開発ツールやフレームワークの設計に携わった後、mixi Platform、LINE Platformの技術統括を行い、日本でのソーシャルアプリケーションの技術的な基礎を確立しただけでなく、メッセージングアプリにおいても世界に先駆けてBOT Platformの立ち上げを主導した。現在はAIを駆使したサービスの開発を行っている。Google Developers Expert (Web Technology担当)。電子情報通信学会 東北支部学生員奨励賞受賞。Mash up Award 3rd 3部門同時受賞。モバイルプロジェクト・アワード2010 モバイルプラットフォーム部門優秀賞受賞。著書『ソーシャルアプリプラットフォーム構築技法』など。</p><p></p></div>",
+    "photo_url": "https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/yoichiro-tanaka.jpg",
     "job": "Tably株式会社 CTO",
     "twitter_handle": "yoichiro"
   },
@@ -109,7 +109,7 @@
     "bio": "<div><p>Google Cloud AIチームのデベロッパーアドボケイトとしてGoogle Cloud USブログ記事やドキュメントの執筆、デモ開発等を担当。2016年より25件以上を掲載し、ジェフディーン、エリックシュミット、ニューズウィーク誌、ニューヨーカー誌により紹介された。延べ17か国のイベントで講演し、Google I/OやCloud Nextにも例年登壇。Xでは2万人のフォロワーに向けてAI/MLの情報を日々共有している。</p><p></p></div>",
     "photo_url": "https://github.com/kazunori279/my-sessions-and-bio/blob/master/photo_202507_small.jpg?raw=true",
     "job": "グーグル合同会社 Cloud AI デベロッパーアドボケイト",
-    "twitter_handle": "na0fu3y"
+    "twitter_handle": "@kazunori_279"
   },
   {
     "id": "8ab1daa8",
@@ -190,6 +190,14 @@
     "photo_url": "https://avatars.githubusercontent.com/u/19337?s=400&u=fb286994be3fadb13d9cf0bbbaae7bb5ffefd3e8&v=4",
     "job": "Google Developer Expert (Kaggle)",
     "twitter_handle": "smly"
+  },
+  {
+    "id": "02236307",
+    "name": "takahirom",
+    "bio": "<div><p>Androidの開発が好きです。ABEMAでAndroidエンジニアをしています。最近はライブラリ開発が趣味です。(Google Developer Expert for Android、AndroidのCyberAgent Developer Experts)</p><p></p></div>",
+    "photo_url": "https://github.com/takahirom.png",
+    "job": "CyberAgent, GDE for Android",
+    "twitter_handle": "new_runnable"
   },
   {
     "id": "f7da315c",

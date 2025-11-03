@@ -21,7 +21,7 @@
     "time_end": "13:10",
     "title": "基調講演",
     "level": ["Beginner"],
-    "tech_tags": ["Web", "Mobile"],
+    "tech_tags": ["Web", "AI", "キャリア"],
     "description": "<div><p>DevFest Tokyo 2025 の 基調講演を行います。</p></div>",
     "perspective": []
   },
@@ -45,10 +45,10 @@
     "track": "Track B",
     "time_start": "13:20",
     "time_end": "14:10",
-    "title": "Google Maps 特集 (仮)",
+    "title": "Google Maps 20 周年記念特集 ~ 意外と知らない昔と今 ~",
     "level": ["Beginner", "Advanced"],
-    "tech_tags": ["Google Map", "BigQuery"],
-    "description": "<div><p>Comming soon ...</p></div>",
+    "tech_tags": ["Google Map"],
+    "description": "<div><p>Google Maps は、誰もが日々お世話になっている代表的な Google のサービスの一つだと思いますが、実は今年で 20 周年を迎えたことはご存じでしたか？今年 2月の Google Maps 20周年記念イベントの大反響をうけ、Google Maps 特集が DevFest Tokyo にやってきます！</p><p>20年の歴史で培われたUXの技から、地上ではなく空の地図 (旧 Google Sky Map) 、そして最先端である BigQuery 連携と MCP サービスを、ぎゅっと凝縮してお届けします！</p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
@@ -71,10 +71,10 @@
     "track": "Track A",
     "time_start": "14:30",
     "time_end": "15:30",
-    "title": "初心者向け AI Agent 特集 (仮)",
+    "title": "AI エージェント 入門",
     "level": ["Beginner"],
     "tech_tags": ["AI Agent", "MCP", "AI セーフティ", "AI ガバナンス"],
-    "description": "<div><p>Coming soon ...</p></div>",
+    "description": "<div><p>生成AI が急速に普及し、私たちの生活を変えようとしています。この変化の中核となる技術が「AI エージェント」です。この入門セッションでは、AI エージェントが生活にもたらす変化とその価値について議論し、実際に AI エージェント 開発を始めるために必要な、仕組みや開発プロセスについて、わかりやすく解説していきます。</p><p>AI初心者の皆さんも、このセッションに参加することで、AI エージェント開発の開発の準備を整えましょう！</p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
@@ -84,9 +84,9 @@
     "track": "Track B",
     "time_start": "14:30",
     "time_end": "15:30",
-    "title": "Agent Developer Kit (ADK) Special",
+    "title": "Agent Developer Kit (ADK) Special (仮)",
     "level": ["Advanced"],
-    "tech_tags": [],
+    "tech_tags": ["AI エージェント", "ADK"],
     "description": "<div><p>Coming soon ...</p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"]
   },
@@ -125,14 +125,14 @@
     "time_end": "16:30",
     "title": "データ分析 / Observability (仮)",
     "level": ["Beginner", "Advanced"],
-    "tech_tags": ["データ分析", "オブザーバビリティ"],
+    "tech_tags": ["Kaggle", "データ分析", "Observability"],
     "description": "<div><p>Coming soon ...</p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
     "id": "f60ed56a",
     "slug": "android",
-    "talk_ids": ["001aef64"],
+    "talk_ids": ["02236307", "001aef64"],
     "track": "Track C",
     "time_start": "15:40",
     "time_end": "16:30",
@@ -151,8 +151,8 @@
     "time_end": "16:30",
     "title": "[Hands-on] Gemini CLI",
     "level": ["Beginner"],
-    "tech_tags": ["Gemini CLI"],
-    "description": "<div><p>Coming soon ...</p></div>",
+    "tech_tags": ["Gemini CLI", "Nano Banana"],
+    "description": "<div><p>このセッションではGemini CLIの基本的な使い方を学び簡単なタスク実行するハンズオンを行います。そして、Gemini Extensionsを使ってGemini CLIでNanobananaモデルを使えるようにしてクールな画像を生成、編集します。</p></div>",
     "perspective": ["Introduction", "Challenge"]
   },
   {
@@ -164,8 +164,8 @@
     "time_end": "15:30",
     "title": "[Hands-on] Firebase Studio",
     "level": ["Advanced"],
-    "tech_tags": ["Firebase Studio"],
-    "description": "<div><p>Coming soon ...</p></div>",
+    "tech_tags": ["Firabase", "Firebase Studio"],
+    "description": "<div><p>Firebase Studio は、フロントエンド・バックエンド・データベースの構築を一元的に行える新しい開発環境です。このハンズオンでは、Firebase Studio を使ってフルスタックアプリケーションを実際に構築しながら、Firestore や Firebase Authentication、Firebase App Hosting などの主要機能を体験します。</p></div>",
     "perspective": ["Introduction", "Challenge"]
   },
   {

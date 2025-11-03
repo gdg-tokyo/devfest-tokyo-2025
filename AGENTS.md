@@ -196,7 +196,14 @@ Import @docs/web/style-guide.md
 
 ---
 
-# Agent Rules
+## AI Agent Memory Bank
+
+### Active Memory Bank
+
+- Import @docs/ai-memory/learnings/AGENTS.md
+- Import @docs/ai-memory/learnings/latest.md
+
+### Agent Rules
 
 - DON'T use `$ npm run dev` for debug. If you want to check it, ask user to launch the dev server manually.
   - If the chrome-dev-tool MCP is available, use it to investigate the error.

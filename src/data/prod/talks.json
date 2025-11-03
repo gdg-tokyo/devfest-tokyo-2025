@@ -338,8 +338,8 @@
     "slug": "takahirom",
     "title": "AndroidアプリのAI実装をAndroidifyで学ぶ ー Google公式サンプルによる体験と実装 ー",
     "abstract": "<div><p>Androidifyは、Googleが公開しているAndroid公式サンプルアプリです。オリジナルAndroidボット(Android ロボット)キャラクターを作成できるアプリで、最新のAI技術を活用した様々な機能が実装されています。</p><p>例えば、\"カメラに人が映ると撮影ボタンが有効になる\"、\"プロンプトから画像を生成する\"、\"写真から背景を除去してステッカーを作る\"など、さまざまなAI機能が体験できます。</p><p>この記事では、これらの機能について「体験（何ができるか）」→「裏側の技術（どう動くか）」の流れで解説します。実際に動くコードベースから学ぶことで、すぐに自分のアプリに応用できる実践的な知識が得られます。</p></div>",
-    "time_start": "15:55",
-    "time_end": "15:10",
+    "time_start": "15:40",
+    "time_end": "15:55",
     "track": "Track C",
     "speaker_ids": ["02236307"],
     "tech_tags": ["Android", "AI"],
@@ -347,12 +347,25 @@
     "perspective": ["Introduction", "Challenge"]
   },
   {
+    "id": "a154f812",
+    "slug": "wasabeef",
+    "title": "Flutter を AI で",
+    "abstract": "<div><p>AI Agent 活用した Flutter 開発を、具体的な活用事例や設定を整理して解説します。Flutter だけに限らず AI を使う開発で汎用的に使えるところも多く説明しようと思います。</p></div>",
+    "time_start": "16:10",
+    "time_end": "16:25",
+    "track": "Track C",
+    "speaker_ids": ["a154f812"],
+    "tech_tags": ["Flutter", "AI"],
+    "level": ["Advanced"],
+    "perspective": ["Experience", "Challenge"]
+  },
+  {
     "id": "001aef64",
     "slug": "yanzm",
     "title": "Android Studio Otter の最新 Gemini 機能",
     "abstract": "<div><p>Android Studio には内蔵の Gemini AI ツールが組み込まれています。次の Android Studio のバージョンである Otter での Gemini ツールの最新機能を紹介します。</p></div>",
-    "time_start": "15:40",
-    "time_end": "15:55",
+    "time_start": "15:55",
+    "time_end": "16:10",
     "track": "Track C",
     "speaker_ids": ["f7da315c"],
     "tech_tags": ["Android", "Gemini", "Android Studio"],
@@ -384,5 +397,44 @@
     "tech_tags": ["Firebase Studio"],
     "level": ["Advanced"],
     "perspective": ["Introduction", "Challenge"]
+  },
+  {
+    "id": "4190294d",
+    "slug": "batbaatar",
+    "title": "あの州って何？/ What's That State?",
+    "abstract": "<div><p>アメリカの州を描いてみてください。AIモデルがそれを当てようとします！参加すると遊べますよ！</p><p>Draw a US state and an AI model will try to guess it! Come on in and you too can play!</p></div>",
+    "time_start": "16:40",
+    "time_end": "17:30",
+    "track": "Track A",
+    "speaker_ids": ["80ab68cf"],
+    "tech_tags": ["Android", "Gemini", "Android Studio"],
+    "level": ["Beginner", "Advanced"],
+    "perspective": ["Introduction", "Challenge"]
+  },
+  {
+    "id": "5492fc46",
+    "slug": "suueng",
+    "title": "「最近の学生」はどう技術キャッチアップを爆速で進めるのか？（仮）",
+    "abstract": "<div><p>AIネイティブな世代がどんどん世に出てきている昨今ですが、所謂「ソフトウェアエンジニアを志望する最近の学生」はどう技術キャッチアップを進めているのでしょうか？ただ動くコードを書くこと自体のハードルはAIによって下がってきている現代で、技術的キャッチアップを行っていく一例をご紹介します。</p></div>",
+    "time_start": "16:40",
+    "time_end": "17:30",
+    "track": "Track A",
+    "speaker_ids": ["233ab3f2"],
+    "tech_tags": ["Android", "Gemini", "Android Studio"],
+    "level": ["Beginner", "Advanced"],
+    "perspective": ["Introduction", "Challenge"]
+  },
+  {
+    "id": "6552bcbf",
+    "slug": "yuka",
+    "title": "クロージング",
+    "abstract": "<div><p>DevFest 全体の締めくくりを行います。写真撮影もありますので、ぜひご参加ください。</p></div>",
+    "time_start": "17:30",
+    "time_end": "18:00",
+    "track": "Track A",
+    "speaker_ids": ["1c770c2e"],
+    "tech_tags": [],
+    "level": ["Beginner", "Advanced"],
+    "perspective": ["Introduction", "Exeperience", "Challenge"]
   }
 ]

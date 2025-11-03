@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Beginner', 'Advanced']
 perspective: ['Introduction', 'Challenge']
 tech_tags: ['Android', 'Gemini', 'Android Studio']
-time_end: '15:55'
-time_start: '15:40'
+time_end: '16:10'
+time_start: '15:55'
 ---
 
 # Android Studio Otter の最新 Gemini 機能

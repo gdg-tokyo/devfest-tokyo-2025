@@ -32,6 +32,10 @@ The Session Page provides attendees with a comprehensive view of a single talk, 
   - **Acceptance Criteria:**
     - The visual appearance of the Session Page is consistent with the Timetable page and overall application branding.
     - Existing UI components (e.g., for chips, cards) are reused to maintain consistency.
+- **FR5: Talk Sorting:** The system SHALL sort talks within a session by their `time_start` in ascending order.
+  - **Acceptance Criteria:**
+    - Talks on the Session Page are displayed in chronological order based on their start time.
+    - If a talk has no `time_start`, it should be placed at the end of the list.
 
 ## 4. Non-Functional Requirements
 
@@ -44,6 +48,8 @@ The Session Page provides attendees with a comprehensive view of a single talk, 
 - **Session:**
   - `id`: Unique identifier
   - `title`: Title of the talk
+  - `startTime`: Start time of the session (e.g., '10:00', optional)
+  - `endTime`: End time of the session (e.g., '11:00', optional)
   - `longDescription`: Detailed description of the talk (Markdown content)
   - `level`: Skill level (e.g., Beginner, Intermediate, Advanced)
   - `perspective`: Learning perspective (e.g., Introduction, Experience, Challenge)
@@ -51,6 +57,8 @@ The Session Page provides attendees with a comprehensive view of a single talk, 
 - **Talk**
   - `id`: Unique identifier
   - `title`: Presentation title
+  - `startTime`: Start time of the talk (e.g., '10:00', optional)
+  - `endTime`: End time of the talk (e.g., '10:30', optional)
   - `abstract`: short description of this presentation.
   - `speakers`: Array of speaker IDs
 - **Speaker:**

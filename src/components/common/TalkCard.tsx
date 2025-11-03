@@ -25,8 +25,8 @@ const TalkCard: React.FC<TalkCardProps> = ({
   const speakerNames = (speakers || [])
     .map((speaker) => speaker.name)
     .join(', ')
-  const timeStart = session?.time_start || 'N/A'
-  const timeEnd = session?.time_end || 'N/A'
+  const timeStart = talk?.time_start || 'N/A'
+  const timeEnd = talk?.time_end || 'N/A'
 
   return (
     <Link

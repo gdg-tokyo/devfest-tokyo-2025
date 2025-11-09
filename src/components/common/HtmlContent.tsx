@@ -1,16 +1,12 @@
 'use client'
-
-import { useState, useEffect } from 'react'
-import type { FC } from 'react'
+import { useMemo } from 'react'
 import sanitizeHtml from 'sanitize-html'
 
 type Props = { html: string }
 
-const HtmlContent: FC<Props> = ({ html }) => {
-  const [sanitizedHtml, setSanitizedHtml] = useState('')
-
-  useEffect(() => {
-    setSanitizedHtml(
+export default function HtmlContent({ html }: Props) {
+  const sanitized = useMemo(
+    () =>
       sanitizeHtml(html, {
         allowedTags: [
           'p',
@@ -18,6 +14,7 @@ const HtmlContent: FC<Props> = ({ html }) => {
           'ol',
           'li',
           'a',
+          'img',
           'pre',
           'code',
           'table',
@@ -29,24 +26,35 @@ const HtmlContent: FC<Props> = ({ html }) => {
           'strong',
           'em',
           'blockquote',
+          'br',
+          'hr',
+          'h1',
+          'h2',
+          'h3',
         ],
         allowedAttributes: {
-          a: ['href', 'target'],
+          a: ['href', 'target', 'rel'],
+          img: [
+            'src',
+            'alt',
+            'title',
+            'width',
+            'height',
+            'loading',
+            'decoding',
+          ],
+          code: ['class'],
+          span: ['class'],
         },
-      })
-    )
-  }, [html])
-
-  if (typeof window === 'undefined') {
-    return <article className="prose max-w-none"></article>
-  }
+        allowedSchemes: ['http', 'https', 'mailto', 'tel'],
+      }),
+    [html]
+  )
 
   return (
     <article
-      className="prose max-w-none"
-      dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
+      className="prose prose-zinc dark:prose-invert max-w-none"
+      dangerouslySetInnerHTML={{ __html: sanitized }}
     />
   )
 }
-
-export default HtmlContent

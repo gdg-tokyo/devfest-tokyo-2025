@@ -101,7 +101,7 @@ const FilterSystem: React.FC<FilterSystemProps> = ({
           onChange={(e) => setKeyword(e.target.value)}
         />
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
         <div className="flex items-center">
           <FilterIcon />
           <span className="ml-2 text-sm font-medium text-gray-700">Levels</span>
@@ -118,7 +118,7 @@ const FilterSystem: React.FC<FilterSystemProps> = ({
           ))}
         </div>
       </div>
-      <div className="flex items-center gap-4 mt-4">
+      <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mt-4">
         <div className="flex items-center">
           <FilterIcon />
           <span className="ml-2 text-sm font-medium text-gray-700">

@@ -71,13 +71,6 @@ export function _loadData(dataDir: string): DataCacheEntry {
     }
   })
 
-  console.log(`Loading speakers from: src/data/${dataDir}/speakers.json`)
-  console.log(`Loading talks from: src/data/${dataDir}/talks.json`)
-  console.log(`Loading sessions from: src/data/${dataDir}/sessions.json`)
-  console.log(
-    `Loading stakeholders from: src/data/${dataDir}/stakeholders.json`,
-  )
-
   const loadedData: DataCacheEntry = {
     speakers,
     talks,

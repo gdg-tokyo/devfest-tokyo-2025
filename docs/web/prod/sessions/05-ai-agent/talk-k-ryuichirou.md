@@ -17,6 +17,6 @@ LLM 登場以降の AI に関する技術的な革新の速度は凄まじく、
 
 Citadel AI でプロダクト開発や AI セーフティに関する研究開発に従事。これまでに機械学習パイプラインの構築など、機械学習の実用化に取り組む。「機械学習図鑑」「事例でわかる MLOps」の共著者のひとり。Google Developers Expert (Google Cloud, AI)。
 
-![speaker](https://citadel-ai.com/ja/wp-content/uploads/sites/1/2023/12/Copy-of-20230907_citadel_152-1-1536x1536.jpg)
+![speaker](/images/speakers/icons/k_ryuichirou.jpg)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/k-ryuichirou.jpg)

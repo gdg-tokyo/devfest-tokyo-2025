@@ -19,6 +19,6 @@ time_start: '15:10'
 
 ウェブの UI 周りの技術動向を追っています。Focusing on all things VISUAL on Web Platform! Design Technologist @Cybozu.
 
-![speaker](https://avatars.githubusercontent.com/u/74392116)
+![speaker](/images/speakers/icons/sakupi01.png)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/sakupi01.jpg)

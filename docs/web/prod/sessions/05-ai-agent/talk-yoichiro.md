@@ -17,6 +17,6 @@ time_start: '14:30'
 
 業務アプリ向けの開発ツールやフレームワークの設計に携わった後、mixi Platform、LINE Platformの技術統括を行い、日本でのソーシャルアプリケーションの技術的な基礎を確立しただけでなく、メッセージングアプリにおいても世界に先駆けてBOT Platformの立ち上げを主導した。現在はAIを駆使したサービスの開発を行っている。Google Developers Expert (Web Technology担当)。電子情報通信学会 東北支部学生員奨励賞受賞。Mash up Award 3rd 3部門同時受賞。モバイルプロジェクト・アワード2010 モバイルプラットフォーム部門優秀賞受賞。著書『ソーシャルアプリプラットフォーム構築技法』など。
 
-![speaker](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/yoichiro-tanaka.jpg)
+![speaker](/images/speakers/icons/yoichiro.jpg)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/yoichiro.jpg)

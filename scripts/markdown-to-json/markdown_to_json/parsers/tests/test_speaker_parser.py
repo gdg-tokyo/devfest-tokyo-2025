@@ -23,7 +23,7 @@ It has multiple paragraphs.
     assert speaker.name == "Jane Doe"
     assert (
         speaker.bio
-        == "<div><p>This is Jane's bio.</p><p>It has multiple paragraphs.</p><p></p></div>"
+        == "<div><p>This is Jane's bio.</p><p>It has multiple paragraphs.</p></div>"
     )
     assert speaker.photo_url == "https://example.com/jane.jpg"
     assert speaker.job == "Google AI Lead"

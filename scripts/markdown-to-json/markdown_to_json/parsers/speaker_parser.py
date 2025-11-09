@@ -1,10 +1,8 @@
 import re
 
-import markdown
-from bs4 import BeautifulSoup
-
 from markdown_to_json.data_model.speaker import Speaker
 from markdown_to_json.parsers.parser_utils import generate_speaker_id
+from markdown_to_json.parsers.markdown_utils import markdown_to_safe_html
 
 
 def parse_speaker_from_content(content: str):
@@ -65,47 +63,17 @@ def _parse_speaker_heading(speaker_heading: str):
 
 def _parse_speaker_bio(speaker_bio_markdown: str):
     """
-    Parses speaker bio (sanitized HTML), photo URL, job, and Twitter handle from the speaker bio markdown.
-    The bio is considered all content before '#### metadata'.
+    Parses speaker bio (sanitized HTML) and photo URL from the speaker bio markdown.
     """
-    html = markdown.markdown(speaker_bio_markdown)
-    soup = BeautifulSoup(html, "html.parser")
-
     photo_url = ""
-    # Find photo URL - it's expected to be an image tag
-    img_tag = soup.find("img")
-    if img_tag and "src" in img_tag.attrs:
-        photo_url = img_tag["src"]
-        img_tag.extract()  # Remove the image tag from the soup so it's not part of the bio
+    # Extract photo URL using regex from the raw markdown
+    img_match = re.search(r'!\[.*?\]\((?P<url>[^)]+)\)', speaker_bio_markdown)
+    if img_match:
+        photo_url = img_match.group("url")
+        # Remove the image markdown from the bio markdown so it's not part of the bio HTML
+        speaker_bio_markdown = re.sub(r'!\[.*?\]\((?P<url>[^)]+)\)', '', speaker_bio_markdown, count=1)
 
-    # Remove any remaining image tags from the soup
-    for img in soup.find_all("img"):
-        img.extract()
+    # Convert the remaining markdown to safe HTML
+    bio_html = markdown_to_safe_html(speaker_bio_markdown)
 
-    # Find #### metadata equivalent in HTML (h4 tag with "metadata" text)
-    metadata_h4 = None
-    for h4 in soup.find_all("h4"):
-        if h4.get_text(strip=True) == "metadata":
-            metadata_h4 = h4
-            break
-
-    bio_html_elements = []
-    # Iterate through siblings before the metadata_h4
-    current_element = soup.find(
-        lambda tag: tag.name
-    )  # Find the first tag in the remaining soup
-    while current_element:
-        if current_element == metadata_h4:
-            break
-        bio_html_elements.append(current_element)
-        current_element = current_element.find_next_sibling()
-
-    # bio_html = "".join(bio_html_elements).strip() # Strip any leading/trailing whitespace
-    # bio_text = f"<div>{bio_html}</div>" # Wrap the bio HTML in a div
-    # Wrap the collected HTML elements in a <div> tag
-    bio_html = soup.new_tag("div")
-    for node in bio_html_elements:
-        bio_html.append(node.extract())
-    bio_text = str(bio_html)
-
-    return bio_text, photo_url
+    return bio_html, photo_url

@@ -65,10 +65,7 @@ This is another paragraph.
     test_session = next((s for s in sessions if s.slug == "test-session"), None)
     assert test_session is not None
 
-    expected_description = """<div><p>This is the first paragraph of the description.</p><p>It can span multiple lines.</p><ul>
-<li>Item 1</li>
-<li>Item 2</li>
-</ul><p>This is another paragraph.</p></div>"""
+    expected_description = """<div><p>This is the first paragraph of the description.</p><p>It can span multiple lines.</p><ul><li>Item 1</li><li>Item 2</li></ul><p>This is another paragraph.</p></div>"""
     assert test_session.description == expected_description
 
 
@@ -108,10 +105,7 @@ Test Speaker Bio.
     test_talk = next((t for t in talks if t.slug == "test-abstract"), None)
     assert test_talk is not None
 
-    expected_abstract = """<div><p>This is the first paragraph of the abstract.</p><p>It can span multiple lines.</p><ul>
-<li>Abstract Item 1</li>
-<li>Abstract Item 2</li>
-</ul><p>This is another abstract paragraph.</p></div>"""
+    expected_abstract = """<div><p>This is the first paragraph of the abstract.</p><p>It can span multiple lines.</p><ul><li>Abstract Item 1</li><li>Abstract Item 2</li></ul><p>This is another abstract paragraph.</p></div>"""
     assert test_talk.abstract == expected_abstract
 
 

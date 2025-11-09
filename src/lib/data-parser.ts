@@ -99,7 +99,6 @@ export function getSessions(): Session[] {
   const sessions: Session[] = (
     sessionsData.map((session: Session) => {
       if (!session.talk_ids || session.talk_ids.length === 0) {
-        console.warn(`Session with ID ${session.id} has no talk_ids. Ignoring.`);
         return null;
       }
       const talks: Talk[] = session.talk_ids

@@ -51,31 +51,31 @@ describe('style-utils', () => {
 
   describe('getTrackColor', () => {
     it('should return red for track "Track A"', () => {
-      expect(getTrackColor('Track A')).toBe('bg-halftone-red');
+      expect(getTrackColor('Track A')).toBe('bg-gdg-pastel-red');
     });
     it('should return blue for track "Track B"', () => {
-      expect(getTrackColor('Track B')).toBe('bg-halftone-blue');
+      expect(getTrackColor('Track B')).toBe('bg-gdg-pastel-blue');
     });
     it('should return green for track "Track C"', () => {
-      expect(getTrackColor('Track C')).toBe('bg-halftone-green');
+      expect(getTrackColor('Track C')).toBe('bg-gdg-pastel-green');
     });
     it('should return yellow for track "Track D"', () => {
-      expect(getTrackColor('Track D')).toBe('bg-halftone-yellow');
+      expect(getTrackColor('Track D')).toBe('bg-gdg-pastel-yellow');
     });
     it('should return red for track "A"', () => {
-      expect(getTrackColor('A')).toBe('bg-halftone-red');
+      expect(getTrackColor('A')).toBe('bg-gdg-pastel-red');
     });
     it('should return blue for track "B"', () => {
-      expect(getTrackColor('B')).toBe('bg-halftone-blue');
+      expect(getTrackColor('B')).toBe('bg-gdg-pastel-blue');
     });
     it('should return green for track "C"', () => {
-      expect(getTrackColor('C')).toBe('bg-halftone-green');
+      expect(getTrackColor('C')).toBe('bg-gdg-pastel-green');
     });
     it('should return yellow for track "D"', () => {
-      expect(getTrackColor('D')).toBe('bg-halftone-yellow');
+      expect(getTrackColor('D')).toBe('bg-gdg-pastel-yellow');
     });
     it('should return yellow for track "Hands-on Studio"', () => {
-      expect(getTrackColor('Hands-on Studio')).toBe('bg-halftone-yellow');
+      expect(getTrackColor('Hands-on Studio')).toBe('bg-gdg-pastel-yellow');
     });
     it('should return gray for undefined', () => {
       expect(getTrackColor(undefined)).toBe('bg-gray-200');

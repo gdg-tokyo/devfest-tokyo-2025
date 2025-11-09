@@ -17,7 +17,7 @@ exports[`TimetableGrid (Tablet/PC View) renders correctly on tablet/PC screens 1
         Time
       </div>
       <div
-        class="jsx-3422117831 p-3 rounded-lg border-2 border-gray-800 text-center sticky top-0 z-10 bg-halftone-red"
+        class="jsx-3422117831 p-3 rounded-lg border-2 border-gray-800 text-center sticky top-0 z-10 bg-gdg-pastel-red"
         style="grid-column: 2; grid-row: 1;"
       >
         <h5
@@ -27,7 +27,7 @@ exports[`TimetableGrid (Tablet/PC View) renders correctly on tablet/PC screens 1
         </h5>
       </div>
       <div
-        class="jsx-3422117831 p-3 rounded-lg border-2 border-gray-800 text-center sticky top-0 z-10 bg-halftone-blue"
+        class="jsx-3422117831 p-3 rounded-lg border-2 border-gray-800 text-center sticky top-0 z-10 bg-gdg-pastel-blue"
         style="grid-column: 3; grid-row: 1;"
       >
         <h5
@@ -103,7 +103,7 @@ exports[`TimetableList (Mobile View) renders correctly on mobile screens 1`] = `
           class="grid grid-cols-[60px_1fr] gap-2 items-center"
         >
           <div
-            class="h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 bg-halftone-red"
+            class="h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 bg-gdg-pastel-red"
           >
             <span
               class="text-xs rotate-90 whitespace-nowrap"
@@ -123,7 +123,7 @@ exports[`TimetableList (Mobile View) renders correctly on mobile screens 1`] = `
           class="grid grid-cols-[60px_1fr] gap-2 items-center"
         >
           <div
-            class="h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 bg-halftone-blue"
+            class="h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 bg-gdg-pastel-blue"
           >
             <span
               class="text-xs rotate-90 whitespace-nowrap"
@@ -156,7 +156,7 @@ exports[`TimetableList (Mobile View) renders correctly on mobile screens 1`] = `
           class="grid grid-cols-[60px_1fr] gap-2 items-center"
         >
           <div
-            class="h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 bg-halftone-red"
+            class="h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 bg-gdg-pastel-red"
           >
             <span
               class="text-xs rotate-90 whitespace-nowrap"

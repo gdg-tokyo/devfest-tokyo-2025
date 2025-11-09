@@ -117,3 +117,11 @@ This specification defines the responsive layout rules for the website, supporti
 #### Components Defined in this Spec
 
 - Responsive Layout System
+
+### Track Display Name Policy [016-track-display-name](./016-track-display-name)
+
+This specification defines a policy for resolving and displaying track names across the website, ensuring consistency and user-friendliness. Specifically, 'Track D' will be displayed as 'Hands-on Studio', while other track names will remain as their original IDs.
+
+#### Components Defined in this Spec
+
+- Track Display Name Utility Function

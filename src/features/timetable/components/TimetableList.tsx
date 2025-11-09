@@ -2,7 +2,7 @@
 
 import { Session } from '@/types'
 import React from 'react'
-import { getTrackColor } from '../utils' // Import getTrackColor
+import { getTrackColor, getTrackDisplayName } from '@/lib/style-utils' // Import getTrackColor
 import SessionCard from './SessionCard'
 
 interface TimetableListProps {
@@ -52,7 +52,7 @@ const TimetableList: React.FC<TimetableListProps> = ({
                     className={`h-full flex items-center justify-center text-center text-black-02 font-normal rounded-lg border-2 border-gray-800 ${getTrackColor(session.track)}`}
                   >
                     <span className="text-xs rotate-90 whitespace-nowrap">
-                      {session.track}
+                      {getTrackDisplayName(session.track)}
                     </span>
                   </div>
                   <div>

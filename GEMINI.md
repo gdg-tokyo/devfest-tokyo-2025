@@ -39,7 +39,6 @@ TypeScrip: Follow standard conventions
 
 - 004-session-page-the: Added TypeScript 5.x + Next.js, React, Tailwind CSS
 - 006-data-schema-currently: Added
-- 015-dynamic-page-metadata: Added Next.js Metadata API for dynamic page metadata.
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

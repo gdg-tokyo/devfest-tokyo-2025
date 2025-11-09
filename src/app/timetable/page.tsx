@@ -4,10 +4,10 @@ import OverlayMessageCard from '@/components/common/OverlayMessageCard'
 import FilterSystem from '@/features/timetable/components/FilterSystem'
 import TimetableGrid from '@/features/timetable/components/TimetableGrid'
 import TimetableList from '@/features/timetable/components/TimetableList' // Import TimetableList
+import { filterSession, generateTimeSlots } from '@/features/timetable/utils' // Import from utils
 import { getSessions, getSpeakers, getTalks } from '@/lib/data-parser'
-import { Session, Speaker, Talk } from '@/types'
+import { Session } from '@/types'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { generateTimeSlots, filterSession } from '@/features/timetable/utils' // Import from utils
 
 const TimetablePage = () => {
   const allSessions: Session[] = getSessions()

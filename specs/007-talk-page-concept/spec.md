@@ -83,6 +83,7 @@ This can be tested by clicking the action buttons on the talk page and verifying
 
 - **FR-001**: The system MUST provide a unique URL for each talk.
 - **FR-002**: The talk page MUST display the talk's title, abstract, time, track, level, perspective, tech tags, and speaker information (name as text, bio, photo, job, and X/Twitter handle).
+  - **FR-002.1**: The track name MUST be resolved using the policy defined in `specs/016-track-display-name/spec.md`.
 - **FR-003**: Clicking on a talk card from the session or talk directory pages MUST navigate the user to the corresponding talk page.
 - **FR-004**: The talk page MUST include OGP meta tags (`og:title`, `og:description`, `og:image`, `og:url`, `og:type`).
 - **FR-005**: The system MUST return a 404 error page if a requested talk ID does not exist.

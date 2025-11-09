@@ -1,6 +1,10 @@
 import HtmlContent from '@/components/common/HtmlContent'
 import RegistrationButton from '@/components/common/RegistrationButton'
-import { getLevelColor, getPerspectiveColor } from '@/lib/style-utils'
+import {
+  getLevelColor,
+  getPerspectiveColor,
+  getTrackDisplayName,
+} from '@/lib/style-utils'
 import { withRepoBasePath } from '@/lib/url-utils'
 import { Speaker, Talk } from '@/types'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
@@ -49,7 +53,7 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
           </div>
           <div className="flex items-center">
             <PlaceIcon className="mr-2" />
-            <span>{talk.track}</span>
+            <span>{getTrackDisplayName(talk.track)}</span>
           </div>
         </div>
         <div className="flex flex-wrap gap-2 mb-4">

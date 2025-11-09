@@ -2,7 +2,8 @@
 
 import { Session } from '@/types'
 import React from 'react'
-import { getRowEndLine, getRowStart, getTrackColor } from '../utils' // Import from utils
+import { getRowEndLine, getRowStart } from '../utils' // Import from utils
+import { getTrackColor, getTrackDisplayName } from '@/lib/style-utils'
 import SessionCard from './SessionCard'
 
 interface TimetableGridProps {
@@ -64,7 +65,7 @@ const TimetableGrid: React.FC<TimetableGridProps> = ({
             className={`p-3 rounded-lg border-2 border-gray-800 text-center sticky top-0 z-10 ${getTrackColor(track)}`}
             style={{ gridColumn: index + 2, gridRow: 1 }}
           >
-            <h5>{track}</h5>
+            <h5>{getTrackDisplayName(track)}</h5>
           </div>
         ))}
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import TalkCard from '@/components/common/TalkCard'
 import { Talk, Session, Speaker } from '@/types'
@@ -30,7 +30,7 @@ describe('TalkCard', () => {
     perspective: ['Experience'],
   }
 
-  it('renders talk title, speaker name, and time', () => {
+  it('renders talk title, speaker name, and time', async () => {
     render(
       <TalkCard
         talk={mockTalk}
@@ -40,11 +40,13 @@ describe('TalkCard', () => {
       />
     )
 
-    expect(screen.getByText(mockTalk.title)).toBeInTheDocument()
-    expect(screen.getByText('John Doe')).toBeInTheDocument()
+    await waitFor(() => {
+      expect(screen.getByText(mockTalk.title)).toBeInTheDocument()
+      expect(screen.getByText('John Doe')).toBeInTheDocument()
+    })
   })
 
-  it('renders the correct level from talk prop', () => {
+  it('renders the correct level from talk prop', async () => {
     render(
       <TalkCard
         talk={mockTalk}
@@ -54,9 +56,11 @@ describe('TalkCard', () => {
       />
     )
 
-    // Expect the level from mockTalk to be displayed
-    expect(screen.getByText('Beginner')).toBeInTheDocument()
-    // Ensure the level from mockSession is NOT displayed
-    expect(screen.queryByText('Advanced')).not.toBeInTheDocument()
+    await waitFor(() => {
+      // Expect the level from mockTalk to be displayed
+      expect(screen.getByText('Beginner')).toBeInTheDocument()
+      // Ensure the level from mockSession is NOT displayed
+      expect(screen.queryByText('Advanced')).not.toBeInTheDocument()
+    })
   })
 })

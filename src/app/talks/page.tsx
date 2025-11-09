@@ -9,8 +9,6 @@ import TalkCard from '@/components/common/TalkCard'
 
 import FilterSystem from '@/components/common/FilterSystem'
 
-import SessionModal from '@/components/common/SessionModal'
-
 import { useRouter, useSearchParams } from 'next/navigation'
 
 interface TalkWithSessionInfo extends Talk {
@@ -29,8 +27,6 @@ const TalksPageContent = () => {
   const router = useRouter()
 
   const searchParams = useSearchParams()
-
-  const modalSessionId = searchParams.get('sessionId')
 
   const allSessions: Session[] = getSessions()
   const allRawTalks: Talk[] = getTalks()
@@ -96,14 +92,6 @@ const TalksPageContent = () => {
     })
   }, [allTalks, keyword, selectedLevels, selectedTechTags]) // Dependency array is now correct
 
-  const selectedSession = useMemo(() => {
-    return allSessions.find((session) => session.id === modalSessionId) || null
-  }, [allSessions, modalSessionId])
-
-  const handleCloseModal = () => {
-    router.push('/talks', { scroll: false })
-  }
-
   return (
     <div className="container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl p-4">
       <h1 className="text-3xl font-bold mb-6">Talks Page</h1>
@@ -143,8 +131,6 @@ const TalksPageContent = () => {
           </p>
         )}
       </div>
-
-      <SessionModal session={selectedSession} onClose={handleCloseModal} />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import type { PluginUtils } from 'tailwindcss/types/config'
 
 const config: Config = {
   content: [
@@ -10,6 +11,43 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      typography: ({ theme }: { theme: PluginUtils['theme'] }) => ({
+        DEFAULT: {
+          css: {
+            a: { textDecoration: 'underline', textUnderlineOffset: '2px' },
+            code: {
+              backgroundColor: theme('colors.zinc.100'),
+              padding: '0.2em 0.4em',
+              borderRadius: '0.25rem',
+            },
+            pre: {
+              backgroundColor: theme('colors.zinc.900'),
+              color: theme('colors.zinc.100'),
+              borderRadius: '0.5rem',
+              padding: '1rem',
+              overflowX: 'auto',
+            },
+            img: { borderRadius: '0.5rem' },
+            table: { width: '100%', borderCollapse: 'collapse' },
+            'thead th': {
+              borderBottom: `1px solid ${theme('colors.zinc.300')}`,
+              padding: '0.5rem',
+            },
+            'tbody td': {
+              borderTop: `1px solid ${theme('colors.zinc.200')}`,
+              padding: '0.5rem',
+            },
+          },
+        },
+        invert: {
+          css: {
+            code: { backgroundColor: theme('colors.zinc.800') },
+            pre: { backgroundColor: theme('colors.zinc.800') },
+            'thead th': { borderBottomColor: theme('colors.zinc.700') },
+            'tbody td': { borderTopColor: theme('colors.zinc.800') },
+          },
+        },
+      }),
       colors: {
         'google-blue-500': '#4285f4',
         'google-red-500': '#ea4335',
@@ -37,6 +75,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }
 export default config

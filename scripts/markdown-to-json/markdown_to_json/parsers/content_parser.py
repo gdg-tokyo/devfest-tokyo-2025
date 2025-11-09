@@ -15,6 +15,7 @@ from markdown_to_json.parsers.parser_utils import (
     extract_slug,
 )
 from markdown_to_json.parsers.speaker_parser import parse_speaker_from_content
+from markdown_to_json.parsers.markdown_utils import markdown_to_safe_html
 
 
 def _extract_thumbnail_url(content: str, talk_file_path: str, docs_base_path: str) -> str | None:
@@ -109,7 +110,8 @@ def _parse_session(session_folder_path, session_id, session_slug) -> Session | N
     with open(session_readme_path, "r", encoding="utf-8") as f:
         post = frontmatter.load(f)
 
-    title, description = extract_title_and_description(post.content).values()
+    title, description_md = extract_title_and_description(post.content).values()
+    description = markdown_to_safe_html(description_md)
 
     return Session(
         id=session_id,
@@ -133,7 +135,8 @@ def _parse_talk(
     with open(talk_file_path, "r", encoding="utf-8") as f:
         post = frontmatter.load(f)
 
-    title, abstract = extract_title_and_description(post.content).values()
+    title, abstract_md = extract_title_and_description(post.content).values()
+    abstract = markdown_to_safe_html(abstract_md)
 
     speaker_data, speaker_ids = parse_speaker_from_content(post.content)
     thumbnail_url = _extract_thumbnail_url(post.content, talk_file_path, docs_base_path)

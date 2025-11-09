@@ -9,7 +9,14 @@ time_start: '13:50'
 
 # XLS：半導体デジタル設計をもっと早く！
 
-ライブデモしながら、XLSの中位合成ツールキットを紹介します：<br /> 🦀 Rust風のプログラミング言語 <br /> ✅ テスト駆動ハードウェア開発 <br /> 🎛️ 自動最適化のコンパイラー <br /> 🧑‍🔧 ソフトウェアとハードウェアの共同設計 <br /> こちらを通して半導体設計の高速化を目指します。
+ライブデモしながら、XLSの中位合成ツールキットを紹介します：
+
+- 🦀 Rust風のプログラミング言語
+- ✅ テスト駆動ハードウェア開発
+- 🎛️ 自動最適化のコンパイラー
+- 🧑‍🔧 ソフトウェアとハードウェアの共同設計
+
+こちらを通して半導体設計の高速化を目指します。
 
 ## Speaker
 
@@ -17,6 +24,6 @@ time_start: '13:50'
 
 グーグル東京でハードウェアツールチェーンを協力してます。
 
-![speaker](https://pbs.twimg.com/profile_images/2505273322/xoi195tc7mjg6tgbsoaf_400x400.png)
+![speaker](/images/speakers/icons/proppy.png)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/proppy.jpg)

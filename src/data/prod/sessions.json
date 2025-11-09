@@ -79,7 +79,7 @@
     "title": "AI エージェント 入門",
     "level": ["Beginner"],
     "tech_tags": ["AI Agent", "MCP", "AI セーフティ", "AI ガバナンス"],
-    "description": "<div><p>生成AI が急速に普及し、私たちの生活を変えようとしています。この変化の中核となる技術が「AI エージェント」です。この入門セッションでは、AI エージェントが生活にもたらす変化とその価値について議論し、実際に AI エージェント 開発を始めるために必要な、仕組みや開発プロセスについて、わかりやすく解説していきます。</p><p>AI初心者の皆さんも、このセッションに参加することで、AI エージェント開発の開発の準備を整えましょう！</p>Session Chair CommunityMLOpsコミュニティ<p>機械学習/AI/LLM技術を実用化する方法の理解を深める技術コミュニティです。毎月MLOpsに関する勉強会を開催しています！</p><p>https://mlops.connpass.com/</p>Session Chair澁井雄介 さん / 株式会社LayerX R&amp;Dデータ検索基盤チームマネージャー<p>MLOps、データ、インフラ、バックエンド、リサーチエンジニア、テックセールス、ネコ2匹の飼い主。本業のLayerXでは生成AIの実用化を中心に、R&amp;Dとデータ検索基盤チームのマネージャーをしています。著書『機械学習システムデザインパターン』、『機械学習システム構築実践ガイド』、共著『事例でわかるMLOps』。</p></div>",
+    "description": "<div><p>生成AI が急速に普及し、私たちの生活を変えようとしています。この変化の中核となる技術が「AI エージェント」です。この入門セッションでは、AI エージェントが生活にもたらす変化とその価値について議論し、実際に AI エージェント 開発を始めるために必要な、仕組みや開発プロセスについて、わかりやすく解説していきます。</p><p>AI初心者の皆さんも、このセッションに参加することで、AI エージェント開発の開発の準備を整えましょう！</p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"],
     "session_chair_id": "d63eaae2"
   },
@@ -93,7 +93,7 @@
     "title": "【実践】ADK による AI エージェント開発",
     "level": ["Advanced"],
     "tech_tags": ["AI エージェント", "ADK"],
-    "description": "<div><p>AI エージェント開発に挑戦したい方に向けて、ADK (Agent Development Kit) の活用方法と開発のヒントをご紹介するセッションです。</p><p>まず、Agent Developer Kit (ADK) の概要と最新情報・今後のロードマップをご紹介します。そしてより実践的な、データ分析エージェントの開発レシピや、音声や動画を取り入れるストリーミング機能の開発 Tipsなどをご紹介します。</p>Session Chair CommunityADK User Group JP<p>Agent Development Kit (ADK) は、生成AIを活用したエージェント開発のための基盤です。ADKを使うことで、より高度でインタラクティブなエージェントを効率的に開発することが可能になります。 ADK User Group は、日本国内のADKに関心のある開発者、デザイナー、プロダクトマネージャー、研究者など、あらゆるバックグラウンドの方々が集まり、ADKに関する情報交換、知識共有、そして実践的な学びを深めるためのコミュニティです。</p><p>https://adk.connpass.com/</p>Session Chair大橋啓介 さん (@soundTricker318) / 株式会社カブク CTO<p>Workspace、Google Cloud、Angular、GASの人 一応Google Developer Expert(Workspace)です。最近はADKをいっぱい触っています。</p></div>",
+    "description": "<div><p>AI エージェント開発に挑戦したい方に向けて、ADK (Agent Development Kit) の活用方法と開発のヒントをご紹介するセッションです。</p><p>まず、Agent Developer Kit (ADK) の概要と最新情報・今後のロードマップをご紹介します。そしてより実践的な、データ分析エージェントの開発レシピや、音声や動画を取り入れるストリーミング機能の開発 Tipsなどをご紹介します。</p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"],
     "session_chair_id": "7eb91900"
   },
@@ -107,7 +107,7 @@
     "title": "Next Generation Web Frontend 2025",
     "level": ["Beginner", "Advanced"],
     "tech_tags": ["Web", "Angular", "Chrome", "CSS"],
-    "description": "<div><p>2025年、WebフロントエンドはAIとともに新しいフェーズへ。 本セッションでは、最新のAngular with AI の動向から、Web標準とブラウザ機能の進化、そして Chrome に組み込まれた AI を活用した機能開発まで、これからの Web フロントエンド開発を大きく変えるトピックを 3 つの講演でご紹介します。</p>Session Chair CommunityAngular日本ユーザー会<p>Angular日本ユーザー会は日本のAngular開発者によるユーザーコミュニティです。ナレッジの共有やイベントの開催、ドキュメントの翻訳などを中心に活動しています。</p><p>https://community.angular.jp/</p>Session Chair不肖・高橋 さん (@fusho_takahashi) / 株式会社エモーションテック UXエンジニア<p>Angular が大好きな黄色い人。Angular日本ユーザー会のスタッフもやってます。</p></div>",
+    "description": "<div><p>2025年、WebフロントエンドはAIとともに新しいフェーズへ。 本セッションでは、最新のAngular with AI の動向から、Web標準とブラウザ機能の進化、そして Chrome に組み込まれた AI を活用した機能開発まで、これからの Web フロントエンド開発を大きく変えるトピックを 3 つの講演でご紹介します。</p></div>",
     "perspective": ["Introduction", "Challenge"],
     "session_chair_id": "5d8afd9c"
   },
@@ -121,7 +121,7 @@
     "title": "Gemini CLI “本気の” 活用術と組織導入の最前線",
     "level": ["Advanced"],
     "tech_tags": ["Gemini CLI"],
-    "description": "<div><p>「Gemini CLI 」は今話題の AI Coding エージェントの一つであり、 Gemini の 巨大なコンテキストウィンドウや、強力な Google 検索連携などを駆使して、開発者のコーディングタスクを代替しつつある一方で、効果的な活用には工夫が必要です。</p><p>このセッションでは、古典的な MLOps をふまえた確率的な挙動を持つツールの信頼性や整合性を高める活用術や、個人利用に止まらせず組織・チーム・エンタープライズとして開発に活用するノウハウをお届けします。</p><p>みなさんも「本気の活用」をここから始めましょう！</p>Session Chair CommunityJagu'e'r（Japan Google Cloud User Group for Enterprise<p>Jagu'e'r（Japan Google Cloud User Group for Enterprise）は、Google Cloudのユーザー同士が知識や知見を共有する日本初の公式エンタープライズユーザー会です。年間を通じて活発な情報交換を行い、39の分科会やエバンジェリスト、アンバサダーなどの活動を通じてコミュニティの拡大と活性化を図っています。初心者向けのラウンジもあり、初心者でも参加しやすい環境が整っています。</p><p>https://jaguer.jp/</p>Session Chair山時 浩一郎 さん (@ymtkick) / 株式会社NTTデータ テクニカルグレード<p>株式会社NTTデータにて公共分野におけるグローバルシステムの IT アーキテクトとして従事。Jagu'e'rではGWS分科会、企業コミュニティ分科会、エネルギー分科会、沖縄分科会などで運営参加。Google Cloud Partner Top Engineer 2025 Fellow。Google Cloud Partner All Certification Holders 2025、2025 Japan All AWS Certifications Engineers、Jagu'e'r Award 2024最優秀賞受賞。Jagu’e’r エバンジェリストとして Google Cloud と Jagu’e’r の魅力を発信中。</p></div>",
+    "description": "<div><p>「Gemini CLI 」は今話題の AI Coding エージェントの一つであり、 Gemini の 巨大なコンテキストウィンドウや、強力な Google 検索連携などを駆使して、開発者のコーディングタスクを代替しつつある一方で、効果的な活用には工夫が必要です。</p><p>このセッションでは、古典的な MLOps をふまえた確率的な挙動を持つツールの信頼性や整合性を高める活用術や、個人利用に止まらせず組織・チーム・エンタープライズとして開発に活用するノウハウをお届けします。</p><p>みなさんも「本気の活用」をここから始めましょう！</p></div>",
     "perspective": ["Experience", "Challenge"],
     "session_chair_id": "da2a8966"
   },

@@ -48,6 +48,19 @@ def extract_title_and_description(markdown_content: str) -> dict:
     return {"title": title, "description": str(description_node)}
 
 
+def remove_session_chair_content(markdown_content: str) -> str:
+    """
+    Removes the '## Session Chair Community' and '## Session Chair' sections
+    and all content following them from the markdown content.
+    """
+    # Find the first occurrence of either "## Session Chair Community" or "## Session Chair"
+    match = re.search(r"## Session Chair (Community|)", markdown_content)
+    if match:
+        # Return content before the match
+        return markdown_content[: match.start()].strip()
+    return markdown_content
+
+
 def extract_slug(name: str, type: str) -> str:
     """Extracts a slug from a folder or file name based on its type."""
     if type == "session":

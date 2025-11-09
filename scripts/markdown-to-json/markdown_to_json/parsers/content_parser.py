@@ -17,6 +17,7 @@ from markdown_to_json.parsers.parser_utils import (
     extract_title_and_description,
     generate_session_id,
     generate_talk_id,
+    remove_session_chair_content,  # Import new function
 )
 from markdown_to_json.parsers.session_chair_parser import (
     parse_session_chair_from_content,
@@ -135,12 +136,15 @@ def _parse_session(
     with open(session_readme_path, "r", encoding="utf-8") as f:
         post = frontmatter.load(f)
 
-    title, description_md = extract_title_and_description(post.content).values()
-    description = markdown_to_safe_html(description_md)
-
+    # First, parse session chair content from the original markdown
     session_chair_entry, chair_speakers_map = parse_session_chair_from_content(
         post.content, session_slug
-    )  # Pass session_slug
+    )
+
+    # Then, remove session chair content before extracting the main description
+    cleaned_content = remove_session_chair_content(post.content)
+    title, description_md = extract_title_and_description(cleaned_content).values()
+    description = markdown_to_safe_html(description_md)
 
     session_entry = Session(
         id=session_id,

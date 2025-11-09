@@ -1,4 +1,5 @@
 import os
+import hashlib
 
 from markdown_to_json.parsers.content_parser import parse_sessions_and_talks
 
@@ -42,8 +43,6 @@ def test_parse_sessions_and_talks(setup_test_data):
         assert google_map_session.session_chair_id is not None
         # Calculate expected session_chair_id based on new logic: hash of "google-map-chair"
         expected_google_map_chair_slug = "google-map-chair"
-        import hashlib
-
         expected_google_map_chair_id = hashlib.sha256(
             expected_google_map_chair_slug.encode("utf-8")
         ).hexdigest()[:8]
@@ -82,6 +81,48 @@ This is another paragraph.
     assert test_session is not None
 
     expected_description = """<div><p>This is the first paragraph of the description.</p><p>It can span multiple lines.</p><ul><li>Item 1</li><li>Item 2</li></ul><p>This is another paragraph.</p></div>"""
+    assert test_session.description == expected_description
+
+
+def test_parse_session_description_excludes_session_chair_content(setup_test_data):
+    base_path = setup_test_data
+    docs_base_path = os.path.join(base_path, "docs", "web")
+
+    test_session_dir = os.path.join(
+        docs_base_path, "prod", "sessions", "96-session-with-chair"
+    )
+    os.makedirs(test_session_dir, exist_ok=True)
+    test_session_path = os.path.join(test_session_dir, "README.md")
+    test_session_content = """# Session with Chair
+
+This is the actual session description.
+It should not include the chair content below.
+
+## Session Chair Community
+
+### MLOpsコミュニティ
+
+<div><p>機械学習/AI/LLM技術を実用化する方法の理解を深める技術コミュニティです。</p></div>
+https://mlops.connpass.com/
+![community_logo](https://pbs.twimg.com/profile_images/1370267966298681347/sBjkDhjQ.jpg)
+
+## Session Chair
+
+### 澁井雄介
+
+<div><p>MLOps、データ、インフラ、バックエンド、リサーチエンジニア。</p></div>
+"""
+    with open(test_session_path, "w") as f:
+        f.write(test_session_content)
+
+    sessions, _, _, _ = parse_sessions_and_talks(docs_base_path)
+
+    test_session = next(
+        (s for s in sessions if s.slug == "session-with-chair"), None
+    )
+    assert test_session is not None
+
+    expected_description = """<div><p>This is the actual session description.It should not include the chair content below.</p></div>"""
     assert test_session.description == expected_description
 
 

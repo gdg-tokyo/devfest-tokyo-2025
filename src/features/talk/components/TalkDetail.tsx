@@ -24,6 +24,17 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
   return (
     <div className="p-4 mx-auto">
       <h2 className="text-4xl font-bold mb-2">Talk</h2>
+      {talk.thumbnail_url && (
+        <div className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md mb-4 relative w-full aspect-video">
+          <Image
+            src={withRepoBasePath(talk.thumbnail_url)}
+            alt="Talk Thumbnail"
+            fill
+            style={{ objectFit: 'contain' }}
+            className="rounded-lg"
+          />
+        </div>
+      )}
       <div className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md mb-4">
         <div className="flex flex-wrap gap-2 mb-2">
           {talk.level.map((level) => (

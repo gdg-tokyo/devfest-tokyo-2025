@@ -53,7 +53,7 @@ export default function HtmlContent({ html }: Props) {
 
   return (
     <article
-      className="prose prose-zinc dark:prose-invert max-w-none"
+      className="prose prose-zinc dark:prose-invert max-w-none text-black-02"
       dangerouslySetInnerHTML={{ __html: sanitized }}
     />
   )

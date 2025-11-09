@@ -21,6 +21,6 @@ time_start: '12:40'
 
 Coming soon ...
 
-![speaker](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/takuya-oikawa-500.png)
+![speaker](/images/speakers/icons/takoratta.png)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/takoratta.jpg)

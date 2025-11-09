@@ -19,6 +19,6 @@ is_keynote: false
 
 シニア デベロッパー リレーションズ エンジニアのバンダリ・ハレン (Bhandari Haren) です。主にGoogle Cloud (GCP) のAI関連サービスをご活用いただくためのハンズオンセッション、コードサンプル、ブログ記事などを開発者の皆様へお届けしています。
 
-![speaker](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/haren-bhandari.JPG)
+![speaker](/images/speakers/icons/harenb16221.jpg)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/harenb16221.jpg)

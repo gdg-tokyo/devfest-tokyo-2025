@@ -56,8 +56,8 @@ const TalkCard: React.FC<TalkCardProps> = ({
         </div>
         <div className="mt-4">
           <div className="flex flex-wrap gap-1 mt-2">
-            {session?.level &&
-              session.level.map((levelItem) => (
+            {talk?.level &&
+              talk.level.map((levelItem) => (
                 <span
                   key={levelItem}
                   className={`text-xs px-1 py-0 rounded-full border border-black ${getLevelColor(

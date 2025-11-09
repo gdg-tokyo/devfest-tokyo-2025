@@ -214,6 +214,7 @@ Import @docs/web/style-guide.md
 
 ### Active Memory Bank
 
+- Import @specs/AGENTS.md
 - Import @docs/ai-memory/learnings/AGENTS.md
 - Import @docs/ai-memory/learnings/latest.md
 

@@ -1,4 +1,6 @@
 import os
+import re
+from pathlib import Path
 from typing import Dict, List, Tuple
 
 import frontmatter
@@ -13,6 +15,38 @@ from markdown_to_json.parsers.parser_utils import (
     extract_slug,
 )
 from markdown_to_json.parsers.speaker_parser import parse_speaker_from_content
+
+
+def _extract_thumbnail_url(content: str, talk_file_path: str, docs_base_path: str) -> str | None:
+    """Extracts the thumbnail URL from markdown content and converts it to a public path using pathlib."""
+    match = re.search(r'!\[talk_thumbnail\]\((?P<url>[^)]+)\)', content)
+    if match:
+        raw_url = match.group("url")
+        
+        # If the URL is external, return it as is
+        if raw_url.startswith("http://") or raw_url.startswith("https://"):
+            return raw_url
+
+        # Resolve the raw_url relative to the talk_file_path
+        talk_path = Path(talk_file_path)
+        resolved_image_path = (talk_path.parent / raw_url).resolve()
+
+        # Determine the project root from docs_base_path
+        # docs_base_path is typically 'docs/web'
+        # The project root is the parent of 'docs'
+        project_root = Path(docs_base_path).parent.parent.resolve()
+        public_dir = project_root / "public"
+
+        try:
+            # Get the path relative to the public directory
+            relative_to_public = resolved_image_path.relative_to(public_dir)
+            # Prepend '/' to make it an absolute path from the web root
+            return '/' + str(relative_to_public)
+        except ValueError:
+            # If the image path is not under the public directory, return None
+            # or handle as an error/warning
+            return None
+    return None
 
 
 def parse_sessions_and_talks(
@@ -52,6 +86,7 @@ def parse_sessions_and_talks(
                 talk_id,
                 session_entry.track if session_entry else "Unknown Track",
                 talk_slug,
+                docs_base_path,
             )
 
             if talk_entry:
@@ -92,7 +127,7 @@ def _parse_session(session_folder_path, session_id, session_slug) -> Session | N
 
 
 def _parse_talk(
-    talk_file_path, talk_id, session_track, talk_slug
+    talk_file_path, talk_id, session_track, talk_slug, docs_base_path: str
 ) -> Tuple[Talk | None, Speaker | None]:
     """Parses a single talk markdown file and returns a Talk object and Speaker object."""
     with open(talk_file_path, "r", encoding="utf-8") as f:
@@ -101,6 +136,7 @@ def _parse_talk(
     title, abstract = extract_title_and_description(post.content).values()
 
     speaker_data, speaker_ids = parse_speaker_from_content(post.content)
+    thumbnail_url = _extract_thumbnail_url(post.content, talk_file_path, docs_base_path)
 
     talk_entry = Talk(
         id=talk_id,
@@ -114,6 +150,7 @@ def _parse_talk(
         tech_tags=post.metadata.get("tech_tags", []),
         level=post.metadata.get("level", []),
         perspective=post.metadata.get("perspective", []),
+        thumbnail_url=thumbnail_url,
     )
 
     return talk_entry, speaker_data

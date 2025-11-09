@@ -18,3 +18,4 @@ class Talk:
     tech_tags: List[str]
     level: List[str]
     perspective: List[str]
+    thumbnail_url: str | None = None

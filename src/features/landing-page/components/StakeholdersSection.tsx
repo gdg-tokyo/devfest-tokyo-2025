@@ -42,31 +42,42 @@ const StakeholdersSection: React.FC = () => {
               {group.heading}
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {group.items.map((stakeholder) => (
-                <a
-                  key={stakeholder.name}
-                  href={stakeholder.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-2 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-transparent w-full max-w-sm"
-                >
-                  {stakeholder.logoUrl ? (
-                    <div className="relative w-full h-32 flex items-center justify-center">
-                      <Image
-                        src={withRepoBasePath(stakeholder.logoUrl)}
-                        alt={stakeholder.name}
-                        fill
-                        style={{ objectFit: 'contain' }}
-                        className="p-1"
-                      />
-                    </div>
-                  ) : (
-                    <p className="font-bold text-xl text-gray-800 text-center w-full">
-                      {stakeholder.name}
-                    </p>
-                  )}
-                </a>
-              ))}
+              {group.items
+                .sort((a, b) => {
+                  // Prioritize by 'priority' if available
+                  if (a.priority !== undefined && b.priority !== undefined) {
+                    return a.priority - b.priority
+                  }
+                  if (a.priority !== undefined) return -1 // a has priority, b doesn't
+                  if (b.priority !== undefined) return 1 // b has priority, a doesn't
+                  // Fallback to alphabetical sort by name
+                  return a.name.localeCompare(b.name)
+                })
+                .map((stakeholder) => (
+                  <a
+                    key={stakeholder.name}
+                    href={stakeholder.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center p-2 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-transparent w-full max-w-sm"
+                  >
+                    {stakeholder.logoUrl ? (
+                      <div className="relative w-full h-32 flex items-center justify-center">
+                        <Image
+                          src={withRepoBasePath(stakeholder.logoUrl)}
+                          alt={stakeholder.name}
+                          fill
+                          style={{ objectFit: 'contain' }}
+                          className="p-1"
+                        />
+                      </div>
+                    ) : (
+                      <p className="font-bold text-xl text-gray-800 text-center w-full">
+                        {stakeholder.name}
+                      </p>
+                    )}
+                  </a>
+                ))}
             </div>
           </div>
         ))}

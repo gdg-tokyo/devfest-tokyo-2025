@@ -40,4 +40,5 @@ export interface Stakeholder {
   logoUrl?: string
   type: 'organizer' | 'co-organizer' | 'sponsor' | 'partner'
   link: string
+  priority?: number
 }

@@ -1,4 +1,4 @@
-import { buildMetadata, PageMetaInput } from '@/lib/seo';
+import { buildMetadata, PageMetaInput, stripHtmlTags } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 import { withRepoBasePath } from '@/lib/url-utils';
 
@@ -99,5 +99,57 @@ describe('buildMetadata', () => {
   it('should use SITE.name for imageAlt if title and imageAlt are not provided', () => {
     const metadata = buildMetadata({ ogImage: '/image.png' });
     expect(metadata.openGraph?.images?.[0]?.alt).toBe(SITE.name);
+  });
+});
+
+describe('stripHtmlTags', () => {
+  it('should remove all HTML tags from a string and normalize whitespace', () => {
+    const htmlString = '<p>Hello <strong>world</strong>!</p><a href="#">Link</a>';
+    expect(stripHtmlTags(htmlString)).toBe('Hello world!Link');
+  });
+
+  it('should handle self-closing tags and normalize whitespace', () => {
+    const htmlString = 'Text with <br/>a line break<hr>';
+    expect(stripHtmlTags(htmlString)).toBe('Text with a line break');
+  });
+
+  it('should handle multiple spaces and newlines around tags and normalize whitespace', () => {
+    const htmlString = '<p>  Line 1  </p>\n<p>Line 2</p>';
+    expect(stripHtmlTags(htmlString)).toBe('Line 1 Line 2'); // Normalized whitespace
+  });
+
+  it('should return the same string if no HTML tags are present and normalize whitespace', () => {
+    const plainText = '  This is plain text.  ';
+    expect(stripHtmlTags(plainText)).toBe('This is plain text.'); // Trimmed
+  });
+
+  it('should handle empty string', () => {
+    expect(stripHtmlTags('')).toBe('');
+  });
+
+  it('should handle complex HTML structures and normalize whitespace', () => {
+    const complexHtml = `
+      <div>
+        <h1>Title</h1>
+        <p>Some text with a <a href="#">link</a> and <em>emphasis</em>.</p>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+        </ul>
+      </div>
+    `;
+    expect(stripHtmlTags(complexHtml)).toBe('Title Some text with a link and emphasis. Item 1 Item 2'); // Normalized whitespace
+  });
+});
+
+describe('buildMetadata with HTML stripping', () => {
+  it('should strip HTML tags from description for OpenGraph and Twitter metadata', () => {
+    const htmlDescription = '<p>This is a <strong>test</strong> description with <a href="#">HTML</a> tags.</p>';
+    const expectedDescription = 'This is a test description with HTML tags.';
+    const metadata = buildMetadata({ description: htmlDescription });
+
+    expect(metadata.description).toBe(expectedDescription);
+    expect(metadata.openGraph?.description).toBe(expectedDescription);
+    expect(metadata.twitter?.description).toBe(expectedDescription);
   });
 });

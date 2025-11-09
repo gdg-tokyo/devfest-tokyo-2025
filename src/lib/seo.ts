@@ -26,6 +26,14 @@ const resolveOgImage = (p?: string) => {
   return abs(processedPath)
 }
 
+export function stripHtmlTags(htmlString: string): string {
+  // Remove HTML tags
+  let strippedString = htmlString.replace(/<[^>]*>/g, '');
+  // Replace multiple spaces/newlines with a single space and trim
+  strippedString = strippedString.replace(/\s+/g, ' ').trim();
+  return strippedString;
+}
+
 export function buildMetadata(input: PageMetaInput = {}): Metadata {
   const { 
     path = '/',
@@ -37,7 +45,9 @@ export function buildMetadata(input: PageMetaInput = {}): Metadata {
     imageAlt,
   } = input
 
-  const desc = description ?? SITE.defaultDescription
+  // Strip HTML tags from the description before using it
+  const processedDescription = description ? stripHtmlTags(description) : undefined;
+  const desc = processedDescription ?? SITE.defaultDescription
   const urlAbs = abs(path)
   const imageAbs = resolveOgImage(ogImage)
   const ogImageObj = imageAbs

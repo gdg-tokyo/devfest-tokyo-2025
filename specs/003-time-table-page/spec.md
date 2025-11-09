@@ -27,6 +27,7 @@ This document outlines the specification for the "Time Table Page," a central, h
 - **FR1.8**: Each track column in the timetable grid SHALL have a header.
   - **FR1.8.1**: The track header SHALL be a card with rounded corners and a black border.
   - **FR1.8.2**: The background color of the track header card SHALL be a half-tone shade of Google's brand colors (e.g., red for Track A, blue for Track B, green for Track C, yellow for Track D).
+  - **FR1.8.3**: The track header name SHALL be resolved using the policy defined in `specs/016-track-display-name/spec.md`.
 - **FR1.9**: All sessions, including those without associated talks (e.g., "Closing," "Lightning Talks"), SHALL be displayed on the timetable.
 - **FR1.10**: In the `TimetableGrid` view, the height of each time slot row SHALL be equal, with a minimum height of `10px`.
 - **FR1.11**: The time grid SHALL feature horizontal lines to visually separate the time slots.

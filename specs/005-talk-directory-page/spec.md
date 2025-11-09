@@ -50,6 +50,7 @@ As a user, I want to click on a talk to see more details.
 - **FR-008**: Talk cards must display Title, then Speaker/Time, then Abstract.
 - **FR-009**: Talk abstracts must be truncated to three lines.
 - **FR-010**: The page must implement a responsive layout with a centered container, horizontal padding, and maximum width for different screen sizes (mobile, tablet, desktop), ensuring consistent spacing and content alignment.
+- **FR-011**: Track names displayed on talk cards MUST be resolved using the policy defined in `specs/016-track-display-name/spec.md`.
 
 ### Key Entities
 

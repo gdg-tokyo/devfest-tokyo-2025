@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 import TimetableList from '@/features/timetable/components/TimetableList'
 import TimetableGrid from '@/features/timetable/components/TimetableGrid'
 import { Session } from '@/types'
-import { getTrackColor } from '@/features/timetable/utils'
+import { getTrackColor } from '@/lib/style-utils'
 
 // Mock SessionCard to avoid deep rendering issues and focus on TimetableList/Grid structure
 jest.mock('@/features/timetable/components/SessionCard', () => {

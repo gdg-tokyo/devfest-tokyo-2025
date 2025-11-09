@@ -1,5 +1,5 @@
 import { getSpeakers, getTalks } from '@/lib/data-parser'
-import { getLevelColor } from '@/lib/style-utils'
+import { getLevelColor, getTrackDisplayName } from '@/lib/style-utils'
 import { Session, Speaker, Talk } from '@/types'
 import { LocationOn, Person, AccessTime } from '@mui/icons-material' // Import LocationOn icon
 import Link from 'next/link'
@@ -61,7 +61,7 @@ const SessionCard: React.FC<SessionCardProps> = ({ session, isGrayedOut }) => {
               {/* Added ml-2 for spacing */}
               <LocationOn className="h-4 w-4 inline-block mr-1" />{' '}
               {/* Location pin icon */}
-              <span>{session.track}</span>
+              <span>{getTrackDisplayName(session.track)}</span>
             </div>
           )}
         </div>

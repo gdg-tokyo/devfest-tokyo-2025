@@ -29,16 +29,32 @@ export const getPerspectiveColor = (
 }
 
 export const getTrackColor = (track?: string) => {
-  switch (track) {
-    case 'A':
-      return 'bg-halftone-blue'
-    case 'B':
-      return 'bg-halftone-yellow'
-    case 'C':
-      return 'bg-halftone-red'
-    case 'D':
-      return 'bg-halftone-green'
+  let normalizedTrack = track;
+
+  if (normalizedTrack === 'Hands-on Studio') {
+    normalizedTrack = 'Track D'; // Map display name back to internal track name for color logic
+  } else if (normalizedTrack && normalizedTrack.length === 1) {
+    // If it's a single letter, prepend "Track " to match existing cases
+    normalizedTrack = `Track ${normalizedTrack}`;
+  }
+
+  switch (normalizedTrack) {
+    case 'Track A':
+      return 'bg-gdg-pastel-red'
+    case 'Track B':
+      return 'bg-gdg-pastel-blue'
+    case 'Track C':
+      return 'bg-gdg-pastel-green'
+    case 'Track D':
+      return 'bg-gdg-pastel-yellow'
     default:
       return 'bg-gray-200'
   }
+}
+
+export const getTrackDisplayName = (track: string) => {
+  if (track === 'Track D') {
+    return 'Hands-on Studio'
+  }
+  return track
 }

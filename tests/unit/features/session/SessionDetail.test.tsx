@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import SessionDetail from '@/features/session/components/SessionDetail'
 import { Session, Talk, Speaker } from '@/types'
 import '@testing-library/jest-dom'
@@ -83,12 +83,14 @@ describe('SessionDetail', () => {
     ;(dataParser.getSpeakers as jest.Mock).mockReturnValue(mockSpeakers)
   })
 
-  it('should render talks sorted by start time', () => {
+  it('should render talks sorted by start time', async () => {
     render(<SessionDetail session={mockSession} />)
 
-    const talkElements = screen.getAllByText(/Talk [123]/)
-    const talkTitles = talkElements.map((el) => el.textContent)
+    await waitFor(() => {
+      const talkElements = screen.getAllByText(/Talk [123]/)
+      const talkTitles = talkElements.map((el) => el.textContent)
 
-    expect(talkTitles).toEqual(['Talk 1', 'Talk 2', 'Talk 3'])
+      expect(talkTitles).toEqual(['Talk 1', 'Talk 2', 'Talk 3'])
+    })
   })
 })

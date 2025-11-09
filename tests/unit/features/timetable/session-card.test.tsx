@@ -15,11 +15,13 @@ jest.mock('@/lib/data-parser', () => ({
 // Mock style-utils functions
 jest.mock('@/lib/style-utils', () => ({
   getLevelColor: jest.fn((level) => `bg-mock-${level.toLowerCase()}`),
+  getTrackDisplayName: jest.fn((track) => track),
 }))
 
-// Mock the LocationOn icon component
 jest.mock('@mui/icons-material', () => ({
-  LocationOn: () => <svg data-testid="location-icon" />,
+  LocationOn: () => <svg data-testid="LocationOnIcon" />,
+  Person: () => <svg data-testid="PersonIcon" />,
+  AccessTime: () => <svg data-testid="AccessTimeIcon" />,
 }))
 
 describe('SessionCard', () => {

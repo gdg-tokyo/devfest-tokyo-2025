@@ -78,6 +78,10 @@ def _parse_speaker_bio(speaker_bio_markdown: str):
         photo_url = img_tag["src"]
         img_tag.extract()  # Remove the image tag from the soup so it's not part of the bio
 
+    # Remove any remaining image tags from the soup
+    for img in soup.find_all("img"):
+        img.extract()
+
     # Find #### metadata equivalent in HTML (h4 tag with "metadata" text)
     metadata_h4 = None
     for h4 in soup.find_all("h4"):

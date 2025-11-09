@@ -12,10 +12,26 @@ const HtmlContent: FC<Props> = ({ html }) => {
   useEffect(() => {
     setSanitizedHtml(
       sanitizeHtml(html, {
-        allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']), // Allow common tags and img
+        allowedTags: [
+          'p',
+          'ul',
+          'ol',
+          'li',
+          'a',
+          'pre',
+          'code',
+          'table',
+          'thead',
+          'tbody',
+          'tr',
+          'th',
+          'td',
+          'strong',
+          'em',
+          'blockquote',
+        ],
         allowedAttributes: {
-          ...sanitizeHtml.defaults.allowedAttributes,
-          img: ['src', 'alt', 'width', 'height'], // Allow src, alt, width, height for img
+          a: ['href', 'target'],
         },
       })
     )

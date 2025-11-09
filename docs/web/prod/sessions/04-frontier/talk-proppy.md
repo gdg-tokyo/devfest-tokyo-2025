@@ -17,4 +17,6 @@ time_start: '13:50'
 
 グーグル東京でハードウェアツールチェーンを協力してます。
 
-![](https://pbs.twimg.com/profile_images/2505273322/xoi195tc7mjg6tgbsoaf_400x400.png)
+![speaker](https://pbs.twimg.com/profile_images/2505273322/xoi195tc7mjg6tgbsoaf_400x400.png)
+
+![talk_thumbnail](../../../../../public/images/thumbnail/talks/proppy.jpg)

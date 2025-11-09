@@ -27,4 +27,6 @@ Coming soon ...
 
 もっとマーケティングにGoogleのデータとAIとクラウドを使ってワクワクする！を後押しします！ GoogleCloud Partner Top Engineer 2024 data engineer、Google Developer Expert Cloud AI/ML&Data Analytics 、ML女子部コミュニティ運営、jaguar じゃがーる分科会運営、AI/ML分科会運営、GoogleCloud Next 23-25登壇等多数
 
-![](https://storage.googleapis.com/gdgtokyo_img/devfest24/Yukari%20Fukushima.jpg)
+![speaker](https://storage.googleapis.com/gdgtokyo_img/devfest24/Yukari%20Fukushima.jpg)
+
+![talk_thumbnail](../../../../../public/images/thumbnail/talks/fukku-island.jpg)

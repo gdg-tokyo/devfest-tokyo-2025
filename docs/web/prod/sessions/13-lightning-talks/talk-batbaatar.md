@@ -21,4 +21,4 @@ Draw a US state and an AI model will try to guess it! Come on in and you too can
 
 Majoring in Information Technology at IPUT Tokyo. Beyond tech, I like history as well! Also freelancing as a tour guide! If there is a theme to all this, talking with many a people brings a wealth of perspective.
 
-![](https://media.licdn.com/dms/image/v2/D5603AQET1nGCFnzXJA/profile-displayphoto-shrink_400_400/B56ZbUE1JHH4Ag-/0/1747314758757?e=1763596800&v=beta&t=c0BjQ0RkYf9VB5RK7vQiuGX-kPYcGOTXcEWReut0dI8)
+![speaker](https://media.licdn.com/dms/image/v2/D5603AQET1nGCFnzXJA/profile-displayphoto-shrink_400_400/B56ZbUE1JHH4Ag-/0/1747314758757?e=1763596800&v=beta&t=c0BjQ0RkYf9VB5RK7vQiuGX-kPYcGOTXcEWReut0dI8)

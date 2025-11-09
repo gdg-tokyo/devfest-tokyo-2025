@@ -17,4 +17,6 @@ Chrome の Built-in AI API は、Chrome に組み込まれた Gemini Nano を、
 
 Google で Web Ecosystem Consultant をしている Yuriko です！日本の企業の皆さんと一緒に、ワクワクするようなウェブの未来を日々描いています。最近特に力を入れているのは、AI をクライアントサイドで動かす Chrome の Built-in AI です :) LinkedInでは、最新のウェブトレンドや取り組みについて発信しているので、ぜひチェックしてみてください！ → [linkedin.com/in/yurikohirota](https://www.linkedin.com/in/yurikohirota/)
 
-![](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/yuriko-hirota.jpg)
+![speaker](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/yuriko-hirota.jpg)
+
+![talk_thumbnail](../../../../../public/images/thumbnail/talks/yuriko-fuuu.jpg)

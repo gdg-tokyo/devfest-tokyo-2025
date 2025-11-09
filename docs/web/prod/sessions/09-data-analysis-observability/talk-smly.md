@@ -17,4 +17,6 @@ time_start: '16:10'
 
 AI開発を得意とするソフトウェアエンジニアです。世界最初のKaggle Grandmasterの一人で、Kaggleを続けて14年目となります。2025年より Google Developer Expert for Kaggle。
 
-![](https://avatars.githubusercontent.com/u/19337?s=400&u=fb286994be3fadb13d9cf0bbbaae7bb5ffefd3e8&v=4)
+![speaker](https://avatars.githubusercontent.com/u/19337?s=400&u=fb286994be3fadb13d9cf0bbbaae7bb5ffefd3e8&v=4)
+
+![talk_thumbnail](../../../../../public/images/thumbnail/talks/smly.jpg)

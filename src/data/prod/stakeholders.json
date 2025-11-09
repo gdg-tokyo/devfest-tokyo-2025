@@ -12,16 +12,18 @@
     "link": "https://developers.google.com/"
   },
   {
-    "name": "IPUT",
-    "logoUrl": "/images/stakeholders/iput-logo-2403.png",
-    "type": "co-organizer",
-    "link": "https://www.iput.ac.jp/"
-  },
-  {
     "name": "WTM Tokyo",
     "logoUrl": "",
     "type": "co-organizer",
-    "link": "https://wtm-tokyo.connpass.com/"
+    "link": "https://wtm-tokyo.connpass.com/",
+    "priority": 1
+  },
+  {
+    "name": "IPUT",
+    "logoUrl": "/images/stakeholders/iput-logo-2403.png",
+    "type": "co-organizer",
+    "link": "https://www.iput.ac.jp/",
+    "priority": 2
   },
   {
     "name": "MLOpsコミュニティ",

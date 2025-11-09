@@ -93,4 +93,13 @@ describe('TalkDetail', () => {
     expect(screen.getByText('タイムテーブルに戻る')).toBeInTheDocument()
     expect(screen.getByText('トーク一覧に戻る')).toBeInTheDocument()
   })
+
+  it('applies responsive classes to action buttons container', async () => {
+    await act(async () => {
+      render(<TalkDetail talk={mockTalk} speakers={mockSpeakers} />)
+    })
+    const buttonContainer = screen.getByText('今すぐ参加登録').closest('div')
+    expect(buttonContainer).toHaveClass('grid-cols-1')
+    expect(buttonContainer).toHaveClass('md:grid-cols-3')
+  })
 })

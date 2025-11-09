@@ -160,19 +160,19 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
         ))}
       </div>
 
-      <div className="grid grid-cols-3 gap-4 my-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-16">
         <RegistrationButton href="https://gdg-tokyo.connpass.com/event/369416/">
           今すぐ参加登録
         </RegistrationButton>
         <Link
           href="/timetable"
-          className="bg-google-blue-500 hover:bg-google-blue-600 text-white font-bold py-4 px-4 rounded-lg shadow-lg text-center text-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
+          className="bg-google-blue-500 hover:bg-google-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out transform hover:-translate-y-1"
         >
           タイムテーブルに戻る
         </Link>
         <Link
           href="/talks"
-          className="bg-google-green-500 hover:bg-google-green-600 text-white font-bold py-4 px-4 rounded-lg shadow-lg text-center text-xl transition duration-300 ease-in-out transform hover:-translate-y-1"
+          className="bg-google-green-500 hover:bg-google-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out transform hover:-translate-y-1"
         >
           トーク一覧に戻る
         </Link>

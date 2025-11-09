@@ -80,7 +80,7 @@
   {
     "id": "3e77d1cf",
     "slug": "naoya",
-    "title": "Google Maps Platform、2025年の新領域展開（仮）",
+    "title": "Google Maps Platform、2025年の新領域展開",
     "abstract": "<div><p>Google Mapsの機能を開発者向けに提供するGoogle Maps Platformにとって２０２５年はいくつもの新しい取り組みが形となる年になりました。その中でも２つのエリアについて触れたいと思います</p><p>１）データチームのためのGoogle Maps Platform：Google Mapsの豊富なデータを活用したいものの、利用規約上の制約に直面している開発者の方々の声に応え BigQueryを中心にGoogle Cloudと連携する新しい製品群が登場しました。データ活用の可能性を広げるこれらの新サービス（Places Insights等）をデモを交えてご紹介します。</p><p>２）開発者のための 生成AI＋Google Maps Platform：歴史が長い技術であるほど、インターネット上には多種多様な情報が散在し、有効かつ有用な情報を引き出すことはFoundation Model単体では困難です。そこでGoogle Maps Platformでは、最新のドキュメントやノウハウでコンテキストを拡張する開発支援MCPサービス Google Maps Platform Code Assist toolkit をリリースしました。活用例を交えてご紹介します。</p></div>",
     "time_start": "13:40",
     "time_end": "13:50",

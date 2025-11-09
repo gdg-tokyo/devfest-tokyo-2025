@@ -107,4 +107,68 @@ describe('StakeholdersSection', () => {
       screen.queryByRole('heading', { name: '協力' })
     ).not.toBeInTheDocument()
   })
+
+  it('sorts stakeholders by priority and then by name', () => {
+    const sortedMockStakeholders: Stakeholder[] = [
+      {
+        name: 'Alpha Sponsor',
+        logoUrl: '',
+        type: 'sponsor',
+        link: 'https://alpha.com',
+        priority: 1,
+      },
+      {
+        name: 'Beta Sponsor',
+        logoUrl: '',
+        type: 'sponsor',
+        link: 'https://beta.com',
+        priority: 1,
+      },
+      {
+        name: 'Gamma Sponsor',
+        logoUrl: '',
+        type: 'sponsor',
+        link: 'https://gamma.com',
+        priority: 2,
+      },
+      {
+        name: 'Delta Sponsor',
+        logoUrl: '',
+        type: 'sponsor',
+        link: 'https://delta.com',
+        priority: 3,
+      },
+      {
+        name: 'Epsilon Sponsor',
+        logoUrl: '',
+        type: 'sponsor',
+        link: 'https://epsilon.com',
+      },
+      {
+        name: 'Zeta Sponsor',
+        logoUrl: '',
+        type: 'sponsor',
+        link: 'https://zeta.com',
+      },
+    ]
+    ;(getStakeholders as jest.Mock).mockReturnValue(sortedMockStakeholders)
+    render(<StakeholdersSection />)
+
+    const sponsorSection = screen.getByRole('heading', {
+      name: '協賛',
+    }).nextElementSibling
+    const stakeholderNames = Array.from(sponsorSection!.children).map((child) =>
+      child.textContent?.trim()
+    )
+
+    // Expected order: Alpha, Beta, Gamma, Delta, Epsilon, Zeta
+    expect(stakeholderNames).toEqual([
+      'Alpha Sponsor',
+      'Beta Sponsor',
+      'Gamma Sponsor',
+      'Delta Sponsor',
+      'Epsilon Sponsor',
+      'Zeta Sponsor',
+    ])
+  })
 })

@@ -110,7 +110,9 @@ const TalksPageContent = () => {
         availableTechTags={
           Array.from(
             new Set(allRawTalks.flatMap((talk) => talk.tech_tags || []))
-          ).filter(Boolean) as string[]
+          )
+            .filter(Boolean)
+            .sort() as string[]
         }
       />
 

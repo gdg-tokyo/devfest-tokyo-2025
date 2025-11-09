@@ -16,7 +16,7 @@ const RegistrationButton: React.FC<RegistrationButtonProps> = ({
   className = '',
 }) => {
   const baseClasses =
-    'bg-google-red-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-google-red-600 transition duration-300 ease-in-out inline-flex items-center justify-center'
+    'bg-google-red-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-google-red-600 transition duration-300 ease-in-out inline-flex items-center justify-center transform hover:-translate-y-1'
 
   return (
     <Link

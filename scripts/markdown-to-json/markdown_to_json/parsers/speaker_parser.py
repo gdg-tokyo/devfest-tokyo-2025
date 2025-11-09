@@ -1,8 +1,8 @@
 import re
 
 from markdown_to_json.data_model.speaker import Speaker
-from markdown_to_json.parsers.parser_utils import generate_speaker_id
 from markdown_to_json.parsers.markdown_utils import markdown_to_safe_html
+from markdown_to_json.parsers.parser_utils import generate_speaker_id
 
 
 def parse_speaker_from_content(content: str):
@@ -15,6 +15,39 @@ def parse_speaker_from_content(content: str):
 
     speaker_heading = speaker_section_match.group(1).strip()
     speaker_bio_markdown = speaker_section_match.group(2).strip()
+    speaker_name, final_twitter_handle, final_job = _parse_speaker_heading(
+        speaker_heading
+    )
+    speaker_bio_text, photo_url = _parse_speaker_bio(speaker_bio_markdown)
+
+    speaker_id = generate_speaker_id(final_twitter_handle, speaker_name)
+
+    speaker_data = Speaker(
+        id=speaker_id,
+        name=speaker_name,
+        bio=speaker_bio_text,
+        photo_url=photo_url,
+        job=final_job if final_job else "",
+        twitter_handle=final_twitter_handle if final_twitter_handle else "",
+    )
+
+    return speaker_data, [speaker_id]
+
+
+def parse_speaker_from_subheading_content(content: str):
+    """
+    Parses speaker information from markdown content where the speaker section
+    starts with a subheading (e.g., '### Speaker Name').
+    """
+    speaker_section_match = re.search(
+        r"### (?P<speaker_heading>[^\n]+)\n\n(?P<speaker_bio_markdown>[\s\S]+)", content
+    )
+    if not speaker_section_match:
+        return None, []
+
+    speaker_heading = speaker_section_match.group("speaker_heading").strip()
+    speaker_bio_markdown = speaker_section_match.group("speaker_bio_markdown").strip()
+
     speaker_name, final_twitter_handle, final_job = _parse_speaker_heading(
         speaker_heading
     )
@@ -67,11 +100,13 @@ def _parse_speaker_bio(speaker_bio_markdown: str):
     """
     photo_url = ""
     # Extract photo URL using regex from the raw markdown
-    img_match = re.search(r'!\[.*?\]\((?P<url>[^)]+)\)', speaker_bio_markdown)
+    img_match = re.search(r"!\[.*?\]\((?P<url>[^)]+)\)", speaker_bio_markdown)
     if img_match:
         photo_url = img_match.group("url")
         # Remove the image markdown from the bio markdown so it's not part of the bio HTML
-        speaker_bio_markdown = re.sub(r'!\[.*?\]\((?P<url>[^)]+)\)', '', speaker_bio_markdown, count=1)
+        speaker_bio_markdown = re.sub(
+            r"!\[.*?\]\((?P<url>[^)]+)\)", "", speaker_bio_markdown, count=1
+        )
 
     # Convert the remaining markdown to safe HTML
     bio_html = markdown_to_safe_html(speaker_bio_markdown)

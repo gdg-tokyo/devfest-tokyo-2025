@@ -1,9 +1,13 @@
-import React from 'react'
-import { Session, Talk, Speaker } from '@/types'
-import TalkCard from '@/components/common/TalkCard'
 import HtmlContent from '@/components/common/HtmlContent'
-import { getLevelColor, getPerspectiveColor } from '@/lib/style-utils'
-import { getTalks, getSpeakers } from '@/lib/data-parser'
+import RegistrationButton from '@/components/common/RegistrationButton'
+import SessionChairCommunityCard from '@/components/common/SessionChairCommunityCard'
+import SpeakerDetailCard from '@/components/common/SpeakerDetailCard'
+import TalkCard from '@/components/common/TalkCard'
+import { getSessionChairById, getSpeakers, getTalks } from '@/lib/data-parser'
+import { getLevelColor } from '@/lib/style-utils'
+import { Session, Speaker, Talk } from '@/types'
+import Link from 'next/link'
+import React from 'react'
 
 interface SessionDetailProps {
   session: Session
@@ -42,6 +46,10 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
       return 0
     })
 
+  const sessionChair = session.session_chair_id
+    ? getSessionChairById(session.session_chair_id)
+    : undefined
+
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold text-gray-800">{session.title}</h1>
@@ -78,6 +86,42 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
           </div>
         </div>
       )}
+
+      {sessionChair && (
+        <div className="space-y-4">
+          <h2 className="text-2xl font-bold text-gray-800 mt-6">
+            Session Chair
+          </h2>
+          {sessionChair.community && (
+            <SessionChairCommunityCard community={sessionChair.community} />
+          )}
+          {sessionChair.chairs.length > 0 && (
+            <div className="grid grid-cols-1 gap-4">
+              {sessionChair.chairs.map((chair) => (
+                <SpeakerDetailCard key={chair.id} speaker={chair} />
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-16">
+        <RegistrationButton href="https://gdg-tokyo.connpass.com/event/369416/">
+          今すぐ参加登録
+        </RegistrationButton>
+        <Link
+          href="/timetable"
+          className="bg-google-blue-500 hover:bg-google-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out transform hover:-translate-y-1"
+        >
+          タイムテーブルに戻る
+        </Link>
+        <Link
+          href="/talks"
+          className="bg-google-green-500 hover:bg-google-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out transform hover:-translate-y-1"
+        >
+          トーク一覧に戻る
+        </Link>
+      </div>
     </div>
   )
 }

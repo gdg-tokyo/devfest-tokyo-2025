@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 import attrs
 
@@ -18,3 +18,4 @@ class Session:
     tech_tags: List[str]
     description: str
     perspective: List[str]
+    session_chair_id: Optional[str] = None

@@ -6,24 +6,33 @@ from typing import Dict, List, Tuple
 import frontmatter
 
 from markdown_to_json.data_model.session import Session
+from markdown_to_json.data_model.session_chair import (
+    SessionChair,
+)  # Import new data models
 from markdown_to_json.data_model.speaker import Speaker
 from markdown_to_json.data_model.talk import Talk
+from markdown_to_json.parsers.markdown_utils import markdown_to_safe_html
 from markdown_to_json.parsers.parser_utils import (
+    extract_slug,
     extract_title_and_description,
     generate_session_id,
     generate_talk_id,
-    extract_slug,
+    remove_session_chair_content,  # Import new function
 )
+from markdown_to_json.parsers.session_chair_parser import (
+    parse_session_chair_from_content,
+)  # Import new parser
 from markdown_to_json.parsers.speaker_parser import parse_speaker_from_content
-from markdown_to_json.parsers.markdown_utils import markdown_to_safe_html
 
 
-def _extract_thumbnail_url(content: str, talk_file_path: str, docs_base_path: str) -> str | None:
+def _extract_thumbnail_url(
+    content: str, talk_file_path: str, docs_base_path: str
+) -> str | None:
     """Extracts the thumbnail URL from markdown content and converts it to a public path using pathlib."""
-    match = re.search(r'!\[talk_thumbnail\]\((?P<url>[^)]+)\)', content)
+    match = re.search(r"!\[talk_thumbnail\]\((?P<url>[^)]+)\)", content)
     if match:
         raw_url = match.group("url")
-        
+
         # If the URL is external, return it as is
         if raw_url.startswith("http://") or raw_url.startswith("https://"):
             return raw_url
@@ -42,7 +51,7 @@ def _extract_thumbnail_url(content: str, talk_file_path: str, docs_base_path: st
             # Get the path relative to the public directory
             relative_to_public = resolved_image_path.relative_to(public_dir)
             # Prepend '/' to make it an absolute path from the web root
-            return '/' + str(relative_to_public)
+            return "/" + str(relative_to_public)
         except ValueError:
             # If the image path is not under the public directory, return None
             # or handle as an error/warning
@@ -52,11 +61,14 @@ def _extract_thumbnail_url(content: str, talk_file_path: str, docs_base_path: st
 
 def parse_sessions_and_talks(
     docs_base_path: str,
-) -> Tuple[List[Session], List[Talk], Dict[str, Speaker]]:
+) -> Tuple[
+    List[Session], List[Talk], Dict[str, Speaker], Dict[str, SessionChair]
+]:  # Add SessionChair to return type
     """Parses all session and talk markdown files and extracts data."""
     sessions_data = []
     talks_data = []
     speakers_map = {}
+    session_chairs_map = {}  # New map for session chairs
 
     docs_prod_path = os.path.join(docs_base_path, "prod", "sessions")
     session_folders = sorted([f.name for f in os.scandir(docs_prod_path) if f.is_dir()])
@@ -66,9 +78,14 @@ def parse_sessions_and_talks(
         session_id = generate_session_id(session_folder)
         session_slug = extract_slug(session_folder, "session")
 
-        session_entry = _parse_session(session_folder_path, session_id, session_slug)
+        session_entry, session_chair_entry, chair_speakers_map = _parse_session(
+            session_folder_path, session_id, session_slug
+        )  # Modify call to _parse_session
         if session_entry:
             sessions_data.append(session_entry)
+            if session_chair_entry:
+                session_chairs_map[session_chair_entry.id] = session_chair_entry
+
 
         talk_files = sorted(
             [
@@ -98,22 +115,38 @@ def parse_sessions_and_talks(
             if speaker_data and speaker_data.id not in speakers_map:
                 speakers_map[speaker_data.id] = speaker_data
 
-    return sessions_data, talks_data, speakers_map
+    return (
+        sessions_data,
+        talks_data,
+        speakers_map,
+        session_chairs_map,
+    )  # Return session_chairs_map
 
 
-def _parse_session(session_folder_path, session_id, session_slug) -> Session | None:
-    """Parses a single session markdown file and returns a Session object."""
+def _parse_session(
+    session_folder_path, session_id, session_slug
+) -> Tuple[
+    Session | None, SessionChair | None, Dict[str, Speaker]
+]:
+    """Parses a single session markdown file and returns a Session object, SessionChair object, and chair speakers."""
     session_readme_path = os.path.join(session_folder_path, "README.md")
     if not os.path.exists(session_readme_path):
-        return None
+        return None, None, {}
 
     with open(session_readme_path, "r", encoding="utf-8") as f:
         post = frontmatter.load(f)
 
-    title, description_md = extract_title_and_description(post.content).values()
+    # First, parse session chair content from the original markdown
+    session_chair_entry, chair_speakers_map = parse_session_chair_from_content(
+        post.content, session_slug
+    )
+
+    # Then, remove session chair content before extracting the main description
+    cleaned_content = remove_session_chair_content(post.content)
+    title, description_md = extract_title_and_description(cleaned_content).values()
     description = markdown_to_safe_html(description_md)
 
-    return Session(
+    session_entry = Session(
         id=session_id,
         slug=session_slug,
         talk_ids=[],
@@ -125,7 +158,12 @@ def _parse_session(session_folder_path, session_id, session_slug) -> Session | N
         tech_tags=post.metadata.get("tech_tags", []),
         description=description,
         perspective=post.metadata.get("perspective", []),
+        session_chair_id=session_chair_entry.id
+        if session_chair_entry
+        else None,
     )
+
+    return session_entry, session_chair_entry, chair_speakers_map
 
 
 def _parse_talk(

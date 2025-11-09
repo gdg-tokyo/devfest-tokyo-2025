@@ -10,7 +10,8 @@
     "level": ["Beginner"],
     "tech_tags": ["Google", "Community"],
     "description": "<div><p>Google Developer Group - DevFest Tokyo 2025 の オープニングを行います。</p></div>",
-    "perspective": []
+    "perspective": [],
+    "session_chair_id": null
   },
   {
     "id": "cae9d3b2",
@@ -23,7 +24,8 @@
     "level": ["Beginner", "Advanced"],
     "tech_tags": ["Web", "AI", "キャリア"],
     "description": "<div><p>DevFest Tokyo 2025 の 基調講演を行います。</p></div>",
-    "perspective": []
+    "perspective": [],
+    "session_chair_id": null
   },
   {
     "id": "72aee740",
@@ -36,7 +38,8 @@
     "level": ["Advanced"],
     "tech_tags": ["BigQuery", "Web", "Mobile"],
     "description": "<div><p>TBA</p></div>",
-    "perspective": []
+    "perspective": [],
+    "session_chair_id": null
   },
   {
     "id": "8b664243",
@@ -49,7 +52,8 @@
     "level": ["Beginner", "Advanced"],
     "tech_tags": ["Google Map"],
     "description": "<div><p>Google Maps は、誰もが日々お世話になっている代表的な Google のサービスの一つだと思いますが、実は今年で 20 周年を迎えたことはご存じでしたか？今年 2月の Google Maps 20周年記念イベントの大反響をうけ、Google Maps 特集が DevFest Tokyo にやってきます！</p><p>20年の歴史で培われたUXの技から、地上ではなく空の地図 (旧 Google Sky Map) 、そして最先端である BigQuery 連携と MCP サービスを、ぎゅっと凝縮してお届けします！</p></div>",
-    "perspective": ["Introduction", "Experience", "Challenge"]
+    "perspective": ["Introduction", "Experience", "Challenge"],
+    "session_chair_id": "6dcbdbeb"
   },
   {
     "id": "c7575274",
@@ -62,7 +66,8 @@
     "level": ["Advanced"],
     "tech_tags": ["Veo", "Flutter", "Hardware"],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": []
+    "perspective": [],
+    "session_chair_id": null
   },
   {
     "id": "c1f78a0a",
@@ -75,7 +80,8 @@
     "level": ["Beginner"],
     "tech_tags": ["AI Agent", "MCP", "AI セーフティ", "AI ガバナンス"],
     "description": "<div><p>生成AI が急速に普及し、私たちの生活を変えようとしています。この変化の中核となる技術が「AI エージェント」です。この入門セッションでは、AI エージェントが生活にもたらす変化とその価値について議論し、実際に AI エージェント 開発を始めるために必要な、仕組みや開発プロセスについて、わかりやすく解説していきます。</p><p>AI初心者の皆さんも、このセッションに参加することで、AI エージェント開発の開発の準備を整えましょう！</p></div>",
-    "perspective": ["Introduction", "Experience", "Challenge"]
+    "perspective": ["Introduction", "Experience", "Challenge"],
+    "session_chair_id": "d63eaae2"
   },
   {
     "id": "c974063d",
@@ -88,7 +94,8 @@
     "level": ["Advanced"],
     "tech_tags": ["AI エージェント", "ADK"],
     "description": "<div><p>AI エージェント開発に挑戦したい方に向けて、ADK (Agent Development Kit) の活用方法と開発のヒントをご紹介するセッションです。</p><p>まず、Agent Developer Kit (ADK) の概要と最新情報・今後のロードマップをご紹介します。そしてより実践的な、データ分析エージェントの開発レシピや、音声や動画を取り入れるストリーミング機能の開発 Tipsなどをご紹介します。</p></div>",
-    "perspective": ["Introduction", "Experience", "Challenge"]
+    "perspective": ["Introduction", "Experience", "Challenge"],
+    "session_chair_id": "7eb91900"
   },
   {
     "id": "3d6ca428",
@@ -101,7 +108,8 @@
     "level": ["Beginner", "Advanced"],
     "tech_tags": ["Web", "Angular", "Chrome", "CSS"],
     "description": "<div><p>2025年、WebフロントエンドはAIとともに新しいフェーズへ。 本セッションでは、最新のAngular with AI の動向から、Web標準とブラウザ機能の進化、そして Chrome に組み込まれた AI を活用した機能開発まで、これからの Web フロントエンド開発を大きく変えるトピックを 3 つの講演でご紹介します。</p></div>",
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "session_chair_id": "5d8afd9c"
   },
   {
     "id": "c3cf985c",
@@ -114,7 +122,8 @@
     "level": ["Advanced"],
     "tech_tags": ["Gemini CLI"],
     "description": "<div><p>「Gemini CLI 」は今話題の AI Coding エージェントの一つであり、 Gemini の 巨大なコンテキストウィンドウや、強力な Google 検索連携などを駆使して、開発者のコーディングタスクを代替しつつある一方で、効果的な活用には工夫が必要です。</p><p>このセッションでは、古典的な MLOps をふまえた確率的な挙動を持つツールの信頼性や整合性を高める活用術や、個人利用に止まらせず組織・チーム・エンタープライズとして開発に活用するノウハウをお届けします。</p><p>みなさんも「本気の活用」をここから始めましょう！</p></div>",
-    "perspective": ["Experience", "Challenge"]
+    "perspective": ["Experience", "Challenge"],
+    "session_chair_id": "da2a8966"
   },
   {
     "id": "18ed9d53",
@@ -127,7 +136,8 @@
     "level": ["Beginner", "Advanced"],
     "tech_tags": ["Kaggle", "データ分析", "Observability"],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Introduction", "Experience", "Challenge"]
+    "perspective": ["Introduction", "Experience", "Challenge"],
+    "session_chair_id": null
   },
   {
     "id": "f60ed56a",
@@ -140,7 +150,8 @@
     "level": ["Beginner", "Advanced"],
     "tech_tags": ["Android"],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "session_chair_id": null
   },
   {
     "id": "b7f38de6",
@@ -153,7 +164,8 @@
     "level": ["Beginner"],
     "tech_tags": ["Gemini CLI", "Nano Banana"],
     "description": "<div><p>このセッションではGemini CLIの基本的な使い方を学び簡単なタスク実行するハンズオンを行います。そして、Gemini Extensionsを使ってGemini CLIでNanobananaモデルを使えるようにしてクールな画像を生成、編集します。</p></div>",
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "session_chair_id": null
   },
   {
     "id": "e10a1602",
@@ -166,7 +178,8 @@
     "level": ["Advanced"],
     "tech_tags": ["Firabase", "Firebase Studio"],
     "description": "<div><p>Firebase Studio は、フロントエンド・バックエンド・データベースの構築を一元的に行える新しい開発環境です。このハンズオンでは、Firebase Studio を使ってフルスタックアプリケーションを実際に構築しながら、Firestore や Firebase Authentication、Firebase App Hosting などの主要機能を体験します。</p></div>",
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "session_chair_id": null
   },
   {
     "id": "1ace4124",
@@ -179,7 +192,8 @@
     "level": ["Beginner", "Advanced"],
     "tech_tags": [],
     "description": "<div><p>DevFest Tokyo 2025 を締めくくる LT 大会です。</p><p>AI、Web、クラウド、モバイル、コミュニティ、キャリアなど、2025年の技術トレンドを象徴する多様なトピックが集結します。 イベントの締めくくりに、今年の学びを総括し、来年へのインスピレーションを得る、熱気あふれる時間をお楽しみください！</p></div>",
-    "perspective": ["Introduction", "Experience", "Challenge"]
+    "perspective": ["Introduction", "Experience", "Challenge"],
+    "session_chair_id": null
   },
   {
     "id": "6f9a4880",
@@ -192,7 +206,8 @@
     "level": ["Beginner"],
     "tech_tags": [],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Experience"]
+    "perspective": ["Experience"],
+    "session_chair_id": null
   },
   {
     "id": "864a7dd7",
@@ -205,6 +220,7 @@
     "level": ["Beginner"],
     "tech_tags": ["Gemma"],
     "description": "<div><p>Coming soon ...</p></div>",
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction"],
+    "session_chair_id": null
   }
 ]

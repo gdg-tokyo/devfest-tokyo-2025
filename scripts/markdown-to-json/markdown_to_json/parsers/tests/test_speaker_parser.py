@@ -1,6 +1,3 @@
-import pytest
-
-from markdown_to_json.data_model.speaker import Speaker
 from markdown_to_json.parsers.speaker_parser import parse_speaker_from_content
 
 
@@ -14,7 +11,7 @@ This is Jane's bio.
 
 It has multiple paragraphs.
 
-![Jane Doe Photo](https://example.com/jane.jpg)
+![speaker](https://example.com/jane.jpg)
 """
     speaker, speaker_ids = parse_speaker_from_content(markdown_content)
 

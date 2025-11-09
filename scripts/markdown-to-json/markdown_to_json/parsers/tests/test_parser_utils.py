@@ -1,4 +1,3 @@
-import re
 import pytest
 
 from markdown_to_json.parsers import parser_utils

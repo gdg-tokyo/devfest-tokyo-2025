@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Advanced']
 perspective: ['Challenge']
 tech_tags: ['XLS', 'ハードウェア']
-time_end: '13:50'
-time_start: '13:35'
+time_end: '14:10'
+time_start: '13:50'
 ---
 
 # XLS：半導体デジタル設計をもっと早く！

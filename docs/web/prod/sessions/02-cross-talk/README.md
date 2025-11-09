@@ -7,6 +7,6 @@ time_start: '13:20'
 track: Track A
 ---
 
-# 異分野クロストーク (仮)
+# 異分野クロストーク
 
 TBA

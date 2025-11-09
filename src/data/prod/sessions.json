@@ -15,12 +15,12 @@
   {
     "id": "cae9d3b2",
     "slug": "keynote",
-    "talk_ids": ["436aadeb"],
+    "talk_ids": ["436aadeb", "4e750be0"],
     "track": "Track A",
     "time_start": "12:20",
     "time_end": "13:10",
     "title": "基調講演",
-    "level": ["Beginner"],
+    "level": ["Beginner", "Advanced"],
     "tech_tags": ["Web", "AI", "キャリア"],
     "description": "<div><p>DevFest Tokyo 2025 の 基調講演を行います。</p></div>",
     "perspective": []
@@ -32,7 +32,7 @@
     "track": "Track A",
     "time_start": "13:20",
     "time_end": "14:10",
-    "title": "異分野クロストーク (仮)",
+    "title": "異分野クロストーク",
     "level": ["Advanced"],
     "tech_tags": ["BigQuery", "Web", "Mobile"],
     "description": "<div><p>TBA</p></div>",
@@ -84,10 +84,10 @@
     "track": "Track B",
     "time_start": "14:30",
     "time_end": "15:30",
-    "title": "Agent Developer Kit (ADK) Special (仮)",
+    "title": "【実践】ADK による AI エージェント開発",
     "level": ["Advanced"],
     "tech_tags": ["AI エージェント", "ADK"],
-    "description": "<div><p>Coming soon ...</p></div>",
+    "description": "<div><p>AI エージェント開発に挑戦したい方に向けて、ADK (Agent Development Kit) の活用方法と開発のヒントをご紹介するセッションです。</p><p>まず、Agent Developer Kit (ADK) の概要と最新情報・今後のロードマップをご紹介します。そしてより実践的な、データ分析エージェントの開発レシピや、音声や動画を取り入れるストリーミング機能の開発 Tipsなどをご紹介します。</p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {
@@ -110,10 +110,10 @@
     "track": "Track A",
     "time_start": "15:40",
     "time_end": "16:30",
-    "title": "AI TOOLS (仮)",
+    "title": "Gemini CLI “本気の” 活用術と組織導入の最前線",
     "level": ["Advanced"],
     "tech_tags": ["Gemini CLI"],
-    "description": "<div><p>Coming soon ...</p></div>",
+    "description": "<div><p>「Gemini CLI 」は今話題の AI Coding エージェントの一つであり、 Gemini の 巨大なコンテキストウィンドウや、強力な Google 検索連携などを駆使して、開発者のコーディングタスクを代替しつつある一方で、効果的な活用には工夫が必要です。</p><p>このセッションでは、古典的な MLOps をふまえた確率的な挙動を持つツールの信頼性や整合性を高める活用術や、個人利用に止まらせず組織・チーム・エンタープライズとして開発に活用するノウハウをお届けします。</p><p>みなさんも「本気の活用」をここから始めましょう！</p></div>",
     "perspective": ["Experience", "Challenge"]
   },
   {
@@ -147,8 +147,8 @@
     "slug": "hands-on-geminicli",
     "talk_ids": ["c9dd5622"],
     "track": "Track D",
-    "time_start": "15:40",
-    "time_end": "16:30",
+    "time_start": "13:20",
+    "time_end": "14:10",
     "title": "[Hands-on] Gemini CLI",
     "level": ["Beginner"],
     "tech_tags": ["Gemini CLI", "Nano Banana"],
@@ -178,7 +178,7 @@
     "title": "DevFest Tokyo LT大会",
     "level": ["Beginner", "Advanced"],
     "tech_tags": [],
-    "description": "<div><p>Coming soon ...</p></div>",
+    "description": "<div><p>DevFest Tokyo 2025 を締めくくる LT 大会です。</p><p>AI、Web、クラウド、モバイル、コミュニティ、キャリアなど、2025年の技術トレンドを象徴する多様なトピックが集結します。 イベントの締めくくりに、今年の学びを総括し、来年へのインスピレーションを得る、熱気あふれる時間をお楽しみください！</p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"]
   },
   {

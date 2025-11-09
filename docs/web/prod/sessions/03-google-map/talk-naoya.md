@@ -7,7 +7,7 @@ time_end: '13:50'
 time_start: '13:40'
 ---
 
-# Google Maps Platform、2025年の新領域展開（仮）
+# Google Maps Platform、2025年の新領域展開
 
 Google Mapsの機能を開発者向けに提供するGoogle Maps Platformにとって２０２５年はいくつもの新しい取り組みが形となる年になりました。その中でも２つのエリアについて触れたいと思います
 

@@ -8,6 +8,8 @@ tech_tags: ['AI エージェント', 'ADK']
 perspective: ['Introduction', 'Experience', 'Challenge']
 ---
 
-# Agent Developer Kit (ADK) Special (仮)
+# 【実践】ADK による AI エージェント開発
 
-Coming soon ...
+AI エージェント開発に挑戦したい方に向けて、ADK (Agent Development Kit) の活用方法と開発のヒントをご紹介するセッションです。
+
+まず、Agent Developer Kit (ADK) の概要と最新情報・今後のロードマップをご紹介します。そしてより実践的な、データ分析エージェントの開発レシピや、音声や動画を取り入れるストリーミング機能の開発 Tipsなどをご紹介します。

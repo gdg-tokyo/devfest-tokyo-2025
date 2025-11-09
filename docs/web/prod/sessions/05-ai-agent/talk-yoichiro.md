@@ -3,7 +3,7 @@ is_keynote: false
 level: ['Beginner']
 perspective: ['Introduction', 'Challenge']
 tech_tags: ['AI エージェント']
-time_end: '15:30'
+time_end: '14:50'
 time_start: '14:30'
 ---
 

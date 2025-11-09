@@ -27,8 +27,6 @@ tests/
 
 ## Commands
 
-- `npm run build:content`: Parses Markdown content from `docs/prod/` and generates JSON data in `src/data/prod/`.
-
 # Add commands for
 
 ## Code Style

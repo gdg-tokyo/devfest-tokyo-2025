@@ -1,5 +1,22 @@
 # Latest Learnings
 
+## 2025-11-09 00:00
+
+### KNOWLEDGE OUTSIDE CODE BASE
+
+- PR #35: The decision to explicitly document GitHub MCP tool usage in `AGENTS.md` was driven by repeated errors in identifying the correct repository and user name during previous interactions. This aims to improve the agent's reliability and reduce future errors.
+
+### INTERNAL MODULE DEPENDENCY
+
+- PR #38: When fixing a bug, it's important to identify and fix the root cause (in this case, in the data parser `src/lib/data-parser.ts`) in addition to the symptom (in the UI component).
+- PR #36: To support dynamic OG images, `thumbnail_url?: string` was added to both `Session` and `Talk` interfaces in `src/types/index.ts`, and `src/lib/data-parser.ts` was updated to handle this new field.
+
+### PR REVIEW ASPECT
+
+- PR #38: When a component's test file already exists, it's better to modify the existing file rather than creating a new one to avoid conflicts.
+- PR #36: During unit testing of `src/lib/seo.ts`, it was discovered that `withRepoBasePath` was always being called, even for absolute URLs. The `resolveOgImage` function was refactored to conditionally call `withRepoBasePath` only for relative paths, and the test was adjusted accordingly.
+- PR #35: The requirement for full relative paths in learning notes was added to improve the traceability and usefulness of documented learnings for future code modifications.
+
 ## 2025-11-03 00:00
 
 ### KNOWLEDGE OUTSIDE CODE BASE

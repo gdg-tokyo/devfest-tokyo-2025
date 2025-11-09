@@ -32,6 +32,9 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
             fill
             style={{ objectFit: 'contain' }}
             className="rounded-lg"
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            placeholder="blur"
+            blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           />
         </div>
       )}

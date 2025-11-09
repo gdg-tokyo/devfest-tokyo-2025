@@ -18,5 +18,3 @@ AIネイティブな世代がどんどん世に出てきている昨今ですが
 普段はNPO法人Waffleという団体で女性エンジニア学生を増やす取り組みをする傍ら、自分自身も学生エンジニアを4年弱行っています。最近の学生はどのように技術をキャッチアップしているのか？というのを中心にお話しできればと思います。
 
 ![speaker](https://pbs.twimg.com/profile_images/1460523078593974273/oGIc5NZC_400x400.jpg)
-
-![talk_thumbnail](../../../../../public/images/thumbnail/talks/suueng.jpg)

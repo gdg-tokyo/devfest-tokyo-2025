@@ -10,6 +10,7 @@ export interface Session {
   description: string
   perspective: string[]
   thumbnail_url?: string
+  session_chair_id?: string
 }
 
 export interface Speaker {
@@ -41,4 +42,17 @@ export interface Stakeholder {
   type: 'organizer' | 'co-organizer' | 'sponsor' | 'partner'
   link: string
   priority?: number
+}
+
+export interface SessionChairCommunity {
+  name: string
+  description: string
+  url?: string
+  logo_url?: string
+}
+
+export interface SessionChair {
+  id: string
+  community?: SessionChairCommunity
+  chairs: Speaker[]
 }

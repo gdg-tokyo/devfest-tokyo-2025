@@ -13,3 +13,21 @@ perspective: ['Introduction', 'Experience', 'Challenge']
 AI エージェント開発に挑戦したい方に向けて、ADK (Agent Development Kit) の活用方法と開発のヒントをご紹介するセッションです。
 
 まず、Agent Developer Kit (ADK) の概要と最新情報・今後のロードマップをご紹介します。そしてより実践的な、データ分析エージェントの開発レシピや、音声や動画を取り入れるストリーミング機能の開発 Tipsなどをご紹介します。
+
+## Session Chair Community
+
+### ADK User Group JP
+
+Agent Development Kit (ADK) は、生成AIを活用したエージェント開発のための基盤です。ADKを使うことで、より高度でインタラクティブなエージェントを効率的に開発することが可能になります。 ADK User Group は、日本国内のADKに関心のある開発者、デザイナー、プロダクトマネージャー、研究者など、あらゆるバックグラウンドの方々が集まり、ADKに関する情報交換、知識共有、そして実践的な学びを深めるためのコミュニティです。
+
+https://adk.connpass.com/
+
+![community_logo](https://media.connpass.com/thumbs/f1/0e/f10ef9d2373151357f6f53974a4ead04.png)
+
+## Session Chair
+
+### 大橋啓介 さん (@soundTricker318) / 株式会社カブク CTO
+
+Workspace、Google Cloud、Angular、GASの人 一応Google Developer Expert(Workspace)です。最近はADKをいっぱい触っています。
+
+![speaker](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/sound-tricker.jpg)

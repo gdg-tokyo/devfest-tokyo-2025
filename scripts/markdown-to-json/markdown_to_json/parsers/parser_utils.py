@@ -1,6 +1,5 @@
 import hashlib
 import re
-import string
 
 import markdown
 from bs4 import BeautifulSoup

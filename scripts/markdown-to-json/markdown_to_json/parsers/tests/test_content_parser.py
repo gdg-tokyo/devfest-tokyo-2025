@@ -1,7 +1,5 @@
 import os
 
-import pytest
-
 from markdown_to_json.parsers.content_parser import parse_sessions_and_talks
 
 
@@ -9,7 +7,9 @@ def test_parse_sessions_and_talks(setup_test_data):
     base_path = setup_test_data
     docs_base_path = os.path.join(base_path, "docs", "web")
 
-    sessions, talks, speakers_map = parse_sessions_and_talks(docs_base_path)
+    sessions, talks, speakers_map, session_chairs_map = parse_sessions_and_talks(
+        docs_base_path
+    )
 
     assert len(sessions) == 2
     assert sessions[0].id == "cae9d3b2"
@@ -33,6 +33,22 @@ def test_parse_sessions_and_talks(setup_test_data):
     assert any(s.id == "01332c87" for s in speakers)
     assert any(s.id == "ef61a579" for s in speakers)
     assert any(s.id == "1d9126fc" for s in speakers)
+
+    # Assertions for session_chairs_map and session_chair_id
+    assert isinstance(session_chairs_map, dict)
+    # Assuming '03-google-map' session has a session chair
+    google_map_session = next((s for s in sessions if s.slug == "google-map"), None)
+    if google_map_session:
+        assert google_map_session.session_chair_id is not None
+        # Calculate expected session_chair_id based on new logic: hash of "google-map-chair"
+        expected_google_map_chair_slug = "google-map-chair"
+        import hashlib
+
+        expected_google_map_chair_id = hashlib.sha256(
+            expected_google_map_chair_slug.encode("utf-8")
+        ).hexdigest()[:8]
+        assert google_map_session.session_chair_id == expected_google_map_chair_id
+        assert expected_google_map_chair_id in session_chairs_map
 
 
 def test_parse_session_with_multi_paragraph_description(setup_test_data):
@@ -59,7 +75,7 @@ This is another paragraph.
     with open(test_session_path, "w") as f:
         f.write(test_session_content)
 
-    sessions, _, _ = parse_sessions_and_talks(docs_base_path)
+    sessions, _, _, _ = parse_sessions_and_talks(docs_base_path)
 
     # Find the test session
     test_session = next((s for s in sessions if s.slug == "test-session"), None)
@@ -99,7 +115,7 @@ Test Speaker Bio.
     with open(test_talk_path, "w") as f:
         f.write(test_talk_content)
 
-    _, talks, _ = parse_sessions_and_talks(docs_base_path)
+    _, talks, _, _ = parse_sessions_and_talks(docs_base_path)
 
     # Find the test talk
     test_talk = next((t for t in talks if t.slug == "test-abstract"), None)
@@ -119,9 +135,11 @@ def test_parse_talk_with_thumbnail_url(setup_test_data):
     )
     os.makedirs(test_session_dir, exist_ok=True)
     test_talk_path = os.path.join(test_session_dir, "talk-with-thumbnail.md")
-    
+
     # Use a relative path that needs resolution
-    mock_thumbnail_relative_path = "../../../../../public/images/thumbnail/talks/test-thumbnail.jpg"
+    mock_thumbnail_relative_path = (
+        "../../../../../public/images/thumbnail/talks/test-thumbnail.jpg"
+    )
     expected_thumbnail_url = "/images/thumbnail/talks/test-thumbnail.jpg"
 
     test_talk_content = f"""---
@@ -143,7 +161,7 @@ Test Speaker Bio.
     with open(test_talk_path, "w") as f:
         f.write(test_talk_content)
 
-    sessions, talks, _ = parse_sessions_and_talks(docs_base_path)
+    sessions, talks, _, _ = parse_sessions_and_talks(docs_base_path)  # Unpack 4 values
 
     # Find the test talk
     test_talk = next((t for t in talks if t.slug == "with-thumbnail"), None)
@@ -151,7 +169,9 @@ Test Speaker Bio.
     assert test_talk.thumbnail_url == expected_thumbnail_url
 
     # Test talk with external thumbnail URL
-    test_talk_external_thumbnail_path = os.path.join(test_session_dir, "talk-external-thumbnail.md")
+    test_talk_external_thumbnail_path = os.path.join(
+        test_session_dir, "talk-external-thumbnail.md"
+    )
     external_url = "https://example.com/external-thumbnail.png"
     test_talk_external_thumbnail_content = f"""---
 time_start: '10:00'
@@ -172,8 +192,12 @@ External Speaker Bio.
     with open(test_talk_external_thumbnail_path, "w") as f:
         f.write(test_talk_external_thumbnail_content)
 
-    _, talks_external, _ = parse_sessions_and_talks(docs_base_path)
-    test_talk_external = next((t for t in talks_external if t.slug == "external-thumbnail"), None)
+    _, talks_external, _, _ = parse_sessions_and_talks(
+        docs_base_path
+    )
+    test_talk_external = next(
+        (t for t in talks_external if t.slug == "external-thumbnail"), None
+    )
     assert test_talk_external is not None
     assert test_talk_external.thumbnail_url == external_url
 
@@ -196,7 +220,11 @@ Another Speaker Bio.
     with open(test_talk_no_thumbnail_path, "w") as f:
         f.write(test_talk_no_thumbnail_content)
 
-    _, talks_no_thumbnail, _ = parse_sessions_and_talks(docs_base_path)
-    test_talk_no_thumbnail = next((t for t in talks_no_thumbnail if t.slug == "no-thumbnail"), None)
+    _, talks_no_thumbnail, _, _ = parse_sessions_and_talks(
+        docs_base_path
+    )
+    test_talk_no_thumbnail = next(
+        (t for t in talks_no_thumbnail if t.slug == "no-thumbnail"), None
+    )
     assert test_talk_no_thumbnail is not None
     assert test_talk_no_thumbnail.thumbnail_url is None

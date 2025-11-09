@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { SITE } from './site'
 import { withRepoBasePath } from '@/lib/url-utils'
+import sanitizeHtml from 'sanitize-html'
+import he from 'he'
 
 export type PageMetaInput = {
   path?: string // e.g., "/blog/hello"
@@ -27,15 +29,15 @@ const resolveOgImage = (p?: string) => {
 }
 
 export function stripHtmlTags(htmlString: string): string {
-  // Remove HTML tags
-  let strippedString = htmlString.replace(/<[^>]*>/g, '');
-  // Replace multiple spaces/newlines with a single space and trim
-  strippedString = strippedString.replace(/\s+/g, ' ').trim();
-  return strippedString;
+  const noTags = sanitizeHtml(htmlString, { allowedTags: [], allowedAttributes: {} })
+  return he.decode(noTags)                // &amp; → &
+    .replace(/\u00A0/g, ' ')              // &nbsp; → スペース
+    .replace(/\s+/g, ' ')
+    .trim()
 }
 
 export function buildMetadata(input: PageMetaInput = {}): Metadata {
-  const { 
+  const {
     path = '/',
     title,
     description,

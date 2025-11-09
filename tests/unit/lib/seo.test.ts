@@ -103,6 +103,11 @@ describe('buildMetadata', () => {
 });
 
 describe('stripHtmlTags', () => {
+  it('strips tags safely and handles HTML entities', () => {
+    const input = `<img src=x onerror=alert(1)>Hi &amp; <b>there</b><script>alert(1)</script>`;
+    expect(stripHtmlTags(input)).toBe('Hi & there');
+  });
+
   it('should remove all HTML tags from a string and normalize whitespace', () => {
     const htmlString = '<p>Hello <strong>world</strong>!</p><a href="#">Link</a>';
     expect(stripHtmlTags(htmlString)).toBe('Hello world!Link');

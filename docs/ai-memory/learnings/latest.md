@@ -16,6 +16,9 @@
 - PR #38: When a component's test file already exists, it's better to modify the existing file rather than creating a new one to avoid conflicts.
 - PR #36: During unit testing of `src/lib/seo.ts`, it was discovered that `withRepoBasePath` was always being called, even for absolute URLs. The `resolveOgImage` function was refactored to conditionally call `withRepoBasePath` only for relative paths, and the test was adjusted accordingly.
 - PR #35: The requirement for full relative paths in learning notes was added to improve the traceability and usefulness of documented learnings for future code modifications.
+- PR #46: When fixing a bug, first update the tests to reflect the new requirements and confirm they fail as expected. Then, fix the implementation to make the tests pass. This is a fundamental principle of Test-Driven Development (TDD).
+- PR #46: Test files should be named with the `.test.tsx` extension to be picked up by the Jest test runner, and mock data used in tests should be complete and reflect the actual data structure to avoid unexpected test failures.
+- PR #46: When a test is failing, it's important to use debugging tools like `screen.debug()` and `console.log` to inspect the rendered output and the state of the component, and to check the test file name and the Jest configuration if the test is not being picked up by the test runner.
 
 ## 2025-11-03 00:00
 

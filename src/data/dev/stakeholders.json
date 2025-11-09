@@ -24,10 +24,22 @@
     "link": "https://wtm-tokyo.connpass.com/"
   },
   {
-    "name": "Partner Community",
-    "logoUrl": "",
+    "name": "MLOpsコミュニティ",
+    "logoUrl": "https://pbs.twimg.com/profile_images/1370267966298681347/sBjkDhjQ.jpg",
     "type": "partner",
-    "link": "https://community.example.com/"
+    "link": "https://mlops.connpass.com/"
+  },
+  {
+    "name": "ADK User Group JP",
+    "logoUrl": "https://media.connpass.com/thumbs/f1/0e/f10ef9d2373151357f6f53974a4ead04.png",
+    "type": "partner",
+    "link": "https://adk.connpass.com/"
+  },
+  {
+    "name": "Jagu'e'r (Japan Google Cloud User Group for Enterprise)",
+    "logoUrl": "https://jaguer.jp/wp-content/uploads/2021/03/jaguer.svg",
+    "type": "partner",
+    "link": "https://jaguer.jp/"
   },
   {
     "name": "Angular日本ユーザー会",

@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Advanced']
 perspective: ['Challenge']
 tech_tags: ['Flutter', 'Liquid Glass']
-time_end: '13:35'
-time_start: '13:20'
+time_end: '13:50'
+time_start: '13:35'
 ---
 
 # Flutterで実現する「120％ネイティブ」なLiquid Glassエフェクト

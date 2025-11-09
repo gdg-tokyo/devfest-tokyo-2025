@@ -1,6 +1,6 @@
 ---
-time_start: '15:40'
-time_end: '16:30'
+time_start: '13:20'
+time_end: '14:10'
 level: ['Beginner']
 tech_tags: ['Gemini CLI']
 perspective: ['Introduction', 'Challenge']

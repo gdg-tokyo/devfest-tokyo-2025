@@ -14,6 +14,8 @@ Google Maps は、誰もが日々お世話になっている代表的な Google 
 
 20年の歴史で培われたUXの技から、地上ではなく空の地図 (旧 Google Sky Map) 、そして最先端である BigQuery 連携と MCP サービスを、ぎゅっと凝縮してお届けします！
 
+## Session Chair Community
+
 ## Session Chair
 
 ### 安藤 幸央 さん (@yukio_andoh) / Design Sprint Master, EXA CORPORATION

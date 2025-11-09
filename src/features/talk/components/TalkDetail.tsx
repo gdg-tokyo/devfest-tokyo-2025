@@ -1,5 +1,6 @@
 import HtmlContent from '@/components/common/HtmlContent'
 import RegistrationButton from '@/components/common/RegistrationButton'
+import SpeakerDetailCard from '@/components/common/SpeakerDetailCard'
 import {
   getLevelColor,
   getPerspectiveColor,
@@ -12,7 +13,6 @@ import PlaceIcon from '@mui/icons-material/Place'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import SpeakerDetailCard from '@/components/common/SpeakerDetailCard'
 
 interface TalkDetailProps {
   talk: Talk

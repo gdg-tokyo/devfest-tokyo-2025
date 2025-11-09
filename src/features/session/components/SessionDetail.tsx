@@ -1,10 +1,12 @@
 import HtmlContent from '@/components/common/HtmlContent'
+import RegistrationButton from '@/components/common/RegistrationButton'
 import SessionChairCommunityCard from '@/components/common/SessionChairCommunityCard'
 import SpeakerDetailCard from '@/components/common/SpeakerDetailCard'
 import TalkCard from '@/components/common/TalkCard'
 import { getSessionChairById, getSpeakers, getTalks } from '@/lib/data-parser'
 import { getLevelColor } from '@/lib/style-utils'
 import { Session, Speaker, Talk } from '@/types'
+import Link from 'next/link'
 import React from 'react'
 
 interface SessionDetailProps {
@@ -102,6 +104,24 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
           )}
         </div>
       )}
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-16">
+        <RegistrationButton href="https://gdg-tokyo.connpass.com/event/369416/">
+          今すぐ参加登録
+        </RegistrationButton>
+        <Link
+          href="/timetable"
+          className="bg-google-blue-500 hover:bg-google-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out transform hover:-translate-y-1"
+        >
+          タイムテーブルに戻る
+        </Link>
+        <Link
+          href="/talks"
+          className="bg-google-green-500 hover:bg-google-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-center transition duration-300 ease-in-out transform hover:-translate-y-1"
+        >
+          トーク一覧に戻る
+        </Link>
+      </div>
     </div>
   )
 }

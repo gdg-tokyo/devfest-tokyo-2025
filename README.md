@@ -70,6 +70,28 @@ npm run build:content
 
 This command should be run whenever there are changes to the Markdown content in `docs/web/prod/`.
 
+### Image Processing
+
+To convert PDF files into compressed JPG images (e.g., for thumbnails or previews), use the following commands. This process converts each page of a PDF into a high-resolution PNG, then compresses these PNGs into JPGs, saving them to a 'compress' subdirectory.
+
+```bash
+# Convert PDF to high-resolution PNGs (300 DPI)
+magick convert -density 300x300 public/images/thumbnail/talks.pdf public/images/thumbnail/origin/page.png
+
+# Create a directory for compressed JPGs if it doesn't exist
+mkdir -p public/images/thumbnail/compress
+
+# Convert PNGs to compressed JPGs (70% quality) and save to 'compress' directory
+for f in public/images/thumbnail/origin/*.png; do
+    filename=$(basename "$f")
+    filename_no_ext="${filename%.png}"
+    magick convert "$f" -quality 70 "public/images/thumbnail/compress/${filename_no_ext}.jpg"
+done
+
+# (Optional) Remove the intermediate PNG files
+rm public/images/thumbnail/origin/*.png
+```
+
 ### Build Next.js Website
 
 ```bash

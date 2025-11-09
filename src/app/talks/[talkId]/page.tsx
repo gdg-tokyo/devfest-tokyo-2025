@@ -3,7 +3,7 @@ import { getTalkById, getTalks } from '@/lib/data-parser'
 import { withRepoBasePath } from '@/lib/url-utils'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, stripHtmlTags } from '@/lib/seo'
 import { SITE } from '@/lib/site'
 
 export async function generateStaticParams() {
@@ -31,7 +31,8 @@ export async function generateMetadata({
   return buildMetadata({
     path: `/talks/${talk.id}`,
     title: `${talk.title} (by ${speakerNames}) - ${SITE.name}`,
-    description: talk.abstract,
+    description: stripHtmlTags(talk.abstract),
+    ogImage: talk.thumbnail_url,
   })
 }
 

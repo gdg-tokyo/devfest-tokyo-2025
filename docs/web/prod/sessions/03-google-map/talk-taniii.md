@@ -37,4 +37,6 @@ AndroidアプリのGoogle Sky Mapは、2009年5月12日にピッツバーグのG
 
 MIXIで、MLOpsを中心に起案から設計・実装まで行なっています。大学では、LLMを用いたゼロショット・スケーラブルな汎用推薦システムの研究をしています。 2014年小学生の時に初めてAndroidアプリを公開したのをきっかけに、ものづくりの楽しさや可能性に魅了されたことから、草の根の個人開発を大切にしており、Web, モバイル, デザイン, AI/ML, DevOps, 3D/XR, GISなど、作りたいもの起点で幅広く領域を超えたものづくりをするのが好きです。地図SNSアプリ [mapic](https://x.com/mapic_app) , [国会Today](https://kokkai.today/) , 国家予算シミュレーション [yosan.org](https://yosan.org/) などを開発しています。
 
-![](https://media.licdn.com/dms/image/v2/D5603AQH0UL8wgKw_ew/profile-displayphoto-shrink_800_800/B56ZYVB71.H0Ac-/0/1744109551790?e=1762387200&v=beta&t=j_-jEO0z-oW8NsBQ8tRMyFNJtjkbpkHCdh0Gs9lv2r8)
+![speaker](https://media.taniii.com/taniiicom_portrait.jpg)
+
+![talk_thumbnail](../../../../../public/images/thumbnail/talks/taniii.jpg)

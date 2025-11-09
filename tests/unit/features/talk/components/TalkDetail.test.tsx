@@ -102,4 +102,42 @@ describe('TalkDetail', () => {
     expect(buttonContainer).toHaveClass('grid-cols-1')
     expect(buttonContainer).toHaveClass('md:grid-cols-3')
   })
+
+  it('renders thumbnail image when thumbnail_url is provided', async () => {
+    const talkWithThumbnail: Talk = {
+      ...mockTalk,
+      thumbnail_url: '/images/thumbnail/talks/test-thumbnail.jpg',
+    }
+    await act(async () => {
+      render(<TalkDetail talk={talkWithThumbnail} speakers={mockSpeakers} />)
+    })
+    const thumbnailImage = screen.getByAltText('Talk Thumbnail')
+    expect(thumbnailImage).toBeInTheDocument()
+    expect(thumbnailImage).toHaveAttribute(
+      'src',
+      expect.stringContaining('/images/thumbnail/talks/test-thumbnail.jpg')
+    )
+    const thumbnailContainer = thumbnailImage.closest('div')
+    expect(thumbnailContainer).toHaveClass('border-2')
+    expect(thumbnailContainer).toHaveClass('border-gray-800')
+    expect(thumbnailContainer).toHaveClass('rounded-lg')
+    expect(thumbnailContainer).toHaveClass('p-4')
+    expect(thumbnailContainer).toHaveClass('bg-white')
+    expect(thumbnailContainer).toHaveClass('shadow-md')
+    expect(thumbnailContainer).toHaveClass('mb-4')
+    expect(thumbnailContainer).toHaveClass('relative')
+    expect(thumbnailContainer).toHaveClass('w-full')
+    expect(thumbnailContainer).toHaveClass('aspect-video')
+  })
+
+  it('does not render thumbnail image when thumbnail_url is not provided', async () => {
+    const talkWithoutThumbnail: Talk = {
+      ...mockTalk,
+      thumbnail_url: undefined,
+    }
+    await act(async () => {
+      render(<TalkDetail talk={talkWithoutThumbnail} speakers={mockSpeakers} />)
+    })
+    expect(screen.queryByAltText('Talk Thumbnail')).not.toBeInTheDocument()
+  })
 })

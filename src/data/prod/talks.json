@@ -10,7 +10,8 @@
     "speaker_ids": ["2e4ce4d7"],
     "tech_tags": [],
     "level": ["Beginner"],
-    "perspective": ["Introduction", "Experience", "Challenge"]
+    "perspective": ["Introduction", "Experience", "Challenge"],
+    "thumbnail_url": null
   },
   {
     "id": "ced1dcf7",
@@ -23,7 +24,8 @@
     "speaker_ids": ["2f1bed13"],
     "tech_tags": [],
     "level": ["Beginner"],
-    "perspective": ["Introduction", "Experience", "Challenge"]
+    "perspective": ["Introduction", "Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/sherry-xu.jpg"
   },
   {
     "id": "436aadeb",
@@ -36,7 +38,8 @@
     "speaker_ids": ["f556804f"],
     "tech_tags": ["Web", "AI", "キャリア"],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Introduction", "Experience", "Challenge"]
+    "perspective": ["Introduction", "Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/takoratta.jpg"
   },
   {
     "id": "4e750be0",
@@ -49,7 +52,8 @@
     "speaker_ids": ["e411493f"],
     "tech_tags": ["AI"],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Introduction", "Experience", "Challenge"]
+    "perspective": ["Introduction", "Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/xinmei.jpg"
   },
   {
     "id": "73dd34fd",
@@ -62,7 +66,8 @@
     "speaker_ids": ["7fc8b60b"],
     "tech_tags": ["Web", "Chrome"],
     "level": ["Advanced"],
-    "perspective": ["Challenge"]
+    "perspective": ["Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/myakura.jpg"
   },
   {
     "id": "67ceea06",
@@ -75,7 +80,8 @@
     "speaker_ids": ["2495c02a"],
     "tech_tags": ["Google Maps", "UX"],
     "level": ["Beginner"],
-    "perspective": ["Experience"]
+    "perspective": ["Experience"],
+    "thumbnail_url": "/images/thumbnail/talks/ando-yukio.jpg"
   },
   {
     "id": "3e77d1cf",
@@ -88,7 +94,8 @@
     "speaker_ids": ["46046eb0"],
     "tech_tags": ["Google Maps", "AI", "MCP", "BigQuery"],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Challenge"]
+    "perspective": ["Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/naoya-moritani.jpg"
   },
   {
     "id": "352cf7bd",
@@ -109,7 +116,8 @@
       "AIエージェント"
     ],
     "level": ["Advanced"],
-    "perspective": ["Experience", "Challenge"]
+    "perspective": ["Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/taniii.jpg"
   },
   {
     "id": "a883d6a9",
@@ -131,7 +139,8 @@
       "動画生成"
     ],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Experience", "Challenge"]
+    "perspective": ["Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/fukku-island.jpg"
   },
   {
     "id": "c57d079a",
@@ -144,7 +153,8 @@
     "speaker_ids": ["5f16d066"],
     "tech_tags": ["Flutter", "Liquid Glass"],
     "level": ["Advanced"],
-    "perspective": ["Challenge"]
+    "perspective": ["Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/lucasgoldner.jpg"
   },
   {
     "id": "85b5d43e",
@@ -157,7 +167,8 @@
     "speaker_ids": ["85b5d43e"],
     "tech_tags": ["XLS", "ハードウェア"],
     "level": ["Advanced"],
-    "perspective": ["Challenge"]
+    "perspective": ["Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/proppy.jpg"
   },
   {
     "id": "14aee96d",
@@ -170,7 +181,8 @@
     "speaker_ids": ["eb77c13b"],
     "tech_tags": ["AI エージェント", "AI セーフティ", "AI ガバナンス"],
     "level": ["Beginner"],
-    "perspective": ["Introduction", "Experience", "Challenge"]
+    "perspective": ["Introduction", "Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/k-ryuichirou.jpg"
   },
   {
     "id": "3833a954",
@@ -183,7 +195,8 @@
     "speaker_ids": ["6adf168f"],
     "tech_tags": ["AI エージェント", "MCP"],
     "level": ["Beginner"],
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/ohtaman.jpg"
   },
   {
     "id": "04d61729",
@@ -196,7 +209,8 @@
     "speaker_ids": ["6db6fcd9"],
     "tech_tags": ["AI エージェント"],
     "level": ["Beginner"],
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/yoichiro.jpg"
   },
   {
     "id": "93979635",
@@ -209,7 +223,8 @@
     "speaker_ids": ["8197ef53"],
     "tech_tags": ["AI エージェント", "ADK", "Gemini Live API"],
     "level": ["Advanced"],
-    "perspective": ["Challenge"]
+    "perspective": ["Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/kazunori-sato.jpg"
   },
   {
     "id": "88a5617e",
@@ -222,7 +237,8 @@
     "speaker_ids": ["8ab1daa8"],
     "tech_tags": ["AI エージェント", "ADK", "データ分析", "BigQuery"],
     "level": ["Advanced"],
-    "perspective": ["Experience", "Challenge"]
+    "perspective": ["Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/na0fu3y.jpg"
   },
   {
     "id": "c7104ca1",
@@ -235,7 +251,8 @@
     "speaker_ids": ["cd1ec40c"],
     "tech_tags": ["AI エージェント", "ADK"],
     "level": ["Advanced"],
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/soundtracker318.jpg"
   },
   {
     "id": "1bd3aa50",
@@ -248,7 +265,8 @@
     "speaker_ids": ["2a483f1f"],
     "tech_tags": ["Angular", "AI"],
     "level": ["Advanced"],
-    "perspective": ["Challenge"]
+    "perspective": ["Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/laco2net.jpg"
   },
   {
     "id": "adc18a30",
@@ -261,7 +279,8 @@
     "speaker_ids": ["eb5c39bb"],
     "tech_tags": ["Web", "CSS", "HTML", "JS"],
     "level": ["Beginner"],
-    "perspective": ["Introduction"]
+    "perspective": ["Introduction"],
+    "thumbnail_url": "/images/thumbnail/talks/sakupi01.jpg"
   },
   {
     "id": "f8a5ee14",
@@ -274,7 +293,8 @@
     "speaker_ids": ["f3c1bd36"],
     "tech_tags": ["Chrome", "Gemini"],
     "level": ["Advanced"],
-    "perspective": ["Challenge"]
+    "perspective": ["Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/yuriko-fuuu.jpg"
   },
   {
     "id": "6ced496d",
@@ -287,7 +307,8 @@
     "speaker_ids": ["61ab5e31"],
     "tech_tags": ["Gemini CLI"],
     "level": ["Advanced"],
-    "perspective": ["Experience", "Challenge"]
+    "perspective": ["Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/hiro038482.jpg"
   },
   {
     "id": "1ff671b7",
@@ -300,7 +321,8 @@
     "speaker_ids": ["ea7aa9d7"],
     "tech_tags": ["Gemini CLI", "MLOps", "AI"],
     "level": ["Advanced"],
-    "perspective": ["Experience", "Challenge"]
+    "perspective": ["Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/vaaaaanquish.jpg"
   },
   {
     "id": "690c5520",
@@ -318,7 +340,8 @@
       "OpenTelemetry"
     ],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/k6s4i53rx.jpg"
   },
   {
     "id": "9ad77b8f",
@@ -331,7 +354,8 @@
     "speaker_ids": ["7fee0e09"],
     "tech_tags": ["Dashboard"],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Experience", "Challenge"]
+    "perspective": ["Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/masafumi-tsubamoto.jpg"
   },
   {
     "id": "55598dae",
@@ -344,7 +368,8 @@
     "speaker_ids": ["55598dae"],
     "tech_tags": ["Kaggle", "AI"],
     "level": ["Beginner"],
-    "perspective": ["Introduction", "Experience", "Challenge"]
+    "perspective": ["Introduction", "Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/smly.jpg"
   },
   {
     "id": "02236307",
@@ -357,7 +382,8 @@
     "speaker_ids": ["02236307"],
     "tech_tags": ["Android", "AI"],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/takahirom.jpg"
   },
   {
     "id": "a154f812",
@@ -370,7 +396,8 @@
     "speaker_ids": ["a154f812"],
     "tech_tags": ["Flutter", "AI"],
     "level": ["Advanced"],
-    "perspective": ["Experience", "Challenge"]
+    "perspective": ["Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/wasabeef.jpg"
   },
   {
     "id": "001aef64",
@@ -383,7 +410,8 @@
     "speaker_ids": ["f7da315c"],
     "tech_tags": ["Android", "Gemini", "Android Studio"],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/yanzm.jpg"
   },
   {
     "id": "c9dd5622",
@@ -396,7 +424,8 @@
     "speaker_ids": ["d57df02a"],
     "tech_tags": ["Gemini CLI"],
     "level": ["Beginner"],
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/harenb16221.jpg"
   },
   {
     "id": "13053c56",
@@ -409,7 +438,8 @@
     "speaker_ids": ["b1a046a8"],
     "tech_tags": ["Firebase Studio"],
     "level": ["Advanced"],
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/tanabee.jpg"
   },
   {
     "id": "4190294d",
@@ -422,7 +452,8 @@
     "speaker_ids": ["80ab68cf"],
     "tech_tags": ["Android", "Gemini", "Android Studio"],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": null
   },
   {
     "id": "5492fc46",
@@ -435,7 +466,8 @@
     "speaker_ids": ["233ab3f2"],
     "tech_tags": ["Android", "Gemini", "Android Studio"],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Introduction", "Challenge"]
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/talks/suueng.jpg"
   },
   {
     "id": "6552bcbf",
@@ -448,6 +480,7 @@
     "speaker_ids": ["1c770c2e"],
     "tech_tags": [],
     "level": ["Beginner", "Advanced"],
-    "perspective": ["Introduction", "Exeperience", "Challenge"]
+    "perspective": ["Introduction", "Exeperience", "Challenge"],
+    "thumbnail_url": null
   }
 ]

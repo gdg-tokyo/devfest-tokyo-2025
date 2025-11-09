@@ -21,4 +21,6 @@ Unlock Developer’s Potential Together with the Power of AI
 
 ミドルベリー大学にて学士号、Google在職中にカーネギーメロン大学にてソフトウェア工学修士号を取得。
 
-![](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/xinmei-cai.png)
+![speaker](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/xinmei-cai.png)
+
+![talk_thumbnail](../../../../../public/images/thumbnail/talks/xinmei.jpg)

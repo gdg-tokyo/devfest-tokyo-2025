@@ -19,4 +19,6 @@ time_start: '14:50'
 
 医療系スタートアップ Ubie の機械学習エンジニアです。Google Developers Expert（ML/AI）としても活動していたり、数理最適化のコミュニティ Casual Optimization の運営をしたりもしています。
 
-![](https://ohtaman.github.io/imgs/profile.jpg)
+![speaker](https://ohtaman.github.io/imgs/profile.jpg)
+
+![talk_thumbnail](../../../../../public/images/thumbnail/talks/ohtaman.jpg)

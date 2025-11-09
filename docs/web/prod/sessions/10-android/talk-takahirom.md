@@ -21,4 +21,6 @@ Androidifyは、Googleが公開しているAndroid公式サンプルアプリで
 
 Androidの開発が好きです。ABEMAでAndroidエンジニアをしています。最近はライブラリ開発が趣味です。(Google Developer Expert for Android、AndroidのCyberAgent Developer Experts)
 
-![](https://github.com/takahirom.png)
+![speaker](https://github.com/takahirom.png)
+
+![talk_thumbnail](../../../../../public/images/thumbnail/talks/takahirom.jpg)

@@ -262,5 +262,13 @@
     "photo_url": "",
     "job": "GDG Tokyo Organizer",
     "twitter_handle": "yuyu_dev0"
+  },
+  {
+    "id": "14cf1b62",
+    "name": "Jetha Chan",
+    "bio": "<div></div>",
+    "photo_url": "https://share-storage-images2.s3.ap-northeast-1.amazonaws.com/jetha2+-+Jetha+Chan.jpeg",
+    "job": "Google DeepMind / Technical Solutions Consultant (AI Developer Relations)",
+    "twitter_handle": ""
   }
 ]

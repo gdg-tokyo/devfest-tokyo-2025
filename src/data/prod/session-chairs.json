@@ -14,6 +14,16 @@
     ]
   },
   {
+    "id": "e632ce7d",
+    "community": {
+      "name": "ML女子部",
+      "description": "<div><p>機械学習やデータ分析をゆるく学ぶ会です。数ヶ月に1回程度AI/ML周りの勉強会イベントを開催しています。 初心者向けのグループなので，はじめての方でも大丈夫です！ ML/データ分析に興味ある方はぜひどなたでもご参加ください。 女性メンバー中心で運営しているグループですが、男性の参加もお待ちしてます♪</p></div>",
+      "url": "https://women-ml.connpass.com/",
+      "logo_url": "https://media.connpass.com/thumbs/a4/bc/a4bc3d13ce54a0e5913aa60f7cc7b242.png"
+    },
+    "chairs": []
+  },
+  {
     "id": "d63eaae2",
     "community": {
       "name": "MLOpsコミュニティ",
@@ -86,6 +96,25 @@
         "photo_url": "https://storage.googleapis.com/ko1-public-bucket-for-juguer/IMG_3507small.jpg",
         "job": "株式会社NTTデータ テクニカルグレード",
         "twitter_handle": "ymtkick"
+      }
+    ]
+  },
+  {
+    "id": "cb7bc972",
+    "community": {
+      "name": "DroidKaigi",
+      "description": "<div><p>DroidKaigiはエンジニアが主役のAndroidカンファレンスです。Android技術情報の共有とコミュニケーションを目的に開催しています。</p></div>",
+      "url": "https://2025.droidkaigi.jp/",
+      "logo_url": "/images/stakeholders/droidkaigi-logo.png"
+    },
+    "chairs": [
+      {
+        "id": "ea9f6a97",
+        "name": "mhidaka",
+        "bio": "<div><p>モバイル技術のカンファレンスDroidKaigiの代表、技術書が20万冊以上集まる技術の祭典 技術書典 主宰を務める。コミュニティの発展・技術普及に関心をもち、エンジニアリングでの社会貢献を目指している。</p></div>",
+        "photo_url": "https://pbs.twimg.com/profile_images/1396653901844078592/gCJOUsy2_400x400.jpg",
+        "job": "一般社団法人DroidKaigi, newmo株式会社 代表理事, エンジニア",
+        "twitter_handle": "mhidaka"
       }
     ]
   }

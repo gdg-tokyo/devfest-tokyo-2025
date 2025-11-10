@@ -37,7 +37,7 @@
     "title": "異分野クロストーク",
     "level": ["Advanced"],
     "tech_tags": ["BigQuery", "Web", "Mobile"],
-    "description": "<div><p>TBA</p></div>",
+    "description": "<div><p>様々な技術が複雑に絡み合う現在では、フロントエンド・バックエンド両方の知識が必要とされることがあります。このセッションでは、バックエンドのエキスパートがフロントエンド・エンジニアへ、逆にフロントエンドのエキスパートがバックエンドエンジニアへ、知っておくと便利な異分野の知識を伝授します。</p><p>フロントエンドからバックエンドまで、様々な技術トピックを扱う Google Developer Groups (GDG) ならではセッションです。GDGならではの視点から、新しい学びを楽しみましょう！</p></div>",
     "perspective": [],
     "session_chair_id": null
   },
@@ -62,12 +62,12 @@
     "track": "Track C",
     "time_start": "13:20",
     "time_end": "14:10",
-    "title": "フロンティア (仮)",
+    "title": "フロンティア ~ 最先端＆ニッチな分野の技術たち ~",
     "level": ["Advanced"],
     "tech_tags": ["Veo", "Flutter", "Hardware"],
-    "description": "<div><p>Coming soon ...</p></div>",
+    "description": "<div><p>多岐にわたる Google のテクノロジーの中から、新しい分野・ニッチな分野のテクノロジーに焦点を当てたセッションです。Veo3 を使った動画作成から、Flutter を使った Liquid Glass エフェクト、そして Google オープンソースの半導体設計ソフトウェアという3つのトピックをお届けします。</p><p>あなたにとっての未知の領域に一緒に踏み込み、新しい視点を手に入れましょう！</p></div>",
     "perspective": [],
-    "session_chair_id": null
+    "session_chair_id": "e632ce7d"
   },
   {
     "id": "c1f78a0a",
@@ -146,12 +146,12 @@
     "track": "Track C",
     "time_start": "15:40",
     "time_end": "16:30",
-    "title": "Android (仮)",
-    "level": ["Beginner", "Advanced"],
+    "title": "AI in Action: Your Android/Flutter Playbook",
+    "level": ["Advanced"],
     "tech_tags": ["Android"],
-    "description": "<div><p>Coming soon ...</p></div>",
+    "description": "<div><p>モバイルアプリ開発者向けのAI活用ガイドです。Google公式サンプルアプリ「Androidify」から学ぶ AI 機能実装から、Android StudioのGemini機能、Flutterを例に AI エージェントを活用したアプリ開発手法など、最新のAI技術を Android/Flutter開発 に取り込み、どのようにユーザー価値を向上していくのか、エキスパートの目線で実務に活きる知識として噛み砕いて紹介します。</p></div>",
     "perspective": ["Introduction", "Challenge"],
-    "session_chair_id": null
+    "session_chair_id": "cb7bc972"
   },
   {
     "id": "b7f38de6",
@@ -212,10 +212,10 @@
   {
     "id": "864a7dd7",
     "slug": "hands-on-gemma",
-    "talk_ids": [],
+    "talk_ids": ["a08d798b"],
     "track": "Track D",
-    "time_start": "13:20",
-    "time_end": "14:10",
+    "time_start": "15:40",
+    "time_end": "16:30",
     "title": "[Hands-on] Gemma",
     "level": ["Beginner"],
     "tech_tags": ["Gemma"],

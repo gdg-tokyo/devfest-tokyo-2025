@@ -1,6 +1,6 @@
 ---
 is_keynote: false
-level: ['Beginner', 'Advanced']
+level: ['Advanced']
 perspective: ['Introduction', 'Challenge']
 tech_tags: ['Android', 'AI']
 time_end: '15:55'

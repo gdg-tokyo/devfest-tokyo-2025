@@ -48,5 +48,17 @@
     "logoUrl": "https://community.angular.jp/assets/image/logo.svg",
     "type": "partner",
     "link": "https://community.angular.jp/"
+  },
+  {
+    "name": "ML女子部",
+    "logoUrl": "https://media.connpass.com/thumbs/a4/bc/a4bc3d13ce54a0e5913aa60f7cc7b242.png",
+    "type": "partner",
+    "link": "https://women-ml.connpass.com/"
+  },
+  {
+    "name": "DroidKaigi",
+    "logoUrl": "/images/stakeholders/droidkaigi-logo.png",
+    "type": "partner",
+    "link": "https://2025.droidkaigi.jp/"
   }
 ]

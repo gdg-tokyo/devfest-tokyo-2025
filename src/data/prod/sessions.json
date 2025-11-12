@@ -30,7 +30,7 @@
   {
     "id": "72aee740",
     "slug": "cross-talk",
-    "talk_ids": ["73dd34fd"],
+    "talk_ids": ["73dd34fd", "3798ff7f"],
     "track": "Track A",
     "time_start": "13:20",
     "time_end": "14:10",
@@ -132,12 +132,12 @@
     "track": "Track B",
     "time_start": "15:40",
     "time_end": "16:30",
-    "title": "データ分析 / Observability (仮)",
+    "title": "生成 AI と社会をつなぐデータ活用最前線",
     "level": ["Beginner", "Advanced"],
     "tech_tags": ["Kaggle", "データ分析", "Observability"],
-    "description": "<div><p>Coming soon ...</p></div>",
+    "description": "<div><p>本セッションでは、 「オブザーバビリティ」・「ダッシュボード」・「Kaggle」という 3つの技術トピックを取り上げ、生成 AI 時代におけるデータ活用の最前線を各分野のエキスパートからご紹介いただきます。</p><p>最初の「オブザーバビリティ」 では、AI エージェントの振る舞いを理解するのためのシステムデータの活用方法をご紹介します。次に「ダッシュボード」からは、デジタル庁が公開する「政策ダッシュボード」の開発経験から行政データを活用するポイントや想定課題を議論します。そして最後に、世界的に有名な機械学習のコンペサイト「Kaggle」を通して生成 AI 時代における変化を反映した学びについてお話しいただきます。</p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"],
-    "session_chair_id": null
+    "session_chair_id": "54e4410f"
   },
   {
     "id": "f60ed56a",

@@ -60,5 +60,11 @@
     "logoUrl": "/images/stakeholders/droidkaigi-logo.png",
     "type": "partner",
     "link": "https://2025.droidkaigi.jp/"
+  },
+  {
+    "name": "Google Cloud Technical Summit",
+    "logoUrl": "/images/stakeholders/gcts-2026-logo.png",
+    "type": "partner",
+    "link": "https://2026.gcts.jp/"
   }
 ]

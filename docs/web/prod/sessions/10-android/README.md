@@ -3,8 +3,8 @@ id: android
 level: ['Advanced']
 perspective: ['Introduction', 'Challenge']
 tech_tags: ['Android']
-time_end: '16:30'
-time_start: '15:40'
+time_end: '16:50'
+time_start: '16:00'
 track: Track C
 ---
 

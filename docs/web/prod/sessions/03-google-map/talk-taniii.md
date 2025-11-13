@@ -2,18 +2,9 @@
 is_keynote: false
 level: ['Advanced']
 perspective: ['Experience', 'Challenge']
-tech_tags:
-  [
-    'Google Maps',
-    'Google Sky Map',
-    'Gemini',
-    'mastra',
-    'UX',
-    'KMP',
-    'AIエージェント',
-  ]
-time_end: '13:40'
-time_start: '13:30'
+tech_tags: ['Google Maps', 'Gemini', 'AI エージェント']
+time_end: '14:00'
+time_start: '13:50'
 ---
 
 # 星の世界の地図の話: Google Sky Map を AI Agent でよみがえらせる

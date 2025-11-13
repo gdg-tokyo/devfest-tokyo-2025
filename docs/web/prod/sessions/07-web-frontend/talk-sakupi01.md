@@ -2,9 +2,9 @@
 is_keynote: false
 level: ['Beginner']
 perspective: ['Introduction']
-tech_tags: ['Web', 'CSS', 'HTML', 'JS']
-time_end: '15:30'
-time_start: '15:10'
+tech_tags: ['Web', 'CSS/HTML/JS']
+time_end: '15:40'
+time_start: '15:20'
 ---
 
 # Web UI 2025 Updates & What's Coming!

@@ -2,7 +2,7 @@
 is_keynote: false
 level: ['Advanced']
 perspective: ['Challenge']
-tech_tags: ['Web', 'Chrome']
+tech_tags: ['BigQuery']
 time_end: '14:00'
 time_start: '13:40'
 ---

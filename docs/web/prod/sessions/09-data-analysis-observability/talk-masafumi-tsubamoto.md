@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Beginner', 'Advanced']
 perspective: ['Experience', 'Challenge']
 tech_tags: ['Dashboard']
-time_end: '16:10'
-time_start: '15:55'
+time_end: '16:30'
+time_start: '16:15'
 ---
 
 # デジタル庁におけるダッシュボード活用

@@ -2,9 +2,9 @@
 is_keynote: false
 level: ['Beginner']
 perspective: ['Introduction', 'Experience', 'Challenge']
-tech_tags: ['Kaggle', 'AI']
-time_end: '16:25'
-time_start: '16:10'
+tech_tags: ['Kaggle', 'AI', 'データ分析']
+time_end: '16:45'
+time_start: '16:30'
 ---
 
 # 生成AI時代のKaggleの姿

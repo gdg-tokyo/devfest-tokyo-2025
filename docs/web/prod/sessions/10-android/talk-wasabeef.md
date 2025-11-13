@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Advanced']
 perspective: ['Experience', 'Challenge']
 tech_tags: ['Flutter', 'AI']
-time_end: '16:25'
-time_start: '16:10'
+time_end: '16:45'
+time_start: '16:30'
 ---
 
 # Flutter を AI で

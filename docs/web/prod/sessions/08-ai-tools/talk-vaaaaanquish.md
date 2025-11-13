@@ -2,9 +2,9 @@
 is_keynote: false
 level: ['Advanced']
 perspective: ['Experience', 'Challenge']
-tech_tags: ['Gemini CLI', 'MLOps', 'AI']
-time_end: '16:00'
-time_start: '15:40'
+tech_tags: ['Gemini CLI', 'AI']
+time_end: '16:20'
+time_start: '16:00'
 ---
 
 # Gemini CLIの活用を加速させる技術

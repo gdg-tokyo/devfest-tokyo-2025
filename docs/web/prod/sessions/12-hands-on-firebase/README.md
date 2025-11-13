@@ -2,9 +2,9 @@
 id: hands-on-firebase-studio
 level: ['Advanced']
 perspective: ['Introduction', 'Challenge']
-tech_tags: ['Firabase', 'Firebase Studio']
-time_end: '15:30'
-time_start: '14:30'
+tech_tags: ['Firebase Studio']
+time_end: '15:40'
+time_start: '14:40'
 track: Track D
 ---
 

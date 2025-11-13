@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Advanced']
 perspective: ['Challenge']
 tech_tags: ['Chrome', 'Gemini']
-time_end: '15:10'
-time_start: '14:50'
+time_end: '15:20'
+time_start: '15:00'
 ---
 
 # Chrome の Built-in AI を使って、無料で AI 機能を作ろう！

@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Beginner']
 perspective: ['Introduction', 'Challenge']
 tech_tags: ['AI エージェント']
-time_end: '14:50'
-time_start: '14:30'
+time_end: '15:00'
+time_start: '14:40'
 ---
 
 # AIと暮らす未来 : エージェントが生活をどう変えるのか

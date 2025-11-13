@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Beginner']
 perspective: ['Introduction', 'Challenge']
 tech_tags: ['AI エージェント', 'MCP']
-time_end: '15:10'
-time_start: '14:50'
+time_end: '15:20'
+time_start: '15:00'
 ---
 
 # AIエージェントの頭の中 ─ 仕組みを味方にして“考えるAI”を動かす ─

@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Advanced']
 perspective: ['Introduction', 'Challenge']
 tech_tags: ['Android', 'AI']
-time_end: '15:55'
-time_start: '15:40'
+time_end: '16:15'
+time_start: '16:00'
 ---
 
 # AndroidアプリのAI実装をAndroidifyで学ぶ ー Google公式サンプルによる体験と実装 ー

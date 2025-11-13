@@ -82,6 +82,8 @@ def _parse_speaker_heading(speaker_heading: str):
     x_handle_match = re.search(r"\(@(.+?)\)", speaker_heading)
     if x_handle_match:
         twitter_handle = x_handle_match.group(1)
+        # Replace escaped underscores with regular underscores
+        twitter_handle = twitter_handle.replace(r"\_", "_")
         speaker_name = speaker_name.replace(x_handle_match.group(0), "").strip()
 
     job_match = re.search(r"/\s*(.+)", speaker_name)

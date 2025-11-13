@@ -2,9 +2,9 @@
 is_keynote: false
 level: ['Beginner']
 perspective: ['Introduction', 'Experience', 'Challenge']
-tech_tags: ['AI エージェント', 'AI セーフティ', 'AI ガバナンス']
-time_end: '15:30'
-time_start: '15:10'
+tech_tags: ['AI エージェント']
+time_end: '15:40'
+time_start: '15:20'
 ---
 
 # AI エージェント活用のベストプラクティスと今後の課題

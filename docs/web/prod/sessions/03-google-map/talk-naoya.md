@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Beginner', 'Advanced']
 perspective: ['Challenge']
 tech_tags: ['Google Maps', 'AI', 'MCP', 'BigQuery']
-time_end: '13:50'
-time_start: '13:40'
+time_end: '14:10'
+time_start: '14:00'
 ---
 
 # Google Maps Platform、2025年の新領域展開

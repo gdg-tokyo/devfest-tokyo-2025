@@ -2,7 +2,7 @@
 id: keynote
 level: ['Beginner', 'Advanced']
 tech_tags: ['Web', 'AI', 'キャリア']
-time_end: '13:10'
+time_end: '13:20'
 time_start: '12:20'
 track: Track A
 ---

@@ -1,11 +1,11 @@
 ---
 id: ai-agent
-track: Track A
-time_start: '14:30'
-time_end: '15:30'
 level: ['Beginner']
-tech_tags: ['AI Agent', 'MCP', 'AI セーフティ', 'AI ガバナンス']
 perspective: ['Introduction', 'Experience', 'Challenge']
+tech_tags: ['AI エージェント', 'MCP', 'AI セーフティ']
+time_end: '15:40'
+time_start: '14:40'
+track: Track A
 ---
 
 # AI エージェント 入門

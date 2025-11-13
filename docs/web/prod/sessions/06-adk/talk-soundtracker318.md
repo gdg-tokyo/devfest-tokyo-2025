@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Advanced']
 perspective: ['Introduction', 'Challenge']
 tech_tags: ['AI エージェント', 'ADK']
-time_end: '14:50'
-time_start: '14:30'
+time_end: '15:00'
+time_start: '14:40'
 ---
 
 # 今から追いつくADK 〜 ADKの概要と過去、現在、未来 〜

@@ -1,11 +1,11 @@
 ---
 id: data-analysis-observability
-track: Track B
-time_start: '15:40'
-time_end: '16:30'
 level: ['Beginner', 'Advanced']
-tech_tags: ['Kaggle', 'データ分析', 'Observability']
 perspective: ['Introduction', 'Experience', 'Challenge']
+tech_tags: ['Kaggle', 'データ分析', 'Observability']
+time_end: '16:50'
+time_start: '16:00'
+track: Track B
 ---
 
 # 生成 AI と社会をつなぐデータ活用最前線

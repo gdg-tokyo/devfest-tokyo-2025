@@ -1,10 +1,10 @@
 ---
-time_start: '14:30'
-time_end: '15:30'
-level: ['Advanced']
-tech_tags: ['Firebase Studio']
-perspective: ['Introduction', 'Challenge']
 is_keynote: false
+level: ['Advanced']
+perspective: ['Introduction', 'Challenge']
+tech_tags: ['Firebase Studio']
+time_end: '15:40'
+time_start: '14:40'
 ---
 
 # Firebase Studio でつくるフルスタックアプリケーション

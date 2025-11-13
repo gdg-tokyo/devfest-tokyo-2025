@@ -3,8 +3,8 @@ id: ai-tools
 level: ['Advanced']
 perspective: ['Experience', 'Challenge']
 tech_tags: ['Gemini CLI']
-time_end: '16:30'
-time_start: '15:40'
+time_end: '16:50'
+time_start: '16:00'
 track: Track A
 ---
 

@@ -1,8 +1,8 @@
 ---
-time_end: '16:30'
-time_start: '15:40'
+time_end: '16:50'
+time_start: '16:00'
 level: ['Advanced']
-tech_tags: ['Firebase Studio']
+tech_tags: ['Gemma']
 perspective: ['Introduction', 'Challenge']
 is_keynote: false
 ---

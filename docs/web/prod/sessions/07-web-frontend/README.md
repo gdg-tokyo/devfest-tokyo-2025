@@ -3,8 +3,8 @@ id: web-frontend
 level: ['Beginner', 'Advanced']
 perspective: ['Introduction', 'Challenge']
 tech_tags: ['Web', 'Angular', 'Chrome', 'CSS']
-time_end: '15:30'
-time_start: '14:30'
+time_end: '15:40'
+time_start: '14:40'
 track: Track C
 ---
 

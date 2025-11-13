@@ -3,8 +3,8 @@ is_keynote: false
 level: ['Beginner', 'Advanced']
 perspective: ['Introduction', 'Challenge']
 tech_tags: ['Android', 'Gemini', 'Android Studio']
-time_end: '17:30'
-time_start: '16:40'
+time_start: '17:00'
+time_end: '17:50'
 ---
 
 # あの州って何？/ What's That State?

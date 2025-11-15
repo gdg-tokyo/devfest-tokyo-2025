@@ -7,9 +7,9 @@ time_end: '13:55'
 time_start: '13:40'
 ---
 
-# キーワード: 動画生成, Veo, Gemini, nano-banana, imagen, YouTube, Google ads, scenario builder
+# ほんとに使える？生成AI動画監督への道
 
-Coming soon ...
+Googleの動画LLMに映像監督になったつもりでシーン設計からクリエーティブ生成に挑戦してみようとしたプロンプトの書き方と考え方と製品ごとの特長と比較をまとめてご紹介します。
 
 ## Speaker
 

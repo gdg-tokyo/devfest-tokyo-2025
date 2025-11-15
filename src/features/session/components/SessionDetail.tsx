@@ -81,6 +81,7 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
                 sessionId={session.id}
                 session={session}
                 speakers={speakers}
+                isSessionDetailPage={true}
               />
             ))}
           </div>

@@ -19,11 +19,6 @@ test.describe('Talk Page', () => {
       timeout: 30000,
     })
 
-    // Verify that the session time is displayed
-    await expect(firstTalkCard.getByText('10:00 - 10:50')).toBeVisible({
-      timeout: 30000,
-    })
-
     // Verify that the abstract is displayed and truncated
     const abstractElement = firstTalkCard.locator('article')
     await expect(abstractElement).toBeVisible({ timeout: 30000 })

@@ -64,6 +64,7 @@ As a visitor, I want to see a welcome message, so I can feel welcomed and get a 
 - **FR-008**: The system MUST use a generic DevFest logo if a specific one for the navigation bar is not provided.
 - **FR-009**: The system MUST display the following welcome message: "DevFest is a developer-oriented event held around the world by the Google Developer Group (GDG) community. In Tokyo, it is held as a community event where you can learn the latest information and on-the-ground know-how of various technologies such as Android, Google Cloud, Web, Firebase, Machine Learning (ML), Flutter, and Go in one day. This year, it will be held for the 10th time on Saturday, November 22nd at Bellesalle Shibuya First."
 - **FR-010**: The navigation bar MUST contain the following items: Home, Timetable, Sessions.
+- **FR-011**: The landing page MUST display a "Featured Talks" section between the "Event Overview" and "Stakeholders" sections.
 
 ## Success Criteria _(mandatory)_
 
@@ -71,3 +72,18 @@ As a visitor, I want to see a welcome message, so I can feel welcomed and get a 
 
 - **SC-002**: The landing page MUST load in under 3 seconds on a standard internet connection.
 - **SC-003**: The landing page MUST be responsive and display correctly on mobile, tablet, and desktop devices.
+
+---
+
+### User Story 4 - Featured Talks (Priority: P2)
+
+As a visitor, I want to see a selection of featured talks on the landing page, so I can quickly discover interesting content.
+
+**Why this priority**: Highlights key sessions and encourages user engagement.
+
+**Independent Test**: A "Featured Talks" section is visible on the landing page.
+
+**Acceptance Scenarios**:
+
+1. **Given** a user is on the landing page, **When** they scroll below the event overview, **Then** they should see a "Featured Talks" section.
+2. **Given** the "Featured Talks" section is visible, **When** a user looks at it, **Then** they should see a list of talk cards.

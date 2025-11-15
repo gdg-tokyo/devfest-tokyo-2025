@@ -1,10 +1,11 @@
 'use client'
+import clsx from 'clsx'
 import { useMemo } from 'react'
 import sanitizeHtml from 'sanitize-html'
 
-type Props = { html: string }
+type Props = { html: string; className?: string }
 
-export default function HtmlContent({ html }: Props) {
+export default function HtmlContent({ html, className }: Props) {
   const sanitized = useMemo(
     () =>
       sanitizeHtml(html, {
@@ -53,7 +54,10 @@ export default function HtmlContent({ html }: Props) {
 
   return (
     <article
-      className="prose prose-zinc dark:prose-invert max-w-none text-black-02"
+      className={clsx(
+        'prose prose-zinc dark:prose-invert max-w-none text-black-02',
+        className
+      )}
       dangerouslySetInnerHTML={{ __html: sanitized }}
     />
   )

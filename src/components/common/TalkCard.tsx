@@ -1,12 +1,12 @@
-import { Session, Talk, Speaker } from '@/types'
+import HtmlContent from '@/components/common/HtmlContent'
+import { getLevelColor } from '@/lib/style-utils'
+import { withRepoBasePath } from '@/lib/url-utils'
+import { Session, Speaker, Talk } from '@/types'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import PersonIcon from '@mui/icons-material/Person'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { getLevelColor } from '@/lib/style-utils'
-import HtmlContent from '@/components/common/HtmlContent'
-import Image from 'next/image'
-import { withRepoBasePath } from '@/lib/url-utils'
 
 interface TalkCardProps {
   talk: Talk
@@ -32,21 +32,39 @@ const TalkCard: React.FC<TalkCardProps> = ({ talk, session, speakers }) => {
           <h3 className="text-xl font-semibold text-gray-800 mb-2">
             {talk.title}
           </h3>
-          <div className="flex justify-between text-sm text-gray-600 mb-2">
-            <div className="flex items-center">
-              <PersonIcon className="mr-1" />
-              <span>{speakerNames}</span>
-            </div>
-            <div className="flex items-center">
-              <AccessTimeIcon className="mr-1" />
-              <span>
-                {timeStart} - {timeEnd}
-              </span>
-            </div>
-          </div>
           <div className="flex mt-4">
-            <div className="w-8/12 pr-4 text-gray-600 text-sm line-clamp-3">
-              <HtmlContent html={talk.abstract} />
+            <div className="w-8/12 pr-4">
+              <div className="flex justify-between text-sm text-gray-600 mb-2">
+                <div className="flex items-center">
+                  <PersonIcon className="mr-1" />
+                  <span>{speakerNames}</span>
+                </div>
+                <div className="flex items-center">
+                  <AccessTimeIcon className="mr-1" />
+                  <span>
+                    {timeStart} - {timeEnd}
+                  </span>
+                </div>
+              </div>
+              <div className="text-gray-600 line-clamp-3">
+                <HtmlContent
+                  html={talk.abstract}
+                  className="text-sm leading-tight"
+                />
+              </div>
+              <div className="flex flex-wrap gap-1 mt-2">
+                {talk?.level &&
+                  talk.level.map((levelItem) => (
+                    <span
+                      key={levelItem}
+                      className={`text-xs px-1 py-0 rounded-full border border-black ${getLevelColor(
+                        levelItem as 'Beginner' | 'Intermediate' | 'Advanced'
+                      )} text-gray-800`}
+                    >
+                      {levelItem}
+                    </span>
+                  ))}
+              </div>
             </div>
             <div className="w-4/12 flex flex-col items-center justify-center">
               {speakers.map((speaker) => (
@@ -55,33 +73,18 @@ const TalkCard: React.FC<TalkCardProps> = ({ talk, session, speakers }) => {
                     <Image
                       src={withRepoBasePath(speaker.photo_url)}
                       alt={speaker.name}
-                      width={96}
-                      height={96}
-                      className="w-24 h-24 rounded-full object-cover"
+                      width={128}
+                      height={128}
+                      className="w-32 h-32 rounded-lg object-cover"
                     />
                   ) : (
-                    <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center">
-                      <PersonIcon style={{ fontSize: 48 }} />
+                    <div className="w-32 h-32 rounded-lg bg-gray-200 flex items-center justify-center">
+                      <PersonIcon style={{ fontSize: 64 }} />
                     </div>
                   )}
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-        <div className="mt-4">
-          <div className="flex flex-wrap gap-1 mt-2">
-            {talk?.level &&
-              talk.level.map((levelItem) => (
-                <span
-                  key={levelItem}
-                  className={`text-xs px-1 py-0 rounded-full border border-black ${getLevelColor(
-                    levelItem as 'Beginner' | 'Intermediate' | 'Advanced'
-                  )} text-gray-800`}
-                >
-                  {levelItem}
-                </span>
-              ))}
           </div>
         </div>
       </article>

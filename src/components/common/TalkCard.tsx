@@ -7,20 +7,32 @@ import PersonIcon from '@mui/icons-material/Person'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import clsx from 'clsx'
 
 interface TalkCardProps {
   talk: Talk
   sessionId: string
   session: Session
   speakers: Speaker[]
+  isSessionDetailPage?: boolean // New prop
 }
 
-const TalkCard: React.FC<TalkCardProps> = ({ talk, session, speakers }) => {
+const TalkCard: React.FC<TalkCardProps> = ({
+  talk,
+  session,
+  speakers,
+  isSessionDetailPage = false, // Default to false
+}) => {
   const speakerNames = (speakers || [])
     .map((speaker) => speaker.name)
     .join(', ')
   const timeStart = talk?.time_start || 'N/A'
   const timeEnd = talk?.time_end || 'N/A'
+
+  const leftColumnWidth = isSessionDetailPage ? 'w-9/12' : 'w-8/12'
+  const rightColumnWidth = isSessionDetailPage ? 'w-3/12' : 'w-4/12'
+  const imageSizeClass = isSessionDetailPage ? 'w-48 h-48' : 'w-32 h-32'
+  const iconFontSize = isSessionDetailPage ? 96 : 64
 
   return (
     <Link
@@ -29,11 +41,18 @@ const TalkCard: React.FC<TalkCardProps> = ({ talk, session, speakers }) => {
     >
       <article talk-card-id={talk.id}>
         <div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">
-            {talk.title}
-          </h3>
+          {!isSessionDetailPage && (
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              {talk.title}
+            </h3>
+          )}
           <div className="flex mt-4">
-            <div className="w-8/12 pr-4">
+            <div className={clsx(leftColumnWidth, 'pr-2')}>
+              {isSessionDetailPage && (
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  {talk.title}
+                </h3>
+              )}
               <div className="flex justify-between text-sm text-gray-600 mb-2">
                 <div className="flex items-center">
                   <PersonIcon className="mr-1" />
@@ -66,20 +85,33 @@ const TalkCard: React.FC<TalkCardProps> = ({ talk, session, speakers }) => {
                   ))}
               </div>
             </div>
-            <div className="w-4/12 flex flex-col items-center justify-center">
+            <div
+              className={clsx(
+                rightColumnWidth,
+                'flex flex-col items-center justify-center'
+              )}
+            >
               {speakers.map((speaker) => (
                 <div key={speaker.id} className="mb-2 last:mb-0">
                   {speaker.photo_url ? (
                     <Image
                       src={withRepoBasePath(speaker.photo_url)}
                       alt={speaker.name}
-                      width={128}
-                      height={128}
-                      className="w-32 h-32 rounded-lg object-cover"
+                      width={isSessionDetailPage ? 192 : 128}
+                      height={isSessionDetailPage ? 192 : 128}
+                      className={clsx(
+                        imageSizeClass,
+                        'rounded-lg object-cover'
+                      )}
                     />
                   ) : (
-                    <div className="w-32 h-32 rounded-lg bg-gray-200 flex items-center justify-center">
-                      <PersonIcon style={{ fontSize: 64 }} />
+                    <div
+                      className={clsx(
+                        imageSizeClass,
+                        'rounded-lg bg-gray-200 flex items-center justify-center'
+                      )}
+                    >
+                      <PersonIcon style={{ fontSize: iconFontSize }} />
                     </div>
                   )}
                 </div>

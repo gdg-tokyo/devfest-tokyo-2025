@@ -45,23 +45,23 @@ const TalkCard: React.FC<TalkCardProps> = ({ talk, session, speakers }) => {
             </div>
           </div>
           <div className="flex mt-4">
-            <div className="w-9/12 pr-4 text-gray-600 text-sm line-clamp-3">
+            <div className="w-8/12 pr-4 text-gray-600 text-sm line-clamp-3">
               <HtmlContent html={talk.abstract} />
             </div>
-            <div className="w-3/12 flex flex-col items-center justify-center">
+            <div className="w-4/12 flex flex-col items-center justify-center">
               {speakers.map((speaker) => (
                 <div key={speaker.id} className="mb-2 last:mb-0">
                   {speaker.photo_url ? (
                     <Image
                       src={withRepoBasePath(speaker.photo_url)}
                       alt={speaker.name}
-                      width={64}
-                      height={64}
-                      className="w-16 h-16 rounded-full object-cover"
+                      width={96}
+                      height={96}
+                      className="w-24 h-24 rounded-full object-cover"
                     />
                   ) : (
-                    <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
-                      <PersonIcon style={{ fontSize: 32 }} />
+                    <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center">
+                      <PersonIcon style={{ fontSize: 48 }} />
                     </div>
                   )}
                 </div>

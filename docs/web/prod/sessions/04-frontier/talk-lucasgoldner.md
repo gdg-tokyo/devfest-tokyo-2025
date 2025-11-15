@@ -17,6 +17,6 @@ Flutter チームが Cupertino と Material の分離を発表し、UI の今後
 
 日本のアクティブな Flutter と Dart の Google Developer Expert です。 2024年4月にインターンとして株式会社 YOUTRUST にジョインし、その後正社員になりました。様々なカンファレンス (Fluttercon, Flutter Connection, Flutter Kaigi) で登壇したり、記事を書いたり、Flutter Tokyo Community のオーガナイザーとして活躍しています。言語が大好きで、5 つの言語を話し、日本語も勉強中です。
 
-![speaker](../../../../../images/speakers/icons/lucasgoldner.jpg)
+![speaker](../../../../../public/images/speakers/icons/lucasgoldner.jpg)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/lucasgoldner.jpg)

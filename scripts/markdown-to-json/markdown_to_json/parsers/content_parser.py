@@ -34,7 +34,7 @@ def _extract_thumbnail_url(
     match = re.search(r"!\[talk_thumbnail\]\((?P<url>[^)]+)\)", content)
     if match:
         raw_url = match.group("url")
-        return resolve_image_path(raw_url, talk_file_path, docs_base_path)
+        return resolve_image_path(raw_url, talk_file_path)
     return None
 
 

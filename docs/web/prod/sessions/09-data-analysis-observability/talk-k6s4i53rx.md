@@ -19,6 +19,6 @@ time_start: '16:00'
 
 普段の仕事ではオブザーバビリティを始めたり、高めたりするための技術支援や Datadog の導入支援を行っています。コミュニティ活動は Google Developer Experts (Google Cloud) / OpenTelemetry Meetup / Observability Conference Tokyo / Japan Datadog User Group など。趣味はスノーボードと、練習するほどスコアが落ちるゴルフです。
 
-![speaker](../../../../../images/speakers/icons/k6s4i53rx.jpg)
+![speaker](../../../../../public/images/speakers/icons/k6s4i53rx.jpg)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/k6s4i53rx.jpg)

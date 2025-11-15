@@ -27,31 +27,31 @@
   },
   {
     "name": "MLOpsコミュニティ",
-    "logoUrl": "https://pbs.twimg.com/profile_images/1370267966298681347/sBjkDhjQ.jpg",
+    "logoUrl": "/images/stakeholders/mlops.jpg",
     "type": "partner",
     "link": "https://mlops.connpass.com/"
   },
   {
     "name": "ADK User Group JP",
-    "logoUrl": "https://media.connpass.com/thumbs/f1/0e/f10ef9d2373151357f6f53974a4ead04.png",
+    "logoUrl": "/images/stakeholders/adk-ug-jp.png",
     "type": "partner",
     "link": "https://adk.connpass.com/"
   },
   {
     "name": "Jagu'e'r (Japan Google Cloud User Group for Enterprise)",
-    "logoUrl": "https://jaguer.jp/wp-content/uploads/2021/03/jaguer.svg",
+    "logoUrl": "/images/stakeholders/jaguer.svg",
     "type": "partner",
     "link": "https://jaguer.jp/"
   },
   {
     "name": "Angular日本ユーザー会",
-    "logoUrl": "https://community.angular.jp/assets/image/logo.svg",
+    "logoUrl": "/images/stakeholders/ng-japan.svg",
     "type": "partner",
     "link": "https://community.angular.jp/"
   },
   {
     "name": "ML女子部",
-    "logoUrl": "https://media.connpass.com/thumbs/a4/bc/a4bc3d13ce54a0e5913aa60f7cc7b242.png",
+    "logoUrl": "/images/stakeholders/women-ml.png",
     "type": "partner",
     "link": "https://women-ml.connpass.com/"
   },

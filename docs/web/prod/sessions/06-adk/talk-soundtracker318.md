@@ -17,6 +17,6 @@ time_start: '14:40'
 
 Workspace、Google Cloud、Angular、GASの人 一応Google Developer Expert(Workspace)です。最近はADKをいっぱい触っています。
 
-![speaker](../../../../../images/speakers/icons/soundtricker318.jpg)
+![speaker](../../../../../public/images/speakers/icons/soundtricker318.jpg)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/soundtracker318.jpg)

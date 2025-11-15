@@ -29,13 +29,13 @@ https://women-ml.connpass.com/
 
 位置情報ビッグデータをベースに人流解析をする会社でCTOをしています。音声UI関連の書籍の執筆、ML女子部や「Jagu’e’r」のコミッティを務めるなど技術コミュニティにも参加。
 
-![speaker](../../../../../images/speakers/ito-sayaka.jpg)
+![speaker](../../../../../public/images/speakers/ito-sayaka.jpg)
 
 ### 福島 ゆかり さん (@fukku_island) / 株式会社電通デジタル マネージャー兼Google Cloud Evangelist
 
 もっとマーケティングにGoogleのデータとAIとクラウドを使ってワクワクする！を後押しします！ GoogleCloud Partner Top Engineer 2024 data engineer、Google Developer Expert Cloud AI/ML&Data Analytics 、ML女子部コミュニティ運営、jaguar じゃがーる分科会運営、AI/ML分科会運営、GoogleCloud Next 23-25登壇等多数
 
-![speaker](../../../../../images/speakers/icons/fukkuisland.jpg)
+![speaker](../../../../../public/images/speakers/icons/fukkuisland.jpg)
 
 ### 藤本 祥恵 さん / 株式会社すかいらーくホールディングス メニューシステムデザインチーム
 
@@ -47,4 +47,4 @@ DX 推進担当として、データの民主化をテーマにダッシュボ�
 
 広告代理店を経て IT ベンチャーで分析コンサルティングに従事。2006 年より CCC で提携先への T カードデータ分析コンサルや大学連携を担当。2012 年よりリクルートでデータ活用を推進。全社横断 PJ や CRM 分析など多数のプロジェクトに携わる。人材領域のアルゴリズム開発により全社表彰 ARINA ENGINE 受賞。2022 年よりインテージにてデータ活用を推進。Google Developer Experts　ML女子部オーガナイザ
 
-![speaker](../../../../../images/speakers/maganuma.jpg)
+![speaker](../../../../../public/images/speakers/maganuma.jpg)

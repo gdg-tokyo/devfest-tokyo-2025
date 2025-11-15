@@ -24,6 +24,6 @@ time_start: '14:10'
 
 グーグル東京でハードウェアツールチェーンを協力してます。
 
-![speaker](../../../../../images/speakers/icons/proppy.png)
+![speaker](../../../../../public/images/speakers/icons/proppy.png)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/proppy.jpg)

@@ -17,6 +17,6 @@ Coming soon ...
 
 株式会社ピクセルグリッドのフロントエンドエンジニア。ウェブ標準とブラウザーが好きです。web standards and browsers enthusiast.
 
-![speaker](../../../../../images/speakers/icons/myakura.png)
+![speaker](../../../../../public/images/speakers/icons/myakura.png)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/myakura.jpg)

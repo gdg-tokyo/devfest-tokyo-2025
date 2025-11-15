@@ -20,7 +20,7 @@ DroidKaigiはエンジニアが主役のAndroidカンファレンスです。And
 
 https://2025.droidkaigi.jp/
 
-![community_logo](../../../../../images/stakeholders/droidkaigi-logo.png)
+![community_logo](../../../../../public/images/stakeholders/droidkaigi-logo.png)
 
 ## Session Chair
 

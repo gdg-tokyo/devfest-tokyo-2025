@@ -7,9 +7,9 @@ time_end: '12:40'
 time_start: '12:20'
 ---
 
-# AI の力で解き放とう、 開発者の無限の可能性を。
+# AI の力で解き放とう、 開発者の無限の可能性を。 (Unlock Developer’s Potential Together with the Power of AI)
 
-Unlock Developer’s Potential Together with the Power of AI
+基調講演では、Google JapanにてGoogle MapsのUGC（ユーザー生成コンテンツ）およびエンジニアリング サイトリードを務めるXinmeiが登壇いたします。 彼女は、Googleが掲げるミッション、そしてそれが開発者の皆様にもたらす影響力について深く掘り下げます。さらに、技術革新が加速するAI革命の時代において、開発者がその力を最大限に発揮し、この変革の波を乗りこなしていくために、Googleがどのように支援とサポートを提供していくかについて、具体的な視点からお話しいたします。
 
 ## Speaker
 

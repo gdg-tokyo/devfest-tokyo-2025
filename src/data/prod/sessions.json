@@ -184,7 +184,14 @@
   {
     "id": "1ace4124",
     "slug": "lightning-talks",
-    "talk_ids": ["4190294d", "5492fc46"],
+    "talk_ids": [
+      "4190294d",
+      "1aae9190",
+      "82bd7a89",
+      "1fa92a23",
+      "352cb22e",
+      "5492fc46"
+    ],
     "track": "Track A",
     "time_start": "17:00",
     "time_end": "17:50",

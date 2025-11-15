@@ -21,7 +21,40 @@
       "url": "https://women-ml.connpass.com/",
       "logo_url": "https://media.connpass.com/thumbs/a4/bc/a4bc3d13ce54a0e5913aa60f7cc7b242.png"
     },
-    "chairs": []
+    "chairs": [
+      {
+        "id": "b4863921",
+        "name": "伊藤清香",
+        "bio": "<div><p>位置情報ビッグデータをベースに人流解析をする会社でCTOをしています。音声UI関連の書籍の執筆、ML女子部や「Jagu’e’r」のコミッティを務めるなど技術コミュニティにも参加。</p></div>",
+        "photo_url": "/images/speakers/ito-sayaka.jpg",
+        "job": "株式会社unerry CTO",
+        "twitter_handle": "unerryito"
+      },
+      {
+        "id": "9f6f9c2d",
+        "name": "福島 ゆかり",
+        "bio": "<div><p>もっとマーケティングにGoogleのデータとAIとクラウドを使ってワクワクする！を後押しします！ GoogleCloud Partner Top Engineer 2024 data engineer、Google Developer Expert Cloud AI/ML&amp;Data Analytics 、ML女子部コミュニティ運営、jaguar じゃがーる分科会運営、AI/ML分科会運営、GoogleCloud Next 23-25登壇等多数</p></div>",
+        "photo_url": "/images/speakers/icons/fukkuisland.jpg",
+        "job": "株式会社電通デジタル マネージャー兼Google Cloud Evangelist",
+        "twitter_handle": "fukku_island"
+      },
+      {
+        "id": "d993fb4d",
+        "name": "藤本 祥恵",
+        "bio": "<div><p>DX 推進担当として、データの民主化をテーマにダッシュボード開発等を実施。 社内 IT 勉強会「もくもく会」を発足メンバーとして勉強会を多数開催。 コミュニティ活動を積極的に実施しており、人材育成や小売業をテーマに活動し、人とともに成長することを目指す。</p></div>",
+        "photo_url": "https://storage.googleapis.com/necoapp_picture/%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B%E7%94%A8.jpg",
+        "job": "株式会社すかいらーくホールディングス メニューシステムデザインチーム",
+        "twitter_handle": ""
+      },
+      {
+        "id": "234394ae",
+        "name": "曲沼 宏美",
+        "bio": "<div><p>広告代理店を経て IT ベンチャーで分析コンサルティングに従事。2006 年より CCC で提携先への T カードデータ分析コンサルや大学連携を担当。2012 年よりリクルートでデータ活用を推進。全社横断 PJ や CRM 分析など多数のプロジェクトに携わる。人材領域のアルゴリズム開発により全社表彰 ARINA ENGINE 受賞。2022 年よりインテージにてデータ活用を推進。Google Developer Experts　ML女子部オーガナイザ</p></div>",
+        "photo_url": "/images/speakers/maganuma.jpg",
+        "job": "株式会社インテージ DeputyDirector, InsightArchitect",
+        "twitter_handle": "Door_IntoSummer"
+      }
+    ]
   },
   {
     "id": "d63eaae2",
@@ -83,7 +116,7 @@
   {
     "id": "da2a8966",
     "community": {
-      "name": "Jagu'e'r（Japan Google Cloud User Group for Enterprise",
+      "name": "Jagu'e'r (Japan Google Cloud User Group for Enterprise)",
       "description": "<div><p>Jagu'e'r（Japan Google Cloud User Group for Enterprise）は、Google Cloudのユーザー同士が知識や知見を共有する日本初の公式エンタープライズユーザー会です。年間を通じて活発な情報交換を行い、39の分科会やエバンジェリスト、アンバサダーなどの活動を通じてコミュニティの拡大と活性化を図っています。初心者向けのラウンジもあり、初心者でも参加しやすい環境が整っています。</p></div>",
       "url": "https://jaguer.jp/",
       "logo_url": "https://jaguer.jp/wp-content/uploads/2021/03/jaguer.svg"

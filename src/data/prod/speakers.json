@@ -18,7 +18,7 @@
   {
     "id": "f556804f",
     "name": "及川卓也",
-    "bio": "<div><p>Coming soon ...</p></div>",
+    "bio": "<div><p>外資系IT企業3社にて、ソフトウェアエンジニア、プロダクトマネージャー、エンジニアリングマネージャーとして勤務する。その後、スタートアップを経て、独立。2019年1月、テクノロジーにより企業や社会の変革を支援するTably株式会社を設立。著書『ソフトウェア・ファースト～あらゆるビジネスを一変させる最強戦略～』（日経BP）、『プロダクトマネジメントのすべて』（翔泳社）</p></div>",
     "photo_url": "/images/speakers/icons/takoratta.png",
     "job": "Tably株式会社 代表取締役",
     "twitter_handle": "takoratta"
@@ -254,6 +254,38 @@
     "photo_url": "/images/speakers/icons/batbaatarankhbold.jpg",
     "job": "IPUT, 東京国際工科専門職大学 情報工学科AI戦略コース",
     "twitter_handle": ""
+  },
+  {
+    "id": "4a82c45d",
+    "name": "砂川優治",
+    "bio": "<div><p>名古屋国際工科専門職大学 工科学部 情報工学科 IoTシステムコース３年の砂川優治（Yuji Sunagawa）です。８年間ブラジルに住んでいた経験と、今学んでいる情報技術を活用して、多文化共生に貢献する方法を模索しています。</p></div>",
+    "photo_url": "/images/speakers/yuji-sunagawa.jpg",
+    "job": "名古屋国際工科専門職大学 学生",
+    "twitter_handle": ""
+  },
+  {
+    "id": "d393807f",
+    "name": "高橋 和輝",
+    "bio": "<div><p>プログラミングが趣味な大学生です。LLMやXRなどの先端技術に興味があります。</p></div>",
+    "photo_url": "https://gist.github.com/user-attachments/assets/99bd55ad-b81a-4fd5-b12a-dc4084ba630d",
+    "job": "大阪国際工科専門職大学 工科学部 情報工学科 AI戦略コース 4年, 学生",
+    "twitter_handle": "nogikun_"
+  },
+  {
+    "id": "8fcbcea2",
+    "name": "りおちん",
+    "bio": "<div><p>AI駆動開発に慣れきってしまったかけだしエンジニアです。毎月ハッカソンに参加しています。 開発と勉強のバランシングについてお話しさせていただこうと思っています！</p></div>",
+    "photo_url": "/images/speakers/riochin2623.png",
+    "job": "津田塾大学 情報科学科 2年 学生",
+    "twitter_handle": "__riochin2623"
+  },
+  {
+    "id": "352cb22e",
+    "name": "sivchari",
+    "bio": "<div><p>Software Engineer at newmo Go Conference main organizer Cluster API reviewer, Kube API Linter reviewer, Argo CD member</p></div>",
+    "photo_url": "https://github.com/sivchari.png",
+    "job": "newmo株式会社 ソフトウェアエンジニア",
+    "twitter_handle": "sivchari"
   },
   {
     "id": "233ab3f2",

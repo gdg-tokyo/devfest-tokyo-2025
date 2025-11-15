@@ -12,7 +12,7 @@ from markdown_to_json.parsers.parser_utils import (
 
 
 def parse_speaker_from_content(
-    content: str, file_path: str, docs_base_path: str
+    content: str, file_path: str
 ) -> Tuple[List[Speaker], List[str]]:
     """Parses multiple speaker information from markdown content by converting it to HTML."""
     html = markdown.markdown(content)
@@ -70,7 +70,7 @@ def parse_speaker_from_content(
 
 
 def parse_speaker_from_subheading_content(
-    content: str, file_path: str, docs_base_path: str
+    content: str, file_path: str
 ) -> Tuple[List[Speaker], List[str]]:
     """
     Parses speaker information from markdown content where the speaker section

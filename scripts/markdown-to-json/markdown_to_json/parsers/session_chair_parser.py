@@ -20,7 +20,6 @@ def parse_session_chair_from_content(
     content: str,
     session_slug: str,
     file_path: str,
-    docs_base_path: str,
 ) -> Tuple[Optional[SessionChair], Dict[str, Speaker]]:
     """
     Parses session chair community and individual chair information from markdown content.
@@ -87,7 +86,7 @@ def parse_session_chair_from_content(
 
     for section in speaker_sections:
         speakers_data, _ = parse_speaker_from_subheading_content(
-            section, file_path, docs_base_path
+            section, file_path
         )
         if speakers_data:
             chair_speakers.extend(speakers_data)

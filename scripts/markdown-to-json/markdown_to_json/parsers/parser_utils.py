@@ -17,17 +17,31 @@ def resolve_image_path(raw_url: str, file_path: str) -> str:
     if raw_url.startswith("http://") or raw_url.startswith("https://"):
         return raw_url
 
+    # If the raw_url is already root-relative, return it as is.
     if raw_url.startswith("/"):
         return raw_url
 
     # Path is relative to the markdown file.
     file_dir = Path(file_path).parent.resolve()
-    resolved_image_path = (file_dir / raw_url).resolve()
+
+    # Check if the raw_url is trying to reference the top-level public directory
+    # by going up directories and then into 'public/'
+    if "public/" in raw_url and "../" in raw_url:
+        # Extract the part of the path after 'public/'
+        public_index = raw_url.find("public/")
+        path_after_public = raw_url[public_index + len("public/"):]
+        resolved_image_path = (_REPO_ROOT_DIR / "public" / path_after_public).resolve()
+    else:
+        resolved_image_path = (file_dir / raw_url).resolve()
+
     public_dir = _REPO_ROOT_DIR / "public"
 
-    relative_to_public = resolved_image_path.relative_to(public_dir)
-    return "/" + str(relative_to_public)
-
+    try:
+        relative_to_public = resolved_image_path.relative_to(public_dir)
+        return "/" + str(relative_to_public)
+    except ValueError:
+        # Fallback to original raw_url if it cannot be resolved to public
+        return raw_url
 
 def extract_title_and_description(markdown_content: str) -> dict:
     """

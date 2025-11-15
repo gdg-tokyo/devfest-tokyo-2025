@@ -13,8 +13,9 @@ It has multiple paragraphs.
 
 ![speaker](https://example.com/jane.jpg)
 """
+
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "dummy/path/file.md", "dummy/path"
+        markdown_content, "dummy/path/file.md"
     )
 
     assert len(speakers) == 1
@@ -48,7 +49,7 @@ def test_parse_multiple_speakers_from_content():
 ![speaker](https://i.ibb.co/vCKnT0BJ/987-D4-D73-A2-E7-4-C1-D-985-A-F48-A25-C2228-D.png)
 """
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "docs/web/prod/sessions/13-lightning-talks/talk-iput-nagoya.md", "docs/web/"
+        markdown_content, "docs/web/prod/sessions/13-lightning-talks/talk-iput-nagoya.md"
     )
 
     assert len(speakers) == 2
@@ -90,7 +91,7 @@ And another image to ignore:
 ![another_image](https://example.com/another.jpg)
 """
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "dummy/path/file.md", "dummy/path"
+        markdown_content, "dummy/path/file.md"
     )
 
     assert len(speakers) == 1
@@ -110,7 +111,7 @@ John's bio without a photo.
 
 """
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "dummy/path/file.md", "dummy/path"
+        markdown_content, "dummy/path/file.md"
     )
 
     assert len(speakers) == 1
@@ -133,7 +134,7 @@ def test_parse_speaker_from_content_no_metadata():
 Bob's bio with no extra metadata.
 """
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "dummy/path/file.md", "dummy/path"
+        markdown_content, "dummy/path/file.md"
     )
 
     assert len(speakers) == 1
@@ -154,7 +155,7 @@ def test_parse_speaker_from_content_no_speaker_section():
 This is a talk without a speaker section.
 """
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "dummy/path/file.md", "dummy/path"
+        markdown_content, "dummy/path/file.md"
     )
 
     assert speakers == []

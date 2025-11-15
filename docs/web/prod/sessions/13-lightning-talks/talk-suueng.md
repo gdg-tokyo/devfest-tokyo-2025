@@ -1,8 +1,8 @@
 ---
 is_keynote: false
 level: ['Beginner', 'Advanced']
-perspective: ['Introduction', 'Challenge']
-tech_tags: ['Android', 'Gemini', 'Android Studio']
+perspective: ['Experience', 'Challenge']
+tech_tags: ['AI', 'LT']
 time_start: '17:00'
 time_end: '17:50'
 ---

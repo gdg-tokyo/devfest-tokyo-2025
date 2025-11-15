@@ -18,7 +18,7 @@ track: Track A
 
 ## Session Chair Community
 
-### Jagu'e'r（Japan Google Cloud User Group for Enterprise
+### Jagu'e'r (Japan Google Cloud User Group for Enterprise)
 
 Jagu'e'r（Japan Google Cloud User Group for Enterprise）は、Google Cloudのユーザー同士が知識や知見を共有する日本初の公式エンタープライズユーザー会です。年間を通じて活発な情報交換を行い、39の分科会やエバンジェリスト、アンバサダーなどの活動を通じてコミュニティの拡大と活性化を図っています。初心者向けのラウンジもあり、初心者でも参加しやすい環境が整っています。
 

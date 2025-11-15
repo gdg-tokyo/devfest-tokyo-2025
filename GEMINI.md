@@ -27,6 +27,8 @@ tests/
 
 ## Commands
 
+- To run Python tests: `uv run pytest`
+
 # Add commands for
 
 ## Code Style

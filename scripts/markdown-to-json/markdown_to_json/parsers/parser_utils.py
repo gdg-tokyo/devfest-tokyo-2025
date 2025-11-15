@@ -1,5 +1,6 @@
 import hashlib
 import re
+from pathlib import Path
 
 import markdown
 from bs4 import BeautifulSoup
@@ -8,6 +9,28 @@ from bs4 import BeautifulSoup
 def _generate_hash_id(text: str) -> str:
     """Generates a 32-bit (8 hex characters) SHA-256 hash from the given text."""
     return hashlib.sha256(text.encode("utf-8")).hexdigest()[:8]
+
+
+def resolve_image_path(raw_url: str, file_path: str, docs_base_path: str) -> str:
+    """Resolves a raw image URL to a public path."""
+    if raw_url.startswith("http://") or raw_url.startswith("https://"):
+        return raw_url
+
+    if raw_url.startswith("/"):
+        return raw_url
+
+    # Path is relative to the markdown file.
+    file_dir = Path(file_path).parent
+    resolved_image_path = (file_dir / raw_url).resolve()
+
+    project_root = Path(docs_base_path).parent.parent.resolve()
+    public_dir = project_root / "public"
+
+    try:
+        relative_to_public = resolved_image_path.relative_to(public_dir)
+        return "/" + str(relative_to_public)
+    except ValueError:
+        return raw_url
 
 
 def extract_title_and_description(markdown_content: str) -> dict:
@@ -45,7 +68,7 @@ def extract_title_and_description(markdown_content: str) -> dict:
     description_node = soup.new_tag("div")
     for node in description_html_elements:
         description_node.append(node.extract())
-    return {"title": title, "description": str(description_node)}
+    return {"title": title, "description": str(description_node).replace("\n", "")}
 
 
 def remove_session_chair_content(markdown_content: str) -> str:

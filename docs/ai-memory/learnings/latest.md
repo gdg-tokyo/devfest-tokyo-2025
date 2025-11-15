@@ -1,5 +1,17 @@
 # Latest Learnings
 
+## 2025-11-15 18:00
+
+### INTERNAL MODULE DEPENDENCY
+
+- PR #XX: To correctly differentiate between speaker photos and talk thumbnails, the parser must be updated to check the `alt` attribute of `<img>` tags. For example, speaker photos should be identified by `alt="speaker"` and talk thumbnails by `alt="talk_thumbnail"`.
+- PR #XX: To ensure clean, image-free content in speaker bios and talk abstracts, the parser should be updated to remove all `<img>` tags from the final HTML output.
+- PR #XX: The `resolve_image_path` function should be robust enough to handle different types of image paths, including absolute paths (starting with `/`), relative paths, and external URLs. This ensures that all images are correctly resolved to their public paths.
+
+### PR REVIEW ASPECT
+
+- PR #XX: Following a Test-Driven Development (TDD) approach by first writing or updating tests that fail, and then fixing the implementation to make them pass, is a valuable best practice for ensuring code quality and preventing regressions.
+
 ## 2025-11-15 00:00
 
 ### INTERNAL MODULE DEPENDENCY

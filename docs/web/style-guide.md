@@ -53,3 +53,11 @@ Perspective Labels:
 ## Icons
 
 - The material icons are installed. Select it from there.
+
+## Image Guidelines
+
+For speaker icon images located under `public/images/speakers/icons/`:
+
+- **Format:** Must be JPEG.
+- **Dimensions:** Maximum height or width of 400px.
+- **File Size:** Less than 200KB.

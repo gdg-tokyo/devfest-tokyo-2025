@@ -17,4 +17,4 @@ XR技術を用いた万博展示を経て、 ARグラス装着者だけに閉じ
 
 プログラミングが趣味な大学生です。LLMやXRなどの先端技術に興味があります。
 
-![speaker](../../../../../public/images/speakers/nogikun.jpeg)
+![speaker](../../../../../public/images/speakers/icons/nogikun.jpeg)

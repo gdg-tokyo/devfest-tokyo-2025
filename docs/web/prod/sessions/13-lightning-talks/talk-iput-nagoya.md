@@ -21,4 +21,4 @@ time_end: '17:50'
 
 学生で就活中なので、いいご縁があるといいなと思っています！
 
-![speaker](../../../../../public/images/speakers/sota.png)
+![speaker](../../../../../public/images/speakers/icons/sota.jpeg)

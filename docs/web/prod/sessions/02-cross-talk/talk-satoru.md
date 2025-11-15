@@ -17,4 +17,4 @@ Coming soon ...
 
 BigQueryで人生変わっちゃったおぢさん。Google Cloud Nextも自腹で行っちゃうぐらい大好き。データと言われたらどこにでも駆けつけちゃいます！
 
-![speaker](../../../../../public/images/speakers/satoru.jpg)
+![speaker](../../../../../public/images/speakers/icons/satoru.jpeg)

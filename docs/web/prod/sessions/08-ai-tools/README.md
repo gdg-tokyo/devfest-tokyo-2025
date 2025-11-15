@@ -32,4 +32,4 @@ https://jaguer.jp/
 
 株式会社NTTデータにて公共分野におけるグローバルシステムの IT アーキテクトとして従事。Jagu'e'rではGWS分科会、企業コミュニティ分科会、エネルギー分科会、沖縄分科会などで運営参加。Google Cloud Partner Top Engineer 2025 Fellow。Google Cloud Partner All Certification Holders 2025、2025 Japan All AWS Certifications Engineers、Jagu'e'r Award 2024最優秀賞受賞。Jagu’e’r エバンジェリストとして Google Cloud と Jagu’e’r の魅力を発信中。
 
-![speaker](../../../../../public/images/speakers/ymtkick.jpg)
+![speaker](../../../../../public/images/speakers/icons/ymtkick.jpeg)

@@ -41,7 +41,7 @@ https://women-ml.connpass.com/
 
 DX 推進担当として、データの民主化をテーマにダッシュボード開発等を実施。 社内 IT 勉強会「もくもく会」を発足メンバーとして勉強会を多数開催。 コミュニティ活動を積極的に実施しており、人材育成や小売業をテーマに活動し、人とともに成長することを目指す。
 
-![speaker](../../../../../public/images/speakers/sachie-fujimoto.jpg)
+![speaker](../../../../../public/images/speakers/icons/sachie-fujimoto.jpeg)
 
 ### 曲沼 宏美 さん (@Door_IntoSummer) / 株式会社インテージ DeputyDirector, InsightArchitect
 

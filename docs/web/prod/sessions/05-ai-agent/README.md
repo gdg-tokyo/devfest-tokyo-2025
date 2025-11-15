@@ -30,4 +30,4 @@ https://mlops.connpass.com/
 
 MLOps、データ、インフラ、バックエンド、リサーチエンジニア、テックセールス、ネコ2匹の飼い主。本業のLayerXでは生成AIの実用化を中心に、R&Dとデータ検索基盤チームのマネージャーをしています。著書『機械学習システムデザインパターン』、『機械学習システム構築実践ガイド』、共著『事例でわかるMLOps』。
 
-![speaker](../../../../../public/images/speakers/shibui.webp)
+![speaker](../../../../../public/images/speakers/icons/shibui.webp)

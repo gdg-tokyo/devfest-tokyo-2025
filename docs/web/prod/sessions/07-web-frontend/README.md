@@ -28,4 +28,4 @@ https://community.angular.jp/
 
 Angular が大好きな黄色い人。Angular日本ユーザー会のスタッフもやってます。
 
-![speaker](../../../../../public/images/speakers/fusho-takahashi.jpg)
+![speaker](../../../../../public/images/speakers/icons/fusho-takahashi.jpeg)

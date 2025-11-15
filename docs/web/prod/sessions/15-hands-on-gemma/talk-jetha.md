@@ -15,4 +15,4 @@ Comming soon ...
 
 ### Jetha Chan さん (@jetha) / Google DeepMind, Technical Solutions Consultant
 
-![speaker](../../../../../public/images/speakers/jetha.jpeg)
+![speaker](../../../../../public/images/speakers/icons/jetha.jpeg)

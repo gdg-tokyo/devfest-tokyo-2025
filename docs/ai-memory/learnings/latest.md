@@ -1,5 +1,26 @@
 # Latest Learnings
 
+## 2025-11-15 00:00
+
+### INTERNAL MODULE DEPENDENCY
+
+- PR #60: Correcting a bug in a data processing script (`markdown-to-json`) is a more precise and effective solution than attempting to alter a broad tool configuration like Prettier to work around it. Specifically, handling escaped characters (`\_`) directly in the parser for Twitter handles was the right approach.
+- PR #57: When parsing complex structured text (like Markdown with special sections), it's robust to create dedicated pre-processing functions (e.g., `remove_session_chair_content`) to clean and isolate the target content before the main parsing step.
+
+### PR REVIEW ASPECT
+
+- PR #57: Extracting repeated UI logic into dedicated, reusable components (e.g., `src/components/common/SpeakerDetailCard.tsx`) improves modularity, standardizes appearance, and simplifies maintenance, adhering to the DRY principle.
+- PR #57: When fixing a data parsing bug, add a specific unit test that validates the fix to prevent future regressions. For example, a test was added to ensure session chair content was properly excluded from the session description.
+
+### EXTERNAL DEPENDENCY
+
+- PR #56: When using the Tailwind CSS Typography plugin, if the default text color (e.g., from `prose-zinc`) has poor contrast with the site's background, you can override it by applying a specific text color utility (e.g., `text-black-02`) directly to the `article` element that has the `prose` class.
+- PR #55: The `@tailwindcss/typography` plugin is an effective way to apply consistent and attractive default styling to blocks of HTML generated from Markdown, saving the effort of writing extensive custom CSS.
+
+### SECURITY NOTES
+
+- PR #55: To prevent XSS vulnerabilities and improve performance, convert and sanitize user-generated Markdown into HTML on the server-side (e.g., during a build step with Python's `bleach` library) before sending it to the frontend. This provides pre-sanitized content to the client.
+
 ## 2025-11-09 00:00
 
 ### KNOWLEDGE OUTSIDE CODE BASE

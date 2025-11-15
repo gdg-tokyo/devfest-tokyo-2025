@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import HeroPanel from '@/features/landing-page/components/HeroPanel'
 import Welcome from '@/features/landing-page/Welcome'
 import EventOverview from '@/features/landing-page/components/EventOverview'
+import FeaturedTalks from '@/features/landing-page/components/FeaturedTalks'
 import StakeholdersSection from '@/features/landing-page/components/StakeholdersSection'
 import { buildMetadata } from '@/lib/seo'
 
@@ -19,6 +20,7 @@ export default function Home() {
       <main>
         <Welcome />
         <EventOverview />
+        <FeaturedTalks />
         <StakeholdersSection />
       </main>
     </>

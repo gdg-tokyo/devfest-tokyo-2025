@@ -1,7 +1,6 @@
-import React from 'react'
-import { getTalks, getSessions, getSpeakers } from '@/lib/data-parser'
-import { Talk, Session, Speaker } from '@/types'
 import TalkCard from '@/components/common/TalkCard'
+import { getSessions, getSpeakers, getTalks } from '@/lib/data-parser'
+import { Session, Speaker, Talk } from '@/types'
 
 const FeaturedTalks = () => {
   const allTalks = getTalks()
@@ -9,7 +8,10 @@ const FeaturedTalks = () => {
   const allSpeakers = getSpeakers()
 
   // TODO: Replace with the actual talk IDs provided by the user
-  const featuredTalkIds = ['4e750be0', '436aadeb']
+  const featuredTalkIds = [
+    '4e750be0', // Xinmei san
+    '436aadeb', // Oikawa san
+  ]
 
   const featuredTalks = allTalks.filter((talk) =>
     featuredTalkIds.includes(talk.id)
@@ -27,10 +29,10 @@ const FeaturedTalks = () => {
   )
 
   return (
-    <section className="py-12 bg-off-white">
-      <div className="container mx-auto px-4 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-8">Featured Talks</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section className="container mx-auto lg:px-8 max-w-screen-md lg:max-w-screen-xl bg-off-white">
+      <div className="py-12">
+        <h2 className="text-3xl font-bold text-center mb-4">Featured Talks</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {featuredTalks.map((talk: Talk) => {
             const session = talkSessionMap.get(talk.id)
             if (!session) return null

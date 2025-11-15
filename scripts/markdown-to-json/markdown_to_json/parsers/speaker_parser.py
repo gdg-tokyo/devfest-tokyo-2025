@@ -1,70 +1,123 @@
 import re
+from typing import List, Tuple
+import markdown
+from bs4 import BeautifulSoup, NavigableString
 
 from markdown_to_json.data_model.speaker import Speaker
-from markdown_to_json.parsers.markdown_utils import markdown_to_safe_html
-from markdown_to_json.parsers.parser_utils import generate_speaker_id
+from markdown_to_json.parsers.parser_utils import (
+    generate_speaker_id,
+    resolve_image_path,
+)
 
 
-def parse_speaker_from_content(content: str):
-    """Parses speaker information from markdown content."""
-    speaker_section_match = re.search(
-        r"## Speaker\n\n### (.+?)\n\n([\s\S]+?)(?=\n##|$)", content
-    )
-    if not speaker_section_match:
-        return None, []
+def parse_speaker_from_content(
+    content: str, file_path: str, docs_base_path: str
+) -> Tuple[List[Speaker], List[str]]:
+    """Parses multiple speaker information from markdown content by converting it to HTML."""
+    html = markdown.markdown(content)
+    soup = BeautifulSoup(html, "html.parser")
 
-    speaker_heading = speaker_section_match.group(1).strip()
-    speaker_bio_markdown = speaker_section_match.group(2).strip()
-    speaker_name, final_twitter_handle, final_job = _parse_speaker_heading(
-        speaker_heading
-    )
-    speaker_bio_text, photo_url = _parse_speaker_bio(speaker_bio_markdown)
+    speakers_data = []
+    speaker_ids = []
 
-    speaker_id = generate_speaker_id(final_twitter_handle, speaker_name)
+    speaker_h2 = soup.find("h2", string="Speaker")
+    if not speaker_h2:
+        return [], []
 
-    speaker_data = Speaker(
-        id=speaker_id,
-        name=speaker_name,
-        bio=speaker_bio_text,
-        photo_url=photo_url,
-        job=final_job if final_job else "",
-        twitter_handle=final_twitter_handle if final_twitter_handle else "",
-    )
+    for sibling in speaker_h2.find_next_siblings():
+        if sibling.name == "h3":
+            speaker_heading = sibling.get_text(strip=True)
+            speaker_name, final_twitter_handle, final_job = _parse_speaker_heading(
+                speaker_heading
+            )
 
-    return speaker_data, [speaker_id]
+            bio_elements = []
+            photo_url = ""
+            for bio_sibling in sibling.find_next_siblings():
+                if bio_sibling.name == "h3":
+                    break
+                
+                img_tag = bio_sibling.find("img", alt="speaker")
+                if bio_sibling.name == "p" and img_tag:
+                    raw_photo_url = img_tag.get("src", "")
+                    photo_url = resolve_image_path(
+                        raw_photo_url, file_path, docs_base_path
+                    )
+                else:
+                    bio_elements.append(str(bio_sibling))
+
+            bio_html = f"<div>{''.join(bio_elements)}</div>"
+
+            speaker_id = generate_speaker_id(final_twitter_handle, speaker_name)
+
+            speaker = Speaker(
+                id=speaker_id,
+                name=speaker_name,
+                bio=bio_html,
+                photo_url=photo_url,
+                job=final_job if final_job else "",
+                twitter_handle=final_twitter_handle if final_twitter_handle else "",
+            )
+            speakers_data.append(speaker)
+            speaker_ids.append(speaker_id)
+
+    return speakers_data, speaker_ids
 
 
-def parse_speaker_from_subheading_content(content: str):
+def parse_speaker_from_subheading_content(
+    content: str, file_path: str, docs_base_path: str
+) -> Tuple[List[Speaker], List[str]]:
     """
     Parses speaker information from markdown content where the speaker section
     starts with a subheading (e.g., '### Speaker Name').
+    Returns a list containing a single speaker.
     """
-    speaker_section_match = re.search(
-        r"### (?P<speaker_heading>[^\n]+)\n\n(?P<speaker_bio_markdown>[\s\S]+)", content
-    )
-    if not speaker_section_match:
-        return None, []
+    html = markdown.markdown(content)
+    soup = BeautifulSoup(html, "html.parser")
 
-    speaker_heading = speaker_section_match.group("speaker_heading").strip()
-    speaker_bio_markdown = speaker_section_match.group("speaker_bio_markdown").strip()
+    speakers_data = []
+    speaker_ids = []
 
+    h3_tag = soup.find("h3")
+    if not h3_tag:
+        return [], []
+
+    speaker_heading = h3_tag.get_text(strip=True)
     speaker_name, final_twitter_handle, final_job = _parse_speaker_heading(
         speaker_heading
     )
-    speaker_bio_text, photo_url = _parse_speaker_bio(speaker_bio_markdown)
+
+    bio_elements = []
+    photo_url = ""
+    for bio_sibling in h3_tag.find_next_siblings():
+        if bio_sibling.name == "h3":
+            break
+        
+        img_tag = bio_sibling.find("img", alt="speaker")
+        if bio_sibling.name == "p" and img_tag:
+            raw_photo_url = img_tag.get("src", "")
+            photo_url = resolve_image_path(
+                raw_photo_url, file_path, docs_base_path
+            )
+        else:
+            bio_elements.append(str(bio_sibling))
+
+    bio_html = f"<div>{''.join(bio_elements)}</div>"
 
     speaker_id = generate_speaker_id(final_twitter_handle, speaker_name)
 
-    speaker_data = Speaker(
+    speaker = Speaker(
         id=speaker_id,
         name=speaker_name,
-        bio=speaker_bio_text,
+        bio=bio_html,
         photo_url=photo_url,
         job=final_job if final_job else "",
         twitter_handle=final_twitter_handle if final_twitter_handle else "",
     )
+    speakers_data.append(speaker)
+    speaker_ids.append(speaker_id)
 
-    return speaker_data, [speaker_id]
+    return speakers_data, speaker_ids
 
 
 def _parse_speaker_heading(speaker_heading: str):
@@ -94,23 +147,3 @@ def _parse_speaker_heading(speaker_heading: str):
     speaker_name = speaker_name.replace("さん", "").strip()
 
     return speaker_name, twitter_handle, job
-
-
-def _parse_speaker_bio(speaker_bio_markdown: str):
-    """
-    Parses speaker bio (sanitized HTML) and photo URL from the speaker bio markdown.
-    """
-    photo_url = ""
-    # Extract photo URL using regex from the raw markdown
-    img_match = re.search(r"!\[.*?\]\((?P<url>[^)]+)\)", speaker_bio_markdown)
-    if img_match:
-        photo_url = img_match.group("url")
-        # Remove the image markdown from the bio markdown so it's not part of the bio HTML
-        speaker_bio_markdown = re.sub(
-            r"!\[.*?\]\((?P<url>[^)]+)\)", "", speaker_bio_markdown, count=1
-        )
-
-    # Convert the remaining markdown to safe HTML
-    bio_html = markdown_to_safe_html(speaker_bio_markdown)
-
-    return bio_html, photo_url

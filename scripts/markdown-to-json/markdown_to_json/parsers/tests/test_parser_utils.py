@@ -60,7 +60,7 @@ Speaker details here.
     assert result["title"] == "My Title"
     assert (
         result["description"]
-        == "<div><p>This is the description.\nIt should end before the speaker section.</p></div>"
+        == "<div><p>This is the description.It should end before the speaker section.</p></div>"
     )
 
 

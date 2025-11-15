@@ -18,6 +18,8 @@ from markdown_to_json.parsers.speaker_parser import (
 def parse_session_chair_from_content(
     content: str,
     session_slug: str,
+    file_path: str,
+    docs_base_path: str,
 ) -> Tuple[Optional[SessionChair], Dict[str, Speaker]]:
     """
     Parses session chair community and individual chair information from markdown content.
@@ -81,10 +83,13 @@ def parse_session_chair_from_content(
     speaker_sections = [s.strip() for s in speaker_sections if s.strip()]
 
     for section in speaker_sections:
-        speaker_data, _ = parse_speaker_from_subheading_content(section)
-        if speaker_data:
-            chair_speakers.append(speaker_data)
-            all_parsed_speakers[speaker_data.id] = speaker_data
+        speakers_data, _ = parse_speaker_from_subheading_content(
+            section, file_path, docs_base_path
+        )
+        if speakers_data:
+            chair_speakers.extend(speakers_data)
+            for speaker in speakers_data:
+                all_parsed_speakers[speaker.id] = speaker
 
     # The logic for returning None, {} should be based on whether a SessionChair can be meaningfully created.
     # If there's no community name and no chair speakers, then it's truly empty.

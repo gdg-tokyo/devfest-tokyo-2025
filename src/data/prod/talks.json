@@ -455,7 +455,7 @@
     "time_start": "17:00",
     "time_end": "17:50",
     "track": "Track A",
-    "speaker_ids": ["4a82c45d"],
+    "speaker_ids": ["4a82c45d", "a7d6d8cd"],
     "tech_tags": ["Web", "LT"],
     "level": ["Advanced"],
     "perspective": ["Challenge"],

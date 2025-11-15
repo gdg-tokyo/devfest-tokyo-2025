@@ -36,7 +36,7 @@ def parse_speaker_from_content(
             for bio_sibling in sibling.find_next_siblings():
                 if bio_sibling.name == "h3":
                     break
-                
+
                 img_tag = bio_sibling.find("img", alt="speaker")
                 if bio_sibling.name == "p" and img_tag:
                     raw_photo_url = img_tag.get("src", "")
@@ -47,6 +47,12 @@ def parse_speaker_from_content(
                     bio_elements.append(str(bio_sibling))
 
             bio_html = f"<div>{''.join(bio_elements)}</div>"
+
+            # Remove all image tags from bio_html
+            bio_soup = BeautifulSoup(bio_html, "html.parser")
+            for img_tag in bio_soup.find_all("img"):
+                img_tag.decompose()
+            bio_html = str(bio_soup)
 
             speaker_id = generate_speaker_id(final_twitter_handle, speaker_name)
 
@@ -92,7 +98,7 @@ def parse_speaker_from_subheading_content(
     for bio_sibling in h3_tag.find_next_siblings():
         if bio_sibling.name == "h3":
             break
-        
+
         img_tag = bio_sibling.find("img", alt="speaker")
         if bio_sibling.name == "p" and img_tag:
             raw_photo_url = img_tag.get("src", "")
@@ -103,6 +109,12 @@ def parse_speaker_from_subheading_content(
             bio_elements.append(str(bio_sibling))
 
     bio_html = f"<div>{''.join(bio_elements)}</div>"
+
+    # Remove all image tags from bio_html
+    bio_soup = BeautifulSoup(bio_html, "html.parser")
+    for img_tag in bio_soup.find_all("img"):
+        img_tag.decompose()
+    bio_html = str(bio_soup)
 
     speaker_id = generate_speaker_id(final_twitter_handle, speaker_name)
 

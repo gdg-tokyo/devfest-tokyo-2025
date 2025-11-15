@@ -97,6 +97,7 @@ And another image to ignore:
     speaker = speakers[0]
     assert speaker.name == "John Doe"
     assert speaker.photo_url == "https://example.com/john.jpg"
+    assert "<img" not in speaker.bio
 
 
 def test_parse_speaker_from_content_no_photo():

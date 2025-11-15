@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 
 import frontmatter
+from bs4 import BeautifulSoup
 
 from markdown_to_json.data_model.session import Session
 from markdown_to_json.data_model.session_chair import (
@@ -148,6 +149,12 @@ def _parse_talk(
         post = frontmatter.load(f)
 
     title, abstract_html = extract_title_and_description(post.content).values()
+
+    # Remove all image tags from abstract_html
+    abstract_soup = BeautifulSoup(abstract_html, "html.parser")
+    for img_tag in abstract_soup.find_all("img"):
+        img_tag.decompose()
+    abstract_html = str(abstract_soup)
 
     speakers_data, speaker_ids = parse_speaker_from_content(
         post.content, talk_file_path, docs_base_path

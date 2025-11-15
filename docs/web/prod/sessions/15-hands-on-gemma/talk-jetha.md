@@ -7,12 +7,12 @@ perspective: ['Introduction', 'Challenge']
 is_keynote: false
 ---
 
-# Gemma Hands-on
+# VLMであるGemma 3を活かして、AIの「新しい目」で動くアレルゲンチェッカーを作ろうぜ！
 
 Comming soon ...
 
 ## Speaker
 
-### Jetha Chan さん / Google DeepMind / Technical Solutions Consultant (AI Developer Relations)
+### Jetha Chan さん / Google DeepMind, Technical Solutions Consultant
 
 ![speaker](https://share-storage-images2.s3.ap-northeast-1.amazonaws.com/jetha2+-+Jetha+Chan.jpeg)

@@ -21,7 +21,7 @@ track: Track C
 
 https://women-ml.connpass.com/
 
-![community_logo](../../../../../public/images/speakers/0e4e2115afc67e94d5e8d774f3faa0bcb3a1616ba01b2c44afc44e74f644fd8b.png)
+![community_logo](../../../../../public/images/stakeholders/women-ml.png)
 
 ## Session Chair
 
@@ -41,7 +41,7 @@ https://women-ml.connpass.com/
 
 DX 推進担当として、データの民主化をテーマにダッシュボード開発等を実施。 社内 IT 勉強会「もくもく会」を発足メンバーとして勉強会を多数開催。 コミュニティ活動を積極的に実施しており、人材育成や小売業をテーマに活動し、人とともに成長することを目指す。
 
-![speaker](../../../../../public/images/speakers/5c04044741415b5122d9469430db24b82132159d84db8ae5ca7cfa2cfbf00332.jpg)
+![speaker](../../../../../public/images/speakers/sachie-fujimoto.jpg)
 
 ### 曲沼 宏美 さん (@Door_IntoSummer) / 株式会社インテージ DeputyDirector, InsightArchitect
 

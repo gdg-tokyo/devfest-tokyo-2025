@@ -13,6 +13,6 @@ Comming soon ...
 
 ## Speaker
 
-### Jetha Chan さん / Google DeepMind, Technical Solutions Consultant
+### Jetha Chan さん (@jetha) / Google DeepMind, Technical Solutions Consultant
 
-![speaker](../../../../../public/images/speakers/f7f506374e9aa9285c91c4fb83e70fa85167585b8fb20d9be132de73302ca404.jpeg)
+![speaker](../../../../../public/images/speakers/jetha.jpeg)

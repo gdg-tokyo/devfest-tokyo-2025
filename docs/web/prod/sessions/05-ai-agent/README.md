@@ -22,7 +22,7 @@ AI初心者の皆さんも、このセッションに参加することで、AI 
 
 https://mlops.connpass.com/
 
-![community_logo](../../../../../public/images/speakers/f92c00394b238bb824d90c04d9f679f79618f5834dbcab6b877bfabe290c3242.jpg)
+![community_logo](../../../../../public/images/stakeholders/mlops.jpg)
 
 ## Session Chair
 
@@ -30,4 +30,4 @@ https://mlops.connpass.com/
 
 MLOps、データ、インフラ、バックエンド、リサーチエンジニア、テックセールス、ネコ2匹の飼い主。本業のLayerXでは生成AIの実用化を中心に、R&Dとデータ検索基盤チームのマネージャーをしています。著書『機械学習システムデザインパターン』、『機械学習システム構築実践ガイド』、共著『事例でわかるMLOps』。
 
-![speaker](../../../../../public/images/speakers/c2d4fce483603a7532d68a06feb5370f9960bcc5a94d574603505f9c04840cea.webp)
+![speaker](../../../../../public/images/speakers/shibui.webp)

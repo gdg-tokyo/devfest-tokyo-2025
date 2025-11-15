@@ -28,4 +28,4 @@ https://2025.droidkaigi.jp/
 
 モバイル技術のカンファレンスDroidKaigiの代表、技術書が20万冊以上集まる技術の祭典 技術書典 主宰を務める。コミュニティの発展・技術普及に関心をもち、エンジニアリングでの社会貢献を目指している。
 
-![speaker](../../../../../public/images/speakers/f611cda84d82da36954fdd1ceae4c5c7ba806c4e1a6831ffe42c25835e6c3251.jpg)
+![speaker](../../../../../public/images/speakers/mhidaka.jpg)

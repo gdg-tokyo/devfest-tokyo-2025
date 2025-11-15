@@ -22,7 +22,7 @@ Agent Development Kit (ADK) は、生成AIを活用したエージェント開�
 
 https://adk.connpass.com/
 
-![community_logo](../../../../../public/images/speakers/15d55115e3aabc425a6dc41e8de5bd137a2a9fb2d237cac2f5776dd721d4a88d.png)
+![community_logo](../../../../../public/images/speakers/adk-ug-jp.png)
 
 ## Session Chair
 

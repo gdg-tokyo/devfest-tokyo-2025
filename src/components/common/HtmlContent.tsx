@@ -3,12 +3,17 @@ import clsx from 'clsx'
 import { useMemo } from 'react'
 import sanitizeHtml from 'sanitize-html'
 
-type Props = { html: string; className?: string }
+type Props = { html: string; className?: string; stripHtmlTags?: boolean }
 
-export default function HtmlContent({ html, className }: Props) {
-  const sanitized = useMemo(
-    () =>
-      sanitizeHtml(html, {
+export default function HtmlContent({ html, className, stripHtmlTags }: Props) {
+  const sanitized = useMemo(() => {
+    if (stripHtmlTags) {
+      return sanitizeHtml(html, {
+        allowedTags: [],
+        allowedAttributes: {},
+      })
+    } else {
+      return sanitizeHtml(html, {
         allowedTags: [
           'p',
           'ul',
@@ -48,9 +53,18 @@ export default function HtmlContent({ html, className }: Props) {
           span: ['class'],
         },
         allowedSchemes: ['http', 'https', 'mailto', 'tel'],
-      }),
-    [html]
-  )
+      })
+    }
+  }, [html, stripHtmlTags])
+
+  if (stripHtmlTags) {
+    return (
+      <div
+        className={clsx(className)}
+        dangerouslySetInnerHTML={{ __html: sanitized }}
+      />
+    )
+  }
 
   return (
     <article

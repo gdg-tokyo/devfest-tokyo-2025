@@ -85,9 +85,11 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
 
       <div>
         <h2 className="text-4xl font-bold mb-2">Speakers</h2>
-        {speakers.map((speaker) => (
-          <SpeakerDetailCard key={speaker.id} speaker={speaker} />
-        ))}
+        <div className="grid grid-cols-1 gap-4">
+          {speakers.map((speaker) => (
+            <SpeakerDetailCard key={speaker.id} speaker={speaker} />
+          ))}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-16">

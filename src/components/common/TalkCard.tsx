@@ -5,23 +5,17 @@ import Link from 'next/link'
 import React from 'react'
 import { getLevelColor } from '@/lib/style-utils'
 import HtmlContent from '@/components/common/HtmlContent'
+import Image from 'next/image'
+import { withRepoBasePath } from '@/lib/url-utils'
 
 interface TalkCardProps {
   talk: Talk
-
   sessionId: string
-
   session: Session
-
-  speakers: Speaker[] // Add speakers here
+  speakers: Speaker[]
 }
 
-const TalkCard: React.FC<TalkCardProps> = ({
-  talk,
-  sessionId,
-  session,
-  speakers,
-}) => {
+const TalkCard: React.FC<TalkCardProps> = ({ talk, session, speakers }) => {
   const speakerNames = (speakers || [])
     .map((speaker) => speaker.name)
     .join(', ')
@@ -50,8 +44,29 @@ const TalkCard: React.FC<TalkCardProps> = ({
               </span>
             </div>
           </div>
-          <div className="text-gray-600 text-sm line-clamp-3">
-            <HtmlContent html={talk.abstract} />
+          <div className="flex mt-4">
+            <div className="w-9/12 pr-4 text-gray-600 text-sm line-clamp-3">
+              <HtmlContent html={talk.abstract} />
+            </div>
+            <div className="w-3/12 flex flex-col items-center justify-center">
+              {speakers.map((speaker) => (
+                <div key={speaker.id} className="mb-2 last:mb-0">
+                  {speaker.photo_url ? (
+                    <Image
+                      src={withRepoBasePath(speaker.photo_url)}
+                      alt={speaker.name}
+                      width={64}
+                      height={64}
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
+                      <PersonIcon style={{ fontSize: 32 }} />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="mt-4">

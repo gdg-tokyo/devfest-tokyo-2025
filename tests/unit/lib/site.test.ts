@@ -20,7 +20,7 @@ describe('SITE configuration', () => {
   });
 
   it('should have defaultOgImage defined', () => {
-    expect(SITE.defaultOgImage).toBe('/images/pr/gdg-devfest-2025-main-banner-compressed.jpg');
+    expect(SITE.defaultOgImage).toBe('/images/pr/gdg-devfest-2025-main-banner-v2-small.jpg');
   });
 
   it('should have locale set to ja_JP', () => {

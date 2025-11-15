@@ -1,9 +1,8 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
 import FeaturedTalks from '@/features/landing-page/components/FeaturedTalks'
-import { Talk, Session, Speaker } from '@/types'
 import * as dataParser from '@/lib/data-parser'
+import { Session, Speaker, Talk } from '@/types'
+import '@testing-library/jest-dom'
+import { render, screen } from '@testing-library/react'
 
 // Mock data-parser functions
 jest.mock('@/lib/data-parser', () => ({
@@ -85,7 +84,7 @@ describe('FeaturedTalks', () => {
 
   it('renders the section title', () => {
     render(<FeaturedTalks />)
-    expect(screen.getByText('Featured Talks')).toBeInTheDocument()
+    expect(screen.getByText('基調講演')).toBeInTheDocument()
   })
 
   it('renders the correct number of featured talks', () => {

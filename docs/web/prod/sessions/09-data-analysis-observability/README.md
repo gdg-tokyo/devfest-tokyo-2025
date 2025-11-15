@@ -20,7 +20,7 @@ track: Track B
 
 Google Cloud Technical Summit 2026 は Google Cloud ユーザーコミュニティ Jagu'e'r が主催となり、「超 Google Cloud 特化」と「新たなコミュニティとの出会い」をテーマに来年2月に初めて開催される Google Cloud のオンライン技術カンファレンスです。Jagu'e'r をはじめ、複数の Google Cloud 関連コミュニティメンバーと Google Cloud の技術について語り尽くしましょう！ https://2026.gcts.jp/
 
-![community_logo](/images/stakeholders/gcts-2026-logo.png)
+![community_logo](../../../../../images/stakeholders/gcts-2026-logo.png)
 
 ## Session Chair
 
@@ -28,4 +28,4 @@ Google Cloud Technical Summit 2026 は Google Cloud ユーザーコミュニテ�
 
 Datadog Japanのセールスエンジニアとして、オブザーバビリティ導入の技術支援を担当。コミュニティ活動は Google Cloud 公式ユーザーグループ「Jagu'e'r」でオブザーバビリティ分科会 / クラウドネイティブ分科会 / Tech Writers 分科会 / 月末 Tech Lunch / Next × Jagu'e'r Meetup、Japan Datadog User Group(JDDUG)、Google Cloud Technical Summit など。Google Cloud Partner Top Engineer 2023-25 / AWS Community Builder(Cloud Operations) / Jagu'e'r Award 優秀賞 2023-24
 
-![speaker](/images/speakers/aoto.jpg)
+![speaker](../../../../../images/speakers/aoto.jpg)

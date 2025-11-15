@@ -17,6 +17,6 @@ ADKにおいて音声や動画によるストリーミング機能を提供す�
 
 Google Cloud AIチームのデベロッパーアドボケイトとしてGoogle Cloud USブログ記事やドキュメントの執筆、デモ開発等を担当。2016年より25件以上を掲載し、ジェフディーン、エリックシュミット、ニューズウィーク誌、ニューヨーカー誌により紹介された。延べ17か国のイベントで講演し、Google I/OやCloud Nextにも例年登壇。Xでは2万人のフォロワーに向けてAI/MLの情報を日々共有している。
 
-![speaker](/images/speakers/icons/kazunori_279.jpg)
+![speaker](../../../../../images/speakers/icons/kazunori_279.jpg)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/kazunori-sato.jpg)

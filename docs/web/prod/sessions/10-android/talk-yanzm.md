@@ -17,6 +17,6 @@ Android Studio には内蔵の Gemini AI ツールが組み込まれています
 
 Android の GDE です。Kotlin 大好き。AI ツールでいろいろ遊んでます。最近は Agent Development Kit で AI エージェント作るのが楽しいです。
 
-![speaker](/images/speakers/icons/yanzm.png)
+![speaker](../../../../../images/speakers/icons/yanzm.png)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/yanzm.jpg)

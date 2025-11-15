@@ -17,6 +17,6 @@ AI Agent 活用した Flutter 開発を、具体的な活用事例や設定を�
 
 Google Developers Expert for Android. Working at CyberAgent
 
-![speaker](/images/speakers/icons/wasabeef_jp.jpg)
+![speaker](../../../../../images/speakers/icons/wasabeef_jp.jpg)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/wasabeef.jpg)

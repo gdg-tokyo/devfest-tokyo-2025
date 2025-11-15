@@ -17,6 +17,6 @@ Google ADK を使った開発、迷いませんか？本セッションでは、
 
 2022 年にメルカリに入社し、データ基盤や A/B テスト基盤の改善を通してデータ利活用の推進に貢献。現在は、生成 AI を活用したデータ分析エージェントの開発をリードし、全社員がデータ分析にハードルを感じることなくデータを活用できる環境の整備に取り組む。
 
-![speaker](/images/speakers/icons/na0fu3y.png)
+![speaker](../../../../../images/speakers/icons/na0fu3y.png)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/na0fu3y.jpg)

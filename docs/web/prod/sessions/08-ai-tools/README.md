@@ -24,7 +24,7 @@ Jagu'e'r（Japan Google Cloud User Group for Enterprise）は、Google Cloudの�
 
 https://jaguer.jp/
 
-![community_logo](https://jaguer.jp/wp-content/uploads/2021/03/jaguer.svg)
+![community_logo](../../../../../public/images/speakers/99eaa5654988abf84aaef90df293d7b369fe764b44cd29fb2d88b2d58e4b23aa.svg)
 
 ## Session Chair
 
@@ -32,4 +32,4 @@ https://jaguer.jp/
 
 株式会社NTTデータにて公共分野におけるグローバルシステムの IT アーキテクトとして従事。Jagu'e'rではGWS分科会、企業コミュニティ分科会、エネルギー分科会、沖縄分科会などで運営参加。Google Cloud Partner Top Engineer 2025 Fellow。Google Cloud Partner All Certification Holders 2025、2025 Japan All AWS Certifications Engineers、Jagu'e'r Award 2024最優秀賞受賞。Jagu’e’r エバンジェリストとして Google Cloud と Jagu’e’r の魅力を発信中。
 
-![speaker](https://storage.googleapis.com/ko1-public-bucket-for-juguer/IMG_3507small.jpg)
+![speaker](../../../../../public/images/speakers/16e8e268a64824bb8fb62ef368580741afaa7a7cd2b38bffe7990e6873727a36.jpg)

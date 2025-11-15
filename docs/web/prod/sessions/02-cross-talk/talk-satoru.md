@@ -17,4 +17,4 @@ Coming soon ...
 
 BigQueryで人生変わっちゃったおぢさん。Google Cloud Nextも自腹で行っちゃうぐらい大好き。データと言われたらどこにでも駆けつけちゃいます！
 
-![speaker](https://assets.swoogo.com/uploads/thumb/5456405-684cc71d0bc97.jpg)
+![speaker](../../../../../public/images/speakers/9b2477d3cc8544b3e91d21d8e794c1e45038d9cc4347a70f4ef699c00ada093f.jpg)

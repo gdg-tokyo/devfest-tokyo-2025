@@ -29,7 +29,10 @@ const FeaturedTalks = () => {
   )
 
   return (
-    <section className="container mx-auto lg:px-8 max-w-screen-md lg:max-w-screen-xl bg-off-white">
+    <section
+      className="container mx-auto lg:px-8 max-w-screen-md lg:max-w-screen-xl bg-off-white"
+      data-testid="featured-talks-section"
+    >
       <div className="py-12">
         <h2 className="text-3xl font-bold text-center mb-4">Featured Talks</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

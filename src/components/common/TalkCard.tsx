@@ -2,12 +2,11 @@ import HtmlContent from '@/components/common/HtmlContent'
 import { getLevelColor } from '@/lib/style-utils'
 import { withRepoBasePath } from '@/lib/url-utils'
 import { Session, Speaker, Talk } from '@/types'
-import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import PersonIcon from '@mui/icons-material/Person'
+import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import clsx from 'clsx'
 
 interface TalkCardProps {
   talk: Talk
@@ -19,19 +18,25 @@ interface TalkCardProps {
 
 const TalkCard: React.FC<TalkCardProps> = ({
   talk,
+
   session,
+
   speakers,
+
   isSessionDetailPage = false, // Default to false
 }) => {
-  const speakerNames = (speakers || [])
-    .map((speaker) => speaker.name)
-    .join(', ')
+  const firstSpeaker = speakers && speakers.length > 0 ? speakers[0] : undefined
+
   const timeStart = talk?.time_start || 'N/A'
+
   const timeEnd = talk?.time_end || 'N/A'
 
   const leftColumnWidth = isSessionDetailPage ? 'w-9/12' : 'w-8/12'
+
   const rightColumnWidth = isSessionDetailPage ? 'w-3/12' : 'w-4/12'
+
   const imageSizeClass = isSessionDetailPage ? 'w-48 h-48' : 'w-32 h-32'
+
   const iconFontSize = isSessionDetailPage ? 96 : 64
 
   return (
@@ -46,31 +51,40 @@ const TalkCard: React.FC<TalkCardProps> = ({
               {talk.title}
             </h3>
           )}
-          <div className="flex mt-4">
+
+          <div className="flex">
             <div className={clsx(leftColumnWidth, 'pr-2')}>
               {isSessionDetailPage && (
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   {talk.title}
                 </h3>
               )}
-              <div className="flex justify-between text-sm text-gray-600 mb-2">
-                <div className="flex items-center">
-                  <PersonIcon className="mr-1" />
-                  <span>{speakerNames}</span>
-                </div>
-                <div className="flex items-center">
-                  <AccessTimeIcon className="mr-1" />
-                  <span>
-                    {timeStart} - {timeEnd}
-                  </span>
+
+              <div className="flex items-center mb-2">
+                <div>
+                  {firstSpeaker && (
+                    <>
+                      <p className="text-lg font-bold text-gray-800">
+                        {firstSpeaker.name}
+                      </p>
+
+                      {firstSpeaker.job && (
+                        <p className="text-sm leading-none italic text-gray-600">
+                          {firstSpeaker.job}
+                        </p>
+                      )}
+                    </>
+                  )}
                 </div>
               </div>
+
               <div className="text-gray-600 line-clamp-3">
                 <HtmlContent
                   html={talk.abstract}
                   className="text-sm leading-tight"
                 />
               </div>
+
               <div className="flex flex-wrap gap-1 mt-2">
                 {talk?.level &&
                   talk.level.map((levelItem) => (
@@ -85,9 +99,11 @@ const TalkCard: React.FC<TalkCardProps> = ({
                   ))}
               </div>
             </div>
+
             <div
               className={clsx(
                 rightColumnWidth,
+
                 'flex flex-col items-center justify-center'
               )}
             >
@@ -101,6 +117,7 @@ const TalkCard: React.FC<TalkCardProps> = ({
                       height={isSessionDetailPage ? 192 : 128}
                       className={clsx(
                         imageSizeClass,
+
                         'rounded-lg object-cover'
                       )}
                     />
@@ -108,6 +125,7 @@ const TalkCard: React.FC<TalkCardProps> = ({
                     <div
                       className={clsx(
                         imageSizeClass,
+
                         'rounded-lg bg-gray-200 flex items-center justify-center'
                       )}
                     >

@@ -9,7 +9,7 @@ const FeaturedTalks = () => {
   const allSpeakers = getSpeakers()
 
   // TODO: Replace with the actual talk IDs provided by the user
-  const featuredTalkIds = ['genai-202', 'cloud-203', 'mobile-201']
+  const featuredTalkIds = ['4e750be0', '436aadeb']
 
   const featuredTalks = allTalks.filter((talk) =>
     featuredTalkIds.includes(talk.id)

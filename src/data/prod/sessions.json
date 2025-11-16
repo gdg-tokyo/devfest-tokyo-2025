@@ -229,5 +229,19 @@
     "description": "<div><p>Coming soon ...</p></div>",
     "perspective": ["Introduction"],
     "session_chair_id": null
+  },
+  {
+    "id": "2a97516c",
+    "slug": "demo",
+    "talk_ids": ["0c969ca6", "edd38be9", "1905b944", "ea28a563"],
+    "track": null,
+    "time_start": null,
+    "time_end": null,
+    "title": "学生 DEMO 展示",
+    "level": ["Beginner"],
+    "tech_tags": ["DEMO"],
+    "description": "<div><p>学生による DEMO の展示をラウンジにて行います。</p></div>",
+    "perspective": ["Introduction", "Challenge"],
+    "session_chair_id": null
   }
 ]

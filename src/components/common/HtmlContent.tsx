@@ -3,9 +3,19 @@ import clsx from 'clsx'
 import { useMemo } from 'react'
 import sanitizeHtml from 'sanitize-html'
 
-type Props = { html: string; className?: string; stripHtmlTags?: boolean }
+type Props = {
+  html: string
+  className?: string
+  stripHtmlTags?: boolean
+  'data-testid'?: string
+}
 
-export default function HtmlContent({ html, className, stripHtmlTags }: Props) {
+export default function HtmlContent({
+  html,
+  className,
+  stripHtmlTags,
+  'data-testid': dataTestId,
+}: Props) {
   const sanitized = useMemo(() => {
     if (stripHtmlTags) {
       return sanitizeHtml(html, {
@@ -62,6 +72,7 @@ export default function HtmlContent({ html, className, stripHtmlTags }: Props) {
       <div
         className={clsx(className)}
         dangerouslySetInnerHTML={{ __html: sanitized }}
+        data-testid={dataTestId}
       />
     )
   }
@@ -73,6 +84,7 @@ export default function HtmlContent({ html, className, stripHtmlTags }: Props) {
         className
       )}
       dangerouslySetInnerHTML={{ __html: sanitized }}
+      data-testid={dataTestId}
     />
   )
 }

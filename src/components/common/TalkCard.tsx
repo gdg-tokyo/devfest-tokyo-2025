@@ -140,6 +140,15 @@ const TalkCard: React.FC<TalkCardProps> = ({
               {levelItem}
             </span>
           ))}
+        {talk?.tech_tags &&
+          talk.tech_tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs px-1 py-0 rounded-full border border-black bg-gray-200 text-gray-800"
+            >
+              {tag}
+            </span>
+          ))}
       </div>
     </Link>
   )

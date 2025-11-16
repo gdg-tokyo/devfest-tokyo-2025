@@ -12,18 +12,27 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 const TimetablePage = () => {
   const allSessions: Session[] = getSessions()
 
+  const displayableSessions = useMemo(() => {
+    return allSessions.filter(
+      (session) =>
+        session.time_start !== null &&
+        session.time_end !== null &&
+        session.track !== null
+    )
+  }, [allSessions])
+
   const [filters, setFilters] = useState<{ levels: string[]; keyword: string }>(
     { levels: [], keyword: '' }
   )
   const [showNoDataMessage, setShowNoDataMessage] = useState(false)
 
   useEffect(() => {
-    if (allSessions.length === 0) {
+    if (displayableSessions.length === 0) {
       setShowNoDataMessage(true)
     } else {
       setShowNoDataMessage(false)
     }
-  }, [allSessions])
+  }, [displayableSessions])
 
   const handleFilterChange = useCallback(
     (newFilters: { levels: string[]; keyword: string }) => {
@@ -37,35 +46,37 @@ const TimetablePage = () => {
 
   // --- Moved logic from TimetableGrid --- //
   const tracks = Array.from(
-    new Set(allSessions.map((session) => session.track))
+    new Set(displayableSessions.map((session) => session.track))
   ).sort()
 
   const displayTracks =
     tracks.length > 0 ? tracks : ['Track A', 'Track B', 'Track C', 'Track D']
 
-  const allStartTimes = allSessions.map((s) => s.time_start)
-  const allEndTimes = allSessions.map((s) => s.time_end)
+  const allStartTimes = displayableSessions.map((s) => s.time_start)
+  const allEndTimes = displayableSessions.map((s) => s.time_end)
 
   const earliestTime =
     allStartTimes.length > 0 ? allStartTimes.sort()[0] : '09:00'
   const latestTime =
     allEndTimes.length > 0 ? allEndTimes.sort().reverse()[0] : '18:00'
 
-  const allTimeSlots = generateTimeSlots(allSessions)
+  const allTimeSlots = generateTimeSlots(displayableSessions)
   // --- End of moved logic --- //
 
   const hasMatchingSessions = useMemo(() => {
     // This logic needs to use the filterSession from utils.ts
-    return allSessions.some((session) => filterSession(session, filters))
-  }, [allSessions, filters])
+    return displayableSessions.some((session) =>
+      filterSession(session, filters)
+    )
+  }, [displayableSessions, filters])
 
   const availableLevels = useMemo(() => {
     const validLevels = ['Beginner', 'Intermediate', 'Advanced']
-    const levels = allSessions
+    const levels = displayableSessions
       .flatMap((s) => s.level || [])
       .filter((level) => validLevels.includes(level))
     return Array.from(new Set(levels))
-  }, [allSessions])
+  }, [displayableSessions])
 
   return (
     <div className="container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl p-4">
@@ -74,17 +85,17 @@ const TimetablePage = () => {
         onFilterChange={handleFilterChange}
         availableLevels={availableLevels}
       />
-      {allSessions.length > 0 ? (
+      {displayableSessions.length > 0 ? (
         hasMatchingSessions ? (
           <>
             <TimetableList
-              sessions={allSessions}
+              sessions={displayableSessions}
               filters={filters}
               allTimeSlots={allTimeSlots}
               filterSession={filterSession}
             />
             <TimetableGrid
-              sessions={allSessions}
+              sessions={displayableSessions}
               filters={filters}
               allTimeSlots={allTimeSlots}
               displayTracks={displayTracks}

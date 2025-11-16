@@ -318,5 +318,29 @@
     "photo_url": "/images/speakers/icons/jetha.jpeg",
     "job": "Google DeepMind, Technical Solutions Consultant",
     "twitter_handle": "jetha"
+  },
+  {
+    "id": "557def98",
+    "name": "GDGoC TCU",
+    "bio": "<div><p>私たちは「課題解決のためのプロダクトをチームで完成させること」を目標に、様々なイベントを開催しています！</p><p></p></div>",
+    "photo_url": "/images/demo/tcu-medflow-logo.jpeg",
+    "job": "Google Developer Groups on Campus Tokyo City University",
+    "twitter_handle": ""
+  },
+  {
+    "id": "18db0a1c",
+    "name": "GDGoC Waseda",
+    "bio": "<div><p>Google Developer Groups on Campus Waseda University (GDGoC Waseda)。早稲田からは過去にsolution challenge に参加した２つのプロジェクトを展示します。</p><p></p></div>",
+    "photo_url": "/images/demo/waseda-logo.png",
+    "job": "Google Developer Groups on Campus Waseda University",
+    "twitter_handle": ""
+  },
+  {
+    "id": "3085c155",
+    "name": "東京国際工科専門職大学",
+    "bio": "<div></div>",
+    "photo_url": "/images/demo/iput-studism.png",
+    "job": "",
+    "twitter_handle": ""
   }
 ]

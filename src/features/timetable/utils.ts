@@ -4,7 +4,11 @@ import { getTalks, getSpeakers } from '@/lib/data-parser'
 const minutesPerSlot = 10 // Granularity of time slots
 
 export const generateTimeSlots = (sessions: Session[]): string[] => {
-  if (sessions.length === 0) {
+  const validSessions = sessions.filter(
+    (s) => s.time_start !== null && s.time_end !== null && s.track !== null
+  )
+
+  if (validSessions.length === 0) {
     // Default times, still 30 min intervals for default
     return [
       '09:00',
@@ -20,7 +24,7 @@ export const generateTimeSlots = (sessions: Session[]): string[] => {
     ]
   }
 
-  const allTimes = sessions.flatMap((s) => [s.time_start, s.time_end])
+  const allTimes = validSessions.flatMap((s) => [s.time_start, s.time_end])
 
   const dateTimes = allTimes.map((timeStr) => {
     const [h, m] = timeStr.split(':').map(Number)

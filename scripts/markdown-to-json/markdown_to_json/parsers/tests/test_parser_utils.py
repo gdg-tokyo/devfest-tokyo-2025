@@ -1,4 +1,5 @@
 import pytest
+from pathlib import Path
 
 from markdown_to_json.parsers import parser_utils
 
@@ -107,3 +108,48 @@ def test_extract_slug_talk():
     assert parser_utils.extract_slug("talk-1.md", "talk") == "1"
     assert parser_utils.extract_slug("my-talk.md", "talk") == "my-talk"
     assert parser_utils.extract_slug("talk.md", "talk") == "talk"
+
+
+# --- resolve_image_path Tests ---
+def test_resolve_image_path_relative_to_public():
+    # Simulate a file located deep within the docs structure
+    file_path = "/repo_root/scripts/markdown-to-json/docs/web/prod/sessions/13-lightning-talks/talk-iput-nagoya.md"
+    # Simulate a raw_url that goes up to the repo root and then into public
+    raw_url = "../../../../../public/images/speakers/icons/test-speaker.jpeg"
+    
+    # Mock _REPO_ROOT_DIR for this test to be predictable
+    original_repo_root = parser_utils._REPO_ROOT_DIR
+    parser_utils._REPO_ROOT_DIR = Path("/repo_root")
+
+    try:
+        resolved_path = parser_utils.resolve_image_path(raw_url, file_path)
+        assert resolved_path == "/images/speakers/icons/test-speaker.jpeg"
+    finally:
+        # Restore original _REPO_ROOT_DIR
+        parser_utils._REPO_ROOT_DIR = original_repo_root
+
+def test_resolve_image_path_root_relative():
+    file_path = "/repo_root/docs/web/prod/sessions/13-lightning-talks/talk-iput-nagoya.md"
+    raw_url = "/images/some-image.png"
+    
+    original_repo_root = parser_utils._REPO_ROOT_DIR
+    parser_utils._REPO_ROOT_DIR = Path("/repo_root")
+
+    try:
+        resolved_path = parser_utils.resolve_image_path(raw_url, file_path)
+        assert resolved_path == "/images/some-image.png"
+    finally:
+        parser_utils._REPO_ROOT_DIR = original_repo_root
+
+def test_resolve_image_path_external_url():
+    file_path = "/repo_root/docs/web/prod/sessions/13-lightning-talks/talk-iput-nagoya.md"
+    raw_url = "https://example.com/external-image.jpg"
+    
+    original_repo_root = parser_utils._REPO_ROOT_DIR
+    parser_utils._REPO_ROOT_DIR = Path("/repo_root")
+
+    try:
+        resolved_path = parser_utils.resolve_image_path(raw_url, file_path)
+        assert resolved_path == "https://example.com/external-image.jpg"
+    finally:
+        parser_utils._REPO_ROOT_DIR = original_repo_root

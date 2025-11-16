@@ -15,10 +15,10 @@ time_end: '17:50'
 
 名古屋国際工科専門職大学 工科学部 情報工学科 IoTシステムコース３年の砂川優治（Yuji Sunagawa）です。８年間ブラジルに住んでいた経験と、今学んでいる情報技術を活用して、多文化共生に貢献する方法を模索しています。
 
-![speaker](/images/speakers/yuji-sunagawa.jpg)
+![speaker](../../../../../public/images/speakers/icons/yuji-sunagawa.jpeg)
 
 ### sota さん / 名古屋国際工科専門職大学 学生
 
 学生で就活中なので、いいご縁があるといいなと思っています！
 
-![speaker](https://i.ibb.co/vCKnT0BJ/987-D4-D73-A2-E7-4-C1-D-985-A-F48-A25-C2228-D.png)
+![speaker](../../../../../public/images/speakers/icons/sota.jpeg)

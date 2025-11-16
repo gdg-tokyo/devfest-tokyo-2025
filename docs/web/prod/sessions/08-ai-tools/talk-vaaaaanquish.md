@@ -17,6 +17,6 @@ time_start: '16:00'
 
 機械学習エンジニアとしてスタートアップ、メガベンチャーを経験した後、エムスリー株式会社に入社。2023年よりVice President of Engineering。株式会社ElithやPIVOT株式会社 にてTechnical Advisorを務める。OSSや技術登壇の実績が認められ、2023年にGoogle Cloud Developer Experts (AI/ML)に就任。
 
-![speaker](/images/speakers/icons/vaaaaanquish.png)
+![speaker](../../../../../public/images/speakers/icons/vaaaaanquish.png)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/vaaaaanquish.jpg)

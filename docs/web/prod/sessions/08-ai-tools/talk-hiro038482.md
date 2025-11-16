@@ -17,6 +17,6 @@ time_start: '16:20'
 
 Google Cloud のカスタマーエンジニアとして、Google Cloud Platform の技術サポートを担当しています。お客様のクラウドシステム構築を支援するため、新サービスやソリューションの紹介、アーキテクチャ設計、PoC 支援などを幅広く手掛けています。最近は、Gemini などの生成 AI モデルや ADK、Agent Engine といった最新技術の導入支援にも力を入れています。
 
-![speaker](/images/speakers/icons/hiro038482.jpg)
+![speaker](../../../../../public/images/speakers/icons/hiro038482.jpg)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/hiro038482.jpg)

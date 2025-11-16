@@ -17,6 +17,6 @@ time_start: '16:15'
 
 新卒でヤフー株式会社に入社。広告やメディア領域でデータを活用した業務に従事。その後、スタートアップとコンサルティング会社を経てデジタル庁の入庁。データPMとして活動中
 
-![speaker](/images/speakers/icons/masafumitsubamoto.png)
+![speaker](../../../../../public/images/speakers/icons/masafumitsubamoto.png)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/masafumi-tsubamoto.jpg)

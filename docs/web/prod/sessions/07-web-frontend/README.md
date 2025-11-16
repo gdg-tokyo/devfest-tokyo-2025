@@ -20,7 +20,7 @@ Angular日本ユーザー会は日本のAngular開発者によるユーザーコ
 
 https://community.angular.jp/
 
-![community_logo](https://community.angular.jp/assets/image/logo.svg)
+![community_logo](../../../../../public/images/stakeholders/ng-japan.svg)
 
 ## Session Chair
 
@@ -28,4 +28,4 @@ https://community.angular.jp/
 
 Angular が大好きな黄色い人。Angular日本ユーザー会のスタッフもやってます。
 
-![speaker](https://storage.googleapis.com/gdg-tokyo-web-public/events/20251122-devfest25/speaker-headshot/fusho-takahashi.jpg)
+![speaker](../../../../../public/images/speakers/icons/fusho-takahashi.jpeg)

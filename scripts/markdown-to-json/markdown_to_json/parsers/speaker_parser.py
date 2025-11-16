@@ -1,5 +1,6 @@
 import re
 from typing import List, Tuple
+
 import markdown
 from bs4 import BeautifulSoup, NavigableString
 
@@ -11,7 +12,7 @@ from markdown_to_json.parsers.parser_utils import (
 
 
 def parse_speaker_from_content(
-    content: str, file_path: str, docs_base_path: str
+    content: str, file_path: str
 ) -> Tuple[List[Speaker], List[str]]:
     """Parses multiple speaker information from markdown content by converting it to HTML."""
     html = markdown.markdown(content)
@@ -40,9 +41,7 @@ def parse_speaker_from_content(
                 img_tag = bio_sibling.find("img", alt="speaker")
                 if bio_sibling.name == "p" and img_tag:
                     raw_photo_url = img_tag.get("src", "")
-                    photo_url = resolve_image_path(
-                        raw_photo_url, file_path, docs_base_path
-                    )
+                    photo_url = resolve_image_path(raw_photo_url, file_path)
                 else:
                     bio_elements.append(str(bio_sibling))
 
@@ -71,7 +70,7 @@ def parse_speaker_from_content(
 
 
 def parse_speaker_from_subheading_content(
-    content: str, file_path: str, docs_base_path: str
+    content: str, file_path: str
 ) -> Tuple[List[Speaker], List[str]]:
     """
     Parses speaker information from markdown content where the speaker section
@@ -102,9 +101,7 @@ def parse_speaker_from_subheading_content(
         img_tag = bio_sibling.find("img", alt="speaker")
         if bio_sibling.name == "p" and img_tag:
             raw_photo_url = img_tag.get("src", "")
-            photo_url = resolve_image_path(
-                raw_photo_url, file_path, docs_base_path
-            )
+            photo_url = resolve_image_path(raw_photo_url, file_path)
         else:
             bio_elements.append(str(bio_sibling))
 

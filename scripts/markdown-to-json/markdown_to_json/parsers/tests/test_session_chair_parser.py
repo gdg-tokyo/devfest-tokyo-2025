@@ -71,7 +71,7 @@ This is a test community description.
 def test_parse_session_chair_from_content_full(sample_session_chair_content):
     session_slug = "test-session-id"
     session_chair, speakers_map = parse_session_chair_from_content(
-        sample_session_chair_content, session_slug, "dummy/path/file.md", "dummy/path"
+        sample_session_chair_content, session_slug, "dummy/path/file.md"
     )
 
     expected_session_chair_id = hashlib.sha256(
@@ -110,7 +110,6 @@ def test_parse_session_chair_from_content_no_community_url_logo(
         sample_session_chair_content_no_community_url_logo,
         session_slug,
         "dummy/path/file.md",
-        "dummy/path",
     )
 
     expected_session_chair_id = hashlib.sha256(
@@ -141,7 +140,6 @@ def test_parse_session_chair_from_content_no_community(
         sample_session_chair_content_no_community,
         session_slug,
         "dummy/path/file.md",
-        "dummy/path",
     )
 
     expected_session_chair_id = hashlib.sha256(
@@ -165,7 +163,6 @@ def test_parse_session_chair_from_content_no_chair(
         sample_session_chair_content_no_chair,
         session_slug,
         "dummy/path/file.md",
-        "dummy/path",
     )
 
     expected_session_chair_id = hashlib.sha256(
@@ -183,7 +180,7 @@ def test_parse_session_chair_from_content_no_chair(
 def test_parse_session_chair_from_content_empty():
     session_slug = "test-session-id-5"
     session_chair, speakers_map = parse_session_chair_from_content(
-        "Some random content", session_slug, "dummy/path/file.md", "dummy/path"
+        "Some random content", session_slug, "dummy/path/file.md"
     )
 
     assert session_chair is None

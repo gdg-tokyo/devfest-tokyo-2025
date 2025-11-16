@@ -20,7 +20,7 @@ DroidKaigiはエンジニアが主役のAndroidカンファレンスです。And
 
 https://2025.droidkaigi.jp/
 
-![community_logo](/images/stakeholders/droidkaigi-logo.png)
+![community_logo](../../../../../public/images/stakeholders/droidkaigi-logo.png)
 
 ## Session Chair
 
@@ -28,4 +28,4 @@ https://2025.droidkaigi.jp/
 
 モバイル技術のカンファレンスDroidKaigiの代表、技術書が20万冊以上集まる技術の祭典 技術書典 主宰を務める。コミュニティの発展・技術普及に関心をもち、エンジニアリングでの社会貢献を目指している。
 
-![speaker](https://pbs.twimg.com/profile_images/1396653901844078592/gCJOUsy2_400x400.jpg)
+![speaker](../../../../../public/images/speakers/icons/mhidaka.jpeg)

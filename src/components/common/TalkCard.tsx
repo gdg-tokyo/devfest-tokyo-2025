@@ -83,6 +83,7 @@ const TalkCard: React.FC<TalkCardProps> = ({
                   html={talk.abstract}
                   className="text-sm leading-tight line-clamp-3"
                   stripHtmlTags={true}
+                  data-testid="talk-abstract"
                 />
               </div>
             </div>

@@ -17,4 +17,4 @@ Goではリリースサイクルに則って半年に1度のリリースがあ�
 
 Software Engineer at newmo Go Conference main organizer Cluster API reviewer, Kube API Linter reviewer, Argo CD member
 
-![speaker](https://github.com/sivchari.png)
+![speaker](../../../../../public/images/speakers/icons/sivchari.jpeg)

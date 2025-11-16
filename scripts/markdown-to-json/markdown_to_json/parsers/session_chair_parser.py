@@ -9,6 +9,7 @@ from markdown_to_json.data_model.speaker import Speaker
 from markdown_to_json.parsers.markdown_utils import markdown_to_safe_html
 from markdown_to_json.parsers.parser_utils import (
     _generate_hash_id,
+    resolve_image_path,
 )
 from markdown_to_json.parsers.speaker_parser import (
     parse_speaker_from_subheading_content,
@@ -19,7 +20,6 @@ def parse_session_chair_from_content(
     content: str,
     session_slug: str,
     file_path: str,
-    docs_base_path: str,
 ) -> Tuple[Optional[SessionChair], Dict[str, Speaker]]:
     """
     Parses session chair community and individual chair information from markdown content.
@@ -55,9 +55,11 @@ def parse_session_chair_from_content(
         )
         if logo_match:
             community_logo_url = logo_match.group("logo_url")
+            community_logo_url = resolve_image_path(community_logo_url, file_path)
             community_description_raw = re.sub(
                 r"!\[community_logo\]\([^)]+\)", "", community_description_raw
             ).strip()
+
 
         # Then extract URL
         url_match = re.search(r"https?://[^\s/$.?#].[^\s]*", community_description_raw)
@@ -84,7 +86,7 @@ def parse_session_chair_from_content(
 
     for section in speaker_sections:
         speakers_data, _ = parse_speaker_from_subheading_content(
-            section, file_path, docs_base_path
+            section, file_path
         )
         if speakers_data:
             chair_speakers.extend(speakers_data)

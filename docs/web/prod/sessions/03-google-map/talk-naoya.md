@@ -21,6 +21,6 @@ Google Mapsの機能を開発者向けに提供するGoogle Maps Platformにと�
 
 2011年3月よりGoogle Japanにて現Google Cloudのプリセールスを担当。東日本大震災で地図・空間情報の持つ力を目の当たりにし、Google MapsのAPIビジネスにも注力。2015年にシンガポールへ転籍し、東南アジアのクラウドビジネス立ち上げ、特にデータ活用分野におけるプリセールスに貢献。2022年より現職のGoogle Maps Platformの製品部門にて、主に早期製品を担当するソリューションエンジニアとして従事。
 
-![speaker](/images/speakers/icons/naoyamoritani.jpg)
+![speaker](../../../../../public/images/speakers/icons/naoyamoritani.jpg)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/naoya-moritani.jpg)

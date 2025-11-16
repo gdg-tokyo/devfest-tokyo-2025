@@ -13,8 +13,9 @@ It has multiple paragraphs.
 
 ![speaker](https://example.com/jane.jpg)
 """
+
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "dummy/path/file.md", "dummy/path"
+        markdown_content, "dummy/path/file.md"
     )
 
     assert len(speakers) == 1
@@ -39,7 +40,7 @@ def test_parse_multiple_speakers_from_content():
 
 名古屋国際工科専門職大学 工科学部 情報工学科 IoTシステムコース３年の砂川優治（Yuji Sunagawa）です。８年間ブラジルに住んでいた経験と、今学んでいる情報技術を活用して、多文化共生に貢献する方法を模索しています。
 
-![speaker](/images/speakers/yuji-sunagawa.jpg)
+![speaker](../../../../../public/images/speakers/icons/yuji-sunagawa.jpeg)
 
 ### sota さん / 名古屋国際工科専門職大学 学生
 
@@ -48,7 +49,7 @@ def test_parse_multiple_speakers_from_content():
 ![speaker](https://i.ibb.co/vCKnT0BJ/987-D4-D73-A2-E7-4-C1-D-985-A-F48-A25-C2228-D.png)
 """
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "dummy/path/file.md", "dummy/path"
+        markdown_content, "docs/web/prod/sessions/13-lightning-talks/talk-iput-nagoya.md"
     )
 
     assert len(speakers) == 2
@@ -58,7 +59,7 @@ def test_parse_multiple_speakers_from_content():
     speaker1 = speakers[0]
     assert speaker1.name == "砂川優治"
     assert speaker1.job == "名古屋国際工科専門職大学 学生"
-    assert speaker1.photo_url == "/images/speakers/yuji-sunagawa.jpg"
+    assert speaker1.photo_url == "/images/speakers/icons/yuji-sunagawa.jpeg"
     assert speaker_ids[0] == "4a82c45d"
 
     # Test second speaker
@@ -90,7 +91,7 @@ And another image to ignore:
 ![another_image](https://example.com/another.jpg)
 """
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "dummy/path/file.md", "dummy/path"
+        markdown_content, "dummy/path/file.md"
     )
 
     assert len(speakers) == 1
@@ -110,7 +111,7 @@ John's bio without a photo.
 
 """
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "dummy/path/file.md", "dummy/path"
+        markdown_content, "dummy/path/file.md"
     )
 
     assert len(speakers) == 1
@@ -133,7 +134,7 @@ def test_parse_speaker_from_content_no_metadata():
 Bob's bio with no extra metadata.
 """
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "dummy/path/file.md", "dummy/path"
+        markdown_content, "dummy/path/file.md"
     )
 
     assert len(speakers) == 1
@@ -154,7 +155,7 @@ def test_parse_speaker_from_content_no_speaker_section():
 This is a talk without a speaker section.
 """
     speakers, speaker_ids = parse_speaker_from_content(
-        markdown_content, "dummy/path/file.md", "dummy/path"
+        markdown_content, "dummy/path/file.md"
     )
 
     assert speakers == []

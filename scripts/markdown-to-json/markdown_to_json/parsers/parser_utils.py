@@ -5,33 +5,43 @@ from pathlib import Path
 import markdown
 from bs4 import BeautifulSoup
 
+_REPO_ROOT_DIR = Path(__file__).parents[4].resolve()
 
 def _generate_hash_id(text: str) -> str:
     """Generates a 32-bit (8 hex characters) SHA-256 hash from the given text."""
     return hashlib.sha256(text.encode("utf-8")).hexdigest()[:8]
 
 
-def resolve_image_path(raw_url: str, file_path: str, docs_base_path: str) -> str:
+def resolve_image_path(raw_url: str, file_path: str) -> str:
     """Resolves a raw image URL to a public path."""
     if raw_url.startswith("http://") or raw_url.startswith("https://"):
         return raw_url
 
+    # If the raw_url is already root-relative, return it as is.
     if raw_url.startswith("/"):
         return raw_url
 
     # Path is relative to the markdown file.
-    file_dir = Path(file_path).parent
-    resolved_image_path = (file_dir / raw_url).resolve()
+    file_dir = Path(file_path).parent.resolve()
 
-    project_root = Path(docs_base_path).parent.parent.resolve()
-    public_dir = project_root / "public"
+    # Check if the raw_url is trying to reference the top-level public directory
+    # by going up directories and then into 'public/'
+    if "public/" in raw_url and "../" in raw_url:
+        # Extract the part of the path after 'public/'
+        public_index = raw_url.find("public/")
+        path_after_public = raw_url[public_index + len("public/"):]
+        resolved_image_path = (_REPO_ROOT_DIR / "public" / path_after_public).resolve()
+    else:
+        resolved_image_path = (file_dir / raw_url).resolve()
+
+    public_dir = _REPO_ROOT_DIR / "public"
 
     try:
         relative_to_public = resolved_image_path.relative_to(public_dir)
         return "/" + str(relative_to_public)
     except ValueError:
+        # Fallback to original raw_url if it cannot be resolved to public
         return raw_url
-
 
 def extract_title_and_description(markdown_content: str) -> dict:
     """

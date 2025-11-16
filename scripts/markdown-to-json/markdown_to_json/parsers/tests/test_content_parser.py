@@ -22,7 +22,7 @@ And here is a talk thumbnail:
 """
     with patch("builtins.open", mock_open(read_data=markdown_content)):
         talk, _ = _parse_talk(
-            "dummy/path/file.md", "talk-id", "Track A", "talk-slug", "dummy/path"
+            "dummy/path/file.md", "talk-id", "Track A", "talk-slug"
         )
 
     assert talk is not None

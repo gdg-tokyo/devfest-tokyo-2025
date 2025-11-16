@@ -1,3 +1,15 @@
+## 2025-11-16 00:00
+
+### INTERNAL MODULE DEPENDENCY
+
+- The `HtmlContent` component (`src/components/common/HtmlContent.tsx`) renders a `div` when `stripHtmlTags` is true and an `article` when false. This distinction is crucial for E2E test locators.
+
+### PR REVIEW ASPECT
+
+- When testing CSS properties like `webkitLineClamp` in E2E tests, it's crucial to target the _exact_ DOM element where the property is applied. Generic locators or assumptions about DOM structure can lead to brittle tests.
+- Using `data-testid` attributes is a highly effective practice for creating stable and unambiguous E2E tests, especially when dealing with components that dynamically render different HTML elements or when CSS classes might not be unique enough.
+- Do not prematurely revert code that makes tests pass, even if it seems like a "temporary" measure, until the underlying reason for its necessity is fully understood.
+
 # Latest Learnings
 
 ## 2025-11-15 18:00

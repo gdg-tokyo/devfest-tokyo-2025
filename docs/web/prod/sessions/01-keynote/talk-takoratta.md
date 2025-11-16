@@ -21,6 +21,6 @@ time_start: '12:40'
 
 外資系IT企業3社にて、ソフトウェアエンジニア、プロダクトマネージャー、エンジニアリングマネージャーとして勤務する。その後、スタートアップを経て、独立。2019年1月、テクノロジーにより企業や社会の変革を支援するTably株式会社を設立。著書『ソフトウェア・ファースト～あらゆるビジネスを一変させる最強戦略～』（日経BP）、『プロダクトマネジメントのすべて』（翔泳社）
 
-![speaker](/images/speakers/icons/takoratta.png)
+![speaker](../../../../../public/images/speakers/icons/takoratta.png)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/takoratta.jpg)

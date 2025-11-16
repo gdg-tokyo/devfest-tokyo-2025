@@ -21,6 +21,6 @@ time_start: '12:20'
 
 ミドルベリー大学にて学士号、Google在職中にカーネギーメロン大学にてソフトウェア工学修士号を取得。
 
-![speaker](/images/speakers/icons/caixinmei.png)
+![speaker](../../../../../public/images/speakers/icons/caixinmei.png)
 
 ![talk_thumbnail](../../../../../public/images/thumbnail/talks/xinmei.jpg)

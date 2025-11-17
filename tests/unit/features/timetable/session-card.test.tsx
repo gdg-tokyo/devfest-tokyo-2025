@@ -31,6 +31,12 @@ describe('SessionCard', () => {
       title: 'Test Talk',
       speaker_ids: ['speaker1'],
       abstract: 'Abstract for test talk',
+      time_start: '09:00',
+      time_end: '09:45',
+      track: 'Track A',
+      level: ['Beginner'],
+      perspective: ['Introduction'],
+      tech_tags: [],
     },
   ]
 
@@ -39,7 +45,9 @@ describe('SessionCard', () => {
       id: 'speaker1',
       name: 'Test Speaker',
       bio: 'Bio for test speaker',
-      profile_image: 'speaker.jpg',
+      photo_url: 'speaker.jpg',
+      job: 'Developer',
+      twitter_handle: 'testspeaker',
     },
   ]
 
@@ -84,14 +92,14 @@ describe('SessionCard', () => {
     const { rerender } = render(
       <SessionCard session={mockSession} isGrayedOut={true} />
     )
-    expect(screen.getByText('Test Session Title').closest('div')).toHaveClass(
+    expect(screen.getByTestId('session-card-session1')).toHaveClass(
       'opacity-30'
     )
 
     rerender(<SessionCard session={mockSession} isGrayedOut={false} />)
-    expect(
-      screen.getByText('Test Session Title').closest('div')
-    ).not.toHaveClass('opacity-30')
+    expect(screen.getByTestId('session-card-session1')).not.toHaveClass(
+      'opacity-30'
+    )
   })
 
   it('displays skill level tags with correct colors', () => {

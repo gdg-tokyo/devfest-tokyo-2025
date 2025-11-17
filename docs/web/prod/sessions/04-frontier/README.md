@@ -13,6 +13,8 @@ track: Track C
 
 あなたにとっての未知の領域に一緒に踏み込み、新しい視点を手に入れましょう！
 
+![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/frontier.png)
+
 ## Session Chair Community
 
 ### ML女子部

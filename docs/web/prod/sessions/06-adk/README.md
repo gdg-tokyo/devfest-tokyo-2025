@@ -14,6 +14,8 @@ AI エージェント開発に挑戦したい方に向けて、ADK (Agent Develo
 
 まず、Agent Developer Kit (ADK) の概要と最新情報・今後のロードマップをご紹介します。そしてより実践的な、データ分析エージェントの開発レシピや、音声や動画を取り入れるストリーミング機能の開発 Tipsなどをご紹介します。
 
+![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/adk.png)
+
 ## Session Chair Community
 
 ### ADK User Group JP

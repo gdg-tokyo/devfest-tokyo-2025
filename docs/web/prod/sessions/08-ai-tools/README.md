@@ -16,6 +16,8 @@ track: Track A
 
 みなさんも「本気の活用」をここから始めましょう！
 
+![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/ai-tools.png)
+
 ## Session Chair Community
 
 ### Jagu'e'r (Japan Google Cloud User Group for Enterprise)

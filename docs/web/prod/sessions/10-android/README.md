@@ -12,6 +12,8 @@ track: Track C
 
 モバイルアプリ開発者向けのAI活用ガイドです。Google公式サンプルアプリ「Androidify」から学ぶ AI 機能実装から、Android StudioのGemini機能、Flutterを例に AI エージェントを活用したアプリ開発手法など、最新のAI技術を Android/Flutter開発 に取り込み、どのようにユーザー価値を向上していくのか、エキスパートの目線で実務に活きる知識として噛み砕いて紹介します。
 
+![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/android.png)
+
 ## Session Chair Community
 
 ### DroidKaigi

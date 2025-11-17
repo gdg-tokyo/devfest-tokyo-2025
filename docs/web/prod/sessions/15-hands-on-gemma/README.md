@@ -11,3 +11,5 @@ track: Track D
 # [Hands-on] Gemma
 
 VLMであるGemma 3を活かして、AIの「新しい目」で動くアレルゲンチェッカーを作ろうぜ！
+
+![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/hands-on.png)

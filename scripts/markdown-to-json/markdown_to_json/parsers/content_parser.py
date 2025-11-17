@@ -80,6 +80,7 @@ def parse_sessions_and_talks(
             talk_entry, speakers_data = _parse_talk(
                 talk_file_path,
                 talk_id,
+                session_id,
                 session_entry.track if session_entry else "Unknown Track",
                 talk_slug,
             )
@@ -141,7 +142,7 @@ def _parse_session(
 
 
 def _parse_talk(
-    talk_file_path, talk_id, session_track, talk_slug
+    talk_file_path, talk_id, session_id, session_track, talk_slug
 ) -> Tuple[Talk | None, List[Speaker]]:
     """Parses a single talk markdown file and returns a Talk object and a list of Speaker objects."""
     with open(talk_file_path, "r", encoding="utf-8") as f:
@@ -163,6 +164,7 @@ def _parse_talk(
     talk_entry = Talk(
         id=talk_id,
         slug=talk_slug,
+        session_id=session_id,
         title=title,
         abstract=abstract_html,
         time_start=post.metadata.get("time_start", "00:00"),

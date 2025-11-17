@@ -9,6 +9,7 @@ class Talk:
 
     id: str
     slug: str
+    session_id: str
     title: str
     abstract: str
     time_start: str

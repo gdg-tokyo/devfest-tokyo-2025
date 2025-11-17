@@ -24,6 +24,7 @@ export interface Speaker {
 
 export interface Talk {
   id: string
+  session_id?: string
   title: string
   abstract: string
   time_start: string

@@ -18,4 +18,5 @@ class Session:
     tech_tags: List[str]
     description: str
     perspective: List[str]
+    thumbnail_url: Optional[str] = None
     session_chair_id: Optional[str] = None

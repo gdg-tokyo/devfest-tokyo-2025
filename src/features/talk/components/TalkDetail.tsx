@@ -101,6 +101,8 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
           </h2>
           <SessionCard
             session={getSessions().find((s) => s.id === talk.session_id)!}
+            showAbstract={true}
+            showThumbnail={true}
           />
         </div>
       )}

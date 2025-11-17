@@ -23,11 +23,3 @@ Agent Development Kit (ADK) は、生成AIを活用したエージェント開�
 https://adk.connpass.com/
 
 ![community_logo](../../../../../public/images/speakers/adk-ug-jp.png)
-
-## Session Chair
-
-### 大橋啓介 さん (@soundTricker318) / 株式会社カブク CTO
-
-Workspace、Google Cloud、Angular、GASの人 一応Google Developer Expert(Workspace)です。最近はADKをいっぱい触っています。
-
-![speaker](../../../../../public/images/speakers/icons/soundtricker318.jpg)

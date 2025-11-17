@@ -16,8 +16,8 @@
   {
     "id": "ced1dcf7",
     "slug": "sherry-xu",
-    "title": "Opening Remark",
-    "abstract": "<div><p>Coming soon ...</p></div>",
+    "title": "Opening - Google デベロッパー コミュニティと共に成長しよう",
+    "abstract": "<div><p>Google DevRel 日本代表の Sherry Xu が、DevFest のオープニングを飾ります。2025 年に達成した日本のデベロッパープログラムの成果と、コミュニティ支援のための具体的なプログラムをご紹介いたします。また、参加者への特別なサプライズを発表します。さらに、今年は Google の超上級エグゼクティブからのスペシャルメッセージもございます。日本の開発者コミュニティの皆様に向けた、特別な激励のメッセージにどうぞご期待ください。</p></div>",
     "time_start": "12:05",
     "time_end": "12:20",
     "track": "Track A",
@@ -72,16 +72,16 @@
   {
     "id": "3798ff7f",
     "slug": "satoru",
-    "title": "Coming soon ...",
+    "title": "データと生成 AI をうまく使ってみる！",
     "abstract": "<div><p>Coming soon ...</p></div>",
     "time_start": "13:40",
     "time_end": "14:00",
     "track": "Track A",
     "speaker_ids": ["4d58b9ed"],
-    "tech_tags": ["BigQuery"],
+    "tech_tags": ["BigQuery", "AI"],
     "level": ["Advanced"],
     "perspective": ["Challenge"],
-    "thumbnail_url": null
+    "thumbnail_url": "/images/thumbnail/talks/original/satoru.jpg"
   },
   {
     "id": "67ceea06",
@@ -476,6 +476,20 @@
     "thumbnail_url": null
   },
   {
+    "id": "7c4dff99",
+    "slug": "ohtaman-lt",
+    "title": "数理最適化MCPをつくったよ！",
+    "abstract": "<div></div>",
+    "time_start": "17:00",
+    "time_end": "17:50",
+    "track": "Track A",
+    "speaker_ids": ["6adf168f"],
+    "tech_tags": ["MCP", "LT"],
+    "level": ["Advanced"],
+    "perspective": ["Challenge"],
+    "thumbnail_url": null
+  },
+  {
     "id": "1fa92a23",
     "slug": "riochin2623",
     "title": "開発経験1年、そろそろAI駆動やめたい。（仮）",
@@ -543,13 +557,27 @@
     "tech_tags": ["Gemma"],
     "level": ["Advanced"],
     "perspective": ["Introduction", "Challenge"],
-    "thumbnail_url": null
+    "thumbnail_url": "/images/thumbnail/talks/original/jetha.jpg"
+  },
+  {
+    "id": "54d6fbc9",
+    "slug": "gdgoc-osaka",
+    "title": "GDGoC Osaka 作品展",
+    "abstract": "<div><h3>Artifoto ～AI フォトブース powered by Nano Banana～</h3><p>Google AI 搭載の近未来的なフォトブースを体験しよう 📸 阪大の大学祭でたくさんの方に体験いただいた「AI フォトブース」が、東京にも登場！Google の AI「Gemini」のモデルの 1 つであるNano Banana は高性能な画像生成ができます ✨ まずはフォトブースで写真を撮り、服装や背景、画風などの選択肢を選んで、あなただけの特別な 1 枚を作りましょう！ どんな写真ができるかはお楽しみに！</p><h3>Diarlies --- AI が自動で日記と絵を創り出す、新時代の日記アプリ</h3><p>APAC Solution Challenge '25 に参加したプロジェクトです！AIがあなたのマルチメディア情報から出来事や感情を読み解き、日記文章と絵を自動生成。忙しいあなたも、書くのが苦手なあなたも、Diarlies なら手軽に楽しく続けられます。</p><h3>WhatWeTalked --- AIと顔認証技術を組み合わせた顧客支援システム</h3><p>第2回 AI Agent Hackathon with Google Cloud に参加したプロジェクトです！私たちが外食をする回数のうち 77.5％ はリピート利用。小規模な飲食店では、常連客に「自分は特別に扱われている」と感じてもらうことが、再来店につながる大切なポイントです。しかし、この “特別感” を継続的に提供するには、一人ひとりの顧客情報を丁寧に記録・共有する仕組みが欠かせません。このシステムは、これまでスタッフ個人の記憶に頼っていた常連客の情報を店舗全体で活用できる「資産」として蓄積・活用する仕組みを提供します。</p></div>",
+    "time_start": null,
+    "time_end": null,
+    "track": null,
+    "speaker_ids": ["4322ccdf"],
+    "tech_tags": ["DEMO"],
+    "level": ["Advanced"],
+    "perspective": ["Challenge"],
+    "thumbnail_url": "/images/demo/gdgoc-osaka-demo.png"
   },
   {
     "id": "0c969ca6",
     "slug": "gdgoc-tcu",
     "title": "Medflow (Gemini x flutter x 看護師)",
-    "abstract": "<div><p>APAC Solution Challenge 2025 に参加した際に開発したアプリケーションです。Gemini と Flutter を用いて、看護師の書類業務を効率化することを目的に作成しました。</p></div>",
+    "abstract": "<div><p>近年、看護師の業務量は増加の一途をたどっており、医療現場において欠かせない存在である一方、その負担は非常に大きいものとなっています。特に書類業務は全体の20〜30％を占めており、入院患者の退院までを見据えた看護計画の作成や、毎日の患者状態を記録する SOAP など、多くの時間と労力を要しています。</p><p>看護計画は、同じ症状であっても患者の年齢・職業などにより最適な内容が異なるため、個別最適化された計画の作成が求められます。</p><p>そこで私たちは、Gemini × Flutter を活用し、看護師の書類業務を効率化するアプリケーションを開発しました。本アプリケーションにより、書類作成に関わる負担を軽減できるだけでなく、患者一人ひとりにより寄り添った看護の実現にも寄与できると考えています。</p><p>なお、本プロジェクトは APAC Solution Challenge 2025 において Top 10% に選出されました。</p><ul><li>GitHubリンク → <a href=\"https://github.com/Yu-HaruWolf/medflow\">https://github.com/Yu-HaruWolf/medflow</a></li><li>デモ動画 → <a href=\"https://youtu.be/Qm7yatYSMqU\">https://youtu.be/Qm7yatYSMqU</a></li></ul></div>",
     "time_start": null,
     "time_end": null,
     "track": null,
@@ -557,7 +585,7 @@
     "tech_tags": ["DEMO"],
     "level": ["Advanced"],
     "perspective": ["Introduction", "Challenge"],
-    "thumbnail_url": "/images/demo/tcu-medflow.png"
+    "thumbnail_url": "/images/demo/tcu-medflow-wide.png"
   },
   {
     "id": "edd38be9",
@@ -600,5 +628,19 @@
     "level": ["Advanced"],
     "perspective": ["Introduction", "Challenge"],
     "thumbnail_url": null
+  },
+  {
+    "id": "7877db09",
+    "slug": "student-ambassador",
+    "title": "Google AI 学生アンバサダー 作品展",
+    "abstract": "<div><p>こんにちは！ 私たち、Google AI 学生アンバサダーです！「生成AI関連の作品」というテーマのもと、私たちアンバサダーが自主制作した、GoogleのGemini APIを活用したユニークなアプリケーションを4つ展示します。学生ならではの視点で開発した、AIの「いま」と「これから」を感じられるデモをぜひ体験しに来てください！</p><h2>展示作品ハイライト</h2><p>当日は、以下の4つのアプリケーションを開発者本人がデモンストレーションします。</p><ol><li><strong>論文から学ぶ英語教室（開発者: 名越 崇晃）</strong> 「専門分野の論文を読みながら、効率よく英語も学びたい…」 そんな研究者や学生の悩みをGemini APIで解決！ 論文の内容をAIが解析し、あなた専用の英単語帳や学習サポートを提供します。</li><li><strong>Coreda（開発者: 大浦空）</strong> 家族との会話をもっと安心・円滑に！ Gemini APIが攻撃的な言葉を検知し「やさしい言い換え」を提案、世代間ギャップも埋めるチャット＆共有アプリです。やさしさあふれるコミュニケーションを体験しませんか？。</li><li><strong>Gemini APIを用いた日報作成ツール（開発者: 白庄司 拓真）</strong> エンジニアの皆さん、日報作成に時間を取られていませんか？ GitHubのコミット履歴や作業ログを連携するだけで、Gemini APIが体裁の整った「日報」を自動生成！ 面倒な作業はAIに任せて、開発に集中しましょう。</li><li><strong>Gemini APIを用いたDiscordツール（開発者: koki）</strong> あなたのDiscordサーバーをもっと安心できる場所に！不適切な発言を検知する「AIモデレーション」と、AIが運勢を占い、占いに応じた画像を生成する「AI占い」など。Gemini APIを活用したDiscord Botを展示します。</li></ol><p>当日は、私たちアンバサダー（5名）がブースに常駐し、皆さまからのご意見や技術的なフィードバックをお待ちしております！</p></div>",
+    "time_start": null,
+    "time_end": null,
+    "track": null,
+    "speaker_ids": ["66a76a43"],
+    "tech_tags": ["DEMO"],
+    "level": ["Advanced"],
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/demo/student-ambassador-cover.png"
   }
 ]

@@ -42,7 +42,7 @@
   {
     "id": "4d58b9ed",
     "name": "なかむら さとる",
-    "bio": "<div><p>BigQueryで人生変わっちゃったおぢさん。Google Cloud Nextも自腹で行っちゃうぐらい大好き。データと言われたらどこにでも駆けつけちゃいます！</p></div>",
+    "bio": "<div><p>BigQueryで人生変わっちゃったおぢさん。Google Cloud Nextも自腹で行っちゃうぐらい大好き。データと言われたらどこにでも駆けつけちゃいます！</p><p></p></div>",
     "photo_url": "/images/speakers/icons/satoru.jpeg",
     "job": "Google Developers Expert",
     "twitter_handle": "satoluxx"
@@ -314,15 +314,23 @@
   {
     "id": "14cf1b62",
     "name": "Jetha Chan",
-    "bio": "<div></div>",
+    "bio": "<div><p></p></div>",
     "photo_url": "/images/speakers/icons/jetha.jpeg",
     "job": "Google DeepMind, Technical Solutions Consultant",
     "twitter_handle": "jetha"
   },
   {
+    "id": "4322ccdf",
+    "name": "GDG on Campus University of Osaka",
+    "bio": "<div><p>GDGoC Osaka は、これまでの活動で開発してきた 3 つのプロジェクトを主に展示します！</p><p></p></div>",
+    "photo_url": "/images/demo/gdgoc-osaka-logo.svg",
+    "job": "",
+    "twitter_handle": ""
+  },
+  {
     "id": "557def98",
     "name": "GDGoC TCU",
-    "bio": "<div><p>私たちは「課題解決のためのプロダクトをチームで完成させること」を目標に、様々なイベントを開催しています！</p><p></p></div>",
+    "bio": "<div><p>私たちは学生向けコミュニティプログラム「Google Developer Groups on Campus」の1チャプター(拠点)として、東京都市大学の学生を中心に活動を行っているコミュニティです。「課題解決のためのプロダクトをチームで完成させること」を目標に、様々なイベントを開催しています！FlutterなどのGoogleに関連した技術の勉強会だけでなく、PythonやGitといった基礎的な技術の勉強会も実施することで、これまで技術に関して触れてこなかった学生でも、技術を用いて課題解決のためのプロダクトを作れるようになることを目指しています。</p><p>また、他のGDGチャプターや大学と協力し、Google オフィスや大学の教室をお借りして合同のハッカソンや展示会といったイベントを開催することもあります。GDGoC TCUは東京都市大学生だけでなく、他大学の学生が参加可能なイベントを多く開催しています！過去に開催されたイベントを詳しく知りたい方や今後のイベントに参加されたい方はぜひこちらのページをご確認ください！</p><ul>\n<li><a href=\"https://gdg.community.dev/gdg-on-campus-tokyo-city-university-tokyo-japan/\">https://gdg.community.dev/gdg-on-campus-tokyo-city-university-tokyo-japan/</a></li>\n</ul><p></p></div>",
     "photo_url": "/images/demo/tcu-medflow-logo.jpeg",
     "job": "Google Developer Groups on Campus Tokyo City University",
     "twitter_handle": ""
@@ -340,6 +348,14 @@
     "name": "東京国際工科専門職大学",
     "bio": "<div></div>",
     "photo_url": "/images/demo/iput-studism.png",
+    "job": "",
+    "twitter_handle": ""
+  },
+  {
+    "id": "66a76a43",
+    "name": "Google AI 学生アンバサダー",
+    "bio": "<div><p>「Google AI 学生アンバサダープログラム」は、次世代の担い手である学生が、AIの安全かつ効果的な活用スキルを習得し、その知識を同世代に広めることで 、AIリテラシーの向上と、AIを活用した新たな価値創造を加速させます 。未来の社会全体でAIの恩恵を最大化することを目指し活動しています。</p><p></p></div>",
+    "photo_url": "/images/demo/student-ambassador-logo.png",
     "job": "",
     "twitter_handle": ""
   }

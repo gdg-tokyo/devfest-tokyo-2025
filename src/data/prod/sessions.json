@@ -188,6 +188,7 @@
       "4190294d",
       "1aae9190",
       "82bd7a89",
+      "7c4dff99",
       "1fa92a23",
       "352cb22e",
       "5492fc46"
@@ -226,14 +227,21 @@
     "title": "[Hands-on] Gemma",
     "level": ["Beginner"],
     "tech_tags": ["Gemma"],
-    "description": "<div><p>Coming soon ...</p></div>",
+    "description": "<div><p>VLMであるGemma 3を活かして、AIの「新しい目」で動くアレルゲンチェッカーを作ろうぜ！</p></div>",
     "perspective": ["Introduction"],
     "session_chair_id": null
   },
   {
     "id": "2a97516c",
     "slug": "demo",
-    "talk_ids": ["0c969ca6", "edd38be9", "1905b944", "ea28a563"],
+    "talk_ids": [
+      "54d6fbc9",
+      "0c969ca6",
+      "edd38be9",
+      "1905b944",
+      "ea28a563",
+      "7877db09"
+    ],
     "track": null,
     "time_start": null,
     "time_end": null,

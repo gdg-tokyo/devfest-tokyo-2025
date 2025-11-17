@@ -1,6 +1,8 @@
 import HtmlContent from '@/components/common/HtmlContent'
 import RegistrationButton from '@/components/common/RegistrationButton'
 import SpeakerDetailCard from '@/components/common/SpeakerDetailCard'
+import SessionCard from '@/features/timetable/components/SessionCard'
+import { getSessions } from '@/lib/data-parser'
 import {
   getLevelColor,
   getPerspectiveColor,
@@ -91,6 +93,19 @@ const TalkDetail: React.FC<TalkDetailProps> = ({ talk, speakers }) => {
           ))}
         </div>
       </div>
+
+      {talk.session_id && (
+        <div className="mt-8">
+          <h2 className="text-4xl font-bold mb-2">
+            このトークが聞ける Session
+          </h2>
+          <SessionCard
+            session={getSessions().find((s) => s.id === talk.session_id)!}
+            showAbstract={true}
+            showThumbnail={true}
+          />
+        </div>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-16">
         <RegistrationButton href="https://gdg-tokyo.connpass.com/event/369416/">

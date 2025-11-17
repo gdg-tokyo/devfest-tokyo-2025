@@ -79,10 +79,7 @@ export default function HtmlContent({
 
   return (
     <article
-      className={clsx(
-        'prose prose-zinc dark:prose-invert max-w-none text-black-02',
-        className
-      )}
+      className={clsx('prose prose-zinc max-w-none text-black-02', className)}
       dangerouslySetInnerHTML={{ __html: sanitized }}
       data-testid={dataTestId}
     />

@@ -14,6 +14,8 @@ track: Track B
 
 最初の「オブザーバビリティ」 では、AI エージェントの振る舞いを理解するのためのシステムデータの活用方法をご紹介します。次に「ダッシュボード」からは、デジタル庁が公開する「政策ダッシュボード」の開発経験から行政データを活用するポイントや想定課題を議論します。そして最後に、世界的に有名な機械学習のコンペサイト「Kaggle」を通して生成 AI 時代における変化を反映した学びについてお話しいただきます。
 
+![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/data-analysis-observability.png)
+
 ## Session Chair Community
 
 ### Google Cloud Technical Summit

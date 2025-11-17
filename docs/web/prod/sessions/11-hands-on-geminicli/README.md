@@ -11,3 +11,5 @@ track: Track D
 # [Hands-on] Gemini CLI
 
 このセッションではGemini CLIの基本的な使い方を学び簡単なタスク実行するハンズオンを行います。そして、Gemini Extensionsを使ってGemini CLIでNanobananaモデルを使えるようにしてクールな画像を生成、編集します。
+
+![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/hands-on.png)

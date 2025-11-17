@@ -10,3 +10,5 @@ track: Track A
 # 基調講演
 
 DevFest Tokyo 2025 の 基調講演を行います。
+
+![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/keynotes.png)

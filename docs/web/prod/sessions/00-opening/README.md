@@ -10,3 +10,5 @@ track: Track A
 # オープニング
 
 Google Developer Group - DevFest Tokyo 2025 の オープニングを行います。
+
+![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/opening.png)

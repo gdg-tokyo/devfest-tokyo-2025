@@ -14,6 +14,8 @@ Google Maps は、誰もが日々お世話になっている代表的な Google 
 
 20年の歴史で培われたUXの技から、地上ではなく空の地図 (旧 Google Sky Map) 、そして最先端である BigQuery 連携と MCP サービスを、ぎゅっと凝縮してお届けします！
 
+![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/google-maps.png)
+
 ## Session Chair Community
 
 ## Session Chair

@@ -9,8 +9,9 @@
     "title": "オープニング",
     "level": ["Beginner"],
     "tech_tags": ["Google", "Community"],
-    "description": "<div><p>Google Developer Group - DevFest Tokyo 2025 の オープニングを行います。</p></div>",
+    "description": "<div><p>Google Developer Group - DevFest Tokyo 2025 の オープニングを行います。</p><p></p></div>",
     "perspective": [],
+    "thumbnail_url": "/images/thumbnail/sessions/original/opening.png",
     "session_chair_id": null
   },
   {
@@ -23,8 +24,9 @@
     "title": "基調講演",
     "level": ["Beginner", "Advanced"],
     "tech_tags": ["Web", "AI", "キャリア"],
-    "description": "<div><p>DevFest Tokyo 2025 の 基調講演を行います。</p></div>",
+    "description": "<div><p>DevFest Tokyo 2025 の 基調講演を行います。</p><p></p></div>",
     "perspective": [],
+    "thumbnail_url": "/images/thumbnail/sessions/original/keynotes.png",
     "session_chair_id": null
   },
   {
@@ -37,8 +39,9 @@
     "title": "異分野クロストーク",
     "level": ["Advanced"],
     "tech_tags": ["BigQuery", "Web", "Mobile"],
-    "description": "<div><p>様々な技術が複雑に絡み合う現在では、フロントエンド・バックエンド両方の知識が必要とされることがあります。このセッションでは、バックエンドのエキスパートがフロントエンド・エンジニアへ、逆にフロントエンドのエキスパートがバックエンドエンジニアへ、知っておくと便利な異分野の知識を伝授します。</p><p>フロントエンドからバックエンドまで、様々な技術トピックを扱う Google Developer Groups (GDG) ならではセッションです。GDGならではの視点から、新しい学びを楽しみましょう！</p></div>",
+    "description": "<div><p>様々な技術が複雑に絡み合う現在では、フロントエンド・バックエンド両方の知識が必要とされることがあります。このセッションでは、バックエンドのエキスパートがフロントエンド・エンジニアへ、逆にフロントエンドのエキスパートがバックエンドエンジニアへ、知っておくと便利な異分野の知識を伝授します。</p><p>フロントエンドからバックエンドまで、様々な技術トピックを扱う Google Developer Groups (GDG) ならではセッションです。GDGならではの視点から、新しい学びを楽しみましょう！</p><p></p></div>",
     "perspective": [],
+    "thumbnail_url": "/images/thumbnail/sessions/original/cross-talk.png",
     "session_chair_id": null
   },
   {
@@ -51,8 +54,9 @@
     "title": "Google Maps 20 周年記念特集 ~ 意外と知らない昔と今 ~",
     "level": ["Beginner", "Advanced"],
     "tech_tags": ["Google Map"],
-    "description": "<div><p>Google Maps は、誰もが日々お世話になっている代表的な Google のサービスの一つだと思いますが、実は今年で 20 周年を迎えたことはご存じでしたか？今年 2月の Google Maps 20周年記念イベントの大反響をうけ、Google Maps 特集が DevFest Tokyo にやってきます！</p><p>20年の歴史で培われたUXの技から、地上ではなく空の地図 (旧 Google Sky Map) 、そして最先端である BigQuery 連携と MCP サービスを、ぎゅっと凝縮してお届けします！</p></div>",
+    "description": "<div><p>Google Maps は、誰もが日々お世話になっている代表的な Google のサービスの一つだと思いますが、実は今年で 20 周年を迎えたことはご存じでしたか？今年 2月の Google Maps 20周年記念イベントの大反響をうけ、Google Maps 特集が DevFest Tokyo にやってきます！</p><p>20年の歴史で培われたUXの技から、地上ではなく空の地図 (旧 Google Sky Map) 、そして最先端である BigQuery 連携と MCP サービスを、ぎゅっと凝縮してお届けします！</p><p></p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/sessions/original/google-maps.png",
     "session_chair_id": "6dcbdbeb"
   },
   {
@@ -65,8 +69,9 @@
     "title": "フロンティア ~ 最先端＆ニッチな分野の技術たち ~",
     "level": ["Advanced"],
     "tech_tags": ["Veo", "Flutter", "Hardware"],
-    "description": "<div><p>多岐にわたる Google のテクノロジーの中から、新しい分野・ニッチな分野のテクノロジーに焦点を当てたセッションです。Veo3 を使った動画作成から、Flutter を使った Liquid Glass エフェクト、そして Google オープンソースの半導体設計ソフトウェアという3つのトピックをお届けします。</p><p>あなたにとっての未知の領域に一緒に踏み込み、新しい視点を手に入れましょう！</p></div>",
+    "description": "<div><p>多岐にわたる Google のテクノロジーの中から、新しい分野・ニッチな分野のテクノロジーに焦点を当てたセッションです。Veo3 を使った動画作成から、Flutter を使った Liquid Glass エフェクト、そして Google オープンソースの半導体設計ソフトウェアという3つのトピックをお届けします。</p><p>あなたにとっての未知の領域に一緒に踏み込み、新しい視点を手に入れましょう！</p><p></p></div>",
     "perspective": [],
+    "thumbnail_url": "/images/thumbnail/sessions/original/frontier.png",
     "session_chair_id": "e632ce7d"
   },
   {
@@ -79,8 +84,9 @@
     "title": "AI エージェント 入門",
     "level": ["Beginner"],
     "tech_tags": ["AI エージェント", "MCP", "AI セーフティ"],
-    "description": "<div><p>生成AI が急速に普及し、私たちの生活を変えようとしています。この変化の中核となる技術が「AI エージェント」です。この入門セッションでは、AI エージェントが生活にもたらす変化とその価値について議論し、実際に AI エージェント 開発を始めるために必要な、仕組みや開発プロセスについて、わかりやすく解説していきます。</p><p>AI初心者の皆さんも、このセッションに参加することで、AI エージェント開発の開発の準備を整えましょう！</p></div>",
+    "description": "<div><p>生成AI が急速に普及し、私たちの生活を変えようとしています。この変化の中核となる技術が「AI エージェント」です。この入門セッションでは、AI エージェントが生活にもたらす変化とその価値について議論し、実際に AI エージェント 開発を始めるために必要な、仕組みや開発プロセスについて、わかりやすく解説していきます。</p><p>AI初心者の皆さんも、このセッションに参加することで、AI エージェント開発の開発の準備を整えましょう！</p><p></p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/sessions/original/ai-agent.png",
     "session_chair_id": "d63eaae2"
   },
   {
@@ -93,8 +99,9 @@
     "title": "【実践】ADK による AI エージェント開発",
     "level": ["Advanced"],
     "tech_tags": ["AI エージェント", "ADK"],
-    "description": "<div><p>AI エージェント開発に挑戦したい方に向けて、ADK (Agent Development Kit) の活用方法と開発のヒントをご紹介するセッションです。</p><p>まず、Agent Developer Kit (ADK) の概要と最新情報・今後のロードマップをご紹介します。そしてより実践的な、データ分析エージェントの開発レシピや、音声や動画を取り入れるストリーミング機能の開発 Tipsなどをご紹介します。</p></div>",
+    "description": "<div><p>AI エージェント開発に挑戦したい方に向けて、ADK (Agent Development Kit) の活用方法と開発のヒントをご紹介するセッションです。</p><p>まず、Agent Developer Kit (ADK) の概要と最新情報・今後のロードマップをご紹介します。そしてより実践的な、データ分析エージェントの開発レシピや、音声や動画を取り入れるストリーミング機能の開発 Tipsなどをご紹介します。</p><p></p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/sessions/original/adk.png",
     "session_chair_id": "7eb91900"
   },
   {
@@ -107,8 +114,9 @@
     "title": "Next Generation Web Frontend 2025",
     "level": ["Beginner", "Advanced"],
     "tech_tags": ["Web", "Angular", "Chrome", "CSS"],
-    "description": "<div><p>2025年、WebフロントエンドはAIとともに新しいフェーズへ。 本セッションでは、最新のAngular with AI の動向から、Web標準とブラウザ機能の進化、そして Chrome に組み込まれた AI を活用した機能開発まで、これからの Web フロントエンド開発を大きく変えるトピックを 3 つの講演でご紹介します。</p></div>",
+    "description": "<div><p>2025年、WebフロントエンドはAIとともに新しいフェーズへ。 本セッションでは、最新のAngular with AI の動向から、Web標準とブラウザ機能の進化、そして Chrome に組み込まれた AI を活用した機能開発まで、これからの Web フロントエンド開発を大きく変えるトピックを 3 つの講演でご紹介します。</p><p></p></div>",
     "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/sessions/original/web-frontend.png",
     "session_chair_id": "5d8afd9c"
   },
   {
@@ -121,8 +129,9 @@
     "title": "Gemini CLI “本気の” 活用術と組織導入の最前線",
     "level": ["Advanced"],
     "tech_tags": ["Gemini CLI"],
-    "description": "<div><p>「Gemini CLI 」は今話題の AI Coding エージェントの一つであり、 Gemini の 巨大なコンテキストウィンドウや、強力な Google 検索連携などを駆使して、開発者のコーディングタスクを代替しつつある一方で、効果的な活用には工夫が必要です。</p><p>このセッションでは、古典的な MLOps をふまえた確率的な挙動を持つツールの信頼性や整合性を高める活用術や、個人利用に止まらせず組織・チーム・エンタープライズとして開発に活用するノウハウをお届けします。</p><p>みなさんも「本気の活用」をここから始めましょう！</p></div>",
+    "description": "<div><p>「Gemini CLI 」は今話題の AI Coding エージェントの一つであり、 Gemini の 巨大なコンテキストウィンドウや、強力な Google 検索連携などを駆使して、開発者のコーディングタスクを代替しつつある一方で、効果的な活用には工夫が必要です。</p><p>このセッションでは、古典的な MLOps をふまえた確率的な挙動を持つツールの信頼性や整合性を高める活用術や、個人利用に止まらせず組織・チーム・エンタープライズとして開発に活用するノウハウをお届けします。</p><p>みなさんも「本気の活用」をここから始めましょう！</p><p></p></div>",
     "perspective": ["Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/sessions/original/ai-tools.png",
     "session_chair_id": "da2a8966"
   },
   {
@@ -135,8 +144,9 @@
     "title": "生成 AI と社会をつなぐデータ活用最前線",
     "level": ["Beginner", "Advanced"],
     "tech_tags": ["Kaggle", "データ分析", "Observability"],
-    "description": "<div><p>本セッションでは、 「オブザーバビリティ」・「ダッシュボード」・「Kaggle」という 3つの技術トピックを取り上げ、生成 AI 時代におけるデータ活用の最前線を各分野のエキスパートからご紹介いただきます。</p><p>最初の「オブザーバビリティ」 では、AI エージェントの振る舞いを理解するのためのシステムデータの活用方法をご紹介します。次に「ダッシュボード」からは、デジタル庁が公開する「政策ダッシュボード」の開発経験から行政データを活用するポイントや想定課題を議論します。そして最後に、世界的に有名な機械学習のコンペサイト「Kaggle」を通して生成 AI 時代における変化を反映した学びについてお話しいただきます。</p></div>",
+    "description": "<div><p>本セッションでは、 「オブザーバビリティ」・「ダッシュボード」・「Kaggle」という 3つの技術トピックを取り上げ、生成 AI 時代におけるデータ活用の最前線を各分野のエキスパートからご紹介いただきます。</p><p>最初の「オブザーバビリティ」 では、AI エージェントの振る舞いを理解するのためのシステムデータの活用方法をご紹介します。次に「ダッシュボード」からは、デジタル庁が公開する「政策ダッシュボード」の開発経験から行政データを活用するポイントや想定課題を議論します。そして最後に、世界的に有名な機械学習のコンペサイト「Kaggle」を通して生成 AI 時代における変化を反映した学びについてお話しいただきます。</p><p></p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/sessions/original/data-analysis-observability.png",
     "session_chair_id": "54e4410f"
   },
   {
@@ -149,8 +159,9 @@
     "title": "AI in Action: Your Android/Flutter Playbook",
     "level": ["Advanced"],
     "tech_tags": ["Android"],
-    "description": "<div><p>モバイルアプリ開発者向けのAI活用ガイドです。Google公式サンプルアプリ「Androidify」から学ぶ AI 機能実装から、Android StudioのGemini機能、Flutterを例に AI エージェントを活用したアプリ開発手法など、最新のAI技術を Android/Flutter開発 に取り込み、どのようにユーザー価値を向上していくのか、エキスパートの目線で実務に活きる知識として噛み砕いて紹介します。</p></div>",
+    "description": "<div><p>モバイルアプリ開発者向けのAI活用ガイドです。Google公式サンプルアプリ「Androidify」から学ぶ AI 機能実装から、Android StudioのGemini機能、Flutterを例に AI エージェントを活用したアプリ開発手法など、最新のAI技術を Android/Flutter開発 に取り込み、どのようにユーザー価値を向上していくのか、エキスパートの目線で実務に活きる知識として噛み砕いて紹介します。</p><p></p></div>",
     "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/sessions/original/android.png",
     "session_chair_id": "cb7bc972"
   },
   {
@@ -163,8 +174,9 @@
     "title": "[Hands-on] Gemini CLI",
     "level": ["Beginner"],
     "tech_tags": ["Gemini CLI", "Nano Banana"],
-    "description": "<div><p>このセッションではGemini CLIの基本的な使い方を学び簡単なタスク実行するハンズオンを行います。そして、Gemini Extensionsを使ってGemini CLIでNanobananaモデルを使えるようにしてクールな画像を生成、編集します。</p></div>",
+    "description": "<div><p>このセッションではGemini CLIの基本的な使い方を学び簡単なタスク実行するハンズオンを行います。そして、Gemini Extensionsを使ってGemini CLIでNanobananaモデルを使えるようにしてクールな画像を生成、編集します。</p><p></p></div>",
     "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/sessions/original/hands-on.png",
     "session_chair_id": null
   },
   {
@@ -177,8 +189,9 @@
     "title": "[Hands-on] Firebase Studio",
     "level": ["Advanced"],
     "tech_tags": ["Firebase Studio"],
-    "description": "<div><p>Firebase Studio は、フロントエンド・バックエンド・データベースの構築を一元的に行える新しい開発環境です。このハンズオンでは、Firebase Studio を使ってフルスタックアプリケーションを実際に構築しながら、Firestore や Firebase Authentication、Firebase App Hosting などの主要機能を体験します。</p></div>",
+    "description": "<div><p>Firebase Studio は、フロントエンド・バックエンド・データベースの構築を一元的に行える新しい開発環境です。このハンズオンでは、Firebase Studio を使ってフルスタックアプリケーションを実際に構築しながら、Firestore や Firebase Authentication、Firebase App Hosting などの主要機能を体験します。</p><p></p></div>",
     "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": "/images/thumbnail/sessions/original/hands-on.png",
     "session_chair_id": null
   },
   {
@@ -201,6 +214,7 @@
     "tech_tags": [],
     "description": "<div><p>DevFest Tokyo 2025 を締めくくる LT 大会です。</p><p>AI、Web、クラウド、モバイル、コミュニティ、キャリアなど、2025年の技術トレンドを象徴する多様なトピックが集結します。 イベントの締めくくりに、今年の学びを総括し、来年へのインスピレーションを得る、熱気あふれる時間をお楽しみください！</p></div>",
     "perspective": ["Introduction", "Experience", "Challenge"],
+    "thumbnail_url": null,
     "session_chair_id": null
   },
   {
@@ -215,6 +229,7 @@
     "tech_tags": [],
     "description": "<div><p>Coming soon ...</p></div>",
     "perspective": ["Experience"],
+    "thumbnail_url": null,
     "session_chair_id": null
   },
   {
@@ -227,8 +242,9 @@
     "title": "[Hands-on] Gemma",
     "level": ["Beginner"],
     "tech_tags": ["Gemma"],
-    "description": "<div><p>VLMであるGemma 3を活かして、AIの「新しい目」で動くアレルゲンチェッカーを作ろうぜ！</p></div>",
+    "description": "<div><p>VLMであるGemma 3を活かして、AIの「新しい目」で動くアレルゲンチェッカーを作ろうぜ！</p><p></p></div>",
     "perspective": ["Introduction"],
+    "thumbnail_url": "/images/thumbnail/sessions/original/hands-on.png",
     "session_chair_id": null
   },
   {
@@ -250,6 +266,7 @@
     "tech_tags": ["DEMO"],
     "description": "<div><p>学生による DEMO の展示をラウンジにて行います。</p></div>",
     "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": null,
     "session_chair_id": null
   }
 ]

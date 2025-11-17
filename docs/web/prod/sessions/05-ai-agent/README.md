@@ -14,6 +14,8 @@ track: Track A
 
 AI初心者の皆さんも、このセッションに参加することで、AI エージェント開発の開発の準備を整えましょう！
 
+![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/ai-agent.png)
+
 ## Session Chair Community
 
 ### MLOpsコミュニティ

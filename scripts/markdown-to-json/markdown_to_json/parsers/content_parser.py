@@ -28,13 +28,13 @@ from markdown_to_json.parsers.speaker_parser import parse_speaker_from_content
 
 
 def _extract_thumbnail_url(
-    content: str, talk_file_path: str
+    content: str, file_path: str, alt_text: str
 ) -> str | None:
     """Extracts the thumbnail URL from markdown content and converts it to a public path."""
-    match = re.search(r"!\[talk_thumbnail\]\((?P<url>[^)]+)\)", content)
+    match = re.search(rf"!\[{alt_text}\]\((?P<url>[^)]+)\)", content)
     if match:
         raw_url = match.group("url")
-        return resolve_image_path(raw_url, talk_file_path)
+        return resolve_image_path(raw_url, file_path)
     return None
 
 
@@ -80,6 +80,7 @@ def parse_sessions_and_talks(
             talk_entry, speakers_data = _parse_talk(
                 talk_file_path,
                 talk_id,
+                session_id,
                 session_entry.track if session_entry else "Unknown Track",
                 talk_slug,
             )
@@ -122,6 +123,16 @@ def _parse_session(
     cleaned_content = remove_session_chair_content(post.content)
     title, description_html = extract_title_and_description(cleaned_content).values()
 
+    # Remove session_thumbnail image tag from description_html
+    description_soup = BeautifulSoup(description_html, "html.parser")
+    for img_tag in description_soup.find_all("img", alt="session_thumbnail"):
+        img_tag.decompose()
+    description_html = str(description_soup)
+
+    thumbnail_url = _extract_thumbnail_url(
+        post.content, session_readme_path, "session_thumbnail"
+    )
+
     session_entry = Session(
         id=session_id,
         slug=session_slug,
@@ -134,6 +145,7 @@ def _parse_session(
         tech_tags=post.metadata.get("tech_tags", []),
         description=description_html,
         perspective=post.metadata.get("perspective", []),
+        thumbnail_url=thumbnail_url,
         session_chair_id=session_chair_entry.id if session_chair_entry else None,
     )
 
@@ -141,7 +153,7 @@ def _parse_session(
 
 
 def _parse_talk(
-    talk_file_path, talk_id, session_track, talk_slug
+    talk_file_path, talk_id, session_id, session_track, talk_slug
 ) -> Tuple[Talk | None, List[Speaker]]:
     """Parses a single talk markdown file and returns a Talk object and a list of Speaker objects."""
     with open(talk_file_path, "r", encoding="utf-8") as f:
@@ -158,11 +170,14 @@ def _parse_talk(
     speakers_data, speaker_ids = parse_speaker_from_content(
         post.content, talk_file_path
     )
-    thumbnail_url = _extract_thumbnail_url(post.content, talk_file_path)
+    thumbnail_url = _extract_thumbnail_url(
+        post.content, talk_file_path, "talk_thumbnail"
+    )
 
     talk_entry = Talk(
         id=talk_id,
         slug=talk_slug,
+        session_id=session_id,
         title=title,
         abstract=abstract_html,
         time_start=post.metadata.get("time_start", "00:00"),

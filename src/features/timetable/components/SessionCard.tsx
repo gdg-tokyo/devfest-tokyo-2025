@@ -102,14 +102,17 @@ const SessionCard: React.FC<SessionCardProps> = ({
           </div>
         </div>
         {hasThumbnail && (
-          <div className="w-full md:w-1/3 flex items-center justify-center order-last md:order-none">
-            <div className="border-2 border-gray-800 rounded-lg overflow-hidden">
+          <div className="w-full md:w-1/3 order-last md:order-none">
+            <div className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md relative w-full aspect-video">
               <Image
                 src={withRepoBasePath(session.thumbnail_url!)}
                 alt="Session Thumbnail"
-                width={500}
-                height={300}
-                className="rounded-lg w-full h-auto"
+                fill
+                style={{ objectFit: 'contain' }}
+                className="rounded-lg"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                placeholder="blur"
+                blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
               />
             </div>
           </div>

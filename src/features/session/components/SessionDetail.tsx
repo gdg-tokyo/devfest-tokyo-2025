@@ -8,6 +8,8 @@ import { getLevelColor } from '@/lib/style-utils'
 import { Session, Speaker, Talk } from '@/types'
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image' // Added
+import { withRepoBasePath } from '@/lib/url-utils' // Added
 
 interface SessionDetailProps {
   session: Session
@@ -52,6 +54,20 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
 
   return (
     <div className="space-y-6">
+      {session.thumbnail_url && ( // Added thumbnail rendering
+        <div className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md mb-4 relative w-full aspect-video">
+          <Image
+            src={withRepoBasePath(session.thumbnail_url)}
+            alt="Session Thumbnail"
+            fill
+            style={{ objectFit: 'contain' }}
+            className="rounded-lg"
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            placeholder="blur"
+            blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          />
+        </div>
+      )}
       <h1 className="text-3xl font-bold text-gray-800">{session.title}</h1>
       <div className="flex flex-wrap gap-2">
         {session.level &&

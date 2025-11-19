@@ -39,6 +39,7 @@ export async function generateMetadata({
     path: `/sessions/${session.id}`,
     title: `${session.title} - ${SITE.name}`,
     description: session.description,
+    ogImage: session.thumbnail_url,
   })
 }
 

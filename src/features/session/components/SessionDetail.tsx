@@ -8,6 +8,8 @@ import { getLevelColor } from '@/lib/style-utils'
 import { Session, Speaker, Talk } from '@/types'
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image' // Added
+import { withRepoBasePath } from '@/lib/url-utils' // Added
 
 interface SessionDetailProps {
   session: Session
@@ -52,21 +54,41 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold text-gray-800">{session.title}</h1>
-      <div className="flex flex-wrap gap-2">
-        {session.level &&
-          session.level.map((levelItem) => (
-            <span
-              key={levelItem}
-              className={`text-xxs px-2 py-1 rounded-full border border-black
-              ${getLevelColor(levelItem as 'Beginner' | 'Intermediate' | 'Advanced')}
-            `}
-            >
-              {levelItem}
-            </span>
-          ))}
+      {session.thumbnail_url && ( // Added thumbnail rendering
+        <div className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md mb-4 relative w-full aspect-video">
+          <Image
+            src={withRepoBasePath(session.thumbnail_url)}
+            alt="Session Thumbnail"
+            fill
+            style={{ objectFit: 'contain' }}
+            className="rounded-lg"
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            placeholder="blur"
+            blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          />
+        </div>
+      )}
+      <div className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md mb-4">
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          {session.title}
+        </h1>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {session.level &&
+            session.level.map((levelItem) => (
+              <span
+                key={levelItem}
+                className={`text-xxs px-2 py-1 rounded-full border border-black
+                ${getLevelColor(
+                  levelItem as 'Beginner' | 'Intermediate' | 'Advanced'
+                )}
+              `}
+              >
+                {levelItem}
+              </span>
+            ))}
+        </div>
+        <HtmlContent html={session.description} />
       </div>
-      <HtmlContent html={session.description} />
 
       {sessionTalks.length > 0 && (
         <div className="space-y-4">

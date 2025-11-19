@@ -53,9 +53,9 @@ const SessionCard: React.FC<SessionCardProps> = ({
         data-testid={`session-card-${session.id}`}
         className={`h-full bg-white rounded-lg p-4 mb-1 border-2 border-gray-800 font-google-sans cursor-pointer hover:shadow-lg transition-shadow ${
           isGrayedOut ? 'opacity-30' : ''
-        } ${hasThumbnail ? 'grid grid-cols-3 gap-4' : ''}`}
+        } ${hasThumbnail ? 'flex flex-col md:flex-row gap-4' : ''}`}
       >
-        <div className={hasThumbnail ? 'col-span-2' : ''}>
+        <div className={hasThumbnail ? 'w-full md:w-2/3' : ''}>
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             {session.title}
           </h3>
@@ -102,15 +102,19 @@ const SessionCard: React.FC<SessionCardProps> = ({
           </div>
         </div>
         {hasThumbnail && (
-          <div className="col-span-1 relative border-2 border-gray-800 rounded-lg overflow-hidden h-full bg-off-whit">
-            <Image
-              src={withRepoBasePath(session.thumbnail_url!)}
-              alt="Session Thumbnail"
-              fill
-              style={{ objectFit: 'contain' }}
-              className="rounded-lg"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
+          <div className="w-full md:w-1/3 order-last md:order-none">
+            <div className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md relative w-full aspect-video">
+              <Image
+                src={withRepoBasePath(session.thumbnail_url!)}
+                alt="Session Thumbnail"
+                fill
+                style={{ objectFit: 'contain' }}
+                className="rounded-lg"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                placeholder="blur"
+                blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              />
+            </div>
           </div>
         )}
       </div>

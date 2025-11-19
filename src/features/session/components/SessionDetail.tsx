@@ -68,21 +68,27 @@ const SessionDetail: React.FC<SessionDetailProps> = ({ session }) => {
           />
         </div>
       )}
-      <h1 className="text-3xl font-bold text-gray-800">{session.title}</h1>
-      <div className="flex flex-wrap gap-2">
-        {session.level &&
-          session.level.map((levelItem) => (
-            <span
-              key={levelItem}
-              className={`text-xxs px-2 py-1 rounded-full border border-black
-              ${getLevelColor(levelItem as 'Beginner' | 'Intermediate' | 'Advanced')}
-            `}
-            >
-              {levelItem}
-            </span>
-          ))}
+      <div className="border-2 border-gray-800 rounded-lg p-4 bg-white shadow-md mb-4">
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          {session.title}
+        </h1>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {session.level &&
+            session.level.map((levelItem) => (
+              <span
+                key={levelItem}
+                className={`text-xxs px-2 py-1 rounded-full border border-black
+                ${getLevelColor(
+                  levelItem as 'Beginner' | 'Intermediate' | 'Advanced'
+                )}
+              `}
+              >
+                {levelItem}
+              </span>
+            ))}
+        </div>
+        <HtmlContent html={session.description} />
       </div>
-      <HtmlContent html={session.description} />
 
       {sessionTalks.length > 0 && (
         <div className="space-y-4">

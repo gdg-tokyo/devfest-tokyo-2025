@@ -389,7 +389,7 @@
     "bio": "<div><p>学部4年。1年生のころ初めてPythonに触れ、累計ユーザー数20万人超えの個人開発Webサイト “GBBINFO-JPN” を制作。(Beatboxはできない) 2026年からモビルス株式会社に入社予定。 デジタル民主主義2030プロジェクト「Polimoney」参画中。</p></div>",
     "photo_url": "/images/speakers/haruki.png",
     "job": "東京電機大学 学部4年",
-    "twitter_handle": "shu_kob"
+    "twitter_handle": ""
   },
   {
     "id": "507223a8",
@@ -410,7 +410,7 @@
   {
     "id": "c378aacf",
     "name": "鈴木崇博",
-    "bio": "<div><p>過去には、検索エンジンを搭載した Stable Diffusion の拡張ライブラリである auto_diffusers を開発しました。こうした個人開発の経験を基盤に、AI と宇宙工学の両分野を結び付け、社会や技術に貢献できる研究をしたいと考えています。</p></div>",
+    "bio": "<div><p>過去には、検索エンジンを搭載した Stable Diffusion の拡張ライブラリである auto_diffusers を開発しました。こうした個人開発の経験を基盤に、AI と宇宙工学の両分野を結び付け、社会や技術に貢献できる研究をしたいと考えています。</p><p><a href=\"https://www.instagram.com/_suzukimain_\">Instagram: suzukimain (@<em>suzukimain</em>)</a></p></div>",
     "photo_url": "/images/speakers/icons/suzukimain.jpg",
     "job": "東京国際工科専門職大学工科学部情報工学科 学生",
     "twitter_handle": ""

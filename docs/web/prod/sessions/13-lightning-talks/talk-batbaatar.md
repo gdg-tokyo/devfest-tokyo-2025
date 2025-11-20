@@ -7,7 +7,7 @@ time_start: '17:00'
 time_end: '17:50'
 ---
 
-# あの州って何？/ What's That State?
+# [LT] あの州って何？/ What's That State?
 
 アメリカの州を描いてみてください。AIモデルがそれを当てようとします！参加すると遊べますよ！
 

@@ -7,7 +7,7 @@ time_start: '17:00'
 time_end: '17:50'
 ---
 
-# How to catch up on latest futures in Go
+# [LT] How to catch up on latest futures in Go
 
 Goではリリースサイクルに則って半年に1度のリリースがあります。 ではこのリリースのために提案される新機能はどのような過程を経て承認、または棄却されるのでしょうか？本LTではリリース前にどのように最新機能をキャッチアップするのかについて話します
 

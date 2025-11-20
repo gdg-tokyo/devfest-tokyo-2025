@@ -13,6 +13,8 @@ is_keynote: false
 
 準備：当日自分のパソコンを持参ください。提供される無償クレジットを事前に適用するとセッションがスムーズに進みます。
 
+注意: Hands-on Sessionは事前登録制です。[こちらのページ](https://gdg-tokyo.connpass.com/event/375358/) より事前登録をお願いいたします。
+
 ## Speaker
 
 ### Haren さん (@HarenB16221) / Developer Relations Engineer, Google Cloud Japan

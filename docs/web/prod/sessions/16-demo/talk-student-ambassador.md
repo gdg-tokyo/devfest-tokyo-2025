@@ -7,7 +7,7 @@ perspective: ['Introduction', 'Challenge']
 is_keynote: false
 ---
 
-# Google AI 学生アンバサダー 作品展
+# [DEMO] Google AI 学生アンバサダー 作品展
 
 こんにちは！ 私たち、Google AI 学生アンバサダーです！「生成AI関連の作品」というテーマのもと、私たちアンバサダーが自主制作した、GoogleのGemini APIを活用したユニークなアプリケーションを4つ展示します。学生ならではの視点で開発した、AIの「いま」と「これから」を感じられるデモをぜひ体験しに来てください！
 

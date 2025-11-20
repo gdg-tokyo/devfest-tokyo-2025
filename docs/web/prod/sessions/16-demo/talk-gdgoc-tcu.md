@@ -7,7 +7,7 @@ perspective: ['Introduction', 'Challenge']
 is_keynote: false
 ---
 
-# Medflow (Gemini x flutter x 看護師)
+# [DEMO] Medflow (Gemini x flutter x 看護師)
 
 近年、看護師の業務量は増加の一途をたどっており、医療現場において欠かせない存在である一方、その負担は非常に大きいものとなっています。特に書類業務は全体の20〜30％を占めており、入院患者の退院までを見据えた看護計画の作成や、毎日の患者状態を記録する SOAP など、多くの時間と労力を要しています。
 

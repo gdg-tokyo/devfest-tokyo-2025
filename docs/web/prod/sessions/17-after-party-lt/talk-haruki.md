@@ -13,7 +13,7 @@ time_end: null
 
 ## Speaker
 
-### haruki さん(@shu_kob) / 東京電機大学 学部4年
+### haruki さん / 東京電機大学 学部4年
 
 学部4年。1年生のころ初めてPythonに触れ、累計ユーザー数20万人超えの個人開発Webサイト “GBBINFO-JPN” を制作。(Beatboxはできない) 2026年からモビルス株式会社に入社予定。 デジタル民主主義2030プロジェクト「Polimoney」参画中。
 

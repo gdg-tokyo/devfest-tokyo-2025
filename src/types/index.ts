@@ -17,7 +17,7 @@ export interface Speaker {
   id: string
   name: string
   bio: string
-  photo_url: string
+  photo_url?: string
   job: string
   twitter_handle: string
 }

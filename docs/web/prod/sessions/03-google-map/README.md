@@ -24,4 +24,4 @@ Google Maps は、誰もが日々お世話になっている代表的な Google 
 
 株式会社エクサ クリエイティブサービスデザイナー 北海道生まれ。三次元コンピュータグラフィックス、UX(ユーザエクスペリエンス)デザインが専門。 Google Earthの前身Keyhole時代からデジタルアース、デジタルマップに関わる。 2008年よりGoogle Maps/GEO分野のGoogle Developer Experts、2015年よりGoogle認定デザインスプリントマスター。 「Google Maps APIプログラミングガイド」（共著）」シビックテックをはじめよう」（翻訳）ほか多数 2022年より、スタートアップ企業を支援するアクセラレーター Google for Startups のメンターも務める。 SF映画好き。大量の本に埋もれて暮らしています。
 
-![speaker](../../../../../public/images/speakers/icons/yukiando.jpeg)
+![speaker](../../../../../public/images/speakers/icons/yukiando.jpg)

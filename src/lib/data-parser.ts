@@ -247,3 +247,10 @@ export function getSessionChairById(id: string): SessionChair | undefined {
     chairs: chairsWithDetails,
   }
 }
+
+export function getSpeakerGalleryData(): { speakers: Speaker[]; sessionChairs: SessionChair[] } {
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const dataDir = env === 'DEV' ? 'dev' : 'prod'
+  const { speakers, sessionChairs } = _loadData(dataDir)
+  return { speakers, sessionChairs }
+}

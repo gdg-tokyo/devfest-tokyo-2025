@@ -6,7 +6,7 @@ import FeaturedTalks from '@/features/landing-page/components/FeaturedTalks'
 import SpeakerGallery from '@/features/landing-page/components/SpeakerGallery' // Import SpeakerGallery
 import StakeholdersSection from '@/features/landing-page/components/StakeholdersSection'
 import { buildMetadata } from '@/lib/seo'
-import { loadSpeakerGalleryData } from '@/features/landing-page/utils/loadSpeakerGalleryData' // Import data loader
+import { getSpeakerGalleryData } from '@/lib/data-parser' // Import data loader
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Home() {
-  const { speakers, sessionChairs } = await loadSpeakerGalleryData() // Fetch data
+  const { speakers, sessionChairs } = getSpeakerGalleryData() // Fetch data
 
   return (
     <>

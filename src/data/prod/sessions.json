@@ -174,7 +174,7 @@
     "title": "[Hands-on] Gemini CLI",
     "level": ["Beginner"],
     "tech_tags": ["Gemini CLI", "Nano Banana"],
-    "description": "<div><p>このセッションではGemini CLIの基本的な使い方を学び簡単なタスク実行するハンズオンを行います。そして、Gemini Extensionsを使ってGemini CLIでNanobananaモデルを使えるようにしてクールな画像を生成、編集します。</p><p></p></div>",
+    "description": "<div><p>このセッションではGemini CLIの基本的な使い方を学び簡単なタスク実行するハンズオンを行います。そして、Gemini Extensionsを使ってGemini CLIでNanobananaモデルを使えるようにしてクールな画像を生成、編集します。</p><p>注意: Hands-on Sessionは事前登録制です。<a href=\"https://gdg-tokyo.connpass.com/event/375358/\">こちらのページ</a> より事前登録をお願いいたします。</p><p></p></div>",
     "perspective": ["Introduction", "Challenge"],
     "thumbnail_url": "/images/thumbnail/sessions/original/hands-on.png",
     "session_chair_id": null
@@ -189,7 +189,7 @@
     "title": "[Hands-on] Firebase Studio",
     "level": ["Advanced"],
     "tech_tags": ["Firebase Studio"],
-    "description": "<div><p>Firebase Studio は、フロントエンド・バックエンド・データベースの構築を一元的に行える新しい開発環境です。このハンズオンでは、Firebase Studio を使ってフルスタックアプリケーションを実際に構築しながら、Firestore や Firebase Authentication、Firebase App Hosting などの主要機能を体験します。</p><p></p></div>",
+    "description": "<div><p>Firebase Studio は、フロントエンド・バックエンド・データベースの構築を一元的に行える新しい開発環境です。このハンズオンでは、Firebase Studio を使ってフルスタックアプリケーションを実際に構築しながら、Firestore や Firebase Authentication、Firebase App Hosting などの主要機能を体験します。</p><p>注意: Hands-on Sessionは事前登録制です。<a href=\"https://gdg-tokyo.connpass.com/event/375338/\">こちらのページ</a> より事前登録をお願いいたします。</p><p></p></div>",
     "perspective": ["Introduction", "Challenge"],
     "thumbnail_url": "/images/thumbnail/sessions/original/hands-on.png",
     "session_chair_id": null
@@ -204,7 +204,9 @@
       "7c4dff99",
       "1fa92a23",
       "352cb22e",
-      "5492fc46"
+      "5492fc46",
+      "55f83448",
+      "806d93d0"
     ],
     "track": "Track A",
     "time_start": "17:00",
@@ -266,6 +268,36 @@
     "tech_tags": ["DEMO"],
     "description": "<div><p>学生による DEMO の展示をラウンジにて行います。</p></div>",
     "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": null,
+    "session_chair_id": null
+  },
+  {
+    "id": "11028e20",
+    "slug": "after-party-lt",
+    "talk_ids": ["816d4545", "29ab110e", "933904e2", "8424f5a6", "1ae9c829"],
+    "track": null,
+    "time_start": null,
+    "time_end": null,
+    "title": "懇親会 LT大会",
+    "level": ["Beginner"],
+    "tech_tags": ["LT"],
+    "description": "<div><p>DevFest Tokyo 2025 懇親会においてLT大会を行います。</p><p><strong>お詫び: 会場人数制限のため招待制となりました。一般参加の募集はありません。期待してくださっていた皆様にお詫び申し上げます。</strong></p></div>",
+    "perspective": ["Introduction", "Challenge"],
+    "thumbnail_url": null,
+    "session_chair_id": null
+  },
+  {
+    "id": "67d3e22f",
+    "slug": "lounge",
+    "talk_ids": ["6506f416"],
+    "track": null,
+    "time_start": null,
+    "time_end": null,
+    "title": "ラウンジ企画",
+    "level": ["Beginner"],
+    "tech_tags": ["AI"],
+    "description": "<div><p>ラウンジにて行われている企画をご紹介します。</p></div>",
+    "perspective": ["Introduction"],
     "thumbnail_url": null,
     "session_chair_id": null
   }

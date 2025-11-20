@@ -7,7 +7,7 @@ perspective: ['Challenge']
 is_keynote: false
 ---
 
-# GDGoC Osaka 作品展
+# [DEMO] GDGoC Osaka 作品展
 
 ### Artifoto ～AI フォトブース powered by Nano Banana～
 

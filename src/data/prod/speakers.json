@@ -304,6 +304,22 @@
     "twitter_handle": "suueng"
   },
   {
+    "id": "db0f850e",
+    "name": "三島萌花",
+    "bio": "<div><p>Goが好きで、Women Who Go TokyoをはじめとするGoのイベント/勉強会によく参加しています。 2025年9月に大学を卒業し、freee 26年度新卒として内定者インターンをしています。</p></div>",
+    "photo_url": "/images/speakers/yomek33.png",
+    "job": "",
+    "twitter_handle": "yomek33"
+  },
+  {
+    "id": "cb946e2e",
+    "name": "荒木佑一",
+    "bio": "<div><p>Google で Android 向けライブラリを開発してきました。</p></div>",
+    "photo_url": "https://avatars.githubusercontent.com/u/1237536",
+    "job": "",
+    "twitter_handle": "yuichi_araki"
+  },
+  {
     "id": "1c770c2e",
     "name": "Yuka",
     "bio": "<div><p>Google Developer Group Tokyo Organizer</p></div>",
@@ -347,7 +363,7 @@
     "id": "3085c155",
     "name": "東京国際工科専門職大学",
     "bio": "<div></div>",
-    "photo_url": "/images/demo/iput-studism.png",
+    "photo_url": "/images/demo/iput-studism-v2.jpg",
     "job": "",
     "twitter_handle": ""
   },
@@ -357,6 +373,46 @@
     "bio": "<div><p>「Google AI 学生アンバサダープログラム」は、次世代の担い手である学生が、AIの安全かつ効果的な活用スキルを習得し、その知識を同世代に広めることで 、AIリテラシーの向上と、AIを活用した新たな価値創造を加速させます 。未来の社会全体でAIの恩恵を最大化することを目指し活動しています。</p><p></p></div>",
     "photo_url": "/images/demo/student-ambassador-logo.png",
     "job": "",
+    "twitter_handle": ""
+  },
+  {
+    "id": "89606c2f",
+    "name": "Anuraag Agrawal",
+    "bio": "<div><p>Anuraag is an OSS enthusiast and is currently a maintainer for connect-python, a protobuf RPC library for Python, and wazero, the WebAssembly runtime for Go. He has also previously been a maintainer on Coraza, OpenTelemetry, Zipkin, and Armeria. You may also find small fixes in various projects due to his nature of sending a fix instead of filing an issue.</p></div>",
+    "photo_url": "/images/speakers/anuraag.jpg",
+    "job": "",
+    "twitter_handle": ""
+  },
+  {
+    "id": "29ab110e",
+    "name": "haruki",
+    "bio": "<div><p>学部4年。1年生のころ初めてPythonに触れ、累計ユーザー数20万人超えの個人開発Webサイト “GBBINFO-JPN” を制作。(Beatboxはできない) 2026年からモビルス株式会社に入社予定。 デジタル民主主義2030プロジェクト「Polimoney」参画中。</p></div>",
+    "photo_url": "/images/speakers/haruki.png",
+    "job": "東京電機大学 学部4年",
+    "twitter_handle": "shu_kob"
+  },
+  {
+    "id": "507223a8",
+    "name": "マラシ・ラマクリシュナン",
+    "bio": "<div><p>I’m Malathi Ramakrishnan. I grew up in a rural village in Tamilnadu, India and studied in a Tamil-medium government school. With determination and a BTech IT scholarship in VIT University, I learned English and pursued my dreams, growing from my roots in India to building a career in technology across the globe, including Japan.</p><p>I’ve worked at Dell Technologies and currently at Rakuten, and I hold 44 U.S. patents. I’m passionate about innovation, and I love connecting with university graduates, business leaders, and fellow tech enthusiasts. It does not end here and I believe miles to go before I sleep!. I have been mentoring 40 children and for a couple of them helping financially for the education.</p><p>At DevFest Tokyo, I’ll be sharing my journey and insights in a lightning talk on innovation and Google’s impact, and I hope to inspire others to reach beyond boundaries, just as I did.</p><p><a href=\"https://www.linkedin.com/in/malathi-ramakrishnan-ab6482150\">https://www.linkedin.com/in/malathi-ramakrishnan-ab6482150</a></p></div>",
+    "photo_url": "/images/speakers/icons/malathi.jpg",
+    "job": "Lead Software Engineer & Program Manager, Rakuten",
+    "twitter_handle": ""
+  },
+  {
+    "id": "dfec918f",
+    "name": "小渕 周",
+    "bio": "<div><p>株式会社スリーシェイク Sreake事業部にて、主にGoogle Cloud を用いた生成AIアプリケーション開発に従事。 少しずつ活動を増やそうとしているJagu'e'r初心者。</p></div>",
+    "photo_url": "/images/speakers/shu-kob.png",
+    "job": "株式会社スリーシェイク Sreake事業部 マネージャー",
+    "twitter_handle": "shu_kob"
+  },
+  {
+    "id": "c378aacf",
+    "name": "鈴木崇博",
+    "bio": "<div><p>過去には、検索エンジンを搭載した Stable Diffusion の拡張ライブラリである auto_diffusers を開発しました。こうした個人開発の経験を基盤に、AI と宇宙工学の両分野を結び付け、社会や技術に貢献できる研究をしたいと考えています。</p></div>",
+    "photo_url": "/images/speakers/icons/suzukimain.jpg",
+    "job": "東京国際工科専門職大学工科学部情報工学科 学生",
     "twitter_handle": ""
   }
 ]

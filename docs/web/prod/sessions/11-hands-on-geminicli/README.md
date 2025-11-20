@@ -12,4 +12,6 @@ track: Track D
 
 このセッションではGemini CLIの基本的な使い方を学び簡単なタスク実行するハンズオンを行います。そして、Gemini Extensionsを使ってGemini CLIでNanobananaモデルを使えるようにしてクールな画像を生成、編集します。
 
+注意: Hands-on Sessionは事前登録制です。[こちらのページ](https://gdg-tokyo.connpass.com/event/375358/) より事前登録をお願いいたします。
+
 ![session_thumbnail](../../../../../public/images/thumbnail/sessions/original/hands-on.png)

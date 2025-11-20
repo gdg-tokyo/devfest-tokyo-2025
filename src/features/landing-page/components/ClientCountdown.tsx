@@ -14,7 +14,7 @@ const ClientCountdown: React.FC<ClientCountdownProps> = () => {
 
   useEffect(() => {
     // Calculate eventDate only on the client side
-    const eventDate = new Date('2025-11-22T00:00:00+09:00')
+    const eventDate = new Date('2025-11-22T12:00:00+09:00')
     setTargetDate(eventDate.getTime())
   }, []) // Empty dependency array to run once on mount
 

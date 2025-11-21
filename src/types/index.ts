@@ -17,9 +17,9 @@ export interface Speaker {
   id: string
   name: string
   bio: string
-  photo_url?: string
+  photo_url?: string | null
   job: string
-  twitter_handle: string
+  twitter_handle: string | null
 }
 
 export interface Talk {

@@ -88,7 +88,7 @@ test.describe('Speaker Gallery Section', () => {
   }) => {
     // Find a speaker image that is known to not have a twitter handle
     const speakerGrid = page.locator('[data-testid="speaker-gallery-grid"]')
-    const speakerImage = speakerGrid.getByAltText('Speaker 11', { exact: true })
+    const speakerImage = speakerGrid.getByAltText('Speaker 3', { exact: true })
     await expect(speakerImage).toBeVisible()
 
     // Verify its parent is not an anchor tag

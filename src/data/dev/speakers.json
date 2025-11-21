@@ -18,7 +18,7 @@
   {
     "id": "speaker-3",
     "name": "Speaker 3",
-    "photo_url": null,
+    "photo_url": "/images/speakers/icons/caixinmei.png",
     "job": "AI Researcher",
     "bio": "",
     "twitter_handle": null
@@ -94,13 +94,5 @@
     "job": "Game Developer",
     "bio": "",
     "twitter_handle": "speaker12"
-  },
-  {
-    "id": "caixinmei",
-    "name": "Caixinmei",
-    "photo_url": null,
-    "job": "AI Researcher",
-    "bio": "",
-    "twitter_handle": null
   }
 ]

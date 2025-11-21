@@ -27,7 +27,7 @@ const HeroPanel: React.FC = () => {
         <div className="absolute w-10 h-10 bg-google-blue-500 rounded-full opacity-20 top-1/3 right-1/3 animate-pulse delay-300"></div>
       </div>
       <div className="relative z-10 container mx-auto px-4 lg:px-8 max-w-screen-md lg:max-w-screen-xl">
-        <div className="relative w-full max-w-2xl mx-auto mb-4">
+        <div className="relative w-full max-w-2xl mx-auto mb-4 h-40 md:h-56">
           <Image
             src={withRepoBasePath(
               '/images/devfest25-tokyo-logo-with-gdg-bracket.png'

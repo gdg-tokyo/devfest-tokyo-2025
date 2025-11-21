@@ -86,21 +86,19 @@ test.describe('Speaker Gallery Section', () => {
   test('should not link for speakers without twitter_handle', async ({
     page,
   }) => {
-    // Find a speaker image that is NOT inside an anchor tag
-    // This requires inspecting the DOM structure closely.
-    // Assuming the Image component without a twitter_handle has a direct parent that is NOT 'a'.
-    const nonTwitterSpeakerImage = page.locator('div > img:not(a img)').first() // Select img whose direct parent is div, not a. This is a bit fragile.
-    await expect(nonTwitterSpeakerImage).toBeVisible()
+    // Find a speaker image that is known to not have a twitter handle
+    const speakerGrid = page.locator('[data-testid="speaker-gallery-grid"]')
+    const speakerImage = speakerGrid.getByAltText('Speaker 11', { exact: true })
+    await expect(speakerImage).toBeVisible()
 
     // Verify its parent is not an anchor tag
-    const parentElement = await nonTwitterSpeakerImage.evaluateHandle(
-      (img) => img.parentElement?.tagName
-    )
-    expect(await parentElement.jsonValue()).not.toBe('A')
+    const parent = speakerImage.locator('..')
+    const parentTagName = await parent.evaluate((el) => el.tagName)
+    expect(parentTagName).not.toBe('A')
 
-    // Attempting to click should not open a new page or change URL (excluding internal navigation)
+    // Attempting to click should not open a new page or change URL
     const currentUrl = page.url()
-    await nonTwitterSpeakerImage.click()
+    await speakerImage.click()
     await expect(page).toHaveURL(currentUrl) // URL should not change to an external site
   })
 })

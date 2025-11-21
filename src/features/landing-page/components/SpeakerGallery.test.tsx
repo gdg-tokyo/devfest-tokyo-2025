@@ -96,16 +96,18 @@ describe('SpeakerGallery', () => {
       />
     )
 
-    // Expect all unique speakers to be rendered, sorted alphabetically
-    const speakerNames = screen.getAllByText(
+    // Expect all unique speakers to be rendered, sorted alphabetically by their alt text
+    const speakerImages = screen.getAllByAltText(
       /^(Alice Smith|Bob Johnson|Charlie Brown|David Lee|Eve Adams)$/
     )
-    expect(speakerNames).toHaveLength(5)
-    expect(speakerNames[0]).toHaveTextContent('Alice Smith')
-    expect(speakerNames[1]).toHaveTextContent('Bob Johnson')
-    expect(speakerNames[2]).toHaveTextContent('Charlie Brown')
-    expect(speakerNames[3]).toHaveTextContent('David Lee')
-    expect(speakerNames[4]).toHaveTextContent('Eve Adams')
+    const renderedNames = speakerImages.map((img) => img.alt)
+
+    expect(renderedNames).toHaveLength(5)
+    expect(renderedNames[0]).toBe('Alice Smith')
+    expect(renderedNames[1]).toBe('Bob Johnson')
+    expect(renderedNames[2]).toBe('Charlie Brown')
+    expect(renderedNames[3]).toBe('David Lee')
+    expect(renderedNames[4]).toBe('Eve Adams')
 
     // Check for title
     expect(
@@ -139,11 +141,14 @@ describe('SpeakerGallery', () => {
     const aliceImage = screen.getByAltText('Alice Smith') as HTMLImageElement
     expect(aliceImage).toBeInTheDocument()
     expect(aliceImage.src).toContain('/images/speakers/alice.jpg')
-    expect(aliceImage).toHaveClass('rounded-full')
+    // Check the parent element for rounded-full class
+    expect(aliceImage.parentElement).toHaveClass('rounded-full')
 
     const bobImage = screen.getByAltText('Bob Johnson') as HTMLImageElement
     expect(bobImage).toBeInTheDocument()
     expect(bobImage.src).toContain('/images/speakers/bob.jpg')
+    // Check the parent element for rounded-full class
+    expect(bobImage.parentElement).toHaveClass('rounded-full')
   })
 
   it('creates a link for speakers with twitter_handle', () => {

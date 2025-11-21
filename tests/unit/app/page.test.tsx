@@ -19,7 +19,7 @@ describe('Landing Page Metadata', () => {
 describe('Home Component', () => {
   it('should render the FeaturedTalks section', async () => {
     await act(async () => {
-      render(<Home />)
+      render(await Home())
     })
     expect(screen.getByTestId('featured-talks-section')).toBeInTheDocument()
     // Assert that the mock HeroPanel is rendered

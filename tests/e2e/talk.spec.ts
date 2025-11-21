@@ -10,11 +10,13 @@ test.describe('Talk Page', () => {
     const firstTalkCard = page.locator('article[talk-card-id="talk-1"]')
 
     // Verify that the talk title is displayed
+
     await expect(
       firstTalkCard.getByRole('heading', { name: 'Talk 1', exact: true })
     ).toBeVisible({ timeout: 30000 })
 
     // Verify that the speaker name is displayed
+
     await expect(firstTalkCard.getByText('Speaker 1')).toBeVisible({
       timeout: 30000,
     })
@@ -37,17 +39,23 @@ test.describe('Talk Page', () => {
     await page.waitForSelector('article[talk-card-id="talk-1"]')
 
     // Click on the first talk card
+
     const firstTalkCard = page.locator('article[talk-card-id="talk-1"]')
+
     await firstTalkCard.click()
+
     await page.waitForURL(/\/talks\/.+/)
 
     // Verify that the URL is correct
+
     await expect(page).toHaveURL(/\/talks\/.+/)
 
     // Verify that the talk title is displayed
+
     await expect(page.getByRole('heading', { name: 'Talk 1' })).toBeVisible()
 
     // Verify that the speaker name is displayed
+
     await expect(page.getByRole('heading', { name: 'Speaker 1' })).toBeVisible()
   })
 

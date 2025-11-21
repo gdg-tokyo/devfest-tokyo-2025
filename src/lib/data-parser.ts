@@ -114,30 +114,7 @@ export function getSessions(): Session[] {
           if (!talk) {
             return null // Or handle as an error/dummy talk
           }
-
-          const speakers: Speaker[] = talk.speaker_ids
-            .map((speakerId) => {
-              const speaker = speakersMap.get(speakerId)
-              if (!speaker) {
-                return null
-              }
-              return {
-                id: speaker.id,
-                name: speaker.name,
-                bio: speaker.bio,
-                photo_url: speaker.photo_url,
-                job: speaker.job,
-                twitter_handle: speaker.twitter_handle,
-              }
-            })
-            .filter((s): s is Speaker => s !== null)
-
-          return {
-            id: talk.id,
-            title: talk.title,
-            abstract: talk.abstract,
-            speaker_ids: talk.speaker_ids,
-          }
+          return talk;
         })
         .filter((t): t is Talk => t !== null)
 
@@ -246,4 +223,11 @@ export function getSessionChairById(id: string): SessionChair | undefined {
     ...sessionChair,
     chairs: chairsWithDetails,
   }
+}
+
+export function getSpeakerGalleryData(): { speakers: Speaker[]; sessionChairs: SessionChair[] } {
+  const env = process.env.NEXT_PUBLIC_DEVFEST_TOKYO_2025_TARGET_ENV || 'PROD'
+  const dataDir = env === 'DEV' ? 'dev' : 'prod'
+  const { speakers, sessionChairs } = _loadData(dataDir)
+  return { speakers, sessionChairs }
 }

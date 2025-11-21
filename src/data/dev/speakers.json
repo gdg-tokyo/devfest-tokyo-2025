@@ -2,97 +2,97 @@
   {
     "id": "speaker-1",
     "name": "Speaker 1",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 1",
-    "bio": "Bio 1",
+    "photo_url": "/images/speakers/icons/aoto.jpeg",
+    "job": "Software Engineer",
+    "bio": "",
     "twitter_handle": "speaker1"
   },
   {
     "id": "speaker-2",
     "name": "Speaker 2",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 2",
-    "bio": "Bio 2",
+    "photo_url": "/images/speakers/icons/batbaatarankhbold.jpg",
+    "job": "Mobile Developer",
+    "bio": "",
     "twitter_handle": "speaker2"
   },
   {
     "id": "speaker-3",
     "name": "Speaker 3",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 3",
-    "bio": "Bio 3",
-    "twitter_handle": "speaker3"
+    "photo_url": "/images/speakers/icons/caixinmei.png",
+    "job": "AI Researcher",
+    "bio": "",
+    "twitter_handle": null
   },
   {
     "id": "speaker-4",
     "name": "Speaker 4",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 4",
-    "bio": "Bio 4",
+    "photo_url": "/images/speakers/icons/fukkuisland.jpg",
+    "job": "Web Developer",
+    "bio": "",
     "twitter_handle": "speaker4"
   },
   {
     "id": "speaker-5",
     "name": "Speaker 5",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 5",
-    "bio": "Bio 5",
+    "photo_url": "/images/speakers/icons/fusho-takahashi.jpeg",
+    "job": "Cloud Architect",
+    "bio": "",
     "twitter_handle": "speaker5"
   },
   {
     "id": "speaker-6",
     "name": "Speaker 6",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 6",
-    "bio": "Bio 6",
+    "photo_url": "/images/speakers/icons/getty708.png",
+    "job": "Product Manager",
+    "bio": "",
     "twitter_handle": "speaker6"
   },
   {
     "id": "speaker-7",
     "name": "Speaker 7",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 7",
-    "bio": "Bio 7",
+    "photo_url": "/images/speakers/icons/harenb16221.jpg",
+    "job": "Data Scientist",
+    "bio": "",
     "twitter_handle": "speaker7"
   },
   {
     "id": "speaker-8",
     "name": "Speaker 8",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 8",
-    "bio": "Bio 8",
+    "photo_url": "/images/speakers/icons/hiro038482.jpg",
+    "job": "DevOps Engineer",
+    "bio": "",
     "twitter_handle": "speaker8"
   },
   {
     "id": "speaker-9",
     "name": "Speaker 9",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 9",
-    "bio": "Bio 9",
+    "photo_url": "/images/speakers/icons/ito-sayaka.jpeg",
+    "job": "UX Designer",
+    "bio": "",
     "twitter_handle": "speaker9"
   },
   {
     "id": "speaker-10",
     "name": "Speaker 10",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 10",
-    "bio": "Bio 10",
+    "photo_url": "/images/speakers/icons/jetha.jpeg",
+    "job": "Security Engineer",
+    "bio": "",
     "twitter_handle": "speaker10"
   },
   {
     "id": "speaker-11",
     "name": "Speaker 11",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 11",
-    "bio": "Bio 11",
-    "twitter_handle": "speaker11"
+    "photo_url": "/images/speakers/icons/k_ryuichirou.jpg",
+    "job": "ML Engineer",
+    "bio": "",
+    "twitter_handle": null
   },
   {
     "id": "speaker-12",
     "name": "Speaker 12",
-    "photo_url": "https://via.placeholder.com/150",
-    "job": "Job 12",
-    "bio": "Bio 12",
+    "photo_url": "/images/speakers/icons/k6s4i53rx.jpg",
+    "job": "Game Developer",
+    "bio": "",
     "twitter_handle": "speaker12"
   }
 ]

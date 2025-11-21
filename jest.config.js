@@ -18,7 +18,10 @@ const customJestConfig = {
     '^next/image$': '<rootDir>/__mocks__/next/image.js',
     '^isomorphic-dompurify$': '<rootDir>/__mocks__/isomorphic-dompurify.js',
   },
-  testMatch: ['<rootDir>/tests/unit/**/*.test.ts?(x)'],
+  testMatch: [
+    '<rootDir>/tests/unit/**/*.test.ts?(x)',
+    '<rootDir>/src/**/*.test.ts?(x)',
+  ],
   testPathIgnorePatterns: ['<rootDir>/tests/e2e/'],
 }
 

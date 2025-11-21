@@ -11,11 +11,18 @@ interface ClientCountdownProps {
 const ClientCountdown: React.FC<ClientCountdownProps> = () => {
   const [targetDate, setTargetDate] = useState<number>(0) // Initialize with 0
   const [isMobile, setIsMobile] = useState(false)
+  const [showCountdown, setShowCountdown] = useState(true) // New state to control visibility
 
   useEffect(() => {
     // Calculate eventDate only on the client side
     const eventDate = new Date('2025-11-22T12:00:00+09:00')
-    setTargetDate(eventDate.getTime())
+    const now = new Date()
+    // Only show countdown if the event is in the future
+    if (eventDate.getTime() > now.getTime()) {
+      setTargetDate(eventDate.getTime())
+    } else {
+      setShowCountdown(false) // Hide if event has already passed
+    }
   }, []) // Empty dependency array to run once on mount
 
   useEffect(() => {
@@ -47,8 +54,8 @@ const ClientCountdown: React.FC<ClientCountdownProps> = () => {
     [isMobile]
   )
 
-  if (targetDate === 0) {
-    return null // Or a loading spinner
+  if (!showCountdown || targetDate === 0) {
+    return null // Only render if showCountdown is true and targetDate is set
   }
 
   return (
@@ -61,6 +68,7 @@ const ClientCountdown: React.FC<ClientCountdownProps> = () => {
       separatorStyle={styles.separatorStyle}
       duration={0.5}
       className="flex justify-center"
+      onComplete={() => setShowCountdown(false)} // Hide when countdown completes
     />
   )
 }

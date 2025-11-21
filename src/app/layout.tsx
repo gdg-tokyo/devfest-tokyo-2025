@@ -41,7 +41,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer /> {/* Add Footer component */}
-        <GoogleTagManager gtmId={gtmId} />
+        {gtmId && <GoogleTagManager gtmId={gtmId} />}
       </body>
     </html>
   )
